@@ -217,21 +217,37 @@
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">يرجى منح التطبيق صلاحية الوصول إلى جميع الملفات الخاصة بك، فإنه قد لا يعمل بشكل جيد دون ذلك.</string>
     <plurals name="items">
-        <item quantity="one">%d عنصر</item>
-        <item quantity="other">%d عناصر</item>
+        <item quantity="zero">%d item</item>
+        <item quantity="one">%d items</item>
+        <item quantity="two">%d items</item>
+        <item quantity="few">%d items</item>
+        <item quantity="many">%d items</item>
+        <item quantity="other">%d items</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d عنصر</item>
-        <item quantity="other">%d عناصر</item>
+        <item quantity="zero">%d item</item>
+        <item quantity="one">%d items</item>
+        <item quantity="two">%d items</item>
+        <item quantity="few">%d items</item>
+        <item quantity="many">%d items</item>
+        <item quantity="other">%d items</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">جارٍ حذف %d عنصر</item>
-        <item quantity="other">جارٍ حذف %d عناصر</item>
+        <item quantity="zero">Deleting %d item</item>
+        <item quantity="one">Deleting %d items</item>
+        <item quantity="two">Deleting %d items</item>
+        <item quantity="few">Deleting %d items</item>
+        <item quantity="many">Deleting %d items</item>
+        <item quantity="other">Deleting %d items</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
+        <item quantity="zero">%d contact</item>
+        <item quantity="one">%d contacts</item>
+        <item quantity="two">%d contacts</item>
+        <item quantity="few">%d contacts</item>
+        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <!-- Storages -->
@@ -382,8 +398,12 @@
     <string name="no">لا</string>
     <string name="maybe">أحياناً</string>
     <plurals name="delete_warning">
-        <item quantity="one">تحذير: أنت تقوم بحذف %d مجلد</item>
-        <item quantity="other">تحذير: أنت تقوم بحذف %d مجلدات</item>
+        <item quantity="zero">WARNING: You are deleting %d folder</item>
+        <item quantity="one">WARNING: You are deleting %d folders</item>
+        <item quantity="two">WARNING: You are deleting %d folders</item>
+        <item quantity="few">WARNING: You are deleting %d folders</item>
+        <item quantity="many">WARNING: You are deleting %d folders</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -425,119 +445,231 @@
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
     <plurals name="seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">قبل %d ثانية</item>
-        <item quantity="other">قبل %d ثواني</item>
+        <item quantity="zero">%d second before</item>
+        <item quantity="one">%d seconds before</item>
+        <item quantity="two">%d seconds before</item>
+        <item quantity="few">%d seconds before</item>
+        <item quantity="many">%d seconds before</item>
+        <item quantity="other">%d seconds before</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">قبل %d دقيقة</item>
-        <item quantity="other">قبل %d دقائق</item>
+        <item quantity="zero">%d minute before</item>
+        <item quantity="one">%d minutes before</item>
+        <item quantity="two">%d minutes before</item>
+        <item quantity="few">%d minutes before</item>
+        <item quantity="many">%d minutes before</item>
+        <item quantity="other">%d minutes before</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">قبل %d ساعة</item>
-        <item quantity="other">قبل %d ساعات</item>
+        <item quantity="zero">%d hour before</item>
+        <item quantity="one">%d hours before</item>
+        <item quantity="two">%d hours before</item>
+        <item quantity="few">%d hours before</item>
+        <item quantity="many">%d hours before</item>
+        <item quantity="other">%d hours before</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">قبل %d يوم</item>
-        <item quantity="other">قبل %d أيام</item>
+        <item quantity="zero">%d day before</item>
+        <item quantity="one">%d days before</item>
+        <item quantity="two">%d days before</item>
+        <item quantity="few">%d days before</item>
+        <item quantity="many">%d days before</item>
+        <item quantity="other">%d days before</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">قبل %d أسبوع</item>
-        <item quantity="other">قبل %d أسابيع</item>
+        <item quantity="zero">%d week before</item>
+        <item quantity="one">%d weeks before</item>
+        <item quantity="two">%d weeks before</item>
+        <item quantity="few">%d weeks before</item>
+        <item quantity="many">%d weeks before</item>
+        <item quantity="other">%d weeks before</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">قبل %d شهر</item>
-        <item quantity="other">قبل %d أشهر</item>
+        <item quantity="zero">%d month before</item>
+        <item quantity="one">%d months before</item>
+        <item quantity="two">%d months before</item>
+        <item quantity="few">%d months before</item>
+        <item quantity="many">%d months before</item>
+        <item quantity="other">%d months before</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">قبل %d سنة</item>
-        <item quantity="other">قبل %d سنوات</item>
+        <item quantity="zero">%d year before</item>
+        <item quantity="one">%d years before</item>
+        <item quantity="two">%d years before</item>
+        <item quantity="few">%d years before</item>
+        <item quantity="many">%d years before</item>
+        <item quantity="other">%d years before</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">الوقت المتبقي حتي ينطفئ المنبه:\n%s</string>
@@ -638,8 +770,12 @@
     <string name="show_the_recycle_bin">إظهار سلة المحذوفات</string>
     <string name="hide_the_recycle_bin">إخفاء سلة المحذوفات</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">جارٍ نقل %d عنصر إلى "سلة المحذوفات"</item>
-        <item quantity="other">جارٍ نقل %d عناصر إلى "سلة المحذوفات"</item>
+        <item quantity="zero">Moving %d item into the Recycle Bin</item>
+        <item quantity="one">Moving %d items into the Recycle Bin</item>
+        <item quantity="two">Moving %d items into the Recycle Bin</item>
+        <item quantity="few">Moving %d items into the Recycle Bin</item>
+        <item quantity="many">Moving %d items into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">جارٍ الإستيراد…</string>
