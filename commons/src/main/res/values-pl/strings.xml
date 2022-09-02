@@ -219,12 +219,14 @@
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="few">%d elementy</item>
+        <item quantity="many">%d elementów</item>
         <item quantity="other">%d elementów</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
         <item quantity="few">%d elementy</item>
+        <item quantity="many">%d elementów</item>
         <item quantity="other">%d elementów</item>
     </plurals>
     <plurals name="deleting_items">
@@ -237,6 +239,7 @@
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
         <item quantity="few">%d kontakty</item>
+        <item quantity="many">%d kontaktów</item>
         <item quantity="other">%d kontaktów</item>
     </plurals>
     <!-- Storages -->
@@ -386,6 +389,7 @@
     <plurals name="delete_warning">
         <item quantity="one">UWAGA: Usuwasz %d folder</item>
         <item quantity="few">UWAGA: Usuwasz %d foldery</item>
+        <item quantity="many">UWAGA: Usuwasz %d folderów</item>
         <item quantity="other">UWAGA: Usuwasz %d folderów</item>
     </plurals>
     <!-- Password protection -->
@@ -430,16 +434,19 @@
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuta</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d godzina</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="days">
@@ -451,32 +458,38 @@
     <plurals name="weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundę</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minutę</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d godzinę</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="in_days">
@@ -488,32 +501,38 @@
     <plurals name="in_weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekundę przed</item>
         <item quantity="few">%d sekundy przed</item>
+        <item quantity="many">%d sekund przed</item>
         <item quantity="other">%d sekund przed</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minutę przed</item>
         <item quantity="few">%d minuty przed</item>
+        <item quantity="many">%d minut przed</item>
         <item quantity="other">%d minut przed</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d godzinę przed</item>
         <item quantity="few">%d godziny przed</item>
+        <item quantity="many">%d godzin przed</item>
         <item quantity="other">%d godzin przed</item>
     </plurals>
     <plurals name="days_before">
@@ -525,32 +544,38 @@
     <plurals name="weeks_before">
         <item quantity="one">%d tydzień przed</item>
         <item quantity="few">%d tygodnie przed</item>
+        <item quantity="many">%d tygodni przed</item>
         <item quantity="other">%d tygodni przed</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d miesiąc przed</item>
         <item quantity="few">%d miesiące przed</item>
+        <item quantity="many">%d miesięcy przed</item>
         <item quantity="other">%d miesięcy przed</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d rok przed</item>
         <item quantity="few">%d lata przed</item>
+        <item quantity="many">%d lat przed</item>
         <item quantity="other">%d lat przed</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekundę</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minutę</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d godzinę</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="by_days">
@@ -562,16 +587,19 @@
     <plurals name="by_weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
