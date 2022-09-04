@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
@@ -77,7 +78,6 @@
     <string name="home_fax">집 팩스</string>
     <string name="pager">호출기</string>
     <string name="no_phone_number_found">전화번호를 찾지 못함</string>
-
     <!-- View types -->
     <string name="change_view_type">보기 방식 변경</string>
     <string name="grid">타일</string>
@@ -91,7 +91,6 @@
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">커버 사진 변경</string>
     <string name="select_photo">사진 선택</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
@@ -106,30 +105,25 @@
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
-
     <!-- Favorites -->
     <string name="favorites">즐겨찾기</string>
     <string name="add_favorites">즐겨찾기 추가</string>
     <string name="add_to_favorites">즐겨찾기에 추가</string>
     <string name="remove_from_favorites">즐겨찾기에서 제거</string>
-
     <!-- Search -->
     <string name="search">검색</string>
     <string name="type_2_characters">최소 두 글자를 입력해 주세요</string>
-
     <!-- Filters -->
     <string name="filter">필터</string>
     <string name="filter_pro">필터 (Pro)</string>
     <string name="no_items_found">항목을 찾지 못함</string>
     <string name="change_filter">필터 변경</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">저장 권한이 필요함</string>
     <string name="no_contacts_permission">주소록 사용 권한이 필요함</string>
     <string name="no_camera_permissions">카메라 사용 권한이 필요함</string>
     <string name="no_audio_permissions">오디오 사용 권한이 필요함</string>
     <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-
     <!-- Renaming -->
     <string name="rename_file">파일명 변경</string>
     <string name="rename_folder">폴더명 변경</string>
@@ -155,7 +149,6 @@
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="filename_without_zip">Filename (without .zip)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">복사</string>
     <string name="move">이동</string>
@@ -186,7 +179,6 @@
     <string name="no_new_items">새 항목을 찾을 수 없음</string>
     <string name="no_space">대상 경로의 공간이 부족합니다.\n필요 공간: %1$s, 사용 가능: %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">새로 만들기</string>
     <string name="folder">폴더</string>
@@ -196,7 +188,6 @@
     <string name="invalid_name">이름에 사용 할 수 없는 문자가 있습니다</string>
     <string name="empty_name">이름이 입력되지 않았습니다</string>
     <string name="unknown_error_occurred">알 수 없는 에러가 발생하였습니다</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">\"%s\" 파일이 이미 존재합니다.</string>
     <string name="file_already_exists_overwrite">\"%s\" 파일이 이미 존재합니다. 덮어쓰시겠습니까?</string>
@@ -212,7 +203,6 @@
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <string name="cannot_rename_folder">Cannot rename this folder</string>
-
     <!-- File picker -->
     <string name="select_folder">폴더 선택</string>
     <string name="select_file">파일 선택</string>
@@ -226,26 +216,21 @@
     <string name="confirm_selection">선택 확인</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="other">%d개 항목</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="other">%d개 항목</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="other">%d개 항목 삭제중</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">저장공간 선택</string>
     <string name="storage">Storage</string>
@@ -256,7 +241,6 @@
     <string name="sd_card_usb_same">SD카드와 USB 장치의 경로가 중복되었습니다.</string>
     <string name="app_on_sd_card">시스템 제한으로 SD카드에 설치한 앱은 위젯을 사용할 수 없습니다. 위젯을 사용하시려면 내장 메모리에 앱을 옮겨 주시기 바랍니다</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">속성</string>
     <string name="path">경로</string>
@@ -279,7 +263,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
@@ -309,7 +292,6 @@
             이 기능을 이용하시려면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 구매해주세요. 감사합니다!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Light</string>
     <string name="dark_theme">Dark</string>
@@ -322,11 +304,9 @@
     <string name="custom">사용자 정의</string>
     <string name="shared">공유</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">새로운 기능</string>
     <string name="whats_new_disclaimer">* 주요 업데이트만 여기에 표시됩니다. 작은 업데이트도 항상 진행되고 있습니다.</string>
-
     <!-- Actionbar items -->
     <string name="delete">삭제</string>
     <string name="remove">제거</string>
@@ -363,7 +343,6 @@
     <string name="call">Call</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
     <string name="name">이름</string>
@@ -386,11 +365,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">정말로 삭제 하시겠습니까?</string>
-    <string name="deletion_confirmation">%s을 정말 삭제 하시겠습니까?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s을 정말 휴지통으로 이동하시겠습니까?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">%s을 정말 삭제 하시겠습니까?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">%s을 정말 휴지통으로 이동하시겠습니까?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">이 항목을 정말 삭제하시겠습니까?</string>
     <string name="are_you_sure_recycle_bin">이 항목을 정말 휴지통으로 이동하시겠습니까?</string>
     <string name="do_not_ask_again">다시 물어보지 않기</string>
@@ -398,11 +378,9 @@
     <string name="yes">네</string>
     <string name="no">아니요</string>
     <string name="maybe">아마도</string>
-
     <plurals name="delete_warning">
         <item quantity="other">경고 : %d개 폴더를 삭제합니다</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">PIN 번호 입력</string>
@@ -429,7 +407,6 @@
     <string name="lock_folder_pro">폴더 잠그기 (Pro)</string>
     <string name="unlock_folder">폴더 잠금 해제</string>
     <string name="lock_folder_notice">이 보안 설정은 이 앱에서만 작동하며, 실제 시스템 폴더 암호화를 대체할 수 없습니다.</string>
-
     <!-- Times -->
     <string name="yesterday">어제</string>
     <string name="today">오늘</string>
@@ -443,7 +420,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="other">%d초</item>
     </plurals>
@@ -465,7 +441,6 @@
     <plurals name="years">
         <item quantity="other">%d년</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="other">%d초 내</item>
@@ -488,7 +463,6 @@
     <plurals name="in_years">
         <item quantity="other">%d년 내</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="other">%d초 전</item>
@@ -511,7 +485,6 @@
     <plurals name="years_before">
         <item quantity="other">%d년 전</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="other">%d초간</item>
@@ -534,7 +507,6 @@
     <plurals name="by_years">
         <item quantity="other">%d년간</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">알람이 울리기까지 남은 시간:\n%s</string>
     <string name="reminder_triggers_in">알림이 작동하기까지 남은 시간:\n%s</string>
@@ -542,7 +514,6 @@
     <string name="alarm_warning">알람을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
     <string name="reminder_warning">알림을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
     <string name="notifications_disabled">이 앱의 알림 설정이 비활성화 되어 있습니다. 기기 설정에서 활성화 해 주시기 바랍니다.</string>
-
     <!-- Alarms -->
     <string name="alarm">알람</string>
     <string name="snooze">스누즈</string>
@@ -555,7 +526,6 @@
     <string name="no_sound">소리 없음</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">설정</string>
     <string name="purchase_simple_thank_you">심플 Thank You 구매하기</string>
@@ -588,7 +558,7 @@
     <string name="widgets">위젯</string>
     <string name="use_same_snooze">항상 같은 스누즈 시간 사용</string>
     <string name="snooze_time">스누즈 시간</string>
-    <string name="vibrate_on_button_press">버튼 진동 피드백 사용</string>
+    <string name="vibrate_on_button_press">진동 버튼을 누릅니다</string>
     <string name="move_items_into_recycle_bin">삭제 시 휴지통으로 이동</string>
     <string name="recycle_bin_cleaning_interval">휴지통 비움 주기</string>
     <string name="empty_recycle_bin">휴지통 비우기</string>
@@ -600,7 +570,6 @@
     <string name="start_name_with_surname">성을 먼저 표시</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
-
     <!-- Setting sections -->
     <string name="visibility">표시</string>
     <string name="security">보안</string>
@@ -615,7 +584,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -626,7 +594,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">이 파일 복원하기</string>
     <string name="restore_selected_files">선택한 파일 복원하기</string>
@@ -638,11 +605,9 @@
     <string name="moving_recycle_bin_items_disabled">휴지통 내의 파일은 복원하기 전까진 옮길 수 없습니다.</string>
     <string name="show_the_recycle_bin">휴지통 보이기</string>
     <string name="hide_the_recycle_bin">휴지통 숨기기</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="other">%d개 항목을 휴지통으로 이동하고 있습니다</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">가져오는 중…</string>
     <string name="exporting">내보내는 중…</string>
@@ -655,13 +620,11 @@
     <string name="no_entries_for_importing">가져올 항복을 찾을 수 없음</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">내보낼 항목을 찾을 수 없음</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">기기에 USB장치가 연결되어 있습니다. USB의 파일을 표시하려면 추가 권한이 필요합니다.</string>
     <string name="confirm_usb_storage_access_text">다음에 표시되는 화면에서 USB의 루트 폴더를 선택해 주시기 바랍니다.</string>
     <string name="wrong_root_selected_usb">잘못된 폴더가 선택되었습니다. USB의 루트 폴더(가장 윗 폴더)를 선택해 주시기 바랍니다.</string>
-
     <!-- Dates -->
     <string name="january">1월</string>
     <string name="february">2월</string>
@@ -675,7 +638,6 @@
     <string name="october">10월</string>
     <string name="november">11월</string>
     <string name="december">12월</string>
-
     <!-- in January -->
     <string name="in_january">in 1월</string>
     <string name="in_february">in 2월</string>
@@ -689,7 +651,6 @@
     <string name="in_october">in 10월</string>
     <string name="in_november">in 11월</string>
     <string name="in_december">in 12월</string>
-
     <string name="monday">월요일</string>
     <string name="tuesday">화요일</string>
     <string name="wednesday">수요일</string>
@@ -697,7 +658,6 @@
     <string name="friday">금요일</string>
     <string name="saturday">토요일</string>
     <string name="sunday">일요일</string>
-
     <string name="monday_letter">월</string>
     <string name="tuesday_letter">화</string>
     <string name="wednesday_letter">수</string>
@@ -705,7 +665,6 @@
     <string name="friday_letter">금</string>
     <string name="saturday_letter">토</string>
     <string name="sunday_letter">일</string>
-
     <string name="monday_short">월요일</string>
     <string name="tuesday_short">화요일</string>
     <string name="wednesday_short">수요일</string>
@@ -713,7 +672,6 @@
     <string name="friday_short">금요일</string>
     <string name="saturday_short">토요일</string>
     <string name="sunday_short">일요일</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -725,7 +683,6 @@
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
-
     <!-- About -->
     <string name="about">앱 정보</string>
     <string name="website">Website</string>
@@ -749,7 +706,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">추가 정보</string>
     <string name="app_version">앱 버전: %s</string>
     <string name="device_os">기기 OS: %s</string>
@@ -778,7 +735,6 @@
     <string name="thank_you">Thank you</string>
     <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
     <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -791,7 +747,6 @@
             감사합니다.
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -809,7 +764,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -827,13 +781,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             앱 버전이 유효하지 않습니다. 원본을 설치해 주세요. <a href="%s">here</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">자주 묻는 질문</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>
@@ -866,7 +818,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -879,7 +830,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -925,7 +875,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">지금 Pro 버전으로 업그레이드 해보세요!</string>
     <string name="why_upgrade_basic_version">일반</string>
@@ -935,20 +884,17 @@
     <string name="why_upgrade_footer">불만족시 100% 환불제도</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">고급 사진 편집 앱</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF 파일 지원</string>
     <string name="why_upgrade_batch_renaming">고급 배치 파일 이름 변경</string>
     <string name="why_upgrade_folder_locking">개별 폴더 잠금</string>
     <string name="why_upgrade_printing_support">인쇄 지원</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">세계 각국 시간 지원</string>
     <string name="why_upgrade_attendees_emails">참석자 및 이메일 알림</string>
     <string name="why_upgrade_easy_event_importing">간편한 이벤트 가져오기 </string>
     <string name="why_upgrade_new_widgets">새로운 위젯 </string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">중복된 연락처 덮어쓰기 기능 개선 </string>
     <string name="why_upgrade_font_size_customization">글꼴 크기 설정 가능 </string>
@@ -956,23 +902,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">체크리스트</string>
     <string name="why_upgrade_different_note_per_widget">위젯별로 다양한 노트 및 색깔 지원 </string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">날짜 및 시간 설정 가능 </string>
     <string name="why_upgrade_shortcuts">홈 화면 바로가기</string>
     <string name="why_upgrade_file_compression">파일 압축 기능 지원 </string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">바탕화면 설정 가능</string>
     <string name="why_upgrade_file_importing">파일 가져오기 지원</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">이 앱은 삶을 간편하게 만들어주는 다음의 서드파티 라이브버리를 사용합니다. 감사합니다.</string>
     <string name="third_party_licences">서드파티 라이선스</string>
@@ -1008,11 +950,9 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">구버전 경고: 이 버전의 앱은 더이상 관리되지 않습니다. Pro 버전을 설치해 주세요: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">플레이스토어에서 구매한 앱은 2시간 내에 삭제하면 자동으로 환불받을 수 있다는 사실을 항상 잊지 마시기 바랍니다. 만약 이후에 환불이 필요하시다면, hello@simplemobiletools.com 으로 연락 주시면 해결해 드리겠습니다. 이제 한번 써보는 것도 나쁘지 않겠죠 :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
