@@ -86,9 +86,9 @@
     <string name="list">Λίστα</string>
     <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
     <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Αρίθμηση στηλών</string>
+    <string name="portrait_column_count">Αρίθμηση στηλών πορτρέτου</string>
+    <string name="landscape_column_count">Αρίθμηση στηλών τοπίου</string>
     <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
     <string name="select_photo">Επιλογή φωτογραφίας</string>
     <!-- Blocked numbers -->
@@ -123,7 +123,7 @@
     <string name="no_contacts_permission">Απαιτείται άδεια Επαφών</string>
     <string name="no_camera_permissions">Απαιτείται άδεια Κάμερας</string>
     <string name="no_audio_permissions">Απαιτείται άδεια Ήχου</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">Απαιτείται άδεια για την ανάρτηση ειδοποιήσεων</string>
     <!-- Renaming -->
     <string name="rename_file">Μετονομασία αρχείου</string>
     <string name="rename_folder">Μετονομασία φακέλου</string>
@@ -346,8 +346,8 @@
     <string name="send_sms">Αποστολή SMS</string>
     <string name="send_email">Αποστολή email</string>
     <string name="call">Κλήση</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Στοιχεία επαφής</string>
+    <string name="add_contact">Προσθήκη επαφής</string>
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>
