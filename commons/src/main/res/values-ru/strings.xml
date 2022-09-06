@@ -86,9 +86,9 @@
     <string name="list">Список</string>
     <string name="increase_column_count">Добавить столбец</string>
     <string name="reduce_column_count">Убрать столбец</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Количество столбцов</string>
+    <string name="portrait_column_count">Количество столбцов в портретной ориентации</string>
+    <string name="landscape_column_count">Количество столбцов в альбомной ориентации</string>
     <string name="change_cover_image">Изменить обложку</string>
     <string name="select_photo">Выбрать изображение</string>
     <!-- Blocked numbers -->
@@ -123,7 +123,7 @@
     <string name="no_contacts_permission">Требуется разрешение для доступа к контактам</string>
     <string name="no_camera_permissions">Требуется разрешение для доступа к камере</string>
     <string name="no_audio_permissions">Требуется разрешение для доступа аудиосистеме</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">Требуется разрешение на отображение уведомлений</string>
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
     <string name="rename_folder">Изменение имени папки</string>
@@ -357,8 +357,8 @@
     <string name="send_sms">Отправить SMS</string>
     <string name="send_email">Отправить письмо</string>
     <string name="call">Вызов</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Данные контакта</string>
+    <string name="add_contact">Добавить контакт</string>
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
