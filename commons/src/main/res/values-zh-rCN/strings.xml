@@ -9,7 +9,7 @@
     <string name="invalid_file_format">无效文件格式</string>
     <string name="out_of_memory_error">内存不足</string>
     <string name="an_error_occurred">啊哦，出错啦：%s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">错误: %s</string>
     <string name="open_with">打开方式</string>
     <string name="edit_with">编辑方式</string>
     <string name="edit">编辑</string>
@@ -301,7 +301,7 @@
     <string name="black_white">黑白</string>
     <string name="custom">自定义</string>
     <string name="shared">共享</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">系统默认</string>
     <!-- What's new -->
     <string name="whats_new">更新日志</string>
     <string name="whats_new_disclaimer">* 此处仅列举了重大更新，更多修正可在使用中体验</string>
@@ -334,13 +334,13 @@
     <string name="toggle_filename">显示文件名</string>
     <string name="move_to_top">移到顶部</string>
     <string name="move_to_bottom">移到底部</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">固定项目</string>
     <string name="unpin_item">取消固定项目</string>
     <string name="send_sms">发送短信</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">发送邮件</string>
     <string name="call">呼叫</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">联系人详情</string>
+    <string name="add_contact">添加联系人</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>
@@ -685,7 +685,7 @@
     <string name="upgraded_to_pro_contacts">你必须通过在 .vcf 文件中导出，然后导入的方式手动迁移私有存储的联系人。你可以在顶部菜单中找到导出和导入按钮。</string>
     <!-- About -->
     <string name="about">关于</string>
-    <string name="website">Website</string>
+    <string name="website">网站</string>
     <string name="website_label">应用源码</string>
     <string name="email_label">发送反馈</string>
     <string name="upgrade_to_pro">升级到专业版</string>
