@@ -990,7 +990,20 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     }
 
     val numberToCompare = number.trimToComparableNumber()
-    return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
+    return blockedNumbers.any { numberToCompare in it.numberToCompare || numberToCompare in it.number } || isNumberBlockedByPattern(number, blockedNumbers)
+}
+
+fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+    for (blockedNumber in blockedNumbers) {
+        val num = blockedNumber.number
+        if (num.contains("*")) {
+            val pattern = num.replace("+", "\\+").replace("*", ".*")
+            if (number.matches(pattern.toRegex())) {
+                return true
+            }
+        }
+    }
+    return false
 }
 
 fun Context.copyToClipboard(text: String) {
