@@ -105,7 +105,7 @@
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
     <string name="block_unknown_calls">Blockera samtal från okända nummer</string>
     <string name="block_unknown_messages">Blockera meddelanden från okända nummer</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>

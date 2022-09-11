@@ -105,7 +105,7 @@
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
     <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
     <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>

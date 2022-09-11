@@ -105,7 +105,7 @@
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
     <string name="block_unknown_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
     <string name="block_unknown_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>

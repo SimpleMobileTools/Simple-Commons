@@ -106,7 +106,7 @@
     <string name="block_confirmation">Jste si jistí, že chcete zablokovat „%s“\?</string>
     <string name="block_unknown_calls">Blokovat volání z neznámých čísel</string>
     <string name="block_unknown_messages">Blokovat zprávy z neznámých čísel</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
     <string name="add_favorites">Přidat oblíbené</string>
