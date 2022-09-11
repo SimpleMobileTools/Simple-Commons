@@ -105,7 +105,7 @@
     <string name="block_confirmation">Czy zablokować „%s”\?</string>
     <string name="block_unknown_calls">Blokuj połączenia od niezapisanych kontaktów</string>
     <string name="block_unknown_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -143,7 +143,7 @@
     <string name="prepend_filenames">Poprzedź nazwy plików</string>
     <string name="append_filenames">Dołącz do nazw plików</string>
     <string name="simple_renaming">Prosta zmiana nazwy</string>
-    <string name="pattern_renaming">Wzór</string>
+    <string name="pattern_renaming">Wzorzec</string>
     <string name="string_to_add">Ciąg do dodania</string>
     <string name="rename_date_time_pattern">%Y — rok\n%M — miesiąc\n%D — dzień\n%h — godzina\n%m — minuta\n%s — sekunda\n%i — numer rosnący od 1</string>
     <string name="filename_without_txt">Nazwa pliku (bez .txt)</string>
