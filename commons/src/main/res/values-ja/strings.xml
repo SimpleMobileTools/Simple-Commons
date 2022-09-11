@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">なし</string>
     <string name="later">後で</string>
     <string name="save_as">名前を付けて保存</string>
     <string name="file_saved">ファイルを正常に保存しました</string>
@@ -14,8 +14,8 @@
     <string name="edit_with">他のアプリで編集</string>
     <string name="edit">編集</string>
     <string name="no_app_found">有効なアプリが見つかりません</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">ブラウザアプリが見つかりません</string>
+    <string name="no_email_client_found">メールアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
     <string name="copy_to_clipboard">クリップボードにコピーする</string>
     <string name="copy_number_to_clipboard">数字をクリップボードにコピーする</string>
@@ -35,7 +35,7 @@
     <string name="select_a_different_color">別の色を選択する</string>
     <string name="download">ダウンロード</string>
     <string name="notification">通知</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">通知</string>
     <string name="email">メールアドレス</string>
     <string name="previous">前へ</string>
     <string name="playpause">再生 / 一時停止</string>
@@ -57,7 +57,7 @@
     <string name="seven">7</string>
     <string name="eight">8</string>
     <string name="nine">9</string>
-    <string name="value">Value</string>
+    <string name="value">値</string>
     <string name="value_cannot_be_empty">値を空にすることはできません</string>
     <string name="create_new_contact">新しい連絡先を作成</string>
     <string name="add_to_existing_contact">既存の連絡先に追加</string>
@@ -86,7 +86,7 @@
     <string name="list">リスト</string>
     <string name="increase_column_count">列数を増やす</string>
     <string name="reduce_column_count">列数を減らす</string>
-    <string name="column_count">Column count</string>
+    <string name="column_count">列数</string>
     <string name="portrait_column_count">Portrait column count</string>
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">カバー画像を変更</string>
@@ -103,8 +103,8 @@
     <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります。</string>
     <string name="set_as_default">デフォルトとして設定</string>
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
+    <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls matching the pattern.</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
@@ -215,7 +215,7 @@
     <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">選択を確認</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">読み込み中…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
     <plurals name="items">
         <item quantity="other">%d アイテム</item>
@@ -261,9 +261,9 @@
     <string name="song_title">曲名</string>
     <string name="gps_coordinates">GPS座標値</string>
     <string name="altitude">高度</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">EXIFを削除</string>
+    <string name="remove_exif_confirmation">GPSの座標やカメラモデルなどのEXIF情報を削除してもよろしいですか？</string>
+    <string name="exif_removed">EXIF情報の削除に成功しました</string>
     <!-- Color customization -->
     <string name="background_color">背景色</string>
     <string name="text_color">文字色</string>
@@ -341,7 +341,7 @@
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
     <string name="send_sms">SMS を送信</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">メールを送信</string>
     <string name="call">Call</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
@@ -350,7 +350,7 @@
     <string name="name">名前</string>
     <string name="size">サイズ</string>
     <string name="last_modified">最終更新日時</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">作成日</string>
     <string name="date_taken">撮影日時</string>
     <string name="title">タイトル</string>
     <string name="filename">ファイル名</string>
@@ -531,7 +531,7 @@
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">全般</string>
     <string name="color_customization">カラーカスタマイズ</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
@@ -551,7 +551,7 @@
     <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
     <string name="keep_last_modified">ファイルの操作時、最終更新日が古いものを保持する</string>
     <string name="show_info_bubble">スクロールバーをドラッグ中にアイテムの情報を表示する</string>
-    <string name="prevent_phone_from_sleeping">アプリを使用中は端末がスリープ状態にならないようにする</string>
+    <string name="prevent_phone_from_sleeping">アプリの使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">下に引いて更新を有効にする</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
@@ -564,7 +564,7 @@
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">ごみ箱を自動で空にする間隔</string>
     <string name="empty_recycle_bin">ゴミ箱を空にする</string>
-    <string name="force_portrait_mode">ポートレートモードを強制する</string>
+    <string name="force_portrait_mode">縦向きモードを強制する</string>
     <string name="export_settings">設定をエクスポート</string>
     <string name="import_settings">設定をインポート</string>
     <string name="settings_exported_successfully">設定は正常にエクスポートされました</string>
@@ -583,9 +583,9 @@
     <string name="text">テキスト</string>
     <string name="migrating">移行中</string>
     <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
+    <string name="main_screen">メイン画面</string>
     <string name="thumbnails">サムネイル</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">リストビュー</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">表示するタブを管理</string>
     <string name="default_tab_to_open">アプリ開始時に開くタブ</string>
@@ -701,11 +701,11 @@
     <string name="donate">寄付</string>
     <string name="follow_us">フォローしてください</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="support">サポート</string>
+    <string name="help_us">ご協力のお願い</string>
+    <string name="social">SNS</string>
+    <string name="other">その他</string>
+    <string name="privacy_policy">プライバシー ポリシー</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
     <string name="about_footer">Made with ❤️ in Slovakia</string>
@@ -817,7 +817,7 @@
     <string name="faq_10_title_commons">アプリを購入しましたが、違うデバイスでダウンロード出来ません。</string>
     <string name="faq_10_text_commons">Google Playアプリのキャッシュを削除してデバイスを再起動してみてください。Google Playの不具合であり、アプリの不具合ではありません。</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
+    <string name="contributors">貢献者</string>
     <string name="translation">翻訳</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>

@@ -57,7 +57,7 @@
     <string name="seven">Sept</string>
     <string name="eight">Huit</string>
     <string name="nine">Neuf</string>
-    <string name="value">Value</string>
+    <string name="value">Valeur</string>
     <string name="value_cannot_be_empty">La valeur ne peut pas être vide</string>
     <string name="create_new_contact">Créer un nouveau contact</string>
     <string name="add_to_existing_contact">Ajouter à un contact existant</string>
@@ -86,9 +86,9 @@
     <string name="list">Liste</string>
     <string name="increase_column_count">Ajouter une colonne</string>
     <string name="reduce_column_count">Supprimer une colonne</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Nombre de colonnes</string>
+    <string name="portrait_column_count">Nombre de colonnes Portrait</string>
+    <string name="landscape_column_count">Nombre de colonnes Paysage</string>
     <string name="change_cover_image">Modifier l\'image du dossier</string>
     <string name="select_photo">Sélectionner une image</string>
     <!-- Blocked numbers -->
@@ -124,7 +124,7 @@
     <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est nécessaire</string>
     <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est nécessaire</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">L\'autorisation de publier des notifications est requise</string>
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
     <string name="rename_folder">Renommer le dossier</string>
@@ -219,20 +219,24 @@
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers, elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Suppression d\'%d élément en cours</item>
+        <item quantity="many">Suppression de %d éléments en cours</item>
         <item quantity="other">Suppression de %d éléments en cours</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
+        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <!-- Storages -->
@@ -386,6 +390,7 @@
     <string name="maybe">Peut-être</string>
     <plurals name="delete_warning">
         <item quantity="one">ATTENTION : Vous supprimez %d dossier</item>
+        <item quantity="many">ATTENTION : Vous supprimez %d dossiers</item>
         <item quantity="other">ATTENTION : Vous supprimez %d dossiers</item>
     </plurals>
     <!-- Password protection -->
@@ -425,121 +430,149 @@
     <string name="hours_raw">heures</string>
     <string name="days_raw">jours</string>
     <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
+    <string name="minutes_letter">min</string>
     <string name="hours_letter">h</string>
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d an</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d seconde avant</item>
+        <item quantity="many">%d secondes avant</item>
         <item quantity="other">%d secondes avant</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute avant</item>
+        <item quantity="many">%d minutes avant</item>
         <item quantity="other">%d minutes avant</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d heure avant</item>
+        <item quantity="many">%d heures avant</item>
         <item quantity="other">%d heures avant</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d jour avant</item>
+        <item quantity="many">%d jours avant</item>
         <item quantity="other">%d jours avant</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semaine avant</item>
+        <item quantity="many">%d semaines avant</item>
         <item quantity="other">%d semaines avant</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mois avant</item>
+        <item quantity="many">%d mois avant</item>
         <item quantity="other">%d mois avant</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d an avant</item>
+        <item quantity="many">%d ans avant</item>
         <item quantity="other">%d ans avant</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -643,6 +676,7 @@
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d élément déplacé dans la corbeille</item>
+        <item quantity="many">%d éléments déplacés dans la corbeille</item>
         <item quantity="other">%d éléments déplacés dans la corbeille</item>
     </plurals>
     <!-- Import / Export -->

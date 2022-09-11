@@ -19,8 +19,9 @@
     <string name="set_as">تعيين كـ</string>
     <string name="copy_to_clipboard">نسخ إلى الحافظة</string>
     <string name="copy_number_to_clipboard">نسخ الرقم إلى الحافظة</string>
-    <string name="value_copied_to_clipboard">تم نسخ القيمة إلي الحافظة</string>
-    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلي الحافظة:\n%s</string>
+    <string name="value_copied_to_clipboard">تم نسخ القيمة إلى الحافظة</string>
+    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلى الحافظة:
+\n%s</string>
     <string name="dial_number">رقم الطلب</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
@@ -98,9 +99,9 @@
     <string name="block_number">حظر رقم</string>
     <string name="block_numbers">حظر أرقام</string>
     <string name="blocked_numbers">أرقام محظورة</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الإفتراضي للإستفادة من الأرقام المحظورة.</string>
+    <string name="export_blocked_numbers">تصدير الأرقام المحظورة</string>
+    <string name="import_blocked_numbers">استيراد الأرقام المحظورة</string>
+    <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الافتراضي للاستفادة من الأرقام المحظورة.</string>
     <string name="set_as_default">ضبط الى الافتراضي</string>
     <string name="block_confirmation">هل تريد بالتأكيد حظر \"%s\"؟</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
@@ -154,8 +155,8 @@
     <string name="copy">نسخ</string>
     <string name="move">نقل</string>
     <string name="copy_move">نسخ / نقل</string>
-    <string name="copy_to">نسخ إلي</string>
-    <string name="move_to">نقل إلي</string>
+    <string name="copy_to">نسخ إلى</string>
+    <string name="move_to">نقل إلى</string>
     <string name="source">المصدر</string>
     <string name="destination">الوجهة</string>
     <string name="select_destination">حدد الوجهة</string>
@@ -293,7 +294,7 @@
     <string name="app_icon_color">لون أيقونة التطبيق</string>
     <string name="bottom_navigation_bar_color">لون شريط التنقل السفلي</string>
     <string name="restore_defaults">إستعادة الإعدادات الإفتراضية</string>
-    <string name="use_default">إستخدام كافتراضي</string>
+    <string name="use_default">استخدام كافتراضي</string>
     <string name="default_color">الإفتراضي</string>
     <string name="change_color">تغيير اللون</string>
     <string name="theme">السمة</string>
@@ -304,7 +305,7 @@
     <string name="undo_changes_confirmation">هل تريد بالتاكيد التراجع عن التغييرات التي أجريتها ؟</string>
     <string name="save_before_closing">لديك تغييرات غير محفوظة. هل تريد الحفظ قبل الخروج ؟</string>
     <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
-    <string name="app_icon_color_warning">تحذير: بعض اللانشرات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حالة إختفاء الأيقونة، حاول تشغيل التطبيق من خلال   "Google Play" أو بعض عناصر (الويدجت)، إذا كانت متوفرة.  بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الإفتراضية #F57C00. قد تضطر الي إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
+    <string name="app_icon_color_warning">تحذير: بعض المشغّلات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حال اختفاء الأيقونة، حاول تشغيل التطبيق من خلال Google Play أو ويدجت، إذا توفر. بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الافتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
     <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \ المشتركة \' ، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
     <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
@@ -377,7 +378,7 @@
     <string name="sort_randomly">فرز عشوائي</string>
     <string name="ascending">تصاعدي</string>
     <string name="descending">تنازلي</string>
-    <string name="use_for_this_folder">إستخدام لهذا المجلد فقط</string>
+    <string name="use_for_this_folder">استخدام لهذا المجلد فقط</string>
     <string name="sort_numeric_parts">فرز أسماء الملفات حسب القيمة الفعلية</string>
     <string name="first_name">الاسم</string>
     <string name="middle_name">اسم الأب</string>
@@ -423,7 +424,7 @@
     <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
     <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">فشلت المسابقة</string>
-    <string name="authentication_blocked">تم حظر المصادقة ، يرجى المحاولة مره أخرى بعد قليل</string>
+    <string name="authentication_blocked">تم حظر المصادقة، يرجى المحاولة مرة أخرى بعد قليل</string>
     <string name="no_fingerprints_registered">ليس لديك بصمات مسجلة ، يرجى إضافة بعضها في إعدادات جهازك</string>
     <string name="go_to_settings">الإنتقال إلى الاعدادات</string>
     <string name="protection_setup_successfully">تم إعداد كلمة المرور بنجاح. يرجى إعادة تثبيت التطبيق في حاله نسيانه.</string>
@@ -694,14 +695,14 @@
     <!-- Settings -->
     <string name="settings">الإعدادات</string>
     <string name="purchase_simple_thank_you">شراء تطبيق (Simple Thank You)</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">عام</string>
+    <string name="color_customization">تخصيص الألوان</string>
     <string name="customize_colors">تخصيص الألوان</string>
-    <string name="customize_colors_locked">تخصيص الألوان (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="customize_colors_locked">تخصيص الألوان (مقفل)</string>
+    <string name="feature_locked">مقفل</string>
     <string name="customize_widget_colors">تخصيص ألوان الويدجت</string>
     <string name="customize_notifications">Customize notifications</string>
-    <string name="use_english_language">إستخدام اللغة الإنجليزية</string>
+    <string name="use_english_language">استخدام اللغة الإنجليزية</string>
     <string name="language">اللغة</string>
     <string name="show_hidden_items">إظهار العناصر المخفية</string>
     <string name="font_size">حجم الخط</string>
@@ -717,11 +718,11 @@
     <string name="prevent_phone_from_sleeping">منع الهاتف من السكون أثناء وجود التطبيق في المقدمة</string>
     <string name="skip_delete_confirmation">تخطي مربع حوار تأكيد الحذف دائماً</string>
     <string name="enable_pull_to_refresh">تمكين السحب للتحديث من أعلي</string>
-    <string name="use_24_hour_time_format">إستخدام تنسيق الوقت 24 ساعة</string>
+    <string name="use_24_hour_time_format">استخدام تنسيق الوقت 24 ساعة</string>
     <string name="change_date_and_time_format">تغيير تنسيق التاريخ والوقت</string>
     <string name="sunday_first">بداية الأسبوع يوم الأحد</string>
     <string name="widgets">الويدجت</string>
-    <string name="use_same_snooze">إستخدام نفس مدة الغفوة دائماً</string>
+    <string name="use_same_snooze">استخدام نفس مدة الغفوة دائماً</string>
     <string name="snooze_time">مدة الغفوة</string>
     <string name="vibrate_on_button_press">الإهتزاز عند الضغط على الأزرار</string>
     <string name="move_items_into_recycle_bin">نقل العناصر إلى "سلة المحذوفات" بدلاً من حذفها</string>
@@ -767,7 +768,7 @@
     <string name="files_restored_successfully">تم إستعادة الملفات بنجاح</string>
     <string name="empty_recycle_bin_confirmation">هل تريد بالتأكيد إفراغ "سلة المحذوفات" ؟ سيتم فقدان الملفات نهائياً.</string>
     <string name="recycle_bin_empty">سلة المحذوفات فارغة</string>
-    <string name="moving_recycle_bin_items_disabled">تم تعطيل نقل عناصر "سلة المحذوفات"، يرجى إستخدام إستعادة</string>
+    <string name="moving_recycle_bin_items_disabled">تم تعطيل نقل عناصر سلة المحذوفات، يرجى استخدام استعادة</string>
     <string name="show_the_recycle_bin">إظهار سلة المحذوفات</string>
     <string name="hide_the_recycle_bin">إخفاء سلة المحذوفات</string>
     <plurals name="moving_items_into_bin">
@@ -845,7 +846,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">لن يتم تحديث إصدار التطبيق الخاص بك بعد الآن. يرجى الترقية إلى الإصدار (Pro) لتلقي الإصلاحات الجديدة وغيرها من التحسينات.</string>
     <string name="upgrade_to_pro_long_click">لن يتم تحديث إصدار التطبيق الخاص بك بعد الآن. يرجى الترقية إلى الإصدار (Pro) لتلقي الإصلاحات الجديدة وغيرها من التحسينات من خلال النقر هنا.</string>
-    <string name="it_is_free">انه مجاني حتي: %s. إذا قمت بتنزيله حتى ذلك الحين، سوف تتمكن من إستخدامه مجاناً إلى الأبد.</string>
+    <string name="it_is_free">إنه مجاني حتى: %s. إذا قمت بتنزيله حتى ذلك الحين، سوف تتمكن من استخدامه مجاناً إلى الأبد.</string>
     <string name="more_info">المزيد من المعلومات</string>
     <string name="upgrade">ترقية</string>
     <string name="upgrade_calendar">يجب عليك ترحيل الأحداث المخزنة محلياً يدوياً عن طريق التصدير في ملف .ics ، ثم الإستيراد. يمكنك العثور على أزرار التصدير / الإستيراد في قائمة الشاشة الرئيسية.</string>
@@ -968,11 +969,11 @@
     <string name="faq_3_title_commons">قمت بحذف بعض الملفات عن طريق الخطأ، كيف يمكنني إسترجاعها؟</string>
     <string name="faq_3_text_commons">للأسف، لا يمكنك. يتم حذف الملفات فوراً بعد مربع حوار التأكيد، لا توجد سلة محذوفات متاحة.</string>
     <string name="faq_4_title_commons">أنا لا أحب ألوان (الويدجت)، هل يمكنني تغييرها؟</string>
-    <string name="faq_4_text_commons">نعم ، كما يمكنك سحب (الويدجت) على شاشتك الرئيسية تظهر شاشة إعداد (الويدجت). سترى المربعات الملونة في الزاوية اليسرى السفلي  ، فقط أضغط عليها لاختيار لون جديد. يمكنك إستخدام شريط التمرير لضبط الشفافية أيضاً.</string>
+    <string name="faq_4_text_commons">نعم، عند سحب الويدجت على شاشتك الرئيسية ستظهر شاشة إعدادات الويدجت. سترى المربعات الملونة في الزاوية اليسرى السفلى، فقط اضغط عليها لاختيار لون جديد. يمكنك استخدام شريط التمرير لضبط الشفافية أيضاً.</string>
     <string name="faq_5_title_commons">هل يمكنني بطريقة ما إسترجاع الملفات المحذوفة؟</string>
     <string name="faq_5_text_commons">إذا تم حذفها بالفعل ، لا يمكنك ذلك. ومع ذلك ، يتم تمكين "سلة المحذوفات" إفتراضياً ، مما يؤدي إلى نقل الملفات في "سلة المحذوفات" بدلاً من حذفها.</string>
     <string name="faq_6_title_commons">أختفت أيقونة مشغل التطبيق. ماذا يمكنني أن أفعل؟</string>
-    <string name="faq_6_text_commons">سبب ذلك عدم دعم المشغّل لتخصيص الأيقونة بشكل صحيح حاول تشغيل التطبيق من خلال Google Play أو بعض التطبيقات المصغرة (الويدجت) ، إذا كان متوفراً. بمجرد تشغيله، قم فقط بإرجاع الأيقونة البرتقاليه الإفتراضية #F57C00 قد تضطر إلي إعادة تثبيت التطبيق في اسوأ الحالات.</string>
+    <string name="faq_6_text_commons">سبب ذلك عدم دعم المشغّل لتخصيص الأيقونة بشكل صحيح. حاول تشغيل التطبيق من خلال Google Play أو بعض التطبيقات المصغرة (الويدجت)، إذا كان متوفراً. بمجرد تشغيله، قم فقط بإرجاع الأيقونة البرتقالية الإفتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الحالات.</string>
     <string name="faq_7_title_commons">تم خصم المال من حسابي البنكي ، لكن لا يمكنني تنزيل التطبيق. ماذا يمكنني أن أفعل؟</string>
     <string name="faq_7_text_commons">تتم معالجة المدفوعات بالكامل بواسطة Google ، حيث يتسبب نظامها في خلل من وقت لآخر. فقط قم بمسح ذاكرة التخزين المؤقت للتطبيق في Google Play وإعد تشغيل جهازك ، ثم أعد محاولة تنزيله.</string>
     <string name="faq_8_title_commons">لماذا يجب عليا الترقية إلى الإصدار البرو (Pro)?</string>
@@ -1088,7 +1089,7 @@
     <string name="glide_title">تحميل الصور وتخزينها المؤقت)</string>
     <string name="picasso_title">بيكاسو (تحميل الصور وذاكرة التخزين المؤقت)</string>
     <string name="cropper_title">إقتصاص الصورة وتدويرها</string>
-    <string name="rtl_viewpager_title">السحب من اليمين إلي اليسار</string>
+    <string name="rtl_viewpager_title">السحب من اليمين إلى اليسار</string>
     <string name="joda_title">جودا تايم (إستبدال تاريخ الجافا)</string>
     <string name="stetho_title">ستيثو (تصحيح قواعد البيانات)</string>
     <string name="otto_title">أوتو (ناقل الأحداث)</string>
