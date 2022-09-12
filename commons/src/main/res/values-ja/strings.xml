@@ -62,7 +62,7 @@
     <string name="create_new_contact">新しい連絡先を作成</string>
     <string name="add_to_existing_contact">既存の連絡先に追加</string>
     <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimer">注意事項</string>
     <string name="take_photo">写真を撮影</string>
     <string name="choose_photo">写真を選択</string>
     <!-- Events -->
@@ -393,7 +393,7 @@
     <string name="insert_pattern">パターンを入力</string>
     <string name="wrong_pattern">パターンに誤りがあります</string>
     <string name="repeat_pattern">パターンを再入力</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">生体認証</string>
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
@@ -687,7 +687,7 @@
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
     <!-- About -->
     <string name="about">このアプリについて</string>
-    <string name="website">Website</string>
+    <string name="website">Webサイト</string>
     <string name="website_label">ソースコードはこちら</string>
     <string name="email_label">ご意見やご提案をお送りください</string>
     <string name="upgrade_to_pro">Pro版にアップグレード</string>
