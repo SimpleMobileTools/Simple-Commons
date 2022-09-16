@@ -2,26 +2,26 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Prekliči</string>
-    <string name="nothing">Nothing</string>
-    <string name="later">Later</string>
+    <string name="nothing">Nič</string>
+    <string name="later">Pozneje</string>
     <string name="save_as">Shrani kot</string>
-    <string name="file_saved">Datoteka shranjena uspešno</string>
+    <string name="file_saved">Datoteka uspešno shranjena</string>
     <string name="invalid_file_format">Neveljaven format datoteke</string>
-    <string name="out_of_memory_error">Premalo pomnilnika!</string>
+    <string name="out_of_memory_error">Napaka - premalo pomnilnika</string>
     <string name="an_error_occurred">Prišlo je do napake: %s</string>
     <string name="error">Error: %s</string>
     <string name="open_with">Odpri z</string>
     <string name="edit_with">Uredi z</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Uredi</string>
     <string name="no_app_found">Ni veljavne aplikacije</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Ni brskalnika</string>
+    <string name="no_email_client_found">E-poštni odjemalec ni bil najden</string>
     <string name="set_as">Nastavi kot</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_to_clipboard">Kopiraj v odložišče</string>
+    <string name="copy_number_to_clipboard">Kopiraj številko v odložišče</string>
     <string name="value_copied_to_clipboard">Vrednost kopirana v odložišče</string>
     <string name="value_copied_to_clipboard_show">Vrednost kopirana v odložišče:\n%s</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Pokliči številko</string>
     <string name="unknown">Neznano</string>
     <string name="always">Vedno</string>
     <string name="never">Nikoli</string>
@@ -37,68 +37,68 @@
     <string name="notification">Obvestilo</string>
     <string name="notifications">Notifications</string>
     <string name="email">Email</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
+    <string name="previous">Prejšnji</string>
+    <string name="playpause">Predvajaj / Premor</string>
     <string name="next">Next</string>
     <string name="number">Number</string>
-    <string name="no_contacts_found">No contacts found</string>
-    <string name="request_the_required_permissions">Request the required permissions</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
-    <string name="insert_text_here">Insert text here</string>
-    <string name="call_person">Call %s</string>
+    <string name="no_contacts_found">Ni stikov</string>
+    <string name="request_the_required_permissions">Zahtevajte potrebna dovoljenja</string>
+    <string name="no_access_to_contacts">Aplikacija ni mogla dostopati do vaših stikov</string>
+    <string name="no_phone_call_permission">Aplikacija nima dovoljenja za sprožitev telefonskih klicev, odobrite ga v nastavitvah naprave</string>
+    <string name="insert_text_here">Besedilo vstavi tu</string>
+    <string name="call_person">Pokliči %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
-    <string name="create_new_contact">Create new contact</string>
-    <string name="add_to_existing_contact">Add to an existing contact</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
-    <string name="take_photo">Take photo</string>
-    <string name="choose_photo">Choose photo</string>
+    <string name="two">Dva</string>
+    <string name="three">Tri</string>
+    <string name="four">Štiri</string>
+    <string name="five">Pet</string>
+    <string name="six">Šest</string>
+    <string name="seven">Sedem</string>
+    <string name="eight">Osem</string>
+    <string name="nine">Devet</string>
+    <string name="value">Vrednost</string>
+    <string name="value_cannot_be_empty">Vrednost ne more biti prazna</string>
+    <string name="create_new_contact">Ustvari nov stik</string>
+    <string name="add_to_existing_contact">Dodaj obstoječemu stiku</string>
+    <string name="app_corrupt">Aplikacija je poškodovana</string>
+    <string name="disclaimer">Izjava</string>
+    <string name="take_photo">Posnemi fotografijo</string>
+    <string name="choose_photo">Izberi fotografijo</string>
     <!-- Events -->
-    <string name="birthday">Birthday</string>
-    <string name="anniversary">Anniversary</string>
+    <string name="birthday">Rojstni dan</string>
+    <string name="anniversary">Obletnica</string>
     <!-- Emails -->
     <string name="home">Home</string>
-    <string name="work">Work</string>
+    <string name="work">Delo</string>
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
-    <string name="main_number">Main</string>
-    <string name="work_fax">Work Fax</string>
+    <string name="main_number">Glavni</string>
+    <string name="work_fax">Službeni faks</string>
     <string name="home_fax">Home Fax</string>
     <string name="pager">Pager</string>
-    <string name="no_phone_number_found">No phone number has been found</string>
+    <string name="no_phone_number_found">Nobena telefonska številka ni bila najdena</string>
     <!-- View types -->
     <string name="change_view_type">Spremeni tip pogleda</string>
     <string name="grid">Mreža</string>
     <string name="grid_pro">Mreža (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Neenakomerna mreža</string>
     <string name="list">Seznam</string>
     <string name="increase_column_count">Povečaj število stolpcev</string>
     <string name="reduce_column_count">Zmanjšaj število stolpcev</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Število stolpcev</string>
+    <string name="portrait_column_count">Število pokončnih stolpcev</string>
+    <string name="landscape_column_count">Ležeče število stolpcev</string>
     <string name="change_cover_image">Spremeni naslovno fotografijo</string>
     <string name="select_photo">Izberi fotografijo</string>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
+    <string name="manage_blocked_numbers">Upravljanje blokiranih številk</string>
+    <string name="not_blocking_anyone">Nikogar ne blokirate.</string>
+    <string name="add_a_blocked_number">Dodaj blokirano številko</string>
     <string name="block_number">Block number</string>
-    <string name="block_numbers">Block numbers</string>
-    <string name="blocked_numbers">Blocked numbers</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
+    <string name="block_numbers">Blokiraj številke</string>
+    <string name="blocked_numbers">Blokirane številke</string>
+    <string name="export_blocked_numbers">Izvozi blokirane številke</string>
     <string name="import_blocked_numbers">Import blocked numbers</string>
     <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
     <string name="set_as_default">Set as default</string>
@@ -113,7 +113,7 @@
     <string name="remove_from_favorites">Odstrani iz priljubljenih</string>
     <!-- Search -->
     <string name="search">Iskanje</string>
-    <string name="type_2_characters">Vpišite vsaj 2 znaka za začetek iskanja</string>
+    <string name="type_2_characters">Vpišite vsaj 2 znaka za začetek iskanja.</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
@@ -238,8 +238,10 @@
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d stik</item>
+        <item quantity="two">%d stika</item>
+        <item quantity="few">%d stiki</item>
+        <item quantity="other">%d stikov</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Izberite</string>
@@ -249,7 +251,7 @@
     <string name="root">Korenska mapa</string>
     <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>
     <string name="sd_card_usb_same">Pot do SD kartice in USB ne moreta biti enaki</string>
-    <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
+    <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu. To je sistemska omejitev, zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Lastnosti</string>
@@ -340,7 +342,7 @@
     <string name="print_pro">Natisni (Pro)</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="create_shortcut_pro">Create shortcut (Pro)</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Dodaj številko stiku</string>
     <string name="view_contact_details">View contact details</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
@@ -606,8 +608,10 @@
         <item quantity="other">%d let</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Čas do sprožitve alarma: %s</string>
-    <string name="reminder_triggers_in">Čas do sprožitve opomnika: %s</string>
+    <string name="alarm_goes_off_in">Čas do sprožitve alarma:
+\n%s</string>
+    <string name="reminder_triggers_in">Čas do sprožitve opomnika:
+\n%s</string>
     <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Predlagamo, da alarm preizkusite, preden se nanj zanašate. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko alarm zataji.</string>
     <string name="reminder_warning">Predlagamo, da opomnike preiskusite, preden se zanašate na njih. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko opomniki zatajijo.</string>
@@ -725,7 +729,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Kot kaže, imate na napravo priključeno USB napravo. Da zagotovite pravilno prikazovanje datotek, morate odobriti dodatna dovoljenja.</string>
     <string name="confirm_usb_storage_access_text">Izberitre korensko mapo naprave USB na naslednjem zaslonu, da odobrite dostop</string>
-    <string name="wrong_root_selected_usb">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave USB.</string>
+    <string name="wrong_root_selected_usb">Izbrana napačna mapa, prosimo, izberite začetno mapo vaše naprave na USB</string>
     <!-- Dates -->
     <string name="january">Januar</string>
     <string name="february">Februar</string>
@@ -788,7 +792,7 @@
     <string name="about">O aplikaciji</string>
     <string name="website">Website</string>
     <string name="website_label">Za izvorno kodo obiščite</string>
-    <string name="email_label">"Svoje predloge in povratne informacije pošljite na "</string>
+    <string name="email_label">Svoje predloge in povratne informacije pošljite na</string>
     <string name="upgrade_to_pro">Nadgradi na Pro</string>
     <string name="more_apps">Več aplikacij</string>
     <string name="more_apps_from_us">More apps from us</string>

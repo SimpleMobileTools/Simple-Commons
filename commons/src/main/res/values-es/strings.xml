@@ -105,7 +105,7 @@
     <string name="block_confirmation">¿Estás seguro de que quieres bloquear a \"%s\"?</string>
     <string name="block_unknown_calls">Bloquear llamadas de contactos no almacenados</string>
     <string name="block_unknown_messages">Bloquear los mensajes de los contactos no almacenados</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Introduzca un número o un patrón (por ejemplo, *12345*, +1*8888) para bloquear todas las llamadas y mensajes de números que coincidan con el patrón.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Añadir a favoritos</string>
@@ -578,7 +578,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tiempo restante hasta que suene la alarma:\n%s</string>
     <string name="reminder_triggers_in">Tiempo restante hasta que se active el recordatorio:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">"Tiempo restante:  
+\n%s"</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="notifications_disabled">Las notificaciones de esta aplicación están deshabilitadas. Vaya a la configuración de su dispositivo para habilitarlos.</string>
@@ -598,14 +599,14 @@
     <string name="settings">Ajustes</string>
     <string name="purchase_simple_thank_you">Comprar Simple Gracias</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Personalización del color</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="customize_colors_locked">Cambiar colores (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Bloqueado</string>
     <string name="customize_widget_colors">Personaliza los colores del widget</string>
     <string name="customize_notifications">Personaliza las notificaciones</string>
     <string name="use_english_language">Usar el idioma inglés</string>
-    <string name="language">Language</string>
+    <string name="language">Idioma</string>
     <string name="show_hidden_items">Mostrar elementos ocultos</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="small">Pequeña</string>
@@ -688,7 +689,7 @@
     <string name="importing_some_entries_failed">La importación de algunas entradas ha fallado</string>
     <string name="exporting_some_entries_failed">La exportación de algunas entradas ha fallado</string>
     <string name="no_entries_for_importing">No se han encontrado entradas para importar</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">No se han encontrado nuevas entradas para importar</string>
     <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -749,10 +750,13 @@
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">"Hola, 
+\n  
+\n
+\nparece que ya tienes la versión de la aplicación Pro también. Ya no necesitarás esta, puedes desinstalarla."</string>
+    <string name="upgraded_to_pro_calendar">Debe migrar los eventos almacenados localmente, de forma manual. Mediante la exportación en un archivo .ics y luego importar. Puede encontrar los botones de exportación e importación en el menú superior.</string>
+    <string name="upgraded_to_pro_notes">You have to Tienes que migrar tus notas a la versión Profesional manualmente.</string>
+    <string name="upgraded_to_pro_contacts">Tienes que migrar manualmente los contactos almacenados de forma privada, a través de la exportación de un archivo .vcf, y luego la importación. Puedes encontrar los botones de exportación e importación en el menú superior.</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>
@@ -774,9 +778,9 @@
     <string name="help_us">Ayúdenos</string>
     <string name="social">Social</string>
     <string name="other">Otro</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Política de privacidad</string>
     <string name="version_placeholder">Versión %s</string>
-    <string name="hello">Hello :)</string>
+    <string name="hello">Hola :)</string>
     <string name="about_footer">Hecho con ❤️ en Slovakia</string>
     <string name="additional_info">Información adicional</string>
     <string name="app_version">Versión de la app: %s</string>
@@ -788,21 +792,21 @@
             ¡Gracias!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hola,&lt;br&gt;&lt;br&gt;Espero que estés disfrutando de la aplicación. No contiene anuncios y tampoco recopilamos sus datos. Apoye su desarrollo comprando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simplemente Gracias&lt;/a&gt;. También desbloqueará todas las funciones de la aplicación y la personalización del color.&lt;br&gt;&lt;br&gt;¡Gracias!</string>
     <string name="purchase">Comprar</string>
     <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Por favor, actualice Simple Gracias a la última versión</string>
     <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las preguntas más frecuentes. Quizás la solución esté ahí.</string>
     <string name="before_rate_read_faq">Antes de calificarnos, verifique la configuración de la aplicación y lea primero las preguntas frecuentes. Si tiene algún problema, tal vez la solución esté ahí.</string>
     <string name="make_sure_latest">También asegúrese de estar utilizando la última versión de la aplicación.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">También tenga en cuenta que esta versión de la aplicación ya no se está desarrollando, obtenga la versión Pro para obtener muchas mejoras.</string>
     <string name="read_it">Leer</string>
     <string name="read_faq">Leer Preguntas Frecuentes</string>
     <string name="rate_us_prompt">Hola,\n\nparece que ya has usado esta aplicación, y realmente lo apreciamos.\n\nSi te podemos pedir un favor, por favor, puntúanos en Google Play. Eso realmente nos ayudaría mucho.\n\nNo importa lo que decidas, no verás este mensaje de nuevo.\n\n¡Gracias!</string>
     <string name="rate_our_app">Califica nuestra aplicación por favor :)</string>
     <string name="thank_you">Gracias</string>
     <string name="widget_locked_pro">El widget está bloqueado.\nActualice a la versión Pro para desbloquearlo.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Esta función está bloqueada, compre &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Gracias&lt;/a&gt; por desbloquear la aplicación completa.&lt;br &lt;br&gt;Es un pago único y si no está satisfecho, podemos reembolsarselo.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -843,7 +847,7 @@
     <string name="file_manager_short">Administrador de archivos</string>
     <string name="flashlight_short">Linterna</string>
     <string name="gallery_short">Galería</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">Teclado</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Mensajero SMS</string>
@@ -952,7 +956,7 @@
     <string name="why_upgrade_no_ads">Sin anuncios</string>
     <string name="why_upgrade_no_internet_access">Sin acceso a Internet</string>
     <string name="why_upgrade_footer">100% de Garantía de Devolución de Dinero</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Pago único</string>
     <string name="why_upgrade_improved_design">Diseño mejorado</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avanzado</string>
@@ -971,7 +975,7 @@
     <string name="why_upgrade_private_contact_sharing">Uso compartido opcional de contactos privados dentro de nuestras aplicaciones</string>
     <string name="why_upgrade_customizable_contact_ringtones">Tonos de llamada de contacto personalizables</string>
     <string name="why_upgrade_contact_filtering">Filtrado de contactos</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Contactos almacenados de forma privada</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas de verificación</string>
     <string name="why_upgrade_different_note_per_widget">Diferentes notas y colores por widget</string>
@@ -1017,9 +1021,9 @@
     <string name="audio_record_view_title">Audio Record View (Visualización de audio)</string>
     <string name="sms_mms_title">SMS MMS (Manejo de SMS y MMS)</string>
     <string name="apng_title">APNG Android (Soporte WebP animado)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visor de PDF)</string>
+    <string name="m3u_parser_title">M3U Parser (manejo de archivos de listas de reproducción m3u)</string>
+    <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>

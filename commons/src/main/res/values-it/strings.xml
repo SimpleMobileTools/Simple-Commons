@@ -57,7 +57,7 @@
     <string name="seven">Sette</string>
     <string name="eight">Otto</string>
     <string name="nine">Nove</string>
-    <string name="value">Value</string>
+    <string name="value">Valore</string>
     <string name="value_cannot_be_empty">Il valore non può essere vuoto</string>
     <string name="create_new_contact">Crea un nuovo contatto</string>
     <string name="add_to_existing_contact">Aggiungi a un contatto esistente</string>
@@ -87,8 +87,8 @@
     <string name="increase_column_count">Aumenta numero colonne</string>
     <string name="reduce_column_count">Riduci numero colonne</string>
     <string name="column_count">Conteggio colonne</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="portrait_column_count">Conteggio delle colonne del ritratto</string>
+    <string name="landscape_column_count">Conteggio delle colonne del paesaggio</string>
     <string name="change_cover_image">Cambia immagine copertina</string>
     <string name="select_photo">Seleziona foto</string>
     <!-- Blocked numbers -->
@@ -105,7 +105,7 @@
     <string name="block_confirmation">Sei sicuro/a di volere bloccare «%s»\?</string>
     <string name="block_unknown_calls">Blocca le chiamate dai contatti non memorizzati</string>
     <string name="block_unknown_messages">Blocca i messaggi dei contatti non memorizzati</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Inserisci un numero o un modello (ad esempio *12345*, +1*8888) per bloccare tutte le chiamate e i messaggi provenienti da numeri corrispondenti al modello.</string>
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
     <string name="add_favorites">Aggiungi preferiti</string>
@@ -124,7 +124,7 @@
     <string name="no_contacts_permission">L\'autorizzazione Contatti è necessaria</string>
     <string name="no_camera_permissions">L\'autorizzazione Fotocamera è necessaria</string>
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">È necessaria l\'autorizzazione a pubblicare notifiche</string>
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
     <string name="rename_folder">Rinomina cartella</string>
@@ -758,7 +758,7 @@
     <string name="upgraded_to_pro_contacts">È necessario migrare manualmente i contatti memorizzati privatamente esportandoli in un file .vcf e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
     <!-- About -->
     <string name="about">Informazioni</string>
-    <string name="website">Website</string>
+    <string name="website">Sito web</string>
     <string name="website_label">Per i codici sorgenti visitare</string>
     <string name="email_label">Invia opinioni e suggerimenti a</string>
     <string name="upgrade_to_pro">Aggiorna alla versione Pro</string>
@@ -772,12 +772,12 @@
     <string name="donate">Dona</string>
     <string name="follow_us">Seguici</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="support">Supporto</string>
+    <string name="help_us">Aiutaci</string>
     <string name="social">Media sociali</string>
     <string name="other">Altro</string>
     <string name="privacy_policy">Informativa sulla riservatezza</string>
-    <string name="version_placeholder">Version %s</string>
+    <string name="version_placeholder">Versione %s</string>
     <string name="hello">Ciao :)</string>
     <string name="about_footer">Fatto con ❤️ in Slovacchia</string>
     <string name="additional_info">Informazioni aggiuntive</string>
