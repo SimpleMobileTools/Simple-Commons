@@ -9,7 +9,7 @@
     <string name="invalid_file_format">使用できないファイル形式</string>
     <string name="out_of_memory_error">メモリー不足エラー</string>
     <string name="an_error_occurred">エラーが発生しました: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">エラー: %s</string>
     <string name="open_with">別のアプリで開く</string>
     <string name="edit_with">他のアプリで編集</string>
     <string name="edit">編集</string>
@@ -179,7 +179,7 @@
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">新しいアイテムは見つかりませんでした</string>
     <string name="no_space">保存先に十分な空き容量がありません。 必要容量 %1$s, 空き容量 %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">ファイルとフォルダを選択するためのシステムサービスが利用できません</string>
     <!-- Create new -->
     <string name="create_new">新規作成</string>
     <string name="folder">フォルダ</string>
@@ -241,7 +241,7 @@
     <string name="sd_card_usb_same">SDカードとUSBデバイスのパスを同じにすることはできません</string>
     <string name="app_on_sd_card">アプリがSDカード上にインストールされているため、アプリのウィジェットは使用できません。利用可能なウィジェットのリストにも表示されないでしょう。
         これはシステムによる制限なので、ウィジェットを使用する場合には、アプリを内部ストレージに戻す必要があります。</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">フォルダの選択が正しくありません。パス \'%s\' を選択してください</string>
     <!-- File properties -->
     <string name="properties">プロパティ</string>
     <string name="path">パス</string>
@@ -329,7 +329,7 @@
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
     <string name="print_pro">印刷 (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">ショートカット</string>
     <string name="create_shortcut">ショートカットを作成</string>
     <string name="create_shortcut_pro">ショートカットを作成 (Pro)</string>
     <string name="add_number_to_contact">連絡先に番号を追加</string>
@@ -377,7 +377,7 @@
     <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
     <string name="are_you_sure_recycle_bin">個のアイテムをゴミ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">今後表示しない</string>
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
     <string name="maybe">恐らく</string>
@@ -409,7 +409,7 @@
     <string name="lock_folder">フォルダに鍵をかける</string>
     <string name="lock_folder_pro">フォルダに鍵をかける (Pro)</string>
     <string name="unlock_folder">フォルダの鍵を外す</string>
-    <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際のシステム全体のフォルダ暗号化は行われません。</string>
+    <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際にフォルダ全体を暗号化保護しているわけではありません。</string>
     <!-- Times -->
     <string name="yesterday">昨日</string>
     <string name="today">今日</string>
@@ -513,7 +513,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">アラームが鳴るまでの時間:\n%s</string>
     <string name="reminder_triggers_in">リマインダー発動までの時間:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">残り時間: 
+\n%s</string>
     <string name="alarm_warning">アラームの動作を確認して使用してください。充電節約に関連したシステム制限による誤動作が発生する場合があります。</string>
     <string name="reminder_warning">リマインダーの動作を確認して使用してください。リマインダーを妨げるものはないか、アプリがバックグラウンドで閉じられないか、デバイスの充電と通知設定を確認してください。</string>
     <string name="notifications_disabled">アプリの通知が無効となっています。設定から有効に変更してください。</string>
@@ -621,7 +622,7 @@
     <string name="importing_some_entries_failed">一部のエントリのインポートに失敗しました</string>
     <string name="exporting_some_entries_failed">一部のエントリのエクスポートに失敗しました</string>
     <string name="no_entries_for_importing">インポートするエントリが見つかりませんでした</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">インポートする新しいエントリが見つかりませんでした</string>
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
