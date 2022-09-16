@@ -105,7 +105,7 @@
     <string name="block_confirmation">Σίγουρα να αποκλειστεί ο \"%s\"?</string>
     <string name="block_unknown_calls">Αποκλεισμός κλήσεων από μη αποθηκευμένες επαφές</string>
     <string name="block_unknown_messages">Αποκλεισμός μηνυμάτων από μη αποθηκευμένες επαφές</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Εισάγετε έναν αριθμό ή ένα μοτίβο (π.χ. *12345*, +1*8888) για να μπλοκάρετε όλες τις κλήσεις και τα μηνύματα από αριθμούς που αντιστοιχούν στο μοτίβο.</string>
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
     <string name="add_favorites">Προσθήκη αγαπημένων</string>
@@ -333,7 +333,7 @@
     <string name="redo">Επανάληψη</string>
     <string name="print">Εκτύπωση</string>
     <string name="print_pro">Εκτύπωση (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Συντόμευση</string>
     <string name="create_shortcut">Δημιουργία συντόμευσης</string>
     <string name="create_shortcut_pro">Δημιουργία συντόμευσης (Pro)</string>
     <string name="add_number_to_contact">Προσθήκη αριθμού στις επαφές</string>
