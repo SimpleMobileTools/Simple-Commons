@@ -42,6 +42,7 @@ class AboutActivity : BaseSimpleActivity() {
             about_donate_icon,
             about_invite_icon,
             about_contributors_icon,
+            about_get_simple_phone_icon,
             about_more_apps_icon,
             about_email_icon,
             about_privacy_policy_icon,
@@ -75,6 +76,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupFacebook()
         setupReddit()
         setupTelegram()
+        setupGetSimplePhone()
         setupMoreApps()
         setupWebsite()
         setupPrivacyPolicy()
@@ -255,6 +257,16 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
+    private fun setupGetSimplePhone() {
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            about_get_simple_phone_holder.beGone()
+        }
+
+        about_get_simple_phone_holder.setOnClickListener {
+
+        }
+    }
+
     private fun setupMoreApps() {
         if (resources.getBoolean(R.bool.hide_google_relations)) {
             about_more_apps_holder.beGone()
@@ -267,7 +279,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupWebsite() {
         if (resources.getBoolean(R.bool.show_donate_in_about) && !resources.getBoolean(R.bool.hide_all_external_links)) {
-            if (about_more_apps_holder.isGone()) {
+            if (about_more_apps_holder.isGone() && about_get_simple_phone_holder.isGone()) {
                 about_website_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
             }
 
