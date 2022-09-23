@@ -199,7 +199,7 @@
     <string name="file_already_exists">„%s“ fail on juba olemas</string>
     <string name="file_already_exists_overwrite">„%s“ fail on juba olemas, kas kirjutame üle\?</string>
     <string name="folder_already_exists">„%s“ kaust on juba olemas</string>
-    <string name="merge">Merge</string>
+    <string name="merge">Ühinemine</string>
     <string name="keep_both">Jäta mõlemad alles</string>
     <string name="overwrite">Kirjuta üle</string>
     <string name="skip">Jäta vahele</string>
@@ -259,7 +259,7 @@
     <string name="files_count">Faile kokku</string>
     <string name="resolution">Resolutsioon</string>
     <string name="duration">Kestus</string>
-    <string name="artist">Artist</string>
+    <string name="artist">Kunstnik</string>
     <string name="album">Album</string>
     <string name="focal_length">Fookuskaugus</string>
     <string name="exposure_time">Säriaeg</string>
@@ -269,7 +269,7 @@
     <string name="exif">EXIF</string>
     <string name="song_title">Pala pealkiri</string>
     <string name="gps_coordinates">GPS-koordinaadid</string>
-    <string name="altitude">Altitude</string>
+    <string name="altitude">Kõrgus</string>
     <string name="remove_exif">Kustuta EXIF-väljad</string>
     <string name="remove_exif_confirmation">Kas sa oled kindel, et soovid kustutada EXIF väljade väärtused nagu näiteks asukoha koordinaadid, kaamera mudel, jmt\?</string>
     <string name="exif_removed">EXIF-väljade kustutamine õnnestus</string>
@@ -337,7 +337,7 @@
     <string name="create_shortcut">Loo otsetee</string>
     <string name="create_shortcut_pro">Loo otsetee (Pro)</string>
     <string name="add_number_to_contact">Lisa kontaktnumber</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="view_contact_details">Vaata kontaktandmeid</string>
     <string name="call_from_sim_1">Kõne SIM-kaardilt 1</string>
     <string name="call_from_sim_2">Kõne SIM-kaardilt 2</string>
     <string name="toggle_filename">Muuda failinime nähtavust</string>
@@ -387,7 +387,7 @@
     <string name="maybe">Võib-olla</string>
     <plurals name="delete_warning">
         <item quantity="one">Hoiatus: Oled kustutamas %d kausta</item>
-        <item quantity="other">Hoiatus: Oled kustutamas %d kausta</item>
+        <item quantity="other">Hoiatus: Oled kustutamas %d kaustad</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -422,7 +422,7 @@
     <string name="every_day">Iga päev</string>
     <string name="hide_year">Peida aasta</string>
     <string name="seconds_raw">sekundit</string>
-    <string name="minutes_raw">minutes</string>
+    <string name="minutes_raw">Minutit</string>
     <string name="hours_raw">tundi</string>
     <string name="days_raw">päevad</string>
     <string name="seconds_letter">s</string>
@@ -459,31 +459,31 @@
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundi pärast</item>
-        <item quantity="other">%d sekundi pärast</item>
+        <item quantity="other">%d sekundit pärast</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutit</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d tunni pärast</item>
-        <item quantity="other">%d tunni pärast</item>
+        <item quantity="one">%d tund pärast</item>
+        <item quantity="other">%d tundi pärast</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d päeva pärast</item>
+        <item quantity="one">%d päev pärast</item>
         <item quantity="other">%d päeva pärast</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d nädala pärast</item>
-        <item quantity="other">%d nädala pärast</item>
+        <item quantity="one">%d nädal pärast</item>
+        <item quantity="other">%d nädalat pärast</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d kuu pärast</item>
-        <item quantity="other">%d kuu pärast</item>
+        <item quantity="other">%d kuud pärast</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d aasta pärast</item>
-        <item quantity="other">%d aasta pärast</item>
+        <item quantity="other">%d aastat pärast</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -516,32 +516,32 @@
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d sekundi võrra</item>
-        <item quantity="other">%d sekundi võrra</item>
+        <item quantity="one">%d sekund võrra</item>
+        <item quantity="other">%d sekundit võrra</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
         <item quantity="other">%d minutit</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d tunni võrra</item>
-        <item quantity="other">%d tunni võrra</item>
+        <item quantity="one">%d tund võrra</item>
+        <item quantity="other">%d tundi võrra</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d päeva võrra</item>
+        <item quantity="one">%d päev võrra</item>
         <item quantity="other">%d päeva võrra</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d nädala võrra</item>
-        <item quantity="other">%d nädala võrra</item>
+        <item quantity="one">%d nädal võrra</item>
+        <item quantity="other">%d nädalat võrra</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d kuu võrra</item>
-        <item quantity="other">%d kuu võrra</item>
+        <item quantity="other">%d kuud võrra</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d aasta võrra</item>
-        <item quantity="other">%d aasta võrra</item>
+        <item quantity="other">%d aastat võrra</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Äratuseni jäänud aeg:\n%s</string>
@@ -842,51 +842,51 @@
     <string name="development">Arendus</string>
     <string name="other_help">Muu abi</string>
     <string name="contributors_label">See loend sisaldab kõiki, kes aitasid märgatavalt mis tahes rakendust Lihtsad mobiilsed tööriistad komplektis, mitte ainult seda. Tõlgetega tegelevad vabatahtlikud, andke meile teada, kui soovite ka teie aidata. Tõlkimise juhend on aadressil &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;see veebisait&lt;/a&gt; või võtke meiega ühendust aadressil &lt;href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; kui teil on küsimusi. Aitäh kõigile panustajatele ja teistele toetajatele!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="translation_arabic">Araabia</string>
+    <string name="translation_azerbaijani">Aserbaidžaan</string>
     <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_bulgarian">Bulgarian</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
+    <string name="translation_breton">Bretooni</string>
+    <string name="translation_bulgarian">Bulgaaria</string>
+    <string name="translation_catalan">Katalaani</string>
+    <string name="translation_czech">Tšehhi</string>
+    <string name="translation_welsh">Walesi</string>
+    <string name="translation_danish">Taani</string>
     <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_german">Saksa</string>
+    <string name="translation_greek">Kreeka</string>
+    <string name="translation_spanish">Hispaania</string>
+    <string name="translation_basque">Baski</string>
+    <string name="translation_persian">Pärsia</string>
+    <string name="translation_finnish">Soome</string>
+    <string name="translation_french">Prantsuse</string>
+    <string name="translation_galician">Galicia</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
+    <string name="translation_croatian">Horvaatia</string>
+    <string name="translation_hungarian">Ungari</string>
+    <string name="translation_indonesian">Indoneesia</string>
+    <string name="translation_italian">Itaalia</string>
+    <string name="translation_hebrew">Heebrea</string>
+    <string name="translation_japanese">Jaapani</string>
+    <string name="translation_korean">Korea</string>
+    <string name="translation_lithuanian">Leedu</string>
     <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
+    <string name="translation_norwegian">Norra</string>
+    <string name="translation_dutch">Hollandi</string>
+    <string name="translation_polish">Poola</string>
+    <string name="translation_portuguese">Portugali</string>
+    <string name="translation_romanian">Rumeenia</string>
+    <string name="translation_russian">Vene</string>
+    <string name="translation_slovak">Slovakkia</string>
+    <string name="translation_slovenian">Sloveenia</string>
     <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="translation_swedish">Rootsi</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_turkish">Türgi</string>
+    <string name="translation_ukrainian">Ukraina</string>
+    <string name="translation_vietnamese">Vietnami</string>
+    <string name="translation_chinese_hk">Hiina (Hongkong)</string>
+    <string name="translation_chinese_cn">Hiina keel (lihtsustatud)</string>
+    <string name="translation_chinese_tw">Hiina (traditsiooniline)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Osta Pro-versioon nüüd!</string>
     <string name="why_upgrade_basic_version">Põhiline</string>
