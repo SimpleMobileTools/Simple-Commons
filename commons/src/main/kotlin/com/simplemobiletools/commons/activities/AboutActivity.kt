@@ -263,7 +263,7 @@ class AboutActivity : BaseSimpleActivity() {
         }
 
         about_get_simple_phone_holder.setOnClickListener {
-
+            launchViewIntent("https://simplephone.tech/")
         }
     }
 
