@@ -314,6 +314,7 @@
     <string name="rename">Hernoemen</string>
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
+    <string name="resize">Grootte aanpassen</string>
     <string name="select_all">Alles selecteren</string>
     <string name="select_text">Tekst selecteren</string>
     <string name="hide">Verbergen</string>
@@ -345,6 +346,7 @@
     <string name="call">Bellen</string>
     <string name="contact_details">Contactgegevens</string>
     <string name="add_contact">Contact toevoegen</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>
@@ -600,7 +602,7 @@
     <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
     <string name="start_name_with_surname">Achternaam eerst</string>
     <string name="clear_cache">Cache opschonen</string>
-    <string name="show_call_confirmation_dialog">Een bevestiging vragen voor het bellen</string>
+    <string name="show_call_confirmation_dialog">Om bevestiging vragen voor het bellen</string>
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
     <string name="security">Beveiliging</string>

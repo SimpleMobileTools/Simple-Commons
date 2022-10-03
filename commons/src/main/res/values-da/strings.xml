@@ -87,9 +87,9 @@
     <string name="list">Liste</string>
     <string name="increase_column_count">Flere kolonner</string>
     <string name="reduce_column_count">Færre kolonner</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Antal kolonner</string>
+    <string name="portrait_column_count">Antal kolonner stående format</string>
+    <string name="landscape_column_count">Antal kolonner liggende format</string>
     <string name="change_cover_image">Skift cover-billede</string>
     <string name="select_photo">Vælg billede</string>
     <!-- Blocked numbers -->
@@ -125,7 +125,7 @@
     <string name="no_contacts_permission">Adgang til kontakter påkrævet</string>
     <string name="no_camera_permissions">Adgang til kamera påkrævet</string>
     <string name="no_audio_permissions">Adgang til lyd påkrævet</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">Der kræves tilladelse til at sende meddelelser</string>
     <!-- Renaming -->
     <string name="rename_file">Omdøb fil</string>
     <string name="rename_folder">Omdøb mappe</string>
@@ -320,6 +320,7 @@
     <string name="rename">Omdøb</string>
     <string name="share">Del</string>
     <string name="share_via">Del via</string>
+    <string name="resize">Skaler</string>
     <string name="select_all">Vælg alle</string>
     <string name="select_text">Vælg tekst</string>
     <string name="hide">Skjul</string>
@@ -334,7 +335,7 @@
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
     <string name="print_pro">Udskriv (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Genvej</string>
     <string name="create_shortcut">Opret genvej</string>
     <string name="create_shortcut_pro">Opret genvej (Pro)</string>
     <string name="add_number_to_contact">Føj nummer til kontakt</string>
@@ -351,6 +352,7 @@
     <string name="call">Opkald</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
     <string name="name">Navn</string>
@@ -757,7 +759,7 @@
     </string>
     <string name="donate_new">Hej,&lt;br&gt;&lt;br&gt;Jeg håber, at du nyder appen. Den indeholder ingen reklamer, og vi indsamler heller ikke dine data, men du bedes støtte dens udvikling ved at købe &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Du vil også få alle app-funktioner og farvetilpasning låst op.&lt;br&gt;&lt;br&gt;&lt;br&gt;Tak!</string>
     <string name="purchase">Køb</string>
-    <string name="get_simple_phone">Get Simple Phone</string>
+    <string name="get_simple_phone">Få Simple Phone</string>
     <string name="update_thank_you">Opdater venligst Simple Thank You til den seneste version</string>
     <string name="before_asking_question_read_faq">Inden du stiller et spørgsmål bedes du først tjekke appens indstillinger og læse de \"Ofte stillede spørgsmål\", måske finder du svaret der.</string>
     <string name="before_rate_read_faq">Tjek appens indstillinger og læs vores ofte stillede spørgsmål inden du vurderer os. Har du nogen problemer, kan du måske finde en løsning der.</string>
@@ -871,7 +873,7 @@
     <string name="translation_azerbaijani">Aserbajdsjansk</string>
     <string name="translation_bengali">Bengalsk</string>
     <string name="translation_breton">Bretonsk</string>
-    <string name="translation_bulgarian">Bulgarian</string>
+    <string name="translation_bulgarian">Bulgarsk</string>
     <string name="translation_catalan">Catalansk</string>
     <string name="translation_czech">Tjekkisk</string>
     <string name="translation_welsh">Walisisk</string>

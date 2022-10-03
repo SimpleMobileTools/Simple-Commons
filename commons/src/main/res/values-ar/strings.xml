@@ -220,12 +220,12 @@
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">يرجى منح التطبيق صلاحية الوصول إلى جميع الملفات الخاصة بك، فإنه قد لا يعمل بشكل جيد دون ذلك.</string>
     <plurals name="items">
-        <item quantity="zero">%d item</item>
-        <item quantity="one">%d items</item>
-        <item quantity="two">%d items</item>
-        <item quantity="few">%d items</item>
-        <item quantity="many">%d items</item>
-        <item quantity="other">%d items</item>
+        <item quantity="zero">%d عنصر</item>
+        <item quantity="one">%d عنصر</item>
+        <item quantity="two">%d عنصر</item>
+        <item quantity="few">%d عنصر</item>
+        <item quantity="many">%d عناصر</item>
+        <item quantity="other">%d عنصر</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
@@ -335,6 +335,7 @@
     <string name="rename">إعادة تسمية</string>
     <string name="share">مشاركة</string>
     <string name="share_via">مشاركة عبر</string>
+    <string name="resize">تغيير الحجم</string>
     <string name="select_all">تحديد الكل</string>
     <string name="select_text">Select text</string>
     <string name="hide">إخفاء</string>
@@ -366,6 +367,7 @@
     <string name="call">Call</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
     <string name="name">الإسم</string>
