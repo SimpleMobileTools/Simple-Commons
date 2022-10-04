@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
-    <string name="back">Back</string>
+    <string name="back">戻る</string>
     <string name="nothing">なし</string>
     <string name="later">後で</string>
     <string name="save_as">名前を付けて保存</string>
@@ -48,8 +48,8 @@
     <string name="no_phone_call_permission">アプリに電話をかける権限がありません。デバイス設定で許可してください</string>
     <string name="insert_text_here">ここにテキストを挿入</string>
     <string name="call_person">%sに発信</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="four">4</string>
@@ -62,7 +62,7 @@
     <string name="value_cannot_be_empty">値を空にすることはできません</string>
     <string name="create_new_contact">新しい連絡先を作成</string>
     <string name="add_to_existing_contact">既存の連絡先に追加</string>
-    <string name="app_corrupt">App Corrupt</string>
+    <string name="app_corrupt">アプリの破損</string>
     <string name="disclaimer">注意事項</string>
     <string name="take_photo">写真を撮影</string>
     <string name="choose_photo">写真を選択</string>
@@ -88,8 +88,8 @@
     <string name="increase_column_count">列数を増やす</string>
     <string name="reduce_column_count">列数を減らす</string>
     <string name="column_count">列数</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="portrait_column_count">縦向きの列数</string>
+    <string name="landscape_column_count">横向きの列数</string>
     <string name="change_cover_image">カバー画像を変更</string>
     <string name="select_photo">写真を選択</string>
     <!-- Blocked numbers -->
@@ -106,7 +106,7 @@
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>
     <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
     <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>
@@ -217,7 +217,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">選択を確認</string>
     <string name="loading">読み込み中…</string>
-    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
+    <string name="access_storage_prompt">[すべてのファイルへのアクセス] をアプリに許可してください。許可をしないとうまく機能しない可能性があります。</string>
     <plurals name="items">
         <item quantity="other">%d アイテム</item>
     </plurals>
@@ -341,14 +341,14 @@
     <string name="toggle_filename">ファイル名の表示を切り替え</string>
     <string name="move_to_top">上部に移動する</string>
     <string name="move_to_bottom">下部に移動する</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="pin_item">アイテムをピン留め</string>
+    <string name="unpin_item">アイテムのピン留めを外す</string>
     <string name="send_sms">SMS を送信</string>
     <string name="send_email">メールを送信</string>
     <string name="call">通話</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="contact_details">連絡先の詳細</string>
+    <string name="add_contact">連絡先を追加</string>
+    <string name="wallpapers">壁紙</string>
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
     <string name="name">名前</string>
@@ -375,10 +375,10 @@
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>
     <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s をゴミ箱に移動してもよろしいですか？</string>
+    <string name="move_to_recycle_bin_confirmation">%s をごみ箱に移動してもよろしいですか？</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
-    <string name="are_you_sure_recycle_bin">個のアイテムをゴミ箱に移動してもよろしいですか？</string>
+    <string name="are_you_sure_recycle_bin">個のアイテムをごみ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
     <string name="do_not_show_again">今後表示しない</string>
     <string name="yes">はい</string>
@@ -518,8 +518,8 @@
     <string name="reminder_triggers_in">リマインダー発動までの時間:\n%s</string>
     <string name="time_remaining">残り時間: 
 \n%s</string>
-    <string name="alarm_warning">アラームの動作を確認して使用してください。充電節約に関連したシステム制限による誤動作が発生する場合があります。</string>
-    <string name="reminder_warning">リマインダーの動作を確認して使用してください。リマインダーを妨げるものはないか、アプリがバックグラウンドで閉じられないか、デバイスの充電と通知設定を確認してください。</string>
+    <string name="alarm_warning">アラームの動作を確認して使用してください。バッテリー節約に関連したシステムの制限によって、誤動作が発生する場合があります。</string>
+    <string name="reminder_warning">リマインダーの動作を確認して使用してください。リマインダーを妨げるものはないか、アプリがバックグラウンドで閉じられないか、デバイスの通知設定と電池設定を確認してください。</string>
     <string name="notifications_disabled">アプリの通知が無効となっています。設定から有効に変更してください。</string>
     <!-- Alarms -->
     <string name="alarm">アラーム</string>
@@ -558,7 +558,7 @@
     <string name="show_info_bubble">スクロールバーをドラッグ中にアイテムの情報を表示する</string>
     <string name="prevent_phone_from_sleeping">アプリの使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
-    <string name="enable_pull_to_refresh">下に引いて更新を有効にする</string>
+    <string name="enable_pull_to_refresh">下に引っ張って更新を有効にする</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
     <string name="change_date_and_time_format">日付と時刻のフォーマットを変更</string>
     <string name="sunday_first">週の始めを日曜にする</string>
@@ -568,7 +568,7 @@
     <string name="vibrate_on_button_press">ボタンを押した時に振動する</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">ごみ箱を自動で空にする間隔</string>
-    <string name="empty_recycle_bin">ゴミ箱を空にする</string>
+    <string name="empty_recycle_bin">ごみ箱を空にする</string>
     <string name="force_portrait_mode">縦向きモードを強制する</string>
     <string name="export_settings">設定をエクスポート</string>
     <string name="import_settings">設定をインポート</string>
@@ -583,11 +583,11 @@
     <string name="scrolling">スクロール</string>
     <string name="file_operations">ファイル操作</string>
     <string name="recycle_bin">ごみ箱</string>
-    <string name="saving_label">保存中</string>
+    <string name="saving_label">保存</string>
     <string name="startup">起動時</string>
     <string name="text">テキスト</string>
-    <string name="migrating">移行中</string>
-    <string name="quality">Quality</string>
+    <string name="migrating">移行</string>
+    <string name="quality">品質</string>
     <string name="main_screen">メイン画面</string>
     <string name="thumbnails">サムネイル</string>
     <string name="list_view">リストビュー</string>
@@ -605,10 +605,10 @@
     <string name="restore_this_file">このファイルを復元</string>
     <string name="restore_selected_files">選択したファイルを復元</string>
     <string name="restore_all_files">すべてのファイルを復元</string>
-    <string name="recycle_bin_emptied">ゴミ箱を空にしました</string>
+    <string name="recycle_bin_emptied">ごみ箱を空にしました</string>
     <string name="files_restored_successfully">ファイルが正常に復元されました</string>
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
-    <string name="recycle_bin_empty">ゴミ箱は空です</string>
+    <string name="recycle_bin_empty">ごみ箱は空です</string>
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
@@ -738,7 +738,7 @@
     <string name="rate_our_app">是非、アプリを評価してください :)</string>
     <string name="thank_you">ありがとうございます</string>
     <string name="widget_locked_pro">ウィジェットはロックされています。\nロックを解除するには、Proバージョンにアップグレードしてください。</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">この機能はロックされています。ロックを解除するには、 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; を購入する必要があります。&lt;br&gt;&lt;br&gt;お支払いは1回のみで、ご満足いただけない場合はご返金いたします。</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -793,21 +793,16 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">よくある質問</string>
     <string name="before_asking_question">質問する前に、こちらをお読みください</string>
-    <string name="faq_1_title_commons">ウィジェットリストにこのアプリが表示されないのはなぜ？</string>
+    <string name="faq_1_title_commons">ウィジェットのリストにこのアプリが表示されないのはなぜですか？</string>
     <string name="faq_1_text_commons">おそらく、SDカード内にアプリが保存されているからです。その場合、アンドロイドには特定のアプリウィジェットを非表示にするシステム制限があります。デバイスの設定から、アプリを内部ストレージへ移動してください。</string>
     <string name="faq_2_title_commons">支援をしたいけど、お金の寄付が出来ません。他に出来ることはありますか？</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">はい、もちろんです。このアプリに関しての情報を広めたり、改善のためのフィードバックを送ったり、ストアでの評価を行ったり出来ます。また、アプリの未翻訳フレーズを翻訳したり、既存の翻訳を改善したりすることも出来ます。翻訳ガイドは &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;こちらのWebサイト&lt;/a&gt; にあります。ご不明な点がございましたら、 &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; までお問い合わせください。</string>
     <string name="faq_3_title_commons">間違えてファイルを削除してしまいました。どうすれば復元できますか？</string>
-    <string name="faq_3_text_commons">残念ながら復元は出来ません。一度了承するとファイルは即座に削除され、ゴミ箱も利用不可となります。</string>
+    <string name="faq_3_text_commons">残念ながら復元は出来ません。一度了承するとファイルは即座に削除され、ごみ箱も利用不可となります。</string>
     <string name="faq_4_title_commons">ウィジェットの色が好みじゃないです。変更出来ますか？</string>
     <string name="faq_4_text_commons">はい、ホーム画面でウィジェットをドラッグすると、ウィジェット設定画面が表示されます。左下に色付きの正方形が表示されるので、ボタンを押して選択してください。スライダーを使用してアルファを設定することも可能です。</string>
     <string name="faq_5_title_commons">削除したファイルを復元出来ますか？</string>
-    <string name="faq_5_text_commons">本当に削除されてしまったのであれば、復元出来ません。ですが、デフォルトでゴミ箱が有効になっているので、削除ではなくファイルがゴミ箱に移動します。</string>
+    <string name="faq_5_text_commons">本当に削除されてしまったのであれば、復元出来ません。ですが、デフォルトでごみ箱機能が有効になっているため、ファイルは削除されたのではなく、ごみ箱に移動している可能性があります。</string>
     <string name="faq_6_title_commons">アプリランチャーのアイコンが消えました。どうしたらいいですか？</string>
     <string name="faq_6_text_commons">ランチャーがアイコンカスタマイズを適切にサポートしていないことが原因となっています。可能であれば、Google Playかウィジェットでアプリを起動してみてください。
       起動したら、デフォルトのオレンジ色(#F57C00)のアイコンを元に戻します。最悪の場合、アプリを再インストールする必要があります。</string>
@@ -826,13 +821,7 @@
     <string name="translation">翻訳</string>
     <string name="development">開発</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label">このリストには、このアプリだけでなく、Simple Mobile Tools スイート内の特定のアプリを著しく助けた人たちが含まれています。翻訳はボランティアによって行われています。翻訳を行いたい場合はお知らせください。翻訳ガイドは &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;こちらのWebサイト&lt;/a&gt; にあります。ご不明の点がございましたら、 &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; までお問い合わせください。すべての貢献者ならびにすべてのサポーターに感謝いたします！</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
