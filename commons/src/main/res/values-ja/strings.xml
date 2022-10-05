@@ -417,7 +417,7 @@
     <string name="yesterday">昨日</string>
     <string name="today">今日</string>
     <string name="tomorrow">明日</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">毎日</string>
     <string name="hide_year">年を隠す</string>
     <string name="seconds_raw">秒</string>
     <string name="minutes_raw">分</string>
@@ -874,7 +874,7 @@
     <string name="why_upgrade_no_ads">広告なし</string>
     <string name="why_upgrade_no_internet_access">インターネットにアクセス不要</string>
     <string name="why_upgrade_footer">100％返金保証</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">1回払い</string>
     <string name="why_upgrade_improved_design">改良されたデザイン</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">上級な写真編集</string>
@@ -939,9 +939,9 @@
     <string name="audio_record_view_title">Audio Record View (オーディオ・ビジュアライゼーション)</string>
     <string name="sms_mms_title">SMS MMS (SMSやMMSの取り扱い)</string>
     <string name="apng_title">APNG Android (アニメーションWebPサポート)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDFビューア)</string>
+    <string name="m3u_parser_title">M3U Parser (m3uプレイリストの取り扱い)</string>
+    <string name="android_lame_title">AndroidLame (mp3エンコーダ)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">非推奨: このバージョンのアプリはメンテナンスが行われなくなります。こちらのURLからPro版を入手してください。https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">どのアプリでも、購入後２時間以内にアンインストールすると自動的に払い戻しされることを覚えていてください。それ以降に払い戻しが必要な場合は、こちらにお問い合わせください。hello@simplemobiletools.com
