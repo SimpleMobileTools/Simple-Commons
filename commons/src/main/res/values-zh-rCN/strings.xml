@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
-    <string name="back">Back</string>
+    <string name="back">返回</string>
     <string name="nothing">没有东西</string>
     <string name="later">稍后</string>
     <string name="save_as">保存</string>
@@ -903,7 +903,7 @@
     <string name="why_upgrade_zooming">缩放</string>
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。致谢。</string>
-    <string name="third_party_licences">开放源代码</string>
+    <string name="third_party_licences">第三方许可证</string>
     <string name="kotlin_title">Kotlin (编程语言)</string>
     <string name="subsampling_title">子采样比例图像视图 (可缩放的图像视图)</string>
     <string name="glide_title">Glide（图片加载和缓存）</string>
