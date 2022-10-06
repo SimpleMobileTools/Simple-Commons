@@ -14,8 +14,8 @@
     <string name="open_with">Abrir con</string>
     <string name="edit_with">Editar con</string>
     <string name="edit">Editar</string>
-    <string name="no_app_found">No se encontró una aplicación válida</string>
-    <string name="no_browser_found">No se ha encontrado ningún navegador</string>
+    <string name="no_app_found">No se encontró ninguna aplicación válida</string>
+    <string name="no_browser_found">No se encontró ningún navegador</string>
     <string name="no_email_client_found">No se ha encontrado ningún cliente de correo electrónico</string>
     <string name="set_as">Establecer como</string>
     <string name="copy_to_clipboard">Copiar al portapapeles</string>
@@ -36,7 +36,7 @@
     <string name="select_a_different_color">Seleccionar un color diferente</string>
     <string name="download">Descarga</string>
     <string name="notification">Notificación</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notificaciones</string>
     <string name="email">Correo electrónico</string>
     <string name="previous">Anterior</string>
     <string name="playpause">Reproducir/pausar</string>
@@ -63,8 +63,8 @@
     <string name="create_new_contact">Crear nuevo contacto</string>
     <string name="add_to_existing_contact">Añadir a un contacto existente</string>
     <string name="app_corrupt">Aplicación corrupta</string>
-    <string name="disclaimer">Exención de responsabilidad</string>
-    <string name="take_photo">Tomar foto</string>
+    <string name="disclaimer">Descargo de responsabilidad</string>
+    <string name="take_photo">Sacar una fotografía</string>
     <string name="choose_photo">Escoger foto</string>
     <!-- Events -->
     <string name="birthday">Cumpleaños</string>
@@ -75,7 +75,7 @@
     <!-- Phone numbers -->
     <string name="mobile">Celular</string>
     <string name="main_number">Principal</string>
-    <string name="work_fax">Fax de trabajo</string>
+    <string name="work_fax">Fax del trabajo</string>
     <string name="home_fax">Fax de casa</string>
     <string name="pager">Localizador</string>
     <string name="no_phone_number_found">No se encontraron números de teléfono</string>
@@ -90,8 +90,8 @@
     <string name="column_count">Recuento de columnas</string>
     <string name="portrait_column_count">Recuento de columnas de retratos</string>
     <string name="landscape_column_count">Recuento de columnas apaisadas</string>
-    <string name="change_cover_image">Cambiar imagen de portada</string>
-    <string name="select_photo">Seleccionar imagen</string>
+    <string name="change_cover_image">Cambiar la imagen de la portada</string>
+    <string name="select_photo">Seleccione Foto</string>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
     <string name="not_blocking_anyone">Aún no has bloqueado a nadie.</string>
@@ -102,11 +102,11 @@
     <string name="export_blocked_numbers">Exportar números bloqueados</string>
     <string name="import_blocked_numbers">Importar números bloqueados</string>
     <string name="must_make_default_dialer">Tienes que hacer esta aplicación la aplicación de marcación por defecto para hacer uso de los números bloqueados.</string>
-    <string name="set_as_default">Establecer como por defecto</string>
+    <string name="set_as_default">Establecer por defecto</string>
     <string name="block_confirmation">¿Estás seguro de que quieres bloquear a \"%s\"?</string>
-    <string name="block_unknown_calls">Bloquear llamadas de contactos no almacenados</string>
-    <string name="block_unknown_messages">Bloquear los mensajes de los contactos no almacenados</string>
-    <string name="add_blocked_number_helper_text">Introduzca un número o un patrón (por ejemplo, *12345*, +1*8888) para bloquear todas las llamadas y mensajes de números que coincidan con el patrón.</string>
+    <string name="block_unknown_calls">Bloquear llamadas de contactos no guardados</string>
+    <string name="block_unknown_messages">Bloquear los mensajes de los contactos no guardados</string>
+    <string name="add_blocked_number_helper_text">Ingrese un número o un patrón (por ejemplo, *12345*, +1*8888) para bloquear todas las llamadas y mensajes de números que coincidan con el patrón.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Añadir a favoritos</string>
@@ -141,10 +141,10 @@
     <string name="filename_invalid_characters_placeholder">El nombre del archivo \'%s\' contiene caracteres no válidos</string>
     <string name="extension_cannot_be_empty">La extensión no puede estar vacía</string>
     <string name="source_file_doesnt_exist">El archivo %s no existe</string>
-    <string name="prepend_filenames">Preponer los nombres de archivo</string>
-    <string name="append_filenames">Adjuntar nombres de archivos</string>
-    <string name="simple_renaming">Renombrado simple</string>
-    <string name="pattern_renaming">Modelo</string>
+    <string name="prepend_filenames">Anteponer los nombres de los archivo</string>
+    <string name="append_filenames">Agregar los nombres del archivo</string>
+    <string name="simple_renaming">Cambiar el nombre facilmente</string>
+    <string name="pattern_renaming">Patrón</string>
     <string name="string_to_add">Cadena para agregar</string>
     <string name="rename_date_time_pattern">%Y - Año\n%M - Mes\n%D - Día\n%h - Hora\n%m - Minuto\n%s - Segundo\n%i - número aumentando desde 1</string>
     <string name="filename_without_txt">Nombre del archivo (sin .txt) </string>
@@ -198,7 +198,7 @@
     <string name="keep_both">Mantener ambos</string>
     <string name="overwrite">Sobreescribir</string>
     <string name="skip">Saltar</string>
-    <string name="append">Añadir \'_1\'</string>
+    <string name="append">Agregar con \'_1\'</string>
     <string name="apply_to_all">Aplicar a todo</string>
     <string name="system_folder_restriction">El sistema no permite la operación en esta carpeta, por favor elija otra</string>
     <string name="system_folder_copy_restriction">El sistema no permite copiar en esta carpeta, por favor elija otra</string>
@@ -211,7 +211,7 @@
     <string name="confirm_storage_access_title">Permita el acceso al almacenamiento externo</string>
     <string name="confirm_folder_access_title">Confirmar el acceso a la carpeta</string>
     <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
-    <string name="confirm_storage_access_text_sd">Si no ve la tarjeta SD, prueba esto</string>
+    <string name="confirm_storage_access_text_sd">Si no ve la tarjeta SD, pruebe esto</string>
     <string name="confirm_storage_access_android_text">Por favor permita a la aplicacion acceder al almacenamiento seleccionado en la siguiente pantalla presionando \'Usar esta carpeta\' en la parte inferior.</string>
     <string name="confirm_storage_access_android_text_specific">Permita el acceso a \'<b>%s</b>\' en la siguiente pantalla presionando \'<b>Usar esta carpeta</b>\' en la parte inferior.</string>
     <string name="confirm_create_doc_for_new_folder_text">Presione \'<b>Guardar</b>\' en la parte inferior de la siguiente pantalla para crear la nueva carpeta.</string>
@@ -245,15 +245,15 @@
     <string name="storage">Almacenamiento</string>
     <string name="internal">Almacenamiento interno</string>
     <string name="sd_card">Tarjeta SD</string>
-    <string name="root">Raíz /</string>
-    <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
-    <string name="sd_card_usb_same">La tarjeta SD y el dispositivo USB no pueden ser los mismos</string>
+    <string name="root">Raíz ( Root)</string>
+    <string name="wrong_root_selected">Carpeta incorrecta seleccionada, seleccione la carpeta principal de su tarjeta SD</string>
+    <string name="sd_card_usb_same">Las rutas de la tarjeta SD y del dispositivo USB no pueden ser las mismas</string>
     <string name="app_on_sd_card">Parece que tienes la aplicación instalada en una tarjeta SD, lo que hace que los widgets de la aplicación no estén disponibles. Ni siquiera los verás en la lista de widgets disponibles.
         Es una limitación del sistema, por lo que si deseas usar los widgets, debes volver a colocar la aplicación en el almacenamiento interno.</string>
     <string name="wrong_folder_selected">Carpeta incorrecta seleccionada, por favor seleccione la ruta \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propiedades</string>
-    <string name="path">Ubicación</string>
+    <string name="path">Ruta</string>
     <string name="items_selected">Elementos seleccionados</string>
     <string name="direct_children_count">Número de archivos directamente contenidos</string>
     <string name="files_count">Número total de archivos</string>
@@ -314,7 +314,7 @@
     <string name="black_white">Blanco y negro</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartido</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Sistema por defecto</string>
     <!-- What's new -->
     <string name="whats_new">Novedades</string>
     <string name="whats_new_disclaimer">* Solo las actualizaciones más grandes se enumeran aquí, siempre hay algunas pequeñas mejoras también</string>
@@ -349,13 +349,13 @@
     <string name="toggle_filename">Cambiar la visibilidad del nombre de archivo</string>
     <string name="move_to_top">Mover a la parte superior</string>
     <string name="move_to_bottom">Mover a la parte inferior</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">Anclar elemento</string>
     <string name="unpin_item">Desanclar elemento</string>
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Llamar a</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Datos de contacto</string>
+    <string name="add_contact">Añadir contacto</string>
     <string name="wallpapers">Fondos de pantalla</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -377,10 +377,10 @@
     <string name="middle_name">Segundo nombre</string>
     <string name="surname">Apellido</string>
     <string name="full_name">Nombre completo</string>
-    <string name="use_custom_sorting">Usar ordenamiento personalizado</string>
-    <string name="change_order">Cambiar orden</string>
+    <string name="use_custom_sorting">Utilizar la ordenación personalizada</string>
+    <string name="change_order">Cambiar el orden</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
+    <string name="proceed_with_deletion">¿Estás seguro de que quieres proceder a la eliminación\?</string>
     <string name="deletion_confirmation">¿Estas seguro que quieres borrar %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">¿Estás seguro de que quieres mover %s a la papelera de reciclaje?</string>
@@ -582,8 +582,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tiempo restante hasta que suene la alarma:\n%s</string>
     <string name="reminder_triggers_in">Tiempo restante hasta que se active el recordatorio:\n%s</string>
-    <string name="time_remaining">"Tiempo restante:  
-\n%s"</string>
+    <string name="time_remaining">Tiempo restante: 
+\n%s</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="notifications_disabled">Las notificaciones de esta aplicación están deshabilitadas. Vaya a la configuración de su dispositivo para habilitarlos.</string>
@@ -605,7 +605,7 @@
     <string name="general_settings">General</string>
     <string name="color_customization">Personalización del color</string>
     <string name="customize_colors">Cambiar colores</string>
-    <string name="customize_colors_locked">Cambiar colores (Locked)</string>
+    <string name="customize_colors_locked">Personalizar colores (Bloqueado)</string>
     <string name="feature_locked">Bloqueado</string>
     <string name="customize_widget_colors">Personaliza los colores del widget</string>
     <string name="customize_notifications">Personaliza las notificaciones</string>
@@ -834,7 +834,7 @@
     <string name="simple_flashlight">Linterna Simple</string>
     <string name="simple_gallery">Galería Simple</string>
     <string name="simple_keyboard">Teclado Sencillo</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Lanzador sencillo</string>
     <string name="simple_music_player">Reproductor Simple de Música</string>
     <string name="simple_notes">Notas Simples</string>
     <string name="simple_sms_messenger">Mensajero SMS Simple</string>
@@ -852,7 +852,7 @@
     <string name="flashlight_short">Linterna</string>
     <string name="gallery_short">Galería</string>
     <string name="keyboard_short">Teclado</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Lanzador</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Mensajero SMS</string>
@@ -918,7 +918,7 @@
     <string name="translation_czech">Checo</string>
     <string name="translation_welsh">Galés</string>
     <string name="translation_danish">Danés</string>
-    <string name="translation_english">English</string>
+    <string name="translation_english">Inglés</string>
     <string name="translation_german">Alemán</string>
     <string name="translation_greek">Griego</string>
     <string name="translation_spanish">Español</string>
@@ -960,7 +960,7 @@
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Sin anuncios</string>
     <string name="why_upgrade_no_internet_access">Sin acceso a Internet</string>
-    <string name="why_upgrade_footer">100% de Garantía de Devolución de Dinero</string>
+    <string name="why_upgrade_footer">Garantía de devolución del 100% del dinero</string>
     <string name="why_upgrade_footer_one_time_payment">Pago único</string>
     <string name="why_upgrade_improved_design">Diseño mejorado</string>
     <!-- Gallery Pro -->
