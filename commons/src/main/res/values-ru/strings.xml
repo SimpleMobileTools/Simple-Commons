@@ -101,7 +101,7 @@
     <string name="blocked_numbers">Заблокированные номера</string>
     <string name="export_blocked_numbers">Экспорт заблокированных номеров</string>
     <string name="import_blocked_numbers">Импорт заблокированных номеров</string>
-    <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Simple Contacts\" приложением по умолчанию для набора номера.</string>
+    <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Простые контакты\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
     <string name="block_confirmation">Заблокировать \"%s\"?</string>
     <string name="block_unknown_calls">Блокировать вызовы от несохранённых контактов</string>
@@ -304,12 +304,8 @@
     <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые рабочие столы неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
     <string name="share_colors_success">Цвета обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
-    <string name="shared_theme_note">Обратите внимание, что даже если вы используете версию Pro, вам всё равно требуется приложение \"Simple Thank You\" по техническим причинам, т.к. оно обеспечивает синхронизацию цветов.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
-        ]]>
-    </string>
+    <string name="shared_theme_note">Обратите внимание, что даже если вы используете версию Pro, вам всё равно требуется приложение \"Простое спасибо\" по техническим причинам, т.к. оно обеспечивает синхронизацию цветов.</string>
+    <string name="purchase_thank_you">Пожалуйста, купите &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Простое спасибо&lt;/a&gt;, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!</string>
     <!-- Themes -->
     <string name="light_theme">Светлая</string>
     <string name="dark_theme">Тёмная</string>
@@ -607,7 +603,7 @@
     <string name="during_day_at">В течение дня в %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Настройки</string>
-    <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Купить \"Простое спасибо\"</string>
     <string name="general_settings">Основные</string>
     <string name="color_customization">Настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
@@ -781,7 +777,8 @@
     <string name="rate">Оценить</string>
     <string name="donate">Поддержать разработчика</string>
     <string name="follow_us">Подписаться на нас</string>
-    <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
+    <string name="copyright">v%1$s
+\nАвторские права © Simple Mobile Tools %2$d</string>
     <string name="support">Поддержка</string>
     <string name="help_us">Помочь нам</string>
     <string name="social">Сообщество</string>
@@ -793,17 +790,11 @@
     <string name="additional_info">Дополнительная информация</string>
     <string name="app_version">Версия приложения: %s</string>
     <string name="device_os">ОС устройства: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Привет,<br><br>
-            надеюсь, вам нравится приложение. Оно не содержит рекламы, поэтому, пожалуйста, поддержите разработку, купив приложение <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка также предотвратит повторное появление данного диалогового окна.<br><br>
-            Спасибо!
-        ]]>
-    </string>
-    <string name="donate_new">Привет,&lt;br&gt;&lt;br&gt;надеюсь, вам нравится приложение. Он не содержит рекламы и не собирает ваши персональные данные. Пожалуйста, поддержите его разработку, купив &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. У вас также будут разблокированы все функции приложения и настройка цвета.&lt;br&gt;&lt;br&gt;Спасибо!</string>
+    <string name="donate_please">Привет,&lt;br&gt;&lt;br&gt; надеюсь, вам нравится приложение. Оно не содержит рекламы, поэтому, пожалуйста, поддержите разработку, купив приложение &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Простое спасибо&lt;/a&gt;. Покупка также предотвратит повторное появление данного диалогового окна.&lt;br&gt;&lt;br&gt; Спасибо!</string>
+    <string name="donate_new">Привет,&lt;br&gt;&lt;br&gt;надеюсь, вам нравится приложение. Он не содержит рекламы и не собирает ваши персональные данные. Пожалуйста, поддержите его разработку, купив &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Простое спасибо&lt;/a&gt;. У вас также будут разблокированы все функции приложения и настройка цвета.&lt;br&gt;&lt;br&gt;Спасибо!</string>
     <string name="purchase">Купить</string>
-    <string name="get_simple_phone">Получить Simple Phone</string>
-    <string name="update_thank_you">Обновите \"Simple Thank You\" до последней версии</string>
+    <string name="get_simple_phone">Получить \"Простой телефон\"</string>
+    <string name="update_thank_you">Обновите \"Простое спасибо\" до последней версии</string>
     <string name="before_asking_question_read_faq">Прежде чем задать вопрос, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение есть.</string>
     <string name="before_rate_read_faq">Прежде чем поставить оценку, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Если у вас возникли какие-то проблемы, возможно, решение уже есть.</string>
     <string name="make_sure_latest">Также убедитесь, что используете последнюю версию приложения.</string>
@@ -814,7 +805,7 @@
     <string name="rate_our_app">Оцените приложение, пожалуйста :)</string>
     <string name="thank_you">Спасибо</string>
     <string name="widget_locked_pro">Виджет заблокирован.\nПерейдите на версию Pro, чтобы разблокировать его.</string>
-    <string name="features_locked">Эта функция заблокирована, пожалуйста, купите &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; для разблокировки всех возможностей приложения.&lt;br&gt;&lt;br&gt;Это разовый платёж, и если вы не будете удовлетворены, возможен возврат денег.</string>
+    <string name="features_locked">Эта функция заблокирована, пожалуйста, купите &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Простое спасибо&lt;/a&gt; для разблокировки всех возможностей приложения.&lt;br&gt;&lt;br&gt;Это разовый платёж, и если вы не будете удовлетворены, возможен возврат денег.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -827,37 +818,37 @@
             Спасибо
         ]]>
     </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_launcher">Simple Launcher</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Простой запуск приложений</string>
+    <string name="simple_calculator">Простой калькулятор</string>
+    <string name="simple_calendar">Простой календарь</string>
+    <string name="simple_camera">Простая камера</string>
+    <string name="simple_clock">Простые часы</string>
+    <string name="simple_contacts">Простые контакты</string>
+    <string name="simple_dialer">Простой телефон</string>
+    <string name="simple_draw">Простое рисование</string>
+    <string name="simple_file_manager">Простой менеджер файлов</string>
+    <string name="simple_flashlight">Простой фонарик</string>
+    <string name="simple_gallery">Простая галерея</string>
+    <string name="simple_keyboard">Простая клавиатура</string>
+    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_music_player">Простой музыкальный плеер</string>
+    <string name="simple_notes">Простые заметки</string>
+    <string name="simple_sms_messenger">Простой SMS-мессенджер</string>
+    <string name="simple_thank_you">Простое спасибо</string>
+    <string name="simple_voice_recorder">Простой диктофон</string>
     <string name="app_launcher_short">Рабочий стол</string>
     <string name="calculator_short">Калькулятор</string>
     <string name="calendar_short">Календарь</string>
     <string name="camera_short">Камера</string>
     <string name="clock_short">Часы</string>
     <string name="contacts_short">Контакты</string>
-    <string name="dialer_short">Набор номера</string>
-    <string name="draw_short">Рисунки</string>
+    <string name="dialer_short">Телефон</string>
+    <string name="draw_short">Рисование</string>
     <string name="file_manager_short">Файловый менеджер</string>
     <string name="flashlight_short">Фонарик</string>
     <string name="gallery_short">Галерея</string>
     <string name="keyboard_short">Клавиатура</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Лаунчер</string>
     <string name="music_player_short">Проигрыватель музыки</string>
     <string name="notes_short">Заметки</string>
     <string name="sms_messenger_short">Сообщения</string>
