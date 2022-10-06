@@ -48,8 +48,8 @@
     <string name="no_phone_call_permission">A aplicación non ten permiso para iniciar chamadas telefónicas. Concédeo na configuración do dispositivo</string>
     <string name="insert_text_here">Introduce o texto aquí</string>
     <string name="call_person">Chamar a %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="zero">Cero</string>
+    <string name="one">Un</string>
     <string name="two">Dous</string>
     <string name="three">Tres</string>
     <string name="four">Catro</string>
@@ -60,14 +60,14 @@
     <string name="nine">Nove</string>
     <string name="value">Valor</string>
     <string name="value_cannot_be_empty">O valor non pode atoparse baleiro</string>
-    <string name="create_new_contact">Crear novo contacto</string>
+    <string name="create_new_contact">Crear un novo contacto</string>
     <string name="add_to_existing_contact">Engadir a un contacto existente</string>
     <string name="app_corrupt">Aplicación corrupta</string>
     <string name="disclaimer">Exención da responsabilidade</string>
     <string name="take_photo">Facer foto</string>
     <string name="choose_photo">Elexir foto</string>
     <!-- Events -->
-    <string name="birthday">Nacemento</string>
+    <string name="birthday">Aniversario</string>
     <string name="anniversary">Aniversario</string>
     <!-- Emails -->
     <string name="home">Persoal</string>
@@ -75,7 +75,7 @@
     <!-- Phone numbers -->
     <string name="mobile">Móbil</string>
     <string name="main_number">Principal</string>
-    <string name="work_fax">Fax profesional</string>
+    <string name="work_fax">Fax do traballo</string>
     <string name="home_fax">Fax persoal</string>
     <string name="pager">Busca</string>
     <string name="no_phone_number_found">Número de teléfono non atopado</string>
@@ -146,7 +146,13 @@
     <string name="simple_renaming">Renomeado simple</string>
     <string name="pattern_renaming">Patrón</string>
     <string name="string_to_add">Cadea a engadir</string>
-    <string name="rename_date_time_pattern">%Y - ano\n%M - mes\n%D - día\n%h - hora\n%m - minuto\n%s - segundo\n%i - número incremental desde 1</string>
+    <string name="rename_date_time_pattern">%Y - ano 
+\n%M - mes 
+\n%D - día 
+\n%h - hora
+\n%m - minuto 
+\n%s - segundo 
+\n%i - o número aumenta dende 1</string>
     <string name="filename_without_txt">Nome do ficheiro (sen .txt)</string>
     <string name="filename_without_json">Nome do ficheiro (sen .json)</string>
     <string name="filename_without_zip">Nome do ficheiro (sen .zip)</string>
@@ -182,7 +188,7 @@
     <string name="no_space">O destino non ten suficiente espazo dispoñible.\nNecesario %1$s, dispoñible %2$s</string>
     <string name="system_service_disabled">O servizo do sistema para seleccionar ficheiros e cartafoles non está dispoñible</string>
     <!-- Create new -->
-    <string name="create_new">Crear novo</string>
+    <string name="create_new">Crear un novo</string>
     <string name="folder">Cartafol</string>
     <string name="file">Ficheiro</string>
     <string name="create_new_folder">Crear novo cartafol</string>
@@ -241,7 +247,7 @@
     <string name="storage">Almacenamento</string>
     <string name="internal">Almacenamento interno</string>
     <string name="sd_card">Tarxeta SD</string>
-    <string name="root">Raíz /</string>
+    <string name="root">Raíz (Root)</string>
     <string name="wrong_root_selected">Seleccionouse o cartafol incorrecto; por favor, escolle o cartafol raíz da túa tarxeta SD</string>
     <string name="sd_card_usb_same">Os directorios da tarxeta SD e do dispositivo USB non poden coincidir</string>
     <string name="app_on_sd_card">Parece que tes o aplicativo instalado na tarxeta SD, o que ocasiona que os widgets do aplicativo non estean dispoñibles. Non os verás na lista de widgets dispoñibles.
@@ -249,7 +255,7 @@
     <string name="wrong_folder_selected">Seleccionouse un cartafol errado, selecciona o camiño \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propiedades</string>
-    <string name="path">Ubicación</string>
+    <string name="path">Camiño</string>
     <string name="items_selected">Elementos seleccionados</string>
     <string name="direct_children_count">Número de ficheiros directamente contidos</string>
     <string name="files_count">Número total de ficheiros</string>
@@ -270,12 +276,12 @@
     <string name="remove_exif_confirmation">Estás seguro de que queres eliminar valores EXIF como as coordenadas GPS, o modelo de cámara, etc.\?</string>
     <string name="exif_removed">Os valores EXIF elimináronse correctamente</string>
     <!-- Color customization -->
-    <string name="background_color">Cor de fondo</string>
+    <string name="background_color">A cor do fondo</string>
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor principal</string>
     <string name="accent_color_white">Cor de acento do tema branco</string>
     <string name="accent_color_black_and_white">A cor do acento do tema Branco e negro</string>
-    <string name="foreground_color">Cor de primeiro plano</string>
+    <string name="foreground_color">A cor de diante</string>
     <string name="app_icon_color">Cor da icona do aplicativo</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegación inferior</string>
     <string name="restore_defaults">Valores por defecto</string>
@@ -310,7 +316,7 @@
     <string name="black_white">Branco e negro</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartido</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Sistema predeterminado</string>
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
     <string name="whats_new_disclaimer">* Só se enumeran aquí as actualizacións máis grandes, sempre hai tamén algunhas melloras pequenas</string>
@@ -737,13 +743,13 @@
     <string name="invite_friends">Convidar a amigos</string>
     <string name="share_text">Ola, bótalle un ollo a %1$s en %2$s</string>
     <string name="invite_via">Convidar con</string>
-    <string name="rate_us">Vótanos en Play Store</string>
-    <string name="rate">Valorar</string>
-    <string name="donate">Donar</string>
+    <string name="rate_us">Califícanos</string>
+    <string name="rate">Valora</string>
+    <string name="donate">Doa</string>
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="support">Soporte</string>
+    <string name="help_us">Axúdanos</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
     <string name="privacy_policy">Política da Privacidade</string>
@@ -793,16 +799,16 @@
     <string name="simple_calendar">Almanaque sinxelo</string>
     <string name="simple_camera">Cámara sinxela</string>
     <string name="simple_clock">Reloxo sinxelo</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_contacts">Contactos sinxelos</string>
     <string name="simple_dialer">Marcador sinxelo</string>
     <string name="simple_draw">Debuxo sinxelo</string>
-    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_file_manager">Xestor de ficheiros sinxelo</string>
     <string name="simple_flashlight">Lanterna sinxela</string>
     <string name="simple_gallery">Galería sinxela</string>
     <string name="simple_keyboard">Teclado sinxelo</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Lanzador sinxelo</string>
     <string name="simple_music_player">Reproductor de música sinxelo</string>
-    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_notes">Notas sinxelas</string>
     <string name="simple_sms_messenger">Mensaxeiro de sms sinxelo</string>
     <string name="simple_thank_you">Unicamente Grazas</string>
     <string name="simple_voice_recorder">Gravadora da voz sinxela</string>
@@ -811,45 +817,39 @@
     <string name="calendar_short">Almanaque</string>
     <string name="camera_short">Cámara</string>
     <string name="clock_short">Reloxo</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="contacts_short">Contactos</string>
     <string name="dialer_short">Marcador</string>
     <string name="draw_short">Debuxa</string>
     <string name="file_manager_short">File Manager</string>
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galería</string>
     <string name="keyboard_short">Teclado</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Lanzador</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">Mensaxería SMS</string>
     <string name="thank_you_short">Grazas</string>
     <string name="voice_recorder_short">Gravadora de voz</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            Parece que a túa versión do app está corrupta. Descarga a versión orixinal <a href="%s">aquí</a>.
-        ]]>
-    </string>
+    <string name="sideloaded_app">Parece que a versión da túa aplicación está corrupta. Descarga a versión orixinal &lt;a href=%s&gt;aquí&lt;/a&gt;.</string>
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Preguntas frecuentes</string>
-    <string name="before_asking_question">Antes de faceres unha pregunta, por favor primeiro lea o</string>
-    <string name="faq_1_title_commons">Como é que no vexo este widget de aplicativos na lista de widgets?</string>
-    <string name="faq_1_text_commons">O máis probable é que se movese o aplicativo nunha tarxeta SD. Hai unha limitación do sistema Android que oculta os widgets do aplicativo.
-        nese caso. A única solución é volver a colocar o aplicativo no almacenamiento interno a través da configuración do teu dispositivo.</string>
-    <string name="faq_2_title_commons">Quero apoiarte, pero non podo donar cartos. Hai algo máis que poida facer?</string>
-    <string name="faq_2_text_commons">Si, por suposto. Podes correla voz sobre as aplicacións ou dar boas valoracións e comentarios. Tamén podes axudar traducindo as aplicacións a un novo idioma ou simplemente actualizando algunhas traducións existentes. A guía para traducir atopase en &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;este sitio web&lt;/a&gt;, ou póñase en contacto connosco en &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; se tes algunha dúbida.</string>
-    <string name="faq_3_title_commons">Borréei algúns arquivos por erro, como podo recuperalos?</string>
-    <string name="faq_3_text_commons">Tristemente, non podes. Os arquivos elimínanse instantaneamente despois do diálogo de confirmación, non hai papeleira dispoñible.</string>
-    <string name="faq_4_title_commons">Non me gustan as cores do widget, podo cambialos?</string>
-    <string name="faq_4_text_commons">Si, ao arrastrar un widget na pantalla de inicio aparece unha pantalla de configuración de widgets. Verá cadrados de cores na esquina inferior esquerda, só presione para elixir unha nova cor. Pode usar o control deslizante para axustar as letras tamén.</string>
-    <string name="faq_5_title_commons">Podo dalgún modo restaurar os ficheiros eliminados?</string>
-    <string name="faq_5_text_commons">Se están realmente eliminados, non. Pero hai unha Papeleira activada por defecto, á que van os ficheiros que se moveron á Papeleira no canto de eliminalos. </string>
-    <string name="faq_6_title_commons">Desapareceu a icona do iniciador de aplicativos. Que podo facer? </string>
-    <string name="faq_6_text_commons">Isto é causado polo teu iniciador que non dá soporte adecuadamente á icona personalizada. Se está dispoñible, intenta iniciar o aplicativo vía Google Play ou por algún widget.Unha vez iniciado, establece de novo a icona laranxa predeterminada #F57C00. No peor dos casos, pode ter que reinstalar o aplicativo.</string>
-    <string name="faq_7_title_commons">Os cartos colléronse da miña conta bancaria pero eu non podo descargar o aplicativo. Que podo facer?</string>
-    <string name="faq_7_text_commons">O pagamento está ligado a Google e pode ser que o seu sistema teña erros de vez en cando. Limpe o caché do aplicativo de Google Play e reinicie o seu dispositivo e despois vola a descargalo.</string>
+    <string name="frequently_asked_questions">Preguntas máis frecuentes</string>
+    <string name="before_asking_question">Antes de facer unha pregunta, lea primeiro</string>
+    <string name="faq_1_title_commons">Como é que non vexo este widget de aplicacións na lista de widgets\?</string>
+    <string name="faq_1_text_commons">O máis probable é porque moveches a aplicación nunha tarxeta SD. Hai unha limitación do sistema Android que oculta os widgets da aplicación nese caso. A única solución é mover a aplicación de novo ao Almacenamento interno mediante a configuración do dispositivo.</string>
+    <string name="faq_2_title_commons">Quero apoialo, pero non podo doar cartos. Hai algo máis que podo facer\?</string>
+    <string name="faq_2_text_commons">Si, por suposto. Podes correla voz sobre as aplicacións ou dar boas valoracións e comentarios. Tamén podes axudar traducindo as aplicacións a un novo idioma ou simplemente actualizando algunhas traducións existentes. A guía para traducir atopase &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;este sitio web&lt;/a&gt;, ou póñase en contacto connosco en &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; se tes algunha dúbida.</string>
+    <string name="faq_3_title_commons">Borrei algúns ficheiros por erro, como podo recuperalos\?</string>
+    <string name="faq_3_text_commons">Por desgraza, non podes. Os ficheiros elimínanse ao instante despois do diálogo de confirmación, non atoparas ningún lixo dispoñible.</string>
+    <string name="faq_4_title_commons">Non me gustan as cores do widget, podo cambialas\?</string>
+    <string name="faq_4_text_commons">Si, mentres arrastras un widget na túa pantalla de inicio aparecerá unha pantalla de configuración do widgets. Verás cadrados de cores na esquina inferior esquerda, só tes que premelos para escoller unha nova cor. Tamén podes usalo control deslizante para axustarlo alfa.</string>
+    <string name="faq_5_title_commons">Podo restaurar dalgún xeito os ficheiros eliminados\?</string>
+    <string name="faq_5_text_commons">Se realmente foron eliminados, non podes. Non obstante, hai unha papeleira de reciclaxe activada por defecto, o que fará que os ficheiros só se movan na papeleira en lugar de eliminalos.</string>
+    <string name="faq_6_title_commons">A icona do iniciador de aplicacións desapareceu. Que podo facer\?</string>
+    <string name="faq_6_text_commons">É causado porque o teu iniciador non admite a personalización de iconas correctamente. Proba a iniciala aplicación a través de Google Play ou algún widget, se está dispoñible. Unha vez iniciado, só tes que restablecer a icona laranxa predeterminada #F57C00. É posible que teñas que reinstalar a aplicación no peor dos casos.</string>
+    <string name="faq_7_title_commons">O diñeiro foi deducido da miña conta bancaria, pero non podo descargala aplicación. Que podo facer\?</string>
+    <string name="faq_7_text_commons">Os pagos son xestionados por enteiro por Google, o seu sistema falla de cando en vez. Só tes que borrala caché da aplicación Google Play e reinicialo dispositivo e, a despois, tentar descargalo de novo.</string>
     <string name="faq_8_title_commons">Por que debo actualizar á versión Pro?</string>
-    <string name="faq_8_text_commons">Como non se vai actualizar máis o teu aplicativo, os bugs que teñas non serán corrixidos. Tampouco se engadirán novas funcións. Podes comprar a versión Pro en Google Play por unha cantidade pequena de cartos. É un pagamento que se fai só unha vez, é dicir, non volves pagar por isto.
-        Nin tan sequera ao cambiar de móbil. Se non che gusta a versión Pro, podes simplemente desinstalala e devolveráseche os cartos  automaticamente.Se queres que che devolvamos os cartos máis tarde, envíanos un correo electrónico a hello@simplemobiletools.com e darémoscho.</string>
+    <string name="faq_8_text_commons">Como a versión da túa aplicación xa non se actualiza, os erros que quizais detectaches nunca se solucionarán. Tampouco se engadirán novas funcións. Podes mercala versión Pro en Google Play por unha pequena cantidade de diñeiro. É nun pago so, o que compres unha vez, nunca terás que pagalo de novo. Nin sequera despois de conseguir un novo dispositivo. Se non che gusta a versión Pro, podes desinstalala nunhas poucas horas e recuperarás o teu diñeiro automaticamente. Se queres un reembolso máis tarde, póñase en contacto connosco en hello@simplemobiletools.com e conseguirao.</string>
     <string name="faq_9_title_commons">Como podo seleccionar varios elementos dunha soa vez\?</string>
     <string name="faq_9_text_commons">Atoparas diferentes formas de facelo. O primeiro é iniciar o modo de selección mantendo presionado un elemento e, a continuación, premendo brevemente sobre outros para seleccionalos. A segunda forma é semellante a seleccionar elementos nos ordenadores cun rato, só tes que iniciar o modo de selección mantendo presionado un elemento e, a continuación, co dedo aínda para abaixo arrástralo por outros elementos para seleccionalo. A terceira forma de seleccionar varios elementos é premendo un elemento durante moito tempo, despois premendo outro e seleccionando todo o que hai entre eles. Se queres seleccionar todos os elementos, só tes que premer un elemento e, a continuación, fai clic no contador de elementos seleccionados na esquina superior esquerda. Isto seleccionará ou deseleccionará todo.</string>
     <string name="faq_10_title_commons">Merquei a aplicación, pero non podo descargala noutro dispositivo.</string>
@@ -858,60 +858,60 @@
     <string name="contributors">Colaboradores</string>
     <string name="translation">Tradución</string>
     <string name="development">Creadores</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">Esta lista contén todolos que axudaron notablemente a calquera aplicación da suite de ferramentas sinxelas para móbiles, non só esta. As traducións corren a cargo de voluntarios, avísanos se tamén queres axudar. A guía para traducir está en &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;este sitio web&lt;/a&gt;, ou póñase en contacto connosco en &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; se tes algunha dúbida. Grazas a todos os colaboradores e outros seguidores!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_bulgarian">Bulgarian</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
-    <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="other_help">Outra axuda</string>
+    <string name="contributors_label">Esta lista contén todolos que axudaron notablemente a calquera aplicación da suite Simple Mobile Tools para móbiles, non só esta. As traducións corren a cargo de voluntarios, avísanos se tamén queres axudar. A guía para traducir atopase &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;este sitio web&lt;/a&gt;, ou póñase en contacto connosco en &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; se tes algunha dúbida. Grazas a todos os colaboradores e outros seguidores!</string>
+    <string name="translation_arabic">Árabe</string>
+    <string name="translation_azerbaijani">Azerbaillan</string>
+    <string name="translation_bengali">Bengalí</string>
+    <string name="translation_breton">Bretón</string>
+    <string name="translation_bulgarian">Búlgaro</string>
+    <string name="translation_catalan">Catalán</string>
+    <string name="translation_czech">Checo</string>
+    <string name="translation_welsh">Galés</string>
+    <string name="translation_danish">Danés</string>
+    <string name="translation_english">Inglés</string>
+    <string name="translation_german">Alemán</string>
+    <string name="translation_greek">Grego</string>
+    <string name="translation_spanish">Castelán</string>
+    <string name="translation_basque">Vasco</string>
+    <string name="translation_persian">Persa</string>
+    <string name="translation_finnish">Finés</string>
+    <string name="translation_french">Francés</string>
+    <string name="translation_galician">Galego</string>
+    <string name="translation_hindi">Indi</string>
+    <string name="translation_croatian">Croata</string>
+    <string name="translation_hungarian">Húngaro</string>
+    <string name="translation_indonesian">Indonesio</string>
+    <string name="translation_italian">Italiano</string>
+    <string name="translation_hebrew">Hebreo</string>
+    <string name="translation_japanese">Xaponés</string>
+    <string name="translation_korean">Coreano</string>
+    <string name="translation_lithuanian">Lituano</string>
+    <string name="translation_nepali">Nepalí</string>
+    <string name="translation_norwegian">Noruegués</string>
+    <string name="translation_dutch">Holandés</string>
+    <string name="translation_polish">Polaco</string>
+    <string name="translation_portuguese">Portugués</string>
+    <string name="translation_romanian">Romanés</string>
+    <string name="translation_russian">Ruso</string>
+    <string name="translation_slovak">Eslovaco</string>
+    <string name="translation_slovenian">Esloveno</string>
+    <string name="translation_serbian">Serbio</string>
+    <string name="translation_swedish">Sueco</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_turkish">Turco</string>
+    <string name="translation_ukrainian">Ucraíno</string>
+    <string name="translation_vietnamese">Vietnamita</string>
+    <string name="translation_chinese_hk">Chinés (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinés (simplificado)</string>
+    <string name="translation_chinese_tw">Chinés (tradicional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Descargue a versión Pro agora!</string>
+    <string name="why_upgrade">Obtén a versión Pro agora!</string>
     <string name="why_upgrade_basic_version">Básica</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Non hai anuncios</string>
-    <string name="why_upgrade_no_internet_access">No acceso a Internet</string>
-    <string name="why_upgrade_footer">100% garantía da restitución do diñeiro</string>
+    <string name="why_upgrade_no_internet_access">Sen acceso a internet</string>
+    <string name="why_upgrade_footer">100% garantía da devolución do diñeiro</string>
     <string name="why_upgrade_footer_one_time_payment">Pago unha soa vez</string>
     <string name="why_upgrade_improved_design">Deseño mellorado</string>
     <!-- Gallery Pro -->
@@ -919,28 +919,28 @@
     <string name="why_upgrade_heic_support">Soporte a ficheiros HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renomear lote de ficheiros avanzado</string>
     <string name="why_upgrade_folder_locking">Pechando o cartafol individual</string>
-    <string name="why_upgrade_printing_support">Soporte impresora</string>
+    <string name="why_upgrade_printing_support">Soporte de impresión</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Soporte ao fuso horario</string>
-    <string name="why_upgrade_attendees_emails">Recordatorios e participantes</string>
-    <string name="why_upgrade_easy_event_importing">Importando eventos</string>
+    <string name="why_upgrade_time_zone_support">Soporte da zoa horaria</string>
+    <string name="why_upgrade_attendees_emails">Asistentes e recordatorios por correo electrónico</string>
+    <string name="why_upgrade_easy_event_importing">Fácil importación dos eventos</string>
     <string name="why_upgrade_new_widgets">Novo widgets</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Mellorando a combinación de contactos duplicados</string>
-    <string name="why_upgrade_font_size_customization">Personalización do tamaño da letra</string>
-    <string name="why_upgrade_private_contact_sharing">Contacto privado opcional nos aplicativos</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Tons da chamada do contacto personalizables</string>
+    <string name="why_upgrade_duplicate_contact_merging">Mellorouse a combinación de contactos duplicados</string>
+    <string name="why_upgrade_font_size_customization">Personalización do tamaño da fonte</string>
+    <string name="why_upgrade_private_contact_sharing">Compartir contactos privados opcional nas nosas aplicacións</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Tons da chamada dos contactos persoalizables</string>
     <string name="why_upgrade_contact_filtering">Filtrado dos contactos</string>
     <string name="why_upgrade_contact_private_contacts">Contactos almaceados de forma privada</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Listas de verificación</string>
+    <string name="why_upgrade_checklists">Listaxes de verificación</string>
     <string name="why_upgrade_different_note_per_widget">Diferentes notas e cores por widget</string>
     <string name="why_upgrade_note_locking">Bloqueo das notas</string>
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personalización do formato da data e hora</string>
     <string name="why_upgrade_shortcuts">Atallos na pantalla principal</string>
     <string name="why_upgrade_file_compression">Soporte da compresión do ficheiro</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Pestana con ficheiros recentes</string>
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalización da cor de fondo</string>
     <string name="why_upgrade_file_importing">Importando o ficheiro de soporte</string>
@@ -950,24 +950,24 @@
     <string name="third_party_licences">Licenzas de terceiros</string>
     <string name="kotlin_title">Kotlin (linguaxe de programación)</string>
     <string name="subsampling_title">Vista da imaxe a escala (vistas da imaxe con zoom)</string>
-    <string name="glide_title">Glide (carga das imaxes e caché)</string>
+    <string name="glide_title">Glide (carga de imaxes e caché)</string>
     <string name="picasso_title">Picasso (carga das imaxes e caché)</string>
     <string name="cropper_title">Android Image Cropper (recortar e xirala imaxe)</string>
     <string name="rtl_viewpager_title">RtlViewPager (pasando da dereita a esquerda)</string>
     <string name="joda_title">Joda-Time (substitución da data de Java)</string>
     <string name="stetho_title">Stetho (depuración das bases de datos)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="otto_title">Otto (almaceamento de eventos)</string>
     <string name="photoview_title">PhotoView (GIF con zoom)</string>
     <string name="pattern_title">PatternLockView (protección do patrón)</string>
     <string name="reprint_title">Reimpresión (protección da impresión dixital)</string>
     <string name="gif_drawable_title">Gif Drawable (cargando GIFs)</string>
     <string name="autofittextview_title">AutoFitTextView (redimensionamento do texto)</string>
     <string name="robolectric_title">Roboelectric (marco de proba)</string>
-    <string name="espresso_title">Espresso (axudante das probas)</string>
+    <string name="espresso_title">Espresso (axudante de proba)</string>
     <string name="gson_title">Gson (analizador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detector das fugas na memoria)</string>
     <string name="number_picker_title">Number Picker (selector de números personalizable)</string>
-    <string name="exoplayer_title">ExoPlayer (reprodutor do vídeo)</string>
+    <string name="exoplayer_title">ExoPlayer (reprodutor de vídeo)</string>
     <string name="panorama_view_title">VR Panorama View (mostrando panorámicas)</string>
     <string name="sanselan_title">Apache Sanselan (lectura dos metadatos da imaxe)</string>
     <string name="filters_title">Android Photo Filters (filtros das imaxes)</string>
@@ -984,5 +984,5 @@
     <string name="deprecated_app">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en hello@simplemobiletools.com e terala. Isto fai que sexa fácil probala :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Un grupo de apps simples e de código aberto con widgets personalizables, sen anuncios nin permisos innecesarios.</string>
+    <string name="developer_description">Un grupo de aplicacións Android sinxelas e de código aberto con widgets persoalizables, sen anuncios e permisos innecesarios.</string>
 </resources>
