@@ -269,8 +269,8 @@
     <string name="background_color">背景色</string>
     <string name="text_color">文字色</string>
     <string name="primary_color">メインカラー</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">ホワイトテーマのアクセントカラー</string>
+    <string name="accent_color_black_and_white">ブラック＆ホワイトテーマのアクセントカラー</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">アプリアイコンの色</string>
     <string name="bottom_navigation_bar_color">ナビゲーションバーの色</string>
@@ -298,15 +298,15 @@
     <!-- Themes -->
     <string name="light_theme">ライト</string>
     <string name="dark_theme">ダーク</string>
-    <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_theme">自動</string>
+    <string name="auto_light_dark_theme">自動 ライト/ダーク</string>
     <string name="solarized">ソラライズド</string>
     <string name="dark_red">ダーク・レッド</string>
-    <string name="white">White</string>
+    <string name="white">ホワイト</string>
     <string name="black_white">モノクロ</string>
     <string name="custom">カスタム</string>
     <string name="shared">共有</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">システムのデフォルト</string>
     <!-- What's new -->
     <string name="whats_new">更新内容</string>
     <string name="whats_new_disclaimer">* ここでは主な変更点を挙げていますが、その他の細かい改善も行われています</string>
@@ -763,9 +763,9 @@
     <string name="simple_flashlight">Simpleフラッシュライト</string>
     <string name="simple_gallery">Simpleギャラリー</string>
     <string name="simple_keyboard">シンプルキーボード</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Simpleランチャー</string>
     <string name="simple_music_player">Simple音楽プレーヤー</string>
-    <string name="simple_notes">Simpleノート</string>
+    <string name="simple_notes">Simpleメモ</string>
     <string name="simple_sms_messenger">Simpleショートメール</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simpleボイスレコーダー</string>
@@ -781,7 +781,7 @@
     <string name="flashlight_short">フラッシュライト</string>
     <string name="gallery_short">ギャラリー</string>
     <string name="keyboard_short">キーボード</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">ランチャー</string>
     <string name="music_player_short">音楽プレイヤー</string>
     <string name="notes_short">メモ</string>
     <string name="sms_messenger_short">ショートメール</string>
@@ -899,7 +899,7 @@
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">チェックリスト</string>
     <string name="why_upgrade_different_note_per_widget">各ウィジェットに違うメモと色</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">メモのロック</string>
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">日付と時刻のフォーマットのカスタマイズ</string>
     <string name="why_upgrade_shortcuts">ホーム画面のショートカット</string>
