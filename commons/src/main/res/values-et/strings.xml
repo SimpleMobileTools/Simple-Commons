@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Sobib</string>
     <string name="cancel">Katkesta</string>
-    <string name="back">Back</string>
+    <string name="back">Tagasi</string>
     <string name="nothing">Mitte midagi</string>
     <string name="later">Hiljem</string>
     <string name="save_as">Salvesta kui</string>
@@ -352,7 +352,7 @@
     <string name="call">Helista</string>
     <string name="contact_details">Kontakti üksikasjad</string>
     <string name="add_contact">Lisa kontakt</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Taustapildid</string>
     <!-- Sorting -->
     <string name="sort_by">Sordi</string>
     <string name="name">Nimi</string>
@@ -793,7 +793,7 @@
     <string name="simple_flashlight">Lihtne taskulamp</string>
     <string name="simple_gallery">Lihtne galerii</string>
     <string name="simple_keyboard">Lihtne klahvistik</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Lihtne käivitaja</string>
     <string name="simple_music_player">Lihtne muusikamängija</string>
     <string name="simple_notes">Lihtsad märkused</string>
     <string name="simple_sms_messenger">Lihtne SMS sõnumiklient</string>
@@ -811,7 +811,7 @@
     <string name="flashlight_short">Taskulamp</string>
     <string name="gallery_short">Galerii</string>
     <string name="keyboard_short">Klahvistik</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Rakenduste käivitaja</string>
     <string name="music_player_short">Muusikamängija</string>
     <string name="notes_short">Märkused</string>
     <string name="sms_messenger_short">SMS sõnumid</string>
