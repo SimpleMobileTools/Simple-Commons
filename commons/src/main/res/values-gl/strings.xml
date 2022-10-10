@@ -380,7 +380,7 @@
     <string name="surname">Apelidos</string>
     <string name="full_name">Nome completo</string>
     <string name="use_custom_sorting">Usala clasificación personalizada</string>
-    <string name="change_order">Cambiala orde</string>
+    <string name="change_order">Cambialo orde</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Seguro que queres continuar coa eliminación?</string>
     <string name="deletion_confirmation">Seguro que queres eliminar %s?</string>
@@ -429,7 +429,7 @@
     <string name="today">Hoxe</string>
     <string name="tomorrow">Mañá</string>
     <string name="every_day">Tódolos días</string>
-    <string name="hide_year">Agochar ano_</string>
+    <string name="hide_year">Agochar ano</string>
     <string name="seconds_raw">Segundos</string>
     <string name="minutes_raw">Minutos</string>
     <string name="hours_raw">Horas</string>
@@ -559,7 +559,7 @@
 \n%s</string>
     <string name="alarm_warning">Por favor, asegúrate de que a alarma funciona correctamente antes de confiares nela. Pode non funcionar ben debido a restricións do sistema relacionadas co aforro de batería.</string>
     <string name="reminder_warning">Por favor, asegúrate de que os recordatorios funcionan correctamente antes de confiares neles. Poden non funcionar ben debido a restricións do sistema relacionadas co aforro de batería.</string>
-    <string name="notifications_disabled">As notificacións deste aplicativo están desactivadas. Por favor, vai á configuración do dispositivo e actívaas.</string>
+    <string name="notifications_disabled">As notificacións desta aplicación están desactivadas. Accede á configuración do teu dispositivo para activalos.</string>
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
     <string name="snooze">Pospoñer</string>
@@ -578,11 +578,11 @@
     <string name="general_settings">General</string>
     <string name="color_customization">Persoaliza a cor</string>
     <string name="customize_colors">Cambiar cores</string>
-    <string name="customize_colors_locked">Cambiar cores (Locked)</string>
+    <string name="customize_colors_locked">Persoalizalas cores (bloqueado)</string>
     <string name="feature_locked">Pechado</string>
-    <string name="customize_widget_colors">Personalizar cores do widget</string>
+    <string name="customize_widget_colors">Persoalizalas cores do widget</string>
     <string name="customize_notifications">Persoalizalas notificacións</string>
-    <string name="use_english_language">Usar o idioma inglés</string>
+    <string name="use_english_language">Usala lingua inglesa</string>
     <string name="language">Lingua</string>
     <string name="show_hidden_items">Amosar elementos ocultos</string>
     <string name="font_size">Tamaño da fonte</string>
@@ -598,19 +598,19 @@
     <string name="prevent_phone_from_sleeping">Impedir que se apague a pantalla mentres o app estea en primeiro plano</string>
     <string name="skip_delete_confirmation">Omitir sempre o diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde a parte superior para actualizar</string>
-    <string name="use_24_hour_time_format">Usar formato de 24 horas</string>
+    <string name="use_24_hour_time_format">Usalo formato de 24 horas</string>
     <string name="change_date_and_time_format">Cambiar formato de hora e data</string>
     <string name="sunday_first">Comezar semana no domingo</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo tempo de aprazamento</string>
     <string name="snooze_time">Tempo de aprazamento</string>
-    <string name="vibrate_on_button_press">Vibrar ao premer o botón</string>
+    <string name="vibrate_on_button_press">Vibrar ao premer nun botón</string>
     <string name="move_items_into_recycle_bin">Mover elementos á Papeleira no canto de eliminar</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Papeleira</string>
     <string name="empty_recycle_bin">Baleirar a Papeleira</string>
-    <string name="force_portrait_mode">Forzar modo vertical</string>
-    <string name="export_settings">Exportar axustes</string>
-    <string name="import_settings">Importar axustes</string>
+    <string name="force_portrait_mode">Forzalo modo retrato</string>
+    <string name="export_settings">Exportalos axustes</string>
+    <string name="import_settings">Importalos axustes</string>
     <string name="settings_exported_successfully">Axustes exportados correctamente</string>
     <string name="settings_imported_successfully">Axustes importados correctamente</string>
     <string name="start_name_with_surname">Empezar o nome cos apelidos</string>
@@ -629,7 +629,7 @@
     <string name="quality">Calidade</string>
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniaturas</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Vista de lista</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Xestionalas pestanas mostradas</string>
     <string name="default_tab_to_open">Lapela predeterminada ao inicio</string>
@@ -638,10 +638,10 @@
     <string name="call_history_tab">Historial de chamadas</string>
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">A última usada</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">Arquivos</string>
+    <string name="recent_files_tab">Ficheiros recentes</string>
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restaurar este ficheiro</string>
+    <string name="restore_this_file">Restaurar o ficheiro</string>
     <string name="restore_selected_files">Restaurar ficheiros seleccionados</string>
     <string name="restore_all_files">Restaurar todos os ficheiros</string>
     <string name="recycle_bin_emptied">A Papeleira baleirouse correctamente</string>
@@ -751,7 +751,7 @@
     <string name="support">Soporte</string>
     <string name="help_us">Axúdanos</string>
     <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="other">Outro</string>
     <string name="privacy_policy">Política da Privacidade</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Ola :)</string>

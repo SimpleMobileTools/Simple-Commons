@@ -234,7 +234,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">ストレージを選択</string>
-    <string name="storage">Storage</string>
+    <string name="storage">ストレージ</string>
     <string name="internal">内部</string>
     <string name="sd_card">SDカード</string>
     <string name="root">ルート</string>
@@ -499,7 +499,7 @@
         <item quantity="other">%d分</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="other">%d時</item>
+        <item quantity="other">%d時間</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="other">%d日</item>
@@ -599,7 +599,7 @@
     <string name="call_history_tab">発着信履歴</string>
     <string name="groups_tab">グループ</string>
     <string name="last_used_tab">最後に使用</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">ファイル</string>
     <string name="recent_files_tab">最近使用したファイル</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">このファイルを復元</string>
@@ -782,7 +782,7 @@
     <string name="gallery_short">ギャラリー</string>
     <string name="keyboard_short">キーボード</string>
     <string name="launcher_short">ランチャー</string>
-    <string name="music_player_short">音楽プレイヤー</string>
+    <string name="music_player_short">音楽プレーヤー</string>
     <string name="notes_short">メモ</string>
     <string name="sms_messenger_short">ショートメール</string>
     <string name="thank_you_short">Thank You</string>
