@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Prekliči</string>
-    <string name="back">Back</string>
+    <string name="back">Nazaj</string>
     <string name="nothing">Nič</string>
     <string name="later">Pozneje</string>
     <string name="save_as">Shrani kot</string>
@@ -100,13 +100,13 @@
     <string name="block_numbers">Blokiraj številke</string>
     <string name="blocked_numbers">Blokirane številke</string>
     <string name="export_blocked_numbers">Izvozi blokirane številke</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
+    <string name="import_blocked_numbers">Uvozi blokirane številke</string>
+    <string name="must_make_default_dialer">Če želite uporabljati blokirane številke, je potrebno to aplikacijo nastaviti kot privzeto aplikacijo za klicanje.</string>
     <string name="set_as_default">Set as default</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="block_confirmation">Ste prepričani, da želite blokirati \"%s\"\?</string>
+    <string name="block_unknown_calls">Blokiranje klicev iz neohranjenih stikov</string>
+    <string name="block_unknown_messages">Blokiranje sporočil iz neohranjenih stikov</string>
+    <string name="add_blocked_number_helper_text">Vnesite številko ali vzorec (npr. *12345*, +1*8888), da se blokirajo vsi klici in sporočila iz številk, ki ustrezajo vzorcu.</string>
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
     <string name="add_favorites">Dodaj priljubljene</string>
@@ -117,7 +117,7 @@
     <string name="type_2_characters">Vpišite vsaj 2 znaka za začetek iskanja.</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
-    <string name="filter_pro">Filter (Pro)</string>
+    <string name="filter_pro">Filtriranje (Pro)</string>
     <string name="no_items_found">Nobenih rezultatov.</string>
     <string name="change_filter">Spremeni filter</string>
     <!-- Permissions -->
@@ -125,7 +125,7 @@
     <string name="no_contacts_permission">Dovoljenje za stike je potrebno</string>
     <string name="no_camera_permissions">Dovoljenje za kamero je potrebno</string>
     <string name="no_audio_permissions">Dovoljenje za zvok je potrebno</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">Potrebno je dovoljenje za objavo obvestil</string>
     <!-- Renaming -->
     <string name="rename_file">Preimenuj datoteko</string>
     <string name="rename_folder">Preimenuj mapo</string>
