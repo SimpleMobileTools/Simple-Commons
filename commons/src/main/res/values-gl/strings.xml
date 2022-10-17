@@ -299,12 +299,8 @@
     <string name="app_icon_color_warning">AVISO: algúns lanzadores non manexan ben a personalización da icona dos aplicativos. Se a icona desaparece, intenta iniciar o aplicativo mediante o Google Play ou algún widget, se está dispoñible.
         Unha vez que a inicies, volve a axustar a icona ao laranxa por defecto #F57C00. No peor dos casos, pode que teñas que volver a instalar o aplicativo.</string>
     <string name="share_colors_success">Cores actualizadas correctamente. Engadiuse un novo tema chamado \'Compartido\'. Utilízao para actualizar as cores de todos os aplicativos no futuro.</string>
-    <string name="shared_theme_note">Ten en conta que, aínda que use a versión pro do aplicativo, segue necesitando Simple Thank You para controlar a sincronización da cor.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Por favor, compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función e axudar co desenvolvemento. Grazas!
-        ]]>
-    </string>
+    <string name="shared_theme_note">Teña en conta que aínda que esteas a usar a versión da aplicación Pro, aínda necesitas Grazas Sinxelas por razóns técnicas. Encárgase da sincronización das cores.</string>
+    <string name="purchase_thank_you">Por favor, merca &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; para desbloquear esta función e axudar co desenvolvemento. Grazas!</string>
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
@@ -574,7 +570,7 @@
     <string name="during_day_at">Durante o día en %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Axustes</string>
-    <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Mercar Grazas sinxelas</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Persoaliza a cor</string>
     <string name="customize_colors">Cambiar cores</string>
@@ -759,17 +755,11 @@
     <string name="additional_info">Información adicional</string>
     <string name="app_version">Versión do app: %s</string>
     <string name="device_os">SO do dispositivo: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Ola,<br><br>
-            Espero que esteas disfrutando do aplicativo. Non contén anuncios, polo que che agradecemos que respaldes o seu desenvolvemento comprando o aplicativo <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, e tamén evitará que este diálogo volva a aparecer.<br><br>
-            Grazas!
-        ]]>
-    </string>
+    <string name="donate_please">Ola,&lt;br&gt;&lt;br&gt; Espero que esteas disfrutando do aplicativo. Non contén anuncios, polo que che agradecemos que respaldes o seu desenvolvemento comprando o aplicativo &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Grazas sinxelas&lt;/a&gt;, e tamén evitará que este diálogo volva a aparecer.&lt;br&gt;&lt;br&gt; Grazas!</string>
     <string name="donate_new">Ola,&lt;br&gt;&lt;br&gt;espero que che guste a aplicación. Non contén anuncios e tampouco estamos a recompilar os teus datos; apoia o seu desenvolvemento comprando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Agradecemento sinxelo Ti&lt;/a&gt;. Tamén terás todas as funcións da aplicación e as personalizacions dos cores desbloqueados.&lt;br&gt;&lt;br&gt;Grazas!</string>
     <string name="purchase">Comprar</string>
     <string name="get_simple_phone">Obter un teléfono sinxelo</string>
-    <string name="update_thank_you">Actualiza Simple Thank You á última versión</string>
+    <string name="update_thank_you">Actualiza Grazas sinxelas á última versión</string>
     <string name="before_asking_question_read_faq">Antes de que fagas unha pregunta, primeiro comproba os axustes do app e le as Preguntas Máis Frecuentes. Pode que a solución estea aí.</string>
     <string name="before_rate_read_faq">Antes de que nos puntúes, primeiro comproba os axustes do app e le as Preguntas Máis Frecuentes. Se tes algún problema, pode que a solución estea aí.</string>
     <string name="make_sure_latest">Asegúrate tamén de que esteas usando a última versión do app.</string>
@@ -781,7 +771,7 @@
     <string name="thank_you">Grazas</string>
     <string name="widget_locked_pro">O widget estopaze bloqueado. 
 \nActualiza á versión Pro para desbloquealo.</string>
-    <string name="features_locked">Esta función está bloqueada. Compra &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Grazas simples&lt;/a&gt; por desbloquear a aplicación completa.&lt;br &gt;&lt;br&gt;É un pago único e se non estás satisfeito, devolvemosche o diñeiro.</string>
+    <string name="features_locked">Esta función está bloqueada. Compra &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Grazas sinxelas&lt;/a&gt; por desbloquear a aplicación completa.&lt;br &gt;&lt;br&gt;É un pago único e se non estás satisfeito, devolvemosche o diñeiro.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[

@@ -114,7 +114,7 @@
     <string name="remove_from_favorites">お気に入りから削除</string>
     <!-- Search -->
     <string name="search">検索</string>
-    <string name="type_2_characters">検索を開始するには少なくとも2文字以上入力してください。</string>
+    <string name="type_2_characters">検索を開始するには少なくとも2文字以上の入力が必要です。</string>
     <!-- Filters -->
     <string name="filter">フィルタ</string>
     <string name="filter_pro">フィルタ (Pro)</string>
@@ -125,7 +125,7 @@
     <string name="no_contacts_permission">連絡先へのアクセス許可が必要です</string>
     <string name="no_camera_permissions">カメラへのアクセス許可が必要です</string>
     <string name="no_audio_permissions">マイクへのアクセス許可が必要です</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_post_notifications_permissions">通知を送るために許可が必要です</string>
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
     <string name="rename_folder">フォルダの名前を変更</string>
@@ -179,7 +179,8 @@
     <string name="could_not_create_folder">フォルダ %s を作成できません</string>
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">新しいアイテムは見つかりませんでした</string>
-    <string name="no_space">保存先に十分な空き容量がありません。 必要容量 %1$s, 空き容量 %2$s</string>
+    <string name="no_space">保存先に十分な空き容量がありません。
+\n必要容量 %1$s, 空き容量 %2$s</string>
     <string name="system_service_disabled">ファイルとフォルダを選択するためのシステムサービスが利用できません</string>
     <!-- Create new -->
     <string name="create_new">新規作成</string>
@@ -200,21 +201,21 @@
     <string name="skip">スキップ</string>
     <string name="append">\'_1\' に追記する</string>
     <string name="apply_to_all">すべてに適用</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="system_folder_restriction">このフォルダでの操作はシステムで許可されていません。別のフォルダを選択してください。</string>
+    <string name="system_folder_copy_restriction">このフォルダへのコピーはシステムで許可されていません。別のフォルダを選択してください。</string>
+    <string name="rename_in_sd_card_system_restriction">このフォルダでの名前変更はシステムで許可されていません</string>
+    <string name="rename_internal_system_restriction">内部ストレージのフォルダの名前を直接変更できません。サブフォルダのみ変更できます。</string>
+    <string name="cannot_rename_folder">このフォルダの名前を変更できません</string>
     <!-- File picker -->
     <string name="select_folder">フォルダを選択</string>
     <string name="select_file">ファイルを選択</string>
-    <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_storage_access_title">外部ストレージへのアクセス確認</string>
+    <string name="confirm_folder_access_title">フォルダへのアクセス確認</string>
     <string name="confirm_storage_access_text">次の画面でSDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text">次の画面で、下部にある [このフォルダを使用] を押して、選択したストレージへのアクセスをアプリに許可してください。</string>
+    <string name="confirm_storage_access_android_text_specific">次の画面で、下部にある [<b>このフォルダを使用</b>] を押して、 [<b>%s</b>] へのアクセスをアプリに許可してください。</string>
+    <string name="confirm_create_doc_for_new_folder_text">次の画面で、下部にある [<b>保存</b>] を押して、新しいフォルダを作成してください。</string>
     <string name="confirm_selection">選択を確認</string>
     <string name="loading">読み込み中…</string>
     <string name="access_storage_prompt">[すべてのファイルへのアクセス] をアプリに許可してください。許可をしないとうまく機能しない可能性があります。</string>
@@ -250,7 +251,7 @@
     <string name="direct_children_count">ファイル数+フォルダ数(サブフォルダ除く)</string>
     <string name="files_count">合計ファイル数</string>
     <string name="resolution">解像度</string>
-    <string name="duration">期間</string>
+    <string name="duration">長さ</string>
     <string name="artist">アーティスト</string>
     <string name="album">アルバム</string>
     <string name="focal_length">焦点距離</string>
@@ -270,7 +271,7 @@
     <string name="text_color">文字色</string>
     <string name="primary_color">メインカラー</string>
     <string name="accent_color_white">ホワイトテーマのアクセントカラー</string>
-    <string name="accent_color_black_and_white">ブラック＆ホワイトテーマのアクセントカラー</string>
+    <string name="accent_color_black_and_white">モノクロテーマのアクセントカラー</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">アプリアイコンの色</string>
     <string name="bottom_navigation_bar_color">ナビゲーションバーの色</string>
@@ -401,8 +402,8 @@
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">生体認証ID検証ダイアログを開く</string>
+    <string name="authenticate">認証</string>
     <string name="authentication_failed">認証に失敗しました</string>
     <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
     <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>
@@ -554,7 +555,7 @@
     <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
     <string name="password_protect_whole_app">アプリ全体をパスワードで保護する</string>
     <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
-    <string name="keep_last_modified">ファイルの操作時、最終更新日が古いものを保持する</string>
+    <string name="keep_last_modified">ファイルの操作時、既存の最終更新日を保持する (更新日を更新しない)</string>
     <string name="show_info_bubble">スクロールバーをドラッグ中にアイテムの情報を表示する</string>
     <string name="prevent_phone_from_sleeping">アプリの使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
