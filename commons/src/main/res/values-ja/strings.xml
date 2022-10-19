@@ -324,7 +324,7 @@
     <string name="unhide">再表示</string>
     <string name="hide_folder">フォルダを非表示</string>
     <string name="unhide_folder">フォルダを再表示</string>
-    <string name="temporarily_show_hidden">非表示の項目を一時的に表示</string>
+    <string name="temporarily_show_hidden">非表示項目を一時的に表示</string>
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
     <string name="maximum_share_reached">一度に複数のコンテンツを共有することはできません</string>
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
@@ -532,8 +532,8 @@
     <string name="your_sounds">選択したサウンド</string>
     <string name="add_new_sound">新しいサウンドを追加</string>
     <string name="no_sound">サウンドなし</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">日中 hh:mm</string>
+    <string name="during_day_at">日中 %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
@@ -647,18 +647,18 @@
     <string name="november">11月</string>
     <string name="december">12月</string>
     <!-- in January -->
-    <string name="in_january">1月に</string>
-    <string name="in_february">2月に</string>
-    <string name="in_march">3月に</string>
-    <string name="in_april">4月に</string>
-    <string name="in_may">5月に</string>
-    <string name="in_june">6月に</string>
-    <string name="in_july">7月に</string>
-    <string name="in_august">8月に</string>
-    <string name="in_september">9月に</string>
-    <string name="in_october">10月に</string>
-    <string name="in_november">11月に</string>
-    <string name="in_december">12月に</string>
+    <string name="in_january">1月</string>
+    <string name="in_february">2月</string>
+    <string name="in_march">3月</string>
+    <string name="in_april">4月</string>
+    <string name="in_may">5月</string>
+    <string name="in_june">6月</string>
+    <string name="in_july">7月</string>
+    <string name="in_august">8月</string>
+    <string name="in_september">9月</string>
+    <string name="in_october">10月</string>
+    <string name="in_november">11月</string>
+    <string name="in_december">12月</string>
     <string name="monday">月曜日</string>
     <string name="tuesday">火曜日</string>
     <string name="wednesday">水曜日</string>
