@@ -143,18 +143,24 @@
     <string name="source_file_doesnt_exist">Datoteka %s ne obstaja</string>
     <string name="prepend_filenames">Pripravi mena datotek</string>
     <string name="append_filenames">Dodaj imena datotek</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="filename_without_zip">Filename (without .zip)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="simple_renaming">Enostavno preimenovanje</string>
+    <string name="pattern_renaming">Vzorec</string>
+    <string name="string_to_add">Dodajanje niza</string>
+    <string name="rename_date_time_pattern">%Y - leto
+\n%M - mesec
+\n%D - dan
+\n%h - ura
+\n%m - minuta
+\n%s - sekunda
+\n%i - število, ki narašča od 1</string>
+    <string name="filename_without_txt">Ime datoteke (brez .txt)</string>
+    <string name="filename_without_json">Ime datoteke (brez .json)</string>
+    <string name="filename_without_zip">Ime datoteke (brez .zip)</string>
+    <string name="cannot_hide_files">Od Android 11 dalje datotek in map ne morete več skriti na ta način</string>
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>
     <string name="move">Premakni</string>
-    <string name="copy_move">Kopiraj / premakni</string>
+    <string name="copy_move">Kopirajte / premaknite</string>
     <string name="copy_to">Kopiraj v</string>
     <string name="move_to">Premakni v</string>
     <string name="source">Izvor</string>
@@ -167,20 +173,21 @@
     <string name="copy_failed">Kopiranje ni bilo mogoče</string>
     <string name="copying">Kopiranje…</string>
     <string name="copying_success">Datoteke uspešno kopirane</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Uspešno kopirana datoteka</string>
     <string name="copy_move_failed">Prišlo je do napake</string>
     <string name="moving">Premikanje…</string>
     <string name="moving_success">Datoteke premaknjene uspešno</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Uspešno premaknjena datoteka</string>
     <string name="moving_success_partial">Nekaterih datotek ni bilo mogoče premakniti</string>
     <string name="copying_success_partial">Nekaterih datotek ni bilo mogoče kopirati</string>
     <string name="no_files_selected">Nobena datoteka ni izbrana</string>
     <string name="saving">Shranjevanje…</string>
     <string name="could_not_create_folder">Mape %s ni bilo mogoče ustvariti</string>
     <string name="could_not_create_file">Datoteke %s ni bilo mogoče ustvariti</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="no_new_items">Nobeni novi predmeti niso najdeni</string>
+    <string name="no_space">Destinacija nima na voljo dovolj prostora.
+\nZahtevano %1$s, na razpolago %2$s</string>
+    <string name="system_service_disabled">Sistemska storitev za izbiranje datotek in map ni na voljo</string>
     <!-- Create new -->
     <string name="create_new">Ustvari novo</string>
     <string name="folder">Mapa</string>
@@ -200,24 +207,24 @@
     <string name="skip">Preskoči</string>
     <string name="append">Dodaj \'_1\'</string>
     <string name="apply_to_all">Uporabi za vse</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="system_folder_restriction">Sistem ne dovoljuje operacije v tej mapi, izberite drugo</string>
+    <string name="system_folder_copy_restriction">Sistem ne dovoljuje kopiranja v to mapo, izberite drugo</string>
+    <string name="rename_in_sd_card_system_restriction">Sistem ne dovoljuje preimenovanja v tej mapi</string>
+    <string name="rename_internal_system_restriction">Ne morete preimenovati map v notranjem pomnilniku, le podmape</string>
+    <string name="cannot_rename_folder">Te mape ni mogoče preimenovati</string>
     <!-- File picker -->
     <string name="select_folder">Izberi mapo</string>
     <string name="select_file">Izberi datoteko</string>
     <string name="confirm_storage_access_title">Potrdi dostop do zunanje shrambe</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Potrdite dostop do mape</string>
     <string name="confirm_storage_access_text">Izberite korensko mapo kartice SD na naslednjem zaslonu, da odobrite dovoljenje za pisanje</string>
     <string name="confirm_storage_access_text_sd">Če ne vidite kartice SD, poskusite to</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text">Na naslednjem zaslonu dovolite aplikaciji dostop do izbrane shrambe tako, da na dnu pritisnete \"Uporabi to mapo\".</string>
+    <string name="confirm_storage_access_android_text_specific">Omogočite dostop do \'<b>%s</b>\' na naslednjem zaslonu pritisnite \'<b>Uporabite to mapo</b>\' na dnu.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Pritisnite\'<b>Shrani</b>\' na dnu naslednjega zaslona ustvarite novo mapo.</string>
     <string name="confirm_selection">Potrdi izbor</string>
-    <string name="loading">Loading…</string>
-    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
+    <string name="loading">Nalaganje…</string>
+    <string name="access_storage_prompt">Naši aplikaciji omogočite dostop do vseh datotek, saj sicer ne bo delovala dobro.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="two">%d elementa</item>
@@ -246,14 +253,14 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Izberite</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Hramba</string>
     <string name="internal">Notranja shramba</string>
     <string name="sd_card">Kartica SD</string>
     <string name="root">Korenska mapa</string>
     <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>
     <string name="sd_card_usb_same">Pot do SD kartice in USB ne moreta biti enaki</string>
     <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu. To je sistemska omejitev, zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Izbrana napačna mapa, izberite pot \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Lastnosti</string>
     <string name="path">Pot</string>
