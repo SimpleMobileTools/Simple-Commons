@@ -143,10 +143,10 @@
     <string name="nine">نوں</string>
     <string name="value">مُل</string>
     <string name="value_cannot_be_empty">مُل خالی نہیں ہو سکدا</string>
-    <string name="create_new_contact">Create new contact</string>
-    <string name="add_to_existing_contact">Add to an existing contact</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="blocked_numbers">Blocked numbers</string>
+    <string name="create_new_contact">نواں رابطہ بݨاؤ</string>
+    <string name="add_to_existing_contact">اِک رابطہ وچ ویروے سودھو</string>
+    <string name="app_corrupt">اَیپ خراب ہوگی اے</string>
+    <string name="blocked_numbers">روکے نمبر</string>
     <string name="no_camera_permissions">Camera permission is required</string>
     <string name="no_audio_permissions">Audio permission is required</string>
     <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
@@ -157,12 +157,12 @@
     <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Extension cannot be empty</string>
     <string name="prepend_filenames">Prepend filenames</string>
-    <string name="filename_without_zip">Filename (without .zip)</string>
+    <string name="filename_without_zip">فائل دا ناں (‫‎.zip‬ ؜بنہا)؜</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <string name="copy">کاپی کرو</string>
     <string name="move">بھیجو</string>
     <string name="saving">سامبھیا جا رہا اے…</string>
-    <string name="create_new_folder">Create new folder</string>
+    <string name="create_new_folder">نواں فولڈر بݨاؤ</string>
     <string name="name_taken">A file or folder with that name already exists</string>
     <string name="invalid_name">The name contains invalid characters</string>
     <string name="file_already_exists">File \"%s\" already exists</string>
@@ -171,19 +171,19 @@
     <string name="merge">ملاؤ</string>
     <string name="keep_both">Keep both</string>
     <string name="cannot_rename_folder">Cannot rename this folder</string>
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
+    <string name="select_folder">فولڈر چݨو</string>
+    <string name="select_file">فائل چݨو</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'<b>Save</b>\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Confirm selection</string>
     <string name="loading">لوڈ کر رہا اے…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
     <plurals name="items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">‫%d‬ ؜چیز</item>
+        <item quantity="other">‫%d‬ ؜چیزاں</item>
     </plurals>
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">‫%d‬ ؜چیز</item>
+        <item quantity="other">‫%d‬ ؜چیزاں</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Deleting %d item</item>
@@ -193,25 +193,25 @@
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-    <string name="storage">Storage</string>
+    <string name="storage">سٹوریج</string>
     <string name="white">چٹا</string>
     <string name="custom">Custom</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
     <string name="delete">مٹاؤ</string>
     <string name="remove">ہٹاؤ</string>
-    <string name="repeat_pin">Repeat PIN</string>
+    <string name="repeat_pin">پین کوڈ فیر پایو</string>
     <string name="pattern">Pattern</string>
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">‫%d‬ ؜سکنٹ</item>
+        <item quantity="other">‫%d‬ ؜سکنٹ</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">‫%d‬ ؜منٹ</item>
+        <item quantity="other">‫%d‬ ؜منٹ</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">‫%d‬ ؜گھنٹہ</item>
+        <item quantity="other">‫%d‬ ؜گھنٹے</item>
     </plurals>
     <plurals name="seconds_before">
         <item quantity="one">%d second before</item>
@@ -242,8 +242,8 @@
         <item quantity="other">%d years before</item>
     </plurals>
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">‫%d‬ ؜سکنٹ</item>
+        <item quantity="other">‫%d‬ ؜سکنٹ</item>
     </plurals>
     <string name="alarm">الارم</string>
     <string name="snooze">Snooze</string>
@@ -252,7 +252,7 @@
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="startup">شروع</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
+    <string name="contacts_tab">رابطے</string>
     <string name="favorites_tab">Favorites</string>
     <string name="call_history_tab">Call History</string>
     <string name="groups_tab">Groups</string>
@@ -266,8 +266,8 @@
         <item quantity="one">Moving %d item into the Recycle Bin</item>
         <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
+    <string name="importing">ایمپورٹ کیتیاں جا رہیاں اے۔ ۔</string>
+    <string name="exporting">اوہ ایکسپورٹ کیتے جا رہے اے۔ ۔ ۔</string>
     <string name="importing_successful">Importing successful</string>
     <string name="exporting_some_entries_failed">Exporting some entries failed</string>
     <string name="no_entries_for_importing">No entries for importing have been found</string>
@@ -289,8 +289,8 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">ورژن %s</string>
     <string name="hello">سالام علیکم جی 🙂</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
-    <string name="additional_info">Additional info</string>
+    <string name="about_footer">سلوویکیہ وچ دل نال اَئپ بنائی</string>
+    <string name="additional_info">ہور جاݨکاری</string>
     <string name="read_faq">Read FAQ</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -324,7 +324,7 @@
     <string name="invalid_file_format">فائیل فارمیٹ نہیں درست اے</string>
     <string name="out_of_memory_error">غلطی، کوئی ہور یاد نہیں</string>
     <string name="an_error_occurred">گلتی ائی اے؜:؜ %s</string>
-    <string name="error">گلتی:؜ ‫%s‬</string>
+    <string name="error">غلطی:؜ ‫%s‬</string>
     <string name="open_with">ہور اَیپ نال کھُلھو</string>
     <string name="edit_with">ہور اَیپ نال کھُلھو</string>
     <string name="edit">سودھو</string>
@@ -355,15 +355,15 @@
     <string name="playpause">پلے / رکھ</string>
     <string name="next">اگے</string>
     <string name="number">گݨتی</string>
-    <string name="no_contacts_found">No contacts found</string>
+    <string name="no_contacts_found">کوئی رابطے نہیں لبھے</string>
     <string name="request_the_required_permissions">اِجازتاں لئی بینتی کرو</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_access_to_contacts">پہنچ وچ تہاڈے رابطے نہیں اے</string>
+    <string name="no_phone_call_permission">فون کال بݨاؤݨ لئی اَیپ دی اِجازت نہیں اے، سیٹنگاں وچ جاکے دیو</string>
     <string name="insert_text_here">اِتھے لکھو</string>
     <string name="call_person">%s کال کرو</string>
     <string name="eight">اٹھ</string>
     <string name="disclaimer">مُنکر ہوݨ</string>
-    <string name="take_photo">Take photo</string>
+    <string name="take_photo">فوٹو کھچو</string>
     <string name="choose_photo">تصویر چݨو</string>
     <string name="birthday">جنم دن</string>
     <string name="anniversary">ورھےگنڈھ</string>
@@ -374,31 +374,31 @@
     <string name="work_fax">کم دی فیکس</string>
     <string name="home_fax">گھر دی فیکس</string>
     <string name="pager">پیجر</string>
-    <string name="no_phone_number_found">No phone number has been found</string>
-    <string name="change_view_type">Change view type</string>
+    <string name="no_phone_number_found">کوئی فون نمبر نہیں لبھیا</string>
+    <string name="change_view_type">درش دی قسم بدلو</string>
     <string name="grid">گرِڈ</string>
-    <string name="grid_pro">Grid (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="grid_pro">گرِڈ (جھونگے دا نشان)</string>
+    <string name="uneven_grid">اسمان گرِڈ</string>
     <string name="list">لِسٹ</string>
-    <string name="increase_column_count">Increase column count</string>
-    <string name="reduce_column_count">Reduce column count</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
-    <string name="change_cover_image">Change cover image</string>
+    <string name="increase_column_count">کالماں دی گݨتی ودھاؤ</string>
+    <string name="reduce_column_count">کالماں دی گݨتی گھٹاؤ</string>
+    <string name="column_count">کالماں دی گݨتی</string>
+    <string name="portrait_column_count">کھڑ رُخ نظارے دے کالماں دی گݨتی</string>
+    <string name="landscape_column_count">پڑے رُک نظارے دے کالماں دی گݨتی</string>
+    <string name="change_cover_image">اگلی تصویر بدلو</string>
     <string name="select_photo">تصویر چݨو</string>
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
-    <string name="block_number">Block number</string>
-    <string name="block_numbers">Block numbers</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
+    <string name="manage_blocked_numbers">روکے نمبراں دیاں سیٹنگاں</string>
+    <string name="not_blocking_anyone">تہاڈے کوئی روکے نمبر نہیں اے۔</string>
+    <string name="add_a_blocked_number">کجھ روکیا نمبر پایو</string>
+    <string name="block_number">نمبر روکو</string>
+    <string name="block_numbers">نمبر روکو</string>
+    <string name="export_blocked_numbers">روکے نمبر ایکسپورٹ کرو</string>
+    <string name="import_blocked_numbers">روکے نمبر ایمپورٹ کرو</string>
+    <string name="must_make_default_dialer">نمبر روکݨ لئی ایس اَیپ مول ضروری اے۔</string>
     <string name="set_as_default">مول نال ٹیکو</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_confirmation">تسیں پکے، ‫”⁠%s‬“؜ روکو؟</string>
+    <string name="block_unknown_calls">جے رابطے دے باہروں کالاں آؤندیاں اے، ایہہ روکو</string>
+    <string name="block_unknown_messages">جے رابطے دے باہروں سنیہے آؤندے اے، ایہہ روکو</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="favorites">پسندیدے</string>
     <string name="add_favorites">Add favorites</string>
@@ -407,8 +407,8 @@
     <string name="search">کھوجو</string>
     <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
     <string name="filter">فِلٹر کرو</string>
-    <string name="filter_pro">Filter (Pro)</string>
-    <string name="no_items_found">No items found.</string>
+    <string name="filter_pro"></string>
+    <string name="no_items_found">کوئی چیزاں نہیں لبھیاں۔</string>
     <string name="change_filter">فِلٹر بدلو</string>
     <string name="no_storage_permissions">Storage permission is required</string>
     <string name="no_contacts_permission">Contacts permission is required</string>
@@ -431,11 +431,11 @@
 \n%m - منٹ
 \n%s - سکنٹ
 \n%i - number increasing from 1</string>
-    <string name="move_to">Move to</string>
+    <string name="move_to">اِتھوں تھاں نوں چلاؤ</string>
     <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
+    <string name="filename_without_json">فائل دا ناں (‫‎.json‬ ؜بنہا)؜</string>
+    <string name="copy_move">کاپی / چھلاؤ</string>
+    <string name="copy_to">اِتھوں تھاں نوں کاپی کرو</string>
     <string name="source">سروت</string>
     <string name="destination">منزل</string>
     <string name="select_destination">Select destination</string>
@@ -463,8 +463,8 @@
     <string name="create_new">Create new</string>
     <string name="folder">فولڈر</string>
     <string name="file">فائیل</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="empty_name">کجھ ناں پایو</string>
+    <string name="unknown_error_occurred">نمعلوم غلطی آئی اے</string>
     <string name="overwrite">اُتے لِکھو</string>
     <string name="skip">اگے</string>
     <string name="append">Append with \'_1\'</string>
@@ -474,12 +474,12 @@
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">فولڈر دی اِجازت پکا کرو</string>
     <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_storage_access_android_text_specific">Please allow accessing \'<b>%s</b>\' on the next screen by pressing \'<b>Use this folder</b>\' at the bottom.</string>
-    <string name="select_storage">Select storage</string>
+    <string name="select_storage">سٹوریج چݨو</string>
     <string name="internal">Internal</string>
     <string name="sd_card">ایس‌ڈی کارڈ</string>
     <string name="root">روٹ</string>
@@ -509,8 +509,8 @@
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc\?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
     <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
+    <string name="text_color">لکھت دا رنگ</string>
+    <string name="primary_color">مکھ رنگ</string>
     <string name="accent_color_white">Accent color of white theme</string>
     <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
     <string name="foreground_color">Foreground color</string>
@@ -519,12 +519,12 @@
     <string name="restore_defaults">Restore defaults</string>
     <string name="use_default">Use default</string>
     <string name="default_color">مول</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">رنگ بدلو</string>
     <string name="theme">تھیم</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">سامبھو</string>
     <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
+    <string name="undo_changes">تبدیلیاں موڑو</string>
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes\?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit\?</string>
     <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
@@ -541,16 +541,16 @@
     <string name="black_white">Black &amp; White</string>
     <string name="shared">سانجھا کرو</string>
     <string name="system_default">System default</string>
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">کیہ نویں اے</string>
     <string name="rename">ناں بدلو</string>
     <string name="share">سانجھ کرو</string>
-    <string name="share_via">Share via</string>
+    <string name="share_via">تھاں نوں سانجھ کرو</string>
     <string name="resize">مُڑ اکار دیو</string>
-    <string name="select_all">Select all</string>
-    <string name="select_text">Select text</string>
+    <string name="select_all">سبھ چݨو</string>
+    <string name="select_text">لکھت چݨو</string>
     <string name="hide">لُکاؤ</string>
     <string name="unhide">فیر ویکھو</string>
-    <string name="hide_folder">Hide folder</string>
+    <string name="hide_folder">فولڈر لُکاؤ</string>
     <string name="unhide_folder">Unhide folder</string>
     <string name="temporarily_show_hidden">Temporarily show hidden</string>
     <string name="stop_showing_hidden">Stop showing hidden media</string>
@@ -570,8 +570,8 @@
     <string name="toggle_filename">Toggle filename visibility</string>
     <string name="move_to_top">Move to the top</string>
     <string name="move_to_bottom">Move to the bottom</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="pin_item">چیز لگو</string>
+    <string name="unpin_item"></string>
     <string name="send_sms">Send SMS</string>
     <string name="send_email">ای‌میل بھیجو</string>
     <string name="call">کال کرو</string>
@@ -593,7 +593,7 @@
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">First name</string>
+    <string name="first_name">پہلا ناں</string>
     <string name="middle_name">Middle name</string>
     <string name="surname">Surname</string>
     <string name="full_name">Full name</string>
@@ -614,9 +614,9 @@
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
     <string name="pin">پین کوڈ</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
+    <string name="enter_pin">پین کوڈ پایو</string>
+    <string name="please_enter_pin">تسیں کوئی پین کوڈ نہیں پاۓ گئے اے</string>
+    <string name="wrong_pin">پین کوڈ نہیں درست اے</string>
     <string name="insert_pattern">Insert pattern</string>
     <string name="wrong_pattern">Wrong pattern</string>
     <string name="repeat_pattern">Repeat pattern</string>
@@ -629,7 +629,7 @@
     <string name="authentication_failed">Authentication failed</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="go_to_settings">سیٹنگاں نوں جاؤ</string>
     <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
     <string name="lock_folder">Lock folder</string>
@@ -640,7 +640,7 @@
     <string name="today">اج</string>
     <string name="tomorrow">کل</string>
     <string name="every_day">Every day</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">سال لُکاؤ</string>
     <string name="seconds_raw">سکنٹ</string>
     <string name="minutes_raw">منٹ</string>
     <string name="hours_raw">گھنٹے</string>
@@ -649,36 +649,36 @@
     <string name="minutes_letter">منٹ</string>
     <string name="hours_letter">گھنٹے</string>
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">‫%d‬ ؜سکنٹ</item>
+        <item quantity="other">‫%d‬ ؜سکنٹ</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">‫%d‬ ؜منٹ</item>
+        <item quantity="other">‫%d‬ ؜منٹ</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">‫%d‬ ؜گھنٹہ</item>
+        <item quantity="other">‫%d‬ ؜گھنٹے</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">‫%d‬ ؜دن</item>
+        <item quantity="other">‫%d‬ ؜دن</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">‫%d‬ ؜ہفتہ</item>
+        <item quantity="other">‫%d‬ ؜ہفتے</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">‫%d‬ ؜مہینا</item>
+        <item quantity="other">‫%d‬ ؜مہینے</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">‫%d‬ ؜سال</item>
+        <item quantity="other">‫%d‬ ؜سال</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">‫%d‬ ؜دن</item>
+        <item quantity="other">‫%d‬ ؜دن</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d ہفتہ</item>
@@ -689,32 +689,32 @@
         <item quantity="other">%d مہینے</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d سال</item>
-        <item quantity="other">%d سال</item>
+        <item quantity="one">‫%d‬ ؜سال</item>
+        <item quantity="other">‫%d‬ ؜سال</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">‫%d‬ ؜منٹ</item>
+        <item quantity="other">‫%d‬ ؜منٹ</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">‫%d‬ ؜گھنٹہ</item>
+        <item quantity="other">‫%d‬ ؜گھنٹے</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">‫%d‬ ؜دن</item>
+        <item quantity="other">‫%d‬ ؜دن</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">‫%d‬ ؜ہفتہ</item>
+        <item quantity="other">‫%d‬ ؜ہفتے</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">‫%d‬ ؜مہینا</item>
+        <item quantity="other">‫%d‬ ؜مہینے</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">‫%d‬ ؜سال</item>
+        <item quantity="other">‫%d‬ ؜سال</item>
     </plurals>
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:
 \n%s</string>
@@ -743,7 +743,7 @@
     <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Customize widget colors</string>
     <string name="customize_notifications">Customize notifications</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">انگریزی بولی ورتو</string>
     <string name="language">بولی</string>
     <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">Font size</string>
@@ -767,12 +767,12 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty the Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">سیٹنگاں ایکسپورٹ کرو</string>
+    <string name="import_settings">سیٹنگاں ایمپورٹ کرو</string>
+    <string name="settings_exported_successfully">سیٹنگاں ایکسپورٹ کیتیاں گیاں</string>
+    <string name="settings_imported_successfully">سیٹنگاں ایمپورٹ کیتیاں گیاں</string>
     <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">کیش ہٹاؤ</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
     <string name="visibility">دکھݨ</string>
     <string name="security">Security</string>
@@ -910,10 +910,10 @@
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
     <string name="app_launcher_short">App Launcher</string>
     <string name="clock_short">گھڑی</string>
-    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_notes">سادے نوٹ</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="contacts_short">رابطے</string>
     <string name="dialer_short">Dialer</string>
     <string name="draw_short">Draw</string>
     <string name="file_manager_short">File Manager</string>
