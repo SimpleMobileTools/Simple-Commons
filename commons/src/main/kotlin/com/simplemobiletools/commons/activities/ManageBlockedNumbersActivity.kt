@@ -42,13 +42,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         block_unknown.apply {
             setText(blockTitleRes)
             isChecked = baseConfig.blockUnknownNumbers
-            maybeSetDefaultCallerIdApp()
+            if (isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
         }
 
         block_unknown_holder.setOnClickListener {
             block_unknown.toggle()
             baseConfig.blockUnknownNumbers = block_unknown.isChecked
-            maybeSetDefaultCallerIdApp()
+            if (block_unknown.isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
         }
 
         manage_blocked_numbers_placeholder_2.apply {
@@ -127,6 +131,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
                 manage_blocked_numbers_placeholder.beVisibleIf(blockedNumbers.isEmpty())
                 manage_blocked_numbers_placeholder_2.beVisibleIf(blockedNumbers.isEmpty())
+
+                if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
+                    maybeSetDefaultCallerIdApp()
+                }
             }
         }
     }
@@ -251,7 +259,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     }
 
     private fun maybeSetDefaultCallerIdApp() {
-        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer") && block_unknown.isChecked) {
+        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
             setDefaultCallerIdApp()
         }
     }
