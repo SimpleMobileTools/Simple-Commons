@@ -107,7 +107,7 @@
     <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
     <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
     <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller id app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>
