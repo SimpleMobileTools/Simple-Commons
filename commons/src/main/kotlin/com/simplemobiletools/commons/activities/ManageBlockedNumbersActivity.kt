@@ -100,7 +100,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportBlockedNumbersTo(outputStream)
         } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
-            toast(R.string.must_make_default_caller_id_app)
+            toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
             baseConfig.blockUnknownNumbers = false
         }
     }
