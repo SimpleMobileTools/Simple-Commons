@@ -107,6 +107,7 @@
     <string name="block_unknown_calls">Blokir panggilan dari kontak yang tidak disimpan</string>
     <string name="block_unknown_messages">Blokir pesan dari kontak yang tidak disimpan</string>
     <string name="add_blocked_number_helper_text">Masukkan nomor atau pola (mis. *12345*, +62*8888) untuk memblokir semua panggilan dan pesan dari nomor yang sesuai dengan pola.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller id app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>

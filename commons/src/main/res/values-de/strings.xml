@@ -107,6 +107,7 @@
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller id app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>

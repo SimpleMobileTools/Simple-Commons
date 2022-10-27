@@ -107,6 +107,7 @@
     <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
     <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller id app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>

@@ -107,6 +107,7 @@
     <string name="block_unknown_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
     <string name="block_unknown_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
     <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller id app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
     <string name="add_favorites">Favori ekle</string>
