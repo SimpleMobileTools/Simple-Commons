@@ -1018,4 +1018,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         }
     }
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    fun setDefaultCallerIdApp() {
+        val roleManager = getSystemService(RoleManager::class.java)
+        if (roleManager.isRoleAvailable(RoleManager.ROLE_CALL_SCREENING) && !roleManager.isRoleHeld(RoleManager.ROLE_CALL_SCREENING)) {
+            val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_CALL_SCREENING)
+            startActivityForResult(intent, REQUEST_CODE_SET_DEFAULT_CALLER_ID)
+        }
+    }
 }

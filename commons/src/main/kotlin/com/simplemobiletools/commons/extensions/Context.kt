@@ -908,7 +908,6 @@ val Context.actionBarHeight: Int
         return actionBarHeight.toInt()
     }
 
-
 val Context.usableScreenSize: Point
     get() {
         val size = Point()
@@ -996,7 +995,7 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
     for (blockedNumber in blockedNumbers) {
         val num = blockedNumber.number
-        if (num.contains("*")) {
+        if (num.isBlockedNumberPattern()) {
             val pattern = num.replace("+", "\\+").replace("*", ".*")
             if (number.matches(pattern.toRegex())) {
                 return true

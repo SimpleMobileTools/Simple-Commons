@@ -107,6 +107,7 @@
     <string name="block_unknown_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
     <string name="block_unknown_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
+    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>
