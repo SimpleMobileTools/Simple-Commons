@@ -302,6 +302,7 @@ fun Activity.launchPurchaseThankYouIntent() {
 }
 
 fun Activity.launchUpgradeToProIntent() {
+    hideKeyboard()
     try {
         launchViewIntent("market://details?id=${baseConfig.appId.removeSuffix(".debug")}.pro")
     } catch (ignored: Exception) {
@@ -402,6 +403,26 @@ fun Activity.sharePathsIntent(paths: List<String>, applicationId: String) {
     }
 }
 
+fun Activity.setAsIntent(path: String, applicationId: String) {
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
+        Intent().apply {
+            action = Intent.ACTION_ATTACH_DATA
+            setDataAndType(newUri, getUriMimeType(path, newUri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            val chooser = Intent.createChooser(this, getString(R.string.set_as))
+
+            try {
+                startActivityForResult(chooser, REQUEST_SET_AS)
+            } catch (e: ActivityNotFoundException) {
+                toast(R.string.no_app_found)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        }
+    }
+}
+
 fun Activity.shareTextIntent(text: String) {
     ensureBackgroundThread {
         Intent().apply {
@@ -419,26 +440,6 @@ fun Activity.shareTextIntent(text: String) {
                 } else {
                     showErrorToast(e)
                 }
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
-        }
-    }
-}
-
-fun Activity.setAsIntent(path: String, applicationId: String) {
-    ensureBackgroundThread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
-        Intent().apply {
-            action = Intent.ACTION_ATTACH_DATA
-            setDataAndType(newUri, getUriMimeType(path, newUri))
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            val chooser = Intent.createChooser(this, getString(R.string.set_as))
-
-            try {
-                startActivityForResult(chooser, REQUEST_SET_AS)
-            } catch (e: ActivityNotFoundException) {
-                toast(R.string.no_app_found)
             } catch (e: Exception) {
                 showErrorToast(e)
             }
