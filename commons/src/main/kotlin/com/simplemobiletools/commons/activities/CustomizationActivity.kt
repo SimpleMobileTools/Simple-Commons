@@ -153,7 +153,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(
                 THEME_LIGHT,
                 MyTheme(
-                    R.string.light_theme,
+                    getString(R.string.light_theme),
                     R.color.theme_light_text_color,
                     R.color.theme_light_background_color,
                     R.color.color_primary,
@@ -162,24 +162,24 @@ class CustomizationActivity : BaseSimpleActivity() {
             )
             put(
                 THEME_DARK,
-                MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary)
+                MyTheme(getString(R.string.dark_theme), R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary)
             )
             put(
                 THEME_DARK_RED,
                 MyTheme(
-                    R.string.dark_red,
+                    getString(R.string.dark_red),
                     R.color.theme_dark_text_color,
                     R.color.theme_dark_background_color,
                     R.color.theme_dark_red_primary_color,
                     R.color.md_red_700
                 )
             )
-            put(THEME_WHITE, MyTheme(R.string.white, R.color.dark_grey, android.R.color.white, android.R.color.white, R.color.color_primary))
-            put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
-            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))
+            put(THEME_WHITE, MyTheme(getString(R.string.white), R.color.dark_grey, android.R.color.white, android.R.color.white, R.color.color_primary))
+            put(THEME_BLACK_WHITE, MyTheme(getString(R.string.black_white), android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
+            put(THEME_CUSTOM, MyTheme(getString(R.string.custom), 0, 0, 0, 0))
 
             if (storedSharedTheme != null) {
-                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0, 0))
+                put(THEME_SHARED, MyTheme(getString(R.string.shared), 0, 0, 0, 0))
             }
         }
         setupThemePicker()
@@ -210,7 +210,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun themePickerClicked() {
         val items = arrayListOf<RadioItem>()
         for ((key, value) in predefinedThemes) {
-            items.add(RadioItem(key, getString(value.nameId)))
+            items.add(RadioItem(key, value.label))
         }
 
         RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
@@ -308,13 +308,13 @@ class CustomizationActivity : BaseSimpleActivity() {
         val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
         val textColor = if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color
         val backgroundColor = if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color
-        return MyTheme(R.string.auto_light_dark_theme, textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
+        return MyTheme(getString(R.string.auto_light_dark_theme), textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
     }
 
     // doesn't really matter what colors we use here, everything will be taken from the system. Use the default dark theme values here.
     private fun getSystemThemeColors(): MyTheme {
         return MyTheme(
-            R.string.system_default,
+            "${getString(R.string.system_default)} (${getString(R.string.material_you)})",
             R.color.theme_dark_text_color,
             R.color.theme_dark_background_color,
             R.color.color_primary,
@@ -349,13 +349,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun getThemeText(): String {
-        var nameId = R.string.custom
+        var label = getString(R.string.custom)
         for ((key, value) in predefinedThemes) {
             if (key == curSelectedThemeId) {
-                nameId = value.nameId
+                label = value.label
             }
         }
-        return getString(nameId)
+        return label
     }
 
     private fun getThemeNavigationColor(themeId: Int) = when (themeId) {
@@ -641,8 +641,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
 
                 if (!predefinedThemes.containsKey(THEME_SHARED)) {
-                    predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, 0, 0, 0, 0)
+                    predefinedThemes[THEME_SHARED] = MyTheme(getString(R.string.shared), 0, 0, 0, 0)
                 }
+
                 baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
                 updateColorTheme(THEME_SHARED)
