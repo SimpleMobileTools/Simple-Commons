@@ -107,7 +107,7 @@
     <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
     <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
     <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">不明な番号をブロックするには、このアプリを [発信者番号 / 迷惑電話アプリ] のデフォルトにする必要があります。</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>
@@ -410,7 +410,7 @@
     <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
     <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>
     <string name="go_to_settings">設定に移動</string>
-    <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
+    <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください。</string>
     <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
     <string name="lock_folder">フォルダに鍵をかける</string>
     <string name="lock_folder_pro">フォルダに鍵をかける (Pro)</string>
@@ -689,10 +689,12 @@
     <string name="more_info">もっと見る</string>
     <string name="upgrade">アップグレードする</string>
     <string name="upgrade_calendar">ローカルに保存されたイベントは、手動で.icsファイルにエクスポートしてインポートする必要があります。インポート/エクスポートボタンはメイン画面のメニューにあります。</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">こんにちは、
+\n
+\nすでにPro版のアプリをお持ちのようです。こちらのアプリはもう必要ありませんので、アンインストールできます。</string>
+    <string name="upgraded_to_pro_calendar">ローカルに保存された予定を移行するには、.icsファイルにエクスポートしてから、.icsファイルをインポートする必要があります。エクスポートボタンとインポートボタンは上部のメニューにあります。</string>
+    <string name="upgraded_to_pro_notes">メモアプリのPro版への移行は手動で行う必要があります。</string>
+    <string name="upgraded_to_pro_contacts">ローカルに保存された連絡先を移行するには、.vcfファイルにエクスポートしてから、.vcfファイルをインポートする必要があります。エクスポートボタンとインポートボタンは上部のメニューにあります。</string>
     <!-- About -->
     <string name="about">このアプリについて</string>
     <string name="website">Webサイト</string>
@@ -727,14 +729,14 @@
             ありがとうございます！
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">こんにちは、&lt;br&gt;&lt;br&gt; アプリを楽しんでいただけているでしょうか。広告無しでプライバシーを尊重するアプリを続けるため、&lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;アプリを購入し開発の力になってください。購入されれば、すべてのアプリ機能と色のカスタマイズのロック解除も行えます。 &lt;br&gt;&lt;br&gt; ありがとうございます！</string>
     <string name="purchase">購入する</string>
     <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">\"Simple Thank You\" アプリを最新版に更新してください</string>
     <string name="before_asking_question_read_faq">お問い合わせいただく前に、アプリの設定を確認し、よくある質問を見てください。答えが載っているかもしれません。</string>
     <string name="before_rate_read_faq">当社を評価していただく前に、アプリの設定を確認し、よくある質問を見てください。問題が発生しているなら、答えが見つかるかもしれません。</string>
     <string name="make_sure_latest">最新バージョンのアプリを利用しているかご確認ください。</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">また、このアプリのバージョンは開発されていないことにご注意ください。Proバージョンを入手すると、多くの改善が得られます。</string>
     <string name="read_it">見る</string>
     <string name="read_faq">FAQ</string>
     <string name="rate_us_prompt">こんにちは、\n\n　このアプリをしばらくご利用いただいているようで、感謝いたします。\n\n　ひとつお願いがあるのですが、Google Playで評価してもらえるでしょうか。お力添えください。 \n\n　評価をしてもしなくても、このメッセージは二度と表示されません。\n\nThanks!</string>
@@ -743,17 +745,7 @@
     <string name="widget_locked_pro">ウィジェットはロックされています。\nロックを解除するには、Proバージョンにアップグレードしてください。</string>
     <string name="features_locked">この機能はロックされています。ロックを解除するには、 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; を購入する必要があります。&lt;br&gt;&lt;br&gt;お支払いは1回のみで、ご満足いただけない場合はご返金いたします。</string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">
-        <![CDATA[
-            どうも、<br><br>
-            最近、アプリの新作が発表されました:<br><br>
-            <a href="%1$s">%2$s</a><br><br>
-            <a href="%3$s">%4$s</a><br><br>
-            <a href="%5$s">%6$s</a><br><br>
-            アイコンかタイトルをクリックするだけでダウンロードできます。<br><br>
-            ありがとうございます
-        ]]>
-    </string>
+    <string name="new_app">こんにちは、&lt;br&gt;&lt;br&gt; 最近、新しいアプリをいくつかリリースしたのでお知らせします:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; アイコンかタイトルをタップするだけでダウンロードできます。&lt;br&gt;&lt;br&gt; ありがとうございます</string>
     <string name="simple_app_launcher">Simple App ランチャー</string>
     <string name="simple_calculator">Simple電卓</string>
     <string name="simple_calendar">Simpleカレンダー</string>
@@ -898,7 +890,7 @@
     <string name="why_upgrade_private_contact_sharing">アプリ内で個別連絡先をシェアするオプション</string>
     <string name="why_upgrade_customizable_contact_ringtones">カスタマイズ可能な連絡先の着信音</string>
     <string name="why_upgrade_contact_filtering">連絡先フィルタリング</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">非公開の連絡先</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">チェックリスト</string>
     <string name="why_upgrade_different_note_per_widget">各ウィジェットに違うメモと色</string>
