@@ -625,6 +625,15 @@
     <string name="main_screen">Hovedskærm</string>
     <string name="thumbnails">Miniaturebilleder</string>
     <string name="list_view">Listevisning</string>
+    <!-- Excluding -->
+    <string name="exclude">Ekskluder</string>
+    <string name="excluded_folders">Ekskluderede mapper</string>
+    <string name="excluded">(ekskluderet)</string>
+    <string name="manage_excluded_folders">Administrer ekskluderede mapper</string>
+    <string name="remove_all">Fjern alle</string>
+    <string name="remove_all_description">Fjern alle fra listen med ekskluderede mapper\? Det vil ikke slette mapperne.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Administrer viste faner</string>
     <string name="default_tab_to_open">Tab for at åbne ved appstart</string>

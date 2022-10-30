@@ -625,6 +625,15 @@
     <string name="main_screen">Főképernnyő</string>
     <string name="thumbnails">Bélyegképek</string>
     <string name="list_view">Listanézet</string>
+    <!-- Excluding -->
+    <string name="exclude">Kizárás</string>
+    <string name="excluded_folders">Kizárt mappák</string>
+    <string name="excluded">(kizárt)</string>
+    <string name="manage_excluded_folders">Kizárt mappák kezelése</string>
+    <string name="remove_all">Összes eltávolítása</string>
+    <string name="remove_all_description">Összes mappa eltávolítása a Kizárás listából. Ez nem törli a mappákat.</string>
+    <string name="temporarily_show_excluded">Kihagyottak megjelenítése ideiglenesen</string>
+    <string name="stop_showing_excluded">Kihagyottak megjelenítésének leállítása</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Megjelenített lapok kezelése</string>
     <string name="default_tab_to_open">Alkalmazás indításakor megjelenítendő lap</string>

@@ -593,6 +593,15 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">排除</string>
+    <string name="excluded_folders">排除資料夾</string>
+    <string name="excluded">(排除)</string>
+    <string name="manage_excluded_folders">管理排除資料夾</string>
+    <string name="remove_all">移除全部</string>
+    <string name="remove_all_description">是否將排除列表中的所有資料夾都移除？這不會刪除資料夾。</string>
+    <string name="temporarily_show_excluded">暫時顯示已排除的項目</string>
+    <string name="stop_showing_excluded">停止顯示已排除的項目</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理顯示的頁面</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

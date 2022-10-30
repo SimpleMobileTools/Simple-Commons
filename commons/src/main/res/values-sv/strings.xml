@@ -625,6 +625,15 @@
     <string name="main_screen">Huvudskärm</string>
     <string name="thumbnails">Miniatyrbilder</string>
     <string name="list_view">Listvy</string>
+    <!-- Excluding -->
+    <string name="exclude">Uteslut</string>
+    <string name="excluded_folders">Uteslutna mappar</string>
+    <string name="excluded">(utesluten)</string>
+    <string name="manage_excluded_folders">Hantera uteslutna mappar</string>
+    <string name="remove_all">Ta bort alla</string>
+    <string name="remove_all_description">Vill du ta bort alla mappar från uteslutningslistan\? Detta raderar inte mapparna.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

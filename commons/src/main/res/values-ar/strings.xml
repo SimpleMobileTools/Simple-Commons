@@ -756,6 +756,15 @@
     <string name="main_screen">الصفحة الرئيسيّة</string>
     <string name="thumbnails">الصور المصغّرة</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">استبعاد</string>
+    <string name="excluded_folders">المجلدات المستبعدة</string>
+    <string name="excluded">(مستبعد)</string>
+    <string name="manage_excluded_folders">إدارة المجلدات المستبعدة</string>
+    <string name="remove_all">إزالة الكل</string>
+    <string name="remove_all_description">هل تريد إزالة كافة المجلدات من قائمة المجلدات المستبعدة؟ لن يؤدي هذا إلى حذف المجلدات.</string>
+    <string name="temporarily_show_excluded">إظهار الملفات المستبعدة مؤقتًا</string>
+    <string name="stop_showing_excluded">إيقاف عرض الملفات المستبعدة</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">إدارة التابات المعروضة</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

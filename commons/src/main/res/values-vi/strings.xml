@@ -660,6 +660,16 @@
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
 
+    <!-- Excluding -->
+    <string name="exclude">Loại trừ</string>
+    <string name="excluded_folders">Các thư mục bị loại trừ</string>
+    <string name="excluded">(không bao gồm)</string>
+    <string name="manage_excluded_folders">Quản lý các thư mục loại trừ</string>
+    <string name="remove_all">Xóa tất cả</string>
+    <string name="remove_all_description">Xóa tất cả các thư mục khỏi danh sách loại trừ\? Điều này sẽ không xóa các thư mục.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
+
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

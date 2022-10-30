@@ -625,6 +625,15 @@
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniatures</string>
     <string name="list_view">Vista de llista</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclou</string>
+    <string name="excluded_folders">Carpetes excloses</string>
+    <string name="excluded">(exclòs)</string>
+    <string name="manage_excluded_folders">Gestiona les carpetes excloses</string>
+    <string name="remove_all">Elimina-ho tot</string>
+    <string name="remove_all_description">Elimino totes les carpetes de la llista d\'excloses\? Això no eliminarà les carpetes.</string>
+    <string name="temporarily_show_excluded">Mostra temporalment les excloses</string>
+    <string name="stop_showing_excluded">Deixa de mostrar les excloses</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gestiona les pestanyes mostrades</string>
     <string name="default_tab_to_open">Pestanya a obrir en iniciar l\'aplicació</string>

@@ -659,6 +659,15 @@
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniaturas</string>
     <string name="list_view">Vista de Lista</string>
+    <!-- Excluding -->
+    <string name="exclude">Excluir</string>
+    <string name="excluded_folders">Carpetas excluidas</string>
+    <string name="excluded">(Excluido)</string>
+    <string name="manage_excluded_folders">Gestionar carpetas excluidas</string>
+    <string name="remove_all">Eliminar todo</string>
+    <string name="remove_all_description">¿Eliminar todas las carpetas de la lista de excluidas\? Nota: Esto no borrará las carpetas.</string>
+    <string name="temporarily_show_excluded">Mostrar excluidos temporalmente</string>
+    <string name="stop_showing_excluded">Dejar de mostrar excluidos</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Administrar pestañas mostradas</string>
     <string name="default_tab_to_open">Pestaña para abrir al inicio de la aplicación</string>

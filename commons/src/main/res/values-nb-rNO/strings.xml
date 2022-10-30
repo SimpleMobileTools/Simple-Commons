@@ -625,6 +625,15 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Ekskluder</string>
+    <string name="excluded_folders">Ekskluderte mapper</string>
+    <string name="excluded">(ekskludert)</string>
+    <string name="manage_excluded_folders">Håndter ekskluderte mapper</string>
+    <string name="remove_all">Fjern alle</string>
+    <string name="remove_all_description">Fjerne alle mapper fra listen av ekskluderte\? Dette sletter ikke mappene.</string>
+    <string name="temporarily_show_excluded">Vis ekskluderte midlertidig</string>
+    <string name="stop_showing_excluded">Stopp å vise ekskluderte</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

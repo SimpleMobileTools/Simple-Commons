@@ -686,6 +686,15 @@
     <string name="main_screen">Ekran główny</string>
     <string name="thumbnails">Miniaturki</string>
     <string name="list_view">Widok listy</string>
+    <!-- Excluding -->
+    <string name="exclude">Wyklucz</string>
+    <string name="excluded_folders">Wykluczone foldery</string>
+    <string name="excluded">(wykluczone)</string>
+    <string name="manage_excluded_folders">Zarządzaj wykluczonymi folderami</string>
+    <string name="remove_all">Usuń wszystko</string>
+    <string name="remove_all_description">Czy usunąć wszystkie foldery z listy wykluczonych\? Nie spowoduje to fizycznego usunięcia folderów.</string>
+    <string name="temporarily_show_excluded">Tymczasowo pokaż wykluczone foldery</string>
+    <string name="stop_showing_excluded">Przestań pokazywać wykluczone foldery</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Zarządzaj pokazywanymi kartami</string>
     <string name="default_tab_to_open">Karta otwierana przy uruchomieniu aplikacji</string>

@@ -688,6 +688,15 @@
     <string name="main_screen">Головний екран</string>
     <string name="thumbnails">Мініатюри</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Виключити</string>
+    <string name="excluded_folders">Виключені теки</string>
+    <string name="excluded">(виключене)</string>
+    <string name="manage_excluded_folders">Керування виключеними теками</string>
+    <string name="remove_all">Видалити все</string>
+    <string name="remove_all_description">Видалити всі теки зі списку виключених\? Це не видалить теки з пристрою.</string>
+    <string name="temporarily_show_excluded">Тимчасово показати вилучені</string>
+    <string name="stop_showing_excluded">Припинити показ вилучених</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
     <string name="default_tab_to_open">Вкладка, що відкривається при запуску додатка</string>

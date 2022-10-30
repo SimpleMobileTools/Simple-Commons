@@ -594,6 +594,15 @@
     <string name="main_screen">メイン画面</string>
     <string name="thumbnails">サムネイル</string>
     <string name="list_view">リストビュー</string>
+    <!-- Excluding -->
+    <string name="exclude">除外する</string>
+    <string name="excluded_folders">除外フォルダ</string>
+    <string name="excluded">(除外)</string>
+    <string name="manage_excluded_folders">除外フォルダの管理</string>
+    <string name="remove_all">すべて解除</string>
+    <string name="remove_all_description">除外するフォルダの登録をすべて解除しますか\? フォルダ自体は削除されません。</string>
+    <string name="temporarily_show_excluded">除外項目を一時的に表示</string>
+    <string name="stop_showing_excluded">除外項目の表示を中止</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">表示するタブを管理</string>
     <string name="default_tab_to_open">アプリ開始時に開くタブ</string>

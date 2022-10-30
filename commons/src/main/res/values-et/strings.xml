@@ -626,6 +626,15 @@
     <string name="main_screen">Põhivaade</string>
     <string name="thumbnails">Pisipildid</string>
     <string name="list_view">Nimekirja vaade</string>
+    <!-- Excluding -->
+    <string name="exclude">Välista</string>
+    <string name="excluded_folders">Välistatud kaustad</string>
+    <string name="excluded">(välistatud)</string>
+    <string name="manage_excluded_folders">Halda välistatud kaustu</string>
+    <string name="remove_all">Eemalda kõik</string>
+    <string name="remove_all_description">Kas eemaldame kõik kaustad välistatud kaustade loendist\? See tegevus ei kustuta kaustu.</string>
+    <string name="temporarily_show_excluded">Näita ajutiselt välja jäetud</string>
+    <string name="stop_showing_excluded">Lõpeta näitamine välistatud</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Halda näidatavaid vahekaarte</string>
     <string name="default_tab_to_open">Rakenduse avamisel kuvatav vahekaart</string>

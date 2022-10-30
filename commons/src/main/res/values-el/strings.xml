@@ -626,6 +626,15 @@
     <string name="main_screen">Αρχική οθόνη</string>
     <string name="thumbnails">Μικρογραφίες</string>
     <string name="list_view">Προβολή Λίστας</string>
+    <!-- Excluding -->
+    <string name="exclude">Εξαίρεση</string>
+    <string name="excluded_folders">Εξαίρεση φακέλων</string>
+    <string name="excluded">(εξαιρούνται)</string>
+    <string name="manage_excluded_folders">Διαχείριση εξαιρεμένων φακέλων</string>
+    <string name="remove_all">Διαγραφή όλων</string>
+    <string name="remove_all_description">Να αφαιρεθούν όλοι οι φάκελοι από την λίστα των εξαιρεμένων; Αυτό δεν θα διαγράψει τους φακέλους.</string>
+    <string name="temporarily_show_excluded">Προσωρινή εμφάνιση αποκλεισμένων</string>
+    <string name="stop_showing_excluded">Παύση εμφάνισης αποκλεισμένων</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
     <string name="default_tab_to_open">Άνοιγμα καρτέλας κατά την έναρξη της εφαρμογής</string>

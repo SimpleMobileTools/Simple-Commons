@@ -699,6 +699,15 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Izključi</string>
+    <string name="excluded_folders">Izključene mape</string>
+    <string name="excluded">(izključeno)</string>
+    <string name="manage_excluded_folders">Urejaj izključene mape</string>
+    <string name="remove_all">Odstrani vse</string>
+    <string name="remove_all_description">Odstranim vse mape iz seznama izključenih\? Mape ne bodo izbrisane.</string>
+    <string name="temporarily_show_excluded">Prikaži začasno izključeno</string>
+    <string name="stop_showing_excluded">Prenehajte prikazovati izključene</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

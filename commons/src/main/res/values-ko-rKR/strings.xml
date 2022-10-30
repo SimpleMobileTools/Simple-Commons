@@ -591,6 +591,15 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">제외하기</string>
+    <string name="excluded_folders">제외된 폴더</string>
+    <string name="excluded">(제외됨)</string>
+    <string name="manage_excluded_folders">제외된 폴더 관리</string>
+    <string name="remove_all">모두 제거</string>
+    <string name="remove_all_description">제외된 폴더를 모두 해제하시겠습니까\?</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

@@ -628,6 +628,15 @@
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniaturas</string>
     <string name="list_view">Vista de lista</string>
+    <!-- Excluding -->
+    <string name="exclude">Excluír</string>
+    <string name="excluded_folders">Cartafoles excluídos</string>
+    <string name="excluded">(excluído)</string>
+    <string name="manage_excluded_folders">Xestionar cartafoles excluídos</string>
+    <string name="remove_all">Eliminar todos</string>
+    <string name="remove_all_description">Eliminar todos os cartafoles da lista de excluídos\? Isto non borrará os cartafoles.</string>
+    <string name="temporarily_show_excluded">Exclúese temporalmente</string>
+    <string name="stop_showing_excluded">Deixar de mostralos excluídos</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Xestionalas pestanas mostradas</string>
     <string name="default_tab_to_open">Lapela predeterminada ao inicio</string>

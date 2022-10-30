@@ -625,6 +625,15 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">சிறுபடங்கள்</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">விலக்கு</string>
+    <string name="excluded_folders">விலக்கிய அடைவுகள்</string>
+    <string name="excluded">(விலக்கிய)</string>
+    <string name="manage_excluded_folders">விலக்கிய அடைவுகளை நிர்வகி</string>
+    <string name="remove_all">எல்லாம் நீக்கு</string>
+    <string name="remove_all_description">விலக்கப்பட்டவை பட்டியலிலிருந்து எல்லா அடைவுகளையும் நீக்கவா\? இது அடைவுகளை அழிக்காது.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">காட்டப்படும் தாவல்களை நிர்வகி</string>
     <string name="default_tab_to_open">Tab to open at app start</string>

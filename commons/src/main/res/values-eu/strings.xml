@@ -658,6 +658,16 @@
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
 
+    <!-- Excluding -->
+    <string name="exclude">Baztertu</string>
+    <string name="excluded_folders">Baztertutako karpetak</string>
+    <string name="excluded">(baztertuta)</string>
+    <string name="manage_excluded_folders">Kudeatu baztertutako karpetak</string>
+    <string name="remove_all">Kendu guztiak</string>
+    <string name="remove_all_description">Kendu karpeta guztiak baztertutako zerrendatik\? Honek ez ditu karpetak ezabatuko.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
+
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Kudeatu erakutsitako fitxak</string>
     <string name="default_tab_to_open">Aplikazioa hasterakoan irekiko den fitxa</string>

@@ -659,6 +659,15 @@
     <string name="main_screen">Écran principal</string>
     <string name="thumbnails">Vignettes</string>
     <string name="list_view">Liste</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclure le dossier</string>
+    <string name="excluded_folders">Dossiers exclus</string>
+    <string name="excluded">(exclu)</string>
+    <string name="manage_excluded_folders">Gérer les dossiers exclus</string>
+    <string name="remove_all">Tout supprimer</string>
+    <string name="remove_all_description">Supprimer tous les dossiers de la liste des exclusions \? Ceci ne supprimera pas les dossiers.</string>
+    <string name="temporarily_show_excluded">Afficher temporairement les exclus</string>
+    <string name="stop_showing_excluded">Arrêter l\'affichage des exclus</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gérer les onglets affichés</string>
     <string name="default_tab_to_open">Onglet à ouvrir au démarrage de l\'application</string>

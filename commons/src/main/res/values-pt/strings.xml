@@ -624,6 +624,15 @@
     <string name="main_screen">Ecrã inicial</string>
     <string name="thumbnails">Miniaturas</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclusão</string>
+    <string name="excluded_folders">Pastas excluídas</string>
+    <string name="excluded">(excluída)</string>
+    <string name="manage_excluded_folders">Gerir pastas excluídas</string>
+    <string name="remove_all">Remover todas</string>
+    <string name="remove_all_description">Remover todas as pastas de lista de exclusões\? Esta acção não apaga as pastas.</string>
+    <string name="temporarily_show_excluded">Mostrar temporariamente itens excluídos</string>
+    <string name="stop_showing_excluded">Parar de mostrar itens excluídos</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gerir separadores a mostrar</string>
     <string name="default_tab_to_open">Separador a mostrar ao iniciar</string>

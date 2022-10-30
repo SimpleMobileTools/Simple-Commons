@@ -619,6 +619,15 @@
     <string name="main_screen">Hoofdscherm</string>
     <string name="thumbnails">Miniaturen</string>
     <string name="list_view">Lijstweergave</string>
+    <!-- Excluding -->
+    <string name="exclude">Uitsluiten</string>
+    <string name="excluded_folders">Uitgesloten mappen</string>
+    <string name="excluded">(uitgesloten)</string>
+    <string name="manage_excluded_folders">Uitgesloten mappen beheren</string>
+    <string name="remove_all">Alles verwijderen</string>
+    <string name="remove_all_description">De lijst van uitgesloten mappen wissen. Dit zal de mappen zelf niet verwijderen.</string>
+    <string name="temporarily_show_excluded">Uitgesloten mappen tijdelijk tonen</string>
+    <string name="stop_showing_excluded">Uitgesloten mappen verbergen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Tabs tonen/verbergen</string>
     <string name="default_tab_to_open">Tab openen bij start</string>

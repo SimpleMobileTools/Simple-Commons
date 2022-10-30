@@ -589,6 +589,15 @@
     <string name="main_screen">主屏幕</string>
     <string name="thumbnails">缩略图</string>
     <string name="list_view">列表视图</string>
+    <!-- Excluding -->
+    <string name="exclude">排除</string>
+    <string name="excluded_folders">排除的文件夹</string>
+    <string name="excluded">（已排除）</string>
+    <string name="manage_excluded_folders">管理排除的文件夹</string>
+    <string name="remove_all">全部移除</string>
+    <string name="remove_all_description">是否移除排除列表中的所有项目？此操作不会删除文件夹本身。</string>
+    <string name="temporarily_show_excluded">临时显示已排除的</string>
+    <string name="stop_showing_excluded">停止显示已排除的</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理显示的页面</string>
     <string name="default_tab_to_open">应用启动时打开的页面</string>

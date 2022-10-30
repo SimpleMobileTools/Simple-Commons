@@ -632,6 +632,15 @@
     <string name="main_screen">Hauptbildschirm</string>
     <string name="thumbnails">Vorschaubilder</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Ordner ausschließen</string>
+    <string name="excluded_folders">Ausgeschlossene Ordner</string>
+    <string name="excluded">(ausgeschlossen)</string>
+    <string name="manage_excluded_folders">Ausgeschlossene Ordner verwalten</string>
+    <string name="remove_all">Alle entfernen</string>
+    <string name="remove_all_description">Alle Ordner aus der Liste ausgeschlossener Ordner entfernen\? Die Ordner selbst werden dabei nicht gelöscht.</string>
+    <string name="temporarily_show_excluded">Ausgeschlossenes kurzfristig anzeigen</string>
+    <string name="stop_showing_excluded">Ausgeschlossene nicht mehr anzeigen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Anzuzeigende Tabs festlegen</string>
     <string name="default_tab_to_open">Tab, der beim App-Start geöffnet werden soll</string>

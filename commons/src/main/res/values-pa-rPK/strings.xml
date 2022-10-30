@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="exclude">باہر کڈھو</string>
+    <string name="excluded_folders">Excluded folders</string>
+    <string name="excluded">(excluded)</string>
+    <string name="manage_excluded_folders">Manage excluded folders</string>
+    <string name="remove_all">Remove all</string>
+    <string name="remove_all_description">Remove all folders from the list of excluded\? This will not delete the folders.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <string name="sideloaded_app">It looks like your app version is corrupt. Please download the original version &lt;a href=%s&gt;here&lt;/a&gt;.</string>
     <string name="frequently_asked_questions">Frequently asked questions</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>

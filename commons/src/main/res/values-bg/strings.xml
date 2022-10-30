@@ -630,6 +630,15 @@
     <string name="main_screen">Начален екран</string>
     <string name="thumbnails">Миниатюри</string>
     <string name="list_view">Изглед на списък</string>
+    <!-- Excluding -->
+    <string name="exclude">Изключение</string>
+    <string name="excluded_folders">Изключени папки</string>
+    <string name="excluded">(изключено)</string>
+    <string name="manage_excluded_folders">Управление на изключените папки</string>
+    <string name="remove_all">Премахване на всички</string>
+    <string name="remove_all_description">Премахване на всички папки от списъка с изключените\? Това няма да изтрие папките.</string>
+    <string name="temporarily_show_excluded">Временно показване на изключени</string>
+    <string name="stop_showing_excluded">Стоп показване на изключени</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Управление на показаните раздели</string>
     <string name="default_tab_to_open">Раздел за отваряне при стартиране на приложението</string>

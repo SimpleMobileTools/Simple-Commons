@@ -689,6 +689,15 @@
     <string name="main_screen">Галоўны экран</string>
     <string name="thumbnails">Эскізы</string>
     <string name="list_view">Спіс</string>
+    <!-- Excluding -->
+    <string name="exclude">Выключыць</string>
+    <string name="excluded_folders">Выключаныя тэчкі</string>
+    <string name="excluded">(выключана)</string>
+    <string name="manage_excluded_folders">Кіраванне выключанымі папкамі</string>
+    <string name="remove_all">Выдаліць усе</string>
+    <string name="remove_all_description">Выдаліць усе тэчкі з спісу выключаных\? Гэта не прывядзе да выдалення тэчак.</string>
+    <string name="temporarily_show_excluded">Паказ часова выключаны</string>
+    <string name="stop_showing_excluded">Спыніць паказ выключаны</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Кіраванне ўкладкамі, якія адлюстроўваюцца</string>
     <string name="default_tab_to_open">Укладка, якая адкрываецца пры запуску</string>
