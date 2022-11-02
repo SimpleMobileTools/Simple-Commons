@@ -38,6 +38,8 @@ const val KEY_PHONE = "phone"
 const val KEY_MAILTO = "mailto"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
+const val SMT_PRIVATE = "smt_private"   // used at the contact source of local contacts hidden from other apps
+const val FIRST_GROUP_ID = 10000L
 const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
 val DARK_GREY = 0xFF333333.toInt()
@@ -162,6 +164,24 @@ const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+
+// phone number/email types
+const val CELL = "CELL"
+const val WORK = "WORK"
+const val HOME = "HOME"
+const val OTHER = "OTHER"
+const val PREF = "PREF"
+const val MAIN = "MAIN"
+const val FAX = "FAX"
+const val WORK_FAX = "WORK;FAX"
+const val HOME_FAX = "HOME;FAX"
+const val PAGER = "PAGER"
+const val MOBILE = "MOBILE"
+
+// IMs not supported by Ez-vcard
+const val HANGOUTS = "Hangouts"
+const val QQ = "QQ"
+const val JABBER = "Jabber"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1L
