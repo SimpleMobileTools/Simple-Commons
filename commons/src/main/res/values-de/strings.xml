@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Abbrechen</string>
-    <string name="back">Back</string>
+    <string name="back">Zurück</string>
     <string name="nothing">Nichts</string>
     <string name="later">Später</string>
     <string name="save_as">Speichern unter</string>
@@ -107,7 +107,7 @@
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Du musst diese Anwendung zur Standard-Anwendung für Anrufer-ID und Spam machen, um unbekannte Nummern zu blockieren.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
@@ -343,7 +343,7 @@
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
     <string name="print_pro">Drucken (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Abkürzung</string>
     <string name="create_shortcut">Verknüpfung erstellen</string>
     <string name="create_shortcut_pro">Verknüpfung erstellen (Pro)</string>
     <string name="add_number_to_contact">Nummer zu Kontakt hinzufügen</string>
@@ -360,7 +360,7 @@
     <string name="call">Anrufen</string>
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Bildschirmhintergründe</string>
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
@@ -809,7 +809,7 @@
     <string name="simple_flashlight">Schlichte Taschenlampe</string>
     <string name="simple_gallery">Schlichte Galerie</string>
     <string name="simple_keyboard">Schlichte Tastatur</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Einfacher Launcher</string>
     <string name="simple_music_player">Schlichter Musik-Player</string>
     <string name="simple_notes">Schlichte Notizen</string>
     <string name="simple_sms_messenger">Schlichter SMS-Messenger</string>
@@ -827,7 +827,7 @@
     <string name="flashlight_short">Taschenlampe</string>
     <string name="gallery_short">Galerie</string>
     <string name="keyboard_short">Tastatur</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Startprogramm</string>
     <string name="music_player_short">Musik-Player</string>
     <string name="notes_short">Notizblock</string>
     <string name="sms_messenger_short">SMS-Messenger</string>
@@ -853,7 +853,7 @@
     <string name="faq_7_title_commons">Der Betrag wurde von meinem Konto abgebucht, aber ich kann die App nicht herunterladen. Was kann ich machen?</string>
     <string name="faq_7_text_commons">Die Zahlungen werden durch Google gehandhabt. Dabei kommt es gelegentlich zu Verzögerungen. Leere den Cache der Google Play App, starte dein Gerät neu und versuche erneut, die App herunterzuladen.</string>
     <string name="faq_8_title_commons">Warum sollte ich auf die Pro-Version aufrüsten\?</string>
-    <string name="faq_8_text_commons">Deine Anwendung wird keine weiteren Aktualisierungen erhalten. Bekannte und später gefundene Fehler werden nicht beseitigt werden. Es werden auch keine neuen Funktionen mehr hinzugefügt werden. Du kannst die Pro-Version auf Google Play für einen kleinen Betrag kaufen. Dies ist eine Einmalzahlung. Auch nach einem Gerätewechsel kannst du weiter die Pro-Version nutzen, ohne erneute dafür bezahlen zu müssen. Sollte dir die Pro Version nicht gefallen, kannst du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurückerhalten. Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter hello@simplemobiletools.com, und Du wirst es erhalten.</string>
+    <string name="faq_8_text_commons">Deine Anwendung wird keine weiteren Aktualisierungen erhalten. Bekannte und später gefundene Fehler werden nicht beseitigt werden. Es werden auch keine neuen Funktionen mehr hinzugefügt werden. Du kannst die Pro-Version auf Google Play für einen kleinen Betrag kaufen. Dies ist eine Einmalzahlung. Auch nach einem Gerätewechsel kannst du weiter die Pro-Version nutzen, ohne erneute dafür bezahlen zu müssen. Sollte dir die Pro Version nicht gefallen, kannst du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurückerhalten. Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter hello@simplemobiletools.com, und du wirst es erhalten.</string>
     <string name="faq_9_title_commons">Wie kann ich mehrere Elemente auf einmal auswählen?</string>
     <string name="faq_9_text_commons">Es gibt mehrere Möglichkeiten, dies zu tun. Die erste ist, den Auswahlmodus durch langes Drücken eines Elements zu starten und anschließend die anderen Elemente durch kurzes Antippen auszuwählen. Die zweite Möglichkeit ähnelt dem Auswählen von Elementen auf PCs mit einer Maus: Starte den Auswahlmodus durch langes Drücken eines Elements und streiche, ohne den Finger vom Display abzuheben, über die anderen Elemente, um sie auszuwählen. Die dritte Möglichkeit, mehrere Elemente auszuwählen, besteht darin, nacheinander zwei Elemente lange zu drücken und dadurch auch alles dazwischen auszuwählen. Wenn du alle Elemente auswählen möchtest, drücke einfach lange auf ein beliebiges Element und tippe dann auf den Zähler für ausgewählte Elemente in der oberen linken Ecke. Durch Antippen des Zählers wird alles aus- oder abgewählt.</string>
     <string name="faq_10_title_commons">Ich habe die App gekauft, kann sie aber nicht auf ein anderes Gerät herunterladen.</string>
@@ -920,7 +920,7 @@
     <string name="why_upgrade_improved_design">Verbessertes Design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fortgeschrittener Fotoeditor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Erweiterter Foto- und Videoeditor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF-Datei-Unterstützung</string>
     <string name="why_upgrade_batch_renaming">Fortschrittliche Datei-Umbenennung im Stapelverfahren</string>
     <string name="why_upgrade_folder_locking">Individuelle Ordnersperre</string>
