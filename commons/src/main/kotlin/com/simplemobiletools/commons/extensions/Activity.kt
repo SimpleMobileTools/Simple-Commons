@@ -310,6 +310,10 @@ fun Activity.launchUpgradeToProIntent() {
     }
 }
 
+fun Activity.launchMoreAppsFromUsIntent() {
+    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+}
+
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {

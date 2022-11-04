@@ -273,7 +273,7 @@ class AboutActivity : BaseSimpleActivity() {
         }
 
         about_more_apps_holder.setOnClickListener {
-            launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+            launchMoreAppsFromUsIntent()
         }
     }
 
