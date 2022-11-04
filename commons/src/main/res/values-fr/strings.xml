@@ -107,7 +107,7 @@
     <string name="block_unknown_calls">Bloquer les appels des contacts non enregistrés</string>
     <string name="block_unknown_messages">Bloquer les messages des contacts non enregistrés</string>
     <string name="add_blocked_number_helper_text">Saisissez un numéro ou un modèle (par exemple, *12345*, +1*8888) pour bloquer tous les appels et messages provenant de numéros correspondant au modèle.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Vous devez faire de cette application l\'application par défaut d\'identification de l\'appelant et des appels indésirables pour bloquer les numéros inconnus.</string>
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>
@@ -844,7 +844,7 @@
     <string name="simple_flashlight">Lampe de poche simple</string>
     <string name="simple_gallery">Galerie simple</string>
     <string name="simple_keyboard">Clavier simple</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Lanceur simple</string>
     <string name="simple_music_player">Lecteur de musique simple</string>
     <string name="simple_notes">Notes simple</string>
     <string name="simple_sms_messenger">Messagerie SMS simple</string>
@@ -862,7 +862,7 @@
     <string name="flashlight_short">Lampe de poche</string>
     <string name="gallery_short">Galerie</string>
     <string name="keyboard_short">Clavier</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Lanceur</string>
     <string name="music_player_short">Lecteur de musique</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">Messagerie SMS</string>
@@ -963,7 +963,7 @@
     <string name="why_upgrade_improved_design">Design amélioré</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Éditeur photo et vidéo avancé</string>
     <string name="why_upgrade_heic_support">Support des fichiers HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers par lot</string>
     <string name="why_upgrade_folder_locking">Verrouillage des dossiers individuels</string>
