@@ -590,7 +590,7 @@
     <string name="list_view">列表视图</string>
     <!-- Excluding -->
     <string name="exclude">排除</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">排除文件夹</string>
     <string name="excluded_folders">排除的文件夹</string>
     <string name="excluded">（已排除）</string>
     <string name="manage_excluded_folders">管理排除的文件夹</string>
@@ -883,7 +883,7 @@
     <string name="why_upgrade_improved_design">改进的设计</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">高级照片编辑器</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">高级照片和视频编辑器</string>
     <string name="why_upgrade_heic_support">支持 HEIC/HEIF 文件</string>
     <string name="why_upgrade_batch_renaming">高级批量文件重命名</string>
     <string name="why_upgrade_folder_locking">单独文件夹锁定</string>
