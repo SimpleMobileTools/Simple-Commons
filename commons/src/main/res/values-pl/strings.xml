@@ -69,8 +69,9 @@
     <string name="choose_video">Choose video</string>
     <string name="choose_contact">Choose contact</string>
     <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="record_audio">Nagraj dźwięk</string>
+    <string name="record_video">Nagraj wideo</string>
+    <string name="files">Pliki</string>
     <!-- Events -->
     <string name="birthday">Urodziny</string>
     <string name="anniversary">Rocznica</string>
@@ -112,7 +113,7 @@
     <string name="block_unknown_calls">Blokuj połączenia od niezapisanych kontaktów</string>
     <string name="block_unknown_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>

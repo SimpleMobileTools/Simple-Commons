@@ -69,8 +69,9 @@
     <string name="choose_video">Choose video</string>
     <string name="choose_contact">Choose contact</string>
     <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="record_audio">Grava àudio</string>
+    <string name="record_video">Grava vídeo</string>
+    <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Data de naixement</string>
     <string name="anniversary">Aniversari</string>
@@ -112,7 +113,7 @@
     <string name="block_unknown_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
     <string name="block_unknown_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>

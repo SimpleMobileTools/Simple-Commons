@@ -69,8 +69,9 @@
     <string name="choose_video">Choose video</string>
     <string name="choose_contact">Choose contact</string>
     <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="record_audio">Ses kaydet</string>
+    <string name="record_video">Video kaydet</string>
+    <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Doğum günü</string>
     <string name="anniversary">Yıldönümü</string>
@@ -112,7 +113,7 @@
     <string name="block_unknown_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
     <string name="block_unknown_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
     <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Arayan kimliği izni olmadan bilinmeyen numaralar engellenemiyor.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
     <string name="add_favorites">Favori ekle</string>
