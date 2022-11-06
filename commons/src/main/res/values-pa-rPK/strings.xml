@@ -413,7 +413,7 @@
     <string name="block_unknown_calls">جے رابطے دے باہروں کالاں آؤندیاں اے، ایہہ روکو</string>
     <string name="block_unknown_messages">جے رابطے دے باہروں سنیہے آؤندے اے، ایہہ روکو</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <string name="favorites">پسندیدے</string>
     <string name="add_favorites">یاد وچ سامبھو</string>
     <string name="add_to_favorites">یاد وچ سامبھو</string>

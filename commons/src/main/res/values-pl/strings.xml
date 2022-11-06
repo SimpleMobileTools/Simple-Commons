@@ -110,7 +110,7 @@
     <string name="block_unknown_calls">Blokuj połączenia od niezapisanych kontaktów</string>
     <string name="block_unknown_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
-    <string name="must_make_default_caller_id_app">Musisz ustawić tę aplikację jako domyślną aplikację do identyfikacji rozmówcy i spamu, aby blokować nieznane numery</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>

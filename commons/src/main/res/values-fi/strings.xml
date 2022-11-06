@@ -110,7 +110,7 @@
     <string name="block_unknown_calls">Estä puhelut tallentamattomista yhteystiedoista</string>
     <string name="block_unknown_messages">Estä viestit tallentamattomista yhteystiedoista</string>
     <string name="add_blocked_number_helper_text">Anna numero tai kuvio (esim. *12345*, +1*8888) estääksesi kaikki puhelut ja viestit kuvion mukaisista numeroista.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Suosikit</string>
     <string name="add_favorites">Lisää suosikkeja</string>
