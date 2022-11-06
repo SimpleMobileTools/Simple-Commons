@@ -66,8 +66,8 @@
     <string name="disclaimer">Descargo de responsabilidad</string>
     <string name="take_photo">Sacar una fotografía</string>
     <string name="choose_photo">Escoger foto</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="record_audio">Grabar audio</string>
+    <string name="record_video">Grabar vídeo</string>
     <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Cumpleaños</string>
@@ -110,7 +110,7 @@
     <string name="block_unknown_calls">Bloquear llamadas de contactos no guardados</string>
     <string name="block_unknown_messages">Bloquear los mensajes de los contactos no guardados</string>
     <string name="add_blocked_number_helper_text">Ingrese un número o un patrón (por ejemplo, *12345*, +1*8888) para bloquear todas las llamadas y mensajes de números que coincidan con el patrón.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">No se pueden bloquear los números desconocidos sin el permiso del identificador de llamadas.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Añadir a favoritos</string>
