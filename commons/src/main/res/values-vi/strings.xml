@@ -65,6 +65,9 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Take photo</string>
     <string name="choose_photo">Choose photo</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <string name="files">Files</string>
 
     <!-- Events -->
     <string name="birthday">Birthday</string>
@@ -111,7 +114,7 @@
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
 
     <!-- Favorites -->
     <string name="favorites">Yêu thích</string>

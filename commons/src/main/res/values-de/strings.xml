@@ -66,6 +66,9 @@
     <string name="disclaimer">Haftungsausschluss</string>
     <string name="take_photo">Foto aufnehmen</string>
     <string name="choose_photo">Foto auswählen</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Geburtstag</string>
     <string name="anniversary">Jahrestag</string>
@@ -107,7 +110,7 @@
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
-    <string name="must_make_default_caller_id_app">Du musst diese Anwendung zur Standard-Anwendung für Anrufer-ID und Spam machen, um unbekannte Nummern zu blockieren.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>

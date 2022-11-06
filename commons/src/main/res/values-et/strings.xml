@@ -66,6 +66,9 @@
     <string name="disclaimer">Vastutusnõue</string>
     <string name="take_photo">Pildista</string>
     <string name="choose_photo">Vali pilt</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -107,7 +110,7 @@
     <string name="block_unknown_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
     <string name="block_unknown_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
     <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
-    <string name="must_make_default_caller_id_app">Tundmatute numbrite blokeerimiseks palun muuda see rakendus vaikimisi kõnerakenduseks.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
     <string name="add_favorites">Lisa lemmikuks</string>

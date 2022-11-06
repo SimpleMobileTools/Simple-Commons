@@ -66,6 +66,9 @@
     <string name="disclaimer">Peringatan</string>
     <string name="take_photo">Ambil foto</string>
     <string name="choose_photo">Pilih foto</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <string name="files">Files</string>
     <!-- Events -->
     <string name="birthday">Ulang tahun</string>
     <string name="anniversary">Hari jadi</string>
@@ -107,7 +110,7 @@
     <string name="block_unknown_calls">Blokir panggilan dari kontak yang tidak disimpan</string>
     <string name="block_unknown_messages">Blokir pesan dari kontak yang tidak disimpan</string>
     <string name="add_blocked_number_helper_text">Masukkan nomor atau pola (mis. *12345*, +62*8888) untuk memblokir semua panggilan dan pesan dari nomor yang sesuai dengan pola.</string>
-    <string name="must_make_default_caller_id_app">You have to make this app the default caller ID &amp; spam app to block unknown numbers.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>
