@@ -66,11 +66,11 @@
     <string name="disclaimer">Vastutusnõue</string>
     <string name="take_photo">Pildista</string>
     <string name="choose_photo">Vali pilt</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Vali video</string>
+    <string name="choose_contact">Vali kontakt</string>
+    <string name="choose_file">Vali fail</string>
+    <string name="record_audio">Salvesta heli</string>
+    <string name="record_video">Salvesta video</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
     <string name="block_unknown_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
     <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
     <string name="add_favorites">Lisa lemmikuks</string>
@@ -632,7 +632,7 @@
     <string name="list_view">Nimekirja vaade</string>
     <!-- Excluding -->
     <string name="exclude">Välista</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Välista kaust</string>
     <string name="excluded_folders">Välistatud kaustad</string>
     <string name="excluded">(välistatud)</string>
     <string name="manage_excluded_folders">Halda välistatud kaustu</string>
