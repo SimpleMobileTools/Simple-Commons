@@ -66,11 +66,11 @@
     <string name="disclaimer">免责声明</string>
     <string name="take_photo">拍照</string>
     <string name="choose_photo">选择照片</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">选择视频</string>
+    <string name="choose_contact">选择联系人</string>
+    <string name="choose_file">选择文件</string>
+    <string name="record_audio">录音</string>
+    <string name="record_video">录像</string>
     <!-- Events -->
     <string name="birthday">生日</string>
     <string name="anniversary">纪念日</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
     <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
     <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>
