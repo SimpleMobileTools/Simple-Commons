@@ -50,8 +50,8 @@ class SimpleBottomSheetChooserDialog : BottomSheetDialogFragment() {
 
     @Suppress("UNCHECKED_CAST")
     private fun setupRecyclerView() {
-        val data = arguments?.getParcelableArray(DATA) as Array<SimpleListItem>
-        getAudioRouteAdapter().updateData(data)
+        val listItems = arguments?.getParcelableArray(DATA) as Array<SimpleListItem>
+        getAudioRouteAdapter().submitList(listItems.toList())
     }
 
     private fun getAudioRouteAdapter(): SimpleListItemAdapter {
@@ -64,6 +64,12 @@ class SimpleBottomSheetChooserDialog : BottomSheetDialogFragment() {
             bottom_sheet_recycler_view.adapter = adapter
         }
         return adapter
+    }
+
+    fun updateChooserItems(newItems: Array<SimpleListItem>) {
+        if (isAdded) {
+            getAudioRouteAdapter().submitList(newItems.toList())
+        }
     }
 
     override fun onDestroy() {

@@ -1,9 +1,10 @@
 package com.simplemobiletools.commons.adapters
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
@@ -13,16 +14,7 @@ import com.simplemobiletools.commons.models.SimpleListItem
 import kotlinx.android.synthetic.main.item_simple_list.view.*
 
 open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (SimpleListItem) -> Unit) :
-    RecyclerView.Adapter<SimpleListItemAdapter.SimpleItemViewHolder>() {
-
-    private val listItems = arrayListOf<SimpleListItem>()
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun updateData(items: Array<SimpleListItem>) {
-        listItems.clear()
-        listItems.addAll(items)
-        notifyDataSetChanged()
-    }
+    ListAdapter<SimpleListItem, SimpleListItemAdapter.SimpleItemViewHolder>(SimpleListItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleItemViewHolder {
         val view = activity.layoutInflater.inflate(R.layout.item_simple_list, parent, false)
@@ -30,11 +22,9 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 
     override fun onBindViewHolder(holder: SimpleItemViewHolder, position: Int) {
-        val route = listItems[position]
+        val route = getItem(position)
         holder.bindView(route)
     }
-
-    override fun getItemCount() = listItems.size
 
     open inner class SimpleItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -53,4 +43,16 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
             }
         }
     }
+}
+
+private class SimpleListItemDiffCallback : DiffUtil.ItemCallback<SimpleListItem>() {
+
+    override fun areItemsTheSame(oldItem: SimpleListItem, newItem: SimpleListItem): Boolean {
+        return SimpleListItem.areItemsTheSame(oldItem, newItem)
+    }
+
+    override fun areContentsTheSame(oldItem: SimpleListItem, newItem: SimpleListItem): Boolean {
+        return SimpleListItem.areContentsTheSame(oldItem, newItem)
+    }
+
 }
