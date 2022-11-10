@@ -26,11 +26,25 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <Button
-            android:id="@+id/main_color_customization"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/color_customization" />
+            android:layout_marginTop="@dimen/big_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/main_color_customization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/color_customization" />
+
+            <Button
+                android:id="@+id/bottom_sheet_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bottom sheet chooser" />
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
