@@ -66,11 +66,11 @@
     <string name="disclaimer">Exención da responsabilidade</string>
     <string name="take_photo">Facer foto</string>
     <string name="choose_photo">Elexir foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Escolla un vídeo</string>
+    <string name="choose_contact">Escolla un contacto</string>
+    <string name="choose_file">Escolla un ficheiro</string>
+    <string name="record_audio">Gravar audio</string>
+    <string name="record_video">Gravar vídeo</string>
     <!-- Events -->
     <string name="birthday">Aniversario</string>
     <string name="anniversary">Aniversario</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Bloquealas chamadas dos contactos non gardados</string>
     <string name="block_unknown_messages">Bloquealas mensaxes do contactos non gardados</string>
     <string name="add_blocked_number_helper_text">Introduce un número ou un patrón (por exemplo, *12345*, +1*8888) para bloquear todalas chamadas e mensaxes dos números que coincidan co patrón.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Non se poden bloquealos números descoñecidos sen o permiso do identificador das chamadas.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Engadir a favoritos</string>
@@ -634,7 +634,7 @@
     <string name="list_view">Vista de lista</string>
     <!-- Excluding -->
     <string name="exclude">Excluír</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Excluír cartafol</string>
     <string name="excluded_folders">Cartafoles excluídos</string>
     <string name="excluded">(excluído)</string>
     <string name="manage_excluded_folders">Xestionar cartafoles excluídos</string>
@@ -773,7 +773,7 @@
     <string name="device_os">SO do dispositivo: %s</string>
     <string name="donate_please">Ola,&lt;br&gt;&lt;br&gt; Espero que esteas disfrutando do aplicativo. Non contén anuncios, polo que che agradecemos que respaldes o seu desenvolvemento comprando o aplicativo &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Grazas sinxelas&lt;/a&gt;, e tamén evitará que este diálogo volva a aparecer.&lt;br&gt;&lt;br&gt; Grazas!</string>
     <string name="donate_new">Ola,&lt;br&gt;&lt;br&gt;espero que che guste a aplicación. Non contén anuncios e tampouco estamos a recompilar os teus datos; apoia o seu desenvolvemento comprando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Agradecemento sinxelo Ti&lt;/a&gt;. Tamén terás todas as funcións da aplicación e as personalizacions dos cores desbloqueados.&lt;br&gt;&lt;br&gt;Grazas!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features and color customization.</string>
+    <string name="donate_short">Apoiandolo proxecto mercando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Grazas simples&lt;/a&gt;, tamén desbloqueará todalas funcións e cores persoalizables da aplicación.</string>
     <string name="purchase">Comprar</string>
     <string name="get_simple_phone">Obter un teléfono sinxelo</string>
     <string name="update_thank_you">Actualiza Grazas sinxelas á última versión</string>
@@ -923,7 +923,7 @@
     <string name="why_upgrade_improved_design">Deseño mellorado</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor"> Editor de fotos avanzado</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Editor avanzado de fotos e vídeos</string>
     <string name="why_upgrade_heic_support">Soporte a ficheiros HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renomear lote de ficheiros avanzado</string>
     <string name="why_upgrade_folder_locking">Pechando o cartafol individual</string>

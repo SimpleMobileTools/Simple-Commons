@@ -66,11 +66,11 @@
     <string name="disclaimer">注意事項</string>
     <string name="take_photo">写真を撮影</string>
     <string name="choose_photo">写真を選択</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">動画を選択</string>
+    <string name="choose_contact">連絡先を選択</string>
+    <string name="choose_file">ファイルを選択</string>
+    <string name="record_audio">音声を録音</string>
+    <string name="record_video">動画を録画</string>
     <!-- Events -->
     <string name="birthday">誕生日</string>
     <string name="anniversary">記念日</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
     <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
     <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">不明な番号をブロックするには、発信者番号へのアクセス許可が必要です。</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>

@@ -368,7 +368,7 @@
     <string name="date_taken">Pildistamise aja alusel</string>
     <string name="title">Pealkiri</string>
     <string name="filename">Faili nimi</string>
-    <string name="extension">Pikendus</string>
+    <string name="extension">Faili tüüp</string>
     <string name="random">Juhuslik</string>
     <string name="sort_randomly">Sorteeri juhuslikult</string>
     <string name="ascending">Kasvavalt</string>
@@ -759,9 +759,9 @@
     <string name="follow_us">Jälgi meid</string>
     <string name="copyright">v %1$s
 \nAutoriõigus © Lihtsad mobiilsed tööriistad %2$d</string>
-    <string name="support">Toetus</string>
-    <string name="help_us">Aidake meid</string>
-    <string name="social">Sotsiaalne</string>
+    <string name="support">Kasutajatugi</string>
+    <string name="help_us">Osale arenduses</string>
+    <string name="social">Sotsiaalmeedia</string>
     <string name="other">Muud</string>
     <string name="privacy_policy">Privaatsuspoliitika</string>
     <string name="version_placeholder">Versioon %s</string>
@@ -772,7 +772,7 @@
     <string name="device_os">Seadme operatsioonisüsteem: %s</string>
     <string name="donate_please">Tere,&lt;br&gt;&lt;br&gt; loodan, et naudite rakendust. See ei sisalda reklaame, palun toetage selle arendamist, ostes &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Limple Aitäh&lt;/a&gt; rakendus, see takistab ka selle dialoogi uuesti ilmumist. &lt;br&gt;&lt;br&gt; Täname!</string>
     <string name="donate_new">Tere!&lt;br&gt;&lt;br&gt;Loodan, et teile meeldib rakendus. See ei sisalda reklaame ja me ei kogu ka teie andmeid. Palun toetage selle arendamist, ostes &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne aitäh Sina&lt;/a&gt;. Samuti on teil lukustamata kõik rakenduse funktsioonid ja värvide kohandamine.&lt;br&gt;&lt;br&gt;Täname!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features and color customization.</string>
+    <string name="donate_short">Palun toeta meid ostes rakenduse &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Muu hulgas avab see antud rakenduse kõik funktsionaalsused ja võimaldab kohandada liidese värve.</string>
     <string name="purchase">Osta</string>
     <string name="get_simple_phone">Telli rakendus Lihtne telefon</string>
     <string name="update_thank_you">Palun uuenda raklendus Lihtne tänuavaldus viimase versioonini</string>
@@ -863,7 +863,7 @@
     <string name="translation">Tõlked</string>
     <string name="development">Arendus</string>
     <string name="other_help">Muu abi</string>
-    <string name="contributors_label">See loend sisaldab kõiki, kes aitasid märgatavalt mis tahes rakendust Lihtsad mobiilsed tööriistad komplektis, mitte ainult seda. Tõlgetega tegelevad vabatahtlikud, andke meile teada, kui soovite ka teie aidata. Tõlkimise juhend on aadressil &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;see veebisait&lt;/a&gt; või võtke meiega ühendust aadressil &lt;href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; kui teil on küsimusi. Aitäh kõigile panustajatele ja teistele toetajatele!</string>
+    <string name="contributors_label">See loendis on kõik, kes aitasid märgatavalt arendada või tõlkida mis tahes rakendust komplektis „Lihtsad nutitarvikud“. Tõlkimisega tegelevad vabatahtlikud, anna meile teada, kui soovid ka osaleda. Tõlkimise juhend asub &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;meie Github\'i lehel&lt;/a&gt; või kui sul on küsimusi, siis võta meiega ühendust aadressil &lt;href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Aitäh kõigile panustajatele ja teistele toetajatele!</string>
     <string name="translation_arabic">Araabia</string>
     <string name="translation_azerbaijani">Aserbaidžaan</string>
     <string name="translation_bengali">Bengali</string>
