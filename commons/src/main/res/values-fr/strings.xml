@@ -66,11 +66,11 @@
     <string name="disclaimer">Avis de non-responsabilité</string>
     <string name="take_photo">Prendre une photo</string>
     <string name="choose_photo">Choisir une photo</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Choisir une vidéo</string>
+    <string name="choose_contact">Choisir le contact</string>
+    <string name="choose_file">Choisir un fichier</string>
+    <string name="record_audio">Enregistrer un audio</string>
+    <string name="record_video">Enregistrer une vidéo</string>
     <!-- Events -->
     <string name="birthday">Date de naissance</string>
     <string name="anniversary">Autre anniversaire</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Bloquer les appels des contacts non enregistrés</string>
     <string name="block_unknown_messages">Bloquer les messages des contacts non enregistrés</string>
     <string name="add_blocked_number_helper_text">Saisissez un numéro ou un modèle (par exemple, *12345*, +1*8888) pour bloquer tous les appels et messages provenant de numéros correspondant au modèle.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Impossible de bloquer les numéros inconnus sans l\'autorisation de l\'appelant.</string>
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>
@@ -665,7 +665,7 @@
     <string name="list_view">Liste</string>
     <!-- Excluding -->
     <string name="exclude">Exclure le dossier</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Exclure le dossier</string>
     <string name="excluded_folders">Dossiers exclus</string>
     <string name="excluded">(exclu)</string>
     <string name="manage_excluded_folders">Gérer les dossiers exclus</string>
@@ -811,7 +811,7 @@
         ]]>
     </string>
     <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;J\'espère que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas non plus vos données, soutenez son développement en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Vous aurez également toutes les fonctionnalités de l\'appli et la personnalisation des couleurs débloquées.&lt;br&gt;&lt;br&gt;Merci !</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features and color customization.</string>
+    <string name="donate_short">Soutenez-nous en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; s\'il vous plaît, cela débloquera également toutes les fonctionnalités de l\'application et la personnalisation des couleurs.</string>
     <string name="purchase">Acheter</string>
     <string name="get_simple_phone">Commander un Simple Phone</string>
     <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
