@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.getProperTextColor
-import com.simplemobiletools.commons.extensions.setImageResourceOrBeGone
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.SimpleListItem
 import kotlinx.android.synthetic.main.item_simple_list.view.*
 
@@ -30,12 +28,19 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
 
         fun bindView(item: SimpleListItem) {
             itemView.apply {
-                val textColor = context.getProperTextColor()
-                bottom_sheet_item_title.setText(item.textRes)
-                bottom_sheet_item_title.setTextColor(textColor)
+                val color = if (item.selected) {
+                    val primaryColor = context.getProperPrimaryColor()
+                    bottom_sheet_selected_icon.beVisible()
+                    bottom_sheet_selected_icon.applyColorFilter(primaryColor)
+                    primaryColor
+                } else {
+                    context.getProperTextColor()
+                }
 
+                bottom_sheet_item_title.setText(item.textRes)
+                bottom_sheet_item_title.setTextColor(color)
                 bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
-                bottom_sheet_item_icon.applyColorFilter(textColor)
+                bottom_sheet_item_icon.applyColorFilter(color)
 
                 setOnClickListener {
                     onItemClicked(item)
