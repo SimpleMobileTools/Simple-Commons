@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme.Base" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
@@ -352,6 +352,8 @@
         <item name="android:backgroundDimAmount">0.32</item>
         <item name="bottomSheetStyle">@style/AppTheme.Material3.BottomSheetModalStyle</item>
         <item name="elevationOverlayEnabled">true</item>
+        <item name="android:navigationBarColor">@color/you_status_bar_color</item>
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">@color/you_status_bar_color</item>
     </style>
 
     <style name="AppTheme.Material3.BottomSheetModalStyle" parent="Widget.Material3.BottomSheet.Modal">

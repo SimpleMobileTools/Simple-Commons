@@ -2,7 +2,7 @@ package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.dialogs.SimpleBottomSheetChooserDialog
+import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.models.SimpleListItem
@@ -49,14 +49,13 @@ class MainActivity : BaseSimpleActivity() {
     }
 
     private fun launchBottomSheetDemo() {
-        SimpleBottomSheetChooserDialog.createChooser(
+        BottomSheetChooserDialog.createChooser(
             fragmentManager = supportFragmentManager,
             title = R.string.please_select_destination,
-            subtitle = null,
-            data = arrayOf(
-                SimpleListItem(1, R.drawable.ic_settings_cog_vector, R.string.choose_video),
-                SimpleListItem(2, R.drawable.ic_settings_cog_vector, R.string.choose_photo),
-                SimpleListItem(4, R.drawable.ic_settings_cog_vector, R.string.choose_contact)
+            items = arrayOf(
+                SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
+                SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
+                SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
             )
         ) {
             toast("Clicked ${it.id}")
