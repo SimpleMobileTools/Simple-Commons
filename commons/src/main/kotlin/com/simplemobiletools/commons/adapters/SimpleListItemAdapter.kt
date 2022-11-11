@@ -29,10 +29,7 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
         fun bindView(item: SimpleListItem) {
             itemView.apply {
                 val color = if (item.selected) {
-                    val primaryColor = context.getProperPrimaryColor()
-                    bottom_sheet_selected_icon.beVisible()
-                    bottom_sheet_selected_icon.applyColorFilter(primaryColor)
-                    primaryColor
+                    context.getProperPrimaryColor()
                 } else {
                     context.getProperTextColor()
                 }
@@ -41,6 +38,8 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
                 bottom_sheet_item_title.setTextColor(color)
                 bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
                 bottom_sheet_item_icon.applyColorFilter(color)
+                bottom_sheet_selected_icon.beVisibleIf(item.selected)
+                bottom_sheet_selected_icon.applyColorFilter(color)
 
                 setOnClickListener {
                     onItemClicked(item)
