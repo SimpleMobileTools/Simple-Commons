@@ -19,6 +19,7 @@ open class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
             setupSimpleListItem(view, item) {
                 onItemClick?.invoke(it)
             }
+            parent.addView(view)
         }
     }
 
