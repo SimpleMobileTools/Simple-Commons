@@ -52,7 +52,7 @@ class MainActivity : BaseSimpleActivity() {
         BottomSheetChooserDialog.createChooser(
             fragmentManager = supportFragmentManager,
             title = R.string.please_select_destination,
-            data = arrayOf(
+            items = arrayOf(
                 SimpleListItem(1, R.drawable.ic_camera_vector, R.string.record_video),
                 SimpleListItem(2, R.drawable.ic_microphone_vector, R.string.record_audio, selected = true),
                 SimpleListItem(4, R.drawable.ic_add_person_vector, R.string.choose_contact)

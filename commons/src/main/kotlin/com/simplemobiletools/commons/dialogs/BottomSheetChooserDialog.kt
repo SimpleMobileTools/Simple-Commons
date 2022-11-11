@@ -55,14 +55,14 @@ class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
         fun createChooser(
             fragmentManager: FragmentManager,
             title: Int?,
-            data: Array<SimpleListItem>,
+            items: Array<SimpleListItem>,
             callback: (SimpleListItem) -> Unit
         ): BottomSheetChooserDialog {
             val extras = Bundle().apply {
                 if (title != null) {
                     putInt(BOTTOM_SHEET_TITLE, title)
                 }
-                putParcelableArray(DATA, data)
+                putParcelableArray(DATA, items)
             }
             return BottomSheetChooserDialog().apply {
                 arguments = extras
