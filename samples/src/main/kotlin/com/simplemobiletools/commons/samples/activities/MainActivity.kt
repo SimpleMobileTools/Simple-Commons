@@ -53,9 +53,9 @@ class MainActivity : BaseSimpleActivity() {
             fragmentManager = supportFragmentManager,
             title = R.string.please_select_destination,
             items = arrayOf(
-                SimpleListItem(1, R.drawable.ic_camera_vector, R.string.record_video),
-                SimpleListItem(2, R.drawable.ic_microphone_vector, R.string.record_audio, selected = true),
-                SimpleListItem(4, R.drawable.ic_add_person_vector, R.string.choose_contact)
+                SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
+                SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
+                SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
             )
         ) {
             toast("Clicked ${it.id}")
