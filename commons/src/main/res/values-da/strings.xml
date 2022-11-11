@@ -62,15 +62,15 @@
     <string name="value_cannot_be_empty">Værdien kan ikke være tom</string>
     <string name="create_new_contact">Opret ny kontakt</string>
     <string name="add_to_existing_contact">Tilføj til en eksisterende kontakt</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">App defekt</string>
+    <string name="disclaimer">Forbehold</string>
     <string name="take_photo">Tag foto</string>
     <string name="choose_photo">Vælg foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Vælg video</string>
+    <string name="choose_contact">Vælg kontakt</string>
+    <string name="choose_file">Vælg fil</string>
+    <string name="record_audio">Optag audio</string>
+    <string name="record_video">Optag video</string>
     <!-- Events -->
     <string name="birthday">Fødselsdag</string>
     <string name="anniversary">Årsdag</string>
@@ -631,7 +631,7 @@
     <string name="list_view">Listevisning</string>
     <!-- Excluding -->
     <string name="exclude">Ekskluder</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Exkluder mappe</string>
     <string name="excluded_folders">Ekskluderede mapper</string>
     <string name="excluded">(ekskluderet)</string>
     <string name="manage_excluded_folders">Administrer ekskluderede mapper</string>
@@ -774,7 +774,7 @@
         ]]>
     </string>
     <string name="donate_new">Hej,&lt;br&gt;&lt;br&gt;Jeg håber, at du nyder appen. Den indeholder ingen reklamer, og vi indsamler heller ikke dine data, men du bedes støtte dens udvikling ved at købe &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Du vil også få alle app-funktioner og farvetilpasning låst op.&lt;br&gt;&lt;br&gt;&lt;br&gt;Tak!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_short">Støt os ved at købe &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, det vil også låse alle app-funktioner op, herunder farvetilpasning.</string>
     <string name="purchase">Køb</string>
     <string name="get_simple_phone">Få Simple Phone</string>
     <string name="update_thank_you">Opdater venligst Simple Thank You til den seneste version</string>
