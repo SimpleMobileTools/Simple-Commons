@@ -469,6 +469,14 @@ fun Context.getCustomizeColorsString(): String {
     return getString(textId)
 }
 
+fun Context.addLockedLabelIfNeeded(stringId: Int): String {
+    return if (isOrWasThankYouInstalled()) {
+        getString(stringId)
+    } else {
+        "${getString(stringId)} (${getString(R.string.feature_locked)})"
+    }
+}
+
 fun Context.isPackageInstalled(pkgName: String): Boolean {
     return try {
         packageManager.getPackageInfo(pkgName, 0)
