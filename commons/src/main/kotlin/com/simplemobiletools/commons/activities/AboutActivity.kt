@@ -74,6 +74,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupContributors()
         setupDonate()
         setupFacebook()
+        setupGithub()
         setupReddit()
         setupTelegram()
         setupGetSimplePhone()
@@ -242,6 +243,12 @@ class AboutActivity : BaseSimpleActivity() {
             }
 
             launchViewIntent(link)
+        }
+    }
+
+    private fun setupGithub() {
+        about_github_holder.setOnClickListener {
+            launchViewIntent("https://github.com/SimpleMobileTools")
         }
     }
 
