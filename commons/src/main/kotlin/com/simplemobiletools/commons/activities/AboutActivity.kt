@@ -74,7 +74,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupContributors()
         setupDonate()
         setupFacebook()
-        setupGithub()
+        setupGitHub()
         setupReddit()
         setupTelegram()
         setupGetSimplePhone()
@@ -246,7 +246,8 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun setupGithub() {
+    private fun setupGitHub() {
+        about_github_icon.applyColorFilter(getProperBackgroundColor().getContrastColor())
         about_github_holder.setOnClickListener {
             launchViewIntent("https://github.com/SimpleMobileTools")
         }
