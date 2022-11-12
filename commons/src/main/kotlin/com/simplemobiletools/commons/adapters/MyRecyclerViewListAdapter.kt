@@ -330,7 +330,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             }
         }
 
-        private fun viewClicked(any: T) {
+        fun viewClicked(any: T) {
             if (actModeCallback.isSelectable) {
                 val currentPosition = adapterPosition - positionOffset
                 val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
@@ -341,7 +341,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             lastLongPressedItem = -1
         }
 
-        private fun viewLongClicked() {
+        fun viewLongClicked() {
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
                 activity.startActionMode(actModeCallback)
