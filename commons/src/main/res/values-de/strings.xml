@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
-    <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Erlaubnis der Anrufer-ID nicht blockiert werden.</string>
+    <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
@@ -131,7 +131,7 @@
     <string name="no_contacts_permission">Kontakte-Berechtigung wird benötigt</string>
     <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt</string>
     <string name="no_audio_permissions">Audio-Berechtigung wird benötigt</string>
-    <string name="no_post_notifications_permissions">Die Erlaubnis zur Veröffentlichung von Meldungen ist erforderlich</string>
+    <string name="no_post_notifications_permissions">Die Berechtigung zur Anzeige von Benachrichtigungen ist erforderlich</string>
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
@@ -776,8 +776,8 @@
     <string name="app_version">App-Version: %s</string>
     <string name="device_os">Betriebssystem: %s</string>
     <string name="donate_please">Hallo!,&lt;br&gt;&lt;br&gt; Ich hoffe, diese Anwendung gefällt dir. Sie beinhaltet keine Werbung, daher unterstütze bitte die Entwicklung durch den Kauf der &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; App. Dadurch wird auch dieser Dialog künftig nicht mehr angezeigt.&lt;br&gt;&lt;br&gt; Vielen Dank!</string>
-    <string name="donate_new">Hallo,&lt;br&gt;&lt;br&gt;wir hoffen, dass Ihnen die App gefällt. Sie enthält keine Werbung und wir sammeln auch nicht deine Daten. Bitte unterstütze die Entwicklung der App, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Du bekommst dann auch alle Funktionen der App und die Farbanpassung freigeschaltet.&lt;br&gt;&lt;br&gt;Dankeschön!</string>
-    <string name="donate_short">Unterstützen Sie uns, indem Sie &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufen. Damit schalten Sie auch alle Funktionen der App und die Farbanpassung frei.</string>
+    <string name="donate_new">Hallo,&lt;br&gt;&lt;br&gt;wir hoffen, dass dir die App gefällt. Sie enthält keine Werbung und wir sammeln auch nicht deine Daten. Bitte unterstütze die Entwicklung der App, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Du bekommst dann auch alle Funktionen der App, einschließlich der Farbanpassung, freigeschaltet.&lt;br&gt;&lt;br&gt;Dankeschön!</string>
+    <string name="donate_short">Unterstütze uns, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Damit werden auch alle Funktionen der App, einschließlich der Farbanpassung, freigeschaltet.</string>
     <string name="purchase">Kaufen</string>
     <string name="get_simple_phone">Simple Phone bestellen</string>
     <string name="update_thank_you">Bitte Simple Thank You auf die neueste Version aktualisieren</string>
@@ -799,7 +799,7 @@
     <string name="rate_our_app">Bewerte bitte unsere App :)</string>
     <string name="thank_you">Danke</string>
     <string name="widget_locked_pro">Das Widget ist gesperrt.
-\nBitte aktualisieren Sie auf die Pro-Version, um es freizuschalten.</string>
+\nBitte zur Pro-Version wechseln, um es freizuschalten.</string>
     <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Schlichtes Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn du nicht zufrieden bist, können wir das Geld zurückerstatten.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hey,&lt;br&gt;&lt;br&gt; nur eine kleine Info zu einigen neu veröffentlichten Apps:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Du kannst sie durch Drücken auf den Namen herunterladen.&lt;br&gt;&lt;br&gt; Danke</string>
@@ -842,7 +842,7 @@
     <string name="sideloaded_app">Deine App-Version scheint beschädigt zu sein. Bitte lade dir &lt;a href=%s&gt;hier&lt;/a&gt; die Originalversion herunter.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Häufig gestellte Fragen</string>
-    <string name="before_asking_question">Bevor Sie eine Frage stellen, lesen Sie bitte zuerst die</string>
+    <string name="before_asking_question">Bevor du eine Frage stellst, lies bitte zuerst die</string>
     <string name="faq_1_title_commons">Weshalb sehe ich das Widget dieser App nicht in der Liste der Widgets?</string>
     <string name="faq_1_text_commons">Wahrscheinlich, weil du die Anwendung auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser Anwendung ausgeblendet. Die einzige Lösung ist, die Anwendung über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
     <string name="faq_2_title_commons">Ich will euch unterstützen, aber es ist mir nicht möglich, Geld zu spenden. Gibt es eine andere Möglichkeit\?</string>

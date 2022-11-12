@@ -168,7 +168,7 @@
     <string name="select_destination">Wybierz miejsce docelowe</string>
     <string name="click_select_destination">Naciśnij tutaj, aby wybrać miejsce docelowe</string>
     <string name="invalid_destination">Nie udało się zapisać w wybranym miejscu</string>
-    <string name="please_select_destination">Wybierz miejsce docelowe</string>
+    <string name="please_select_destination">Wybierz cel</string>
     <string name="source_and_destination_same">Miejsca źródłowe i docelowe nie mogą być takie same</string>
     <string name="copy_failed">Nie udało się skopiować plików</string>
     <string name="copying">Kopiowanie…</string>
@@ -838,8 +838,8 @@
             Dziękujemy!
         ]]>
     </string>
-    <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji i dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
-    <string name="donate_short">Wesprzyj nas, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co również odblokuje wszystkie funkcje aplikacji i dostosowywanie kolorów.</string>
+    <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
+    <string name="donate_short">Wesprzyj nas, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co również odblokuje wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.</string>
     <string name="purchase">Kup</string>
     <string name="get_simple_phone">Zamów urządzenie Prosty Telefon</string>
     <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
