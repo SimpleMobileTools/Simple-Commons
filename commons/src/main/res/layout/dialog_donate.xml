@@ -19,10 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dialog_donate_image"
         android:gravity="center"
+        android:lineSpacingExtra="1sp"
         android:paddingStart="@dimen/bigger_margin"
-        android:paddingTop="@dimen/activity_margin"
+        android:paddingTop="@dimen/normal_margin"
         android:paddingEnd="@dimen/bigger_margin"
-        android:paddingBottom="@dimen/activity_margin"
+        android:paddingBottom="@dimen/normal_margin"
         android:text="@string/donate_short"
         android:textColorHighlight="@color/disabled_text_color_highlight"
         android:textSize="@dimen/bigger_text_size" />
