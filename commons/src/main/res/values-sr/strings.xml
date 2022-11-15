@@ -280,23 +280,23 @@
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Име песме</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">ГПС координате</string>
     <string name="altitude">Altitude</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Уклоните ЕКСИФ</string>
+    <string name="remove_exif_confirmation">Да ли сте сигурни да желите уклонити ЕКСИФ вредности као што су ГПС координате, модел камере итд\?</string>
+    <string name="exif_removed">ЕКСИФ вредности су успешно уклоњене</string>
     <!-- Color customization -->
     <string name="background_color">Боја позадине</string>
     <string name="text_color">Боја текста</string>
     <string name="primary_color">Главна боја</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Акцентна боја беле теме</string>
+    <string name="accent_color_black_and_white">Акцентна боја црно-беле теме</string>
     <string name="foreground_color">Позадинска боја</string>
     <string name="app_icon_color">Боја иконе апликације</string>
     <string name="bottom_navigation_bar_color">Боја доње навигационе линије</string>
     <string name="restore_defaults">Врати на подразумевана подешавања</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Користи подразумеване вредности</string>
+    <string name="default_color">Уобичајено</string>
     <string name="change_color">Промени боју</string>
     <string name="theme">Тема</string>
     <string name="changing_color_description">Изменом боје започињете прилагођену тему</string>
@@ -309,7 +309,7 @@
     <string name="app_icon_color_warning">УПОЗОРЕЊЕ: Неки покретачи се не зналазе са изменама икона апликација. Ако икона нестане, покрените апликацију преко Гугл плеја или неког виџета, ако су доступни.
         Када покренете, подесите подразумевајућу наранџасту икону #F57C00. У најгорем случају ћете морати да реинсталирате апликацију.</string>
     <string name="share_colors_success">Боје су ажуриране успешно. Нова тема под именом \'Shared\' је додата, молимо вас да је користите за ажурирање свих боја у будућности.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Имајте на уму да иако користите верзију апликације Про, и даље вам је потребна Једноставно хвала из техничких разлога. Брине о синхронизацији боја.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Молимо вас пазарите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> да откључате ову функцију и подржите наш развој. Хвала вам!
@@ -319,7 +319,7 @@
     <string name="light_theme">Светла</string>
     <string name="dark_theme">Тамна</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Ауто светло / тамно</string>
     <string name="solarized">Осветљена</string>
     <string name="dark_red">Тамно црвена</string>
     <string name="white">White</string>
@@ -338,7 +338,7 @@
     <string name="share_via">Подели путем</string>
     <string name="resize">Промена величине</string>
     <string name="select_all">Означи све</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Изаберите текст</string>
     <string name="hide">Сакриј</string>
     <string name="unhide">Прикажи</string>
     <string name="hide_folder">Склони фасциклу</string>
@@ -351,30 +351,30 @@
     <string name="redo">Поврати измене</string>
     <string name="print">Штампај</string>
     <string name="print_pro">Штампај (Pro)</string>
-    <string name="shortcut">Shortcut</string>
-    <string name="create_shortcut">Create shortcut</string>
-    <string name="create_shortcut_pro">Create shortcut (Pro)</string>
+    <string name="shortcut">Пречица</string>
+    <string name="create_shortcut">Направити пречицу</string>
+    <string name="create_shortcut_pro">Направите пречицу (Про)</string>
     <string name="add_number_to_contact">Додајте број контакту</string>
     <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Позив са СИМ 1</string>
+    <string name="call_from_sim_2">Позив са СИМ 2</string>
     <string name="toggle_filename">Измени видљивост датотеке</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Помери се на врх</string>
+    <string name="move_to_bottom">Пређите на дно</string>
     <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="unpin_item">Откачите ставку</string>
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Позив</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Позадине</string>
     <!-- Sorting -->
     <string name="sort_by">Сортирај према</string>
     <string name="name">Име</string>
     <string name="size">Величина</string>
     <string name="last_modified">Задњи пут измењено</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Датум креирања</string>
     <string name="date_taken">Датум настанка</string>
     <string name="title">Наслов</string>
     <string name="filename">Име фајла</string>
@@ -384,13 +384,13 @@
     <string name="ascending">Растуће</string>
     <string name="descending">Опадајуће</string>
     <string name="use_for_this_folder">Користи само за ову фасциклу</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">First name</string>
+    <string name="sort_numeric_parts">Сортирај нумеричке делове по стварној вредности</string>
+    <string name="first_name">Име</string>
     <string name="middle_name">Middle name</string>
-    <string name="surname">Surname</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="surname">Презиме</string>
+    <string name="full_name">Пуно име</string>
+    <string name="use_custom_sorting">Користите прилагођено сортирање</string>
+    <string name="change_order">Промени редослед</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Да ли сте сигурни да желите да наставите са брисањем?</string>
     <string name="deletion_confirmation">Да ли сте сигурни да желите обришете %s?</string>
@@ -400,13 +400,14 @@
     <string name="are_you_sure_delete">Да ли сте сигурни да желите да обришете ову ставку?</string>
     <string name="are_you_sure_recycle_bin">Да ли сте сигурни да желите да преместите ову ставку у канту за отпатке?</string>
     <string name="do_not_ask_again">Не питај више у овој сеанси</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Не показуј поново</string>
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="maybe">Можда</string>
     <plurals name="delete_warning">
         <item quantity="one">УПОЗОРЕЊЕ: Бришете %d фасциклу</item>
-        <item quantity="other">УПОЗОРЕЊЕ: Бришете  %d фасцикла</item>
+        <item quantity="few">УПОЗОРЕЊЕ: Бришете %d фасцикли</item>
+        <item quantity="other">УПОЗОРЕЊЕ: Бришете %d фасциклe</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">ПИН</string>
@@ -418,28 +419,28 @@
     <string name="insert_pattern">Унесите шаблон</string>
     <string name="wrong_pattern">Погрешан шаблон</string>
     <string name="repeat_pattern">Поновите шаблон</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Биометрија</string>
     <string name="fingerprint">Отисак прста</string>
     <string name="add_fingerprint">Додајте отисак прста</string>
     <string name="place_finger">Молимо вас ставите ваш прст на сензор за отисак прста</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Отворите дијалог за верификацију биометријског ИД-а</string>
+    <string name="authenticate">Аутхентицате</string>
     <string name="authentication_failed">Провера идентитета неуспешна</string>
     <string name="authentication_blocked">Провера идентитета блокирана, покушајте поново касније</string>
     <string name="no_fingerprints_registered">Немате регистрованих отисака прстију, додајте неке у Подешавања вашег уређаја</string>
     <string name="go_to_settings">Иди у подешавања</string>
     <string name="protection_setup_successfully">Успешно подешена шифра. Поново инсталирајте апликацију за случај да изгубите шифру.</string>
     <string name="fingerprint_setup_successfully">Заштита је успешно подешена. Поново инсталирајте апликацију за случај да имате проблема са ресетовањем отиска прста.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="lock_folder_pro">Lock folder (Pro)</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Закључај мапу</string>
+    <string name="lock_folder_pro">Закључај мапу (Про)</string>
+    <string name="unlock_folder">Откључај мапу</string>
+    <string name="lock_folder_notice">Ова заштита функционише само у овој апликацији, не би требало да замени право шифровање директоријума у целом систему.</string>
     <!-- Times -->
     <string name="yesterday">Јуче</string>
     <string name="today">Данас</string>
     <string name="tomorrow">Сутра</string>
-    <string name="every_day">Every day</string>
-    <string name="hide_year">Hide year</string>
+    <string name="every_day">Сваки дан</string>
+    <string name="hide_year">Сакриј годину</string>
     <string name="seconds_raw">секунде</string>
     <string name="minutes_raw">минуте</string>
     <string name="hours_raw">сати</string>
@@ -449,123 +450,152 @@
     <string name="hours_letter">h</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="other">%d секунди</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="other">%d секунда</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d минут</item>
-        <item quantity="other">%d минута</item>
+        <item quantity="few">%d минутa</item>
+        <item quantity="other">%d минутe</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d сат</item>
+        <item quantity="few">%d сати</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d дан</item>
-        <item quantity="other">%d дана</item>
+        <item quantity="few">%d данa</item>
+        <item quantity="other">%d дани</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d недеља</item>
-        <item quantity="other">%d недеља</item>
+        <item quantity="few">%d недеља</item>
+        <item quantity="other">%d недељe</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d месец</item>
+        <item quantity="few">%d месеци</item>
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d година</item>
-        <item quantity="other">%d година</item>
+        <item quantity="few">%d година</item>
+        <item quantity="other">%d годинe</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="other">%d секунди</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="other">%d секундe</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d минут</item>
-        <item quantity="other">%d минута</item>
+        <item quantity="few">%d минути</item>
+        <item quantity="other">%d минутe</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d сат</item>
+        <item quantity="few">%d сати</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d дан</item>
-        <item quantity="other">%d дана</item>
+        <item quantity="few">%d данa</item>
+        <item quantity="other">%d дани</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d недеља</item>
-        <item quantity="other">%d недеља</item>
+        <item quantity="few">%d недеља</item>
+        <item quantity="other">%d недељe</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d месец</item>
+        <item quantity="few">%d месецa</item>
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d година</item>
-        <item quantity="other">%d година</item>
+        <item quantity="few">%d година</item>
+        <item quantity="other">%d годинe</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d секунд пре тога</item>
-        <item quantity="other">%d секунди пре тога</item>
+        <item quantity="few">%d секунди пре тога</item>
+        <item quantity="other">%d секундe пре тога</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d минут пре тога</item>
-        <item quantity="other">%d минута пре тога</item>
+        <item quantity="few">%d минути пре тога</item>
+        <item quantity="other">%d минутe пре тога</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d сат пре тога</item>
-        <item quantity="other">%d сата пре тога</item>
+        <item quantity="few">%d сати пре тога</item>
+        <item quantity="other">%d сати пре тога</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d дан пре тога</item>
-        <item quantity="other">%d дана пре тога</item>
+        <item quantity="few">%d дана пре тога</item>
+        <item quantity="other">%d дани пре тога</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d недељу пре тога</item>
-        <item quantity="other">%d недеља пре тога</item>
+        <item quantity="few">%d недељи пре тога</item>
+        <item quantity="other">%d недељe пре тога</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d месец пре тога</item>
+        <item quantity="few">%d месеци пре тога</item>
         <item quantity="other">%d месеци пре тога</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d годину пре тога</item>
-        <item quantity="other">%d година пре тога</item>
+        <item quantity="few">%d година пре тога</item>
+        <item quantity="other">%d годинe пре тога</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="other">%d секунди</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="other">%d секундe</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d минут</item>
-        <item quantity="other">%d минута</item>
+        <item quantity="few">%d минути</item>
+        <item quantity="other">%d минутe</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d сат</item>
+        <item quantity="few">%d сати</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d дан</item>
-        <item quantity="other">%d дана</item>
+        <item quantity="few">%d данa</item>
+        <item quantity="other">%d дани</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d недеља</item>
-        <item quantity="other">%d недеља</item>
+        <item quantity="few">%d недеља</item>
+        <item quantity="other">%d недељe</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d месец</item>
+        <item quantity="few">%d месеци</item>
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d година</item>
-        <item quantity="other">%d година</item>
+        <item quantity="few">%d година</item>
+        <item quantity="other">%d годинe</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Преостало време до активације аларма:\n%s</string>
     <string name="reminder_triggers_in">Преостало време до активације подсетника:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Преостало време:
+\n%s</string>
     <string name="alarm_warning">Проверите да ли аларм ради како треба пре него што кренете да се ослањате на њега. Дешава се да не ради како треба због ограничења у систему која се односе на уштеду батерије.</string>
     <string name="reminder_warning">Уверите се да подсетник ради како треба пре него што кренете да се ослањате на њега. Дешава се да не ради како треба због ограничења у систему која се односе на уштеду батерије.</string>
     <string name="notifications_disabled">Обавештења ове апликације су онемогућена. У подешавањима уређаја их можете укључити.</string>
@@ -579,20 +609,20 @@
     <string name="your_sounds">Ваши звукови</string>
     <string name="add_new_sound">Додај нови звук</string>
     <string name="no_sound">Без звука</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Током дана у cc:мм</string>
+    <string name="during_day_at">Током дана у %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Подешавања</string>
     <string name="purchase_simple_thank_you">Пазарите Simple Thank You</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Прилагођавање боја</string>
     <string name="customize_colors">Прилагодите боје</string>
     <string name="customize_colors_locked">Прилагодите боје (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Закључано</string>
     <string name="customize_widget_colors">Прилагодите боје виџета</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Прилагодите обавештења</string>
     <string name="use_english_language">Користи енглески језик</string>
-    <string name="language">Language</string>
+    <string name="language">Језик</string>
     <string name="show_hidden_items">Прикажи скривене ставке</string>
     <string name="font_size">Величина фонта</string>
     <string name="small">Мали</string>
@@ -622,9 +652,9 @@
     <string name="import_settings">Увези подешавања</string>
     <string name="settings_exported_successfully">Подешавања извежена успешно</string>
     <string name="settings_imported_successfully">Подешавања увежена успешно</string>
-    <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
-    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
+    <string name="start_name_with_surname">Почните име са презименом</string>
+    <string name="clear_cache">Обриши кеш меморију</string>
+    <string name="show_call_confirmation_dialog">Прикажите дијалог за потврду позива пре него започнете позив</string>
     <!-- Setting sections -->
     <string name="visibility">Видљивост</string>
     <string name="security">Безбедност</string>
@@ -635,28 +665,28 @@
     <string name="startup">Стартовање</string>
     <string name="text">Текст</string>
     <string name="migrating">Селидба</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="quality">Квалитет</string>
+    <string name="main_screen">Главни екран</string>
+    <string name="thumbnails">Сличице</string>
     <string name="list_view">List view</string>
     <!-- Excluding -->
     <string name="exclude">Изузми</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Изузми мапу</string>
     <string name="excluded_folders">Изузете фасцикле</string>
     <string name="excluded">(изузето)</string>
     <string name="manage_excluded_folders">Управљај изузетим фасциклама</string>
     <string name="remove_all">Уклони све</string>
     <string name="remove_all_description">Уклони све фасцикле са листе изузетих\? Ово неће обрисати фасцикле.</string>
-    <string name="temporarily_show_excluded">Temporarily show excluded</string>
-    <string name="stop_showing_excluded">Stop showing excluded</string>
+    <string name="temporarily_show_excluded">Привремено је искључена емисија</string>
+    <string name="stop_showing_excluded">Престани да се приказује искључено</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Manage shown tabs</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="manage_shown_tabs">Управљајте приказаним картицама</string>
+    <string name="default_tab_to_open">Таб за отварање при покретању апликације</string>
     <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="favorites_tab">Фаворити</string>
+    <string name="call_history_tab">Позив историја</string>
+    <string name="groups_tab">Групе</string>
+    <string name="last_used_tab">Последњи коришћени</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
@@ -667,12 +697,13 @@
     <string name="files_restored_successfully">Фајлови су повраћени успешно</string>
     <string name="empty_recycle_bin_confirmation">Да ли сте сигурни да желите да испразните канту за отпатке? Датотеке ће бити трајно обрисане.</string>
     <string name="recycle_bin_empty">Канта за отпатке је празна</string>
-    <string name="moving_recycle_bin_items_disabled">Премештање ставки из канте за отпатке је онемогућено, употребите повраћај датотека.</string>
+    <string name="moving_recycle_bin_items_disabled">Премештање ставки из канте за отпатке је онемогућено, употребите повраћај датотека</string>
     <string name="show_the_recycle_bin">Прикажи канту за отпатке</string>
     <string name="hide_the_recycle_bin">Сакриј канту за отпатке</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Премештам %d ставку у канту за отпатке</item>
-        <item quantity="other">Премештам %d ставки у канту за отпатке</item>
+        <item quantity="few">Премештам %d ставки у канту за отпатке</item>
+        <item quantity="other">Премештам %d ставкe у канту за отпатке</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">Увозим…</string>
@@ -684,7 +715,7 @@
     <string name="importing_some_entries_failed">Увоз одређених ставки није успело</string>
     <string name="exporting_some_entries_failed">Извоз одређених ставки није успело</string>
     <string name="no_entries_for_importing">Нема ставки за увоз</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Нису пронађени нови уноси за увоз</string>
     <string name="no_entries_for_exporting">Нема ставки за извоз</string>
     <!-- OTG devices -->
     <string name="usb">УСБ</string>
