@@ -16,6 +16,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.models.RecyclerSelectionPayload
 import com.simplemobiletools.commons.views.MyRecyclerView
+import kotlin.math.max
 import kotlin.math.min
 
 abstract class MyRecyclerViewListAdapter<T>(
@@ -180,8 +181,8 @@ abstract class MyRecyclerViewListAdapter<T>(
         lastLongPressedItem = if (lastLongPressedItem == -1) {
             position
         } else {
-            val min = Math.min(lastLongPressedItem, position)
-            val max = Math.max(lastLongPressedItem, position)
+            val min = min(lastLongPressedItem, position)
+            val max = max(lastLongPressedItem, position)
             for (i in min..max) {
                 toggleItemSelection(true, i, false)
             }
@@ -225,8 +226,8 @@ abstract class MyRecyclerViewListAdapter<T>(
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
                     selectItemRange(
                         initialSelection,
-                        Math.max(0, lastDraggedIndex - positionOffset),
-                        Math.max(0, minReached - positionOffset),
+                        max(0, lastDraggedIndex - positionOffset),
+                        max(0, minReached - positionOffset),
                         maxReached - positionOffset
                     )
                     if (minReached != maxReached) {
