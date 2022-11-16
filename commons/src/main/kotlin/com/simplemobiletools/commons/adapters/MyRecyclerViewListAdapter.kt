@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ListAdapter
@@ -13,7 +14,9 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
+import com.simplemobiletools.commons.models.RecyclerSelectionPayload
 import com.simplemobiletools.commons.views.MyRecyclerView
+import kotlin.math.min
 
 abstract class MyRecyclerViewListAdapter<T>(
     val activity: BaseSimpleActivity,
@@ -84,7 +87,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
                 activity.menuInflater.inflate(getActionMenuId(), menu)
                 val bgColor = if (baseConfig.isUsingSystemTheme) {
-                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
+                    ResourcesCompat.getColor(resources, R.color.you_contextual_status_bar_color, activity.theme)
                 } else {
                     Color.BLACK
                 }
@@ -152,9 +155,18 @@ abstract class MyRecyclerViewListAdapter<T>(
         }
     }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any>) {
+        val any = payloads.firstOrNull()
+        if (any is RecyclerSelectionPayload) {
+            holder.itemView.isSelected = any.selected
+        } else {
+            onBindViewHolder(holder, position)
+        }
+    }
+
     private fun updateTitle() {
         val selectableItemCount = getSelectableItemCount()
-        val selectedCount = Math.min(selectedKeys.size, selectableItemCount)
+        val selectedCount = min(selectedKeys.size, selectableItemCount)
         val oldTitle = actBarTextView?.text
         val newTitle = "$selectedCount / $selectableItemCount"
         if (oldTitle != newTitle) {
