@@ -145,7 +145,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             selectedKeys.remove(itemKey)
         }
 
-        notifyItemChanged(pos + positionOffset)
+        notifyItemChanged(pos + positionOffset, RecyclerSelectionPayload(select))
 
         if (updateTitle) {
             updateTitle()
