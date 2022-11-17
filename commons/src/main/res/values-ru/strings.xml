@@ -11,13 +11,13 @@
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
     <string name="error">Error: %s</string>
-    <string name="open_with">Открыть в</string>
-    <string name="edit_with">Редактировать в</string>
+    <string name="open_with">Открыть в…</string>
+    <string name="edit_with">Редактировать в…</string>
     <string name="edit">Редактировать</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="no_browser_found">Браузер не найден</string>
     <string name="no_email_client_found">Клиент электронной почты не найден</string>
-    <string name="set_as">Установить как</string>
+    <string name="set_as">Установить как…</string>
     <string name="copy_to_clipboard">Копировать в буфер обмена</string>
     <string name="copy_number_to_clipboard">Копировать номер в буфер обмена</string>
     <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
@@ -167,8 +167,8 @@
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
     <string name="copy_move">Копировать/переместить</string>
-    <string name="copy_to">Копировать в</string>
-    <string name="move_to">Переместить в</string>
+    <string name="copy_to">Копировать в…</string>
+    <string name="move_to">Переместить в…</string>
     <string name="source">Путь источника</string>
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
@@ -192,7 +192,7 @@
     <string name="could_not_create_file">Невозможно создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
     <string name="no_space">По выбранному пути недостаточно свободного места.
-\nНеобходимо %1$s, доступно %2$s</string>
+\nНеобходимо %1$s, доступно %2$s.</string>
     <string name="system_service_disabled">Системная служба для выбора файлов и папок недоступна</string>
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -332,7 +332,7 @@
     <string name="remove">Убрать</string>
     <string name="rename">Переименовать</string>
     <string name="share">Поделиться</string>
-    <string name="share_via">Поделиться через</string>
+    <string name="share_via">Поделиться через…</string>
     <string name="resize">Изменить размер</string>
     <string name="select_all">Выделить все</string>
     <string name="select_text">Выделить текст</string>
@@ -367,7 +367,7 @@
     <string name="add_contact">Добавить контакт</string>
     <string name="wallpapers">Обои</string>
     <!-- Sorting -->
-    <string name="sort_by">Сортировать по</string>
+    <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
     <string name="size">Размер</string>
     <string name="last_modified">Время изменения</string>
@@ -389,7 +389,7 @@
     <string name="use_custom_sorting">Произвольная сортировка</string>
     <string name="change_order">Изменить порядок</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Вы уверены, что хотите продолжить удаление\?</string>
+    <string name="proceed_with_deletion">Подтверждение удаления</string>
     <string name="deletion_confirmation">Удалить %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Переместить %s в корзину?</string>

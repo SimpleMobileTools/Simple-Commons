@@ -66,11 +66,11 @@
     <string name="disclaimer">Dichiarazione di non responsabilità</string>
     <string name="take_photo">Scatta una foto</string>
     <string name="choose_photo">Scegli una foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Scegli il video</string>
+    <string name="choose_contact">Scegli il contatto</string>
+    <string name="choose_file">Scegli il file</string>
+    <string name="record_audio">Registra audio</string>
+    <string name="record_video">Registra video</string>
     <!-- Events -->
     <string name="birthday">Compleanno</string>
     <string name="anniversary">Anniversario</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Blocca le chiamate dai contatti non memorizzati</string>
     <string name="block_unknown_messages">Blocca i messaggi dei contatti non memorizzati</string>
     <string name="add_blocked_number_helper_text">Inserisci un numero o un modello (ad esempio *12345*, +1*8888) per bloccare tutte le chiamate e i messaggi provenienti da numeri corrispondenti al modello.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Impossibile bloccare i numeri sconosciuti senza l\'autorizzazione dell\'ID chiamante.</string>
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
     <string name="add_favorites">Aggiungi preferiti</string>
@@ -665,7 +665,7 @@
     <string name="list_view">Vista a elenco</string>
     <!-- Excluding -->
     <string name="exclude">Escludi</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Escludi cartella</string>
     <string name="excluded_folders">Cartelle escluse</string>
     <string name="excluded">(esclusa)</string>
     <string name="manage_excluded_folders">Gestisci le cartelle escluse</string>
@@ -810,8 +810,8 @@
             Grazie!
         ]]>
     </string>
-    <string name="donate_new">Ciao,&lt;br&gt;&lt;br&gt;spero che l\'app ti piaccia. Non contiene pubblicità e non stiamo raccogliendo i tuoi dati, per favore sostieni il suo sviluppo acquistando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Semplice Grazie&lt;/a&gt;. Avrai anche tutte le funzioni dell\'app e la personalizzazione dei colori sbloccati.&lt;br&gt;&lt;br&gt;Grazie!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_new">Ciao,&lt;br&gt;&lt;br&gt;spero che l\'app ti piaccia. Non contiene pubblicità e non stiamo raccogliendo i tuoi dati, per favore sostieni il suo sviluppo acquistando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Ringraziamento Semplice &lt;/a&gt;. Avrai anche tutte le funzioni dell\'app, compresa la personalizzazione dei colori, sbloccate.&lt;br&gt;&lt;br&gt;Grazie!</string>
+    <string name="donate_short">Per favore sostienici acquistando &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Ringraziamento Semplice &lt;/a&gt;, che sbloccherà anche tutte le funzioni dell\'app, compresa la personalizzazione dei colori.</string>
     <string name="purchase">Acquista</string>
     <string name="get_simple_phone">Scarica Telefono Semplice</string>
     <string name="update_thank_you">Aggiorna Semplice Ringraziamento all\'ultima versione</string>
@@ -971,7 +971,7 @@
     <string name="why_upgrade_improved_design">Design migliorato</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor fotografico avanzato</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Editor avanzato di foto e video</string>
     <string name="why_upgrade_heic_support">Supporto file HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Ridenominazione avanzata di file multipli</string>
     <string name="why_upgrade_folder_locking">Bloccaggio individuale delle cartelle</string>

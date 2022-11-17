@@ -66,11 +66,11 @@
     <string name="disclaimer">Izjava</string>
     <string name="take_photo">Posnemi fotografijo</string>
     <string name="choose_photo">Izberi fotografijo</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Изаберите видео</string>
+    <string name="choose_contact">Изаберите контакт</string>
+    <string name="choose_file">Одаберите мапу</string>
+    <string name="record_audio">Снимити звук</string>
+    <string name="record_video">Видео запис</string>
     <!-- Events -->
     <string name="birthday">Rojstni dan</string>
     <string name="anniversary">Obletnica</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Blokiranje klicev iz neohranjenih stikov</string>
     <string name="block_unknown_messages">Blokiranje sporočil iz neohranjenih stikov</string>
     <string name="add_blocked_number_helper_text">Vnesite številko ali vzorec (npr. *12345*, +1*8888), da se blokirajo vsi klici in sporočila iz številk, ki ustrezajo vzorcu.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Neznanih številk ni mogoče blokirati brez dovoljenja za ID klicalca.</string>
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
     <string name="add_favorites">Dodaj priljubljene</string>
@@ -342,7 +342,7 @@
     <string name="share_via">Deli preko</string>
     <string name="resize">Spremeni velikost</string>
     <string name="select_all">Izberi vse</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Izberite besedilo</string>
     <string name="hide">Skrij</string>
     <string name="unhide">Odkrij</string>
     <string name="hide_folder">Skrij mapo</string>
@@ -355,30 +355,30 @@
     <string name="redo">Ponovno uveljavi</string>
     <string name="print">Natisni</string>
     <string name="print_pro">Natisni (Pro)</string>
-    <string name="shortcut">Shortcut</string>
-    <string name="create_shortcut">Create shortcut</string>
-    <string name="create_shortcut_pro">Create shortcut (Pro)</string>
+    <string name="shortcut">Bližnjice</string>
+    <string name="create_shortcut">Ustvari bližnjico</string>
+    <string name="create_shortcut_pro">Ustvari bližnjico (Pro)</string>
     <string name="add_number_to_contact">Dodaj številko stiku</string>
     <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Klic iz SIM 1</string>
+    <string name="call_from_sim_2">Klic iz SIM 2</string>
     <string name="toggle_filename">Preklopi vidljivost imen datotek</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Premakni se na vrh</string>
+    <string name="move_to_bottom">Premakni se na dno</string>
     <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="unpin_item">Odpni element</string>
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Klic</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Ozadja</string>
     <!-- Sorting -->
     <string name="sort_by">Razvrsti po</string>
     <string name="name">Ime</string>
     <string name="size">Velikost</string>
     <string name="last_modified">Zadnja sprememba</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Datum ustvarjanja</string>
     <string name="date_taken">Datum nastanka</string>
     <string name="title">Naslov</string>
     <string name="filename">Ime datoteke</string>
@@ -388,13 +388,13 @@
     <string name="ascending">Naraščajoče</string>
     <string name="descending">Padajoče</string>
     <string name="use_for_this_folder">Uporabi le za to mapo</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">First name</string>
+    <string name="sort_numeric_parts">Razvrsti številčne dele po dejanski vrednosti</string>
+    <string name="first_name">Ime</string>
     <string name="middle_name">Middle name</string>
-    <string name="surname">Surname</string>
+    <string name="surname">Priimek</string>
     <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Uporabi razvrščanje po meri</string>
+    <string name="change_order">Spremeni vrstni red</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Res želite nadaljevati s tem izborom?</string>
     <string name="deletion_confirmation">Res želite izbrisati \'%s\'?</string>
@@ -404,7 +404,7 @@
     <string name="are_you_sure_delete">Res želite izbrisati ta element?</string>
     <string name="are_you_sure_recycle_bin">Res želite premakniti ta element v Koš?</string>
     <string name="do_not_ask_again">To sejo ne sprašuj več</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Ne prikazuj več</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
     <string name="maybe">Mogoče</string>
@@ -424,28 +424,28 @@
     <string name="insert_pattern">Narišite vzorec</string>
     <string name="wrong_pattern">Napačen vzorec</string>
     <string name="repeat_pattern">Ponovite vzorec</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometrija</string>
     <string name="fingerprint">Prstni odtis</string>
     <string name="add_fingerprint">Dodaj prstni odtis</string>
     <string name="place_finger">Postavite prst na čitalec prstnih odtisov</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Odpri pogovorno okno za preverjanje biometričnega ID-ja</string>
+    <string name="authenticate">Preverjanje pristnosti</string>
     <string name="authentication_failed">Overitev ni uspela</string>
     <string name="authentication_blocked">Overitev je blokirana, prosimo počakajte trenutek</string>
     <string name="no_fingerprints_registered">Registrirali še niste nobenega prstnega odtisa. Prosimo, dodajte jih v nastavitvah naprave</string>
     <string name="go_to_settings">Odpri nastavitve</string>
     <string name="protection_setup_successfully">Geslo uspešno nastavljeno. Če ga pozabite, izbrišite in ponovno naložite aplikacijo.</string>
     <string name="fingerprint_setup_successfully">Zaščita uspešno nastavljena. Če pride do težav s ponastavitvijo, izbrišite in ponovno naložite aplikacijo.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="lock_folder_pro">Lock folder (Pro)</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Zakleni mapo</string>
+    <string name="lock_folder_pro">Zakleni mapo (Pro)</string>
+    <string name="unlock_folder">Odkleni mapo</string>
+    <string name="lock_folder_notice">Ta zaščita deluje samo v tej aplikaciji in ni mišljena kot nadomestek pravega sistemskega šifriranja map.</string>
     <!-- Times -->
     <string name="yesterday">Včeraj</string>
     <string name="today">Danes</string>
     <string name="tomorrow">Jutri</string>
-    <string name="every_day">Every day</string>
-    <string name="hide_year">Hide year</string>
+    <string name="every_day">Vsak dan</string>
+    <string name="hide_year">Skrij leto</string>
     <string name="seconds_raw">sekund</string>
     <string name="minutes_raw">minut</string>
     <string name="hours_raw">ur</string>
@@ -629,7 +629,8 @@
 \n%s</string>
     <string name="reminder_triggers_in">Čas do sprožitve opomnika:
 \n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Preostali čas:
+\n%s</string>
     <string name="alarm_warning">Predlagamo, da alarm preizkusite, preden se nanj zanašate. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko alarm zataji.</string>
     <string name="reminder_warning">Predlagamo, da opomnike preiskusite, preden se zanašate na njih. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko opomniki zatajijo.</string>
     <string name="notifications_disabled">Obvestila so za to aplikacijo onemogočena. Vklopite jih lahko v nastavitvah naprave.</string>
@@ -643,8 +644,8 @@
     <string name="your_sounds">Vaši zvoki</string>
     <string name="add_new_sound">Dodaj nov zvok</string>
     <string name="no_sound">Brez zvoka</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Čez dan ob hh:mm</string>
+    <string name="during_day_at">Čez dan ob %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Nastavitve</string>
     <string name="purchase_simple_thank_you">Kupite aplikacijo Simple Thank You</string>
