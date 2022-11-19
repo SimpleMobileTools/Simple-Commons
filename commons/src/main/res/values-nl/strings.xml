@@ -66,7 +66,7 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Foto nemen</string>
     <string name="choose_photo">Foto kiezen</string>
-    <string name="choose_video">Choose video</string>
+    <string name="choose_video">Video kiezen</string>
     <string name="choose_contact">Contact kiezen</string>
     <string name="choose_file">Bestand kiezen</string>
     <string name="record_audio">Geluid opnemen</string>
@@ -112,7 +112,7 @@
     <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
     <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
-    <string name="must_make_default_caller_id_app">Onbekende nummers kunnen niet worden geblokkeerd zonder de machtiging voor caller ID.</string>
+    <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>
@@ -123,7 +123,7 @@
     <string name="type_2_characters">Vul tenminste 2 tekens in om de zoekopdracht te starten.</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
-    <string name="filter_pro">Filter (Pro)</string>
+    <string name="filter_pro">Filteren (Pro)</string>
     <string name="no_items_found">Geen items gevonden.</string>
     <string name="change_filter">Filter wijzigen</string>
     <!-- Permissions -->
@@ -132,7 +132,7 @@
     <string name="no_camera_permissions">Recht voor camera is vereist</string>
     <string name="no_audio_permissions">Recht voor audio is vereist</string>
     <string name="no_post_notifications_permissions">Recht voor het plaatsen van meldingen is vereist</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Geen toegang</string>
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>
     <string name="rename_folder">Map hernoemen</string>
@@ -1002,5 +1002,5 @@
     <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet meer onderhouden. De Pro-versie is de vinden op https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Bij het verwijderen van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties en onnodige machtigingen.</string>
+    <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties of onnodige rechten.</string>
 </resources>
