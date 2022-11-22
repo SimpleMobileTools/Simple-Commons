@@ -132,7 +132,7 @@
     <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt</string>
     <string name="no_audio_permissions">Audio-Berechtigung wird benötigt</string>
     <string name="no_post_notifications_permissions">Die Berechtigung zur Anzeige von Benachrichtigungen ist erforderlich</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Keine Berechtigung</string>
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
@@ -804,11 +804,11 @@
     <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Schlichtes Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn du nicht zufrieden bist, können wir das Geld zurückerstatten.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hey,&lt;br&gt;&lt;br&gt; nur eine kleine Info zu einigen neu veröffentlichten Apps:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Du kannst sie durch Drücken auf den Namen herunterladen.&lt;br&gt;&lt;br&gt; Danke</string>
-    <string name="simple_app_launcher">Schlichter App-Launcher</string>
-    <string name="simple_calculator">Schlichter Taschenrechner</string>
+    <string name="simple_app_launcher">Einfacher App-Launcher</string>
+    <string name="simple_calculator">Schlichter Rechner</string>
     <string name="simple_calendar">Schlichter Kalender</string>
-    <string name="simple_camera">Schlichte Kamera</string>
-    <string name="simple_clock">Schlichte Uhr</string>
+    <string name="simple_camera">Einfache Kamera</string>
+    <string name="simple_clock">Einfache Uhr</string>
     <string name="simple_contacts">Schlichte Kontakte</string>
     <string name="simple_dialer">Schlichtes Telefon</string>
     <string name="simple_draw">Schlichter Zeichner</string>
@@ -820,8 +820,8 @@
     <string name="simple_music_player">Schlichter Musik-Player</string>
     <string name="simple_notes">Schlichte Notizen</string>
     <string name="simple_sms_messenger">Schlichter SMS-Messenger</string>
-    <string name="simple_thank_you">Schlichtes Dankeschön</string>
-    <string name="simple_voice_recorder">Schlichter Sprachrekorder</string>
+    <string name="simple_thank_you">Einfaches Dankeschön</string>
+    <string name="simple_voice_recorder">Einfaches Diktiergerät</string>
     <string name="app_launcher_short">App-Startprogramm</string>
     <string name="calculator_short">Rechner</string>
     <string name="calendar_short">Kalender</string>
