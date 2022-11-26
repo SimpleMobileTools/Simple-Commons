@@ -2,21 +2,21 @@
 <resources>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
-    <string name="back">Back</string>
+    <string name="back">العودة</string>
     <string name="nothing">لا شيء</string>
     <string name="later">لاحقًا</string>
     <string name="save_as">حفظ كـ</string>
     <string name="file_saved">تم حفظ الملف بنجاح</string>
     <string name="invalid_file_format">تنسيق الملف غير صالح</string>
-    <string name="out_of_memory_error">خطأ نفذت الذاكرة</string>
+    <string name="out_of_memory_error">خطأ في نفاد الذاكرة</string>
     <string name="an_error_occurred">حدث خطأ: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">خطأ: %s</string>
     <string name="open_with">فتح باستخدام</string>
     <string name="edit_with">تعديل باستخدام</string>
     <string name="edit">تعديل</string>
     <string name="no_app_found">لم يتم العثور على تطبيق صالح</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">لم يتم العثور على متصفح</string>
+    <string name="no_email_client_found">لم يتم العثور على عميل بريد إلكتروني</string>
     <string name="set_as">تعيين كـ</string>
     <string name="copy_to_clipboard">نسخ إلى الحافظة</string>
     <string name="copy_number_to_clipboard">نسخ الرقم إلى الحافظة</string>
