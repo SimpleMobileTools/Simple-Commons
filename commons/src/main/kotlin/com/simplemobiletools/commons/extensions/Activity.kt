@@ -291,11 +291,16 @@ fun Activity.launchPurchaseThankYouIntent() {
 }
 
 fun Activity.launchUpgradeToProIntent() {
+    hideKeyboard()
     try {
         launchViewIntent("market://details?id=${baseConfig.appId.removeSuffix(".debug")}.pro")
     } catch (ignored: Exception) {
         launchViewIntent(getStoreUrl())
     }
+}
+
+fun Activity.launchMoreAppsFromUsIntent() {
+    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
 }
 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
@@ -391,6 +396,26 @@ fun Activity.sharePathsIntent(paths: List<String>, applicationId: String) {
     }
 }
 
+fun Activity.setAsIntent(path: String, applicationId: String) {
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
+        Intent().apply {
+            action = Intent.ACTION_ATTACH_DATA
+            setDataAndType(newUri, getUriMimeType(path, newUri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            val chooser = Intent.createChooser(this, getString(R.string.set_as))
+
+            try {
+                startActivityForResult(chooser, REQUEST_SET_AS)
+            } catch (e: ActivityNotFoundException) {
+                toast(R.string.no_app_found)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        }
+    }
+}
+
 fun Activity.shareTextIntent(text: String) {
     ensureBackgroundThread {
         Intent().apply {
@@ -408,26 +433,6 @@ fun Activity.shareTextIntent(text: String) {
                 } else {
                     showErrorToast(e)
                 }
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
-        }
-    }
-}
-
-fun Activity.setAsIntent(path: String, applicationId: String) {
-    ensureBackgroundThread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
-        Intent().apply {
-            action = Intent.ACTION_ATTACH_DATA
-            setDataAndType(newUri, getUriMimeType(path, newUri))
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            val chooser = Intent.createChooser(this, getString(R.string.set_as))
-
-            try {
-                startActivityForResult(chooser, REQUEST_SET_AS)
-            } catch (e: ActivityNotFoundException) {
-                toast(R.string.no_app_found)
             } catch (e: Exception) {
                 showErrorToast(e)
             }
@@ -791,7 +796,7 @@ fun BaseSimpleActivity.deleteFileBg(
             }
         } else {
             if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
-                fileDeleted = deleteRecursively(file)
+                fileDeleted = deleteRecursively(file, this)
             }
 
             if (!fileDeleted) {
@@ -830,15 +835,19 @@ private fun BaseSimpleActivity.deleteSdk30(fileDirItem: FileDirItem, callback: (
     }
 }
 
-private fun deleteRecursively(file: File): Boolean {
+private fun deleteRecursively(file: File, context: Context): Boolean {
     if (file.isDirectory) {
         val files = file.listFiles() ?: return file.delete()
         for (child in files) {
-            deleteRecursively(child)
+            deleteRecursively(child, context)
         }
     }
 
-    return file.delete()
+    val deleted = file.delete()
+    if (deleted) {
+        context.deleteFromMediaStore(file.absolutePath)
+    }
+    return deleted
 }
 
 fun Activity.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {

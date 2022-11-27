@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.dialog_custom_interval_picker.view.*
 
 class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (minutes: Int) -> Unit) {
     private var dialog: AlertDialog? = null
-    var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
+    private var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
     init {
         activity.getAlertDialogBuilder()

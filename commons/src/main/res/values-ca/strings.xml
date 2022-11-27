@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">D\'acord</string>
     <string name="cancel">Cancel·la</string>
+    <string name="back">Enrere</string>
     <string name="nothing">Res</string>
     <string name="later">Més tard</string>
     <string name="save_as">Desa com a</string>
@@ -57,12 +58,22 @@
     <string name="seven">Set</string>
     <string name="eight">Vuit</string>
     <string name="nine">Nou</string>
-    <string name="value">Value</string>
+    <string name="value">Valor</string>
     <string name="value_cannot_be_empty">El valor no pot estar buit</string>
     <string name="create_new_contact">Crea un contacte nou</string>
     <string name="add_to_existing_contact">Afegeix a un contacte existent</string>
     <string name="app_corrupt">Aplicació malmesa</string>
     <string name="disclaimer">Exempció de responsabilitat</string>
+    <string name="take_photo">Fes una foto</string>
+    <string name="choose_photo">Tria una foto</string>
+    <string name="choose_video">Tria un vídeo</string>
+    <string name="choose_contact">Tria un contacte</string>
+    <string name="choose_file">Tria un fitxer</string>
+    <string name="record_audio">Grava àudio</string>
+    <string name="record_video">Grava vídeo</string>
+    <!-- Events -->
+    <string name="birthday">Data de naixement</string>
+    <string name="anniversary">Aniversari</string>
     <!-- Emails -->
     <string name="home">Llar</string>
     <string name="work">Feina</string>
@@ -81,6 +92,9 @@
     <string name="list">Llista</string>
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
+    <string name="column_count">Comptador de columnes</string>
+    <string name="portrait_column_count">Nombre de columnes verticals</string>
+    <string name="landscape_column_count">Nombre de columnes horitzontals</string>
     <string name="change_cover_image">Canvia la imatge de la portada</string>
     <string name="select_photo">Selecciona una foto</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
     <string name="block_unknown_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
     <string name="block_unknown_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
+    <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
+    <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Es requereix permís d\'accés als contactes</string>
     <string name="no_camera_permissions">Es requereix permís d\'accés a la càmera</string>
     <string name="no_audio_permissions">Es requereix permís d\'accés a l\'àudio</string>
+    <string name="no_post_notifications_permissions">Cal permís per publicar notificacions</string>
+    <string name="no_permission">Sense permís</string>
     <!-- Renaming -->
     <string name="rename_file">Canvia el nom del fitxer</string>
     <string name="rename_folder">Canvia el nom de la carpeta</string>
@@ -215,21 +233,21 @@
     <string name="access_storage_prompt">Si us plau, concediu accés de la nostra aplicació a tots els vostres fitxers, és possible que no funcioni bé sense això.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
-        <item quantity="other">%d elements</item>
+        <item quantity="other">%d d\'elements</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
-        <item quantity="other">%d elements</item>
+        <item quantity="other">%d d\'elements</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">S\'està suprimint %d element</item>
-        <item quantity="other">S\'estan suprimint %d elements</item>
+        <item quantity="other">S\'estan suprimint %d d\'elements</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contacte</item>
-        <item quantity="other">%d contactes</item>
+        <item quantity="other">%d de contactes</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Seleccioneu l\'emmagatzematge</string>
@@ -254,7 +272,7 @@
     <string name="focal_length">Distància focal</string>
     <string name="exposure_time">Temps d\'exposició</string>
     <string name="iso_speed">Velocitat ISO</string>
-    <string name="f_number">Número F</string>
+    <string name="f_number">Nombre f</string>
     <string name="camera">Càmera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Títol de la cançó</string>
@@ -286,7 +304,7 @@
     <string name="apply_to_all_apps">Aplica els colors a totes les aplicacions Simple</string>
     <string name="app_icon_color_warning">ADVERTÈNCIA: Alguns llançadors no gestionen correctament la personalització de la icona d\'aplicació. En cas que la icona desaparegui, proveu de llançar l\'aplicació mitjançant Google Play o algun giny, si està disponible. Un cop llançat, configureu la icona de color taronja predeterminat #F57C00. És possible que calgui tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
     <string name="share_colors_success">Colors actualitzats correctament. S\'ha afegit un tema nou anomenat «Compartit». Feu-lo servir per actualitzar tots els colors de l\'aplicació en el futur.</string>
-    <string name="shared_theme_note">Tingueu en compte que tot i que utilitzeu la versió Pro de l\'aplicació, encara cal tenir Simple Tank you per motius tècnics. S\'ocupa de la sincronització del color.</string>
+    <string name="shared_theme_note">Tingueu en compte que tot i que utilitzeu la versió Pro de l\'aplicació, encara cal tenir Simple Thank You per motius tècnics. S\'ocupa de la sincronització del color.</string>
     <string name="purchase_thank_you">Si us plau, compreu l\'aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desbloquejar aquesta funció i ajudar al desenvolupament. Gràcies!</string>
     <!-- Themes -->
     <string name="light_theme">Clar</string>
@@ -299,7 +317,7 @@
     <string name="black_white">Blanc i negre</string>
     <string name="custom">Personalitzat</string>
     <string name="shared">Compartit</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Predeterminat del sistema</string>
     <!-- What's new -->
     <string name="whats_new">Què hi ha de nou</string>
     <string name="whats_new_disclaimer">* Aquí només s\'enumeren les actualitzacions més importants. Sempre hi ha també millores petites</string>
@@ -309,6 +327,7 @@
     <string name="rename">Canvia el nom</string>
     <string name="share">Comparteix</string>
     <string name="share_via">Comparteix a través</string>
+    <string name="resize">Redimensiona</string>
     <string name="select_all">Selecciona-ho tot</string>
     <string name="select_text">Selecciona el text</string>
     <string name="hide">Oculta</string>
@@ -323,6 +342,7 @@
     <string name="redo">Refés</string>
     <string name="print">Imprimeix</string>
     <string name="print_pro">Imprimeix (Pro)</string>
+    <string name="shortcut">Drecera</string>
     <string name="create_shortcut">Crea una drecera</string>
     <string name="create_shortcut_pro">Crea una drecera (Pro)</string>
     <string name="add_number_to_contact">Afegeix un número al contacte</string>
@@ -337,6 +357,9 @@
     <string name="send_sms">Envia un SMS</string>
     <string name="send_email">Envia un correu electrònic</string>
     <string name="call">Truca</string>
+    <string name="contact_details">Detalls del contacte</string>
+    <string name="add_contact">Afegeix un contacte</string>
+    <string name="wallpapers">Fons de pantalla</string>
     <!-- Sorting -->
     <string name="sort_by">Ordena per</string>
     <string name="name">Nom</string>
@@ -374,7 +397,7 @@
     <string name="maybe">Potser</string>
     <plurals name="delete_warning">
         <item quantity="one">ADVERTÈNCIA: Se suprimirà %d carpeta</item>
-        <item quantity="other">ADVERTÈNCIA: Se suprimiran %d carpetes</item>
+        <item quantity="other">ADVERTÈNCIA: Se suprimiran %d de carpetes</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -417,118 +440,118 @@
     <string name="hours_letter">h</string>
     <plurals name="seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d segons</item>
+        <item quantity="other">%d de segons</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d minuts</item>
+        <item quantity="other">%d de minuts</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d hores</item>
+        <item quantity="other">%d de hores</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d dies</item>
+        <item quantity="other">%d de dies</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d setmanes</item>
+        <item quantity="other">%d de setmanes</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d mesos</item>
+        <item quantity="other">%d de mesos</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d anys</item>
+        <item quantity="other">%d d\'anys</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d segons</item>
+        <item quantity="other">%d de segons</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d minuts</item>
+        <item quantity="other">%d de minuts</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d hores</item>
+        <item quantity="other">%d d\'hores</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d dies</item>
+        <item quantity="other">%d de dies</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d setmanes</item>
+        <item quantity="other">%d de setmanes</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d mesos</item>
+        <item quantity="other">%d de mesos</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d anys</item>
+        <item quantity="other">%d d\'anys</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d segon abans</item>
-        <item quantity="other">%d segons abans</item>
+        <item quantity="other">%d de segons abans</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minut abans</item>
-        <item quantity="other">%d minuts abans</item>
+        <item quantity="other">%d de minuts abans</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d hora abans</item>
-        <item quantity="other">%d hores abans</item>
+        <item quantity="other">%d d\'hores abans</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d dia abans</item>
-        <item quantity="other">%d dies abans</item>
+        <item quantity="other">%d de dies abans</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d setmana abans</item>
-        <item quantity="other">%d setmanes abans</item>
+        <item quantity="other">%d de setmanes abans</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mes abans</item>
-        <item quantity="other">%d mesos abans</item>
+        <item quantity="other">%d de mesos abans</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d any abans</item>
-        <item quantity="other">%d anys abans</item>
+        <item quantity="other">%d d\'anys abans</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d segons</item>
+        <item quantity="other">%d de segons</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d minuts</item>
+        <item quantity="other">%d de minuts</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d hores</item>
+        <item quantity="other">%d d\'hores</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d dies</item>
+        <item quantity="other">%d de dies</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d setmanes</item>
+        <item quantity="other">%d de setmanes</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d mesos</item>
+        <item quantity="other">%d de mesos</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d anys</item>
+        <item quantity="other">%d d\'anys</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Temps restant fins que soni l\'alarma: \n%s</string>
@@ -607,6 +630,16 @@
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniatures</string>
     <string name="list_view">Vista de llista</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclou</string>
+    <string name="exclude_folder">Exclou la carpeta</string>
+    <string name="excluded_folders">Carpetes excloses</string>
+    <string name="excluded">(exclòs)</string>
+    <string name="manage_excluded_folders">Gestiona les carpetes excloses</string>
+    <string name="remove_all">Elimina-ho tot</string>
+    <string name="remove_all_description">Elimino totes les carpetes de la llista d\'excloses\? Això no eliminarà les carpetes.</string>
+    <string name="temporarily_show_excluded">Mostra temporalment les excloses</string>
+    <string name="stop_showing_excluded">Deixa de mostrar les excloses</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gestiona les pestanyes mostrades</string>
     <string name="default_tab_to_open">Pestanya a obrir en iniciar l\'aplicació</string>
@@ -629,8 +662,8 @@
     <string name="show_the_recycle_bin">Mostra la paperera de reciclatge</string>
     <string name="hide_the_recycle_bin">Oculta la paperera de reciclatge</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Movent %d element a la paperera de reciclatge</item>
-        <item quantity="other">Movent %d elements a la paperera de reciclatge</item>
+        <item quantity="one">S\'està movent %d element a la paperera de reciclatge</item>
+        <item quantity="other">S\'està movent %d d\'elements a la paperera de reciclatge</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">S\'està important…</string>
@@ -737,14 +770,15 @@
     <string name="app_version">Versió de l\'aplicació: %s</string>
     <string name="device_os">SO del dispositiu: %s</string>
     <string name="donate_please">Hola,&lt;br&gt;&lt;br&gt; esperem que gaudiu de l\'aplicació. No conté cap anunci, així que si us plau, ajudeu el seu desenvolupament comprant l\'aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, també evitarà que aquest diàleg es torni a mostrar.&lt;br&gt;&lt;br&gt; Gràcies!</string>
-    <string name="donate_new">Hola,&lt;br&gt;&lt;br&gt;espero que gaudiu de l\'aplicació. No conté anuncis i tampoc es recopilen les vostres dades. Si us plau, doneu suport al seu desenvolupament comprant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank Tou&lt;/a&gt;. També tindreu totes les funcions de l\'aplicació i la personalització del color desbloquejades.&lt;br&gt;&lt;br&gt;Gràcies!</string>
+    <string name="donate_new">Hola,&lt;br&gt;&lt;br&gt;espero que gaudiu de l\'aplicació. No conté anuncis i tampoc es recopilen les vostres dades. Si us plau, doneu suport al seu desenvolupament comprant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank Tou&lt;/a&gt;. També disposareu de totes les funcions de l\'aplicació incloent-hi la personalització del color desbloquejada.&lt;br&gt;&lt;br&gt;Gràcies!</string>
+    <string name="donate_short">Ajudeu-nos comprant la &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, també desbloquejarà totes les funcions de l\'aplicació incloent-hi la personalització del color.</string>
     <string name="purchase">Compra</string>
-    <string name="order_simple_phone">Encarregueu un Simple Phone</string>
+    <string name="get_simple_phone">Encarregueu un Simple Phone</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
     <string name="before_asking_question_read_faq">Abans de fer una pregunta, reviseu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Potser hi és la solució.</string>
     <string name="before_rate_read_faq">Abans de fer una valoració, reviseu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Si teniu problemes, potser hi és la solució.</string>
     <string name="make_sure_latest">Assegureu-vos també que utilitzeu la versió més recent de l\'aplicació.</string>
-    <string name="make_sure_upgrade">Tingueu en compte que aquesta versió de l\'aplicació ja no s\'està desenvolupant, obteniu la Pro per a moltes millores.</string>
+    <string name="make_sure_upgrade">Tingueu en compte que aquesta versió de l\'aplicació ja no s\'està desenvolupant, aconseguiu la versió Pro amb moltes millores.</string>
     <string name="read_it">Llegiu-ho</string>
     <string name="read_faq">Llegiu les preguntes més freqüents</string>
     <string name="rate_us_prompt">Hola,
@@ -775,6 +809,7 @@
     <string name="simple_flashlight">Simple Flashlight</string>
     <string name="simple_gallery">Simple Gallery</string>
     <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
@@ -792,6 +827,7 @@
     <string name="flashlight_short">Llanterna</string>
     <string name="gallery_short">Galeria</string>
     <string name="keyboard_short">Teclat</string>
+    <string name="launcher_short">Llançador</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">Missatges SMS</string>
@@ -818,7 +854,7 @@
     <string name="faq_8_title_commons">Per què he d\'actualitzar a la versió Pro?</string>
     <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que potser heu vist no es corregiran. Tampoc s\'afegiran funcions noves. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners. Es tracta d\'un pagament únic, cosa que significa que un cop que l\'adquiriu, no caldrà tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament es retornaran els diners. Si voleu un reemborsament més endavant, poseu-vos en contacte amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
     <string name="faq_9_title_commons">Com puc seleccionar diversos elements alhora?</string>
-    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. La primera és iniciar el mode de selecció prement (llarg) un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\'elements en els ordinadors amb un ratolí, només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-los. La tercera manera de seleccionar diversos elements consisteix a prémer (llarg) un element, després prémer (llarg) un altre i se selecciona tot el que hi ha entre els dos. Si voleu seleccionar tots els elements; només cal que premeu (llarg) un element i, a continuació, feu clic al comptador d\'elements seleccionats a l\'extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
+    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. La primera és iniciar el mode de selecció prement prolongadament un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\'elements en els ordinadors amb un ratolí, només cal que inicieu el mode de selecció prement prolongadament un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-los. La tercera manera de seleccionar diversos elements consisteix a prémer prolongadament un element, després prémer prolongadament un altre i se seleccionarà tot el que hi ha entre els dos. Si voleu seleccionar tots els elements; només cal que premeu prolongadament un element i, a continuació, feu clic al comptador d\'elements seleccionats a l\'extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
     <string name="faq_10_title_commons">He comprat l\'aplicació, però no la puc baixar en cap altre dispositiu.</string>
     <string name="faq_10_text_commons">Proveu de netejar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
     <!-- Contributors -->
@@ -831,6 +867,7 @@
     <string name="translation_azerbaijani">Àzeri</string>
     <string name="translation_bengali">Bengalí</string>
     <string name="translation_breton">Bretó</string>
+    <string name="translation_bulgarian">Búlgar</string>
     <string name="translation_catalan">Català</string>
     <string name="translation_czech">Txec</string>
     <string name="translation_welsh">Gal·lès</string>
@@ -882,6 +919,7 @@
     <string name="why_upgrade_improved_design">Disseny millorat</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Editor avançat de fotos i vídeos</string>
     <string name="why_upgrade_heic_support">Implementació de fitxers HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Canvi de nom de fitxers per lots avançat</string>
     <string name="why_upgrade_folder_locking">Bloqueig de carpetes individuals</string>

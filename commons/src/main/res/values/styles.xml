@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme.Base" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
@@ -39,6 +39,7 @@
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.Material3.BottomSheetDialogTheme</item>
         <item name="android:forceDarkAllowed">false</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="windowActionModeOverlay">true</item>
@@ -53,6 +54,7 @@
         <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.Material3.BottomSheetDialogTheme</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="windowActionModeOverlay">true</item>
@@ -75,6 +77,7 @@
         <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.App.Button</item>
     </style>
 
     <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
@@ -130,6 +133,7 @@
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="MyWidgetConfigTheme" parent="@style/AppTheme.Base">
@@ -227,13 +231,15 @@
         <item name="android:buttonBarNeutralButtonStyle">@style/MaterialDialogButtonStyle</item>
     </style>
 
-    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.Transparent" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
     </style>
 
     <style name="PinNumberStyle.Base">
@@ -253,6 +259,7 @@
         <item name="android:paddingTop">@dimen/normal_margin</item>
         <item name="android:paddingBottom">@dimen/normal_margin</item>
         <item name="android:background">@drawable/button_background_rounded</item>
+        <item name="android:gravity">center_horizontal</item>
     </style>
 
     <style name="StrokeButtonStyle" parent="@android:style/Widget.TextView">
@@ -263,6 +270,7 @@
         <item name="android:paddingTop">@dimen/activity_margin</item>
         <item name="android:paddingBottom">@dimen/activity_margin</item>
         <item name="android:background">@drawable/button_background_stroke</item>
+        <item name="android:gravity">center_horizontal</item>
     </style>
 
     <style name="Base.Widget.AppCompat.ActionMode" parent="">
@@ -340,14 +348,36 @@
         <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
     </style>
 
+    <style name="AppTheme.Material3.BottomSheetDialogTheme" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="bottomSheetStyle">@style/AppTheme.Material3.BottomSheetModalStyle</item>
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="android:navigationBarColor">@color/you_status_bar_color</item>
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">@color/you_status_bar_color</item>
+    </style>
+
+    <style name="AppTheme.Material3.BottomSheetModalStyle" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/you_background_color</item>
+        <item name="shapeAppearanceOverlay">@style/BottomSheetShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="BottomSheetShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:backgroundDimAmount">0.32</item>
         <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
     </style>
 
     <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bottom_sheet_bg</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="SettingsSectionLabelStyle">
@@ -362,6 +392,7 @@
         <item name="android:clickable">false</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="android:paddingStart">@dimen/medium_margin</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
     </style>
 
     <style name="SettingsTextLabelStyle">

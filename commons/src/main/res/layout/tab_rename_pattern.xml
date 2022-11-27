@@ -4,7 +4,9 @@
     android:id="@+id/rename_items_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_margin">
+    android:paddingStart="@dimen/activity_margin"
+    android:paddingTop="@dimen/activity_margin"
+    android:paddingEnd="@dimen/activity_margin">
 
     <com.simplemobiletools.commons.views.MyTextInputLayout
         android:id="@+id/rename_items_hint"

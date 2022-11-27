@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
+    <string name="back">Retour</string>
     <string name="nothing">Aucun</string>
     <string name="later">Plus tard</string>
     <string name="save_as">Enregistrer sous</string>
@@ -57,20 +58,30 @@
     <string name="seven">Sept</string>
     <string name="eight">Huit</string>
     <string name="nine">Neuf</string>
-    <string name="value">Value</string>
+    <string name="value">Valeur</string>
     <string name="value_cannot_be_empty">La valeur ne peut pas être vide</string>
     <string name="create_new_contact">Créer un nouveau contact</string>
     <string name="add_to_existing_contact">Ajouter à un contact existant</string>
-    <string name="app_corrupt">Appli corrompue</string>
+    <string name="app_corrupt">Application corrompue</string>
     <string name="disclaimer">Avis de non-responsabilité</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="choose_photo">Choisir une photo</string>
+    <string name="choose_video">Choisir une vidéo</string>
+    <string name="choose_contact">Choisir le contact</string>
+    <string name="choose_file">Choisir un fichier</string>
+    <string name="record_audio">Enregistrer un audio</string>
+    <string name="record_video">Enregistrer une vidéo</string>
+    <!-- Events -->
+    <string name="birthday">Date de naissance</string>
+    <string name="anniversary">Autre anniversaire</string>
     <!-- Emails -->
-    <string name="home">Maison</string>
+    <string name="home">Domicile</string>
     <string name="work">Travail</string>
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
     <string name="main_number">Principal</string>
     <string name="work_fax">Télécopieur travail</string>
-    <string name="home_fax">Télécopieur maison</string>
+    <string name="home_fax">Télécopieur domicile</string>
     <string name="pager">Téléavertisseur</string>
     <string name="no_phone_number_found">Aucun numéro de téléphone n\'a été trouvé</string>
     <!-- View types -->
@@ -81,6 +92,9 @@
     <string name="list">Liste</string>
     <string name="increase_column_count">Ajouter une colonne</string>
     <string name="reduce_column_count">Supprimer une colonne</string>
+    <string name="column_count">Nombre de colonnes</string>
+    <string name="portrait_column_count">Nombre de colonnes Portrait</string>
+    <string name="landscape_column_count">Nombre de colonnes Paysage</string>
     <string name="change_cover_image">Modifier l\'image du dossier</string>
     <string name="select_photo">Sélectionner une image</string>
     <!-- Blocked numbers -->
@@ -94,14 +108,16 @@
     <string name="import_blocked_numbers">Importer les numéros bloqués</string>
     <string name="must_make_default_dialer">Cette application doit être l\'application de numérotation par défaut pour utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
-    <string name="block_confirmation">Voulez-vous vraiment bloquer « %s » \?</string>
+    <string name="block_confirmation">Voulez-vous vraiment bloquer "%s" \?</string>
     <string name="block_unknown_calls">Bloquer les appels des contacts non enregistrés</string>
     <string name="block_unknown_messages">Bloquer les messages des contacts non enregistrés</string>
+    <string name="add_blocked_number_helper_text">Saisissez un numéro ou un modèle (par exemple, *12345*, +1*8888) pour bloquer tous les appels et messages provenant de numéros correspondant au modèle.</string>
+    <string name="must_make_default_caller_id_app">Impossible de bloquer les numéros inconnus sans l\'autorisation de l\'appelant.</string>
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>
     <string name="add_to_favorites">Ajouter aux favoris</string>
-    <string name="remove_from_favorites">Supprimer des favoris</string>
+    <string name="remove_from_favorites">Retirer des favoris</string>
     <!-- Search -->
     <string name="search">Recherche</string>
     <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche.</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est nécessaire</string>
     <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est nécessaire</string>
+    <string name="no_post_notifications_permissions">L\'autorisation de publier des notifications est requise</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
     <string name="rename_folder">Renommer le dossier</string>
@@ -209,20 +227,24 @@
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers, elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Suppression d\'%d élément en cours</item>
+        <item quantity="many">Suppression de %d éléments en cours</item>
         <item quantity="other">Suppression de %d éléments en cours</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
+        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <!-- Storages -->
@@ -309,6 +331,7 @@
     <string name="rename">Renommer</string>
     <string name="share">Partager</string>
     <string name="share_via">Partager via</string>
+    <string name="resize">Redimensionner</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="select_text">Sélectionner le texte</string>
     <string name="hide">Cacher</string>
@@ -323,6 +346,7 @@
     <string name="redo">Répéter</string>
     <string name="print">Imprimer</string>
     <string name="print_pro">Imprimer (Pro)</string>
+    <string name="shortcut">Raccourci</string>
     <string name="create_shortcut">Créer un raccourci</string>
     <string name="create_shortcut_pro">Créer un raccourci (Pro)</string>
     <string name="add_number_to_contact">Ajouter un numéro au contact</string>
@@ -337,6 +361,9 @@
     <string name="send_sms">Envoyer un SMS</string>
     <string name="send_email">Envoyer un courriel</string>
     <string name="call">Appeler</string>
+    <string name="contact_details">Détails du contact</string>
+    <string name="add_contact">Ajouter un contact</string>
+    <string name="wallpapers">Fonds d\'écran</string>
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
     <string name="name">Nom</string>
@@ -374,6 +401,7 @@
     <string name="maybe">Peut-être</string>
     <plurals name="delete_warning">
         <item quantity="one">ATTENTION : Vous supprimez %d dossier</item>
+        <item quantity="many">ATTENTION : Vous supprimez %d dossiers</item>
         <item quantity="other">ATTENTION : Vous supprimez %d dossiers</item>
     </plurals>
     <!-- Password protection -->
@@ -413,121 +441,149 @@
     <string name="hours_raw">heures</string>
     <string name="days_raw">jours</string>
     <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
+    <string name="minutes_letter">min</string>
     <string name="hours_letter">h</string>
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d an</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d seconde avant</item>
+        <item quantity="many">%d secondes avant</item>
         <item quantity="other">%d secondes avant</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute avant</item>
+        <item quantity="many">%d minutes avant</item>
         <item quantity="other">%d minutes avant</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d heure avant</item>
+        <item quantity="many">%d heures avant</item>
         <item quantity="other">%d heures avant</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d jour avant</item>
+        <item quantity="many">%d jours avant</item>
         <item quantity="other">%d jours avant</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semaine avant</item>
+        <item quantity="many">%d semaines avant</item>
         <item quantity="other">%d semaines avant</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mois avant</item>
+        <item quantity="many">%d mois avant</item>
         <item quantity="other">%d mois avant</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d an avant</item>
+        <item quantity="many">%d ans avant</item>
         <item quantity="other">%d ans avant</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -608,6 +664,16 @@
     <string name="main_screen">Écran principal</string>
     <string name="thumbnails">Vignettes</string>
     <string name="list_view">Liste</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclure le dossier</string>
+    <string name="exclude_folder">Exclure le dossier</string>
+    <string name="excluded_folders">Dossiers exclus</string>
+    <string name="excluded">(exclu)</string>
+    <string name="manage_excluded_folders">Gérer les dossiers exclus</string>
+    <string name="remove_all">Tout supprimer</string>
+    <string name="remove_all_description">Supprimer tous les dossiers de la liste des exclusions \? Ceci ne supprimera pas les dossiers.</string>
+    <string name="temporarily_show_excluded">Afficher temporairement les exclus</string>
+    <string name="stop_showing_excluded">Arrêter l\'affichage des exclus</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gérer les onglets affichés</string>
     <string name="default_tab_to_open">Onglet à ouvrir au démarrage de l\'application</string>
@@ -631,6 +697,7 @@
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d élément déplacé dans la corbeille</item>
+        <item quantity="many">%d éléments déplacés dans la corbeille</item>
         <item quantity="other">%d éléments déplacés dans la corbeille</item>
     </plurals>
     <!-- Import / Export -->
@@ -744,9 +811,10 @@
             Merci !
         ]]>
     </string>
-    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;J\'espère que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas non plus vos données, soutenez son développement en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Vous aurez également toutes les fonctionnalités de l\'appli et la personnalisation des couleurs débloquées.&lt;br&gt;&lt;br&gt;Merci !</string>
+    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;J\'espère que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas non plus vos données, soutenez son développement en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Vous aurez également toutes les fonctionnalités de l\'appli y compris la personnalisation des couleurs débloquées.&lt;br&gt;&lt;br&gt;Merci !</string>
+    <string name="donate_short">Soutenez-nous en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; s\'il vous plaît, cela débloquera également toutes les fonctionnalités de l\'application y compris la personnalisation des couleurs.</string>
     <string name="purchase">Acheter</string>
-    <string name="order_simple_phone">Commander un Simple Phone</string>
+    <string name="get_simple_phone">Commander un Simple Phone</string>
     <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
     <string name="before_asking_question_read_faq">Avant de poser une question, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
     <string name="before_rate_read_faq">Avant de nous évaluer, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez des problèmes, il est possible que la solution s\'y trouve.</string>
@@ -783,6 +851,7 @@
     <string name="simple_flashlight">Lampe de poche simple</string>
     <string name="simple_gallery">Galerie simple</string>
     <string name="simple_keyboard">Clavier simple</string>
+    <string name="simple_launcher">Lanceur simple</string>
     <string name="simple_music_player">Lecteur de musique simple</string>
     <string name="simple_notes">Notes simple</string>
     <string name="simple_sms_messenger">Messagerie SMS simple</string>
@@ -800,6 +869,7 @@
     <string name="flashlight_short">Lampe de poche</string>
     <string name="gallery_short">Galerie</string>
     <string name="keyboard_short">Clavier</string>
+    <string name="launcher_short">Lanceur</string>
     <string name="music_player_short">Lecteur de musique</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">Messagerie SMS</string>
@@ -848,6 +918,7 @@
     <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgare</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Tchèque</string>
     <string name="translation_welsh">Gallois</string>
@@ -899,6 +970,7 @@
     <string name="why_upgrade_improved_design">Design amélioré</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Éditeur photo et vidéo avancé</string>
     <string name="why_upgrade_heic_support">Support des fichiers HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers par lot</string>
     <string name="why_upgrade_folder_locking">Verrouillage des dossiers individuels</string>

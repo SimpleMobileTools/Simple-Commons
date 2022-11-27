@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Mégse</string>
+    <string name="back">Back</string>
     <string name="nothing">Semmi</string>
     <string name="later">Később</string>
     <string name="save_as">Mentés másként</string>
@@ -12,10 +13,10 @@
     <string name="error">Hiba: %s</string>
     <string name="open_with">Megnyitás ezzel</string>
     <string name="edit_with">Szerkesztés ezzel</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Szerkesztés</string>
     <string name="no_app_found">Nem található érvényes alkalmazás</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Nem található böngésző</string>
+    <string name="no_email_client_found">Nem található e-mail-kliens</string>
     <string name="set_as">Beállítás ennek</string>
     <string name="copy_to_clipboard">Másolás a vágólapra</string>
     <string name="copy_number_to_clipboard">Szám másolása a vágólapra</string>
@@ -44,7 +45,7 @@
     <string name="no_contacts_found">Nem található névjegy</string>
     <string name="request_the_required_permissions">A kívánt jogosultságok igénylése</string>
     <string name="no_access_to_contacts">Az alkalmazás nem tudta elérni a névjegyeit</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Az alkalmazásnak nincs jogosultsága telefonhívást indítani, adja meg az eszközbeállításokban</string>
     <string name="insert_text_here">Illeszben be ide szöveget</string>
     <string name="call_person">%s hívása</string>
     <string name="zero">Nulla</string>
@@ -57,12 +58,22 @@
     <string name="seven">Hét</string>
     <string name="eight">Nyolc</string>
     <string name="nine">Kilenc</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value">Érték</string>
+    <string name="value_cannot_be_empty">Az érték nem lehet üres</string>
     <string name="create_new_contact">Új névjegy hozzáadása</string>
     <string name="add_to_existing_contact">Hozzáadás meglévő névjegyhez</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Sérült alkalmazás</string>
+    <string name="disclaimer">Nyilatkozat</string>
+    <string name="take_photo">Fényképkészítés</string>
+    <string name="choose_photo">Fénykép kiválasztása</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Születésnap</string>
+    <string name="anniversary">Évforduló</string>
     <!-- Emails -->
     <string name="home">Otthon</string>
     <string name="work">Munkahely</string>
@@ -77,10 +88,13 @@
     <string name="change_view_type">Nézettípus módosítása</string>
     <string name="grid">Rács</string>
     <string name="grid_pro">Rács (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Egyenetlen rács</string>
     <string name="list">Lista</string>
     <string name="increase_column_count">Oszlopszám növelése</string>
     <string name="reduce_column_count">Oszlopszám csökkentése</string>
+    <string name="column_count">Oszlopszám</string>
+    <string name="portrait_column_count">Oszlopszám álló módban</string>
+    <string name="landscape_column_count">Oszlopszám fekvő módban</string>
     <string name="change_cover_image">Borítókép módosítása</string>
     <string name="select_photo">Válasszon fényképet</string>
     <!-- Blocked numbers -->
@@ -95,8 +109,10 @@
     <string name="must_make_default_dialer">A letiltott telefonszámok használatához be kell állítani, hogy ez az alkalmazás legyen az alapértelmezett tárcsázó.</string>
     <string name="set_as_default">Beállítás alapértelmezettként</string>
     <string name="block_confirmation">Biztos, hogy letiltja a következőt: „%s”\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
+    <string name="block_unknown_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
+    <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Névjegyek engedély szükséges</string>
     <string name="no_camera_permissions">Kamera engedély szükséges</string>
     <string name="no_audio_permissions">Hang engedély szükséges</string>
+    <string name="no_post_notifications_permissions">Értesítési engedély szükséges</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Fájl átnevezése</string>
     <string name="rename_folder">Mappa átnevezése</string>
@@ -309,6 +327,7 @@
     <string name="rename">Átnevezés</string>
     <string name="share">Megosztás</string>
     <string name="share_via">Megosztva ezzel</string>
+    <string name="resize">Átméretezés</string>
     <string name="select_all">Összes kiválasztása</string>
     <string name="select_text">Szöveg kijelölése</string>
     <string name="hide">Elrejtés</string>
@@ -323,6 +342,7 @@
     <string name="redo">Mégis</string>
     <string name="print">Nyomtatás</string>
     <string name="print_pro">Nyomtatás (Pro)</string>
+    <string name="shortcut">Indító</string>
     <string name="create_shortcut">Indító létrehozása</string>
     <string name="create_shortcut_pro">Indító létrehozása (Pro)</string>
     <string name="add_number_to_contact">Szám hozzáadása névjegyhez</string>
@@ -337,6 +357,9 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
     <string name="name">Név</string>
@@ -607,6 +630,16 @@
     <string name="main_screen">Főképernnyő</string>
     <string name="thumbnails">Bélyegképek</string>
     <string name="list_view">Listanézet</string>
+    <!-- Excluding -->
+    <string name="exclude">Kizárás</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Kizárt mappák</string>
+    <string name="excluded">(kizárt)</string>
+    <string name="manage_excluded_folders">Kizárt mappák kezelése</string>
+    <string name="remove_all">Összes eltávolítása</string>
+    <string name="remove_all_description">Összes mappa eltávolítása a Kizárás listából. Ez nem törli a mappákat.</string>
+    <string name="temporarily_show_excluded">Kihagyottak megjelenítése ideiglenesen</string>
+    <string name="stop_showing_excluded">Kihagyottak megjelenítésének leállítása</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Megjelenített lapok kezelése</string>
     <string name="default_tab_to_open">Alkalmazás indításakor megjelenítendő lap</string>
@@ -741,9 +774,10 @@
             Köszönöm!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Vásárlás</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
     <string name="before_rate_read_faq">Az értékelés előtt nézze meg az alkalmazás beállításait, és olvassa el a gyakran ismételt kérdéseket. Ha problémája van, lehet, hogy a megoldás már ott van.</string>
@@ -779,6 +813,7 @@
     <string name="simple_flashlight">Egyszerű zseblámpa</string>
     <string name="simple_gallery">Egyszerű galéria</string>
     <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Egyszerű zenelejátszó</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Egyszerű SMS üzenetküldő</string>
@@ -796,6 +831,7 @@
     <string name="flashlight_short">Zseblámpa</string>
     <string name="gallery_short">Galéria</string>
     <string name="keyboard_short">Keyboard</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Zenelejátszó</string>
     <string name="notes_short">Jegyzetek</string>
     <string name="sms_messenger_short">SMS üzenetküldő</string>
@@ -835,6 +871,7 @@
     <string name="translation_azerbaijani">Azerbajdzsáni</string>
     <string name="translation_bengali">Bengáli</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Katalán</string>
     <string name="translation_czech">Cseh</string>
     <string name="translation_welsh">Walesi</string>
@@ -886,6 +923,7 @@
     <string name="why_upgrade_improved_design">Továbbfejlesztett megjelenés</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fejlett képszerkesztő</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF-fájlok támogatása</string>
     <string name="why_upgrade_batch_renaming">Fejlett tömeges fájlátnevezés</string>
     <string name="why_upgrade_folder_locking">Mappák egyenkénti zárolása</string>

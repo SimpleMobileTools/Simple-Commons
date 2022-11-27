@@ -2,7 +2,10 @@ package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
+import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.models.SimpleListItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,6 +42,20 @@ class MainActivity : BaseSimpleActivity() {
                 media_refresh_layout.isRefreshing = false
             }, 1000L)
         }*/
+    }
+
+    private fun launchBottomSheetDemo() {
+        BottomSheetChooserDialog.createChooser(
+            fragmentManager = supportFragmentManager,
+            title = R.string.please_select_destination,
+            items = arrayOf(
+                SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
+                SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
+                SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
+            )
+        ) {
+            toast("Clicked ${it.id}")
+        }
     }
 
     override fun onResume() {

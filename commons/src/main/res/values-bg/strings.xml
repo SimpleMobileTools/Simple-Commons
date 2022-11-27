@@ -2,10 +2,11 @@
 <resources>
     <string name="ok">Добре</string>
     <string name="cancel">Отказ</string>
+    <string name="back">Back</string>
     <string name="nothing">Нищо</string>
     <string name="later">По-късно</string>
     <string name="save_as">Запазване като</string>
-    <string name="file_saved">Файлът е запазен</string>
+    <string name="file_saved">Файлът е запазен успешно</string>
     <string name="invalid_file_format">Невалиден файлов формат</string>
     <string name="out_of_memory_error">Грешка от липса на памет</string>
     <string name="an_error_occurred">Възникна грешка: %s</string>
@@ -44,8 +45,8 @@
     <string name="number">Номер</string>
     <string name="no_contacts_found">Няма намерени контакти</string>
     <string name="request_the_required_permissions">Поискване на необходимите разрешения</string>
-    <string name="no_access_to_contacts">Неуспешен достъп до контактите Ви</string>
-    <string name="no_phone_call_permission">Приложението няма позволение за започване на телефонни обаждания, разрешете в настройките на устройството</string>
+    <string name="no_access_to_contacts">Приложението няма достъп до контактите ви</string>
+    <string name="no_phone_call_permission">Приложението няма разрешение за иницииране на телефонни обаждания, моля, дайте го в настройките на устройството</string>
     <string name="insert_text_here">Вмъкване на текст тук</string>
     <string name="call_person">Повикване %s</string>
     <string name="zero">Нула</string>
@@ -58,12 +59,22 @@
     <string name="seven">Седем</string>
     <string name="eight">Осем</string>
     <string name="nine">Девет</string>
-    <string name="value">Value</string>
+    <string name="value">Стойност</string>
     <string name="value_cannot_be_empty">Стойността не може да бъде празна</string>
     <string name="create_new_contact">Създаване на контакт</string>
     <string name="add_to_existing_contact">Добавяне към съществуващ контакт</string>
     <string name="app_corrupt">Развалено приложение</string>
     <string name="disclaimer">Внимание</string>
+    <string name="take_photo">Снимане</string>
+    <string name="choose_photo">Избор на снимка</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Рожден ден</string>
+    <string name="anniversary">Годишнина</string>
     <!-- Emails -->
     <string name="home">Начало</string>
     <string name="work">Работа</string>
@@ -82,6 +93,9 @@
     <string name="list">Списък</string>
     <string name="increase_column_count">Увеличаване на броя на колоните</string>
     <string name="reduce_column_count">Намаляване на броя на колоните</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Промяна на корицата</string>
     <string name="select_photo">Избор на снимка</string>
     <!-- Blocked numbers -->
@@ -93,11 +107,13 @@
     <string name="blocked_numbers">Блокирани номера</string>
     <string name="export_blocked_numbers">Експортиране на блокирани номера</string>
     <string name="import_blocked_numbers">Внасяне на блокирани номера</string>
-    <string name="must_make_default_dialer">Трябва да направите приложението за набиране по подразбиране, за да се възползвате от блокираните номера.</string>
+    <string name="must_make_default_dialer">За да използвате блокираните номера, трябва да настроите това приложение като приложение за набиране по подразбиране.</string>
     <string name="set_as_default">Задаване по подразбиране</string>
     <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
     <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
     <string name="block_unknown_messages">Блокиране на съобщения от незапазени контакти</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Любими</string>
     <string name="add_favorites">Добави любими</string>
@@ -105,7 +121,7 @@
     <string name="remove_from_favorites">Премахни от любимите</string>
     <!-- Search -->
     <string name="search">Търсене</string>
-    <string name="type_2_characters">Въведете поне 2 символа, за да започне търсенето.</string>
+    <string name="type_2_characters">Въведете поне 2 символа, за да започнете търсенето.</string>
     <!-- Filters -->
     <string name="filter">Филтър</string>
     <string name="filter_pro">Филтър (Про)</string>
@@ -116,6 +132,8 @@
     <string name="no_contacts_permission">Необходимо е разрешение за контакти</string>
     <string name="no_camera_permissions">Необходимо е разрешение за камера</string>
     <string name="no_audio_permissions">Необходимо е разрешение за аудио</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Преименуване на файл</string>
     <string name="rename_folder">Преименуване на папка</string>
@@ -146,7 +164,7 @@
     <string name="filename_without_txt">Име на файл (без .txt)</string>
     <string name="filename_without_json">Име на файл (без .json)</string>
     <string name="filename_without_zip">Име на файл (без .zip)</string>
-    <string name="cannot_hide_files">От Android 11 вече не можете да скривате файлове и папки по този начин</string>
+    <string name="cannot_hide_files">От Android 11 нататък вече не можете да скривате файлове и папки по този начин</string>
     <!-- Copy / Move -->
     <string name="copy">Копиране</string>
     <string name="move">Преместване</string>
@@ -157,7 +175,7 @@
     <string name="destination">Дестинация</string>
     <string name="select_destination">Избор на дестинация</string>
     <string name="click_select_destination">Кликнете тук, за избор на дестинация</string>
-    <string name="invalid_destination">Не можа да се запише на избраната дестинация</string>
+    <string name="invalid_destination">Не можа да се пише на избраното местоназначение</string>
     <string name="please_select_destination">Моля, изберете дестинация</string>
     <string name="source_and_destination_same">Източникът и дестинацията не могат да бъдат еднакви</string>
     <string name="copy_failed">Неуспешно копиране на файловете</string>
@@ -185,7 +203,7 @@
     <string name="create_new_folder">Създаване на нова папка</string>
     <string name="name_taken">Вече съществува файл или папка с това име</string>
     <string name="invalid_name">Името съдържа непозволени знаци</string>
-    <string name="empty_name">Въведете име</string>
+    <string name="empty_name">Моля, въведете име</string>
     <string name="unknown_error_occurred">Възникна неизвестна грешка</string>
     <!-- File operation conflicts -->
     <string name="file_already_exists">Файл \"%s\" вече съществува</string>
@@ -311,6 +329,7 @@
     <string name="rename">Преименувай</string>
     <string name="share">Сподели</string>
     <string name="share_via">Сподели чрез</string>
+    <string name="resize">Преоразмеряване</string>
     <string name="select_all">Избери всички</string>
     <string name="select_text">Избери текст</string>
     <string name="hide">Скрий</string>
@@ -325,6 +344,7 @@
     <string name="redo">Върни</string>
     <string name="print">Печат</string>
     <string name="print_pro">Печат (Про)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">Създай пряк път</string>
     <string name="create_shortcut_pro">Създай пряк път (Про)</string>
     <string name="add_number_to_contact">Добави номера към контакт</string>
@@ -339,6 +359,9 @@
     <string name="send_sms">Изпрати SMS</string>
     <string name="send_email">Изпрати емейл</string>
     <string name="call">Повикване</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Сортиране по</string>
     <string name="name">Име</string>
@@ -612,6 +635,16 @@
     <string name="main_screen">Начален екран</string>
     <string name="thumbnails">Миниатюри</string>
     <string name="list_view">Изглед на списък</string>
+    <!-- Excluding -->
+    <string name="exclude">Изключение</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Изключени папки</string>
+    <string name="excluded">(изключено)</string>
+    <string name="manage_excluded_folders">Управление на изключените папки</string>
+    <string name="remove_all">Премахване на всички</string>
+    <string name="remove_all_description">Премахване на всички папки от списъка с изключените\? Това няма да изтрие папките.</string>
+    <string name="temporarily_show_excluded">Временно показване на изключени</string>
+    <string name="stop_showing_excluded">Стоп показване на изключени</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Управление на показаните раздели</string>
     <string name="default_tab_to_open">Раздел за отваряне при стартиране на приложението</string>
@@ -743,9 +776,10 @@
     <string name="app_version">Версия на приложението: %s</string>
     <string name="device_os">ОС на устройството: %s</string>
     <string name="donate_please">Здравей,&lt;br&gt;&lt;br&gt; надявам се, че се наслаждаваш на приложението. То не съдържа реклами, моля, подкрепете разработката му, като закупите приложението &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Обикновено Благодаря&lt;/a&gt;. То ще предотврати този диалог да се покаже отново.&lt;br&gt;&lt;br&gt; Благодаря!</string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Купи</string>
-    <string name="order_simple_phone">Поръчване на Обикновен Смартфон</string>
+    <string name="get_simple_phone">Поръчване на Обикновен Смартфон</string>
     <string name="update_thank_you">Моля, обноврте Обикновено Благодаря до последното издание</string>
     <string name="before_asking_question_read_faq">Преди да зададете въпрос, моля, проверете настройките на приложението и първо прочетете често задаваните въпроси. Може би решението може да бъде намерено там.</string>
     <string name="before_rate_read_faq">Преди да ни оцените, моля, проверете настройките на приложението и първо прочетете често задаваните въпроси. Ако имате някакви проблеми, може би решението може да бъде намерено там.</string>
@@ -791,6 +825,7 @@
     <string name="simple_flashlight">Обикновено Фенерче</string>
     <string name="simple_gallery">Обикновена Галерия</string>
     <string name="simple_keyboard">Обикновена Клавиатура</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Обикновен Музикален Плейър</string>
     <string name="simple_notes">Обикновени Бележки</string>
     <string name="simple_sms_messenger">Обикновени SMS Съобщения</string>
@@ -808,6 +843,7 @@
     <string name="flashlight_short">Фенерче</string>
     <string name="gallery_short">Галерия</string>
     <string name="keyboard_short">Клавиатура</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Музикален Плейър</string>
     <string name="notes_short">Бележки</string>
     <string name="sms_messenger_short">SMS Съобщения</string>
@@ -860,6 +896,7 @@
     <string name="translation_azerbaijani">Азербайджански</string>
     <string name="translation_bengali">Бенгалски</string>
     <string name="translation_breton">Бретански</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Каталонски</string>
     <string name="translation_czech">Чешки</string>
     <string name="translation_welsh">Уелски</string>
@@ -911,6 +948,7 @@
     <string name="why_upgrade_improved_design">Подобрен дизайн</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Редактор на снимки за напреднали</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">Поддръжка на HEIC/HEIF файлове</string>
     <string name="why_upgrade_batch_renaming">Групово преименуване на файлове за напреднали</string>
     <string name="why_upgrade_folder_locking">Индивидуално заключване на папките</string>

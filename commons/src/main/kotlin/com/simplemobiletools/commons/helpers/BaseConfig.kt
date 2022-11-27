@@ -144,7 +144,7 @@ open class BaseConfig(val context: Context) {
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
-        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getInteger(R.integer.default_widget_text_color))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
     // hidden folder visibility protection

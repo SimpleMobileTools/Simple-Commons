@@ -24,10 +24,12 @@ fun View.beGone() {
 }
 
 fun View.onGlobalLayout(callback: () -> Unit) {
-    viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+    viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
-            viewTreeObserver.removeOnGlobalLayoutListener(this)
-            callback()
+            if (viewTreeObserver != null) {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                callback()
+            }
         }
     })
 }

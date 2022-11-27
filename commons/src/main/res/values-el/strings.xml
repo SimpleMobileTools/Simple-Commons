@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Ακύρωση</string>
+    <string name="back">Πίσω</string>
     <string name="nothing">Τίποτα</string>
     <string name="later">Αργότερα</string>
     <string name="save_as">Αποθήκευση ως</string>
@@ -63,6 +64,16 @@
     <string name="add_to_existing_contact">Προσθήκη σε μια υπάρχουσα Επαφή</string>
     <string name="app_corrupt">Κατεστραμμένη Εφαρμογή</string>
     <string name="disclaimer">Αποποίηση ευθύνης</string>
+    <string name="take_photo">Λήψη φωτογραφίας</string>
+    <string name="choose_photo">Επιλογή φωτογραφίας</string>
+    <string name="choose_video">Επιλογή βίντεο</string>
+    <string name="choose_contact">Επιλογή επαφής</string>
+    <string name="choose_file">Επιλογή αρχείου</string>
+    <string name="record_audio">Εγγραφή ήχου</string>
+    <string name="record_video">Εγγραφή βίντεο</string>
+    <!-- Events -->
+    <string name="birthday">Γενέθλια</string>
+    <string name="anniversary">Επέτειος</string>
     <!-- Emails -->
     <string name="home">Οικία</string>
     <string name="work">Εργασία</string>
@@ -81,6 +92,9 @@
     <string name="list">Λίστα</string>
     <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
     <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
+    <string name="column_count">Αρίθμηση στηλών</string>
+    <string name="portrait_column_count">Αρίθμηση στηλών πορτρέτου</string>
+    <string name="landscape_column_count">Αρίθμηση στηλών τοπίου</string>
     <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
     <string name="select_photo">Επιλογή φωτογραφίας</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">Σίγουρα να αποκλειστεί ο \"%s\"?</string>
     <string name="block_unknown_calls">Αποκλεισμός κλήσεων από μη αποθηκευμένες επαφές</string>
     <string name="block_unknown_messages">Αποκλεισμός μηνυμάτων από μη αποθηκευμένες επαφές</string>
+    <string name="add_blocked_number_helper_text">Εισάγετε έναν αριθμό ή ένα μοτίβο (π.χ. *12345*, +1*8888) για να μπλοκάρετε όλες τις κλήσεις και τα μηνύματα από αριθμούς που αντιστοιχούν στο μοτίβο.</string>
+    <string name="must_make_default_caller_id_app">Αδύνατη η φραγή αγνώστων αριθμών χωρίς άδεια ID κλήσεων.</string>
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
     <string name="add_favorites">Προσθήκη αγαπημένων</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Απαιτείται άδεια Επαφών</string>
     <string name="no_camera_permissions">Απαιτείται άδεια Κάμερας</string>
     <string name="no_audio_permissions">Απαιτείται άδεια Ήχου</string>
+    <string name="no_post_notifications_permissions">Απαιτείται άδεια για την ανάρτηση ειδοποιήσεων</string>
+    <string name="no_permission">Χωρίς άδεια</string>
     <!-- Renaming -->
     <string name="rename_file">Μετονομασία αρχείου</string>
     <string name="rename_folder">Μετονομασία φακέλου</string>
@@ -309,6 +327,8 @@
     <string name="rename">Μετονομασία</string>
     <string name="share">Κοινόχρηστο</string>
     <string name="share_via">Κοινόχρηστο μέσω</string>
+
+    <string name="resize">Αλλαγή μεγέθους</string>
     <string name="select_all">Επιλογή όλων</string>
     <string name="select_text">Επιλογή κειμένου</string>
     <string name="hide">Απόκρυψη</string>
@@ -323,9 +343,10 @@
     <string name="redo">Επανάληψη</string>
     <string name="print">Εκτύπωση</string>
     <string name="print_pro">Εκτύπωση (Pro)</string>
+    <string name="shortcut">Συντόμευση</string>
     <string name="create_shortcut">Δημιουργία συντόμευσης</string>
     <string name="create_shortcut_pro">Δημιουργία συντόμευσης (Pro)</string>
-    <string name="add_number_to_contact">Προσθήκη αριθμού επαφής</string>
+    <string name="add_number_to_contact">Προσθήκη αριθμού στις επαφές</string>
     <string name="view_contact_details">Προβολή λεπτομερειών επαφής</string>
     <string name="call_from_sim_1">Κλήση απο SIM 1</string>
     <string name="call_from_sim_2">Κλήση απο SIM 2</string>
@@ -337,6 +358,9 @@
     <string name="send_sms">Αποστολή SMS</string>
     <string name="send_email">Αποστολή email</string>
     <string name="call">Κλήση</string>
+    <string name="contact_details">Στοιχεία επαφής</string>
+    <string name="add_contact">Προσθήκη επαφής</string>
+    <string name="wallpapers">Ταπετσαρίες</string>
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>
@@ -368,7 +392,7 @@
     <string name="are_you_sure_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το στοιχείο?</string>
     <string name="are_you_sure_recycle_bin">Είστε βέβαιοι ότι θέλετε να μετακινήσετε αυτό το στοιχείο στον κάδο ανακύκλωσης?</string>
     <string name="do_not_ask_again">Μην ξαναερωτηθώ αυτήν την περίοδο</string>
-    <string name="do_not_show_again">Να μην εμφανιστεί ξανά</string>
+    <string name="do_not_show_again">Χωρίς επανεμφάνιση</string>
     <string name="yes">Ναί</string>
     <string name="no">Όχι</string>
     <string name="maybe">Ίσως</string>
@@ -590,7 +614,7 @@
     <string name="import_settings">Εισαγωγή ρυθμίσεων</string>
     <string name="settings_exported_successfully">Επιτυχής εξαγωγή ρυθμίσεων</string>
     <string name="settings_imported_successfully">Επιτυχής εισαγωγή ρυθμίσεων</string>
-    <string name="start_name_with_surname">Εμφάνιση πρώτα το επώνυμο</string>
+    <string name="start_name_with_surname">Εμφάνιση πρώτα του επώνυμου</string>
     <string name="clear_cache">Καθαρισμός cache</string>
     <string name="show_call_confirmation_dialog">Εμφάνιση διαλόγου επιβεβαίωσης πριν από την έναρξη μιας κλήσης</string>
     <!-- Setting sections -->
@@ -607,6 +631,16 @@
     <string name="main_screen">Αρχική οθόνη</string>
     <string name="thumbnails">Μικρογραφίες</string>
     <string name="list_view">Προβολή Λίστας</string>
+    <!-- Excluding -->
+    <string name="exclude">Εξαίρεση</string>
+    <string name="exclude_folder">Εξαίρεση φακέλου</string>
+    <string name="excluded_folders">Εξαίρεση φακέλων</string>
+    <string name="excluded">(εξαιρούνται)</string>
+    <string name="manage_excluded_folders">Διαχείριση εξαιρεμένων φακέλων</string>
+    <string name="remove_all">Διαγραφή όλων</string>
+    <string name="remove_all_description">Να αφαιρεθούν όλοι οι φάκελοι από την λίστα των εξαιρεμένων; Αυτό δεν θα διαγράψει τους φακέλους.</string>
+    <string name="temporarily_show_excluded">Προσωρινή εμφάνιση αποκλεισμένων</string>
+    <string name="stop_showing_excluded">Παύση εμφάνισης αποκλεισμένων</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
     <string name="default_tab_to_open">Άνοιγμα καρτέλας κατά την έναρξη της εφαρμογής</string>
@@ -742,8 +776,9 @@
         ]]>
     </string>
     <string name="donate_new">Γειά σας,&lt;br&gt;&lt;br&gt;ελπίζω να απολαμβάνετε την εφαρμογή. Δεν περιέχει διαφημίσεις και δεν συλλέγουμε τα δεδομένα σας, παρακαλούμε υποστηρίξτε την ανάπτυξή της με την αγορά της &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Απλά Σας Ευχαριστούμε&lt;/a&gt;. Επίσης, θα έχετε ξεκλειδώσει όλες τις λειτουργίες της και την προσαρμογή των χρωμάτων.&lt;br&gt;&lt;br&gt;Σας ευχαριστώ!</string>
+    <string name="donate_short">Υποστηρίξτε μας αγοράζοντας την &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Απλά Σας Ευχαριστούμε&lt;/a&gt; παρακαλώ, θα ξεκλειδώσει επίσης όλες τις λειτουργίες της εφαρμογής και την προσαρμογή χρωμάτων.</string>
     <string name="purchase">Αγορά</string>
-    <string name="order_simple_phone">Αγορά Simple Phone</string>
+    <string name="get_simple_phone">Αγορά Simple Phone</string>
     <string name="update_thank_you">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
     <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση υπάρχει εκεί.</string>
     <string name="before_rate_read_faq">Πριν μας αξιολογήσετε, ελέγξτε τις ρυθμίσεις εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Αν έχετε προβλήματα, ίσως η λύση υπάρχει εκεί.</string>
@@ -780,6 +815,7 @@
     <string name="simple_flashlight">Απλός Φακός</string>
     <string name="simple_gallery">Απλή Συλλογή</string>
     <string name="simple_keyboard">Απλό Πληκτρολόγιο</string>
+    <string name="simple_launcher">Απλός Εκκινητής</string>
     <string name="simple_music_player">Απλός Music Player</string>
     <string name="simple_notes">Απλές Σημειώσεις</string>
     <string name="simple_sms_messenger">Απλός SMS Messenger</string>
@@ -797,6 +833,7 @@
     <string name="flashlight_short">Φακός</string>
     <string name="gallery_short">Συλλογή</string>
     <string name="keyboard_short">Πληκτρολόγιο</string>
+    <string name="launcher_short">Εκκινητής</string>
     <string name="music_player_short">Μουσική</string>
     <string name="notes_short">Σημειώσεις</string>
     <string name="sms_messenger_short">Μηνύματα SMS</string>
@@ -857,6 +894,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -908,6 +946,7 @@
     <string name="why_upgrade_improved_design">Βελτιωμένος σχεδιασμός</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Προηγμένος επεξεργαστής φωτογραφιών</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Προηγμένος επεξεργαστής Φώτο &amp; Βίντεο</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF υποστήριξη αρχείων</string>
     <string name="why_upgrade_batch_renaming">Προηγμένη μετονομασία αρχείων δέσμης</string>
     <string name="why_upgrade_folder_locking">Κλείδωμα μεμονωμένων φακέλων</string>

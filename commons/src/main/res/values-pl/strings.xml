@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Anuluj</string>
+    <string name="back">Wstecz</string>
     <string name="nothing">Nic</string>
     <string name="later">Później</string>
     <string name="save_as">Zapisz jako</string>
@@ -63,6 +64,16 @@
     <string name="add_to_existing_contact">Dodaj do istniejącego kontaktu</string>
     <string name="app_corrupt">Aplikacja uszkodzona</string>
     <string name="disclaimer">Uwaga</string>
+    <string name="take_photo">Zrób zdjęcie</string>
+    <string name="choose_photo">Wybierz zdjęcie</string>
+    <string name="choose_video">Wybierz wideo</string>
+    <string name="choose_contact">Wybierz kontakt</string>
+    <string name="choose_file">Wybierz plik</string>
+    <string name="record_audio">Nagraj dźwięk</string>
+    <string name="record_video">Nagraj wideo</string>
+    <!-- Events -->
+    <string name="birthday">Urodziny</string>
+    <string name="anniversary">Rocznica</string>
     <!-- Emails -->
     <string name="home">Domowy</string>
     <string name="work">Służbowy</string>
@@ -81,6 +92,9 @@
     <string name="list">Lista</string>
     <string name="increase_column_count">Zwiększ liczbę kolumn</string>
     <string name="reduce_column_count">Zmniejsz liczbę kolumn</string>
+    <string name="column_count">Liczba kolumn</string>
+    <string name="portrait_column_count">Liczba kolumn w trybie pionowym</string>
+    <string name="landscape_column_count">Liczba kolumn w trybie poziomym</string>
     <string name="change_cover_image">Zmień okładkę</string>
     <string name="select_photo">Wybierz zdjęcie</string>
     <!-- Blocked numbers -->
@@ -92,11 +106,13 @@
     <string name="blocked_numbers">Zablokowane numery</string>
     <string name="export_blocked_numbers">Eksportuj zablokowane numery</string>
     <string name="import_blocked_numbers">Importuj zablokowane numery</string>
-    <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby móc korzystać z funkcji blokowania numerów.</string>
+    <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby blokować numery.</string>
     <string name="set_as_default">Ustaw jako domyślną</string>
     <string name="block_confirmation">Czy zablokować „%s”\?</string>
     <string name="block_unknown_calls">Blokuj połączenia od niezapisanych kontaktów</string>
     <string name="block_unknown_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
+    <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
+    <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Wymagane jest uprawnienie „Kontakty”</string>
     <string name="no_camera_permissions">Wymagane jest uprawnienie „Aparat”</string>
     <string name="no_audio_permissions">Wymagane jest uprawnienie „Mikrofon”</string>
+    <string name="no_post_notifications_permissions">Wymagane jest uprawnienie „Powiadomienia”</string>
+    <string name="no_permission">Brak uprawnienia</string>
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę pliku</string>
     <string name="rename_folder">Zmień nazwę folderu</string>
@@ -133,7 +151,7 @@
     <string name="prepend_filenames">Poprzedź nazwy plików</string>
     <string name="append_filenames">Dołącz do nazw plików</string>
     <string name="simple_renaming">Prosta zmiana nazwy</string>
-    <string name="pattern_renaming">Wzór</string>
+    <string name="pattern_renaming">Wzorzec</string>
     <string name="string_to_add">Ciąg do dodania</string>
     <string name="rename_date_time_pattern">%Y — rok\n%M — miesiąc\n%D — dzień\n%h — godzina\n%m — minuta\n%s — sekunda\n%i — numer rosnący od 1</string>
     <string name="filename_without_txt">Nazwa pliku (bez .txt)</string>
@@ -151,7 +169,7 @@
     <string name="select_destination">Wybierz miejsce docelowe</string>
     <string name="click_select_destination">Naciśnij tutaj, aby wybrać miejsce docelowe</string>
     <string name="invalid_destination">Nie udało się zapisać w wybranym miejscu</string>
-    <string name="please_select_destination">Wybierz miejsce docelowe</string>
+    <string name="please_select_destination">Wybierz cel</string>
     <string name="source_and_destination_same">Miejsca źródłowe i docelowe nie mogą być takie same</string>
     <string name="copy_failed">Nie udało się skopiować plików</string>
     <string name="copying">Kopiowanie…</string>
@@ -210,12 +228,14 @@
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="few">%d elementy</item>
+        <item quantity="many">%d elementów</item>
         <item quantity="other">%d elementów</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
         <item quantity="few">%d elementy</item>
+        <item quantity="many">%d elementów</item>
         <item quantity="other">%d elementów</item>
     </plurals>
     <plurals name="deleting_items">
@@ -228,6 +248,7 @@
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
         <item quantity="few">%d kontakty</item>
+        <item quantity="many">%d kontaktów</item>
         <item quantity="other">%d kontaktów</item>
     </plurals>
     <!-- Storages -->
@@ -309,6 +330,7 @@
     <string name="rename">Zmień nazwę</string>
     <string name="share">Udostępnij</string>
     <string name="share_via">Udostępnij w</string>
+    <string name="resize">Zmień rozmiar</string>
     <string name="select_all">Zaznacz wszystko</string>
     <string name="select_text">Zaznacz tekst</string>
     <string name="hide">Ukryj</string>
@@ -323,6 +345,7 @@
     <string name="redo">Ponów</string>
     <string name="print">Drukuj</string>
     <string name="print_pro">Drukuj (Pro)</string>
+    <string name="shortcut">Skrót</string>
     <string name="create_shortcut">Utwórz skrót</string>
     <string name="create_shortcut_pro">Utwórz skrót (Pro)</string>
     <string name="add_number_to_contact">Dodaj numer do kontaktu</string>
@@ -337,6 +360,9 @@
     <string name="send_sms">Wyślij SMS-a</string>
     <string name="send_email">Wyślij e-mail</string>
     <string name="call">Zadzwoń</string>
+    <string name="contact_details">Szczegóły kontaktu</string>
+    <string name="add_contact">Dodaj kontakt</string>
+    <string name="wallpapers">Tapety</string>
     <!-- Sorting -->
     <string name="sort_by">Sortuj według</string>
     <string name="name">Nazwa</string>
@@ -375,6 +401,7 @@
     <plurals name="delete_warning">
         <item quantity="one">UWAGA: Usuwasz %d folder</item>
         <item quantity="few">UWAGA: Usuwasz %d foldery</item>
+        <item quantity="many">UWAGA: Usuwasz %d folderów</item>
         <item quantity="other">UWAGA: Usuwasz %d folderów</item>
     </plurals>
     <!-- Password protection -->
@@ -419,16 +446,19 @@
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuta</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d godzina</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="days">
@@ -440,32 +470,38 @@
     <plurals name="weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundę</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minutę</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d godzinę</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="in_days">
@@ -477,32 +513,38 @@
     <plurals name="in_weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekundę przed</item>
         <item quantity="few">%d sekundy przed</item>
+        <item quantity="many">%d sekund przed</item>
         <item quantity="other">%d sekund przed</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minutę przed</item>
         <item quantity="few">%d minuty przed</item>
+        <item quantity="many">%d minut przed</item>
         <item quantity="other">%d minut przed</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d godzinę przed</item>
         <item quantity="few">%d godziny przed</item>
+        <item quantity="many">%d godzin przed</item>
         <item quantity="other">%d godzin przed</item>
     </plurals>
     <plurals name="days_before">
@@ -514,32 +556,38 @@
     <plurals name="weeks_before">
         <item quantity="one">%d tydzień przed</item>
         <item quantity="few">%d tygodnie przed</item>
+        <item quantity="many">%d tygodni przed</item>
         <item quantity="other">%d tygodni przed</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d miesiąc przed</item>
         <item quantity="few">%d miesiące przed</item>
+        <item quantity="many">%d miesięcy przed</item>
         <item quantity="other">%d miesięcy przed</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d rok przed</item>
         <item quantity="few">%d lata przed</item>
+        <item quantity="many">%d lat przed</item>
         <item quantity="other">%d lat przed</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekundę</item>
         <item quantity="few">%d sekundy</item>
+        <item quantity="many">%d sekund</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minutę</item>
         <item quantity="few">%d minuty</item>
+        <item quantity="many">%d minut</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d godzinę</item>
         <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
         <item quantity="other">%d godzin</item>
     </plurals>
     <plurals name="by_days">
@@ -551,16 +599,19 @@
     <plurals name="by_weeks">
         <item quantity="one">%d tydzień</item>
         <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
         <item quantity="other">%d tygodni</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d miesiąc</item>
         <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
         <item quantity="other">%d miesięcy</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
         <item quantity="other">%d lat</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -573,7 +624,7 @@
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Drzemka</string>
-    <string name="dismiss">Wyłącz</string>
+    <string name="dismiss">Odrzuć</string>
     <string name="no_reminder">Brak przypomnienia</string>
     <string name="at_start">Przy rozpoczęciu</string>
     <string name="system_sounds">Dźwięki systemowe</string>
@@ -640,6 +691,16 @@
     <string name="main_screen">Ekran główny</string>
     <string name="thumbnails">Miniaturki</string>
     <string name="list_view">Widok listy</string>
+    <!-- Excluding -->
+    <string name="exclude">Wyklucz</string>
+    <string name="exclude_folder">Wyklucz folder</string>
+    <string name="excluded_folders">Wykluczone foldery</string>
+    <string name="excluded">(wykluczone)</string>
+    <string name="manage_excluded_folders">Zarządzaj wykluczonymi folderami</string>
+    <string name="remove_all">Usuń wszystko</string>
+    <string name="remove_all_description">Czy usunąć wszystkie foldery z listy wykluczonych\? Nie spowoduje to fizycznego usunięcia folderów.</string>
+    <string name="temporarily_show_excluded">Tymczasowo pokaż wykluczone foldery</string>
+    <string name="stop_showing_excluded">Przestań pokazywać wykluczone foldery</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Zarządzaj pokazywanymi kartami</string>
     <string name="default_tab_to_open">Karta otwierana przy uruchomieniu aplikacji</string>
@@ -778,9 +839,10 @@
             Dziękujemy!
         ]]>
     </string>
-    <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji i dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
+    <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
+    <string name="donate_short">Wesprzyj nas, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co również odblokuje wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.</string>
     <string name="purchase">Kup</string>
-    <string name="order_simple_phone">Zamów urządzenie Prosty Telefon</string>
+    <string name="get_simple_phone">Zamów urządzenie Prosty Telefon</string>
     <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, najpierw sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Może znajduje się tam rozwiązanie.</string>
     <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może jest tam rozwiązanie.</string>
@@ -815,6 +877,7 @@
     <string name="simple_flashlight">Prosta latarka</string>
     <string name="simple_gallery">Prosta galeria</string>
     <string name="simple_keyboard">Prosta klawiatura</string>
+    <string name="simple_launcher">Prosty launcher</string>
     <string name="simple_music_player">Prosty odtwarzacz muzyki</string>
     <string name="simple_notes">Proste notatki</string>
     <string name="simple_sms_messenger">Proste wiadomości SMS</string>
@@ -832,6 +895,7 @@
     <string name="flashlight_short">Latarka</string>
     <string name="gallery_short">Galeria</string>
     <string name="keyboard_short">Klawiatura</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Odtwarzacz muzyki</string>
     <string name="notes_short">Notatki</string>
     <string name="sms_messenger_short">Wiadomości SMS</string>
@@ -865,7 +929,7 @@
     <string name="faq_7_title_commons">Pieniądze zostały odjęte z mojego konta bankowego, ale nie mogę pobrać aplikacji. Co mogę zrobić?</string>
     <string name="faq_7_text_commons">Płatności są w pełni obsługiwane przez Google, ich system szwankuje od czasu do czasu. Wystarczy wyczyścić pamięć podręczną aplikacji Google Play i zrestartować urządzenie, a następnie ponowić próbę pobrania.</string>
     <string name="faq_8_title_commons">Dlaczego powinienem uaktualnić do wersji Pro?</string>
-    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś(-aś), nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał(a) płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
+    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś(-aś), nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał(a) płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a go otrzymasz.</string>
     <string name="faq_9_title_commons">Jak mogę wybrać wiele elementów jednocześnie?</string>
     <string name="faq_9_text_commons">Można to zrobić na wiele sposobów. Pierwszym z nich jest uruchomienie trybu wyboru przez długie naciśnięcie jednego elementu, a następnie krótkie naciśnięcie innych, aby je wybrać. Drugi sposób jest podobny do wybierania elementów na komputerach PC za pomocą myszy. Wystarczy uruchomić tryb zaznaczania przez długie naciśnięcie jednego elementu, a następnie z przyciśniętym palcem przeciągnąć go przez inne elementy do zaznaczenia. Trzeci sposób zaznaczania wielu elementów to długie naciśnięcie jednego elementu, a następnie długie naciśnięcie innego, żeby wszystko pomiędzy zostało zaznaczone. Jeśli chcesz zaznaczyć wszystkie elementy, naciśnij długo jeden element, a następnie naciśnij licznik wybranych elementów w lewym górnym rogu. To zaznaczy lub odznaczy wszystko.</string>
     <string name="faq_10_title_commons">Zakupiłem aplikację, ale nie mogę jej pobrać na inne urządzenie.</string>
@@ -886,6 +950,7 @@
     <string name="translation_azerbaijani">azerski</string>
     <string name="translation_bengali">bengalski</string>
     <string name="translation_breton">bretoński</string>
+    <string name="translation_bulgarian">bułgarski</string>
     <string name="translation_catalan">kataloński</string>
     <string name="translation_czech">czeski</string>
     <string name="translation_welsh">walijski</string>
@@ -937,6 +1002,7 @@
     <string name="why_upgrade_improved_design">Udoskonalony wygląd</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Zaawansowany edytor zdjęć</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Zaawansowany edytor zdjęć i wideo</string>
     <string name="why_upgrade_heic_support">Obsługa plików HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Zaawansowana wsadowa zmiana nazw plików</string>
     <string name="why_upgrade_folder_locking">Blokowanie poszczególnych folderów</string>
@@ -1003,7 +1069,7 @@
     <string name="android_lame_title">AndroidLame (koder MP3)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a otrzymasz go. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>
+    <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a go otrzymasz. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Zestaw prostych, otwartoźródłowych aplikacji na Androida z konfigurowalnymi widżetami, bez reklam i zbędnych uprawnień.</string>
 </resources>

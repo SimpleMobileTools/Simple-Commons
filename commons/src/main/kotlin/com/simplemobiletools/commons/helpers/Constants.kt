@@ -35,8 +35,11 @@ const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val KEY_PHONE = "phone"
+const val KEY_MAILTO = "mailto"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
+const val SMT_PRIVATE = "smt_private"   // used at the contact source of local contacts hidden from other apps
+const val FIRST_GROUP_ID = 10000L
 const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
 val DARK_GREY = 0xFF333333.toInt()
@@ -162,6 +165,24 @@ const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
 
+// phone number/email types
+const val CELL = "CELL"
+const val WORK = "WORK"
+const val HOME = "HOME"
+const val OTHER = "OTHER"
+const val PREF = "PREF"
+const val MAIN = "MAIN"
+const val FAX = "FAX"
+const val WORK_FAX = "WORK;FAX"
+const val HOME_FAX = "HOME;FAX"
+const val PAGER = "PAGER"
+const val MOBILE = "MOBILE"
+
+// IMs not supported by Ez-vcard
+const val HANGOUTS = "Hangouts"
+const val QQ = "QQ"
+const val JABBER = "Jabber"
+
 // licenses
 internal const val LICENSE_KOTLIN = 1L
 const val LICENSE_SUBSAMPLING = 2L
@@ -206,6 +227,7 @@ const val REQUEST_EDIT_IMAGE = 1005
 const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1006
 const val REQUEST_CODE_SET_DEFAULT_DIALER = 1007
 const val CREATE_DOCUMENT_SDK_30 = 1008
+const val REQUEST_CODE_SET_DEFAULT_CALLER_ID = 1010
 
 // sorting
 const val SORT_ORDER = "sort_order"
@@ -263,6 +285,10 @@ const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
 const val PERMISSION_READ_PHONE_STATE = 15
 const val PERMISSION_MEDIA_LOCATION = 16
+const val PERMISSION_POST_NOTIFICATIONS = 17
+const val PERMISSION_READ_MEDIA_IMAGES = 18
+const val PERMISSION_READ_MEDIA_VIDEO = 19
+const val PERMISSION_READ_MEDIA_AUDIO = 20
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -412,6 +438,9 @@ fun isRPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
 fun isSPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
+fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
 fun getDateFormats() = arrayListOf(
     "--MM-dd",

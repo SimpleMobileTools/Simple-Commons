@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">சரி</string>
     <string name="cancel">ரத்துசெய்</string>
+    <string name="back">Back</string>
     <string name="nothing">Nothing</string>
     <string name="later">பின்னர்</string>
     <string name="save_as">இவ்வாறு சேமி</string>
@@ -63,6 +64,16 @@
     <string name="add_to_existing_contact">Add to an existing contact</string>
     <string name="app_corrupt">App Corrupt</string>
     <string name="disclaimer">Disclaimer</string>
+    <string name="take_photo">Take photo</string>
+    <string name="choose_photo">Choose photo</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Birthday</string>
+    <string name="anniversary">Anniversary</string>
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Work</string>
@@ -81,6 +92,9 @@
     <string name="list">பட்டியல்</string>
     <string name="increase_column_count">நெடுவரிசை அதிகரி</string>
     <string name="reduce_column_count">நெடுவரிசை குறை</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">அட்டைப் படத்தை மாற்று</string>
     <string name="select_photo">புகைப்படத்தைத் தேர்ந்தெடு</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">\"%s\" ஐத் தடுக்க விரும்புகிறீர்களா?</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">பிடித்தவை</string>
     <string name="add_favorites">பிடித்தவற்றைச் சேர்</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">தொடர்புகளின் அனுமதி தேவை</string>
     <string name="no_camera_permissions">கேமரா அனுமதி தேவை</string>
     <string name="no_audio_permissions">ஆடியோ அனுமதி தேவை</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">கோப்பை மறுபெயரிடு</string>
     <string name="rename_folder">கோப்புறையை மறுபெயரிடு</string>
@@ -309,6 +327,7 @@
     <string name="rename">மறுபெயரிடு</string>
     <string name="share">பகிர்</string>
     <string name="share_via">இதன்மூலம் பகிர்</string>
+    <string name="resize">மறுஅளவிடு</string>
     <string name="select_all">எல்லாம் தேர்ந்தெடு</string>
     <string name="select_text">சொற்சரத்தை தேர்ந்தெடு</string>
     <string name="hide">மறை</string>
@@ -323,6 +342,7 @@
     <string name="redo">Redo</string>
     <string name="print">அச்சிடு</string>
     <string name="print_pro">அச்சிடு (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">குறுக்குவழி உருவாக்கு</string>
     <string name="create_shortcut_pro">குறுக்குவழி உருவாக்கு (Pro)</string>
     <string name="add_number_to_contact">எண்ணைத் தொடர்புக்குச் சேர்</string>
@@ -337,6 +357,9 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">இதன்படி வரிசைபடுத்து</string>
     <string name="name">பெயர்</string>
@@ -607,6 +630,16 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">சிறுபடங்கள்</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">விலக்கு</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">விலக்கிய அடைவுகள்</string>
+    <string name="excluded">(விலக்கிய)</string>
+    <string name="manage_excluded_folders">விலக்கிய அடைவுகளை நிர்வகி</string>
+    <string name="remove_all">எல்லாம் நீக்கு</string>
+    <string name="remove_all_description">விலக்கப்பட்டவை பட்டியலிலிருந்து எல்லா அடைவுகளையும் நீக்கவா\? இது அடைவுகளை அழிக்காது.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">காட்டப்படும் தாவல்களை நிர்வகி</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -741,9 +774,10 @@
             Thank you!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Purchase</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
@@ -780,6 +814,7 @@
     <string name="simple_flashlight">எளிய ஒளிவிளக்கு</string>
     <string name="simple_gallery">எளிய காட்சியகம்</string>
     <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">எளிய இசை இயக்கி</string>
     <string name="simple_notes">எளிய குறிப்புகள்</string>
     <string name="simple_sms_messenger">எளிய குறுஞ்செய்தி தூதர்</string>
@@ -797,6 +832,7 @@
     <string name="flashlight_short">ஒளிவிளக்கு</string>
     <string name="gallery_short">காட்சியகம்</string>
     <string name="keyboard_short">Keyboard</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">இசை இயக்கி</string>
     <string name="notes_short">குறிப்புகள்</string>
     <string name="sms_messenger_short">குறுஞ்செய்தி தூதர்</string>
@@ -857,6 +893,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -908,6 +945,7 @@
     <string name="why_upgrade_improved_design">Improved design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">மேம்பட்ட புகைப்பட திருத்தி</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF கோப்பு ஆதரவு</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>

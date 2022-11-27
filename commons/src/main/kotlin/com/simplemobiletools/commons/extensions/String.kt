@@ -917,3 +917,5 @@ fun String.getMimeType(): String {
 
     return typesMap[getFilenameExtension().toLowerCase()] ?: ""
 }
+
+fun String.isBlockedNumberPattern() = contains("*")

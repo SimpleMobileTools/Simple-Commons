@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
+    <string name="back">返回</string>
     <string name="nothing">没有东西</string>
     <string name="later">稍后</string>
     <string name="save_as">保存</string>
@@ -9,7 +10,7 @@
     <string name="invalid_file_format">无效文件格式</string>
     <string name="out_of_memory_error">内存不足</string>
     <string name="an_error_occurred">啊哦，出错啦：%s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">错误: %s</string>
     <string name="open_with">打开方式</string>
     <string name="edit_with">编辑方式</string>
     <string name="edit">编辑</string>
@@ -57,12 +58,22 @@
     <string name="seven">七</string>
     <string name="eight">八</string>
     <string name="nine">九</string>
-    <string name="value">Value</string>
+    <string name="value">值</string>
     <string name="value_cannot_be_empty">值不能为空</string>
     <string name="create_new_contact">建立新联系人</string>
     <string name="add_to_existing_contact">添加至已存在的联系人</string>
     <string name="app_corrupt">应用损坏</string>
     <string name="disclaimer">免责声明</string>
+    <string name="take_photo">拍照</string>
+    <string name="choose_photo">选择照片</string>
+    <string name="choose_video">选择视频</string>
+    <string name="choose_contact">选择联系人</string>
+    <string name="choose_file">选择文件</string>
+    <string name="record_audio">录音</string>
+    <string name="record_video">录像</string>
+    <!-- Events -->
+    <string name="birthday">生日</string>
+    <string name="anniversary">纪念日</string>
     <!-- Emails -->
     <string name="home">家庭</string>
     <string name="work">工作</string>
@@ -81,6 +92,9 @@
     <string name="list">列表</string>
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
+    <string name="column_count">列数</string>
+    <string name="portrait_column_count">垂直列数</string>
+    <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
     <string name="select_photo">选择图片</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
     <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
     <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
+    <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
+    <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">请授予通讯录权限</string>
     <string name="no_camera_permissions">请授予相机权限</string>
     <string name="no_audio_permissions">请授予音频权限</string>
+    <string name="no_post_notifications_permissions">需要发送通知权限</string>
+    <string name="no_permission">无权限</string>
     <!-- Renaming -->
     <string name="rename_file">重命名文件</string>
     <string name="rename_folder">重命名文件夹</string>
@@ -279,12 +297,8 @@
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
-    <string name="shared_theme_note">注意尽管您已经使用 Pro 版本的应用，由于技术原因您仍然需要简易感谢。它用来负责颜色同步。</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">简易感谢</a> 以解锁此功能并支持开发。感谢！
-        ]]>
-    </string>
+    <string name="shared_theme_note">注意尽管您已经使用 Pro 版本的应用，由于技术原因您仍然需要简单感谢。它用来负责颜色同步。</string>
+    <string name="purchase_thank_you">请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;简单感谢&lt;/a&gt; 以解锁此功能并支持开发。感谢！</string>
     <!-- Themes -->
     <string name="light_theme">浅色主题</string>
     <string name="dark_theme">深色主题</string>
@@ -296,7 +310,7 @@
     <string name="black_white">黑白</string>
     <string name="custom">自定义</string>
     <string name="shared">共享</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">系统默认</string>
     <!-- What's new -->
     <string name="whats_new">更新日志</string>
     <string name="whats_new_disclaimer">* 此处仅列举了重大更新，更多修正可在使用中体验</string>
@@ -306,6 +320,7 @@
     <string name="rename">重命名</string>
     <string name="share">分享</string>
     <string name="share_via">分享到</string>
+    <string name="resize">调整尺寸</string>
     <string name="select_all">全选</string>
     <string name="select_text">选择文本</string>
     <string name="hide">隐藏</string>
@@ -320,6 +335,7 @@
     <string name="redo">重做</string>
     <string name="print">打印</string>
     <string name="print_pro">打印 (Pro)</string>
+    <string name="shortcut">快捷方式</string>
     <string name="create_shortcut">创建快捷方式</string>
     <string name="create_shortcut_pro">创建快捷方式 (Pro)</string>
     <string name="add_number_to_contact">添加号码至联系人</string>
@@ -329,11 +345,14 @@
     <string name="toggle_filename">显示文件名</string>
     <string name="move_to_top">移到顶部</string>
     <string name="move_to_bottom">移到底部</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">固定项目</string>
     <string name="unpin_item">取消固定项目</string>
     <string name="send_sms">发送短信</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">发送邮件</string>
     <string name="call">呼叫</string>
+    <string name="contact_details">联系人详情</string>
+    <string name="add_contact">添加联系人</string>
+    <string name="wallpapers">壁纸</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>
@@ -575,6 +594,16 @@
     <string name="main_screen">主屏幕</string>
     <string name="thumbnails">缩略图</string>
     <string name="list_view">列表视图</string>
+    <!-- Excluding -->
+    <string name="exclude">排除</string>
+    <string name="exclude_folder">排除文件夹</string>
+    <string name="excluded_folders">排除的文件夹</string>
+    <string name="excluded">（已排除）</string>
+    <string name="manage_excluded_folders">管理排除的文件夹</string>
+    <string name="remove_all">全部移除</string>
+    <string name="remove_all_description">是否移除排除列表中的所有项目？此操作不会删除文件夹本身。</string>
+    <string name="temporarily_show_excluded">临时显示已排除的</string>
+    <string name="stop_showing_excluded">停止显示已排除的</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理显示的页面</string>
     <string name="default_tab_to_open">应用启动时打开的页面</string>
@@ -678,7 +707,7 @@
     <string name="upgraded_to_pro_contacts">你必须通过在 .vcf 文件中导出，然后导入的方式手动迁移私有存储的联系人。你可以在顶部菜单中找到导出和导入按钮。</string>
     <!-- About -->
     <string name="about">关于</string>
-    <string name="website">Website</string>
+    <string name="website">网站</string>
     <string name="website_label">应用源码</string>
     <string name="email_label">发送反馈</string>
     <string name="upgrade_to_pro">升级到专业版</string>
@@ -711,10 +740,11 @@
             非常感谢！
         ]]>
     </string>
-    <string name="donate_new">你好，&lt;br&gt;&lt;br&gt;希望您喜欢这个应用程序。它不包含广告，我们也不收集您的数据，要支持它的开发， 请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. 您将解锁所有的应用功能和颜色自定义。&lt;br&gt;&lt;br&gt;谢谢你！</string>
+    <string name="donate_new">你好，&lt;br&gt;&lt;br&gt;希望您喜欢这个应用程序。它不包含广告，我们也不收集您的数据，要支持它的开发， 请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. 您将解锁所有的应用功能，包括颜色自定义。&lt;br&gt;&lt;br&gt;谢谢你！</string>
+    <string name="donate_short">请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; 支持我们，购买后还可解锁所有应用功能，包括允许定制颜色。</string>
     <string name="purchase">购买</string>
-    <string name="order_simple_phone">订购 Simple Phone</string>
-    <string name="update_thank_you">请更新简易感谢到最新版本</string>
+    <string name="get_simple_phone">订购 Simple Phone</string>
+    <string name="update_thank_you">请更新简单感谢到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="make_sure_latest">另外，请确保您正在使用的是最新版本的应用。</string>
@@ -729,23 +759,24 @@
     <string name="features_locked">此功能被锁，请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; 解锁完整版应用。&lt;br&gt;&lt;br&gt;这是一次性付款，如果您不满意，我们可以退款给您。</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">嘿，&lt;br&gt;&lt;br&gt;我们最近发布了一些新的应用：&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; 您可以点击标题或图标来下载。&lt;br&gt;&lt;br&gt; 谢谢</string>
-    <string name="simple_app_launcher">简易应用启动器</string>
-    <string name="simple_calculator">简易计算器</string>
-    <string name="simple_calendar">简易日历</string>
-    <string name="simple_camera">简易相机</string>
-    <string name="simple_clock">简易时钟</string>
-    <string name="simple_contacts">简易通讯录</string>
-    <string name="simple_dialer">简易拨号器</string>
-    <string name="simple_draw">简易绘图</string>
-    <string name="simple_file_manager">简易文件管理器</string>
-    <string name="simple_flashlight">简易手电筒</string>
-    <string name="simple_gallery">简易图库</string>
-    <string name="simple_keyboard">简易键盘</string>
-    <string name="simple_music_player">简易音乐播放器</string>
-    <string name="simple_notes">简易笔记</string>
-    <string name="simple_sms_messenger">简易短信</string>
-    <string name="simple_thank_you">简易感谢</string>
-    <string name="simple_voice_recorder">简易录音机</string>
+    <string name="simple_app_launcher">简单应用启动器</string>
+    <string name="simple_calculator">简单计算器</string>
+    <string name="simple_calendar">简单日历</string>
+    <string name="simple_camera">简单相机</string>
+    <string name="simple_clock">简单时钟</string>
+    <string name="simple_contacts">简单通讯录</string>
+    <string name="simple_dialer">简单拨号器</string>
+    <string name="simple_draw">简单绘图</string>
+    <string name="simple_file_manager">简单文件管理器</string>
+    <string name="simple_flashlight">简单手电筒</string>
+    <string name="simple_gallery">简单图库</string>
+    <string name="simple_keyboard">简单键盘</string>
+    <string name="simple_launcher">简单启动器</string>
+    <string name="simple_music_player">简单音乐播放器</string>
+    <string name="simple_notes">简单笔记</string>
+    <string name="simple_sms_messenger">简单短信</string>
+    <string name="simple_thank_you">简单感谢</string>
+    <string name="simple_voice_recorder">简单录音机</string>
     <string name="app_launcher_short">应用启动器</string>
     <string name="calculator_short">计算器</string>
     <string name="calendar_short">日历</string>
@@ -758,6 +789,7 @@
     <string name="flashlight_short">手电筒</string>
     <string name="gallery_short">图库</string>
     <string name="keyboard_short">键盘</string>
+    <string name="launcher_short">启动器</string>
     <string name="music_player_short">音乐播放器</string>
     <string name="notes_short">笔记</string>
     <string name="sms_messenger_short">短信</string>
@@ -806,6 +838,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -857,6 +890,7 @@
     <string name="why_upgrade_improved_design">改进的设计</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">高级照片编辑器</string>
+    <string name="why_upgrade_advanced_photo_video_editor">高级照片和视频编辑器</string>
     <string name="why_upgrade_heic_support">支持 HEIC/HEIF 文件</string>
     <string name="why_upgrade_batch_renaming">高级批量文件重命名</string>
     <string name="why_upgrade_folder_locking">单独文件夹锁定</string>
@@ -888,7 +922,7 @@
     <string name="why_upgrade_zooming">缩放</string>
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。致谢。</string>
-    <string name="third_party_licences">开放源代码</string>
+    <string name="third_party_licences">第三方许可证</string>
     <string name="kotlin_title">Kotlin (编程语言)</string>
     <string name="subsampling_title">子采样比例图像视图 (可缩放的图像视图)</string>
     <string name="glide_title">Glide（图片加载和缓存）</string>
@@ -925,5 +959,5 @@
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样您就可以放心试用了 :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">一组简易且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
+    <string name="developer_description">一组简单且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
 </resources>

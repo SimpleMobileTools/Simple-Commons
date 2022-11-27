@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">Tamam</string>
     <string name="cancel">İptal</string>
+    <string name="back">Geri</string>
     <string name="nothing">Hiçbir şey</string>
     <string name="later">Sonra</string>
     <string name="save_as">Farklı kaydet</string>
@@ -9,7 +10,7 @@
     <string name="invalid_file_format">Geçersiz dosya biçimi</string>
     <string name="out_of_memory_error">Yetersiz hafıza hatası</string>
     <string name="an_error_occurred">Bir hata oluştu: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Hata: %s</string>
     <string name="open_with">Birlikte aç</string>
     <string name="edit_with">Şununla düzenle</string>
     <string name="edit">Düzenle</string>
@@ -57,12 +58,22 @@
     <string name="seven">Yedi</string>
     <string name="eight">Sekiz</string>
     <string name="nine">Dokuz</string>
-    <string name="value">Value</string>
+    <string name="value">Değer</string>
     <string name="value_cannot_be_empty">Değer boş olamaz</string>
     <string name="create_new_contact">Yeni kişi oluştur</string>
     <string name="add_to_existing_contact">Mevcut bir kişiye ekle</string>
     <string name="app_corrupt">Uygulama Bozuk</string>
     <string name="disclaimer">Sorumluluk Reddi</string>
+    <string name="take_photo">Fotoğraf çek</string>
+    <string name="choose_photo">Fotoğraf seç</string>
+    <string name="choose_video">Video seç</string>
+    <string name="choose_contact">Kişi seç</string>
+    <string name="choose_file">Dosya seç</string>
+    <string name="record_audio">Ses kaydet</string>
+    <string name="record_video">Video kaydet</string>
+    <!-- Events -->
+    <string name="birthday">Doğum günü</string>
+    <string name="anniversary">Yıldönümü</string>
     <!-- Emails -->
     <string name="home">Ev</string>
     <string name="work">İş</string>
@@ -81,6 +92,9 @@
     <string name="list">Liste</string>
     <string name="increase_column_count">Sütun sayısını artır</string>
     <string name="reduce_column_count">Sütun sayısını azalt</string>
+    <string name="column_count">Sütun sayısı</string>
+    <string name="portrait_column_count">Dikey sütun sayısı</string>
+    <string name="landscape_column_count">Yatay sütun sayısı</string>
     <string name="change_cover_image">Kapak resmini değiştir</string>
     <string name="select_photo">Fotoğraf seç</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
     <string name="block_unknown_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
     <string name="block_unknown_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
+    <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
+    <string name="must_make_default_caller_id_app">Arayan kimliği izni olmadan bilinmeyen numaralar engellenemiyor.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
     <string name="add_favorites">Favori ekle</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Kişiler izni gerekiyor</string>
     <string name="no_camera_permissions">Kamera izni gerekiyor</string>
     <string name="no_audio_permissions">Ses izni gerekiyor</string>
+    <string name="no_post_notifications_permissions">Bildirim göndermek için izin gereklidir</string>
+    <string name="no_permission">İzin yok</string>
     <!-- Renaming -->
     <string name="rename_file">Dosyayı yeniden adlandır</string>
     <string name="rename_folder">Klasörü yeniden adlandır</string>
@@ -297,7 +315,7 @@
     <string name="black_white">Siyah &amp; Beyaz</string>
     <string name="custom">Özel</string>
     <string name="shared">Paylaşılan</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Sistem öntanımlı değeri</string>
     <!-- What's new -->
     <string name="whats_new">Yenilikler</string>
     <string name="whats_new_disclaimer">* yalnızca büyük güncellemeler burada listelenmiştir; daima bazı küçük geliştirmeler de vardır</string>
@@ -307,6 +325,7 @@
     <string name="rename">Yeniden adlandır</string>
     <string name="share">Paylaş</string>
     <string name="share_via">Şununla paylaş</string>
+    <string name="resize">Yeniden boyutlandır</string>
     <string name="select_all">Tümünü seç</string>
     <string name="select_text">Metin seç</string>
     <string name="hide">Gizle</string>
@@ -321,6 +340,7 @@
     <string name="redo">Yinele</string>
     <string name="print">Yazdır</string>
     <string name="print_pro">Yazdır (Pro)</string>
+    <string name="shortcut">Kısayol</string>
     <string name="create_shortcut">Kısayol oluştur</string>
     <string name="create_shortcut_pro">Kısayol oluştur (Pro)</string>
     <string name="add_number_to_contact">Kişiye numara ekle</string>
@@ -335,6 +355,9 @@
     <string name="send_sms">SMS gönder</string>
     <string name="send_email">E-posta gönder</string>
     <string name="call">Ara</string>
+    <string name="contact_details">Kişi bilgileri</string>
+    <string name="add_contact">Kişi ekle</string>
+    <string name="wallpapers">Duvar kağıtları</string>
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
     <string name="name">Ad</string>
@@ -605,6 +628,16 @@
     <string name="main_screen">Ana ekran</string>
     <string name="thumbnails">Küçük resimler</string>
     <string name="list_view">Liste görünümü</string>
+    <!-- Excluding -->
+    <string name="exclude">Hariç tut</string>
+    <string name="exclude_folder">Klasörü hariç tut</string>
+    <string name="excluded_folders">Hariç tutulan klasörler</string>
+    <string name="excluded">(hariç)</string>
+    <string name="manage_excluded_folders">Hariç tutulan klasörleri yönet</string>
+    <string name="remove_all">Tümünü kaldır</string>
+    <string name="remove_all_description">Tüm klasörler hariç tutulanlar listesinden kaldırılsın mı\? Bu klasörleri silmez.</string>
+    <string name="temporarily_show_excluded">Hariç tutulanları geçici olarak göster</string>
+    <string name="stop_showing_excluded">Hariç tutulanları göstermeyi durdur</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gösterilen sekmeleri yönet</string>
     <string name="default_tab_to_open">Uygulama başlatıldığında açılacak sekme</string>
@@ -741,9 +774,10 @@
             Teşekkürler!
         ]]>
     </string>
-    <string name="donate_new">Merhaba,&lt;br&gt;&lt;br&gt; umarım uygulamadan memnunsunuzdur. Hiçbir reklam içermiyor ve verilerinizi de toplamıyoruz, lütfen &lt;href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Basit Teşekkürler&lt;/a&gt; uygulamasını satın alarak geliştirmeyi destekleyin. Ayrıca tüm uygulama özelliklerine ve renk özelleştirme kilidine sahip olacaksınız.&lt;br&gt;&lt;br&gt; Teşekkürler!</string>
+    <string name="donate_new">Merhaba,&lt;br&gt;&lt;br&gt; umarım uygulamadan memnunsunuzdur. Hiçbir reklam içermiyor ve verilerinizi de toplamıyoruz, lütfen &lt;href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Basit Teşekkürler&lt;/a&gt; uygulamasını satın alarak geliştirmeyi destekleyin. Ayrıca renk özelleştirme dahil tüm uygulama özelliklerinin kilidi açılacaktır.&lt;br&gt;&lt;br&gt; Teşekkürler!</string>
+    <string name="donate_short">Lütfen &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Basit Teşekkürler&lt;/a&gt; uygulamasını satın alarak bizi destekleyin, ayrıca renk özelleştirme dahil tüm uygulama özelliklerinin kilidi açılacaktır.</string>
     <string name="purchase">Satın al</string>
-    <string name="order_simple_phone">Basit Telefon Sipariş Edin</string>
+    <string name="get_simple_phone">Basit Telefon Sipariş Edin</string>
     <string name="update_thank_you">Lütfen Basit Teşekkürler\'i son sürüme güncelleyin</string>
     <string name="before_asking_question_read_faq">Bir soru sormadan önce, lütfen uygulama ayarlarını gözden geçirin ve önce Sık Sorulan Sorular bölümünü okuyun. Belki çözüm oradadır.</string>
     <string name="before_rate_read_faq">Bize puan vermeden önce lütfen uygulama ayarlarını gözden geçirin ve önce Sık Sorulan Sorular bölümünü okuyun. Herhangi bir sorunuz varsa, belki çözüm oradadır.</string>
@@ -780,6 +814,7 @@
     <string name="simple_flashlight">Basit Fener</string>
     <string name="simple_gallery">Basit Galeri</string>
     <string name="simple_keyboard">Basit Klavye</string>
+    <string name="simple_launcher">Basit Başlatıcı</string>
     <string name="simple_music_player">Basit Müzik Çalar</string>
     <string name="simple_notes">Basit Notlar</string>
     <string name="simple_sms_messenger">Basit SMS Messenger</string>
@@ -797,6 +832,7 @@
     <string name="flashlight_short">Fener</string>
     <string name="gallery_short">Galeri</string>
     <string name="keyboard_short">Klavye</string>
+    <string name="launcher_short">Başlatıcı</string>
     <string name="music_player_short">Müzik Çalar</string>
     <string name="notes_short">Notlar</string>
     <string name="sms_messenger_short">SMS Messenger</string>
@@ -851,11 +887,12 @@
     <string name="translation_azerbaijani">Azerice</string>
     <string name="translation_bengali">Bengalce</string>
     <string name="translation_breton">Bretonca</string>
+    <string name="translation_bulgarian">Bulgarca</string>
     <string name="translation_catalan">Katalanca</string>
     <string name="translation_czech">Çekce</string>
     <string name="translation_welsh">Galce</string>
     <string name="translation_danish">Danca</string>
-    <string name="translation_english">English</string>
+    <string name="translation_english">İngilizce</string>
     <string name="translation_german">Almanca</string>
     <string name="translation_greek">Yunanca</string>
     <string name="translation_spanish">İspanyolca</string>
@@ -902,6 +939,7 @@
     <string name="why_upgrade_improved_design">Geliştirilmiş tasarım</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Gelişmiş fotoğraf düzenleyici</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Gelişmiş fotoğraf ve video düzenleyici</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF dosya desteği</string>
     <string name="why_upgrade_batch_renaming">Gelişmiş toplu dosya adlandırma</string>
     <string name="why_upgrade_folder_locking">Kişisel klasör kilidi</string>

@@ -2,25 +2,27 @@
 <resources>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
+    <string name="back">العودة</string>
     <string name="nothing">لا شيء</string>
     <string name="later">لاحقًا</string>
     <string name="save_as">حفظ كـ</string>
     <string name="file_saved">تم حفظ الملف بنجاح</string>
     <string name="invalid_file_format">تنسيق الملف غير صالح</string>
-    <string name="out_of_memory_error">خطأ نفذت الذاكرة</string>
+    <string name="out_of_memory_error">خطأ في نفاد الذاكرة</string>
     <string name="an_error_occurred">حدث خطأ: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">خطأ: %s</string>
     <string name="open_with">فتح باستخدام</string>
     <string name="edit_with">تعديل باستخدام</string>
     <string name="edit">تعديل</string>
     <string name="no_app_found">لم يتم العثور على تطبيق صالح</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">لم يتم العثور على متصفح</string>
+    <string name="no_email_client_found">لم يتم العثور على عميل بريد إلكتروني</string>
     <string name="set_as">تعيين كـ</string>
     <string name="copy_to_clipboard">نسخ إلى الحافظة</string>
     <string name="copy_number_to_clipboard">نسخ الرقم إلى الحافظة</string>
-    <string name="value_copied_to_clipboard">تم نسخ القيمة إلي الحافظة</string>
-    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلي الحافظة:\n%s</string>
+    <string name="value_copied_to_clipboard">تم نسخ القيمة إلى الحافظة</string>
+    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلى الحافظة:
+\n%s</string>
     <string name="dial_number">رقم الطلب</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
@@ -63,6 +65,16 @@
     <string name="add_to_existing_contact">إضافة إلى جهة موجودة</string>
     <string name="app_corrupt">App Corrupt</string>
     <string name="disclaimer">Disclaimer</string>
+    <string name="take_photo">التقاط صورة</string>
+    <string name="choose_photo">اختيار صورة</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">تاريخ الميلاد</string>
+    <string name="anniversary">مناسبة</string>
     <!-- Emails -->
     <string name="home">المنزل</string>
     <string name="work">العمل</string>
@@ -81,6 +93,9 @@
     <string name="list">القائمة</string>
     <string name="increase_column_count">زيادة عدد الأعمدة</string>
     <string name="reduce_column_count">تقليل عدد الأعمدة</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">تغيير صورة الغلاف</string>
     <string name="select_photo">تحديد صورة</string>
     <!-- Blocked numbers -->
@@ -90,13 +105,15 @@
     <string name="block_number">حظر رقم</string>
     <string name="block_numbers">حظر أرقام</string>
     <string name="blocked_numbers">أرقام محظورة</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الإفتراضي للإستفادة من الأرقام المحظورة.</string>
+    <string name="export_blocked_numbers">تصدير الأرقام المحظورة</string>
+    <string name="import_blocked_numbers">استيراد الأرقام المحظورة</string>
+    <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الافتراضي للاستفادة من الأرقام المحظورة.</string>
     <string name="set_as_default">ضبط الى الافتراضي</string>
     <string name="block_confirmation">هل تريد بالتأكيد حظر \"%s\"؟</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
     <string name="add_favorites">إضافة مفضلة</string>
@@ -115,6 +132,8 @@
     <string name="no_contacts_permission">مطلوب إذن جهات الإتصال</string>
     <string name="no_camera_permissions">مطلوب إذن الكاميرا</string>
     <string name="no_audio_permissions">مطلوب إذن الصوت</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">إعادة تسمية الملف</string>
     <string name="rename_folder">إعادة تسمية المجلد</string>
@@ -144,8 +163,8 @@
     <string name="copy">نسخ</string>
     <string name="move">نقل</string>
     <string name="copy_move">نسخ / نقل</string>
-    <string name="copy_to">نسخ إلي</string>
-    <string name="move_to">نقل إلي</string>
+    <string name="copy_to">نسخ إلى</string>
+    <string name="move_to">نقل إلى</string>
     <string name="source">المصدر</string>
     <string name="destination">الوجهة</string>
     <string name="select_destination">حدد الوجهة</string>
@@ -208,21 +227,37 @@
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">يرجى منح التطبيق صلاحية الوصول إلى جميع الملفات الخاصة بك، فإنه قد لا يعمل بشكل جيد دون ذلك.</string>
     <plurals name="items">
+        <item quantity="zero">%d عنصر</item>
         <item quantity="one">%d عنصر</item>
-        <item quantity="other">%d عناصر</item>
+        <item quantity="two">%d عنصر</item>
+        <item quantity="few">%d عنصر</item>
+        <item quantity="many">%d عناصر</item>
+        <item quantity="other">%d عنصر</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d عنصر</item>
-        <item quantity="other">%d عناصر</item>
+        <item quantity="zero">%d item</item>
+        <item quantity="one">%d items</item>
+        <item quantity="two">%d items</item>
+        <item quantity="few">%d items</item>
+        <item quantity="many">%d items</item>
+        <item quantity="other">%d items</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">جارٍ حذف %d عنصر</item>
-        <item quantity="other">جارٍ حذف %d عناصر</item>
+        <item quantity="zero">Deleting %d item</item>
+        <item quantity="one">Deleting %d items</item>
+        <item quantity="two">Deleting %d items</item>
+        <item quantity="few">Deleting %d items</item>
+        <item quantity="many">Deleting %d items</item>
+        <item quantity="other">Deleting %d items</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
+        <item quantity="zero">%d contact</item>
+        <item quantity="one">%d contacts</item>
+        <item quantity="two">%d contacts</item>
+        <item quantity="few">%d contacts</item>
+        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <!-- Storages -->
@@ -267,7 +302,7 @@
     <string name="app_icon_color">لون أيقونة التطبيق</string>
     <string name="bottom_navigation_bar_color">لون شريط التنقل السفلي</string>
     <string name="restore_defaults">إستعادة الإعدادات الإفتراضية</string>
-    <string name="use_default">إستخدام كافتراضي</string>
+    <string name="use_default">استخدام كافتراضي</string>
     <string name="default_color">الإفتراضي</string>
     <string name="change_color">تغيير اللون</string>
     <string name="theme">السمة</string>
@@ -278,7 +313,7 @@
     <string name="undo_changes_confirmation">هل تريد بالتاكيد التراجع عن التغييرات التي أجريتها ؟</string>
     <string name="save_before_closing">لديك تغييرات غير محفوظة. هل تريد الحفظ قبل الخروج ؟</string>
     <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
-    <string name="app_icon_color_warning">تحذير: بعض اللانشرات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حالة إختفاء الأيقونة، حاول تشغيل التطبيق من خلال   "Google Play" أو بعض عناصر (الويدجت)، إذا كانت متوفرة.  بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الإفتراضية #F57C00. قد تضطر الي إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
+    <string name="app_icon_color_warning">تحذير: بعض المشغّلات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حال اختفاء الأيقونة، حاول تشغيل التطبيق من خلال Google Play أو ويدجت، إذا توفر. بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الافتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
     <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \ المشتركة \' ، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
     <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
@@ -307,6 +342,7 @@
     <string name="rename">إعادة تسمية</string>
     <string name="share">مشاركة</string>
     <string name="share_via">مشاركة عبر</string>
+    <string name="resize">تغيير الحجم</string>
     <string name="select_all">تحديد الكل</string>
     <string name="select_text">Select text</string>
     <string name="hide">إخفاء</string>
@@ -321,6 +357,7 @@
     <string name="redo">إعادة</string>
     <string name="print">طباعة</string>
     <string name="print_pro">طباعة (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">إنشاء أختصار</string>
     <string name="create_shortcut_pro">إنشاء أختصار (Pro)</string>
     <string name="add_number_to_contact">Add number to contact</string>
@@ -335,6 +372,9 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
     <string name="name">الإسم</string>
@@ -349,7 +389,7 @@
     <string name="sort_randomly">فرز عشوائي</string>
     <string name="ascending">تصاعدي</string>
     <string name="descending">تنازلي</string>
-    <string name="use_for_this_folder">إستخدام لهذا المجلد فقط</string>
+    <string name="use_for_this_folder">استخدام لهذا المجلد فقط</string>
     <string name="sort_numeric_parts">فرز أسماء الملفات حسب القيمة الفعلية</string>
     <string name="first_name">الاسم</string>
     <string name="middle_name">اسم الأب</string>
@@ -371,8 +411,12 @@
     <string name="no">لا</string>
     <string name="maybe">أحياناً</string>
     <plurals name="delete_warning">
-        <item quantity="one">تحذير: أنت تقوم بحذف %d مجلد</item>
-        <item quantity="other">تحذير: أنت تقوم بحذف %d مجلدات</item>
+        <item quantity="zero">WARNING: You are deleting %d folder</item>
+        <item quantity="one">WARNING: You are deleting %d folders</item>
+        <item quantity="two">WARNING: You are deleting %d folders</item>
+        <item quantity="few">WARNING: You are deleting %d folders</item>
+        <item quantity="many">WARNING: You are deleting %d folders</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -391,7 +435,7 @@
     <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
     <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">فشلت المسابقة</string>
-    <string name="authentication_blocked">تم حظر المصادقة ، يرجى المحاولة مره أخرى بعد قليل</string>
+    <string name="authentication_blocked">تم حظر المصادقة، يرجى المحاولة مرة أخرى بعد قليل</string>
     <string name="no_fingerprints_registered">ليس لديك بصمات مسجلة ، يرجى إضافة بعضها في إعدادات جهازك</string>
     <string name="go_to_settings">الإنتقال إلى الاعدادات</string>
     <string name="protection_setup_successfully">تم إعداد كلمة المرور بنجاح. يرجى إعادة تثبيت التطبيق في حاله نسيانه.</string>
@@ -414,119 +458,231 @@
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
     <plurals name="seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">قبل %d ثانية</item>
-        <item quantity="other">قبل %d ثواني</item>
+        <item quantity="zero">%d second before</item>
+        <item quantity="one">%d seconds before</item>
+        <item quantity="two">%d seconds before</item>
+        <item quantity="few">%d seconds before</item>
+        <item quantity="many">%d seconds before</item>
+        <item quantity="other">%d seconds before</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">قبل %d دقيقة</item>
-        <item quantity="other">قبل %d دقائق</item>
+        <item quantity="zero">%d minute before</item>
+        <item quantity="one">%d minutes before</item>
+        <item quantity="two">%d minutes before</item>
+        <item quantity="few">%d minutes before</item>
+        <item quantity="many">%d minutes before</item>
+        <item quantity="other">%d minutes before</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">قبل %d ساعة</item>
-        <item quantity="other">قبل %d ساعات</item>
+        <item quantity="zero">%d hour before</item>
+        <item quantity="one">%d hours before</item>
+        <item quantity="two">%d hours before</item>
+        <item quantity="few">%d hours before</item>
+        <item quantity="many">%d hours before</item>
+        <item quantity="other">%d hours before</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">قبل %d يوم</item>
-        <item quantity="other">قبل %d أيام</item>
+        <item quantity="zero">%d day before</item>
+        <item quantity="one">%d days before</item>
+        <item quantity="two">%d days before</item>
+        <item quantity="few">%d days before</item>
+        <item quantity="many">%d days before</item>
+        <item quantity="other">%d days before</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">قبل %d أسبوع</item>
-        <item quantity="other">قبل %d أسابيع</item>
+        <item quantity="zero">%d week before</item>
+        <item quantity="one">%d weeks before</item>
+        <item quantity="two">%d weeks before</item>
+        <item quantity="few">%d weeks before</item>
+        <item quantity="many">%d weeks before</item>
+        <item quantity="other">%d weeks before</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">قبل %d شهر</item>
-        <item quantity="other">قبل %d أشهر</item>
+        <item quantity="zero">%d month before</item>
+        <item quantity="one">%d months before</item>
+        <item quantity="two">%d months before</item>
+        <item quantity="few">%d months before</item>
+        <item quantity="many">%d months before</item>
+        <item quantity="other">%d months before</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">قبل %d سنة</item>
-        <item quantity="other">قبل %d سنوات</item>
+        <item quantity="zero">%d year before</item>
+        <item quantity="one">%d years before</item>
+        <item quantity="two">%d years before</item>
+        <item quantity="few">%d years before</item>
+        <item quantity="many">%d years before</item>
+        <item quantity="other">%d years before</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d ثانية</item>
-        <item quantity="other">%d ثواني</item>
+        <item quantity="zero">%d second</item>
+        <item quantity="one">%d seconds</item>
+        <item quantity="two">%d seconds</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d دقيقة</item>
-        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d minute</item>
+        <item quantity="one">%d minutes</item>
+        <item quantity="two">%d minutes</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d ساعة</item>
-        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d hour</item>
+        <item quantity="one">%d hours</item>
+        <item quantity="two">%d hours</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="many">%d hours</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d يوم</item>
-        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d day</item>
+        <item quantity="one">%d days</item>
+        <item quantity="two">%d days</item>
+        <item quantity="few">%d days</item>
+        <item quantity="many">%d days</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d أسبوع</item>
-        <item quantity="other">%d أسابيع</item>
+        <item quantity="zero">%d week</item>
+        <item quantity="one">%d weeks</item>
+        <item quantity="two">%d weeks</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="many">%d weeks</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d شهر</item>
-        <item quantity="other">%d أشهر</item>
+        <item quantity="zero">%d month</item>
+        <item quantity="one">%d months</item>
+        <item quantity="two">%d months</item>
+        <item quantity="few">%d months</item>
+        <item quantity="many">%d months</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d سنة</item>
-        <item quantity="other">%d سنوات</item>
+        <item quantity="zero">%d year</item>
+        <item quantity="one">%d years</item>
+        <item quantity="two">%d years</item>
+        <item quantity="few">%d years</item>
+        <item quantity="many">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">الوقت المتبقي حتي ينطفئ المنبه:\n%s</string>
@@ -550,14 +706,14 @@
     <!-- Settings -->
     <string name="settings">الإعدادات</string>
     <string name="purchase_simple_thank_you">شراء تطبيق (Simple Thank You)</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">عام</string>
+    <string name="color_customization">تخصيص الألوان</string>
     <string name="customize_colors">تخصيص الألوان</string>
-    <string name="customize_colors_locked">تخصيص الألوان (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="customize_colors_locked">تخصيص الألوان (مقفل)</string>
+    <string name="feature_locked">مقفل</string>
     <string name="customize_widget_colors">تخصيص ألوان الويدجت</string>
     <string name="customize_notifications">Customize notifications</string>
-    <string name="use_english_language">إستخدام اللغة الإنجليزية</string>
+    <string name="use_english_language">استخدام اللغة الإنجليزية</string>
     <string name="language">اللغة</string>
     <string name="show_hidden_items">إظهار العناصر المخفية</string>
     <string name="font_size">حجم الخط</string>
@@ -573,11 +729,11 @@
     <string name="prevent_phone_from_sleeping">منع الهاتف من السكون أثناء وجود التطبيق في المقدمة</string>
     <string name="skip_delete_confirmation">تخطي مربع حوار تأكيد الحذف دائماً</string>
     <string name="enable_pull_to_refresh">تمكين السحب للتحديث من أعلي</string>
-    <string name="use_24_hour_time_format">إستخدام تنسيق الوقت 24 ساعة</string>
+    <string name="use_24_hour_time_format">استخدام تنسيق الوقت 24 ساعة</string>
     <string name="change_date_and_time_format">تغيير تنسيق التاريخ والوقت</string>
     <string name="sunday_first">بداية الأسبوع يوم الأحد</string>
     <string name="widgets">الويدجت</string>
-    <string name="use_same_snooze">إستخدام نفس مدة الغفوة دائماً</string>
+    <string name="use_same_snooze">استخدام نفس مدة الغفوة دائماً</string>
     <string name="snooze_time">مدة الغفوة</string>
     <string name="vibrate_on_button_press">الإهتزاز عند الضغط على الأزرار</string>
     <string name="move_items_into_recycle_bin">نقل العناصر إلى "سلة المحذوفات" بدلاً من حذفها</string>
@@ -605,6 +761,16 @@
     <string name="main_screen">الصفحة الرئيسيّة</string>
     <string name="thumbnails">الصور المصغّرة</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">استبعاد</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">المجلدات المستبعدة</string>
+    <string name="excluded">(مستبعد)</string>
+    <string name="manage_excluded_folders">إدارة المجلدات المستبعدة</string>
+    <string name="remove_all">إزالة الكل</string>
+    <string name="remove_all_description">هل تريد إزالة كافة المجلدات من قائمة المجلدات المستبعدة؟ لن يؤدي هذا إلى حذف المجلدات.</string>
+    <string name="temporarily_show_excluded">إظهار الملفات المستبعدة مؤقتًا</string>
+    <string name="stop_showing_excluded">إيقاف عرض الملفات المستبعدة</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">إدارة التابات المعروضة</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -623,12 +789,16 @@
     <string name="files_restored_successfully">تم إستعادة الملفات بنجاح</string>
     <string name="empty_recycle_bin_confirmation">هل تريد بالتأكيد إفراغ "سلة المحذوفات" ؟ سيتم فقدان الملفات نهائياً.</string>
     <string name="recycle_bin_empty">سلة المحذوفات فارغة</string>
-    <string name="moving_recycle_bin_items_disabled">تم تعطيل نقل عناصر "سلة المحذوفات"، يرجى إستخدام إستعادة</string>
+    <string name="moving_recycle_bin_items_disabled">تم تعطيل نقل عناصر سلة المحذوفات، يرجى استخدام استعادة</string>
     <string name="show_the_recycle_bin">إظهار سلة المحذوفات</string>
     <string name="hide_the_recycle_bin">إخفاء سلة المحذوفات</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">جارٍ نقل %d عنصر إلى "سلة المحذوفات"</item>
-        <item quantity="other">جارٍ نقل %d عناصر إلى "سلة المحذوفات"</item>
+        <item quantity="zero">Moving %d item into the Recycle Bin</item>
+        <item quantity="one">Moving %d items into the Recycle Bin</item>
+        <item quantity="two">Moving %d items into the Recycle Bin</item>
+        <item quantity="few">Moving %d items into the Recycle Bin</item>
+        <item quantity="many">Moving %d items into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">جارٍ الإستيراد…</string>
@@ -697,7 +867,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">لن يتم تحديث إصدار التطبيق الخاص بك بعد الآن. يرجى الترقية إلى الإصدار (Pro) لتلقي الإصلاحات الجديدة وغيرها من التحسينات.</string>
     <string name="upgrade_to_pro_long_click">لن يتم تحديث إصدار التطبيق الخاص بك بعد الآن. يرجى الترقية إلى الإصدار (Pro) لتلقي الإصلاحات الجديدة وغيرها من التحسينات من خلال النقر هنا.</string>
-    <string name="it_is_free">انه مجاني حتي: %s. إذا قمت بتنزيله حتى ذلك الحين، سوف تتمكن من إستخدامه مجاناً إلى الأبد.</string>
+    <string name="it_is_free">إنه مجاني حتى: %s. إذا قمت بتنزيله حتى ذلك الحين، سوف تتمكن من استخدامه مجاناً إلى الأبد.</string>
     <string name="more_info">المزيد من المعلومات</string>
     <string name="upgrade">ترقية</string>
     <string name="upgrade_calendar">يجب عليك ترحيل الأحداث المخزنة محلياً يدوياً عن طريق التصدير في ملف .ics ، ثم الإستيراد. يمكنك العثور على أزرار التصدير / الإستيراد في قائمة الشاشة الرئيسية.</string>
@@ -739,9 +909,10 @@
             شكرا!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">شراء</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">يرجى تحديث تطبيق (Simple Thank You) إلى أحدث إصدار</string>
     <string name="before_asking_question_read_faq">قبل ان تسأل سؤالاً ، يرجى التحقق من إعدادات التطبيق وقراءة الأسئلة المتداولة أولاً. ربما يكون الحل موجوداً.</string>
     <string name="before_rate_read_faq">قبل أن تقيمنا ، يرجى التحقق من إعدادات التطبيق وقراءة الأسئلة الشائعة أولاً. إذا كان لديك أي مشاكل ، فربما يكون الحل موجوداً.</string>
@@ -778,6 +949,7 @@
     <string name="simple_flashlight">Simple Flashlight</string>
     <string name="simple_gallery">Simple Gallery</string>
     <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
@@ -795,6 +967,7 @@
     <string name="flashlight_short">المصباح</string>
     <string name="gallery_short">الاستديو</string>
     <string name="keyboard_short">Keyboard</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">مشغل الموسيقى</string>
     <string name="notes_short">الملاحظات</string>
     <string name="sms_messenger_short">SMS Messenger</string>
@@ -820,11 +993,11 @@
     <string name="faq_3_title_commons">قمت بحذف بعض الملفات عن طريق الخطأ، كيف يمكنني إسترجاعها؟</string>
     <string name="faq_3_text_commons">للأسف، لا يمكنك. يتم حذف الملفات فوراً بعد مربع حوار التأكيد، لا توجد سلة محذوفات متاحة.</string>
     <string name="faq_4_title_commons">أنا لا أحب ألوان (الويدجت)، هل يمكنني تغييرها؟</string>
-    <string name="faq_4_text_commons">نعم ، كما يمكنك سحب (الويدجت) على شاشتك الرئيسية تظهر شاشة إعداد (الويدجت). سترى المربعات الملونة في الزاوية اليسرى السفلي  ، فقط أضغط عليها لاختيار لون جديد. يمكنك إستخدام شريط التمرير لضبط الشفافية أيضاً.</string>
+    <string name="faq_4_text_commons">نعم، عند سحب الويدجت على شاشتك الرئيسية ستظهر شاشة إعدادات الويدجت. سترى المربعات الملونة في الزاوية اليسرى السفلى، فقط اضغط عليها لاختيار لون جديد. يمكنك استخدام شريط التمرير لضبط الشفافية أيضاً.</string>
     <string name="faq_5_title_commons">هل يمكنني بطريقة ما إسترجاع الملفات المحذوفة؟</string>
     <string name="faq_5_text_commons">إذا تم حذفها بالفعل ، لا يمكنك ذلك. ومع ذلك ، يتم تمكين "سلة المحذوفات" إفتراضياً ، مما يؤدي إلى نقل الملفات في "سلة المحذوفات" بدلاً من حذفها.</string>
     <string name="faq_6_title_commons">أختفت أيقونة مشغل التطبيق. ماذا يمكنني أن أفعل؟</string>
-    <string name="faq_6_text_commons">سبب ذلك عدم دعم المشغّل لتخصيص الأيقونة بشكل صحيح حاول تشغيل التطبيق من خلال Google Play أو بعض التطبيقات المصغرة (الويدجت) ، إذا كان متوفراً. بمجرد تشغيله، قم فقط بإرجاع الأيقونة البرتقاليه الإفتراضية #F57C00 قد تضطر إلي إعادة تثبيت التطبيق في اسوأ الحالات.</string>
+    <string name="faq_6_text_commons">سبب ذلك عدم دعم المشغّل لتخصيص الأيقونة بشكل صحيح. حاول تشغيل التطبيق من خلال Google Play أو بعض التطبيقات المصغرة (الويدجت)، إذا كان متوفراً. بمجرد تشغيله، قم فقط بإرجاع الأيقونة البرتقالية الإفتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الحالات.</string>
     <string name="faq_7_title_commons">تم خصم المال من حسابي البنكي ، لكن لا يمكنني تنزيل التطبيق. ماذا يمكنني أن أفعل؟</string>
     <string name="faq_7_text_commons">تتم معالجة المدفوعات بالكامل بواسطة Google ، حيث يتسبب نظامها في خلل من وقت لآخر. فقط قم بمسح ذاكرة التخزين المؤقت للتطبيق في Google Play وإعد تشغيل جهازك ، ثم أعد محاولة تنزيله.</string>
     <string name="faq_8_title_commons">لماذا يجب عليا الترقية إلى الإصدار البرو (Pro)?</string>
@@ -851,6 +1024,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -902,6 +1076,7 @@
     <string name="why_upgrade_improved_design">تصميم مطور</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
@@ -939,7 +1114,7 @@
     <string name="glide_title">تحميل الصور وتخزينها المؤقت)</string>
     <string name="picasso_title">بيكاسو (تحميل الصور وذاكرة التخزين المؤقت)</string>
     <string name="cropper_title">إقتصاص الصورة وتدويرها</string>
-    <string name="rtl_viewpager_title">السحب من اليمين إلي اليسار</string>
+    <string name="rtl_viewpager_title">السحب من اليمين إلى اليسار</string>
     <string name="joda_title">جودا تايم (إستبدال تاريخ الجافا)</string>
     <string name="stetho_title">ستيثو (تصحيح قواعد البيانات)</string>
     <string name="otto_title">أوتو (ناقل الأحداث)</string>

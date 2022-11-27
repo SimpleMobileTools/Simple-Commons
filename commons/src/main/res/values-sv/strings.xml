@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
+    <string name="back">Back</string>
     <string name="nothing">Ingenting</string>
     <string name="later">Senare</string>
     <string name="save_as">Spara som</string>
@@ -14,8 +15,8 @@
     <string name="edit_with">Redigera med</string>
     <string name="edit">Redigera</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Ingen webbläsare hittades</string>
+    <string name="no_email_client_found">Ingen e-postklient hittades</string>
     <string name="set_as">Använd som</string>
     <string name="copy_to_clipboard">Kopiera till urklipp</string>
     <string name="copy_number_to_clipboard">Kopiera nummer till urklipp</string>
@@ -57,12 +58,22 @@
     <string name="seven">Sju</string>
     <string name="eight">Åtta</string>
     <string name="nine">Nio</string>
-    <string name="value">Value</string>
+    <string name="value">Värde</string>
     <string name="value_cannot_be_empty">Värdet får inte vara tomt</string>
     <string name="create_new_contact">Skapa ny kontakt</string>
     <string name="add_to_existing_contact">Lägg till i en befintlig kontakt</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Appen är skadad</string>
+    <string name="disclaimer">Ansvarsfriskrivning</string>
+    <string name="take_photo">Ta foto</string>
+    <string name="choose_photo">Välj foto</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Födelsedag</string>
+    <string name="anniversary">Årsdag</string>
     <!-- Emails -->
     <string name="home">Hem</string>
     <string name="work">Arbete</string>
@@ -81,6 +92,9 @@
     <string name="list">Lista</string>
     <string name="increase_column_count">Öka antalet kolumner</string>
     <string name="reduce_column_count">Minska antalet kolumner</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Byt omslagsbild</string>
     <string name="select_photo">Välj foto</string>
     <!-- Blocked numbers -->
@@ -95,8 +109,10 @@
     <string name="must_make_default_dialer">Du måste ställa in den här appen som standardtelefonapp för att kunna använda blockerade nummer.</string>
     <string name="set_as_default">Ange som standard</string>
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Blockera samtal från okända nummer</string>
+    <string name="block_unknown_messages">Blockera meddelanden från okända nummer</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Kontaktbehörighet krävs</string>
     <string name="no_camera_permissions">Kamerabehörighet krävs</string>
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Byt namn på fil</string>
     <string name="rename_folder">Byt namn på mapp</string>
@@ -309,6 +327,7 @@
     <string name="rename">Byt namn</string>
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
+    <string name="resize">Ändra storlek</string>
     <string name="select_all">Markera alla</string>
     <string name="select_text">Markera text</string>
     <string name="hide">Dölj</string>
@@ -323,6 +342,7 @@
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
     <string name="print_pro">Skriv ut (Pro)</string>
+    <string name="shortcut">Genväg</string>
     <string name="create_shortcut">Skapa genväg</string>
     <string name="create_shortcut_pro">Skapa genväg (Pro)</string>
     <string name="add_number_to_contact">Lägg till nummer i kontakt</string>
@@ -337,6 +357,9 @@
     <string name="send_sms">Skicka sms</string>
     <string name="send_email">Skicka e-post</string>
     <string name="call">Ring</string>
+    <string name="contact_details">Kontaktuppgifter</string>
+    <string name="add_contact">Lägg till kontakt</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -556,7 +579,7 @@
     <string name="color_customization">Färganpassning</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="customize_colors_locked">Anpassa färger (låst)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="customize_notifications">Anpassa aviseringar</string>
     <string name="use_english_language">Använd engelska</string>
@@ -607,6 +630,16 @@
     <string name="main_screen">Huvudskärm</string>
     <string name="thumbnails">Miniatyrbilder</string>
     <string name="list_view">Listvy</string>
+    <!-- Excluding -->
+    <string name="exclude">Uteslut</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Uteslutna mappar</string>
+    <string name="excluded">(utesluten)</string>
+    <string name="manage_excluded_folders">Hantera uteslutna mappar</string>
+    <string name="remove_all">Ta bort alla</string>
+    <string name="remove_all_description">Vill du ta bort alla mappar från uteslutningslistan\? Detta raderar inte mapparna.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -741,9 +774,10 @@
             Tack!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Köp</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Skaffa Simple Phone</string>
     <string name="update_thank_you">Uppdatera Simple Thank You till den senaste versionen</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
@@ -769,22 +803,23 @@
         ]]>
     </string>
     <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_calculator">Simpel kalkylator</string>
+    <string name="simple_calendar">Simpel kalender</string>
+    <string name="simple_camera">Simpel kamera</string>
+    <string name="simple_clock">Simpel klocka</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_dialer">Simpel telefon</string>
     <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_file_manager">Simpel filhanterare</string>
+    <string name="simple_flashlight">Simpel ficklampa</string>
+    <string name="simple_gallery">Simpelt galleri</string>
+    <string name="simple_keyboard">Simpelt tangentbord</string>
+    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_music_player">Simpel musikspelare</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_thank_you">Simpelt tack</string>
+    <string name="simple_voice_recorder">Simpel röstinspelare</string>
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Kalkylator</string>
     <string name="calendar_short">Kalender</string>
@@ -797,11 +832,12 @@
     <string name="flashlight_short">Ficklampa</string>
     <string name="gallery_short">Galleri</string>
     <string name="keyboard_short">Tangentbord</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Musikspelare</string>
     <string name="notes_short">Anteckningar</string>
     <string name="sms_messenger_short">Sms</string>
     <string name="thank_you_short">Tack</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Röstinspelare</string>
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
@@ -857,6 +893,7 @@
     <string name="translation_azerbaijani">Azerbajdzjanska</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Bretonska</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Katalanska</string>
     <string name="translation_czech">Tjeckiska</string>
     <string name="translation_welsh">Walesiska</string>
@@ -908,6 +945,7 @@
     <string name="why_upgrade_improved_design">Improved design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>

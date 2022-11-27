@@ -12,8 +12,8 @@ import kotlinx.android.synthetic.main.dialog_change_date_time_format.view.*
 import java.util.*
 
 class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
-    val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
-    val sampleTS = 1613422500000    // February 15, 2021
+    private val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
+    private val sampleTS = 1613422500000    // February 15, 2021
 
     init {
         view.apply {

@@ -42,11 +42,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         block_unknown.apply {
             setText(blockTitleRes)
             isChecked = baseConfig.blockUnknownNumbers
+            if (isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
         }
 
         block_unknown_holder.setOnClickListener {
             block_unknown.toggle()
             baseConfig.blockUnknownNumbers = block_unknown.isChecked
+            if (block_unknown.isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
         }
 
         manage_blocked_numbers_placeholder_2.apply {
@@ -97,6 +103,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         } else if (requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportBlockedNumbersTo(outputStream)
+        } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
+            toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
+            baseConfig.blockUnknownNumbers = false
+            block_unknown.isChecked = false
         }
     }
 
@@ -121,6 +131,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
                 manage_blocked_numbers_placeholder.beVisibleIf(blockedNumbers.isEmpty())
                 manage_blocked_numbers_placeholder_2.beVisibleIf(blockedNumbers.isEmpty())
+
+                if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
+                    maybeSetDefaultCallerIdApp()
+                }
             }
         }
     }
@@ -241,6 +255,12 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     )
                 }
             }
+        }
+    }
+
+    private fun maybeSetDefaultCallerIdApp() {
+        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
+            setDefaultCallerIdApp()
         }
     }
 }

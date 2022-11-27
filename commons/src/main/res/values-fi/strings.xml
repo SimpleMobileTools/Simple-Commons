@@ -2,20 +2,21 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Peruuta</string>
+    <string name="back">Back</string>
     <string name="nothing">Ei mitään</string>
     <string name="later">Myöhemmin</string>
     <string name="save_as">Tallenna nimellä</string>
     <string name="file_saved">Tallennettu</string>
     <string name="invalid_file_format">Virheellinen tiedostomuoto</string>
     <string name="out_of_memory_error">Liian vähän muistia</string>
-    <string name="an_error_occurred">Virhe: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="an_error_occurred">Tapahtui virhe: %s</string>
+    <string name="error">Virhe: %s</string>
     <string name="open_with">Avaa sovelluksessa</string>
     <string name="edit_with">Muokkaa sovelluksella</string>
     <string name="edit">Muokkaa</string>
     <string name="no_app_found">Sovelluksia ei löydetty</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Selainta ei löytynyt</string>
+    <string name="no_email_client_found">Sähköpostiohjelmaa ei löytynyt</string>
     <string name="set_as">Aseta</string>
     <string name="copy_to_clipboard">Kopioi leikepöydälle</string>
     <string name="copy_number_to_clipboard">Kopioi numero leikepöydälle</string>
@@ -47,8 +48,8 @@
     <string name="no_phone_call_permission">Sovelluksella ei ole käyttöoikeutta puhelujen aloittamiseen, myönnä käyttöoikeus laitteen asetuksissa</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
     <string name="call_person">Soita %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="zero">Nolla</string>
+    <string name="one">Yksi</string>
     <string name="two">Kaksi</string>
     <string name="three">Kolme</string>
     <string name="four">Neljä</string>
@@ -61,8 +62,18 @@
     <string name="value_cannot_be_empty">Arvo ei voi olla tyhjä</string>
     <string name="create_new_contact">Luo uusi yhteystieto</string>
     <string name="add_to_existing_contact">Lisää olemassa olevaan yhteystietoon</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">App korruptoitunut</string>
+    <string name="disclaimer">Vastuuvapauslauseke</string>
+    <string name="take_photo">Ota kuva</string>
+    <string name="choose_photo">Valitse kuva</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Syntymäpäivä</string>
+    <string name="anniversary">Vuosipäivä</string>
     <!-- Emails -->
     <string name="home">Koti</string>
     <string name="work">Työ</string>
@@ -81,6 +92,9 @@
     <string name="list">Lista</string>
     <string name="increase_column_count">Lisää sarakkeita</string>
     <string name="reduce_column_count">Vähennä sarakkeita</string>
+    <string name="column_count">Sarakkeiden lukumäärä</string>
+    <string name="portrait_column_count">Muotokuvasarakkeiden määrä</string>
+    <string name="landscape_column_count">Maiseman sarakkeiden määrä</string>
     <string name="change_cover_image">Vaihda kansikuva</string>
     <string name="select_photo">Valitse kuva</string>
     <!-- Blocked numbers -->
@@ -95,8 +109,10 @@
     <string name="must_make_default_dialer">Jotta voit käyttää numeroiden estoja, täytyy tämän sovelluksen olla oletuksena puheluille.</string>
     <string name="set_as_default">Aseta oletukseksi</string>
     <string name="block_confirmation">Haluatko varmasti estää numeron \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Estä puhelut tallentamattomista yhteystiedoista</string>
+    <string name="block_unknown_messages">Estä viestit tallentamattomista yhteystiedoista</string>
+    <string name="add_blocked_number_helper_text">Anna numero tai kuvio (esim. *12345*, +1*8888) estääksesi kaikki puhelut ja viestit kuvion mukaisista numeroista.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Suosikit</string>
     <string name="add_favorites">Lisää suosikkeja</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Lupa yhteystietoihin vaaditaan</string>
     <string name="no_camera_permissions">Lupa kameraan vaaditaan</string>
     <string name="no_audio_permissions">Lupa ääneen vaaditaan</string>
+    <string name="no_post_notifications_permissions">Ilmoitusten lähettämiseen tarvitaan lupa</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Uudelleennimeä tiedosto</string>
     <string name="rename_folder">Uudelleennimeä kansio</string>
@@ -155,12 +173,12 @@
     <string name="source_and_destination_same">Lähde ja kohde eivät voi olla samat</string>
     <string name="copy_failed">Tiedostoja ei voitu kopioida</string>
     <string name="copying">Kopioidaan…</string>
-    <string name="copying_success">Tiedostot kopioitu</string>
-    <string name="copying_success_one">Tiedosto kopioitu</string>
+    <string name="copying_success">Tiedostot kopioitu onnistuneesti</string>
+    <string name="copying_success_one">Tiedosto kopioitu onnistuneesti</string>
     <string name="copy_move_failed">Tapahtui virhe</string>
     <string name="moving">Siirretään…</string>
-    <string name="moving_success">Tiedostot siirretty</string>
-    <string name="moving_success_one">Tiedosto siirretty</string>
+    <string name="moving_success">Tiedostot siirretty onnistuneesti</string>
+    <string name="moving_success_one">Tiedosto siirretty onnistuneesti</string>
     <string name="moving_success_partial">Kaikkia tiedostoja ei voitu siirtää</string>
     <string name="copying_success_partial">Kaikkia tiedostoja ei voitu kopioida</string>
     <string name="no_files_selected">Ei valittuja tiedostoja</string>
@@ -192,8 +210,8 @@
     <string name="system_folder_restriction">Järjestelmä ei salli toimintoa tässä kansiossa, ole hyvä ja valitse toinen</string>
     <string name="system_folder_copy_restriction">Järjestelmä ei salli kopiointia tähän hakemistoon, ole hyvä ja valitse toinen</string>
     <string name="rename_in_sd_card_system_restriction">Järjestelmä ei salli uudelleennimeämistä tässä hakemistossa</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="rename_internal_system_restriction">Kansioita ei voi nimetä uudelleen suoraan sisäisessä tallennustilassa, vain alikansioita</string>
+    <string name="cannot_rename_folder">Tätä kansiota ei voi nimetä uudelleen</string>
     <!-- File picker -->
     <string name="select_folder">Valitse kansio</string>
     <string name="select_file">Valitse tiedosto</string>
@@ -227,7 +245,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Valitse tallennustila</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Varastointi</string>
     <string name="internal">Sisäinen</string>
     <string name="sd_card">Muistikortti</string>
     <string name="root">Juurihakemisto</string>
@@ -248,7 +266,7 @@
     <string name="album">Albumi</string>
     <string name="focal_length">Polttoväli</string>
     <string name="exposure_time">Valotusaika</string>
-    <string name="iso_speed">ISO-arvo</string>
+    <string name="iso_speed">ISO-nopeus</string>
     <string name="f_number">F-arvo</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
@@ -257,7 +275,7 @@
     <string name="altitude">Korkeus</string>
     <string name="remove_exif">Poista EXIF</string>
     <string name="remove_exif_confirmation">Haluatko varmasti poistaa EXIF-arvot kuten GPS-koordinaatit, kameran mallin yms.\?</string>
-    <string name="exif_removed">EXIF-arvot poistettu</string>
+    <string name="exif_removed">EXIF-arvot poistettu onnistuneesti</string>
     <!-- Color customization -->
     <string name="background_color">Taustaväri</string>
     <string name="text_color">Tekstin väri</string>
@@ -299,7 +317,7 @@
     <string name="black_white">Musta &amp; Valkoinen</string>
     <string name="custom">Oma</string>
     <string name="shared">Jaettu</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Järjestelmän oletus</string>
     <!-- What's new -->
     <string name="whats_new">Mitä uutta</string>
     <string name="whats_new_disclaimer">* tässä mainitaan vain isot muutokset, ei pieniä korjauksia</string>
@@ -309,6 +327,7 @@
     <string name="rename">Uudelleennimeä</string>
     <string name="share">Jaa</string>
     <string name="share_via">Jaa sovelluksella</string>
+    <string name="resize">Rajaa</string>
     <string name="select_all">Valitse kaikki</string>
     <string name="select_text">Valitse teksti</string>
     <string name="hide">Piilota</string>
@@ -323,6 +342,7 @@
     <string name="redo">Tee uudelleen</string>
     <string name="print">Tulosta</string>
     <string name="print_pro">Tulosta (Pro)</string>
+    <string name="shortcut">Pikakuvake</string>
     <string name="create_shortcut">Luo pikakuvake</string>
     <string name="create_shortcut_pro">Luo pikakuvake (Pro)</string>
     <string name="add_number_to_contact">Lisää numero yhteystietoon</string>
@@ -332,11 +352,14 @@
     <string name="toggle_filename">Tiedostonimien näkyvyys</string>
     <string name="move_to_top">Siirrä ylimmäksi</string>
     <string name="move_to_bottom">Siirrä alimmaksi</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">Nastan kohta</string>
     <string name="unpin_item">Poista kohteen kiinnitys</string>
     <string name="send_sms">Lähetä tekstiviesti</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">Lähetä sähköpostia</string>
     <string name="call">Soita</string>
+    <string name="contact_details">Yhteystiedot</string>
+    <string name="add_contact">Lisää yhteystieto</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
     <string name="name">Nimen perusteella</string>
@@ -553,7 +576,7 @@
     <!-- Settings -->
     <string name="settings">Asetukset</string>
     <string name="purchase_simple_thank_you">Osta Simple Thank You</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Yleistä</string>
     <string name="color_customization">Värien mukautus</string>
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
     <string name="customize_colors_locked">Muokkaa sovelluksen värejä (Locked)</string>
@@ -598,7 +621,7 @@
     <string name="visibility">Näkyvyys</string>
     <string name="security">Turvallisuus</string>
     <string name="scrolling">Vierittäminen</string>
-    <string name="file_operations">Tiedostot</string>
+    <string name="file_operations">Tiedostotoiminnot</string>
     <string name="recycle_bin">Roskakori</string>
     <string name="saving_label">Tallennetaan</string>
     <string name="startup">Käynnistys</string>
@@ -607,7 +630,17 @@
     <string name="quality">Laatu</string>
     <string name="main_screen">Päänäkymä</string>
     <string name="thumbnails">Esikatselukuvat</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Luettelonäkymä</string>
+    <!-- Excluding -->
+    <string name="exclude">Poissulje</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Poissuljetut kansiot</string>
+    <string name="excluded">(poissuljettu)</string>
+    <string name="manage_excluded_folders">Hallitse poissuljettuja kansioita</string>
+    <string name="remove_all">Poista kaikki</string>
+    <string name="remove_all_description">Poista kaikki kansiot poissuljettujen listasta\? Tämä ei poista kansioita.</string>
+    <string name="temporarily_show_excluded">Näytä tilapäisesti poissuljetut</string>
+    <string name="stop_showing_excluded">Lopeta poissuljettujen näyttäminen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Valitse sovelluksen välilehdet</string>
     <string name="default_tab_to_open">Välilehti, joka avataan sovelluksen käynnistyessä</string>
@@ -712,7 +745,7 @@
     <string name="upgraded_to_pro_contacts">Sinun tulee yhdistää yksityisesti tallennetut yhteystiedot manuaalisesti viemällä ne ensin .vcf-tiedostoon ja sen jälkeen tuomalla ne. Vienti- ja tuontitoiminnot löytyvät ylävalikosta.</string>
     <!-- About -->
     <string name="about">Tietoa</string>
-    <string name="website">Website</string>
+    <string name="website">Verkkosivusto</string>
     <string name="website_label">Lähdekoodin löydät täältä</string>
     <string name="email_label">Lähetä palautteesi ja ehdotuksia osoitteeseen</string>
     <string name="upgrade_to_pro">Päivitä Pro-versioon</string>
@@ -721,17 +754,17 @@
     <string name="invite_friends">Kutsu ystäviä</string>
     <string name="share_text">Hei, tutustu %1$s täällä %2$s</string>
     <string name="invite_via">Kutsu sovelluksella</string>
-    <string name="rate_us">Arvostele</string>
+    <string name="rate_us">Arvioi meidät</string>
     <string name="rate">Arvostele</string>
     <string name="donate">Lahjoita</string>
     <string name="follow_us">Seuraa</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="support">Tuki</string>
+    <string name="help_us">Auta meitä</string>
+    <string name="social">Sosiaalinen</string>
+    <string name="other">Muut</string>
     <string name="privacy_policy">Tietosuojakäytäntö</string>
-    <string name="version_placeholder">Version %s</string>
+    <string name="version_placeholder">Versio %s</string>
     <string name="hello">Hei :)</string>
     <string name="about_footer">Tehty ❤️:llä Slovakiassa</string>
     <string name="additional_info">Lisätietoa</string>
@@ -744,10 +777,11 @@
             Kiitos!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hei,&lt;br&gt;&lt;br&gt;toivottavasti pidät sovelluksesta. Se ei sisällä mainoksia, emmekä myöskään kerää tietojasi. Tue sen kehitystä ostamalla &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Yksinkertainen kiitos sinä&lt;/a&gt;. Sinulla on myös kaikki sovellusominaisuudet ja värien mukauttaminen lukitsematta.&lt;br&gt;&lt;br&gt;Kiitos!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Osta</string>
-    <string name="order_simple_phone">Tilaa Simple Phone</string>
-    <string name="update_thank_you">Päivitä Simple Thank You viimeisimpään versioon</string>
+    <string name="get_simple_phone">Hanki yksinkertainen puhelin</string>
+    <string name="update_thank_you">Päivitä Yksinkertainen kiitos viimeisimpään versioon</string>
     <string name="before_asking_question_read_faq">Ennen kysymyksen esittämistä varmista, löytyykö vastaus asetuksista tai usein kysytyistä kysymyksistä (Frequently Asked Questions).</string>
     <string name="before_rate_read_faq">Ennen kuin arvostelet sovelluksen ja sinulla on ongelmia sovelluksen kanssa, varmista, löytyykö ratkaisu asetuksista tai usein kysytyistä kysymyksistä (Frequently Asked Questions).</string>
     <string name="make_sure_latest">Varmista myös, että käytät viimeisintä versiota.</string>
@@ -767,26 +801,27 @@
     <string name="thank_you">Kiitos</string>
     <string name="widget_locked_pro">Pienoissovellus on lukittu.
 \nOle hyvä ja päivitä Pro-versioon ottaaksesi sen käyttöön.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Tämä ominaisuus on lukittu. Osta &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Kiitos&lt;/a&gt; koko sovelluksen lukituksen avaamisesta.&lt;br &lt;br&gt;Se on vain kertamaksu, ja jos et ole tyytyväinen, voimme hyvittää sinulle.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hei,&lt;br&gt;&lt;br&gt; halusin vain kertoa että uusi sovellus on julkaistu:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Voit ladata sen koskettamalla otsikkoa.&lt;br&gt;&lt;br&gt; Kiitos</string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Yksinkertainen App Launcher</string>
+    <string name="simple_calculator">Yksinkertainen laskin</string>
+    <string name="simple_calendar">Yksinkertainen kalenteri</string>
+    <string name="simple_camera">Yksinkertainen kamera</string>
+    <string name="simple_clock">Yksinkertainen kello</string>
+    <string name="simple_contacts">Yksinkertaiset yhteystiedot</string>
+    <string name="simple_dialer">Yksinkertainen valitsin</string>
+    <string name="simple_draw">Yksinkertainen arvonta</string>
+    <string name="simple_file_manager">Yksinkertainen tiedostonhallinta</string>
+    <string name="simple_flashlight">Yksinkertainen taskulamppu</string>
+    <string name="simple_gallery">Yksinkertainen galleria</string>
+    <string name="simple_keyboard">Yksinkertainen näppäimistö</string>
+    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_music_player">Yksinkertainen musiikkisoitin</string>
+    <string name="simple_notes">Yksinkertaiset muistiinpanot</string>
+    <string name="simple_sms_messenger">Yksinkertainen SMS Messenger</string>
+    <string name="simple_thank_you">Yksinkertainen kiitos</string>
+    <string name="simple_voice_recorder">Yksinkertainen ääninauhuri</string>
     <string name="app_launcher_short">Sovelluskäynnistin</string>
     <string name="calculator_short">Laskin</string>
     <string name="calendar_short">Kalenteri</string>
@@ -799,10 +834,11 @@
     <string name="flashlight_short">Taskulamppu</string>
     <string name="gallery_short">Galleria</string>
     <string name="keyboard_short">Näppäimistö</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Musiikkisoitin</string>
     <string name="notes_short">Muistiinpanot</string>
-    <string name="sms_messenger_short">Viestit</string>
-    <string name="thank_you_short">Thank You</string>
+    <string name="sms_messenger_short">Tekstiviesti Messenger</string>
+    <string name="thank_you_short">Kiitos</string>
     <string name="voice_recorder_short">Ääninauhuri</string>
     <string name="sideloaded_app">
         <![CDATA[
@@ -842,9 +878,10 @@
     <string name="other_help">Muu apu</string>
     <string name="contributors_label">Tämä lista sisältää kaikki ne, jotka ovat merkittävästi auttaneet Simple Mobile Tools-sovelluskokoelman sovelluksissa. Vapaahtoiset tekevätk käännöksiä; ole yhteydessä, jos haluat myös auttaa. Ohje käännöksiin löytyy &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;tästä osoitteesta&lt;/a&gt;, tai ole vain yhteydessä sähköpostitse &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; jos sinulla on kysymyksiä. Kiitos kaikille osallistujille ja tukijoille!</string>
     <string name="translation_arabic">Arabia</string>
-    <string name="translation_azerbaijani">Azeri</string>
+    <string name="translation_azerbaijani">Azerbaidžan</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Bretoni</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Katalaani</string>
     <string name="translation_czech">Tšekki</string>
     <string name="translation_welsh">Kymri</string>
@@ -873,7 +910,7 @@
     <string name="translation_polish">Puola</string>
     <string name="translation_portuguese">Portugali</string>
     <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Venäjä</string>
+    <string name="translation_russian">Venäläinen</string>
     <string name="translation_slovak">Slovakki</string>
     <string name="translation_slovenian">Sloveeni</string>
     <string name="translation_serbian">Serbia</string>
@@ -882,9 +919,9 @@
     <string name="translation_turkish">Turkki</string>
     <string name="translation_ukrainian">Ukraina</string>
     <string name="translation_vietnamese">Vietnam</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_chinese_hk">Kiinalainen (Hongkong)</string>
+    <string name="translation_chinese_cn">kiina (yksinkertaistettu)</string>
+    <string name="translation_chinese_tw">kiina (perinteinen)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Hanki Pro-versio nyt!</string>
     <string name="why_upgrade_basic_version">Perus</string>
@@ -892,10 +929,11 @@
     <string name="why_upgrade_no_ads">Ei mainoksia</string>
     <string name="why_upgrade_no_internet_access">Ei internetyhteyttä</string>
     <string name="why_upgrade_footer">100% rahat takaisin-takuu</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Kertamaksu</string>
     <string name="why_upgrade_improved_design">Kehittyneempi ulkoasu</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">Tuki HEIC/HEIF-tiedostoille</string>
     <string name="why_upgrade_batch_renaming">Kehittynyt monen tiedoston uudelleennimeäminen kerralla </string>
     <string name="why_upgrade_folder_locking">Yksittäisten hakemistojen lukitseminen</string>
@@ -929,7 +967,7 @@
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>
     <string name="third_party_licences">Kolmansien osapuolien lisenssit</string>
     <string name="kotlin_title">Kotlin (ohjelmointikieli)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomattavat kuvannäkymät)</string>
     <string name="glide_title">Glide (kuvien lataus ja välimuisti)</string>
     <string name="picasso_title">Picasso (kuvien lataus ja välimuisti)</string>
     <string name="cropper_title">Android Image Cropper (kuvien rajaus ja kierto)</string>
@@ -944,7 +982,7 @@
     <string name="autofittextview_title">AutoFitTextView (tekstin koon muutos)</string>
     <string name="robolectric_title">Robolectric (testauspuitteet)</string>
     <string name="espresso_title">Espresso (testausapuri)</string>
-    <string name="gson_title">Gson (JSON-jäsennys)</string>
+    <string name="gson_title">Gson (JSON-jäsennin)</string>
     <string name="leak_canary_title">Leak Canary (muistivuotojen havaitseminen)</string>
     <string name="number_picker_title">Number Picker (mukautettava numeronvalitsin)</string>
     <string name="exoplayer_title">ExoPlayer (videosoitin)</string>
@@ -957,9 +995,9 @@
     <string name="audio_record_view_title">Audio Record View (äänen visualisointi)</string>
     <string name="sms_mms_title">SMS MMS (SMS ja MMS-viestien käsittely)</string>
     <string name="apng_title">APNG Android (animoitu WebP-tuki)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF-katseluohjelma)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u-soittolistan tiedostojen käsittely)</string>
+    <string name="android_lame_title">AndroidLame (mp3-kooderi)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse hello@simplemobiletools.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>

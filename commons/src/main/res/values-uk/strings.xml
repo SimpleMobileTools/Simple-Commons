@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
+    <string name="back">Back</string>
     <string name="nothing">Нічого</string>
     <string name="later">Пізніше</string>
     <string name="save_as">Зберегти як</string>
@@ -63,6 +64,16 @@
     <string name="add_to_existing_contact">Додати до існуючого контакту</string>
     <string name="app_corrupt">Застосунок пошкоджено</string>
     <string name="disclaimer">Застереження</string>
+    <string name="take_photo">Зробити світлину</string>
+    <string name="choose_photo">Обрати світлину</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">День народження</string>
+    <string name="anniversary">Річниця</string>
     <!-- Emails -->
     <string name="home">Домашній</string>
     <string name="work">Робочий</string>
@@ -81,6 +92,9 @@
     <string name="list">Список</string>
     <string name="increase_column_count">Збільшити кількість колонок</string>
     <string name="reduce_column_count">Зменшити кількість колонок</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Змінити обкладинку</string>
     <string name="select_photo">Вибрати світлину</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
     <string name="block_unknown_calls">Блокувати дзвінки від не збережених контактів</string>
     <string name="block_unknown_messages">Блокувати повідомлення від не збережених контактів</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
     <string name="add_favorites">Додати улюблене</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Необхідний дозвіл на доступ до контактів</string>
     <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Перейменувати файл</string>
     <string name="rename_folder">Перейменувати теку</string>
@@ -313,6 +331,7 @@
     <string name="rename">Перейменувати</string>
     <string name="share">Поділитися</string>
     <string name="share_via">Поділитися через</string>
+    <string name="resize">Змінити розмір</string>
     <string name="select_all">Обрати все</string>
     <string name="select_text">Обрати текст</string>
     <string name="hide">Приховати</string>
@@ -327,6 +346,7 @@
     <string name="redo">Повторити</string>
     <string name="print">Друкувати</string>
     <string name="print_pro">Друкувати (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">Створити посилання</string>
     <string name="create_shortcut_pro">Створити посилання (Pro)</string>
     <string name="add_number_to_contact">Додати номер до контактів</string>
@@ -341,6 +361,9 @@
     <string name="send_sms">Надіслати SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Виклик</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
     <string name="name">Ім\'я</string>
@@ -670,6 +693,16 @@
     <string name="main_screen">Головний екран</string>
     <string name="thumbnails">Мініатюри</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Виключити</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Виключені теки</string>
+    <string name="excluded">(виключене)</string>
+    <string name="manage_excluded_folders">Керування виключеними теками</string>
+    <string name="remove_all">Видалити все</string>
+    <string name="remove_all_description">Видалити всі теки зі списку виключених\? Це не видалить теки з пристрою.</string>
+    <string name="temporarily_show_excluded">Тимчасово показати вилучені</string>
+    <string name="stop_showing_excluded">Припинити показ вилучених</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
     <string name="default_tab_to_open">Вкладка, що відкривається при запуску додатка</string>
@@ -803,8 +836,9 @@
     <string name="device_os">ОС пристрою: %s</string>
     <string name="donate_please">Привіт,&lt;br&gt;&lt;br&gt; сподіваюсь, вам подобається додаток. Він не містить реклами, будь ласка, підтримайте його розробку, придбавши додаток &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Проста Подяка&lt;/a&gt;. Покупка також відмінить повторне спливання цього повідомлення.&lt;br&gt;&lt;br&gt; Спасибі!</string>
     <string name="donate_new">Вітаю,&lt;br&gt;&lt;br&gt;сподіваюся, вам подобається застосунок. Він не містить реклами, також ми не збираємо ваші дані. Будь ласка, підтримайте розвиток, придбавши &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Просту подяку&lt;/a&gt;. Таким чином ви розблокуєте всі можливості застосунку, зокрема налаштування кольорів.&lt;br&gt;&lt;br&gt;Дякуємо!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Придбати</string>
-    <string name="order_simple_phone">Замовити Простий Телефон</string>
+    <string name="get_simple_phone">Замовити Простий Телефон</string>
     <string name="update_thank_you">Будь ласка, оновіть \"Просту Подяку\" до останньої версії</string>
     <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часті Питання. Можливо, відповідь там.</string>
     <string name="before_rate_read_faq">Перш ніж ви оціните нас, будь ласка перегляньте налаштування додатка та прочитайте Часті Питання. Якщо у вас виникнуть проблеми, можливо там буде вирішення.</string>
@@ -842,6 +876,7 @@
     <string name="simple_flashlight">Простий Ліхтарик</string>
     <string name="simple_gallery">Проста Галерея</string>
     <string name="simple_keyboard">Проста Клавіатура</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Простий Музичний Програвач</string>
     <string name="simple_notes">Прості Нотатки</string>
     <string name="simple_sms_messenger">Прості SMS Повідомлення</string>
@@ -859,6 +894,7 @@
     <string name="flashlight_short">Ліхтарик</string>
     <string name="gallery_short">Галерея</string>
     <string name="keyboard_short">Клавіатура</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Музичний Програвач</string>
     <string name="notes_short">Нотатник</string>
     <string name="sms_messenger_short">SMS Повідомлення</string>
@@ -908,6 +944,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -959,6 +996,7 @@
     <string name="why_upgrade_improved_design">Покращений дизайн</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений редактор світлин</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">Підтримка файлів HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Удосконалене перейменування пакетних файлів</string>
     <string name="why_upgrade_folder_locking">Індивідуальне блокування тек</string>

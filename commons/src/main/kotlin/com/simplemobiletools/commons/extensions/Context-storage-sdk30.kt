@@ -89,10 +89,6 @@ fun Context.isInAndroidDir(path: String): Boolean {
     return firstParentDir.equals(ANDROID_DIR, true)
 }
 
-fun isNotExternalStorageManager(): Boolean {
-    return isRPlus() && !Environment.isExternalStorageManager()
-}
-
 fun isExternalStorageManager(): Boolean {
     return isRPlus() && Environment.isExternalStorageManager()
 }

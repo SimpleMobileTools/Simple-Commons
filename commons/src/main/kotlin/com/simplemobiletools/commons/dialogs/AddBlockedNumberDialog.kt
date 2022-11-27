@@ -22,12 +22,16 @@ class AddBlockedNumberDialog(val activity: BaseSimpleActivity, val originalNumbe
                 activity.setupDialogStuff(view, this) { alertDialog ->
                     alertDialog.showKeyboard(view.add_blocked_number_edittext)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val newBlockedNumber = view.add_blocked_number_edittext.value
+                        var newBlockedNumber = view.add_blocked_number_edittext.value
                         if (originalNumber != null && newBlockedNumber != originalNumber.number) {
                             activity.deleteBlockedNumber(originalNumber.number)
                         }
 
                         if (newBlockedNumber.isNotEmpty()) {
+                            // in case the user also added a '.' in the pattern, remove it
+                            if (newBlockedNumber.contains(".*")) {
+                                newBlockedNumber = newBlockedNumber.replace(".*", "*")
+                            }
                             activity.addBlockedNumber(newBlockedNumber)
                         }
 

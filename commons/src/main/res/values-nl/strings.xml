@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuleren</string>
+    <string name="back">Terug</string>
     <string name="nothing">Niets</string>
     <string name="later">Later</string>
     <string name="save_as">Opslaan als</string>
@@ -14,8 +15,8 @@
     <string name="edit_with">Bewerken met</string>
     <string name="edit">Bewerken</string>
     <string name="no_app_found">Geen geldige app gevonden</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Geen browser gevonden</string>
+    <string name="no_email_client_found">Geen e-mailapp gevonden</string>
     <string name="set_as">Instellen als</string>
     <string name="copy_to_clipboard">Naar klembord kopiëren</string>
     <string name="copy_number_to_clipboard">Nummer naar klembord kopiëren</string>
@@ -42,13 +43,13 @@
     <string name="next">Volgende</string>
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Geen contacten gevonden</string>
-    <string name="request_the_required_permissions">Verplichte rechten vragen</string>
+    <string name="request_the_required_permissions">Vereiste rechten vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot de contactenlijst</string>
     <string name="no_phone_call_permission">App heeft geen recht om telefoongesprekken te starten, verleen het in de systeeminstellingen</string>
     <string name="insert_text_here">Tekst hier invoegen</string>
     <string name="call_person">%s bellen</string>
     <string name="zero">Nul</string>
-    <string name="one">Een</string>
+    <string name="one">Eén</string>
     <string name="two">Twee</string>
     <string name="three">Drie</string>
     <string name="four">Vier</string>
@@ -57,12 +58,22 @@
     <string name="seven">Zeven</string>
     <string name="eight">Acht</string>
     <string name="nine">Negen</string>
-    <string name="value">Value</string>
+    <string name="value">Waarde</string>
     <string name="value_cannot_be_empty">Dit veld mag niet leeg zijn</string>
     <string name="create_new_contact">Nieuw contact aanmaken</string>
     <string name="add_to_existing_contact">Aan bestaand contact toevoegen</string>
     <string name="app_corrupt">App corrupt</string>
     <string name="disclaimer">Disclaimer</string>
+    <string name="take_photo">Foto nemen</string>
+    <string name="choose_photo">Foto kiezen</string>
+    <string name="choose_video">Video kiezen</string>
+    <string name="choose_contact">Contact kiezen</string>
+    <string name="choose_file">Bestand kiezen</string>
+    <string name="record_audio">Geluid opnemen</string>
+    <string name="record_video">Video opnemen</string>
+    <!-- Events -->
+    <string name="birthday">Verjaardag</string>
+    <string name="anniversary">Jubileum</string>
     <!-- Emails -->
     <string name="home">Thuis</string>
     <string name="work">Werk</string>
@@ -81,6 +92,9 @@
     <string name="list">Lijst</string>
     <string name="increase_column_count">Meer kolommen</string>
     <string name="reduce_column_count">Minder kolommen</string>
+    <string name="column_count">Aantal kolommen</string>
+    <string name="portrait_column_count">Aantal kolommen in portretmodus</string>
+    <string name="landscape_column_count">Aantal kolommen in landschapsmodus</string>
     <string name="change_cover_image">Omslagafbeelding wijzigen</string>
     <string name="select_photo">Foto selecteren</string>
     <!-- Blocked numbers -->
@@ -92,11 +106,13 @@
     <string name="blocked_numbers">Geblokkeerde nummers</string>
     <string name="export_blocked_numbers">Geblokkeerde nummers exporteren</string>
     <string name="import_blocked_numbers">Geblokkeerde nummers importeren</string>
-    <string name="must_make_default_dialer">Van deze app de standaard telefoon-app maken om nummers te kunnen blokkeren.</string>
+    <string name="must_make_default_dialer">Maak van deze app de standaard telefoon-app om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
-    <string name="block_confirmation">Nummer \"%s\" blokkeren\?</string>
+    <string name="block_confirmation">Nummer \"%s\" echt blokkeren\?</string>
     <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
     <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
+    <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
+    <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>
@@ -107,7 +123,7 @@
     <string name="type_2_characters">Vul tenminste 2 tekens in om de zoekopdracht te starten.</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
-    <string name="filter_pro">Filter (Pro)</string>
+    <string name="filter_pro">Filteren (Pro)</string>
     <string name="no_items_found">Geen items gevonden.</string>
     <string name="change_filter">Filter wijzigen</string>
     <!-- Permissions -->
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Recht voor contacten is vereist</string>
     <string name="no_camera_permissions">Recht voor camera is vereist</string>
     <string name="no_audio_permissions">Recht voor audio is vereist</string>
+    <string name="no_post_notifications_permissions">Recht voor het plaatsen van meldingen is vereist</string>
+    <string name="no_permission">Geen toegang</string>
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>
     <string name="rename_folder">Map hernoemen</string>
@@ -192,7 +210,7 @@
     <string name="system_folder_restriction">Het systeem staat de bewerking in deze map niet toe, kies een andere map</string>
     <string name="system_folder_copy_restriction">Het systeem staat het kopiëren naar deze map niet toe</string>
     <string name="rename_in_sd_card_system_restriction">Het systeem staat niet toe om in deze map namen te wijzigen</string>
-    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen. Alleen submappen kunnen worden hernoemd.</string>
+    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen, alleen submappen</string>
     <string name="cannot_rename_folder">Kan deze map niet hernoemen</string>
     <!-- File picker -->
     <string name="select_folder">Kies een map</string>
@@ -286,7 +304,7 @@
     <string name="light_theme">Licht</string>
     <string name="dark_theme">Donker</string>
     <string name="auto_theme">Automatisch</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Automatisch licht/donker</string>
     <string name="solarized">Solariseren</string>
     <string name="dark_red">Donkerrood</string>
     <string name="white">Wit</string>
@@ -303,6 +321,7 @@
     <string name="rename">Hernoemen</string>
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
+    <string name="resize">Grootte aanpassen</string>
     <string name="select_all">Alles selecteren</string>
     <string name="select_text">Tekst selecteren</string>
     <string name="hide">Verbergen</string>
@@ -317,6 +336,7 @@
     <string name="redo">Opnieuw</string>
     <string name="print">Afdrukken</string>
     <string name="print_pro">Afdrukken (Pro)</string>
+    <string name="shortcut">Snelkoppeling</string>
     <string name="create_shortcut">Snelkoppeling maken</string>
     <string name="create_shortcut_pro">Snelkoppeling maken (Pro)</string>
     <string name="add_number_to_contact">Nummer toevoegen aan contact</string>
@@ -331,6 +351,9 @@
     <string name="send_sms">SMS versturen</string>
     <string name="send_email">E-mail sturen</string>
     <string name="call">Bellen</string>
+    <string name="contact_details">Contactgegevens</string>
+    <string name="add_contact">Contact toevoegen</string>
+    <string name="wallpapers">Achtergronden</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>
@@ -586,7 +609,7 @@
     <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
     <string name="start_name_with_surname">Achternaam eerst</string>
     <string name="clear_cache">Cache opschonen</string>
-    <string name="show_call_confirmation_dialog">Een bevestiging vragen voor het bellen</string>
+    <string name="show_call_confirmation_dialog">Om bevestiging vragen voor het bellen</string>
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
     <string name="security">Beveiliging</string>
@@ -601,6 +624,16 @@
     <string name="main_screen">Hoofdscherm</string>
     <string name="thumbnails">Miniaturen</string>
     <string name="list_view">Lijstweergave</string>
+    <!-- Excluding -->
+    <string name="exclude">Uitsluiten</string>
+    <string name="exclude_folder">Map uitsluiten</string>
+    <string name="excluded_folders">Uitgesloten mappen</string>
+    <string name="excluded">(uitgesloten)</string>
+    <string name="manage_excluded_folders">Uitgesloten mappen beheren</string>
+    <string name="remove_all">Alles verwijderen</string>
+    <string name="remove_all_description">De lijst van uitgesloten mappen wissen. Dit zal de mappen zelf niet verwijderen.</string>
+    <string name="temporarily_show_excluded">Uitgesloten mappen tijdelijk tonen</string>
+    <string name="stop_showing_excluded">Uitgesloten mappen verbergen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Tabs tonen/verbergen</string>
     <string name="default_tab_to_open">Tab openen bij start</string>
@@ -697,7 +730,7 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
-    <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus gedeïnstalleerd worden.</string>
+    <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus verwijderd worden.</string>
     <string name="upgraded_to_pro_calendar">Lokaal opgeslagen afspraken moeten handmatig worden verplaatst door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
     <string name="upgraded_to_pro_notes">De notities moeten handmatig worden overgezet naar de Pro-versie.</string>
     <string name="upgraded_to_pro_contacts">Privécontacten moeten handmatig worden overgezet door ze te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
@@ -736,8 +769,9 @@
         ]]>
     </string>
     <string name="donate_new">Hallo,&lt;br&gt;&lt;br&gt;Hopelijk gebruik je deze app met veel plezier. Het bevat geen advertenties en we verzamelen totaal geen gegevens. Je kunt de ontwikkeling ondersteunen door &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Eenvoudig Bedankje&lt;/a&gt; aan te schaffen. Hiermee ontgrendel je alle functies in onze apps en kun je de kleuren voor alle apps aanpassen.&lt;br&gt;&lt;br&gt;Dankjewel!</string>
+    <string name="donate_short">Ondersteun ons door de app &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Eenvoudig Bedankje&lt;/a&gt; aan te schaffen. Dit zal alle functionaliteit in de apps ontgrendelen.</string>
     <string name="purchase">Kopen</string>
-    <string name="order_simple_phone">Eenvoudige Telefoon kopen</string>
+    <string name="get_simple_phone">Eenvoudige Telefoon downloaden</string>
     <string name="update_thank_you">Update Eenvoudig Bedankje naar de nieuwste versie</string>
     <string name="before_asking_question_read_faq">Controleer bij problemen eerst de instellingen van de app en neem de Veelgestelde vragen door. Misschien staat de oplossing daar.</string>
     <string name="before_rate_read_faq">Controleer eerst de app-instellingen en lees de veelgestelde vragen voordat u ons beoordeelt. Als er problemen zijn, staat de oplossing misschien daar.</string>
@@ -782,6 +816,7 @@
     <string name="simple_flashlight">Eenvoudige Zaklamp</string>
     <string name="simple_gallery">Eenvoudige Galerij</string>
     <string name="simple_keyboard">Eenvoudig Toetsenbord</string>
+    <string name="simple_launcher">Eenvoudige Launcher</string>
     <string name="simple_music_player">Eenvoudige Muziekspeler</string>
     <string name="simple_notes">Eenvoudige Notities</string>
     <string name="simple_sms_messenger">Eenvoudig Berichtenbeheer (SMS)</string>
@@ -799,6 +834,7 @@
     <string name="flashlight_short">Zaklamp</string>
     <string name="gallery_short">Galerij</string>
     <string name="keyboard_short">Toetsenbord</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Muziek</string>
     <string name="notes_short">Notities</string>
     <string name="sms_messenger_short">Berichten</string>
@@ -828,9 +864,7 @@
     <string name="faq_7_title_commons">Het geld is afgeschreven van mijn rekening, maar ik kan de app nog niet downloaden. Wat moet ik doen?</string>
     <string name="faq_7_text_commons">Betalingen worden verwerkt door Google, maar dit systeem vertoont soms wat problemen. Leeg de cache van de Google Play Store app en start daarna het apparaat opnieuw. Probeer vervolgens nogmaals de app te downloaden.</string>
     <string name="faq_8_title_commons">Waarom zou ik upgraden naar de Pro-versie?</string>
-    <string name="faq_8_text_commons">Omdat deze versie van de app niet meer zal worden bijgewerkt, zullen eventuele fouten nooit meer worden opgelost. Ook zullen er geen nieuwe functies meer worden toegevoegd. De Pro-versie is voor een bescheiden bedrag te vinden in de Google Play Store.
-        Dit bedrag hoeft maar een keer te worden betaald, daarna nooit meer. Ook niet voor nieuwe apparaten. Als de Pro-versie toch niet bevalt, deïnstalleer de app dan binnen enkele uren en het bedrag zal worden teruggestort.
-        Ook een latere restitutie is nog mogelijk. Neem hiervoor contact op via hello@simplemobiletools.com en het geld zal alsnog worden teruggestort.</string>
+    <string name="faq_8_text_commons">Omdat deze versie van de app niet meer zal worden bijgewerkt, zullen eventuele fouten nooit meer worden opgelost. Ook zullen er geen nieuwe functies meer worden toegevoegd. De Pro-versie is voor een bescheiden bedrag te vinden in de Google Play Store. Dit bedrag hoeft maar een keer te worden betaald, daarna nooit meer. Ook niet voor nieuwe apparaten. Als de Pro-versie toch niet bevalt, verwijder de app dan binnen enkele uren en het bedrag zal worden teruggestort. Ook een latere restitutie is nog mogelijk. Neem hiervoor contact op via hello@simplemobiletools.com en het geld zal alsnog worden teruggestort.</string>
     <string name="faq_9_title_commons">Hoe kan ik meerdere items tegelijk selecteren?</string>
     <string name="faq_9_text_commons">Dit kan op verschillende manieren. De eerste is door met een lange druk op een enkel item de selectiemodus in te schakelen, waarna kort klikken op andere items de selectie zal uitbreiden. De tweede manier is vergelijkbaar met het selecteren van items op een PC met de muis:
         druk lang op een item en sleep vervolgens over andere items om ook die te selecteren. De derde manier is door lang te drukken op het eerste item en vervolgens ook lang te drukken op het laatste item, waarna alle items ertussen zullen worden geselecteerd. Om alle
@@ -843,52 +877,53 @@
     <string name="development">Ontwikkeling</string>
     <string name="other_help">Andere hulp</string>
     <string name="contributors_label">Deze lijst bevat de namen van iedereen die aan een app binnen de Simple Mobile Tools suite heeft bijgedragen. Vertalingen worden gedaan door vrijwilligers, dus laat het ons weten als je ook wilt helpen. Lees de instructies &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;op deze website&lt;/a&gt;, of stuur bij vragen een bericht naar &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Bedankt voor alle bijdragen en andere ondersteuning!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
+    <string name="translation_arabic">Arabisch</string>
+    <string name="translation_azerbaijani">Azerbeidjaans</string>
+    <string name="translation_bengali">Bengaals</string>
+    <string name="translation_breton">Bretons</string>
+    <string name="translation_bulgarian">Bulgaars</string>
+    <string name="translation_catalan">Catalaans</string>
+    <string name="translation_czech">Tsjechisch</string>
     <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_danish">Deens</string>
+    <string name="translation_english">Engels</string>
+    <string name="translation_german">Duits</string>
+    <string name="translation_greek">Grieks</string>
+    <string name="translation_spanish">Spaans</string>
+    <string name="translation_basque">Baskisch</string>
+    <string name="translation_persian">Farsi</string>
+    <string name="translation_finnish">Fins</string>
+    <string name="translation_french">Frans</string>
+    <string name="translation_galician">Galicisch</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="translation_croatian">Kroatisch</string>
+    <string name="translation_hungarian">Hongaars</string>
+    <string name="translation_indonesian">Indonesisch</string>
+    <string name="translation_italian">Italiaans</string>
+    <string name="translation_hebrew">Hebreeuws</string>
+    <string name="translation_japanese">Japans</string>
+    <string name="translation_korean">Koreaans</string>
+    <string name="translation_lithuanian">Litouws</string>
+    <string name="translation_nepali">Nepals</string>
+    <string name="translation_norwegian">Noors</string>
+    <string name="translation_dutch">Nederlands</string>
+    <string name="translation_polish">Pools</string>
+    <string name="translation_portuguese">Portugees</string>
+    <string name="translation_romanian">Roemeens</string>
+    <string name="translation_russian">Russisch</string>
+    <string name="translation_slovak">Slovaaks</string>
+    <string name="translation_slovenian">Sloveens</string>
+    <string name="translation_serbian">Servisch</string>
+    <string name="translation_swedish">Zweeds</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_turkish">Turks</string>
+    <string name="translation_ukrainian">Oekraïens</string>
+    <string name="translation_vietnamese">Vietnamees</string>
+    <string name="translation_chinese_hk">Chinees (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinees (Vereenvoudigd)</string>
+    <string name="translation_chinese_tw">Chinees (Traditioneel)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Upgrade nu naar de Pro-versie!</string>
+    <string name="why_upgrade">Stap nu over naar de Pro-versie!</string>
     <string name="why_upgrade_basic_version">Standaard</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Geen advertenties</string>
@@ -897,7 +932,8 @@
     <string name="why_upgrade_footer_one_time_payment">Eenmalige betaling</string>
     <string name="why_upgrade_improved_design">Verbeterd ontwerp</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Geavanceerd foto\'s bewerken</string>
+    <string name="why_upgrade_advanced_photo_editor">Geavanceerde fotobewerking</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Geavanceerde foto- en videobewerking</string>
     <string name="why_upgrade_heic_support">Ondersteuning voor HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Geavanceerd batch-bestanden hernoemen</string>
     <string name="why_upgrade_folder_locking">Afzonderlijke mappen vergrendelen</string>
@@ -964,7 +1000,7 @@
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet meer onderhouden. De Pro-versie is de vinden op https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Bij het deïnstalleren van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
+    <string name="pro_app_refund">Bij het verwijderen van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties en onnodige machtigingen.</string>
+    <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties of onnodige rechten.</string>
 </resources>

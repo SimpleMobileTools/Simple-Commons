@@ -3,7 +3,9 @@
     android:id="@+id/rename_simple_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_margin">
+    android:paddingStart="@dimen/activity_margin"
+    android:paddingTop="@dimen/activity_margin"
+    android:paddingEnd="@dimen/activity_margin">
 
     <com.simplemobiletools.commons.views.MyTextInputLayout
         android:id="@+id/rename_simple_hint"
@@ -44,5 +46,6 @@
             android:paddingTop="@dimen/normal_margin"
             android:paddingBottom="@dimen/normal_margin"
             android:text="@string/prepend_filenames" />
+
     </RadioGroup>
 </com.simplemobiletools.commons.views.RenameSimpleTab>

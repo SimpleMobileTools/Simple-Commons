@@ -128,7 +128,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        if (newBase.baseConfig.useEnglish) {
+        if (newBase.baseConfig.useEnglish && !isTiramisuPlus()) {
             super.attachBaseContext(MyContextWrapper(newBase).wrap(newBase, "en"))
         } else {
             super.attachBaseContext(newBase)
@@ -514,6 +514,25 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+    fun launchChangeAppLanguageIntent() {
+        try {
+            Intent(Settings.ACTION_APP_LOCALE_SETTINGS).apply {
+                data = Uri.fromParts("package", packageName, null)
+                startActivity(this)
+            }
+        } catch (e: Exception) {
+            try {
+                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                    data = Uri.fromParts("package", packageName, null)
+                    startActivity(this)
+                }
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        }
+    }
+
     // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         hideKeyboard()
@@ -801,7 +820,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
                 toast(if (isCopyOperation) R.string.copying else R.string.moving)
                 val pair = Pair(files, destinationPath)
-                CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+                handleNotificationPermission { granted ->
+                    if (granted) {
+                        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+                    } else {
+                        toast(R.string.no_post_notifications_permissions)
+                    }
+                }
             }
         } else {
             val text = String.format(getString(R.string.no_space), sumToCopy.formatSize(), availableSpace.formatSize())
@@ -844,6 +869,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             isAskingPermissions = true
             actionOnPermission = callback
             ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
+        }
+    }
+
+    fun handleNotificationPermission(callback: (granted: Boolean) -> Unit) {
+        if (!isTiramisuPlus()) {
+            callback(true)
+        } else {
+            handlePermission(PERMISSION_POST_NOTIFICATIONS) { granted ->
+                callback(granted)
+            }
         }
     }
 
@@ -972,6 +1007,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     showErrorToast(e)
                 }
             }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    fun setDefaultCallerIdApp() {
+        val roleManager = getSystemService(RoleManager::class.java)
+        if (roleManager.isRoleAvailable(RoleManager.ROLE_CALL_SCREENING) && !roleManager.isRoleHeld(RoleManager.ROLE_CALL_SCREENING)) {
+            val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_CALL_SCREENING)
+            startActivityForResult(intent, REQUEST_CODE_SET_DEFAULT_CALLER_ID)
         }
     }
 }

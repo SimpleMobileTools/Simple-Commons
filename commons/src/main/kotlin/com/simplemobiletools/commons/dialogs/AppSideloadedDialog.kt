@@ -28,10 +28,10 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
             .setOnCancelListener { negativePressed() }
             .apply {
                 activity.setupDialogStuff(view, this, R.string.app_corrupt) { alertDialog ->
+                    dialog = alertDialog
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         downloadApp()
                     }
-                    dialog = alertDialog
                 }
             }
     }

@@ -15,7 +15,10 @@ import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.*
+import android.os.Build
+import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.BaseTypes
@@ -121,7 +124,7 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
 private fun Context.queryCursorDesc(
     uri: Uri,
     projection: Array<String>,
-    sortColumn:String,
+    sortColumn: String,
     limit: Int,
 ): Cursor? {
     return if (isRPlus()) {
@@ -238,6 +241,10 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_SEND_SMS -> Manifest.permission.SEND_SMS
     PERMISSION_READ_PHONE_STATE -> Manifest.permission.READ_PHONE_STATE
     PERMISSION_MEDIA_LOCATION -> if (isQPlus()) Manifest.permission.ACCESS_MEDIA_LOCATION else ""
+    PERMISSION_POST_NOTIFICATIONS -> Manifest.permission.POST_NOTIFICATIONS
+    PERMISSION_READ_MEDIA_IMAGES -> Manifest.permission.READ_MEDIA_IMAGES
+    PERMISSION_READ_MEDIA_VIDEO -> Manifest.permission.READ_MEDIA_VIDEO
+    PERMISSION_READ_MEDIA_AUDIO -> Manifest.permission.READ_MEDIA_AUDIO
     else -> ""
 }
 
@@ -460,6 +467,14 @@ fun Context.getCustomizeColorsString(): String {
     }
 
     return getString(textId)
+}
+
+fun Context.addLockedLabelIfNeeded(stringId: Int): String {
+    return if (isOrWasThankYouInstalled()) {
+        getString(stringId)
+    } else {
+        "${getString(stringId)} (${getString(R.string.feature_locked)})"
+    }
 }
 
 fun Context.isPackageInstalled(pkgName: String): Boolean {
@@ -861,15 +876,15 @@ val Context.notificationManager: NotificationManager get() = getSystemService(Co
 val Context.shortcutManager: ShortcutManager get() = getSystemService(ShortcutManager::class.java) as ShortcutManager
 
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
-val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
-val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
-val Context.navigationBarHeight: Int get() = if (navigationBarBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
-val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
+val Context.navigationBarOnSide: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
+val Context.navigationBarOnBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
+val Context.navigationBarHeight: Int get() = if (navigationBarOnBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
+val Context.navigationBarWidth: Int get() = if (navigationBarOnSide) navigationBarSize.x else 0
 
 val Context.navigationBarSize: Point
     get() = when {
-        navigationBarRight -> Point(newNavigationBarHeight, usableScreenSize.y)
-        navigationBarBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
+        navigationBarOnSide -> Point(newNavigationBarHeight, usableScreenSize.y)
+        navigationBarOnBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
         else -> Point()
     }
 
@@ -900,7 +915,6 @@ val Context.actionBarHeight: Int
         styledAttributes.recycle()
         return actionBarHeight.toInt()
     }
-
 
 val Context.usableScreenSize: Point
     get() {
@@ -983,7 +997,20 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     }
 
     val numberToCompare = number.trimToComparableNumber()
-    return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
+    return blockedNumbers.any { numberToCompare in it.numberToCompare || numberToCompare in it.number } || isNumberBlockedByPattern(number, blockedNumbers)
+}
+
+fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+    for (blockedNumber in blockedNumbers) {
+        val num = blockedNumber.number
+        if (num.isBlockedNumberPattern()) {
+            val pattern = num.replace("+", "\\+").replace("*", ".*")
+            if (number.matches(pattern.toRegex())) {
+                return true
+            }
+        }
+    }
+    return false
 }
 
 fun Context.copyToClipboard(text: String) {
@@ -1021,4 +1048,11 @@ fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
 
     view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)
     view?.findViewById<TextView>(R.id.tab_item_label)?.setTextColor(color)
+}
+
+fun Context.sendEmailIntent(recipient: String) {
+    Intent(Intent.ACTION_SENDTO).apply {
+        data = Uri.fromParts(KEY_MAILTO, recipient, null)
+        launchActivityIntent(this)
+    }
 }

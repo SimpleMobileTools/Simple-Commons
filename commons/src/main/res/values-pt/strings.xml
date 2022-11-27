@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
+    <string name="back">Back</string>
     <string name="nothing">Nada</string>
     <string name="later">Mais tarde</string>
     <string name="save_as">Guardar como</string>
@@ -63,6 +64,16 @@
     <string name="add_to_existing_contact">Adicionar a um contacto existente</string>
     <string name="app_corrupt">App Corrupt</string>
     <string name="disclaimer">Disclaimer</string>
+    <string name="take_photo">Tirar foto</string>
+    <string name="choose_photo">Escolher foto</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+    <!-- Events -->
+    <string name="birthday">Data de nascimento</string>
+    <string name="anniversary">Aniversário</string>
     <!-- Emails -->
     <string name="home">Pessoal</string>
     <string name="work">Profissional</string>
@@ -81,6 +92,9 @@
     <string name="list">Lista</string>
     <string name="increase_column_count">Aumentar número de colunas</string>
     <string name="reduce_column_count">Diminuir número de colunas</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Alterar imagem de capa</string>
     <string name="select_photo">Selecionar foto</string>
     <!-- Blocked numbers -->
@@ -97,6 +111,8 @@
     <string name="block_confirmation">Tem a certeza de que pretende bloquear \"%s\"\?</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
@@ -115,6 +131,8 @@
     <string name="no_contacts_permission">Requer acesso aos contactos</string>
     <string name="no_camera_permissions">Requer acesso à câmara</string>
     <string name="no_audio_permissions">Requer acesso ao áudio</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -308,6 +326,7 @@
     <string name="rename">Mudar nome</string>
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar por</string>
+    <string name="resize">Redimensionar</string>
     <string name="select_all">Selecionar tudo</string>
     <string name="select_text">Selecionar texto</string>
     <string name="hide">Ocultar</string>
@@ -322,6 +341,7 @@
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
     <string name="print_pro">Imprimir (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="create_shortcut_pro">Criar atalho (Pro)</string>
     <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
@@ -336,6 +356,9 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -606,6 +629,16 @@
     <string name="main_screen">Ecrã inicial</string>
     <string name="thumbnails">Miniaturas</string>
     <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Exclusão</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Pastas excluídas</string>
+    <string name="excluded">(excluída)</string>
+    <string name="manage_excluded_folders">Gerir pastas excluídas</string>
+    <string name="remove_all">Remover todas</string>
+    <string name="remove_all_description">Remover todas as pastas de lista de exclusões\? Esta acção não apaga as pastas.</string>
+    <string name="temporarily_show_excluded">Mostrar temporariamente itens excluídos</string>
+    <string name="stop_showing_excluded">Parar de mostrar itens excluídos</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gerir separadores a mostrar</string>
     <string name="default_tab_to_open">Separador a mostrar ao iniciar</string>
@@ -734,9 +767,10 @@
     <string name="app_version">Versão da aplicação: %s</string>
     <string name="device_os">SO do dispositivo: %s</string>
     <string name="donate_please">Olá,&lt;br&gt;&lt;br&gt; esperamos que esteja a gostar desta aplicação. Se estiver interessado em ajudar ao seu desenvolvimento e dado que não contem anúncios, pode comprar a aplicação &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; o que também fará com que esta solicitação deixe de apareçer novamente.&lt;br&gt;&lt;br&gt; Obrigado!</string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Comprar</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
     <string name="before_rate_read_faq">Antes de dar uma avaliação, analise as definições da aplicação e leia as FAQ. Pode ser que a solução para o seu problema esteja aí mesmo.</string>
@@ -763,6 +797,7 @@
     <string name="simple_flashlight">Simple Flashlight – Lanterna</string>
     <string name="simple_gallery">Simple Gallery – Galeria</string>
     <string name="simple_keyboard">Simple Keyboard – Teclado</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Simple Music Player – Leitor de Música</string>
     <string name="simple_notes">Simple Notes – Notas</string>
     <string name="simple_sms_messenger">Simple SMS Messenger – Envio de mensagens</string>
@@ -780,6 +815,7 @@
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galeria</string>
     <string name="keyboard_short">Teclado</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Leitor de Música</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Envio de mensagens</string>
@@ -823,6 +859,7 @@
     <string name="translation_azerbaijani">Azerbeijão</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Bretão</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalão</string>
     <string name="translation_czech">Checo</string>
     <string name="translation_welsh">Galês</string>
@@ -874,6 +911,7 @@
     <string name="why_upgrade_improved_design">Design melhorado</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">Suporte a ficheiros HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Mudar nome de ficheiros em lote</string>
     <string name="why_upgrade_folder_locking">Bloqueio individual de pastas</string>

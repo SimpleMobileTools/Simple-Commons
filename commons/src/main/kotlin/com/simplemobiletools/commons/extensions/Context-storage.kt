@@ -420,8 +420,8 @@ fun Context.deleteFromMediaStore(path: String, callback: ((needsRescan: Boolean)
             val needsRescan = contentResolver.delete(getFileUri(path), where, args) != 1
             callback?.invoke(needsRescan)
         } catch (ignored: Exception) {
+            callback?.invoke(true)
         }
-        callback?.invoke(true)
     }
 }
 

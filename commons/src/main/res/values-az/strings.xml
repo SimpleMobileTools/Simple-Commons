@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Oldu</string>
     <string name="cancel">Ləğv Et</string>
+    <string name="back">Back</string>
     <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Saxla</string>
@@ -62,6 +63,17 @@
     <string name="add_to_existing_contact">Add to an existing contact</string>
     <string name="app_corrupt">App Corrupt</string>
     <string name="disclaimer">Disclaimer</string>
+    <string name="take_photo">Şəkil çək</string>
+    <string name="choose_photo">Şəkil seç</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_video">Record video</string>
+
+    <!-- Events -->
+    <string name="birthday">Ad günü</string>
+    <string name="anniversary">İl dönümü</string>
 
     <!-- Emails -->
     <string name="home">Ev</string>
@@ -83,6 +95,9 @@
     <string name="list">List</string>
     <string name="increase_column_count">Increase column count</string>
     <string name="reduce_column_count">Reduce column count</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Change cover image</string>
     <string name="select_photo">Select photo</string>
 
@@ -100,6 +115,8 @@
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
 
     <!-- Favorites -->
     <string name="favorites">Sevimlilər</string>
@@ -122,6 +139,8 @@
     <string name="no_contacts_permission">Kontakt icazəsi tələb olunur</string>
     <string name="no_camera_permissions">Kamera icazəsi tələb olunur</string>
     <string name="no_audio_permissions">Səs icazəsi tələb olunur</string>
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
+    <string name="no_permission">No permission</string>
 
     <!-- Renaming -->
     <string name="rename_file">Faylı yenidən adlandır</string>
@@ -331,6 +350,7 @@
     <string name="rename">Yenidən adlandır</string>
     <string name="share">Paylaş</string>
     <string name="share_via">Paylaş</string>
+    <string name="resize">Resize</string>
     <string name="select_all">Hamsını seç</string>
     <string name="select_text">Select text</string>
     <string name="hide">Gizlət</string>
@@ -345,6 +365,7 @@
     <string name="redo">Təkrar et</string>
     <string name="print">Print</string>
     <string name="print_pro">Print (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="create_shortcut_pro">Create shortcut (Pro)</string>
     <string name="add_number_to_contact">Add number to contact</string>
@@ -359,6 +380,9 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sırala</string>
@@ -641,6 +665,17 @@
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
 
+    <!-- Excluding -->
+    <string name="exclude">Exclude</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Excluded folders</string>
+    <string name="excluded">(xaric edilmiş)</string>
+    <string name="manage_excluded_folders">Manage excluded folders</string>
+    <string name="remove_all">Remove all</string>
+    <string name="remove_all_description">Remove all folders from the list of excluded\? This will not delete the folders.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
+
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Göstərilən nişanları idarə et</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -786,9 +821,10 @@
             Thank you!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Ödəniş Et</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
@@ -827,6 +863,7 @@
     <string name="simple_flashlight">Simple Flashlight</string>
     <string name="simple_gallery">Simple Gallery</string>
     <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
@@ -845,6 +882,7 @@
     <string name="flashlight_short">Fənər</string>
     <string name="gallery_short">Qalereya</string>
     <string name="keyboard_short">Keyboard</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Musiqi Çalar</string>
     <string name="notes_short">Qeydlər</string>
     <string name="sms_messenger_short">SMS Messenger</string>
@@ -909,6 +947,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
@@ -962,6 +1001,7 @@
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>

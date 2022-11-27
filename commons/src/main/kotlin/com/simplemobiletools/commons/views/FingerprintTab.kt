@@ -62,10 +62,11 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
                 hashListener.receivedHash("", PROTECTION_FINGERPRINT)
             }
 
-            override fun onFailure(failureReason: AuthenticationFailureReason, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
+            override fun onFailure(failureReason: AuthenticationFailureReason?, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
                 when (failureReason) {
                     AuthenticationFailureReason.AUTHENTICATION_FAILED -> context.toast(R.string.authentication_failed)
                     AuthenticationFailureReason.LOCKED_OUT -> context.toast(R.string.authentication_blocked)
+                    else -> {}
                 }
             }
         })
