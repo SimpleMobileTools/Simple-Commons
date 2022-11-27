@@ -240,7 +240,7 @@ open class BaseConfig(val context: Context) {
         set(isUsingAutoTheme) = prefs.edit().putBoolean(IS_USING_AUTO_THEME, isUsingAutoTheme).apply()
 
     var isUsingSystemTheme: Boolean
-        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, false)
+        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, true)
         set(isUsingSystemTheme) = prefs.edit().putBoolean(IS_USING_SYSTEM_THEME, isUsingSystemTheme).apply()
 
     var wasCustomThemeSwitchDescriptionShown: Boolean
@@ -404,7 +404,7 @@ open class BaseConfig(val context: Context) {
             "mmmmdy" -> DATE_FORMAT_SIX
             "mm-dd-y" -> DATE_FORMAT_SEVEN
             "dd-mm-y" -> DATE_FORMAT_EIGHT
-            else -> DATE_FORMAT_ONE
+            else -> DATE_FORMAT_SIX
         }
     }
 
