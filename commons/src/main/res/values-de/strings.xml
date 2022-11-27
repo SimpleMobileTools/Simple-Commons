@@ -340,7 +340,7 @@
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
     <string name="unhide_folder">Ordner nicht verstecken</string>
-    <string name="temporarily_show_hidden">Verstecktes temporär zeigen</string>
+    <string name="temporarily_show_hidden">Verstecktes temporär anzeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
@@ -645,8 +645,8 @@
     <string name="manage_excluded_folders">Ausgeschlossene Ordner verwalten</string>
     <string name="remove_all">Alle entfernen</string>
     <string name="remove_all_description">Alle Ordner aus der Liste ausgeschlossener Ordner entfernen\? Die Ordner selbst werden dabei nicht gelöscht.</string>
-    <string name="temporarily_show_excluded">Ausgeschlossenes kurzfristig anzeigen</string>
-    <string name="stop_showing_excluded">Ausgeschlossene nicht mehr anzeigen</string>
+    <string name="temporarily_show_excluded">Ausgeschlossenes temporär anzeigen</string>
+    <string name="stop_showing_excluded">Ausgeschlossenes wieder verbergen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Anzuzeigende Tabs festlegen</string>
     <string name="default_tab_to_open">Tab, der beim App-Start geöffnet werden soll</string>
