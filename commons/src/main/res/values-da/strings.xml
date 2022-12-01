@@ -132,7 +132,7 @@
     <string name="no_camera_permissions">Adgang til kamera påkrævet</string>
     <string name="no_audio_permissions">Adgang til lyd påkrævet</string>
     <string name="no_post_notifications_permissions">Der kræves tilladelse til at sende meddelelser</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Ingen tilladelse</string>
     <!-- Renaming -->
     <string name="rename_file">Omdøb fil</string>
     <string name="rename_folder">Omdøb mappe</string>
@@ -638,8 +638,8 @@
     <string name="manage_excluded_folders">Administrer ekskluderede mapper</string>
     <string name="remove_all">Fjern alle</string>
     <string name="remove_all_description">Fjern alle fra listen med ekskluderede mapper\? Det vil ikke slette mapperne.</string>
-    <string name="temporarily_show_excluded">Temporarily show excluded</string>
-    <string name="stop_showing_excluded">Stop showing excluded</string>
+    <string name="temporarily_show_excluded">Vis midlertidigt ekskluderede</string>
+    <string name="stop_showing_excluded">Stop visning af ekskluderede</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Administrer viste faner</string>
     <string name="default_tab_to_open">Tab for at åbne ved appstart</string>
@@ -945,7 +945,7 @@
     <string name="why_upgrade_improved_design">Forbedret design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanceret photo- &amp; videoeditor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF filunderstøttelse</string>
     <string name="why_upgrade_batch_renaming">Avanceret masseomdøbning af filer</string>
     <string name="why_upgrade_folder_locking">Individuel låsning af mapper</string>
