@@ -254,8 +254,8 @@
 
     <style name="ColoredButtonStyle" parent="@android:style/Widget.TextView">
         <item name="android:textSize">@dimen/bigger_text_size</item>
-        <item name="android:paddingStart">@dimen/bigger_margin</item>
-        <item name="android:paddingEnd">@dimen/bigger_margin</item>
+        <item name="android:paddingStart">@dimen/big_margin</item>
+        <item name="android:paddingEnd">@dimen/big_margin</item>
         <item name="android:paddingTop">@dimen/normal_margin</item>
         <item name="android:paddingBottom">@dimen/normal_margin</item>
         <item name="android:background">@drawable/button_background_rounded</item>
