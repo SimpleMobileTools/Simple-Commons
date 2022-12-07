@@ -132,7 +132,7 @@
     <string name="no_camera_permissions">Неопходна је дозвола за камеру</string>
     <string name="no_audio_permissions">Неопходна је дозвола за аудио</string>
     <string name="no_post_notifications_permissions">Потребна је дозвола за постављање обавештења</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Нема дозволу</string>
     <!-- Renaming -->
     <string name="rename_file">Преименуј датотеку</string>
     <string name="rename_folder">Преименуј фасциклу</string>
@@ -771,16 +771,18 @@
     <string name="saturday_short">Суб</string>
     <string name="sunday_short">Нед</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Верзија ваше апликације се више неће ажурирати. Надоградите на Про верзију да бисте добили нове исправке и друга побољшања.</string>
+    <string name="upgrade_to_pro_long_click">Верзија ваше апликације се више неће ажурирати. Надоградите на Про верзију да бисте добили нове поправке и друга побољшања кликом овде.</string>
     <string name="it_is_free">Бесплатна је до: %s. Ако је преузмете до тада, моћи ћете да је користите бесплатно заувек.</string>
     <string name="more_info">Више информација</string>
     <string name="upgrade">Унапређивање</string>
     <string name="upgrade_calendar">Морате да преселите локално складиштене догађаје ручно преко извожења у .ics датотеку, а затим да увезете. Можете наћи дугмад за увоз и извоз у главном екрану.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Хеј,
+\n
+\nизгледа да већ имате и Про верзију апликације. Овај вам више неће требати, можете га деинсталирати.</string>
+    <string name="upgraded_to_pro_calendar">Морате ручно да мигрирате локално ускладиштене догађаје преко извоза у .ицс датотеку, а затим увозите. Дугмад за извоз и увоз можете пронаћи у горњем менију.</string>
+    <string name="upgraded_to_pro_notes">Морате ручно да мигрирате своје белешке на Про верзију.</string>
+    <string name="upgraded_to_pro_contacts">Морате ручно да мигрирате приватно сачуване контакте путем извоза у .вцф датотеку, а затим увезите. Дугмад за извоз и увоз можете пронаћи у горњем менију.</string>
     <!-- About -->
     <string name="about">О апликацији</string>
     <string name="website">Website</string>
@@ -788,7 +790,7 @@
     <string name="email_label">Пошаљите ваше повратне информације или сугестије на</string>
     <string name="upgrade_to_pro">Унапредите у професионалну верзију</string>
     <string name="more_apps">Више апликација</string>
-    <string name="more_apps_from_us">More apps from us</string>
+    <string name="more_apps_from_us">Више апликација од нас</string>
     <string name="invite_friends">Позовите пријатеље</string>
     <string name="share_text">Посетите %1$s на %2$s</string>
     <string name="invite_via">Позовите преко</string>
@@ -801,10 +803,10 @@
     <string name="help_us">Help us</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Правила о приватности</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="hello">Здраво :)</string>
+    <string name="about_footer">Произведено са ❤️ у Словачкој</string>
     <string name="additional_info">Додатне информације</string>
     <string name="app_version">Верзија апликације: %s</string>
     <string name="device_os">Оперативни систем уређаја: %s</string>
@@ -815,22 +817,31 @@
             Хвала вам!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_new">Здраво,&lt;бр&gt;&lt;бр&gt;надам се да уживате у апликацији. Не садржи огласе, а ни ми не прикупљамо ваше податке, подржите његов развој куповином &lt;а хреф=хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.тханкиоу&gt;Једноставно хвала Ви&lt;/а&gt;. Такође ћете имати откључане све функције апликације, укључујући прилагођавање боја.&lt;бр&gt;&lt;бр&gt;Хвала!</string>
+    <string name="donate_short">Подржите нас тако што ћете купити &lt;а хреф=хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.тханкиоу&gt;Једноставно хвала&lt;/а&gt;, такође ће откључати све функције апликације, укључујући боју Подешавање.</string>
     <string name="purchase">Купите</string>
-    <string name="get_simple_phone">Get Simple Phone</string>
+    <string name="get_simple_phone">Набавите једноставан телефон</string>
     <string name="update_thank_you">Молимо вас ажурирајте Simple Thank You на најскорију верзију</string>
     <string name="before_asking_question_read_faq">Пре постављања питања проверите подешавања апликације и прочитајте најчешће постављана питања. Можда су решења већ ту.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="before_rate_read_faq">Пре него што нас оцените, проверите подешавања апликације и прво прочитајте Често постављана питања. Ако имате било каквих проблема, можда је решење ту.</string>
+    <string name="make_sure_latest">Такође се уверите да користите најновију верзију апликације.</string>
+    <string name="make_sure_upgrade">Такође имајте на уму да се ова верзија апликације више не развија, набавите Про за многа побољшања.</string>
     <string name="read_it">Прочитајте</string>
-    <string name="read_faq">Read FAQ</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="read_faq">Прочитајте ФАК</string>
+    <string name="rate_us_prompt">Здраво,
+\n
+\nизгледа да ову апликацију користите већ дуже време, и ми то заиста ценимо.
+\n
+\nАко можемо да вас замолимо за услугу, оцените нас на Гоогле Плаи-у. То би нам заиста много помогло.
+\n
+\nКако год да одлучите, ову поруку више нећете видети.
+\n
+\nХвала!</string>
+    <string name="rate_our_app">Молимо оцените нашу апликацију :)</string>
+    <string name="thank_you">Хвала вам</string>
+    <string name="widget_locked_pro">Виџет је закључан.
+\nНадоградите на Про верзију да бисте је откључали.</string>
+    <string name="features_locked">Ова функција је закључана, купите &lt;а хреф=хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.тханкиоу&gt;Једноставно хвала&lt;/а&gt; за откључавање целе апликације.&lt;бр &gt;&lt;бр&gt;То је само једнократно плаћање и ако не будете задовољни, можемо вам вратити новац.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -843,42 +854,42 @@
             Хвала
         ]]>
     </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_app_launcher">Једноставан покретач апликација</string>
+    <string name="simple_calculator">Једноставан калкулатор</string>
+    <string name="simple_calendar">Једноставан календар</string>
+    <string name="simple_camera">Једноставна камера</string>
+    <string name="simple_clock">Једноставан сат</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_launcher">Simple Launcher</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
-    <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
-    <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Draw</string>
-    <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="keyboard_short">Keyboard</string>
-    <string name="launcher_short">Launcher</string>
-    <string name="music_player_short">Music Player</string>
+    <string name="simple_dialer">Једноставан бројчаник</string>
+    <string name="simple_draw">Једноставан цртеж</string>
+    <string name="simple_file_manager">Једноставан менаџер фолдера</string>
+    <string name="simple_flashlight">Једноставна лампа</string>
+    <string name="simple_gallery">Једноставна галерија</string>
+    <string name="simple_keyboard">Једноставна тастатура</string>
+    <string name="simple_launcher">Једноставан покретач</string>
+    <string name="simple_music_player">Једноставан музички плејер</string>
+    <string name="simple_notes">Једноставне белешке</string>
+    <string name="simple_sms_messenger">Једноставан СМС Мессенгер</string>
+    <string name="simple_thank_you">Једноставно хвала</string>
+    <string name="simple_voice_recorder">Једноставан диктафон</string>
+    <string name="app_launcher_short">Покретач апликација</string>
+    <string name="calculator_short">Калкулатор</string>
+    <string name="calendar_short">Календар</string>
+    <string name="camera_short">Камера</string>
+    <string name="clock_short">Сат</string>
+    <string name="contacts_short">Контакти</string>
+    <string name="dialer_short">Диалер</string>
+    <string name="draw_short">Диалер</string>
+    <string name="file_manager_short">Филе Манагер</string>
+    <string name="flashlight_short">Батеријска лампа</string>
+    <string name="gallery_short">Галерија</string>
+    <string name="keyboard_short">Тастатура</string>
+    <string name="launcher_short">Иницијатор</string>
+    <string name="music_player_short">Музички плејер</string>
     <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="sms_messenger_short">СМС Мессенгер</string>
+    <string name="thank_you_short">Хвала вам</string>
+    <string name="voice_recorder_short">Диктафон</string>
     <string name="sideloaded_app">
         <![CDATA[
             Изгледа да је верзија ваше апликације у квару. Молимо вас преузмите оригиналну верзију <a href="%s">овде</a>.
@@ -890,45 +901,30 @@
     <string name="faq_1_title_commons">Зашто не видим виџете ове апликације у листи виџета?</string>
     <string name="faq_1_text_commons">Највероватније јер сте преместили апликацију на СД картицу. Постоји ограничење Андроид система које скрива виџете у том случају. Једино решење је да вратите апликацију у интерно складиште преко подешавања уређаја.</string>
     <string name="faq_2_title_commons">Желим да вам дам подршку, али не могу да донирам новац. Да ли могу да учиним нешто друго?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">Да наравно. Можете ширити вест о апликацијама или дати добре повратне информације и оцене. Такође можете помоћи тако што ћете превести апликације на нови језик или једноставно ажурирати неке постојеће преводе. Водич за превођење налази се на &lt;а хреф=хттпс://гитхуб.цом/СимплеМобилеТоолс/Генерал-Дисцуссион#хов-цан-и-суггест-ан-едит-то-а-филе&gt;овом веб-сајту&lt;/а&gt;, или само нас контактирајте на &lt;а хреф=маилто:хелло@симплемобилетоолс.цом&gt;хелло@симплемобилетоолс.цом&lt;/а&gt; ако имате питања.</string>
     <string name="faq_3_title_commons">Обрисао сам неке датотеке грешком, како их могу повратити?</string>
     <string name="faq_3_text_commons">Нажалост не можете. Датотеке се бришу одмах након дијалога за потврду, не постоји канта за отпатке.</string>
     <string name="faq_4_title_commons">Не свиђају ми се боје виџета, да ли могу да их променим?</string>
     <string name="faq_4_text_commons">Да, како вучете виџет на ваш екран, прозор за подешавање виџета се појављује. Видећете квадрате у бојама у доњем левом ћошку, једноставно их притисните да изаберете нову боју. Можете употребити и клизач да одредите финесе боје.</string>
     <string name="faq_5_title_commons">Да ли могу да повратим обрисане фајлове?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Ако су заиста избрисани, не можете. Међутим, постоји подразумевано омогућена корпа за отпатке, то ће проузроковати да се датотеке једноставно преместе у корпу уместо да их се бришу.</string>
     <string name="faq_6_title_commons">Икона покретача апликација је нестала. Шта да урадим?</string>
     <string name="faq_6_text_commons">То је узроковано изостатком подршке вашег покретача за прилагођавање икона. Пробајте да покренете апликацију преко Гугл плеја или неког виџета, ако су доступни.
         Кад се покрене, подесите подразумевајућу наранџасту икону #F57C00. Можда будете морали да реинсталирате апликацију, у најгорем случају.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_7_title_commons">Новац је скинут са мог банковног рачуна, али не могу да преузмем апликацију. Шта могу да урадим\?</string>
+    <string name="faq_7_text_commons">Плаћања у потпуности обавља Гоогле, њихов систем повремено квари. Само обришите кеш апликације Гоогле Плаи и поново покрените уређај, а затим покушајте поново да га преузмете.</string>
+    <string name="faq_8_title_commons">Зашто да надоградим на Про верзију\?</string>
+    <string name="faq_8_text_commons">Пошто се верзија ваше апликације више не ажурира, грешке које сте можда приметили никада неће бити исправљене. Такође неће бити додане нове функције. Про верзију можете купити на Гоогле Плаи-у за малу суму новца. То је једнократно плаћање, што значи да када га једном купите, више никада нећете морати да плаћате. Чак ни након набавке новог уређаја. Ако вам се не свиђа Про верзија, можете је само деинсталирати у року од неколико сати и аутоматски ћете добити свој новац назад. Ако желите повраћај новца било када касније, само нас контактирајте на хелло@симплемобилетоолс.цом и добићете га.</string>
+    <string name="faq_9_title_commons">Како могу да изаберем више ставки одједном\?</string>
+    <string name="faq_9_text_commons">Постоји више начина да се то уради. Први је покретање режима селекције дугим притиском на једну ставку, а затим кратким кликом на друге да бисте их изабрали. Други начин је сличан одабиру ставки на рачунарима помоћу миша, само покрените режим селекције дугим притиском на једну ставку, а затим је прстом и даље доле превуците преко других ставки да бисте изабрали. Трећи начин одабира више ставки је дуго притискање једне ставке, затим дуго притискање друге и све између се бира. Ако желите да изаберете све ставке, само дуго притисните једну ставку, а затим кликните на бројач изабраних ставки у горњем левом углу. То ће све изабрати или поништити избор.</string>
+    <string name="faq_10_title_commons">Купио сам апликацију, али не могу да је преузмем на другом уређају.</string>
+    <string name="faq_10_text_commons">Покушајте да обришете кеш апликације Гоогле Плаи и поново покренете уређај. То је нека грешка у Гоогле Плаи-у, која није баш повезана са самом апликацијом.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors">Сарадници</string>
+    <string name="translation">Превод</string>
+    <string name="development">Развој</string>
+    <string name="other_help">Друга помоћ</string>
+    <string name="contributors_label">Ова листа садржи све који су приметно помогли било којој апликацији у оквиру пакета Симпле Мобиле Тоолс, не само овој. Преводе обављају волонтери, јавите нам ако и ви желите да помогнете. Водич за превођење налази се на &lt;а хреф=хттпс://гитхуб.цом/СимплеМобилеТоолс/Генерал-Дисцуссион#хов-цан-и-суггест-ан-едит-то-а-филе&gt;овом веб-сајту&lt;/а&gt;, или само нас контактирајте на &lt;а хреф=маилто:хелло@симплемобилетоолс.цом&gt;хелло@симплемобилетоолс.цом&lt;/а&gt; ако имате питања. Хвала свим сарадницима и осталим присталицама!</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -975,46 +971,46 @@
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">Преузмите Про верзију одмах!</string>
+    <string name="why_upgrade_basic_version">Основно</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_no_ads">Нема реклама</string>
+    <string name="why_upgrade_no_internet_access">Нема приступа интернету</string>
+    <string name="why_upgrade_footer">100% гаранција поврата новца</string>
+    <string name="why_upgrade_footer_one_time_payment">Једанпут се плаћа</string>
+    <string name="why_upgrade_improved_design">Побољшан дизајн</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor">Напредни уређивач фотографија</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Напредни уређивач фотографија и видео записа</string>
+    <string name="why_upgrade_heic_support">Подршка за ХЕИЦ/ХЕИФ фајлове</string>
+    <string name="why_upgrade_batch_renaming">Напредно преименовање батцх датотеке</string>
+    <string name="why_upgrade_folder_locking">Индивидуално закључавање фолдера</string>
+    <string name="why_upgrade_printing_support">Подршка за штампање</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Подршка за временску зону</string>
+    <string name="why_upgrade_attendees_emails">Учесници и подсетници путем е-поште</string>
+    <string name="why_upgrade_easy_event_importing">Једноставан увоз догађаја</string>
+    <string name="why_upgrade_new_widgets">Нови виџети</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_duplicate_contact_merging">Побољшано спајање дупликата контаката</string>
+    <string name="why_upgrade_font_size_customization">Прилагођавање величине фонта</string>
+    <string name="why_upgrade_private_contact_sharing">Опционо дељење приватних контаката у оквиру наших апликација</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Прилагодљиве мелодије звона за контакте</string>
+    <string name="why_upgrade_contact_filtering">Филтрирање контаката</string>
+    <string name="why_upgrade_contact_private_contacts">Приватно сачувани контакти</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Контролне листе</string>
+    <string name="why_upgrade_different_note_per_widget">Различите белешке и боје по виџету</string>
+    <string name="why_upgrade_note_locking">Напомена закључавање</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_date_and_time_format">Прилагођавање формата датума и времена</string>
+    <string name="why_upgrade_shortcuts">Пречице на почетном екрану</string>
+    <string name="why_upgrade_file_compression">Подршка за компресију датотека</string>
+    <string name="why_upgrade_recents_tab">Картица са недавним датотекама</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_background_color_customization">Прилагођавање боје позадине</string>
+    <string name="why_upgrade_file_importing">Подршка за увоз датотека</string>
+    <string name="why_upgrade_zooming">Зумирање</string>
     <!-- License -->
     <string name="notice">Ова апликација користи следеће библиотеке које припадају трећим лицима, како би учинили наш живот лакшим. Хвала вам.</string>
     <string name="third_party_licences">Лиценце трећих лица</string>
@@ -1042,17 +1038,17 @@
     <string name="sanselan_title">Apache Sanselan (исчитавање мета података слика)</string>
     <string name="filters_title">Android Photo Filters (филтери за слике)</string>
     <string name="gesture_views_title">Gesture Views (зумирање слика)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="indicator_fast_scroll_title">Индикатор за брзо померање (слова на траци за померање)</string>
+    <string name="event_bus_title">Аутобус догађаја (комуникација унутар апликације)</string>
+    <string name="audio_record_view_title">Приказ аудио записа (аудио визуелизација)</string>
+    <string name="sms_mms_title">СМС ММС (СМС и ММС руковање)</string>
+    <string name="apng_title">АПНГ Андроид (подршка за анимирани ВебП)</string>
+    <string name="pdf_viewer_title">Андроид ПдфВиевер (ПДФ прегледач)</string>
+    <string name="m3u_parser_title">М3У Парсер (руковање датотекама листе песама м3у)</string>
+    <string name="android_lame_title">АндроидЛаме (мп3 кодер)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">ЗАСТАРЕЛО: Ова верзија апликације се више не одржава, набавите Про верзију на хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.ккк.про</string>
+    <string name="pro_app_refund">Не заборавите да ако деинсталирате било коју плаћену апликацију у року од 2 сата, новац ће вам аутоматски бити враћен. Ако желите повраћај новца било када касније, само нас контактирајте на hello@simplemobiletools.com и добићете га. То олакшава испробавање :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Група једноставних Андроид апликација отвореног кода са прилагодљивим виџетима, без огласа и непотребних дозвола.</string>
 </resources>
