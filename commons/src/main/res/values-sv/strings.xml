@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="back">Back</string>
+    <string name="back">Tillbaka</string>
     <string name="nothing">Ingenting</string>
     <string name="later">Senare</string>
     <string name="save_as">Spara som</string>
@@ -66,11 +66,11 @@
     <string name="disclaimer">Ansvarsfriskrivning</string>
     <string name="take_photo">Ta foto</string>
     <string name="choose_photo">Välj foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Välj video</string>
+    <string name="choose_contact">Välj kontakt</string>
+    <string name="choose_file">Välj fil</string>
+    <string name="record_audio">Spela in ljud</string>
+    <string name="record_video">Spela in video</string>
     <!-- Events -->
     <string name="birthday">Födelsedag</string>
     <string name="anniversary">Årsdag</string>
@@ -359,7 +359,7 @@
     <string name="call">Ring</string>
     <string name="contact_details">Kontaktuppgifter</string>
     <string name="add_contact">Lägg till kontakt</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Bakgrunder</string>
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -632,14 +632,14 @@
     <string name="list_view">Listvy</string>
     <!-- Excluding -->
     <string name="exclude">Uteslut</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Uteslut mapp</string>
     <string name="excluded_folders">Uteslutna mappar</string>
     <string name="excluded">(utesluten)</string>
     <string name="manage_excluded_folders">Hantera uteslutna mappar</string>
     <string name="remove_all">Ta bort alla</string>
     <string name="remove_all_description">Vill du ta bort alla mappar från uteslutningslistan\? Detta raderar inte mapparna.</string>
-    <string name="temporarily_show_excluded">Temporarily show excluded</string>
-    <string name="stop_showing_excluded">Stop showing excluded</string>
+    <string name="temporarily_show_excluded">Visa uteslutna mappar tillfälligt</string>
+    <string name="stop_showing_excluded">Sluta visa uteslutna mappar</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -814,7 +814,7 @@
     <string name="simple_flashlight">Simpel ficklampa</string>
     <string name="simple_gallery">Simpelt galleri</string>
     <string name="simple_keyboard">Simpelt tangentbord</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Simpelt startprogram</string>
     <string name="simple_music_player">Simpel musikspelare</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
@@ -832,7 +832,7 @@
     <string name="flashlight_short">Ficklampa</string>
     <string name="gallery_short">Galleri</string>
     <string name="keyboard_short">Tangentbord</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Startprogram</string>
     <string name="music_player_short">Musikspelare</string>
     <string name="notes_short">Anteckningar</string>
     <string name="sms_messenger_short">Sms</string>
