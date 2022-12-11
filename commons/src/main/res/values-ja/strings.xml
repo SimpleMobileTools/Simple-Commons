@@ -568,7 +568,7 @@
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">下に引っ張って更新を有効にする</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
-    <string name="change_date_and_time_format">日付と時刻のフォーマットを変更</string>
+    <string name="change_date_and_time_format">日付と時刻の表示形式を変更</string>
     <string name="sunday_first">週の始めを日曜にする</string>
     <string name="widgets">ウィジェット</string>
     <string name="use_same_snooze">毎回同じスヌーズ時間を使用する</string>
@@ -913,7 +913,7 @@
     <string name="why_upgrade_different_note_per_widget">各ウィジェットに違うメモと色</string>
     <string name="why_upgrade_note_locking">メモのロック</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">日付と時刻のフォーマットのカスタマイズ</string>
+    <string name="why_upgrade_date_and_time_format">日付と時刻の表示形式のカスタマイズ</string>
     <string name="why_upgrade_shortcuts">ホーム画面のショートカット</string>
     <string name="why_upgrade_file_compression">ファイル圧縮対応</string>
     <string name="why_upgrade_recents_tab">最近のファイルのタブ</string>
