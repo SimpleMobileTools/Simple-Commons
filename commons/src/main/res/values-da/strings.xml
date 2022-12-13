@@ -13,10 +13,10 @@
     <string name="error">Fejl: %s</string>
     <string name="open_with">Åbn med</string>
     <string name="edit_with">Rediger med</string>
-    <string name="edit">Rediger</string>
+    <string name="edit">Redigér</string>
     <string name="no_app_found">Der blev ikke fundet en gyldig app</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Ingen browser fundet</string>
+    <string name="no_email_client_found">Ingen email klient fundet</string>
     <string name="set_as">Anvend som</string>
     <string name="copy_to_clipboard">Kopier til udklipsholder</string>
     <string name="copy_number_to_clipboard">Kopier nummeret til udklipsholderen</string>
@@ -109,8 +109,8 @@
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
     <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Blokér opkald fra ukendte</string>
+    <string name="block_unknown_messages">Blokér beskeder fra ukendte</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
@@ -211,7 +211,7 @@
     <string name="system_folder_copy_restriction">Systemet tillader ikke kopiering til denne mappe, vælg en anden</string>
     <string name="rename_in_sd_card_system_restriction">Systemet tillader ikke omdøbning i denne mappe</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Kan ikke omdøbe denne mappe</string>
     <!-- File picker -->
     <string name="select_folder">Vælg en mappe</string>
     <string name="select_file">Vælg en fil</string>
@@ -245,7 +245,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Vælg lager</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Lagerplads</string>
     <string name="internal">Intern</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rod</string>
@@ -359,7 +359,7 @@
     <string name="call">Opkald</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Tapeter</string>
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
     <string name="name">Navn</string>
@@ -579,7 +579,7 @@
     <string name="color_customization">Farvetilpasning</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="customize_colors_locked">Rediger farver (Låst)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
     <string name="customize_notifications">Tilpas notifikationer</string>
     <string name="use_english_language">Brug engelsk</string>
@@ -774,7 +774,7 @@
             På forhånd tak!
         ]]>
     </string>
-    <string name="donate_new">Hej,&lt;br&gt;&lt;br&gt;Jeg håber, at du nyder appen. Den indeholder ingen reklamer, og vi indsamler heller ikke dine data, men du bedes støtte dens udvikling ved at købe &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Du vil også få alle app-funktioner og farvetilpasning låst op.&lt;br&gt;&lt;br&gt;&lt;br&gt;Tak!</string>
+    <string name="donate_new">Hej,&lt;br&gt;&lt;br&gt;Jeg håber, at du nyder appen. Den indeholder ingen reklamer, og vi indsamler heller ikke dine data, men du kan støtte dens udvikling ved at købe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Du vil også få alle app-funktioner og farvetilpasning låst op.&lt;br&gt;&lt;br&gt;Tak!</string>
     <string name="donate_short">Støt os ved at købe &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, det vil også låse alle app-funktioner op, herunder farvetilpasning.</string>
     <string name="purchase">Køb</string>
     <string name="get_simple_phone">Få Simple Phone</string>
@@ -1007,7 +1007,7 @@
     <string name="audio_record_view_title">Audio Record View (audio-visualisering)</string>
     <string name="sms_mms_title">SMS MMS (håndtering af SMS og MMS)</string>
     <string name="apng_title">APNG Android (animeret WebP-understøttelse)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF viser)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Google Play listing -->
