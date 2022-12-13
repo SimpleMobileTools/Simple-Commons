@@ -295,6 +295,7 @@
     <string name="discard">Forkast</string>
     <string name="undo_changes">Angre endringer</string>
     <string name="undo_changes_confirmation">Er du sikker på at du vil angre dine endringer?</string>
+    <string name="cannot_be_undone">This action cannot be undone</string>
     <string name="save_before_closing">Du har endringer som ikke er lagret. Lagre før du avslutter?</string>
     <string name="apply_to_all_apps">Bruk fargene i alle Simple Apps</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.

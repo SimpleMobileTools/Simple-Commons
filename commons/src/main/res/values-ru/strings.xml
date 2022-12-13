@@ -306,6 +306,7 @@
     <string name="discard">Нет</string>
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Отменить изменения?</string>
+    <string name="cannot_be_undone">This action cannot be undone</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
     <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые рабочие столы неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.

@@ -299,6 +299,7 @@
     <string name="discard">Annuler</string>
     <string name="undo_changes">Annuler les modifications</string>
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos modifications ?</string>
+    <string name="cannot_be_undone">This action cannot be undone</string>
     <string name="save_before_closing">Vous avez des modifications non enregistrées. Les enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications \'Simple\'</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget.

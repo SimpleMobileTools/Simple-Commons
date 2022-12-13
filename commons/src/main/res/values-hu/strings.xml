@@ -300,6 +300,7 @@
     <string name="discard">Elvetés</string>
     <string name="undo_changes">Változások visszavonása</string>
     <string name="undo_changes_confirmation">Biztos, hogy visszavonja a módosításait\?</string>
+    <string name="cannot_be_undone">This action cannot be undone</string>
     <string name="save_before_closing">Nem mentette a változtatásokat. Menti a kilépés előtt?</string>
     <string name="apply_to_all_apps">Színek alkalmazása az összes Simple Apps alkalmazásra</string>
     <string name="app_icon_color_warning">FIGYELMEZTETÉS: Néhány indító nem megfelelően kezeli az alkalmazásikon testreszabását. Ha az ikon eltűnik, próbálja meg elindítani az alkalmazást a Google Playen vagy egy modulon keresztül, ha elérhető. Miután elindult, állítsa vissza az alapértelmezett narancssárga (#F57C00) ikont. A legrosszabb esetben újra kellhet telepítenie az alkalmazást.</string>

@@ -292,6 +292,7 @@
     <string name="discard">破棄</string>
     <string name="undo_changes">変更を元に戻す</string>
     <string name="undo_changes_confirmation">変更を元に戻してもよろしいですか？</string>
+    <string name="cannot_be_undone">This action cannot be undone</string>
     <string name="save_before_closing">保存していない変更があります。保存しますか？</string>
     <string name="apply_to_all_apps">すべてのSimple Appsに色を適用する</string>
     <string name="app_icon_color_warning">注意: 一部のランチャーはアプリアイコンのカスタマイズを適切に処理しません。アイコンが消える場合、可能であればGoogle Playかウィジェットでアプリを起動してみてください。
