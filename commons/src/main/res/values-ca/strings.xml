@@ -386,6 +386,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Segur que voleu continuar amb la supressió\?</string>
     <string name="deletion_confirmation">Segur que voleu suprimir %s\?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Segur que voleu moure %s a la paperera\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->

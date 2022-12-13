@@ -411,6 +411,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silmə prosesini təsdiqləyirsiniz?</string>
     <string name="deletion_confirmation">%s faylı silmək istdəyinizə əminsiniz?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <string name="move_to_recycle_bin_confirmation">%s\'i zibil qutusuna atmaq istədiyinizə əminsiniz?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Faylı silmək istədiyinizə əminsiniz?</string>
     <string name="are_you_sure_recycle_bin">Bu faylı zibil qutusuna atmaq istədiyinizə əminsiniz?</string>

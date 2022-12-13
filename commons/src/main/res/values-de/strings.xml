@@ -392,6 +392,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
     <string name="deletion_confirmation">Sollen wirklich %s Elemente gelöscht werden?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Sollen wirklich %s Elemente in den Papierkorb verschoben werden?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->

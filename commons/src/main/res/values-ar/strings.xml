@@ -401,6 +401,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">هل تريد بالتأكيد متابعة عملية الحذف ؟</string>
     <string name="deletion_confirmation">هل تريد بالتأكيد حذف%s ؟</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">هل تريد بالتأكيد نقل %s إلى "سلة المحذوفات" ؟</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->

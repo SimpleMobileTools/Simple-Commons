@@ -388,6 +388,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Сигурни ли си, че искаш да продължиш с изтриването\?</string>
     <string name="deletion_confirmation">Сигурен ли си, че искаш да изтриеш %s\?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Сигурен ли си, че искаш да преместиш %s в кошчето\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->

@@ -383,6 +383,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
     <string name="deletion_confirmation">你確定要刪除%s嗎?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">你確定要把%s移到回收桶嗎?</string>
     <!-- Are you sure you want to move 3 items into Recycle Bin? -->
