@@ -833,7 +833,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        toast(R.string.no_post_notifications_permissions)
+                        toast(R.string.no_post_notifications_permissions, Toast.LENGTH_LONG)
                     }
                 }
             }
