@@ -77,19 +77,19 @@ open class BaseConfig(val context: Context) {
     private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
 
     var textColor: Int
-        get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
+        get() = prefs.getInt(TEXT_COLOR, context.resources.getInteger(R.integer.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
 
     var backgroundColor: Int
-        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
+        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getInteger(R.integer.default_background_color))
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
-        get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(PRIMARY_COLOR, context.resources.getInteger(R.integer.default_primary_color))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var accentColor: Int
-        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(ACCENT_COLOR, context.resources.getInteger(R.integer.default_accent_color))
         set(accentColor) = prefs.edit().putInt(ACCENT_COLOR, accentColor).apply()
 
     var navigationBarColor: Int
@@ -105,7 +105,7 @@ open class BaseConfig(val context: Context) {
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
-        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getInteger(R.integer.default_app_icon_color))
         set(appIconColor) {
             isUsingModifiedAppIcon = appIconColor != context.resources.getColor(R.color.color_primary)
             prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
