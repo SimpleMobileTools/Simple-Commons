@@ -48,6 +48,9 @@ const val LOWER_ALPHA = 0.25f
 const val MEDIUM_ALPHA = 0.5f
 const val HIGHER_ALPHA = 0.75f
 
+// by how much should we darken toolbar and statusbar at scrolling
+const val MATERIAL_COLOR_CHANGE_FACTOR = 35
+
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
 const val WEEK_MINUTES = DAY_MINUTES * 7

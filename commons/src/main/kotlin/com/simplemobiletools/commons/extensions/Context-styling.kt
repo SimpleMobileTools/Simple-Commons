@@ -34,7 +34,21 @@ fun Context.getProperPrimaryColor() = when {
 
 fun Context.getProperStatusBarColor() = when {
     baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
-    else -> baseConfig.primaryColor
+    else -> getProperBackgroundColor()
+}
+
+// get the color of the statusbar with material activity, if the layout is scrolled down a bit
+fun Context.getColoredMaterialStatusBarColor(): Int {
+    return if (baseConfig.isUsingSystemTheme) {
+        resources.getColor(R.color.you_status_bar_color, theme)
+    } else {
+        val properBackgroundColor = getProperBackgroundColor()
+        if (properBackgroundColor.getContrastColor() == DARK_GREY) {
+            getProperPrimaryColor().lightenColor(MATERIAL_COLOR_CHANGE_FACTOR)
+        } else {
+            getProperPrimaryColor().darkenColor(20)
+        }
+    }
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {

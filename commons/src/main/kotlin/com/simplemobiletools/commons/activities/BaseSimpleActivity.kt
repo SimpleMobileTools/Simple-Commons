@@ -1,5 +1,7 @@
 package com.simplemobiletools.commons.activities
 
+import android.animation.ArgbEvaluator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
@@ -23,13 +25,16 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
-import com.google.android.material.appbar.MaterialToolbar
+import androidx.core.widget.NestedScrollView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.*
@@ -44,12 +49,14 @@ import java.io.OutputStream
 import java.util.regex.Pattern
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
+    var materialScrollColorAnimation: ValueAnimator? = null
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
     var showTransparentTop = false
     var showTransparentNavigation = false
+    var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
 
@@ -104,7 +111,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
-        } else {
+        } else if (!isMaterialActivity) {
             val color = if (baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_status_bar_color)
             } else {
@@ -115,7 +122,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         updateRecentsAppIcon()
-        updateNavigationBarColor()
+
+        val navBarColor = if (isMaterialActivity) {
+            getProperBackgroundColor()
+        } else {
+            baseConfig.navigationBarColor
+        }
+
+        updateNavigationBarColor(navBarColor)
     }
 
     override fun onDestroy() {
@@ -151,7 +165,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         window.statusBarColor = color
 
         if (isMarshmallowPlus()) {
-            if (color.getContrastColor() == 0xFF333333.toInt()) {
+            if (color.getContrastColor() == DARK_GREY) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
@@ -170,26 +184,75 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         if (baseConfig.isUsingSystemTheme && !isColorPreview) {
-            val navBarColor = getBottomNavigationBackgroundColor()
-            window.navigationBarColor = navBarColor
-            if (navBarColor.getContrastColor() == 0xFF333333.toInt()) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            val navBarColor = if (isMaterialActivity) {
+                getProperBackgroundColor().adjustAlpha(HIGHER_ALPHA)
             } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+                getBottomNavigationBackgroundColor()
             }
+
+            window.navigationBarColor = navBarColor
+            updateNavigationBarButtons(navBarColor)
         } else if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
             try {
-                val colorToUse = if (color == -2) -1 else color
+                var colorToUse = if (color == -2) -1 else color
+                if (isMaterialActivity) {
+                    colorToUse = colorToUse.adjustAlpha(HIGHER_ALPHA)
+                }
+
                 window.navigationBarColor = colorToUse
 
                 if (isOreoPlus()) {
-                    if (colorToUse.getContrastColor() == 0xFF333333.toInt()) {
-                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-                    } else {
-                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-                    }
+                    updateNavigationBarButtons(colorToUse)
                 }
             } catch (ignored: Exception) {
+            }
+        }
+    }
+
+    fun updateNavigationBarButtons(color: Int) {
+        if (color.getContrastColor() == DARK_GREY) {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+        } else {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+        }
+    }
+
+    // use translucent navigation bar, set the background color to action and status bars
+    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View) {
+        val decorFlags = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(decorFlags)
+        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+        scrollingView.setPadding(0, 0, 0, navigationBarHeight)
+
+        val backgroundColor = getProperBackgroundColor()
+        updateStatusbarColor(backgroundColor)
+        updateActionbarColor(backgroundColor)
+    }
+
+    fun setupMaterialScrollListener(scrollView: NestedScrollView, toolbar: Toolbar) {
+        if (!isMarshmallowPlus()) {
+            return
+        }
+
+        scrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            if (scrollY > 0 && oldScrollY == 0) {
+                materialScrollColorAnimation?.end()
+
+                val statusBarColor = getColoredMaterialStatusBarColor()
+                updateStatusbarColor(statusBarColor)
+                toolbar.setBackgroundColor(statusBarColor)
+            } else if (scrollY == 0 && oldScrollY > 0) {
+                val colorFrom = getColoredMaterialStatusBarColor()
+                val colorTo = getProperBackgroundColor()
+
+                materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+                materialScrollColorAnimation!!.addUpdateListener { animator ->
+                    val color = animator.animatedValue as Int
+                    window.statusBarColor = color
+                    toolbar.setBackgroundColor(color)
+                }
+
+                materialScrollColorAnimation!!.start()
             }
         }
     }
@@ -230,13 +293,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun setupToolbar(
-        toolbar: MaterialToolbar,
+        toolbar: Toolbar,
         toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
         statusBarColor: Int = getProperStatusBarColor(),
         searchMenuItem: MenuItem? = null
     ) {
-        val contrastColor = statusBarColor.getContrastColor()
-        toolbar.setBackgroundColor(statusBarColor)
+        val toolbarBackgroundColor = if (isMaterialActivity) {
+            // make sure toolbar and statusbar colors are always the same, even if view is scrolled and the top bars are colored
+            window.statusBarColor
+        } else {
+            statusBarColor
+        }
+
+        val contrastColor = toolbarBackgroundColor.getContrastColor()
+        toolbar.setBackgroundColor(toolbarBackgroundColor)
         toolbar.setTitleTextColor(contrastColor)
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
 
@@ -245,7 +315,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
         }
 
-        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, statusBarColor)
+        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, toolbarBackgroundColor)
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()
