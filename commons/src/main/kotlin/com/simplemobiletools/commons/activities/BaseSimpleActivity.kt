@@ -229,6 +229,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         updateActionbarColor(backgroundColor)
     }
 
+    // colorize the top toolbar and statusbar at scrolling down a bit
     fun setupMaterialScrollListener(scrollView: NestedScrollView, toolbar: Toolbar) {
         if (!isMarshmallowPlus()) {
             return
