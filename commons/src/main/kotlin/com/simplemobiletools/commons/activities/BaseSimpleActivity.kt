@@ -218,11 +218,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // use translucent navigation bar, set the background color to action and status bars
-    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View) {
+    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View?) {
         val decorFlags = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(decorFlags)
         (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
-        scrollingView.setPadding(0, 0, 0, navigationBarHeight)
+        scrollingView?.setPadding(0, 0, 0, navigationBarHeight)
 
         val backgroundColor = getProperBackgroundColor()
         updateStatusbarColor(backgroundColor)

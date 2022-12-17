@@ -18,8 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
-        android:scrollbars="vertical"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:id="@+id/contributors_holder"
@@ -46,6 +46,7 @@
                     android:layout_width="@dimen/normal_icon_size"
                     android:layout_height="@dimen/normal_icon_size"
                     android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
                     android:contentDescription="@null"
                     android:padding="@dimen/medium_margin"
                     android:src="@drawable/ic_code_vector"
@@ -87,6 +88,7 @@
                 android:id="@+id/contributors_languages_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
                 android:orientation="vertical" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

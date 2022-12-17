@@ -6,29 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/about_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/about_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/about_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:title="@string/about"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:title="@string/contributors"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/about_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:id="@+id/about_holder"
@@ -38,81 +30,25 @@
 
             <TextView
                 android:id="@+id/about_support"
+                style="@style/MaterialSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin"
-                android:gravity="center_horizontal"
-                android:text="@string/support"
-                android:textSize="@dimen/big_text_size" />
+                android:text="@string/support" />
 
             <LinearLayout
-                android:id="@+id/about_support_holder"
+                android:id="@+id/support_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
-                android:background="@drawable/section_holder_stroke"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-                <RelativeLayout
-                    android:id="@+id/about_faq_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_top_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_faq_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_question_mark_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_faq"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_faq_icon"
-                        android:layout_alignBottom="@+id/about_faq_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_faq_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/frequently_asked_questions"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_email_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_email_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_mail_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_email"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_email_icon"
-                        android:layout_alignBottom="@+id/about_email_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_email_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/my_email"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/support_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/support_layout" />
 
             <TextView
                 android:id="@+id/about_help_us"
