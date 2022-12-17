@@ -26,6 +26,7 @@ class LicenseActivity : BaseSimpleActivity() {
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
         val primaryColor = getProperPrimaryColor()
 
         val inflater = LayoutInflater.from(this)
@@ -34,6 +35,7 @@ class LicenseActivity : BaseSimpleActivity() {
         licenses.filter { licenseMask and it.id != 0L }.forEach {
             val license = it
             inflater.inflate(R.layout.item_license, null).apply {
+                license_card.setCardBackgroundColor(backgroundColor)
                 license_title.apply {
                     text = getString(license.titleId)
                     setTextColor(primaryColor)
