@@ -298,7 +298,7 @@
     <string name="app_icon_color_warning">注意: 一部のランチャーはアプリアイコンのカスタマイズを適切に処理しません。アイコンが消える場合、可能であればGoogle Playかウィジェットでアプリを起動してみてください。
        起動したら、デフォルトのオレンジ色(#F57C00)のアイコンを元に戻します。 最悪の場合、アプリの再インストールが必要となります。</string>
     <string name="share_colors_success">色の更新に成功しました。新しいテーマ \'Shared\' が追加されたので、今後はそちらから全てのアプリの色変更を行ってください。</string>
-    <string name="shared_theme_note">Proアプリ版を使用していても、技術的な理由によりSimple Thank Youが必要であることにご留意下さい。色の同期を処理します。</string>
+    <string name="shared_theme_note">Pro版のアプリを使用していても、技術的な理由によりSimple Thank Youが必要であることにご留意下さい。色の同期を処理します。</string>
     <string name="purchase_thank_you">
         <![CDATA[
             この機能のロックを解除して開発者をサポートするには、<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> アプリを購入してください。
@@ -701,14 +701,14 @@
     <string name="sunday_short">日</string>
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">アプリのバージョンはこれ以上更新されません。新しい修正や改善を受けるには、Pro版へアップグレードしてください。</string>
-    <string name="upgrade_to_pro_long_click">このアプリのバージョンはこれ以上更新されません。新たな修正と改善を受けるには、ここをタップしてProバージョンにアップグレードしてください。</string>
+    <string name="upgrade_to_pro_long_click">このアプリのバージョンはこれ以上更新されません。新たな修正と改善を受けるには、ここをタップしてPro版にアップグレードしてください。</string>
     <string name="it_is_free">%sまで無料です。それまでにダウンロードすれば、永久に無料でご利用いただけます。 </string>
     <string name="more_info">もっと見る</string>
     <string name="upgrade">アップグレードする</string>
     <string name="upgrade_calendar">ローカルに保存されたイベントは、手動で.icsファイルにエクスポートしてインポートする必要があります。インポート/エクスポートボタンはメイン画面のメニューにあります。</string>
     <string name="upgraded_to_pro">こんにちは、
 \n
-\nすでにPro版のアプリをお持ちのようです。こちらのアプリはもう必要ありませんので、アンインストールできます。</string>
+\nすでにPro版のアプリをお持ちのようですね。こちらのアプリはもう必要ありませんので、アンインストールできます。</string>
     <string name="upgraded_to_pro_calendar">ローカルに保存された予定を移行するには、.icsファイルにエクスポートしてから、.icsファイルをインポートする必要があります。エクスポートボタンとインポートボタンは上部のメニューにあります。</string>
     <string name="upgraded_to_pro_notes">メモアプリのPro版への移行は手動で行う必要があります。</string>
     <string name="upgraded_to_pro_contacts">ローカルに保存された連絡先を移行するには、.vcfファイルにエクスポートしてから、.vcfファイルをインポートする必要があります。エクスポートボタンとインポートボタンは上部のメニューにあります。</string>
@@ -754,13 +754,14 @@
     <string name="before_asking_question_read_faq">お問い合わせいただく前に、アプリの設定を確認し、よくある質問を見てください。答えが載っているかもしれません。</string>
     <string name="before_rate_read_faq">当社を評価していただく前に、アプリの設定を確認し、よくある質問を見てください。問題が発生しているなら、答えが見つかるかもしれません。</string>
     <string name="make_sure_latest">最新バージョンのアプリを利用しているかご確認ください。</string>
-    <string name="make_sure_upgrade">また、このアプリのバージョンは開発されていないことにご注意ください。Proバージョンを入手すると、多くの改善が得られます。</string>
+    <string name="make_sure_upgrade">また、このアプリのバージョンは開発されていないことにご注意ください。Pro版を入手すると、多くの改善が得られます。</string>
     <string name="read_it">見る</string>
     <string name="read_faq">FAQ</string>
     <string name="rate_us_prompt">こんにちは、\n\n　このアプリをしばらくご利用いただいているようで、感謝いたします。\n\n　ひとつお願いがあるのですが、Google Playで評価してもらえるでしょうか。お力添えください。 \n\n　評価をしてもしなくても、このメッセージは二度と表示されません。\n\nThanks!</string>
     <string name="rate_our_app">是非、アプリを評価してください :)</string>
     <string name="thank_you">ありがとうございます</string>
-    <string name="widget_locked_pro">ウィジェットはロックされています。\nロックを解除するには、Proバージョンにアップグレードしてください。</string>
+    <string name="widget_locked_pro">ウィジェットはロックされています。
+\nロックを解除するには、Pro版にアップグレードしてください。</string>
     <string name="features_locked">この機能はロックされています。ロックを解除するには、 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; を購入する必要があります。&lt;br&gt;&lt;br&gt;お支払いは1回のみで、ご満足いただけない場合はご返金いたします。</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">こんにちは、&lt;br&gt;&lt;br&gt; 最近、新しいアプリをいくつかリリースしたのでお知らせします:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; アイコンかタイトルをタップするだけでダウンロードできます。&lt;br&gt;&lt;br&gt; ありがとうございます</string>
