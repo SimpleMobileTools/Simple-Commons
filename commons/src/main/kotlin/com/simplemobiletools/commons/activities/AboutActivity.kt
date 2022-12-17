@@ -58,7 +58,7 @@ class AboutActivity : BaseSimpleActivity() {
         super.onResume()
         updateTextColors(about_nested_scrollview)
         setupToolbar(about_toolbar, NavigationIcon.Arrow)
-        support_layout.removeAllViews()
+        about_support_layout.removeAllViews()
 
         setupFAQ()
         setupEmail()
@@ -85,7 +85,7 @@ class AboutActivity : BaseSimpleActivity() {
                 about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(R.drawable.ic_question_mark_vector, textColor))
                 about_item_label.setText(R.string.frequently_asked_questions)
                 about_item_label.setTextColor(textColor)
-                support_layout.addView(this)
+                about_support_layout.addView(this)
 
                 setOnClickListener {
                     launchFAQActivity()
@@ -106,9 +106,9 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupEmail() {
         if (resources.getBoolean(R.bool.hide_all_external_links)) {
-            if (support_layout.isEmpty()) {
+            if (about_support_layout.isEmpty()) {
                 about_support.beGone()
-                support_divider.beGone()
+                about_support_divider.beGone()
             }
 
             return
@@ -118,7 +118,7 @@ class AboutActivity : BaseSimpleActivity() {
             about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(R.drawable.ic_mail_vector, textColor))
             about_item_label.setText(R.string.my_email)
             about_item_label.setTextColor(textColor)
-            support_layout.addView(this)
+            about_support_layout.addView(this)
 
             setOnClickListener {
                 val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"

@@ -36,19 +36,19 @@
                 android:text="@string/support" />
 
             <LinearLayout
-                android:id="@+id/support_layout"
+                android:id="@+id/about_support_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
             <ImageView
-                android:id="@+id/support_divider"
+                android:id="@+id/about_support_divider"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_height"
                 android:background="@color/divider_grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/support_layout" />
+                app:layout_constraintTop_toBottomOf="@+id/about_support_layout" />
 
             <TextView
                 android:id="@+id/about_help_us"
