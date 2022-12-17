@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
-import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getProperBackgroundColor
 import com.simplemobiletools.commons.extensions.getProperPrimaryColor
 import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.extensions.removeUnderlines
@@ -30,30 +30,31 @@ class FAQActivity : BaseSimpleActivity() {
         updateMaterialActivityViews(faq_coordinator, faq_holder)
         setupMaterialScrollListener(faq_nested_scrollview, faq_toolbar)
 
-        val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
-        val titleColor = getProperPrimaryColor()
         val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
+        val primaryColor = getProperPrimaryColor()
 
         val inflater = LayoutInflater.from(this)
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
             inflater.inflate(R.layout.item_faq, null).apply {
+                faq_card.setCardBackgroundColor(backgroundColor)
                 faq_title.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
-                    setTextColor(titleColor)
+                    setTextColor(primaryColor)
                 }
 
                 faq_text.apply {
                     text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
                     setTextColor(textColor)
-                    setLinkTextColor(titleColor)
+                    setLinkTextColor(primaryColor)
 
                     movementMethod = LinkMovementMethod.getInstance()
                     removeUnderlines()
                 }
+
                 faq_holder.addView(this)
-                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }

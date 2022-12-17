@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -24,7 +23,6 @@ class LicenseActivity : BaseSimpleActivity() {
         updateMaterialActivityViews(licenses_coordinator, licenses_holder)
         setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
 
-        val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
         val primaryColor = getProperPrimaryColor()
@@ -50,7 +48,6 @@ class LicenseActivity : BaseSimpleActivity() {
                 }
 
                 licenses_holder.addView(this)
-                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }
