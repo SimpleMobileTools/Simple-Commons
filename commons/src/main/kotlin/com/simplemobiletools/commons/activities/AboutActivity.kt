@@ -416,6 +416,7 @@ class AboutActivity : BaseSimpleActivity() {
             val fullVersion = String.format(getString(R.string.version_placeholder, version))
             about_item_label.text = fullVersion
             about_item_label.setTextColor(textColor)
+            about_other_layout.addView(this)
 
             setOnClickListener {
                 if (firstVersionClickTS == 0L) {
