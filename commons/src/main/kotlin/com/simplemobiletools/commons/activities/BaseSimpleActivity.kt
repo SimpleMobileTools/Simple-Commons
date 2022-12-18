@@ -122,14 +122,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         updateRecentsAppIcon()
-
-        val navBarColor = if (isMaterialActivity) {
-            getProperBackgroundColor()
-        } else {
-            baseConfig.navigationBarColor
-        }
-
-        updateNavigationBarColor(navBarColor)
     }
 
     override fun onDestroy() {
@@ -176,37 +168,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
         updateStatusbarColor(color)
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
-    }
-
-    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor, isColorPreview: Boolean = false) {
-        if (showTransparentNavigation) {
-            return
-        }
-
-        if (baseConfig.isUsingSystemTheme && !isColorPreview) {
-            val navBarColor = if (isMaterialActivity) {
-                getProperBackgroundColor().adjustAlpha(HIGHER_ALPHA)
-            } else {
-                getBottomNavigationBackgroundColor()
-            }
-
-            window.navigationBarColor = navBarColor
-            updateNavigationBarButtons(navBarColor)
-        } else if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
-            try {
-                var colorToUse = if (color == -2) -1 else color
-                if (isMaterialActivity) {
-                    colorToUse = colorToUse.adjustAlpha(HIGHER_ALPHA)
-                }
-
-                window.navigationBarColor = colorToUse
-
-                if (isOreoPlus()) {
-                    updateNavigationBarButtons(colorToUse)
-                }
-            } catch (ignored: Exception) {
-            }
-        }
     }
 
     fun updateNavigationBarButtons(color: Int) {
