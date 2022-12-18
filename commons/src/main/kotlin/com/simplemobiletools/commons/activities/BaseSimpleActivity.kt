@@ -240,11 +240,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 materialScrollColorAnimation?.end()
 
                 val statusBarColor = getColoredMaterialStatusBarColor()
-                val contrastColor = statusBarColor.getContrastColor()
-                updateStatusbarColor(statusBarColor)
-                toolbar.setBackgroundColor(statusBarColor)
-                toolbar.setTitleTextColor(contrastColor)
-                toolbar.navigationIcon?.applyColorFilter(contrastColor)
+                updateTopBarColors(toolbar, statusBarColor)
             } else if (scrollY == 0 && oldScrollY > 0) {
                 val colorFrom = getColoredMaterialStatusBarColor()
                 val colorTo = getProperBackgroundColor()
@@ -252,15 +248,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
                 materialScrollColorAnimation!!.addUpdateListener { animator ->
                     val color = animator.animatedValue as Int
-                    val contrastColor = color.getContrastColor()
-                    window.statusBarColor = color
-                    toolbar.setBackgroundColor(color)
-                    toolbar.setTitleTextColor(contrastColor)
-                    toolbar.navigationIcon?.applyColorFilter(contrastColor)
-                    updateStatusbarColor(color)
+                    updateTopBarColors(toolbar, color)
                 }
 
                 materialScrollColorAnimation!!.start()
+            }
+        }
+    }
+
+    private fun updateTopBarColors(toolbar: Toolbar, color: Int) {
+        updateStatusbarColor(color)
+        toolbar.setBackgroundColor(color)
+
+        val contrastColor = color.getContrastColor()
+        toolbar.setTitleTextColor(contrastColor)
+        toolbar.navigationIcon?.applyColorFilter(contrastColor)
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
+        val menu = toolbar.menu
+        for (i in 0 until menu.size()) {
+            try {
+                menu.getItem(i)?.icon?.setTint(contrastColor)
+            } catch (ignored: Exception) {
             }
         }
     }
