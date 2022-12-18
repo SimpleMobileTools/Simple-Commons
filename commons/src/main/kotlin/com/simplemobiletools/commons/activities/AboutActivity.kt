@@ -63,6 +63,7 @@ class AboutActivity : BaseSimpleActivity() {
         about_support_layout.removeAllViews()
         about_help_us_layout.removeAllViews()
         about_social_layout.removeAllViews()
+        about_other_layout.removeAllViews()
 
         setupFAQ()
         setupEmail()
@@ -328,63 +329,79 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupGetSimplePhone() {
         if (resources.getBoolean(R.bool.hide_all_external_links)) {
-            about_get_simple_phone_holder.beGone()
+            return
         }
 
-        about_get_simple_phone_holder.setOnClickListener {
-            launchViewIntent("https://simplemobiletools.com/phone")
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            setupAboutItem(this, R.drawable.ic_simple_phone_vector, R.string.get_simple_phone)
+            about_other_layout.addView(this)
+
+            setOnClickListener {
+                launchViewIntent("https://simplemobiletools.com/phone")
+            }
         }
     }
 
     private fun setupMoreApps() {
         if (resources.getBoolean(R.bool.hide_google_relations)) {
-            about_more_apps_holder.beGone()
+            return
         }
 
-        about_more_apps_holder.setOnClickListener {
-            launchMoreAppsFromUsIntent()
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            setupAboutItem(this, R.drawable.ic_heart_vector, R.string.more_apps_from_us)
+            about_other_layout.addView(this)
+
+            setOnClickListener {
+                launchMoreAppsFromUsIntent()
+            }
         }
     }
 
     private fun setupWebsite() {
-        if (resources.getBoolean(R.bool.show_donate_in_about) && !resources.getBoolean(R.bool.hide_all_external_links)) {
-            about_website_holder.beVisible()
-            about_website_holder.setOnClickListener {
+        if (!resources.getBoolean(R.bool.show_donate_in_about) || resources.getBoolean(R.bool.hide_all_external_links)) {
+            return
+        }
+
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            setupAboutItem(this, R.drawable.ic_link_vector, R.string.website)
+            about_other_layout.addView(this)
+
+            setOnClickListener {
                 launchViewIntent("https://simplemobiletools.com/")
             }
-        } else {
-            about_website_holder.beGone()
         }
     }
 
     private fun setupPrivacyPolicy() {
         if (resources.getBoolean(R.bool.hide_all_external_links)) {
-            about_privacy_policy_holder.beGone()
+            return
         }
 
-        about_privacy_policy_holder.setOnClickListener {
-            val appId = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
-            val url = "https://simplemobiletools.com/privacy/$appId.txt"
-            launchViewIntent(url)
-        }
-    }
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            setupAboutItem(this, R.drawable.ic_unhide_vector, R.string.privacy_policy)
+            about_other_layout.addView(this)
 
-    private fun setupLicense() {
-        about_licenses_holder.setOnClickListener {
-            Intent(applicationContext, LicenseActivity::class.java).apply {
-                putExtra(APP_ICON_IDS, getAppIconIDs())
-                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
-                putExtra(APP_LICENSES, intent.getLongExtra(APP_LICENSES, 0))
-                startActivity(this)
+            setOnClickListener {
+                val appId = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+                val url = "https://simplemobiletools.com/privacy/$appId.txt"
+                launchViewIntent(url)
             }
         }
     }
 
-    private fun setupAboutItem(view: View, drawableId: Int, textId: Int) {
-        view.apply {
-            about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(drawableId, textColor))
-            about_item_label.setText(textId)
-            about_item_label.setTextColor(textColor)
+    private fun setupLicense() {
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            setupAboutItem(this, R.drawable.ic_article_vector, R.string.third_party_licences)
+            about_other_layout.addView(this)
+
+            setOnClickListener {
+                Intent(applicationContext, LicenseActivity::class.java).apply {
+                    putExtra(APP_ICON_IDS, getAppIconIDs())
+                    putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
+                    putExtra(APP_LICENSES, intent.getLongExtra(APP_LICENSES, 0))
+                    startActivity(this)
+                }
+            }
         }
     }
 
@@ -394,23 +411,36 @@ class AboutActivity : BaseSimpleActivity() {
             version += " ${getString(R.string.pro)}"
         }
 
-        val fullVersion = String.format(getString(R.string.version_placeholder, version))
-        about_version.text = fullVersion
-        about_version_holder.setOnClickListener {
-            if (firstVersionClickTS == 0L) {
-                firstVersionClickTS = System.currentTimeMillis()
-                Handler().postDelayed({
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(R.drawable.ic_info_vector, textColor))
+            val fullVersion = String.format(getString(R.string.version_placeholder, version))
+            about_item_label.text = fullVersion
+            about_item_label.setTextColor(textColor)
+
+            setOnClickListener {
+                if (firstVersionClickTS == 0L) {
+                    firstVersionClickTS = System.currentTimeMillis()
+                    Handler().postDelayed({
+                        firstVersionClickTS = 0L
+                        clicksSinceFirstClick = 0
+                    }, EASTER_EGG_TIME_LIMIT)
+                }
+
+                clicksSinceFirstClick++
+                if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS) {
+                    toast(R.string.hello)
                     firstVersionClickTS = 0L
                     clicksSinceFirstClick = 0
-                }, EASTER_EGG_TIME_LIMIT)
+                }
             }
+        }
+    }
 
-            clicksSinceFirstClick++
-            if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS) {
-                toast(R.string.hello)
-                firstVersionClickTS = 0L
-                clicksSinceFirstClick = 0
-            }
+    private fun setupAboutItem(view: View, drawableId: Int, textId: Int) {
+        view.apply {
+            about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(drawableId, textColor))
+            about_item_label.setText(textId)
+            about_item_label.setTextColor(textColor)
         }
     }
 }
