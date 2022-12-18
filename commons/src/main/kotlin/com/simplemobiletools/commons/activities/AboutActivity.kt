@@ -62,6 +62,7 @@ class AboutActivity : BaseSimpleActivity() {
 
         about_support_layout.removeAllViews()
         about_help_us_layout.removeAllViews()
+        about_social_layout.removeAllViews()
 
         setupFAQ()
         setupEmail()
@@ -164,7 +165,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupRateUs() {
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
+        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_all_external_links)) {
             return
         }
 
@@ -199,7 +200,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupInvite() {
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
+        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_all_external_links)) {
             return
         }
 
@@ -247,38 +248,81 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupFacebook() {
         if (resources.getBoolean(R.bool.hide_all_external_links)) {
-            about_social.beGone()
-            about_social_holder.beGone()
+            return
         }
 
-        about_facebook_holder.setOnClickListener {
-            var link = "https://www.facebook.com/simplemobiletools"
-            try {
-                packageManager.getPackageInfo("com.facebook.katana", 0)
-                link = "fb://page/150270895341774"
-            } catch (ignored: Exception) {
-            }
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            about_item_icon.setImageResource(R.drawable.ic_facebook_vector)
+            about_item_label.setText(R.string.facebook)
+            about_item_label.setTextColor(textColor)
+            about_social_layout.addView(this)
 
-            launchViewIntent(link)
+            setOnClickListener {
+                var link = "https://www.facebook.com/simplemobiletools"
+                try {
+                    packageManager.getPackageInfo("com.facebook.katana", 0)
+                    link = "fb://page/150270895341774"
+                } catch (ignored: Exception) {
+                }
+
+                launchViewIntent(link)
+            }
         }
     }
 
     private fun setupGitHub() {
-        about_github_icon.applyColorFilter(getProperBackgroundColor().getContrastColor())
-        about_github_holder.setOnClickListener {
-            launchViewIntent("https://github.com/SimpleMobileTools")
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            return
+        }
+
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            about_item_icon.setImageDrawable(resources.getColoredDrawableWithColor(R.drawable.ic_github_vector, backgroundColor.getContrastColor()))
+            about_item_label.setText(R.string.github)
+            about_item_label.setTextColor(textColor)
+            about_social_layout.addView(this)
+
+            setOnClickListener {
+                launchViewIntent("https://github.com/SimpleMobileTools")
+            }
         }
     }
 
     private fun setupReddit() {
-        about_reddit_holder.setOnClickListener {
-            launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            return
+        }
+
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            about_item_icon.setImageResource(R.drawable.ic_reddit_vector)
+            about_item_label.setText(R.string.reddit)
+            about_item_label.setTextColor(textColor)
+            about_social_layout.addView(this)
+
+            setOnClickListener {
+                launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
+            }
         }
     }
 
     private fun setupTelegram() {
-        about_telegram_holder.setOnClickListener {
-            launchViewIntent("https://t.me/SimpleMobileTools")
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            if (about_social_layout.isEmpty()) {
+                about_social.beGone()
+                about_social_divider.beGone()
+            }
+
+            return
+        }
+
+        inflater?.inflate(R.layout.item_about, null)?.apply {
+            about_item_icon.setImageResource(R.drawable.ic_telegram_vector)
+            about_item_label.setText(R.string.telegram)
+            about_item_label.setTextColor(textColor)
+            about_social_layout.addView(this)
+
+            setOnClickListener {
+                launchViewIntent("https://t.me/SimpleMobileTools")
+            }
         }
     }
 
