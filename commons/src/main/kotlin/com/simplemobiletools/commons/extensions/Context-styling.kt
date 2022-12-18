@@ -42,12 +42,7 @@ fun Context.getColoredMaterialStatusBarColor(): Int {
     return if (baseConfig.isUsingSystemTheme) {
         resources.getColor(R.color.you_status_bar_color, theme)
     } else {
-        val properBackgroundColor = getProperBackgroundColor()
-        if (properBackgroundColor.getContrastColor() == DARK_GREY) {
-            getProperPrimaryColor().lightenColor(MATERIAL_COLOR_CHANGE_FACTOR)
-        } else {
-            getProperPrimaryColor().darkenColor(20)
-        }
+        getProperPrimaryColor()
     }
 }
 

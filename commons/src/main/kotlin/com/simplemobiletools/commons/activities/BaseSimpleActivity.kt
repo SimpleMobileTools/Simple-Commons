@@ -240,8 +240,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 materialScrollColorAnimation?.end()
 
                 val statusBarColor = getColoredMaterialStatusBarColor()
+                val contrastColor = statusBarColor.getContrastColor()
                 updateStatusbarColor(statusBarColor)
                 toolbar.setBackgroundColor(statusBarColor)
+                toolbar.setTitleTextColor(contrastColor)
+                toolbar.navigationIcon?.applyColorFilter(contrastColor)
             } else if (scrollY == 0 && oldScrollY > 0) {
                 val colorFrom = getColoredMaterialStatusBarColor()
                 val colorTo = getProperBackgroundColor()
@@ -249,8 +252,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
                 materialScrollColorAnimation!!.addUpdateListener { animator ->
                     val color = animator.animatedValue as Int
+                    val contrastColor = color.getContrastColor()
                     window.statusBarColor = color
                     toolbar.setBackgroundColor(color)
+                    toolbar.setTitleTextColor(contrastColor)
+                    toolbar.navigationIcon?.applyColorFilter(contrastColor)
+                    updateStatusbarColor(color)
                 }
 
                 materialScrollColorAnimation!!.start()
