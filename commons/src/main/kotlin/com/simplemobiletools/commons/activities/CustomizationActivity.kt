@@ -46,12 +46,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
-        setupToolbar(customization_toolbar, NavigationIcon.Cross)
 
         setupOptionsMenu()
         refreshMenuItems()
+
+        updateMaterialActivityViews(customization_coordinator, customization_holder)
+
         isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"
         initColorVariables()
 
@@ -110,6 +113,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             updateActionbarColor(this)
             setTheme(getThemeId(this))
         }
+
+        setupToolbar(customization_toolbar, NavigationIcon.Cross, getColoredMaterialStatusBarColor())
     }
 
     private fun refreshMenuItems() {
@@ -231,7 +236,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             apply_to_all_holder.beVisibleIf(
                 curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
-            updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
+            updateMenuItemColors(customization_toolbar.menu, getCurrentStatusBarColor())
             setupToolbar(customization_toolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
         }
     }
@@ -249,7 +254,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curAccentColor = baseConfig.customAccentColor
                     curAppIconColor = baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
-                    updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
+                    updateMenuItemColors(customization_toolbar.menu, curPrimaryColor)
                     setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
                     setupColorsPickers()
                 } else {
@@ -270,7 +275,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     }
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
-                    updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
+                    updateMenuItemColors(customization_toolbar.menu, curPrimaryColor)
                     setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
                 }
             } else {
@@ -286,7 +291,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
                 setTheme(getThemeId(getCurrentPrimaryColor()))
                 colorChanged()
-                updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
+                updateMenuItemColors(customization_toolbar.menu, getCurrentStatusBarColor())
                 setupToolbar(customization_toolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
             }
         }
@@ -549,13 +554,14 @@ class CustomizationActivity : BaseSimpleActivity() {
                     updateColorTheme(getUpdatedTheme())
                     setTheme(getThemeId(color))
                 }
-                updateMenuItemColors(customization_toolbar.menu, true, color)
+                updateMenuItemColors(customization_toolbar.menu, color)
                 setupToolbar(customization_toolbar, NavigationIcon.Cross, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
-                updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
+                updateMenuItemColors(customization_toolbar.menu, curPrimaryColor)
                 setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
+                updateTopBarColors(customization_toolbar, curPrimaryColor)
             }
         }
     }

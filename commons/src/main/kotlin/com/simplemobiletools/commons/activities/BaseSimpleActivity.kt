@@ -55,7 +55,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var isAskingPermissions = false
     var useDynamicTheme = true
     var showTransparentTop = false
-    var showTransparentNavigation = false
     var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
@@ -122,6 +121,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         updateRecentsAppIcon()
+
+        var navBarColor = getProperBackgroundColor()
+        if (isMaterialActivity) {
+            navBarColor = navBarColor.adjustAlpha(HIGHER_ALPHA)
+        }
+
+        window.navigationBarColor = navBarColor
+        updateNavigationBarButtons(navBarColor)
     }
 
     override fun onDestroy() {
@@ -171,16 +178,18 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateNavigationBarButtons(color: Int) {
-        if (color.getContrastColor() == DARK_GREY) {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-        } else {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+        if (isOreoPlus()) {
+            if (color.getContrastColor() == DARK_GREY) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            }
         }
     }
 
     // use translucent navigation bar, set the background color to action and status bars
     fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View?) {
-        val decorFlags = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        val decorFlags = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(decorFlags)
         (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
         scrollingView?.setPadding(0, 0, 0, navigationBarHeight)
@@ -217,7 +226,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateTopBarColors(toolbar: Toolbar, color: Int) {
+    fun updateTopBarColors(toolbar: Toolbar, color: Int) {
         updateStatusbarColor(color)
         toolbar.setBackgroundColor(color)
 
@@ -251,7 +260,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false) {
+    fun updateMenuItemColors(menu: Menu?, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false) {
         if (menu == null) {
             return
         }
@@ -292,7 +301,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
         }
 
-        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, toolbarBackgroundColor)
+        updateMenuItemColors(toolbar.menu, toolbarBackgroundColor)
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()
