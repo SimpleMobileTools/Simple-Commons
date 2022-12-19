@@ -10,6 +10,7 @@ import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -59,6 +60,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
 
+    private var mainCoordinatorLayout: CoordinatorLayout? = null
+    private var scrollingView: View? = null
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -137,6 +140,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         actionOnPermission = null
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        handleNavigationAndScrolling()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
@@ -189,14 +197,25 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     // use translucent navigation bar, set the background color to action and status bars
     fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View?) {
-        val decorFlags = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(decorFlags)
-        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
-        scrollingView?.setPadding(0, 0, 0, navigationBarHeight)
+        this.mainCoordinatorLayout = mainCoordinatorLayout
+        this.scrollingView = scrollingView
+        handleNavigationAndScrolling()
 
         val backgroundColor = getProperBackgroundColor()
         updateStatusbarColor(backgroundColor)
         updateActionbarColor(backgroundColor)
+    }
+
+    private fun handleNavigationAndScrolling() {
+        if (portrait) {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+            scrollingView?.setPadding(0, 0, 0, navigationBarHeight)
+            (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+        } else {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+            scrollingView?.setPadding(0, 0, 0, 0)
+            (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
+        }
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
