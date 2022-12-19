@@ -228,7 +228,7 @@ open class BaseConfig(val context: Context) {
         set(isUsingAutoTheme) = prefs.edit().putBoolean(IS_USING_AUTO_THEME, isUsingAutoTheme).apply()
 
     var isUsingSystemTheme: Boolean
-        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, false)
+        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, isSPlus())
         set(isUsingSystemTheme) = prefs.edit().putBoolean(IS_USING_SYSTEM_THEME, isUsingSystemTheme).apply()
 
     var wasCustomThemeSwitchDescriptionShown: Boolean
