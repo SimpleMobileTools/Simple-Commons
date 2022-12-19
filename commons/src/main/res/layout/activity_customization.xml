@@ -212,7 +212,7 @@
                     android:id="@+id/apply_to_all"
                     style="@style/ColoredButtonStyle"
                     android:layout_width="wrap_content"
-                    android:layout_height="400dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/apply_to_all_apps" />
 
             </RelativeLayout>
