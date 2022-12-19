@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
-        android:scrollbars="vertical">
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/customization_holder"
