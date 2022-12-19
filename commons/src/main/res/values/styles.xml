@@ -422,6 +422,7 @@
         <item name="android:paddingTop">@dimen/medium_margin</item>
         <item name="android:paddingEnd">@dimen/settings_label_start_margin</item>
         <item name="android:paddingBottom">@dimen/medium_margin</item>
+        <item name="android:background">@drawable/ripple_background</item>
     </style>
 
     <style name="SettingsHolderTextViewStyle">
@@ -429,6 +430,7 @@
         <item name="android:paddingTop">@dimen/activity_margin</item>
         <item name="android:paddingEnd">@dimen/settings_label_start_margin</item>
         <item name="android:paddingBottom">@dimen/activity_margin</item>
+        <item name="android:background">@drawable/ripple_background</item>
     </style>
 
     <style name="SettingsHolderTextViewOneLinerStyle" parent="@style/SettingsHolderTextViewStyle">
@@ -436,6 +438,7 @@
         <item name="android:paddingBottom">@dimen/bigger_margin</item>
         <item name="android:paddingEnd">@dimen/settings_label_start_margin</item>
         <item name="android:paddingStart">@dimen/settings_label_start_margin</item>
+        <item name="android:background">@drawable/ripple_background</item>
     </style>
 
     <style name="DragHandleIconStyle">
