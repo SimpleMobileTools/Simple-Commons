@@ -98,7 +98,7 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
-fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
+fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
     BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
@@ -941,7 +941,7 @@ fun Context.isDefaultDialer(): Boolean {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
-        isMarshmallowPlus() && telecomManager.defaultDialerPackage == packageName
+        telecomManager.defaultDialerPackage == packageName
     }
 }
 

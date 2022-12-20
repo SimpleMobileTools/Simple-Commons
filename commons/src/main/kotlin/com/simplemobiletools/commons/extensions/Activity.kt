@@ -541,7 +541,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
         Intent(action).apply {
             data = Uri.fromParts("tel", recipient, null)
 
-            if (isMarshmallowPlus() && handle != null) {
+            if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 

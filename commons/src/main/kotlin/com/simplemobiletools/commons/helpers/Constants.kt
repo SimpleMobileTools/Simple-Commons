@@ -408,9 +408,6 @@ fun ensureBackgroundThread(callback: () -> Unit) {
     }
 }
 
-@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.M)
-fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.N)
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 

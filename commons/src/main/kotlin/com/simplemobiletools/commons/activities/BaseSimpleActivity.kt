@@ -172,12 +172,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color
 
-        if (isMarshmallowPlus()) {
-            if (color.getContrastColor() == DARK_GREY) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            }
+        if (color.getContrastColor() == DARK_GREY) {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        } else {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         }
     }
 
@@ -221,10 +219,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     // colorize the top toolbar and statusbar at scrolling down a bit
     fun setupMaterialScrollListener(nestedScrollView: NestedScrollView, toolbar: Toolbar) {
-        if (!isMarshmallowPlus()) {
-            return
-        }
-
         this.nestedScrollView = nestedScrollView
         nestedScrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
             if (scrollY > 0 && oldScrollY == 0) {
