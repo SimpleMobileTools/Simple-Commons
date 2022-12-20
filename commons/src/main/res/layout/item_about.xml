@@ -26,7 +26,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/label_start_margin"
         android:paddingEnd="@dimen/activity_margin"
-        android:textSize="@dimen/big_text_size"
+        android:textSize="@dimen/bigger_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
