@@ -62,6 +62,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private var mainCoordinatorLayout: CoordinatorLayout? = null
     private var scrollingView: View? = null
+    private var nestedScrollView: NestedScrollView? = null
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -219,20 +220,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
-    fun setupMaterialScrollListener(scrollView: NestedScrollView, toolbar: Toolbar) {
+    fun setupMaterialScrollListener(nestedScrollView: NestedScrollView, toolbar: Toolbar) {
         if (!isMarshmallowPlus()) {
             return
         }
 
-        scrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+        this.nestedScrollView = nestedScrollView
+        nestedScrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
             if (scrollY > 0 && oldScrollY == 0) {
                 materialScrollColorAnimation?.end()
 
-                val statusBarColor = getColoredMaterialStatusBarColor()
-                updateTopBarColors(toolbar, statusBarColor)
+                getRequiredStatusBarColor()
+                updateTopBarColors(toolbar, getRequiredStatusBarColor())
             } else if (scrollY == 0 && oldScrollY > 0) {
                 val colorFrom = getColoredMaterialStatusBarColor()
-                val colorTo = getProperBackgroundColor()
+                val colorTo = getRequiredStatusBarColor()
 
                 materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
                 materialScrollColorAnimation!!.addUpdateListener { animator ->
@@ -242,6 +244,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 materialScrollColorAnimation!!.start()
             }
+        }
+    }
+
+    fun getRequiredStatusBarColor(): Int {
+        return if (nestedScrollView?.scrollY == 0) {
+            getProperBackgroundColor()
+        } else {
+            getColoredMaterialStatusBarColor()
         }
     }
 
