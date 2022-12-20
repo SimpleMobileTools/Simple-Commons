@@ -933,7 +933,6 @@ val Context.realScreenSize: Point
 fun Context.getCornerRadius() = resources.getDimension(R.dimen.rounded_corner_radius_small)
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
-@TargetApi(Build.VERSION_CODES.M)
 fun Context.isDefaultDialer(): Boolean {
     return if (!packageName.startsWith("com.simplemobiletools.contacts") && !packageName.startsWith("com.simplemobiletools.dialer")) {
         true
