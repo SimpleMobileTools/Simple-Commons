@@ -309,7 +309,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     ) {
         val toolbarBackgroundColor = if (isMaterialActivity) {
             // make sure toolbar and statusbar colors are always the same, even if view is scrolled and the top bars are colored
-            window.statusBarColor
+            getRequiredStatusBarColor()
         } else {
             statusBarColor
         }
