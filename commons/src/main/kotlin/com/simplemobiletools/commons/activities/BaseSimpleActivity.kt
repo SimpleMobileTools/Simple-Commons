@@ -257,6 +257,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         toolbar.setTitleTextColor(contrastColor)
         toolbar.navigationIcon?.applyColorFilter(contrastColor)
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
+        toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
+
         val menu = toolbar.menu
         for (i in 0 until menu.size()) {
             try {
@@ -264,6 +266,45 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } catch (ignored: Exception) {
             }
         }
+    }
+
+    fun setupToolbar(
+        toolbar: Toolbar,
+        toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
+        statusBarColor: Int = getRequiredStatusBarColor(),
+        searchMenuItem: MenuItem? = null
+    ) {
+        val contrastColor = statusBarColor.getContrastColor()
+        if (toolbarNavigationIcon != NavigationIcon.None) {
+            val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+        }
+
+        toolbar.setNavigationOnClickListener {
+            hideKeyboard()
+            finish()
+        }
+
+        searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
+            applyColorFilter(contrastColor)
+        }
+
+        searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
+            setTextColor(contrastColor)
+            setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+            hint = "${getString(R.string.search)}…"
+
+            if (isQPlus()) {
+                textCursorDrawable = null
+            }
+        }
+
+        // search underline
+        searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
+            background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
+        }
+
+        updateTopBarColors(toolbar, statusBarColor)
     }
 
     fun updateRecentsAppIcon() {
@@ -298,58 +339,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 menu.getItem(i)?.icon?.setTint(color)
             } catch (ignored: Exception) {
             }
-        }
-    }
-
-    fun setupToolbar(
-        toolbar: Toolbar,
-        toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
-        statusBarColor: Int = getProperStatusBarColor(),
-        searchMenuItem: MenuItem? = null
-    ) {
-        val toolbarBackgroundColor = if (isMaterialActivity) {
-            // make sure toolbar and statusbar colors are always the same, even if view is scrolled and the top bars are colored
-            getRequiredStatusBarColor()
-        } else {
-            statusBarColor
-        }
-
-        val contrastColor = toolbarBackgroundColor.getContrastColor()
-        toolbar.setBackgroundColor(toolbarBackgroundColor)
-        toolbar.setTitleTextColor(contrastColor)
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
-
-        if (toolbarNavigationIcon != NavigationIcon.None) {
-            val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
-            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
-        }
-
-        updateMenuItemColors(toolbar.menu, toolbarBackgroundColor)
-        toolbar.setNavigationOnClickListener {
-            hideKeyboard()
-            finish()
-        }
-
-        // this icon is used at closing search
-        toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
-
-        searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
-            applyColorFilter(contrastColor)
-        }
-
-        searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
-            setTextColor(contrastColor)
-            setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
-            hint = "${getString(R.string.search)}…"
-
-            if (isQPlus()) {
-                textCursorDrawable = null
-            }
-        }
-
-        // search underline
-        searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
-            background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
         }
     }
 

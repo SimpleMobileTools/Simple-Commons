@@ -209,7 +209,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        if (customization_theme.value == getString(R.string.system_default)) {
+        if (customization_theme.value == getMaterialYouString()) {
             apply_to_all_holder.beGone()
         }
     }
@@ -236,6 +236,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             apply_to_all_holder.beVisibleIf(
                 curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
+
             updateMenuItemColors(customization_toolbar.menu, getCurrentStatusBarColor())
             setupToolbar(customization_toolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
         }
@@ -316,7 +317,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     // doesn't really matter what colors we use here, everything will be taken from the system. Use the default dark theme values here.
     private fun getSystemThemeColors(): MyTheme {
         return MyTheme(
-            "${getString(R.string.system_default)} (${getString(R.string.material_you)})",
+            getMaterialYouString(),
             R.color.theme_dark_text_color,
             R.color.theme_dark_background_color,
             R.color.color_primary,
@@ -635,27 +636,29 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateApplyToAllColors(primaryColor)
     }
 
-    private fun getCurrentTextColor() = if (customization_theme.value == getString(R.string.system_default)) {
+    private fun getCurrentTextColor() = if (customization_theme.value == getMaterialYouString()) {
         resources.getColor(R.color.you_neutral_text_color)
     } else {
         curTextColor
     }
 
-    private fun getCurrentBackgroundColor() = if (customization_theme.value == getString(R.string.system_default)) {
+    private fun getCurrentBackgroundColor() = if (customization_theme.value == getMaterialYouString()) {
         resources.getColor(R.color.you_background_color)
     } else {
         curBackgroundColor
     }
 
-    private fun getCurrentPrimaryColor() = if (customization_theme.value == getString(R.string.system_default)) {
+    private fun getCurrentPrimaryColor() = if (customization_theme.value == getMaterialYouString()) {
         resources.getColor(R.color.you_primary_color)
     } else {
         curPrimaryColor
     }
 
-    private fun getCurrentStatusBarColor() = if (customization_theme.value == getString(R.string.system_default)) {
+    private fun getCurrentStatusBarColor() = if (customization_theme.value == getMaterialYouString()) {
         resources.getColor(R.color.you_status_bar_color)
     } else {
         curPrimaryColor
     }
+
+    private fun getMaterialYouString() = "${getString(R.string.system_default)} (${getString(R.string.material_you)})"
 }
