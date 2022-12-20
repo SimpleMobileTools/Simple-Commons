@@ -241,7 +241,7 @@ class AboutActivity : BaseSimpleActivity() {
                 about_help_us_layout.addView(this)
 
                 setOnClickListener {
-                    launchViewIntent("https://simplemobiletools.com/donate")
+                    launchViewIntent(getString(R.string.donate_url))
                 }
             }
         }
