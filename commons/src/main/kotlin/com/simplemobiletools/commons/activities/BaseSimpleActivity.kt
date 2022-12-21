@@ -233,24 +233,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun scrollingChanged(newY: Int, oldScrollY: Int, toolbar: Toolbar) {
-        if (newY > 0 && oldScrollY == 0) {
-            materialScrollColorAnimation?.end()
-
-            getRequiredStatusBarColor()
-            updateTopBarColors(toolbar, getRequiredStatusBarColor())
-        } else if (newY == 0 && oldScrollY > 0) {
-            val colorFrom = getColoredMaterialStatusBarColor()
+    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, toolbar: Toolbar) {
+        if (newScrollY > 0 && oldScrollY == 0) {
+            val colorFrom = window.statusBarColor
+            val colorTo = getColoredMaterialStatusBarColor()
+            animateTopBarColors(colorFrom, colorTo, toolbar)
+        } else if (newScrollY == 0 && oldScrollY > 0) {
+            val colorFrom = window.statusBarColor
             val colorTo = getRequiredStatusBarColor()
-
-            materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
-            materialScrollColorAnimation!!.addUpdateListener { animator ->
-                val color = animator.animatedValue as Int
-                updateTopBarColors(toolbar, color)
-            }
-
-            materialScrollColorAnimation!!.start()
+            animateTopBarColors(colorFrom, colorTo, toolbar)
         }
+    }
+
+    fun animateTopBarColors(colorFrom: Int, colorTo: Int, toolbar: Toolbar) {
+        materialScrollColorAnimation?.end()
+        materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+        materialScrollColorAnimation!!.addUpdateListener { animator ->
+            val color = animator.animatedValue as Int
+            updateTopBarColors(toolbar, color)
+        }
+
+        materialScrollColorAnimation!!.start()
     }
 
     fun getRequiredStatusBarColor(): Int {
