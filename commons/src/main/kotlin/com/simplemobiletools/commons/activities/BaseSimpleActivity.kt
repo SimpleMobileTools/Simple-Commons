@@ -35,7 +35,9 @@ import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
+import androidx.core.view.ScrollingView
 import androidx.core.widget.NestedScrollView
+import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.*
@@ -61,8 +63,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var configItemsToExport = LinkedHashMap<String, Any>()
 
     private var mainCoordinatorLayout: CoordinatorLayout? = null
-    private var scrollingView: View? = null
-    private var nestedScrollView: NestedScrollView? = null
+    private var nestedView: View? = null
+    private var scrollingView: ScrollingView? = null
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -195,9 +197,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // use translucent navigation bar, set the background color to action and status bars
-    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, scrollingView: View?) {
+    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, nestedView: View?) {
         this.mainCoordinatorLayout = mainCoordinatorLayout
-        this.scrollingView = scrollingView
+        this.nestedView = nestedView
         handleNavigationAndScrolling()
 
         val backgroundColor = getProperBackgroundColor()
@@ -208,41 +210,51 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private fun handleNavigationAndScrolling() {
         if (portrait) {
             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-            scrollingView?.setPadding(0, 0, 0, navigationBarHeight)
+            nestedView?.setPadding(0, 0, 0, navigationBarHeight)
             (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
         } else {
             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-            scrollingView?.setPadding(0, 0, 0, 0)
+            nestedView?.setPadding(0, 0, 0, 0)
             (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
         }
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
-    fun setupMaterialScrollListener(nestedScrollView: NestedScrollView, toolbar: Toolbar) {
-        this.nestedScrollView = nestedScrollView
-        nestedScrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-            if (scrollY > 0 && oldScrollY == 0) {
-                materialScrollColorAnimation?.end()
-
-                getRequiredStatusBarColor()
-                updateTopBarColors(toolbar, getRequiredStatusBarColor())
-            } else if (scrollY == 0 && oldScrollY > 0) {
-                val colorFrom = getColoredMaterialStatusBarColor()
-                val colorTo = getRequiredStatusBarColor()
-
-                materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
-                materialScrollColorAnimation!!.addUpdateListener { animator ->
-                    val color = animator.animatedValue as Int
-                    updateTopBarColors(toolbar, color)
-                }
-
-                materialScrollColorAnimation!!.start()
+    fun setupMaterialScrollListener(scrollingView: ScrollingView, toolbar: Toolbar) {
+        this.scrollingView = scrollingView
+        if (scrollingView is RecyclerView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                scrollingChanged(scrollY, oldScrollY, toolbar)
+            }
+        } else if (scrollingView is NestedScrollView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                scrollingChanged(scrollY, oldScrollY, toolbar)
             }
         }
     }
 
+    private fun scrollingChanged(newY: Int, oldScrollY: Int, toolbar: Toolbar) {
+        if (newY > 0 && oldScrollY == 0) {
+            materialScrollColorAnimation?.end()
+
+            getRequiredStatusBarColor()
+            updateTopBarColors(toolbar, getRequiredStatusBarColor())
+        } else if (newY == 0 && oldScrollY > 0) {
+            val colorFrom = getColoredMaterialStatusBarColor()
+            val colorTo = getRequiredStatusBarColor()
+
+            materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+            materialScrollColorAnimation!!.addUpdateListener { animator ->
+                val color = animator.animatedValue as Int
+                updateTopBarColors(toolbar, color)
+            }
+
+            materialScrollColorAnimation!!.start()
+        }
+    }
+
     fun getRequiredStatusBarColor(): Int {
-        return if (nestedScrollView?.scrollY == 0) {
+        return if ((scrollingView is RecyclerView || scrollingView is NestedScrollView) && scrollingView?.computeVerticalScrollOffset() == 0) {
             getProperBackgroundColor()
         } else {
             getColoredMaterialStatusBarColor()
