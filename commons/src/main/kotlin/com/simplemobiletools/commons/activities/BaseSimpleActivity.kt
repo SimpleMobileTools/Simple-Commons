@@ -60,6 +60,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var showTransparentTop = false
     var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
     var checkedDocumentPath = ""
+    var currentScrollY = 0
     var configItemsToExport = LinkedHashMap<String, Any>()
 
     private var mainCoordinatorLayout: CoordinatorLayout? = null
@@ -224,7 +225,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         this.scrollingView = scrollingView
         if (scrollingView is RecyclerView) {
             scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-                scrollingChanged(scrollY, oldScrollY, toolbar)
+                val newScrollY = scrollingView.computeVerticalScrollOffset()
+                scrollingChanged(newScrollY, currentScrollY, toolbar)
+                currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
