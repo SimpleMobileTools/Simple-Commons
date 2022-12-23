@@ -97,6 +97,10 @@
     <string name="landscape_column_count">横向きの列数</string>
     <string name="change_cover_image">カバー画像を変更</string>
     <string name="select_photo">写真を選択</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d column</item>
+        <item quantity="other">%d columns</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
     <string name="not_blocking_anyone">まだ誰もブロックしていません.</string>

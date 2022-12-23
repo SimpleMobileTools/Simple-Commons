@@ -97,6 +97,10 @@
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Trocar imagem de capa</string>
     <string name="select_photo">Selecionar foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d column</item>
+        <item quantity="other">%d columns</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerenciar números bloqueados</string>
     <string name="not_blocking_anyone">Não há números bloqueados.</string>

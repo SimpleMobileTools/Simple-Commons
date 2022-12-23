@@ -97,6 +97,10 @@
     <string name="landscape_column_count">Anzahl der Spalten im Querformat</string>
     <string name="change_cover_image">Coverbild ändern</string>
     <string name="select_photo">Auswählen</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d column</item>
+        <item quantity="other">%d columns</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
     <string name="not_blocking_anyone">Du blockierst niemanden.</string>
