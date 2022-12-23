@@ -99,7 +99,11 @@
     <string name="change_cover_image">تغيير صورة الغلاف</string>
     <string name="select_photo">تحديد صورة</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
+        <item quantity="zero">%d column</item>
+        <item quantity="one">%d columns</item>
+        <item quantity="two">%d columns</item>
+        <item quantity="few">%d columns</item>
+        <item quantity="many">%d columns</item>
         <item quantity="other">%d columns</item>
     </plurals>
     <!-- Blocked numbers -->
