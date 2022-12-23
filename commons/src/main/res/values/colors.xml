@@ -21,12 +21,19 @@
     <color name="theme_light_background_color">@color/md_grey_white</color>
     <color name="theme_dark_text_color">@color/md_grey_200</color>
     <color name="theme_dark_background_color">@color/md_grey_800_dark</color>
-    <color name="default_text_color">@color/theme_dark_text_color</color>
-    <color name="default_background_color">@color/theme_dark_background_color</color>
     <color name="theme_solarized_background_color">@color/md_indigo_900_dark</color>
     <color name="theme_solarized_text_color">@color/md_amber_700</color>
     <color name="theme_solarized_primary_color">@color/md_indigo_900</color>
     <color name="theme_dark_red_primary_color">@color/md_red_700</color>
+
+    <!-- Default values -->
+    <color name="default_text_color">@color/theme_dark_text_color</color>
+    <color name="default_background_color">@color/theme_dark_background_color</color>
+    <color name="default_primary_color">@color/color_primary</color>
+    <color name="default_app_icon_color">@color/color_primary</color>
+    <color name="default_accent_color">@color/color_primary</color>
+    <color name="default_widget_bg_color">#AA000000</color>
+    <color name="default_widget_text_color">@color/color_primary</color>
 
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>
