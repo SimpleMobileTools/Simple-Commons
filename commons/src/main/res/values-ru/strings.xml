@@ -90,11 +90,11 @@
     <string name="grid_pro">Сетка (Pro)</string>
     <string name="uneven_grid">Неровная сетка</string>
     <string name="list">Список</string>
-    <string name="increase_column_count">Добавить столбец</string>
-    <string name="reduce_column_count">Убрать столбец</string>
-    <string name="column_count">Количество столбцов</string>
-    <string name="portrait_column_count">Количество столбцов в портретной ориентации</string>
-    <string name="landscape_column_count">Количество столбцов в альбомной ориентации</string>
+    <string name="increase_column_count">Добавить колонку</string>
+    <string name="reduce_column_count">Убрать колонку</string>
+    <string name="column_count">Количество колонок</string>
+    <string name="portrait_column_count">Количество колонок в портретной ориентации</string>
+    <string name="landscape_column_count">Количество колонок в альбомной ориентации</string>
     <string name="change_cover_image">Изменить обложку</string>
     <string name="select_photo">Выбрать изображение</string>
     <plurals name="column_counts">
