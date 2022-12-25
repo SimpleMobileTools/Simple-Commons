@@ -12,7 +12,6 @@ import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.BitmapFactory
 import android.graphics.Point
-import android.graphics.drawable.Drawable
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
@@ -39,6 +38,7 @@ import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
@@ -1039,14 +1039,15 @@ fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
     }
 }
 
-fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawable: Drawable? = null) {
+fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawableId: Int? = null) {
     val color = if (isActive) {
         getProperPrimaryColor()
     } else {
         getProperTextColor()
     }
 
-    if (drawable != null) {
+    if (drawableId != null) {
+        val drawable = ResourcesCompat.getDrawable(resources, drawableId, theme)
         view?.findViewById<ImageView>(R.id.tab_item_icon)?.setImageDrawable(drawable)
     }
 
