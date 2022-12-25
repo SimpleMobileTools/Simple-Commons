@@ -1038,11 +1038,15 @@ fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
     }
 }
 
-fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
+fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawable: Drawable? = null) {
     val color = if (isActive) {
         getProperPrimaryColor()
     } else {
         getProperTextColor()
+    }
+
+    if (drawable != null) {
+        view?.findViewById<ImageView>(R.id.tab_item_icon)?.setImageDrawable(drawable)
     }
 
     view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)
