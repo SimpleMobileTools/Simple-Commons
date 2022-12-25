@@ -134,8 +134,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             navBarColor = navBarColor.adjustAlpha(HIGHER_ALPHA)
         }
 
-        window.navigationBarColor = navBarColor
-        updateNavigationBarButtons(navBarColor)
+        updateNavigationBarColor(navBarColor)
     }
 
     override fun onDestroy() {
@@ -185,6 +184,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
         updateStatusbarColor(color)
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
+    }
+
+    fun updateNavigationBarColor(color: Int) {
+        window.navigationBarColor = color
+        updateNavigationBarButtons(color)
     }
 
     fun updateNavigationBarButtons(color: Int) {
