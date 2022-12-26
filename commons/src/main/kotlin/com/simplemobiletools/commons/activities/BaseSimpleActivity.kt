@@ -215,18 +215,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun handleNavigationAndScrolling() {
-        if (portrait) {
-            if (useTransparentNavigation) {
+        if (useTransparentNavigation) {
+            if (portrait) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(0, 0, 0, navigationBarHeight)
-            }
-            (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
-        } else {
-            if (useTransparentNavigation) {
+                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+            } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(0, 0, 0, 0)
+                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
             }
-            (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
         }
     }
 
