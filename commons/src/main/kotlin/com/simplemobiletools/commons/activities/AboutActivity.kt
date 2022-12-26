@@ -75,7 +75,6 @@ class AboutActivity : BaseSimpleActivity() {
         setupGitHub()
         setupReddit()
         setupTelegram()
-        setupGetSimplePhone()
         setupMoreApps()
         setupWebsite()
         setupPrivacyPolicy()
@@ -323,21 +322,6 @@ class AboutActivity : BaseSimpleActivity() {
 
             setOnClickListener {
                 launchViewIntent("https://t.me/SimpleMobileTools")
-            }
-        }
-    }
-
-    private fun setupGetSimplePhone() {
-        if (resources.getBoolean(R.bool.hide_all_external_links)) {
-            return
-        }
-
-        inflater?.inflate(R.layout.item_about, null)?.apply {
-            setupAboutItem(this, R.drawable.ic_simple_phone_vector, R.string.get_simple_phone)
-            about_other_layout.addView(this)
-
-            setOnClickListener {
-                launchViewIntent("https://simplemobiletools.com/phone")
             }
         }
     }
