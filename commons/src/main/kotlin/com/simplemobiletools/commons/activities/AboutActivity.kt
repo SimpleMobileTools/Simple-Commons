@@ -45,7 +45,7 @@ class AboutActivity : BaseSimpleActivity() {
         backgroundColor = getProperBackgroundColor()
         inflater = LayoutInflater.from(this)
 
-        updateMaterialActivityViews(about_coordinator, about_holder)
+        updateMaterialActivityViews(about_coordinator, about_holder, true)
         setupMaterialScrollListener(about_nested_scrollview, about_toolbar)
 
         appName = intent.getStringExtra(APP_NAME) ?: ""

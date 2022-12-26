@@ -24,7 +24,7 @@ class ContributorsActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_contributors)
         updateTextColors(contributors_holder)
 
-        updateMaterialActivityViews(contributors_coordinator, contributors_holder)
+        updateMaterialActivityViews(contributors_coordinator, contributors_holder, true)
         setupMaterialScrollListener(contributors_nested_scrollview, contributors_toolbar)
 
         val primaryColor = getProperPrimaryColor()

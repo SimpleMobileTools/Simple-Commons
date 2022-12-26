@@ -24,7 +24,7 @@ class MainActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        updateMaterialActivityViews(main_coordinator, main_holder)
+        updateMaterialActivityViews(main_coordinator, main_holder, true)
         setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
         main_color_customization.setOnClickListener {

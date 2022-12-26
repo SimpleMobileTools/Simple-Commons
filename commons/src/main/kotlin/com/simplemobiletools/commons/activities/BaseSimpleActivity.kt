@@ -66,6 +66,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private var mainCoordinatorLayout: CoordinatorLayout? = null
     private var nestedView: View? = null
     private var scrollingView: ScrollingView? = null
+    private var useTransparentNavigation = false
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -202,9 +203,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // use translucent navigation bar, set the background color to action and status bars
-    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, nestedView: View?) {
+    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, nestedView: View?, useTransparentNavigation: Boolean) {
         this.mainCoordinatorLayout = mainCoordinatorLayout
         this.nestedView = nestedView
+        this.useTransparentNavigation = useTransparentNavigation
         handleNavigationAndScrolling()
 
         val backgroundColor = getProperBackgroundColor()
@@ -214,12 +216,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun handleNavigationAndScrolling() {
         if (portrait) {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-            nestedView?.setPadding(0, 0, 0, navigationBarHeight)
+            if (useTransparentNavigation) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+                nestedView?.setPadding(0, 0, 0, navigationBarHeight)
+            }
             (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
         } else {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-            nestedView?.setPadding(0, 0, 0, 0)
+            if (useTransparentNavigation) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+                nestedView?.setPadding(0, 0, 0, 0)
+            }
             (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
         }
     }

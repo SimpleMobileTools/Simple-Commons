@@ -20,7 +20,7 @@ class LicenseActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_license)
         updateTextColors(licenses_holder)
 
-        updateMaterialActivityViews(licenses_coordinator, licenses_holder)
+        updateMaterialActivityViews(licenses_coordinator, licenses_holder, true)
         setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
 
         val textColor = getProperTextColor()
