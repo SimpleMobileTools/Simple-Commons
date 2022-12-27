@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.*
 import android.content.Intent.EXTRA_STREAM
@@ -1514,6 +1515,9 @@ fun Activity.setupDialogStuff(
             setView(view)
             setCancelable(cancelOnTouchOutside)
             show()
+            getButton(Dialog.BUTTON_POSITIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEGATIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEUTRAL)?.setTextColor(primaryColor)
             callback?.invoke(this)
         }
     } else {
