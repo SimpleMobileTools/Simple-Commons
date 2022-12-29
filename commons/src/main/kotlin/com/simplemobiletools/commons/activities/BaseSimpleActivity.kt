@@ -229,7 +229,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
-    fun setupMaterialScrollListener(scrollingView: ScrollingView, toolbar: Toolbar) {
+    fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar) {
         this.scrollingView = scrollingView
         if (scrollingView is RecyclerView) {
             scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
