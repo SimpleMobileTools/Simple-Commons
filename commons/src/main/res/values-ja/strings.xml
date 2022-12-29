@@ -386,12 +386,12 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>
     <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">%s を削除しますか？</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s をごみ箱に移動してもよろしいですか？</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
-    <string name="are_you_sure_recycle_bin">個のアイテムをごみ箱に移動してもよろしいですか？</string>
+    <string name="are_you_sure_recycle_bin">このアイテムをごみ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
     <string name="do_not_show_again">今後表示しない</string>
     <string name="yes">はい</string>
