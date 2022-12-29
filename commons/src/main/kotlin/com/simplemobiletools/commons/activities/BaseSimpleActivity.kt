@@ -66,6 +66,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private var mainCoordinatorLayout: CoordinatorLayout? = null
     private var nestedView: View? = null
     private var scrollingView: ScrollingView? = null
+    private var toolbar: Toolbar? = null
     private var useTransparentNavigation = false
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
@@ -231,37 +232,44 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     // colorize the top toolbar and statusbar at scrolling down a bit
     fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar) {
         this.scrollingView = scrollingView
+        this.toolbar = toolbar
         if (scrollingView is RecyclerView) {
             scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
                 val newScrollY = scrollingView.computeVerticalScrollOffset()
-                scrollingChanged(newScrollY, currentScrollY, toolbar)
+                scrollingChanged(newScrollY, currentScrollY)
                 currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-                scrollingChanged(scrollY, oldScrollY, toolbar)
+                scrollingChanged(scrollY, oldScrollY)
             }
         }
     }
 
-    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, toolbar: Toolbar) {
+    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int) {
         if (newScrollY > 0 && oldScrollY == 0) {
             val colorFrom = window.statusBarColor
             val colorTo = getColoredMaterialStatusBarColor()
-            animateTopBarColors(colorFrom, colorTo, toolbar)
+            animateTopBarColors(colorFrom, colorTo)
         } else if (newScrollY == 0 && oldScrollY > 0) {
             val colorFrom = window.statusBarColor
             val colorTo = getRequiredStatusBarColor()
-            animateTopBarColors(colorFrom, colorTo, toolbar)
+            animateTopBarColors(colorFrom, colorTo)
         }
     }
 
-    fun animateTopBarColors(colorFrom: Int, colorTo: Int, toolbar: Toolbar) {
+    fun animateTopBarColors(colorFrom: Int, colorTo: Int) {
+        if (toolbar == null) {
+            return
+        }
+
         materialScrollColorAnimation?.end()
         materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
         materialScrollColorAnimation!!.addUpdateListener { animator ->
             val color = animator.animatedValue as Int
-            updateTopBarColors(toolbar, color)
+            if (toolbar != null) {
+                updateTopBarColors(toolbar!!, color)
+            }
         }
 
         materialScrollColorAnimation!!.start()
@@ -291,6 +299,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 menu.getItem(i)?.icon?.setTint(contrastColor)
             } catch (ignored: Exception) {
             }
+        }
+    }
+
+    fun updateStatusBarOnPageChange() {
+        if (scrollingView is RecyclerView) {
+            val scrollY = scrollingView!!.computeVerticalScrollOffset()
+            val colorFrom = window.statusBarColor
+            val colorTo = if (scrollY > 0) {
+                getColoredMaterialStatusBarColor()
+            } else {
+                getRequiredStatusBarColor()
+            }
+            animateTopBarColors(colorFrom, colorTo)
+            currentScrollY = scrollY
         }
     }
 
