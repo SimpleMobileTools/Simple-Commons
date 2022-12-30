@@ -931,6 +931,19 @@ val Context.realScreenSize: Point
         return size
     }
 
+fun Context.isUsingGestureNavigation(): Boolean {
+    return try {
+        val resourceId = resources.getIdentifier("config_navBarInteractionMode", "integer", "android")
+        if (resourceId > 0) {
+            resources.getInteger(resourceId) == 2
+        } else {
+            false
+        }
+    } catch (e: Exception) {
+        false
+    }
+}
+
 fun Context.getCornerRadius() = resources.getDimension(R.dimen.rounded_corner_radius_small)
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now

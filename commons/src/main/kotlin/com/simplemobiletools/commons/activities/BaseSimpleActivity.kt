@@ -217,7 +217,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun handleNavigationAndScrolling() {
         if (useTransparentNavigation) {
-            if (portrait) {
+            if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(0, 0, 0, navigationBarHeight)
                 (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
