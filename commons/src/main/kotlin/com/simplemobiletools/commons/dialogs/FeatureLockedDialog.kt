@@ -18,7 +18,7 @@ class FeatureLockedDialog(val activity: Activity, val callback: () -> Unit) {
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase, null)
-            .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
+            .setNegativeButton(R.string.later) { dialog, which -> dismissDialog() }
             .setOnDismissListener { dismissDialog() }
             .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false) { alertDialog ->
