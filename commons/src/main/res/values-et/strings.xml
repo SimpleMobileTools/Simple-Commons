@@ -98,8 +98,8 @@
     <string name="change_cover_image">Muuda kaanepilti</string>
     <string name="select_photo">Vali foto</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d veerg</item>
+        <item quantity="other">%d veergu</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
