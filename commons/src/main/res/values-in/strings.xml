@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">OKE</string>
+    <string name="ok">Oke</string>
     <string name="cancel">Batal</string>
     <string name="back">Kembali</string>
     <string name="nothing">Tidak ada</string>
@@ -13,7 +13,7 @@
     <string name="error">Error: %s</string>
     <string name="open_with">Buka dengan</string>
     <string name="edit_with">Sunting dengan</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Sunting</string>
     <string name="no_app_found">Tidak ada aplikasi yang sesuai</string>
     <string name="no_browser_found">Tidak ada peramban yang ditemukan</string>
     <string name="no_email_client_found">Tidak ada klien email yang ditemukan</string>
@@ -66,11 +66,11 @@
     <string name="disclaimer">Peringatan</string>
     <string name="take_photo">Ambil foto</string>
     <string name="choose_photo">Pilih foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Pilih video</string>
+    <string name="choose_contact">Pilih kontak</string>
+    <string name="choose_file">Pilih berkas</string>
+    <string name="record_audio">Rekam audio</string>
+    <string name="record_video">Rekam video</string>
     <!-- Events -->
     <string name="birthday">Ulang tahun</string>
     <string name="anniversary">Hari jadi</string>
@@ -116,7 +116,7 @@
     <string name="block_unknown_calls">Blokir panggilan dari kontak yang tidak disimpan</string>
     <string name="block_unknown_messages">Blokir pesan dari kontak yang tidak disimpan</string>
     <string name="add_blocked_number_helper_text">Masukkan nomor atau pola (mis. *12345*, +62*8888) untuk memblokir semua panggilan dan pesan dari nomor yang sesuai dengan pola.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Tidak dapat memblokir nomor yang tidak diketahui tanpa izin ID pemanggil.</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>
@@ -136,7 +136,7 @@
     <string name="no_camera_permissions">Izin kamera diperlukan</string>
     <string name="no_audio_permissions">Izin audio diperlukan</string>
     <string name="no_post_notifications_permissions">Izin untuk memberitahukan dibutuhkan</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Tidak ada izin</string>
     <!-- Renaming -->
     <string name="rename_file">Ubah nama berkas</string>
     <string name="rename_folder">Ubah nama folder</string>
@@ -296,7 +296,7 @@
     <string name="discard">Abaikan</string>
     <string name="undo_changes">Urungkan perubahan</string>
     <string name="undo_changes_confirmation">Apakah anda yakin ingin mengurungkan perubahan?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Tindakan ini tidak dapat diurungkan.</string>
     <string name="save_before_closing">Perubahan anda belum disimpan. Simpan sebelum keluar?</string>
     <string name="apply_to_all_apps">Terapkan warna ke semua Simple Apps</string>
     <string name="app_icon_color_warning">PERINGATAN: Beberapa aplikasi launcher tidak mendukung kustomisasi ikon aplikasi. Jika ikon hilang, coba jalankan aplikasi via Google Play atau widget, jika tersedia.
@@ -416,7 +416,7 @@
     <string name="add_fingerprint">Tambah sidik jari</string>
     <string name="place_finger">Tempatkan jari anda pada sensor sidik jari</string>
     <string name="open_biometric_dialog">Buka dialog verifikasi ID biometrik</string>
-    <string name="authenticate">Otentikasi</string>
+    <string name="authenticate">Autentikasi</string>
     <string name="authentication_failed">Autentikasi gagal</string>
     <string name="authentication_blocked">Autentikasi diblokir, silakan coba lagi nanti</string>
     <string name="no_fingerprints_registered">Anda belum mendaftarkan sidik jari, silakan tambahkan di Pengaturan perangkat anda</string>
@@ -607,7 +607,7 @@
     <string name="list_view">List view</string>
     <!-- Excluding -->
     <string name="exclude">Kecualikan</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Tidak sertakan folder</string>
     <string name="excluded_folders">Folder yang dikecualikan</string>
     <string name="excluded">(dikecualikan)</string>
     <string name="manage_excluded_folders">Kelola folder yang dikecualikan</string>
@@ -751,7 +751,7 @@
         ]]>
     </string>
     <string name="donate_new">Halo,&lt;br&gt;&lt;br&gt;semoga Anda menikmati aplikasi ini. Aplikasi ini tidak berisi iklan dan kami juga tidak mengumpulkan data Anda, mohon dukung pengembangannya dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Anda juga akan memiliki semua fitur aplikasi termasuk kustomisasi warna.&lt;br&gt;&lt;br&gt;Terima kasih!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_short">Silakan dukung kami dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, itu juga akan membuka fitur aplikasi termasuk kustomisasi warna.</string>
     <string name="purchase">Beli</string>
     <string name="get_simple_phone">Dapatkan Simple Phone</string>
     <string name="update_thank_you">Silakan perbarui Simple Thank You ke versi terbaru</string>
@@ -915,7 +915,7 @@
     <string name="why_upgrade_improved_design">Desain yang ditingkatkan</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor foto tingkat lanjut</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Penyunting foto &amp; video tingkat lanjut</string>
     <string name="why_upgrade_heic_support">Mendukung jenis file HEIC / HEIF</string>
     <string name="why_upgrade_batch_renaming">Mengganti nama beberapa file tingkat lanjut</string>
     <string name="why_upgrade_folder_locking">Penguncian folder individu</string>
