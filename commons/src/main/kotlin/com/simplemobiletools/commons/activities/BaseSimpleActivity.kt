@@ -303,7 +303,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusBarOnPageChange() {
-        if (scrollingView is RecyclerView) {
+        if (scrollingView is RecyclerView || scrollingView is NestedScrollView) {
             val scrollY = scrollingView!!.computeVerticalScrollOffset()
             val colorFrom = window.statusBarColor
             val colorTo = if (scrollY > 0) {
