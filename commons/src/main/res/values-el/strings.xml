@@ -98,8 +98,8 @@
     <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
     <string name="select_photo">Επιλογή φωτογραφίας</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d στήλη</item>
+        <item quantity="other">%d στήλες</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
