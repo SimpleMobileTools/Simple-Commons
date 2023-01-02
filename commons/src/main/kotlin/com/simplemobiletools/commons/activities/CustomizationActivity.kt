@@ -53,7 +53,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(customization_coordinator, customization_holder, true)
+        updateMaterialActivityViews(customization_coordinator, customization_holder, useTransparentNavigation = true, useTopSearchMenu = false)
 
         isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"
         initColorVariables()

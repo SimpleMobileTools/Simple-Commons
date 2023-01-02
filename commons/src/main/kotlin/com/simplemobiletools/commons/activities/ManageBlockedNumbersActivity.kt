@@ -35,7 +35,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updateBlockedNumbers()
         setupOptionsMenu()
 
-        updateMaterialActivityViews(block_numbers_coordinator, manage_blocked_numbers_list, true)
+        updateMaterialActivityViews(block_numbers_coordinator, manage_blocked_numbers_list, useTransparentNavigation = true, useTopSearchMenu = false)
         setupMaterialScrollListener(manage_blocked_numbers_list, block_numbers_toolbar)
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()

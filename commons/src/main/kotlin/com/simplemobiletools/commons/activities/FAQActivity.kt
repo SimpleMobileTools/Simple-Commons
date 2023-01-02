@@ -27,7 +27,7 @@ class FAQActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
 
-        updateMaterialActivityViews(faq_coordinator, faq_holder, true)
+        updateMaterialActivityViews(faq_coordinator, faq_holder, useTransparentNavigation = true, useTopSearchMenu = false)
         setupMaterialScrollListener(faq_nested_scrollview, faq_toolbar)
 
         val textColor = getProperTextColor()

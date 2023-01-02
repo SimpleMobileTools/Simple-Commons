@@ -68,6 +68,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private var scrollingView: ScrollingView? = null
     private var toolbar: Toolbar? = null
     private var useTransparentNavigation = false
+    private var useTopSearchMenu = false
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -204,10 +205,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // use translucent navigation bar, set the background color to action and status bars
-    fun updateMaterialActivityViews(mainCoordinatorLayout: CoordinatorLayout?, nestedView: View?, useTransparentNavigation: Boolean) {
+    fun updateMaterialActivityViews(
+        mainCoordinatorLayout: CoordinatorLayout?,
+        nestedView: View?,
+        useTransparentNavigation: Boolean,
+        useTopSearchMenu: Boolean
+    ) {
         this.mainCoordinatorLayout = mainCoordinatorLayout
         this.nestedView = nestedView
         this.useTransparentNavigation = useTransparentNavigation
+        this.useTopSearchMenu = useTopSearchMenu
         handleNavigationAndScrolling()
 
         val backgroundColor = getProperBackgroundColor()
@@ -284,14 +291,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateTopBarColors(toolbar: Toolbar, color: Int) {
-        updateStatusbarColor(color)
-        toolbar.setBackgroundColor(color)
-
         val contrastColor = color.getContrastColor()
-        toolbar.setTitleTextColor(contrastColor)
-        toolbar.navigationIcon?.applyColorFilter(contrastColor)
+        if (!useTopSearchMenu) {
+            updateStatusbarColor(color)
+            toolbar.setBackgroundColor(color)
+            toolbar.setTitleTextColor(contrastColor)
+            toolbar.navigationIcon?.applyColorFilter(contrastColor)
+            toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
+        }
+
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
-        toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
 
         val menu = toolbar.menu
         for (i in 0 until menu.size()) {
@@ -333,26 +342,28 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             finish()
         }
 
-        searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
-            applyColorFilter(contrastColor)
-        }
+        updateTopBarColors(toolbar, statusBarColor)
 
-        searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
-            setTextColor(contrastColor)
-            setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
-            hint = "${getString(R.string.search)}…"
+        if (!useTopSearchMenu) {
+            searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
+                applyColorFilter(contrastColor)
+            }
 
-            if (isQPlus()) {
-                textCursorDrawable = null
+            searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
+                setTextColor(contrastColor)
+                setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+                hint = "${getString(R.string.search)}…"
+
+                if (isQPlus()) {
+                    textCursorDrawable = null
+                }
+            }
+
+            // search underline
+            searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
+                background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
             }
         }
-
-        // search underline
-        searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
-            background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
-        }
-
-        updateTopBarColors(toolbar, statusBarColor)
     }
 
     fun updateRecentsAppIcon() {
