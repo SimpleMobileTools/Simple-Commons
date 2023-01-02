@@ -291,7 +291,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateTopBarColors(toolbar: Toolbar, color: Int) {
-        val contrastColor = color.getContrastColor()
+        val contrastColor = if (useTopSearchMenu) {
+            getProperBackgroundColor().getContrastColor()
+        } else {
+            color.getContrastColor()
+        }
+
         if (!useTopSearchMenu) {
             updateStatusbarColor(color)
             toolbar.setBackgroundColor(color)
