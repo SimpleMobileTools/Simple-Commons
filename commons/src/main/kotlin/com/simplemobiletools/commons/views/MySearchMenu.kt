@@ -58,6 +58,15 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         (context as? Activity)?.hideKeyboard()
     }
 
+    fun toggleHideOnScroll(hideOnScroll: Boolean) {
+        val params = top_app_bar_layout.layoutParams as LayoutParams
+        if (hideOnScroll) {
+            params.scrollFlags = LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+        } else {
+            params.scrollFlags = params.scrollFlags.removeBit(LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS)
+        }
+    }
+
     fun updateColors() {
         val backgroundColor = context.getProperBackgroundColor()
         val contrastColor = backgroundColor.getContrastColor()
