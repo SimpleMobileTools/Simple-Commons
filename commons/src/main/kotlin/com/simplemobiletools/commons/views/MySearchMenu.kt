@@ -58,6 +58,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         (context as? Activity)?.hideKeyboard()
     }
 
+    fun getCurrentQuery() = top_toolbar_search.text.toString()
+
     fun toggleHideOnScroll(hideOnScroll: Boolean) {
         val params = top_app_bar_layout.layoutParams as LayoutParams
         if (hideOnScroll) {
