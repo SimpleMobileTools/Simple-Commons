@@ -47,6 +47,10 @@ const val LOWER_ALPHA = 0.25f
 const val MEDIUM_ALPHA = 0.5f
 const val HIGHER_ALPHA = 0.75f
 
+// alpha values on a scale 0 - 255
+const val LOWER_ALPHA_INT = 30
+const val MEDIUM_ALPHA_INT = 90
+
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
 const val WEEK_MINUTES = DAY_MINUTES * 7
