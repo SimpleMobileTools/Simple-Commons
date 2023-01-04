@@ -36,7 +36,7 @@
     <string name="select_a_different_color">Seleziona un colore diverso</string>
     <string name="download">Scarica</string>
     <string name="notification">Notifica</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notifiche</string>
     <string name="email">E-mail</string>
     <string name="previous">Precedente</string>
     <string name="playpause">Riproduci / Pausa</string>
@@ -98,8 +98,9 @@
     <string name="change_cover_image">Cambia immagine copertina</string>
     <string name="select_photo">Seleziona foto</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d colonna</item>
+        <item quantity="many">%d colonne</item>
+        <item quantity="other">%d colonne</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -125,23 +126,23 @@
     <!-- Search -->
     <string name="search">Cerca</string>
     <string name="type_2_characters">Digita almeno 2 caratteri per iniziare la ricerca.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Cerca contatti</string>
+    <string name="search_favorites">Cerca preferiti</string>
+    <string name="search_apps">Cerca applicazioni</string>
+    <string name="search_events">Cerca eventi</string>
+    <string name="search_groups">Cerca gruppi</string>
+    <string name="search_history">Cronologia di ricerca</string>
+    <string name="search_calls">Cerca chiamate</string>
+    <string name="search_files">Cerca file</string>
+    <string name="search_folders">Cerca cartelle</string>
+    <string name="search_files_and_folders">Cerca file e cartelle</string>
+    <string name="search_playlists">Cerca playlist</string>
+    <string name="search_artists">Cerca artisti</string>
+    <string name="search_albums">Cerca album</string>
+    <string name="search_tracks">Cerca brani</string>
+    <string name="search_text">Cerca testo</string>
+    <string name="search_conversations">Cerca conversazioni</string>
+    <string name="search_recordings">Cerca registrazioni</string>
     <!-- Filters -->
     <string name="filter">Filtro</string>
     <string name="filter_pro">Filtro (Pro)</string>
@@ -153,7 +154,7 @@
     <string name="no_camera_permissions">L\'autorizzazione Fotocamera è necessaria</string>
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
     <string name="no_post_notifications_permissions">È necessaria l\'autorizzazione a pubblicare notifiche</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Nessun permesso</string>
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
     <string name="rename_folder">Rinomina cartella</string>
@@ -320,7 +321,7 @@
     <string name="discard">Scarta</string>
     <string name="undo_changes">Annulla modifiche</string>
     <string name="undo_changes_confirmation">Sicuro di annullare le modifiche?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Questa azione non può essere annullata.</string>
     <string name="save_before_closing">Ci sono modifiche non salvate. Salvare prima di uscire?</string>
     <string name="apply_to_all_apps">Applica i colori a tutte le App Semplici</string>
     <string name="app_icon_color_warning">ATTENZIONE: alcuni lanciatori non gestiscono correttamente le personalizzazioni delle icone delle applicazioni. Se l\'icona scompare, provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
