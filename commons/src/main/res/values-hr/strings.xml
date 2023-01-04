@@ -98,8 +98,9 @@
     <string name="change_cover_image">Promjeni naslovnu sliku</string>
     <string name="select_photo">Odaberi sliku</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d stupac</item>
+        <item quantity="few">%d stupca</item>
+        <item quantity="other">%d stupaca</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
@@ -125,23 +126,23 @@
     <!-- Search -->
     <string name="search">Traži</string>
     <string name="type_2_characters">Upiši najmanje 2 znaka za početak pretraživanja.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Pretraži kontakte</string>
+    <string name="search_favorites">Pretraži favorite</string>
+    <string name="search_apps">Pretraži aplikacije</string>
+    <string name="search_events">Pretraži događaje</string>
+    <string name="search_groups">Pretraži grupe</string>
+    <string name="search_history">Pretraži povijest</string>
+    <string name="search_calls">Pretraži pozive</string>
+    <string name="search_files">Pretraži datoteke</string>
+    <string name="search_folders">Pretraži mape</string>
+    <string name="search_files_and_folders">Pretraži datoteke i mape</string>
+    <string name="search_playlists">Pretraži playliste</string>
+    <string name="search_artists">Pretraži izvođače</string>
+    <string name="search_albums">Pretraži albume</string>
+    <string name="search_tracks">Pretraži pjesme</string>
+    <string name="search_text">Pretraži tekst</string>
+    <string name="search_conversations">Pretraži razgovore</string>
+    <string name="search_recordings">Pretraži snimanja</string>
     <!-- Filters -->
     <string name="filter">Filtar</string>
     <string name="filter_pro">Filtar (Pro)</string>
@@ -327,7 +328,7 @@
     <string name="discard">Odbaci</string>
     <string name="undo_changes">Poništi promjene</string>
     <string name="undo_changes_confirmation">Jeste li sigurni da želite poništiti Vaše promjene?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Ovo je nepovratna radnja.</string>
     <string name="save_before_closing">Imate ne spremljene promjene. Želite li spremiti prije izlaska?</string>
     <string name="apply_to_all_apps">Primjeni boje na sve Jednostavne Aplikacije</string>
     <string name="app_icon_color_warning">UPOZORENJE: neki pokretači ne rukuju ispravno s prilagodbama ikona aplikacija. Ako ikona nestane, pokušajte pokrenuti aplikaciju iz trgovine Google Play ili widgeta, ako je dostupna.
@@ -879,11 +880,11 @@
     <string name="simple_gallery">Jednostavna galerija</string>
     <string name="simple_keyboard">Jednostavna tipkovnica</string>
     <string name="simple_launcher">Simple Launcher</string>
-    <string name="simple_music_player">Jednostavan glazbeni player</string>
+    <string name="simple_music_player">Jednostavan player glazbe</string>
     <string name="simple_notes">Jednostavne bilješke</string>
-    <string name="simple_sms_messenger">Jadnostavan SMS messenger</string>
+    <string name="simple_sms_messenger">Jednostavan SMS messenger</string>
     <string name="simple_thank_you">Jednostavno hvala</string>
-    <string name="simple_voice_recorder">Jednostavno snimanje glasa</string>
+    <string name="simple_voice_recorder">Jednostavan diktafon</string>
     <string name="app_launcher_short">Pokretač aplikacija</string>
     <string name="calculator_short">Kalkulator</string>
     <string name="calendar_short">Kalendar</string>
@@ -897,11 +898,11 @@
     <string name="gallery_short">Galerija</string>
     <string name="keyboard_short">Tipkovnica</string>
     <string name="launcher_short">Launcher</string>
-    <string name="music_player_short">Glazbeni svirač</string>
+    <string name="music_player_short">Player glazbe</string>
     <string name="notes_short">Bilješke</string>
     <string name="sms_messenger_short">SMS messenger</string>
     <string name="thank_you_short">Hvala</string>
-    <string name="voice_recorder_short">Snimanje glasa</string>
+    <string name="voice_recorder_short">Diktafon</string>
     <string name="sideloaded_app">Čini se da je verzija aplikacije oštećena. Preuzmi izvornu verziju &lt;a href=%s&gt;ovdje&lt;/a&gt;.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Često postavljenja pitanja</string>
@@ -1054,7 +1055,7 @@
     <string name="autofittextview_title">AutoFitTextView (mijenjanje veličine teksta)</string>
     <string name="robolectric_title">Robolectric (framework za testiranje)</string>
     <string name="espresso_title">Espresso (pomoćnik testiranja)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="gson_title">Gson (JSON analizator)</string>
     <string name="leak_canary_title">Leak Canary (detektor propuštanja memorije)</string>
     <string name="number_picker_title">Number Picker (prilagodljiv birač brojeva)</string>
     <string name="exoplayer_title">ExoPlayer (video player)</string>

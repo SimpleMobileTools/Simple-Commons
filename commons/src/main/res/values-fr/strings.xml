@@ -21,7 +21,7 @@
     <string name="copy_to_clipboard">Copier dans le presse-papiers</string>
     <string name="copy_number_to_clipboard">Copier le numéro dans le presse-papiers</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papiers</string>
-    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers :\n%s</string>
+    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers : \n%s</string>
     <string name="dial_number">Composer le numéro</string>
     <string name="unknown">Inconnu</string>
     <string name="always">Toujours</string>
@@ -98,8 +98,8 @@
     <string name="change_cover_image">Modifier l\'image du dossier</string>
     <string name="select_photo">Sélectionner une image</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d colonne</item>
+        <item quantity="other">%d colonnes</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
@@ -125,23 +125,23 @@
     <!-- Search -->
     <string name="search">Recherche</string>
     <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Rechercher des contacts</string>
+    <string name="search_favorites">Rechercher des favoris</string>
+    <string name="search_apps">Rechercher des applications</string>
+    <string name="search_events">Rechercher des évènements</string>
+    <string name="search_groups">Rechercher des groupes</string>
+    <string name="search_history">Rechercher dans l\'historique</string>
+    <string name="search_calls">Rechercher des appels</string>
+    <string name="search_files">Rechercher des fichiers</string>
+    <string name="search_folders">Rechercher des dossiers</string>
+    <string name="search_files_and_folders">Rechercher des fichiers et dossiers</string>
+    <string name="search_playlists">Rechercher des playlists</string>
+    <string name="search_artists">Rechercher des artistes</string>
+    <string name="search_albums">Rechercher des albums</string>
+    <string name="search_tracks">Rechercher des pistes</string>
+    <string name="search_text">Rechercher du texte</string>
+    <string name="search_conversations">Rechercher des conversations</string>
+    <string name="search_recordings">Rechercher des enregistrements</string>
     <!-- Filters -->
     <string name="filter">Filtrer</string>
     <string name="filter_pro">Filtre (Pro)</string>
@@ -153,7 +153,7 @@
     <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est nécessaire</string>
     <string name="no_post_notifications_permissions">L\'autorisation de publier des notifications est requise</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Pas d\'autorisation</string>
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
     <string name="rename_folder">Renommer le dossier</string>
@@ -193,7 +193,7 @@
     <string name="please_select_destination">Veuillez sélectionner une destination</string>
     <string name="source_and_destination_same">La source et la destination ne peuvent pas être identiques</string>
     <string name="copy_failed">Impossible de copier les fichiers</string>
-    <string name="copying">Copie en cours…</string>
+    <string name="copying">Copie en cours...</string>
     <string name="copying_success">Fichiers copiés</string>
     <string name="copying_success_one">Fichier copié avec succès</string>
     <string name="copy_move_failed">Une erreur est survenue</string>
@@ -203,7 +203,7 @@
     <string name="moving_success_partial">Certains fichiers n\'ont pas pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pas pu être copiés</string>
     <string name="no_files_selected">Aucun fichier sélectionné</string>
-    <string name="saving">Enregistrement en cours…</string>
+    <string name="saving">Enregistrement en cours...</string>
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Aucun nouvel élément trouvé</string>
@@ -244,7 +244,7 @@
     <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à \"&lt;b&gt;%s&lt;/b&gt;\" sur l\'écran suivant en appuyant sur \"&lt;b&gt;Utiliser ce dossier&lt;/b&gt;\" en bas de l\'écran.</string>
     <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur \"&lt;b&gt;Enregistrer&lt;/b&gt;\" en bas de l\'écran suivant pour créer le nouveau dossier.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
-    <string name="loading">Chargement…</string>
+    <string name="loading">Chargement...</string>
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers, elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
@@ -258,7 +258,7 @@
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">Suppression d\'%d élément en cours</item>
+        <item quantity="one">Suppression d\'un élément en cours</item>
         <item quantity="many">Suppression de %d éléments en cours</item>
         <item quantity="other">Suppression de %d éléments en cours</item>
     </plurals>
@@ -320,7 +320,7 @@
     <string name="discard">Annuler</string>
     <string name="undo_changes">Annuler les modifications</string>
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos modifications ?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Cette action ne peut être annulée.</string>
     <string name="save_before_closing">Vous avez des modifications non enregistrées. Les enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications \'Simple\'</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget.
@@ -411,7 +411,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Confirmez-vous vraiment la suppression ?</string>
     <string name="deletion_confirmation">Voulez-vous vraiment supprimer %s ?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Supprimer %s ?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s dans la corbeille ?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -809,7 +809,7 @@
     <string name="more_apps">Plus d\'applications</string>
     <string name="more_apps_from_us">Plus d\'applications</string>
     <string name="invite_friends">Inviter des amis</string>
-    <string name="share_text">Salut, viens voir %1$s à %2$s</string>
+    <string name="share_text">Salut, viens voir %1$s sur %2$s</string>
     <string name="invite_via">Inviter via</string>
     <string name="rate_us">Nous évaluer</string>
     <string name="rate">Notez</string>

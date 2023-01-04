@@ -45,7 +45,7 @@
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
-    <string name="no_phone_call_permission">Die Anwendung hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähre sie in den Geräteeinstellungen</string>
+    <string name="no_phone_call_permission">Die App hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähre sie in den Geräteeinstellungen</string>
     <string name="insert_text_here">Text hier einfügen</string>
     <string name="call_person">%s anrufen</string>
     <string name="zero">Null</string>
@@ -62,7 +62,7 @@
     <string name="value_cannot_be_empty">Wert darf nicht leer sein</string>
     <string name="create_new_contact">Neuen Kontakt erstellen</string>
     <string name="add_to_existing_contact">Zu einem existierenden Kontakt hinzufügen</string>
-    <string name="app_corrupt">Anwendung beschädigt</string>
+    <string name="app_corrupt">App beschädigt</string>
     <string name="disclaimer">Haftungsausschluss</string>
     <string name="take_photo">Foto aufnehmen</string>
     <string name="choose_photo">Foto auswählen</string>
@@ -125,23 +125,23 @@
     <!-- Search -->
     <string name="search">Suchen</string>
     <string name="type_2_characters">Du musst mindestens 2 Zeichen eingeben, um die Suche zu starten.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Kontakte durchsuchen</string>
+    <string name="search_favorites">Favoriten durchsuchen</string>
+    <string name="search_apps">Apps durchsuchen</string>
+    <string name="search_events">Ereignisse durchsuchen</string>
+    <string name="search_groups">Gruppen durchsuchen</string>
+    <string name="search_history">Verlauf durchsuchen</string>
+    <string name="search_calls">Anrufe durchsuchen</string>
+    <string name="search_files">Dateien durchsuchen</string>
+    <string name="search_folders">Ordner durchsuchen</string>
+    <string name="search_files_and_folders">Dateien und Ordner durchsuchen</string>
+    <string name="search_playlists">Playlists durchsuchen</string>
+    <string name="search_artists">Künstler durchsuchen</string>
+    <string name="search_albums">Alben durchsuchen</string>
+    <string name="search_tracks">Lieder durchsuchen</string>
+    <string name="search_text">Text durchsuchen</string>
+    <string name="search_conversations">Unterhaltungen durchsuchen</string>
+    <string name="search_recordings">Aufnahmen durchsuchen</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
@@ -251,7 +251,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Bitte am unteren Rand des nächsten Bildschirms auf „<b>Speichern</b>“ drücken, um den neuen Ordner zu erstellen.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
     <string name="loading">Wird geladen …</string>
-    <string name="access_storage_prompt">Bitte unserer Anwendung Zugriff auf alle Dateien gewähren, da sie sonst möglicherweise nicht richtig funktioniert.</string>
+    <string name="access_storage_prompt">Bitte unserer App Zugriff auf alle Dateien gewähren, da sie sonst möglicherweise nicht richtig funktioniert.</string>
     <plurals name="items">
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>
@@ -645,7 +645,7 @@
     <string name="settings_imported_successfully">Einstellungen erfolgreich importiert</string>
     <string name="start_name_with_surname">Namen mit Nachnamen beginnen</string>
     <string name="clear_cache">Cache leeren</string>
-    <string name="show_call_confirmation_dialog">Bestätigungsdialog zeigen, bevor ein Anruf durchgeführt wird</string>
+    <string name="show_call_confirmation_dialog">Bestätigungsdialog anzeigen, bevor ein Anruf durchgeführt wird</string>
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
     <string name="security">Sicherheit</string>
@@ -1013,7 +1013,7 @@
     <string name="sms_mms_title">SMS MMS (SMS- und MMS-Handhabung)</string>
     <string name="apng_title">APNG Android (animierte WebP-Unterstützung)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF-Betrachter)</string>
-    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelisten-Dateien)</string>
+    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Playlist-Dateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hole dir die Pro-Version unter https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
