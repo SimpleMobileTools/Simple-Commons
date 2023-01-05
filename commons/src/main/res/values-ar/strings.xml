@@ -99,12 +99,12 @@
     <string name="change_cover_image">تغيير صورة الغلاف</string>
     <string name="select_photo">تحديد صورة</string>
     <plurals name="column_counts">
-        <item quantity="zero">%d column</item>
-        <item quantity="one">%d columns</item>
-        <item quantity="two">%d columns</item>
-        <item quantity="few">%d columns</item>
-        <item quantity="many">%d columns</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="zero">%d عمود</item>
+        <item quantity="one">%d عمود</item>
+        <item quantity="two">%d عمودان</item>
+        <item quantity="few"></item>
+        <item quantity="many">%d أعمدة</item>
+        <item quantity="other"></item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -261,20 +261,20 @@
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="zero">%d item</item>
-        <item quantity="one">%d items</item>
-        <item quantity="two">%d items</item>
-        <item quantity="few">%d items</item>
-        <item quantity="many">%d items</item>
-        <item quantity="other">%d items</item>
+        <item quantity="zero">%d مادة</item>
+        <item quantity="one">%d مادة</item>
+        <item quantity="two">%d مادتان</item>
+        <item quantity="few"></item>
+        <item quantity="many">%d مواد</item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="zero">Deleting %d item</item>
-        <item quantity="one">Deleting %d items</item>
-        <item quantity="two">Deleting %d items</item>
-        <item quantity="few">Deleting %d items</item>
-        <item quantity="many">Deleting %d items</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="zero">حذف %d المادة</item>
+        <item quantity="one">حذف %d المادة</item>
+        <item quantity="two">حذف %d المادتان</item>
+        <item quantity="few"></item>
+        <item quantity="many">حذف %d المواد</item>
+        <item quantity="other"></item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -336,7 +336,7 @@
     <string name="discard">تجاهل</string>
     <string name="undo_changes">التراجع عن التغييرات</string>
     <string name="undo_changes_confirmation">هل تريد بالتاكيد التراجع عن التغييرات التي أجريتها ؟</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="save_before_closing">لديك تغييرات غير محفوظة. هل تريد الحفظ قبل الخروج ؟</string>
     <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
     <string name="app_icon_color_warning">تحذير: بعض المشغّلات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حال اختفاء الأيقونة، حاول تشغيل التطبيق من خلال Google Play أو ويدجت، إذا توفر. بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الافتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
@@ -438,12 +438,12 @@
     <string name="no">لا</string>
     <string name="maybe">أحياناً</string>
     <plurals name="delete_warning">
-        <item quantity="zero">WARNING: You are deleting %d folder</item>
-        <item quantity="one">WARNING: You are deleting %d folders</item>
-        <item quantity="two">WARNING: You are deleting %d folders</item>
-        <item quantity="few">WARNING: You are deleting %d folders</item>
-        <item quantity="many">WARNING: You are deleting %d folders</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="zero">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="one">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="two">تحذير: أنت تحذف %d مجلدان</item>
+        <item quantity="few">تحذير: أنت تحذف %d مجلدات</item>
+        <item quantity="many">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="other"></item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -485,36 +485,36 @@
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
     <plurals name="seconds">
-        <item quantity="zero">%d second</item>
-        <item quantity="one">%d seconds</item>
-        <item quantity="two">%d seconds</item>
-        <item quantity="few">%d seconds</item>
-        <item quantity="many">%d seconds</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="zero">%d ثانية</item>
+        <item quantity="one">%d ثانية</item>
+        <item quantity="two">%d ثانيتان</item>
+        <item quantity="few">%d ثواني</item>
+        <item quantity="many">%d ثانية</item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="zero">%d minute</item>
-        <item quantity="one">%d minutes</item>
-        <item quantity="two">%d minutes</item>
-        <item quantity="few">%d minutes</item>
-        <item quantity="many">%d minutes</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="zero">%d دقيقة</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="two">%d دقيقتان</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقة</item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="hours">
-        <item quantity="zero">%d hour</item>
-        <item quantity="one">%d hours</item>
-        <item quantity="two">%d hours</item>
-        <item quantity="few">%d hours</item>
-        <item quantity="many">%d hours</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="zero">%d ساعة</item>
+        <item quantity="one">%d ساعة</item>
+        <item quantity="two">%d ساعتان</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعة</item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="days">
-        <item quantity="zero">%d day</item>
-        <item quantity="one">%d days</item>
-        <item quantity="two">%d days</item>
-        <item quantity="few">%d days</item>
-        <item quantity="many">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">%d يوم</item>
+        <item quantity="two">%d يومان</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يوم</item>
+        <item quantity="other">%d يوم</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="zero">%d week</item>
