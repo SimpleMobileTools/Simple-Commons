@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
-    <string name="back">Back</string>
+    <string name="back">Voltar</string>
     <string name="nothing">Nada</string>
     <string name="later">Mais tarde</string>
     <string name="save_as">Guardar como</string>
@@ -10,7 +10,7 @@
     <string name="invalid_file_format">Formato de ficheiro inválido</string>
     <string name="out_of_memory_error">Memória insuficiente</string>
     <string name="an_error_occurred">Ocorreu um erro: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Erro: %s</string>
     <string name="open_with">Abrir com</string>
     <string name="edit_with">Editar com</string>
     <string name="edit">Editar</string>
@@ -66,11 +66,11 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Tirar foto</string>
     <string name="choose_photo">Escolher foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Escolher vídeo</string>
+    <string name="choose_contact">Escolher contacto</string>
+    <string name="choose_file">Escolher ficheiro</string>
+    <string name="record_audio">Gravar áudio</string>
+    <string name="record_video">Gravar vídeo</string>
     <!-- Events -->
     <string name="birthday">Data de nascimento</string>
     <string name="anniversary">Aniversário</string>
@@ -98,8 +98,8 @@
     <string name="change_cover_image">Alterar imagem de capa</string>
     <string name="select_photo">Selecionar foto</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d coluna</item>
+        <item quantity="other">%d colunas</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerir números bloqueados</string>
@@ -153,7 +153,7 @@
     <string name="no_camera_permissions">Requer acesso à câmara</string>
     <string name="no_audio_permissions">Requer acesso ao áudio</string>
     <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Sem permissão</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -266,7 +266,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Armazenamento/string>
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
@@ -363,7 +363,7 @@
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
     <string name="print_pro">Imprimir (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Atalho</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="create_shortcut_pro">Criar atalho (Pro)</string>
     <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
@@ -375,11 +375,11 @@
     <string name="move_to_bottom">Mover para baixo</string>
     <string name="pin_item">Marcar item</string>
     <string name="unpin_item">Desmarcar item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
+    <string name="send_sms">Enviar SMS</string>
+    <string name="send_email">Enviar email</string>
     <string name="call">Call</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Detalhes do contacto</string>
+    <string name="add_contact">Adicionar contacto</string>
     <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -406,7 +406,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que pretende eliminar\?</string>
     <string name="deletion_confirmation">Tem a certeza de que pretende apagar %s\?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Apagar %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Tem a certeza de que pretende mover %s para a reciclagem\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -451,7 +451,7 @@
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
     <string name="tomorrow">Amanhã</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Todos os dias</string>
     <string name="hide_year">Ocultar ano</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -578,7 +578,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">O alarme está definido para daqui a:\n%s</string>
     <string name="reminder_triggers_in">O lembrete está definido para daqui a:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Tempo restante:\n%s</string>
     <string name="alarm_warning">Certifique-se de que o alarme está a funcionar correctamente antes de o utilizar. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="notifications_disabled">As notificações desta aplicação estão desativadas. Aceda às definições do dispositivo para as poder ativar.</string>
@@ -670,7 +670,7 @@
     <string name="call_history_tab">Registo de chamadas</string>
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">Último utilizado</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">Ficheiros</string>
     <string name="recent_files_tab">Arquivos recentes</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
@@ -782,7 +782,7 @@
     <string name="help_us">Ajude-nos</string>
     <string name="social">Redes sociais</string>
     <string name="other">Outros</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Política de privacidade</string>
     <string name="version_placeholder">Versão %s</string>
     <string name="hello">Olá :)</string>
     <string name="about_footer">Feito com ❤️ na Eslovaquia</string>
