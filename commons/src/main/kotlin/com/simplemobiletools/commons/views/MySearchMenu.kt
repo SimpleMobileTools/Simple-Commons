@@ -13,9 +13,11 @@ import kotlinx.android.synthetic.main.menu_search.view.*
 
 class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
+    var useArrowIcon = false
     var onSearchOpenListener: (() -> Unit)? = null
     var onSearchClosedListener: (() -> Unit)? = null
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
+    var onNavigateBackClickListener: (() -> Unit)? = null
 
     init {
         inflate(context, R.layout.menu_search, this)
@@ -27,6 +29,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         top_toolbar_search_icon.setOnClickListener {
             if (isSearchOpen) {
                 closeSearch()
+            } else if (useArrowIcon && onNavigateBackClickListener != null) {
+                onNavigateBackClickListener!!()
             } else {
                 top_toolbar_search.requestFocus()
                 (context as? Activity)?.showKeyboard(top_toolbar_search)
@@ -58,11 +62,17 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         isSearchOpen = false
         onSearchClosedListener?.invoke()
         top_toolbar_search.setText("")
-        top_toolbar_search_icon.setImageResource(R.drawable.ic_search_vector)
+        if (!useArrowIcon) {
+            top_toolbar_search_icon.setImageResource(R.drawable.ic_search_vector)
+        }
         (context as? Activity)?.hideKeyboard()
     }
 
     fun getCurrentQuery() = top_toolbar_search.text.toString()
+
+    fun updateHintText(text: String) {
+        top_toolbar_search.hint = text
+    }
 
     fun toggleHideOnScroll(hideOnScroll: Boolean) {
         val params = top_app_bar_layout.layoutParams as LayoutParams
@@ -71,6 +81,17 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         } else {
             params.scrollFlags = params.scrollFlags.removeBit(LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS)
         }
+    }
+
+    fun toggleForceArrowBackIcon(useArrowBack: Boolean) {
+        this.useArrowIcon = useArrowBack
+        val icon = if (useArrowBack) {
+            R.drawable.ic_arrow_left_vector
+        } else {
+            R.drawable.ic_search_vector
+        }
+
+        top_toolbar_search_icon.setImageResource(icon)
     }
 
     fun updateColors() {
