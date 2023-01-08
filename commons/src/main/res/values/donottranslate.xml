@@ -149,6 +149,21 @@
         <item>@string/december</item>
     </string-array>
 
+    <string-array name="months_short">
+        <item>@string/january_short</item>
+        <item>@string/february_short</item>
+        <item>@string/march_short</item>
+        <item>@string/april_short</item>
+        <item>@string/may_short</item>
+        <item>@string/june_short</item>
+        <item>@string/july_short</item>
+        <item>@string/august_short</item>
+        <item>@string/september_short</item>
+        <item>@string/october_short</item>
+        <item>@string/november_short</item>
+        <item>@string/december_short</item>
+    </string-array>
+
     <string-array name="in_months">
         <item>@string/in_january</item>
         <item>@string/in_february</item>
