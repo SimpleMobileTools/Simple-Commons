@@ -493,6 +493,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">t.</string>
 
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
