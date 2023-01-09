@@ -472,7 +472,7 @@
     <string name="seconds_letter">с</string>
     <string name="minutes_letter">м</string>
     <string name="hours_letter">ч</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">нед.</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
         <item quantity="few">%d секунды</item>
@@ -760,18 +760,18 @@
     <string name="november">Ноябрь</string>
     <string name="december">Декабрь</string>
     <!-- Short months -->
-    <string name="january_short">Jan</string>
-    <string name="february_short">Feb</string>
-    <string name="march_short">Mar</string>
-    <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
-    <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
-    <string name="october_short">Oct</string>
-    <string name="november_short">Nov</string>
-    <string name="december_short">Dec</string>
+    <string name="january_short">янв</string>
+    <string name="february_short">фев</string>
+    <string name="march_short">мар</string>
+    <string name="april_short">апр</string>
+    <string name="may_short">май</string>
+    <string name="june_short">июн</string>
+    <string name="july_short">июл</string>
+    <string name="august_short">авг</string>
+    <string name="september_short">сен</string>
+    <string name="october_short">окт</string>
+    <string name="november_short">ноя</string>
+    <string name="december_short">дек</string>
     <!-- in January -->
     <string name="in_january">в январе</string>
     <string name="in_february">в феврале</string>
