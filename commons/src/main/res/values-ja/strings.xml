@@ -131,16 +131,16 @@
     <string name="search_groups">グループを検索</string>
     <string name="search_history">履歴を検索</string>
     <string name="search_calls">通話を検索</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_files">ファイルを検索</string>
+    <string name="search_folders">フォルダを検索</string>
+    <string name="search_files_and_folders">ファイル/フォルダを検索</string>
+    <string name="search_playlists">プレイリストを検索</string>
+    <string name="search_artists">アーティストを検索</string>
+    <string name="search_albums">アルバムを検索</string>
+    <string name="search_tracks">トラックを検索</string>
+    <string name="search_text">テキストを検索</string>
+    <string name="search_conversations">会話を検索</string>
+    <string name="search_recordings">録音を検索</string>
     <!-- Filters -->
     <string name="filter">フィルタ</string>
     <string name="filter_pro">フィルタ (Pro)</string>
@@ -850,7 +850,7 @@
     <string name="faq_3_title_commons">間違えてファイルを削除してしまいました。どうすれば復元できますか？</string>
     <string name="faq_3_text_commons">残念ながら復元は出来ません。一度了承するとファイルは即座に削除され、ごみ箱も利用不可となります。</string>
     <string name="faq_4_title_commons">ウィジェットの色が好みじゃないです。変更出来ますか？</string>
-    <string name="faq_4_text_commons">はい、ホーム画面でウィジェットをドラッグすると、ウィジェット設定画面が表示されます。左下に色付きの正方形が表示されるので、ボタンを押して選択してください。スライダーを使用して透明度を変更することも可能です。</string>
+    <string name="faq_4_text_commons">はい、ホーム画面でウィジェットをドラッグすると、ウィジェット設定画面が表示されます。左下に色付きの正方形が表示されるので、ボタンを押して色を選択してください。スライダーを使用して透明度を変更することも可能です。</string>
     <string name="faq_5_title_commons">削除したファイルを復元出来ますか？</string>
     <string name="faq_5_text_commons">本当に削除されてしまったのであれば、復元出来ません。ですが、デフォルトでごみ箱機能が有効になっているため、ファイルは削除されたのではなく、ごみ箱に移動している可能性があります。</string>
     <string name="faq_6_title_commons">アプリランチャーのアイコンが消えました。どうしたらいいですか？</string>
@@ -931,7 +931,7 @@
     <string name="why_upgrade_advanced_photo_video_editor">高度な写真＆動画編集機能</string>
     <string name="why_upgrade_heic_support">HEIC / HEIFファイル対応</string>
     <string name="why_upgrade_batch_renaming">高度なファイル名の一括変更機能</string>
-    <string name="why_upgrade_folder_locking">個々のフォルダーのロック</string>
+    <string name="why_upgrade_folder_locking">個々のフォルダのロック</string>
     <string name="why_upgrade_printing_support">印刷対応</string>
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">現地時間対応</string>
