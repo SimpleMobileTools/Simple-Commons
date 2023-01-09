@@ -124,12 +124,12 @@
     <!-- Search -->
     <string name="search">検索</string>
     <string name="type_2_characters">検索を開始するには少なくとも2文字以上の入力が必要です。</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
+    <string name="search_contacts">連絡先を検索</string>
+    <string name="search_favorites">お気に入りを検索</string>
+    <string name="search_apps">アプリを検索</string>
+    <string name="search_events">予定を検索</string>
+    <string name="search_groups">グループを検索</string>
+    <string name="search_history">履歴を検索</string>
     <string name="search_calls">Search calls</string>
     <string name="search_files">Search files</string>
     <string name="search_folders">Search folders</string>
@@ -456,7 +456,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">週</string>
     <plurals name="seconds">
         <item quantity="other">%d秒</item>
     </plurals>
@@ -687,18 +687,18 @@
     <string name="november">11月</string>
     <string name="december">12月</string>
     <!-- Short months -->
-    <string name="january_short">Jan</string>
-    <string name="february_short">Feb</string>
-    <string name="march_short">Mar</string>
-    <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
-    <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
-    <string name="october_short">Oct</string>
-    <string name="november_short">Nov</string>
-    <string name="december_short">Dec</string>
+    <string name="january_short">1月</string>
+    <string name="february_short">2月</string>
+    <string name="march_short">3月</string>
+    <string name="april_short">4月</string>
+    <string name="may_short">5月</string>
+    <string name="june_short">6月</string>
+    <string name="july_short">7月</string>
+    <string name="august_short">8月</string>
+    <string name="september_short">9月</string>
+    <string name="october_short">10月</string>
+    <string name="november_short">11月</string>
+    <string name="december_short">12月</string>
     <!-- in January -->
     <string name="in_january">1月</string>
     <string name="in_february">2月</string>
