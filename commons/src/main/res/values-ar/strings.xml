@@ -102,9 +102,9 @@
         <item quantity="zero">%d عمود</item>
         <item quantity="one">%d عمود</item>
         <item quantity="two">%d عمودان</item>
-        <item quantity="few"/>
+        <item quantity="few">%d أعمدة</item>
         <item quantity="many">%d أعمدة</item>
-        <item quantity="other"/>
+        <item quantity="other">%d أعمدة<item/>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -264,17 +264,17 @@
         <item quantity="zero">%d مادة</item>
         <item quantity="one">%d مادة</item>
         <item quantity="two">%d مادتان</item>
-        <item quantity="few"/>
+        <item quantity="few">%d مواد</item>
         <item quantity="many">%d مواد</item>
-        <item quantity="other"/>
+        <item quantity="other">%d مواد</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="zero">حذف %d المادة</item>
         <item quantity="one">حذف %d المادة</item>
         <item quantity="two">حذف %d المادتان</item>
-        <item quantity="few"/>
+        <item quantity="few">حذف %d المواد</item>
         <item quantity="many">حذف %d المواد</item>
-        <item quantity="other"/>
+        <item quantity="other">حذف %d المواد</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -443,7 +443,7 @@
         <item quantity="two">تحذير: أنت تحذف %d مجلدان</item>
         <item quantity="few">تحذير: أنت تحذف %d مجلدات</item>
         <item quantity="many">تحذير: أنت تحذف %d مجلد</item>
-        <item quantity="other"/>
+        <item quantity="other">تحذير: أنت تحذف %d مجلد</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -491,7 +491,7 @@
         <item quantity="two">%d ثانيتان</item>
         <item quantity="few">%d ثواني</item>
         <item quantity="many">%d ثانية</item>
-        <item quantity="other"/>
+        <item quantity="other">%d ثانية</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="zero">%d دقيقة</item>
@@ -499,7 +499,7 @@
         <item quantity="two">%d دقيقتان</item>
         <item quantity="few">%d دقائق</item>
         <item quantity="many">%d دقيقة</item>
-        <item quantity="other"/>
+        <item quantity="other">%d دقيقة</item>
     </plurals>
     <plurals name="hours">
         <item quantity="zero">%d ساعة</item>
@@ -507,7 +507,7 @@
         <item quantity="two">%d ساعتان</item>
         <item quantity="few">%d ساعات</item>
         <item quantity="many">%d ساعة</item>
-        <item quantity="other"/>
+        <item quantity="other">%d ساعة</item>
     </plurals>
     <plurals name="days">
         <item quantity="zero">%d يوم</item>
