@@ -102,9 +102,9 @@
         <item quantity="zero">%d عمود</item>
         <item quantity="one">%d عمود</item>
         <item quantity="two">%d عمودان</item>
-        <item quantity="few"></item>
+        <item quantity="few">%d أعمدة</item>
         <item quantity="many">%d أعمدة</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d أعمدة</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -264,17 +264,17 @@
         <item quantity="zero">%d مادة</item>
         <item quantity="one">%d مادة</item>
         <item quantity="two">%d مادتان</item>
-        <item quantity="few"></item>
+        <item quantity="few">%d مواد</item>
         <item quantity="many">%d مواد</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d مواد</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="zero">حذف %d المادة</item>
         <item quantity="one">حذف %d المادة</item>
         <item quantity="two">حذف %d المادتان</item>
-        <item quantity="few"></item>
+        <item quantity="few">حذف %d المواد</item>
         <item quantity="many">حذف %d المواد</item>
-        <item quantity="other"></item>
+        <item quantity="other">حذف %d المواد</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -340,7 +340,7 @@
     <string name="save_before_closing">لديك تغييرات غير محفوظة. هل تريد الحفظ قبل الخروج ؟</string>
     <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
     <string name="app_icon_color_warning">تحذير: بعض المشغّلات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حال اختفاء الأيقونة، حاول تشغيل التطبيق من خلال Google Play أو ويدجت، إذا توفر. بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الافتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
-    <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \ المشتركة \' ، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
+    <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \'المشتركة\'، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
     <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -443,7 +443,7 @@
         <item quantity="two">تحذير: أنت تحذف %d مجلدان</item>
         <item quantity="few">تحذير: أنت تحذف %d مجلدات</item>
         <item quantity="many">تحذير: أنت تحذف %d مجلد</item>
-        <item quantity="other"></item>
+        <item quantity="other">تحذير: أنت تحذف %d مجلد</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -491,7 +491,7 @@
         <item quantity="two">%d ثانيتان</item>
         <item quantity="few">%d ثواني</item>
         <item quantity="many">%d ثانية</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d ثانية</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="zero">%d دقيقة</item>
@@ -499,7 +499,7 @@
         <item quantity="two">%d دقيقتان</item>
         <item quantity="few">%d دقائق</item>
         <item quantity="many">%d دقيقة</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d دقيقة</item>
     </plurals>
     <plurals name="hours">
         <item quantity="zero">%d ساعة</item>
@@ -507,7 +507,7 @@
         <item quantity="two">%d ساعتان</item>
         <item quantity="few">%d ساعات</item>
         <item quantity="many">%d ساعة</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d ساعة</item>
     </plurals>
     <plurals name="days">
         <item quantity="zero">%d يوم</item>
@@ -740,7 +740,7 @@
     <string name="customize_colors_locked">تخصيص الألوان (مقفل)</string>
     <string name="feature_locked">مقفل</string>
     <string name="customize_widget_colors">تخصيص ألوان الويدجت</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">تخصيص اﻹشعارات</string>
     <string name="use_english_language">استخدام اللغة الإنجليزية</string>
     <string name="language">اللغة</string>
     <string name="show_hidden_items">إظهار العناصر المخفية</string>
@@ -1129,7 +1129,7 @@
     <string name="why_upgrade_new_widgets">New widgets</string>
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_font_size_customization">تخصيص حجم الخط</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
