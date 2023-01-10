@@ -35,7 +35,9 @@
             android:gravity="start|center_vertical"
             android:hint="@string/search"
             android:lines="1"
+            android:maxLines="1"
             android:paddingStart="@dimen/activity_margin"
+            android:singleLine="true"
             android:textSize="@dimen/big_text_size" />
 
         <com.google.android.material.appbar.MaterialToolbar
