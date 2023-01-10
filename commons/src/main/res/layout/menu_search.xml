@@ -31,8 +31,10 @@
             android:layout_toStartOf="@+id/top_toolbar"
             android:layout_toEndOf="@+id/top_toolbar_search_icon"
             android:background="@null"
+            android:ellipsize="end"
             android:gravity="start|center_vertical"
             android:hint="@string/search"
+            android:lines="1"
             android:paddingStart="@dimen/activity_margin"
             android:textSize="@dimen/big_text_size" />
 
