@@ -10,7 +10,7 @@
     <string name="invalid_file_format">Неправильный формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Ошибка: %s</string>
     <string name="open_with">Открыть в…</string>
     <string name="edit_with">Редактировать в…</string>
     <string name="edit">Редактировать</string>
@@ -49,7 +49,7 @@
     <string name="insert_text_here">Введите текст здесь</string>
     <string name="call_person">Вызов %s</string>
     <string name="zero">Ноль</string>
-    <string name="one">One</string>
+    <string name="one">Один</string>
     <string name="two">Два</string>
     <string name="three">Три</string>
     <string name="four">Четыре</string>
@@ -126,7 +126,7 @@
     <string name="remove_from_favorites">Убрать из избранного</string>
     <!-- Search -->
     <string name="search">Поиск</string>
-    <string name="search_in_placeholder">Search in %s</string>
+    <string name="search_in_placeholder">Поиск в %s</string>
     <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
     <string name="search_contacts">Поиск контактов</string>
     <string name="search_favorites">Поиск избранного</string>
@@ -349,7 +349,7 @@
     <string name="black_white">Чёрно-белая</string>
     <string name="custom">Своя</string>
     <string name="shared">Общая</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Системное значение по умолчанию</string>
     <!-- What's new -->
     <string name="whats_new">Что нового</string>
     <string name="whats_new_disclaimer">* здесь представлены только значительные изменения, но всегда присутствуют и мелкие исправления</string>
@@ -417,7 +417,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
     <string name="deletion_confirmation">Удалить %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Удалить %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Переместить %s в корзину?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -888,7 +888,7 @@
     <string name="simple_flashlight">Простой фонарик</string>
     <string name="simple_gallery">Простая галерея</string>
     <string name="simple_keyboard">Простая клавиатура</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Простой рабочий стол</string>
     <string name="simple_music_player">Простой музыкальный плеер</string>
     <string name="simple_notes">Простые заметки</string>
     <string name="simple_sms_messenger">Простой SMS-мессенджер</string>
