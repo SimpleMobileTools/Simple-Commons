@@ -776,9 +776,9 @@
     <string name="upgrade">Αναβάθμιση</string>
     <string name="upgrade_calendar">Πρέπει να μεταφέρετε τα αποθηκευμένα τοπικά συμβάντα χειροκίνητα, μέσω Εξαγωγής σε αρχείο .ics και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τις επιλογές Εξαγωγής/Εισαγωγής, στο μενού της κύριας οθόνης.</string>
     <string name="upgraded_to_pro">Γειά σας,\n\nφαίνεται ότι έχετε ήδη την έκδοση της εφαρμογής Pro. Δεν θα την χρειάζεστε πλέον, μπορείτε να την απεγκαταστήσετε.</string>
-    <string name="upgraded_to_pro_calendar">Πρέπει να μεταφέρετε τα τοπικά αποθηκευμένα Συμβάντα χειροκίνητα μέσω Εξαγωγή σε αρχείο .ics και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τα κουμπιά Εξαγωγής και Εισαγωγής στο μενού επάνω.</string>
-    <string name="upgraded_to_pro_notes">Πρέπει να μεταφέρετε τις Σημειώσεις σας στην έκδοση Pro χειροκίνητα..</string>
-    <string name="upgraded_to_pro_contacts">Πρέπει να μεταφέρετε τις ιδιωτικά αποθηκευμένες επαφές χειροκίνητα μέσω Εξαγωγής σε αρχείο .vcf και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τα κουμπιά Εξαγωγής και Εισαγωγής στο μενού επάνω.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Σχετικά</string>
     <string name="website">Ιστοσελίδα</string>

@@ -777,9 +777,9 @@
     <string name="upgraded_to_pro">Hola,
 \n
 \nsembla que ja teniu també la versió Pro de l\'aplicació. Ja no tornareu a necessitar aquesta, podeu desinstal·lar-la.</string>
-    <string name="upgraded_to_pro_calendar">Cal migrar manualment els esdeveniments emmagatzemats localment mitjançant l\'exportació en un fitxer «.ics», i després la importació. Podeu trobar els botons d\'exportació i importació al menú superior.</string>
-    <string name="upgraded_to_pro_notes">Cal migrar manualment les vostres notes a la versió Pro.</string>
-    <string name="upgraded_to_pro_contacts">Cal migrar manualment els contactes emmagatzemats en privat mitjançant l\'exportació en un fitxer .vcf i després la importació. Podeu trobar els botons d\'exportació i importació al menú superior.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Quant a</string>
     <string name="website">Lloc web</string>

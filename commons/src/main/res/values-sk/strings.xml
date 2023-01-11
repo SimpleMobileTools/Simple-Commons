@@ -856,9 +856,9 @@
     <string name="upgrade">Stiahnuť</string>
     <string name="upgrade_calendar">Lokálne uložené udalosti musíte exportovať manuálne do .ics súboru, následne importovať. Tlačidlá pre exportovanie/importovanie nájdete v menu hlavnej obrazovky.</string>
     <string name="upgraded_to_pro">Zdravím,\n\nvyzerá to tak, že už máte Pro verziu. Túto už teda nebudete potrebovať, môžete ju odinštalovať.</string>
-    <string name="upgraded_to_pro_calendar">Lokálne uložené udalosti musíte premigrovať manuálne pomocou exportovania do .ics súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
-    <string name="upgraded_to_pro_notes">Poznámky musíte do Pro verzie skopírovať manuálne.</string>
-    <string name="upgraded_to_pro_contacts">Súkromne uložené kontakty musíte premigrovať manuálne pomocou exportovania do .vcf súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
+    <string name="upgraded_to_pro_calendar">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak si chcete premigrovať lokálne uložené udalosti, musíte to spraviť ručne exportovaním do .ics súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
+    <string name="upgraded_to_pro_contacts">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak ste mali niektoré kontakty uložené v \"%s\", musíte ich premigrovať ručne exportovaním do .vcf súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
+    <string name="upgraded_to_pro_notes">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak chcete premigrovať vaše poznámky, musíte to spraviť ručne exportovaním do súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>

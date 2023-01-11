@@ -775,9 +775,9 @@
     <string name="upgrade">Opgrader</string>
     <string name="upgrade_calendar">Du må migrere lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
     <string name="upgraded_to_pro">Hej,\n\ndet ser ud til, at du også allerede har Pro-app-versionen. Du har ikke længere brug for denne, du kan afinstallere den..</string>
-    <string name="upgraded_to_pro_calendar">Du skal migrere lokalt lagrede begivenheder manuelt ved at eksportere dem til en .ics-fil og derefter importere dem. Du kan finde både eksport- og importknapper i topmenuen.</string>
-    <string name="upgraded_to_pro_notes">Du er nødt til at overføre dine noter til Pro-versionen manuelt.</string>
-    <string name="upgraded_to_pro_contacts">Du skal migrere privat gemte kontakter manuelt ved at eksportere dem til en .vcf-fil og derefter importere dem. Du kan finde både eksport- og importknapper i topmenuen.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>

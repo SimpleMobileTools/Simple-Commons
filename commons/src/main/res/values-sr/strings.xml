@@ -818,9 +818,9 @@
     <string name="upgraded_to_pro">Хеј,
 \n
 \nизгледа да већ имате и Про верзију апликације. Овај вам више неће требати, можете га деинсталирати.</string>
-    <string name="upgraded_to_pro_calendar">Морате ручно да мигрирате локално ускладиштене догађаје преко извоза у .ицс датотеку, а затим увозите. Дугмад за извоз и увоз можете пронаћи у горњем менију.</string>
-    <string name="upgraded_to_pro_notes">Морате ручно да мигрирате своје белешке на Про верзију.</string>
-    <string name="upgraded_to_pro_contacts">Морате ручно да мигрирате приватно сачуване контакте путем извоза у .вцф датотеку, а затим увезите. Дугмад за извоз и увоз можете пронаћи у горњем менију.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">О апликацији</string>
     <string name="website">Website</string>

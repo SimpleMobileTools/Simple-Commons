@@ -745,9 +745,9 @@
     <string name="upgraded_to_pro">Hei, 
 \n 
 \nsepertinya Anda sudah punya versi aplikasi yang Pro juga. Anda tidak membutuhkan ini lagi, Anda dapat uninstal ini.</string>
-    <string name="upgraded_to_pro_calendar">Anda harus memigrasikan peristiwa yang tersimpan secara lokal secara manual melalui ekspor dalam file .ics, kemudian mengimpornya. Anda bisa menemukan tombol ekspor dan impor pada menu atas.</string>
-    <string name="upgraded_to_pro_notes">Anda harus memigrasikan catatan Anda ke versi Pro secara manual.</string>
-    <string name="upgraded_to_pro_contacts">Anda harus memigrasikan kontak yang disimpan secara pribadi secara manual melalui ekspor dalam file .vcf, kemudian mengimpor. Anda bisa menemukan tombol ekspor dan impor di menu atas.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Tentang</string>
     <string name="website">Website</string>

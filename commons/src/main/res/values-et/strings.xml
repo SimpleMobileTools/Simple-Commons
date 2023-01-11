@@ -778,9 +778,9 @@
     <string name="upgraded_to_pro">Hei,
 \n
 \ntundub, et sul on juba olemas ka Pro-rakenduse versioon. Sa ei vaja seda enam, võid selle eemaldada.</string>
-    <string name="upgraded_to_pro_calendar">Peate kohalikult salvestatud sündmused käsitsi migreerima, eksportides .ics faili ja seejärel importides. Nii ekspordi kui ka impordi nupud leiate ülemisest menüüst.</string>
-    <string name="upgraded_to_pro_notes">Peate oma märkmed Pro versioonile käsitsi üle viima.</string>
-    <string name="upgraded_to_pro_contacts">Te peate eraviisiliselt salvestatud kontaktid käsitsi eksportima .vcf-faili ja seejärel importima. Nii ekspordi kui ka impordi nupud leiate ülemisest menüüst.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Rakenduse teave</string>
     <string name="website">Veebileht</string>

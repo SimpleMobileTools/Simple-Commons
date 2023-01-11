@@ -812,9 +812,9 @@
     <string name="upgraded_to_pro">Hé,
 \n
 \nil semble que vous ayez déjà la version Pro de l\'application aussi. Vous n\'aurez plus besoin de celle-ci, vous pouvez la désinstaller.</string>
-    <string name="upgraded_to_pro_calendar">Vous devez migrer manuellement les événements stockés localement en les exportant dans un fichier .ics, puis en les important. Vous trouverez les boutons d\'exportation et d\'importation dans le menu supérieur.</string>
-    <string name="upgraded_to_pro_notes">Vous devez migrer vos notes vers la version Pro manuellement.</string>
-    <string name="upgraded_to_pro_contacts">Vous devez migrer manuellement les contacts stockés à titre privé en les exportant dans un fichier .vcf, puis en les important. Vous trouverez les boutons d\'exportation et d\'importation dans le menu supérieur.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website">Site web</string>

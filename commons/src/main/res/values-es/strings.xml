@@ -813,9 +813,9 @@
     <string name="upgraded_to_pro">Hola, 
 \n 
 \nparece que ya tienes la versión Pro también. Ya no necesitas esta, puedes desinstalarla.</string>
-    <string name="upgraded_to_pro_calendar">Debe migrar los eventos almacenados localmente, de forma manual. Mediante la exportación en un archivo .ics y luego importar. Puede encontrar los botones de exportación e importación en el menú superior.</string>
-    <string name="upgraded_to_pro_notes">You have to Tienes que migrar tus notas a la versión Profesional manualmente.</string>
-    <string name="upgraded_to_pro_contacts">Tienes que migrar manualmente los contactos almacenados de forma privada, a través de la exportación de un archivo .vcf, y luego la importación. Puedes encontrar los botones de exportación e importación en el menú superior.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>

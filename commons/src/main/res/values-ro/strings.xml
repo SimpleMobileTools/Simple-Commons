@@ -811,9 +811,9 @@
     <string name="upgraded_to_pro">Hei,
 \n
 \nse pare că ai deja versiunea Pro a aplicației. Nu vei mai avea nevoie de versiunea curentă. O poți dezinstala.</string>
-    <string name="upgraded_to_pro_calendar">Trebuie să migrați manual evenimentele stocate la nivel local prin export într-un fișier .ics, apoi prin import. Puteți găsi atât butoanele de export, cât și cele de import în meniul de sus.</string>
-    <string name="upgraded_to_pro_notes">Trebuie să vă mutați manual notele în versiunea Pro.</string>
-    <string name="upgraded_to_pro_contacts">Trebuie să mutați manual contactele private prin export într-un fișier .vcf, apoi prin import. Puteți găsi atât butoanele de export, cât și cele de import în meniul de sus.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Despre</string>
     <string name="website">Website</string>

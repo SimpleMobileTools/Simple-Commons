@@ -775,9 +775,9 @@
     <string name="upgraded_to_pro">Merhaba,
 \n
 \nGörünüşe göre zaten Pro uygulama sürümünüz de var. Artık buna ihtiyacınız olmayacak, kaldırabilirsiniz.</string>
-    <string name="upgraded_to_pro_calendar">Yerel olarak kaydedilen etkinlikleri bir .ics dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
-    <string name="upgraded_to_pro_notes">Notlarınızı Pro sürümüne elle taşımanız gerekmektedir.</string>
-    <string name="upgraded_to_pro_contacts">Özel olarak kaydedilen kişileri bir .vcf dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website">Web sitesi</string>

@@ -813,9 +813,9 @@
     <string name="upgraded_to_pro">Ehi,
 \n
 \nsembra che tu abbia già la versione Pro dell\'applicazione. Questa non ti servirà più, puoi disinstallarla.</string>
-    <string name="upgraded_to_pro_calendar">È necessario migrare manualmente gli eventi memorizzati localmente esportandoli in un file .ics e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
-    <string name="upgraded_to_pro_notes">È necessario migrare manualmente le note alla versione Pro.</string>
-    <string name="upgraded_to_pro_contacts">È necessario migrare manualmente i contatti memorizzati privatamente esportandoli in un file .vcf e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Informazioni</string>
     <string name="website">Sito web</string>
