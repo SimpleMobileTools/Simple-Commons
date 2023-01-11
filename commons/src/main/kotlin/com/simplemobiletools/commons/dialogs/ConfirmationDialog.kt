@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
  */
 class ConfirmationDialog(
     activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, val callback: () -> Unit
+    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, dialogTitle: String = "", val callback: () -> Unit
 ) {
     private var dialog: AlertDialog? = null
 
@@ -35,7 +35,7 @@ class ConfirmationDialog(
         }
 
         builder.apply {
-            activity.setupDialogStuff(view, this, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
+            activity.setupDialogStuff(view, this, titleText = dialogTitle, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
                 dialog = alertDialog
             }
         }
