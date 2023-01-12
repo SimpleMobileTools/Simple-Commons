@@ -124,25 +124,25 @@
     <string name="remove_from_favorites">Hapus dari favorit</string>
     <!-- Search -->
     <string name="search">Cari</string>
-    <string name="search_in_placeholder">Search in %s</string>
+    <string name="search_in_placeholder">Cari dalam %s</string>
     <string name="type_2_characters">Ketik paling tidak 2 karakter untuk mencari.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Cari kontak</string>
+    <string name="search_favorites">Cari favorit</string>
+    <string name="search_apps">Cari aplikasi</string>
+    <string name="search_events">Cari acara</string>
+    <string name="search_groups">Cari grup</string>
+    <string name="search_history">Riwayat pencarian</string>
+    <string name="search_calls">Cari panggilan</string>
+    <string name="search_files">Cari berkas</string>
+    <string name="search_folders">Cari folder</string>
+    <string name="search_files_and_folders">Cari berkas dan folder</string>
+    <string name="search_playlists">Cari daftar putar</string>
+    <string name="search_artists">Cari artis</string>
+    <string name="search_albums">Cari album</string>
+    <string name="search_tracks">Cari trek</string>
+    <string name="search_text">Cari teks</string>
+    <string name="search_conversations">Cari percakapan</string>
+    <string name="search_recordings">Cari rekaman</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Saring (Pro)</string>
@@ -172,7 +172,7 @@
     <string name="source_file_doesnt_exist">Berkas sumber %s tidak ada</string>
     <string name="prepend_filenames">Tambah akhiran nama berkas</string>
     <string name="append_filenames">Tambah awalan nama berkas</string>
-    <string name="simple_renaming">Ubah nama</string>
+    <string name="simple_renaming">Perubahan nama sederhana</string>
     <string name="pattern_renaming">Pola</string>
     <string name="string_to_add">Kata untuk ditambahkan</string>
     <string name="rename_date_time_pattern">%Y - tahun\n%M - bulan\n%D - hari\n%h - jam\n%m - menit\n%s - detik\n%i - angka bertambah mulai dari 1</string>
@@ -316,16 +316,12 @@
     <string name="undo_changes_confirmation">Apakah anda yakin ingin mengurungkan perubahan?</string>
     <string name="cannot_be_undone">Tindakan ini tidak dapat diurungkan.</string>
     <string name="save_before_closing">Perubahan anda belum disimpan. Simpan sebelum keluar?</string>
-    <string name="apply_to_all_apps">Terapkan warna ke semua Simple Apps</string>
+    <string name="apply_to_all_apps">Terapkan warna ke semua Aplikasi Simpel</string>
     <string name="app_icon_color_warning">PERINGATAN: Beberapa aplikasi launcher tidak mendukung kustomisasi ikon aplikasi. Jika ikon hilang, coba jalankan aplikasi via Google Play atau widget, jika tersedia.
         Setelah dijalankan, kembalikan warna default ikon #F57C00. Jika masih tidak bisa, anda mungkin harus memasang ulang aplikasi.</string>
     <string name="share_colors_success">Warna berhasil diperbarui. Tema baru dengan nama \'Saling Berbagi\' telah ditambahkan. Kedepannya, silakan gunakan untuk memperbarui semua warna aplikasi.</string>
-    <string name="shared_theme_note">Dicatat bahwa meskipun Anda menggunakan versi aplikasi Pro, Anda masih membutuhkan Simple Thank You untuk alasan teknis. Itu menangani sinkronisasi warna.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Silakan beli <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> untuk membuka fungsi ini dan mendukung pengembangan. Terima kasih!
-        ]]>
-    </string>
+    <string name="shared_theme_note">Dicatat bahwa meskipun Anda menggunakan versi aplikasi Pro, Anda masih membutuhkan Terima Kasih Simpel untuk alasan teknis. Itu menangani sinkronisasi warna.</string>
+    <string name="purchase_thank_you">Silakan beli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Terima Kasih Simpel&lt;/a&gt; untuk membuka fungsi ini dan mendukung pengembangan. Terima kasih!</string>
     <!-- Themes -->
     <string name="light_theme">Terang</string>
     <string name="dark_theme">Gelap</string>
@@ -568,7 +564,7 @@
     <string name="during_day_at">Saat pagi hari pada %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Pengaturan</string>
-    <string name="purchase_simple_thank_you">Beli Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Beli Terima Kasih Simpel</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Kustomisasi warna</string>
     <string name="customize_colors">Sesuaikan warna</string>
@@ -628,7 +624,7 @@
     <string name="exclude">Kecualikan</string>
     <string name="exclude_folder">Tidak sertakan folder</string>
     <string name="excluded_folders">Folder yang dikecualikan</string>
-    <string name="excluded">(dikecualikan)</string>
+    <string name="excluded">(tidak disertakan)</string>
     <string name="manage_excluded_folders">Kelola folder yang dikecualikan</string>
     <string name="remove_all">Buang semua</string>
     <string name="remove_all_description">Buang semua folder dari daftar pengecualian\? Ini tidak akan menghapus folder tersebut.</string>
@@ -742,10 +738,32 @@
     <string name="more_info">Info selengkapnya</string>
     <string name="upgrade">Tingkatkan</string>
     <string name="upgrade_calendar">Anda perlu memindahkan acara yang disimpan lokal secara manual dengan cara mengekspornya ke berkas .ics, lalu mengimpornya kembali. Anda bisa menemukan tombol ekspor/impor di layar menu utama.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Halo,
+\n
+\nsepertinya Anda sudah memiliki versi aplikasi Pro juga. Setelah Anda puas dengan aplikasi ini dan mungkin memigrasikan data Anda, Anda dapat menghapus instalasi aplikasi ini untuk menghindari peluncuran aplikasi ini secara tidak sengaja karena Anda tidak akan membutuhkannya lagi.
+\n
+\nTerima kasih!</string>
+    <string name="upgraded_to_pro_calendar">Halo,
+\n
+\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda ingin memigrasikan acara yang disimpan secara lokal, Anda harus melakukannya secara manual dengan mengekspornya ke dalam berkas .ics dalam versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\n
+\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda bisa menghapus instalasi versi gratis yang lama karena Anda tidak memerlukannya lagi.
+\n
+\nTerima kasih!</string>
+    <string name="upgraded_to_pro_contacts">Halo,
+\n
+\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda memiliki kontak yang tersimpan di bawah \"%s\", Anda harus memigrasikannya secara manual dengan mengekspor dalam berkas .vcf dari versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\n
+\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda dapat menghapus instalasi versi gratis yang lama karena Anda tidak memerlukannya lagi.
+\n
+\nTerima kasih!</string>
+    <string name="upgraded_to_pro_notes">Halo,
+\n
+\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda ingin memigrasikan catatan Anda, Anda harus melakukannya secara manual dengan mengekspornya ke dalam berkas di versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\n
+\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda dapat menghapus versi gratis yang lama karena Anda tidak akan membutuhkannya lagi.
+\n
+\nTerima kasih!</string>
     <!-- About -->
     <string name="about">Tentang</string>
     <string name="website">Website</string>
@@ -773,18 +791,12 @@
     <string name="additional_info">Info tambahan</string>
     <string name="app_version">Versi aplikasi: %s</string>
     <string name="device_os">OS perangkat: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Halo,<br><br>
-            semoga anda menyukai aplikasi ini. Aplikasi ini sama sekali tidak berisi iklan, dukung pengembangan dengan membeli aplikasi <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, ini juga untuk mencegah dialog ini muncul kembali.<br><br>
-            Terima kasih!
-        ]]>
-    </string>
-    <string name="donate_new">Halo,&lt;br&gt;&lt;br&gt;semoga Anda menikmati aplikasi ini. Aplikasi ini tidak berisi iklan dan kami juga tidak mengumpulkan data Anda, mohon dukung pengembangannya dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Anda juga akan memiliki semua fitur aplikasi termasuk kustomisasi warna.&lt;br&gt;&lt;br&gt;Terima kasih!</string>
-    <string name="donate_short">Silakan dukung kami dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, itu juga akan membuka fitur aplikasi termasuk kustomisasi warna.</string>
+    <string name="donate_please">Halo,&lt;br&gt;&lt;br&gt; semoga Anda menyukai aplikasi ini. Aplikasi ini sama sekali tidak berisi iklan, dukung pengembangan dengan membeli aplikasi &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Terima Kasih Simpel&lt;/a&gt;, ini juga untuk mencegah dialog ini muncul kembali.&lt;br&gt;&lt;br&gt; Terima kasih!</string>
+    <string name="donate_new">Halo,&lt;br&gt;&lt;br&gt;semoga Anda menikmati aplikasi ini. Aplikasi ini tidak berisi iklan dan kami juga tidak mengumpulkan data Anda, mohon dukung pengembangannya dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Terima Kasih Simpel&lt;/a&gt;. Anda juga akan memiliki semua fitur aplikasi termasuk kustomisasi warna.&lt;br&gt;&lt;br&gt;Terima kasih!</string>
+    <string name="donate_short">Silakan dukung kami dengan membeli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Terima Kasih Simpel&lt;/a&gt;, itu juga akan membuka fitur aplikasi termasuk kustomisasi warna.</string>
     <string name="purchase">Beli</string>
-    <string name="get_simple_phone">Dapatkan Simple Phone</string>
-    <string name="update_thank_you">Silakan perbarui Simple Thank You ke versi terbaru</string>
+    <string name="get_simple_phone">Dapatkan Ponsel Simpel</string>
+    <string name="update_thank_you">Silakan perbarui Terima Kasih Simpel ke versi terbaru</string>
     <string name="before_asking_question_read_faq">Sebelum anda bertanya, silakan periksa pengaturan aplikasi dan baca Pertanyaan yang Paling Sering Ditanyakan terlebih dahulu. Mungkin solusi yang anda cari ada di sana.</string>
     <string name="before_rate_read_faq">Sebelum Anda menilai kami, silakan periksa pengaturan aplikasi dan baca Pertanyaan yang Sering Diajukan terlebih dahulu. Jika Anda memiliki masalah, mungkin solusinya ada di sana.</string>
     <string name="make_sure_latest">Pastikan juga anda menggunakan versi aplikasi terbaru.</string>
@@ -804,7 +816,7 @@
     <string name="thank_you">Terima kasih</string>
     <string name="widget_locked_pro">Widget terkunci.
 \nHarap tingkatkan ke versi Pro untuk membukanya.</string>
-    <string name="features_locked">Fitur ini terkunci, silakan beli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; untuk membuka kunci aplikasi lengkapnya. Ini adalah pembayaran satu kali saja dan jika Anda tidak akan puas, kami dapat mengembalikan uang Anda.</string>
+    <string name="features_locked">Fitur ini terkunci, silakan beli &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Terima Kasih Simpel&lt;/a&gt; untuk membuka kunci aplikasi lengkapnya. Ini adalah pembayaran satu kali saja dan jika Anda tidak akan puas, kami dapat mengembalikan uang Anda.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -817,24 +829,24 @@
             Terima kasih
         ]]>
     </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_launcher">Simple Launcher</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Peluncur Aplikasi Simpel</string>
+    <string name="simple_calculator">Kalkulator Simpel</string>
+    <string name="simple_calendar">Kalender Simpel</string>
+    <string name="simple_camera">Kamera Simpel</string>
+    <string name="simple_clock">Jam Simpel</string>
+    <string name="simple_contacts">Kontak Simpel</string>
+    <string name="simple_dialer">Telepon Simpel</string>
+    <string name="simple_draw">Gambar Simpel</string>
+    <string name="simple_file_manager">Pengelola Berkas Simpel</string>
+    <string name="simple_flashlight">Senter Simpel</string>
+    <string name="simple_gallery">Galeri Simpel</string>
+    <string name="simple_keyboard">Papan Ketik Simpel</string>
+    <string name="simple_launcher">Peluncur Simpel</string>
+    <string name="simple_music_player">Pemain Musik Simpel</string>
+    <string name="simple_notes">Catatan Simpel</string>
+    <string name="simple_sms_messenger">Perpesanan SMS Simpel</string>
+    <string name="simple_thank_you">Terima Kasih Simpel</string>
+    <string name="simple_voice_recorder">Perekam Suara Simpel</string>
     <string name="app_launcher_short">Peluncur Aplikasi</string>
     <string name="calculator_short">Kalkulator</string>
     <string name="calendar_short">Kalender</string>
@@ -888,7 +900,7 @@
     <string name="translation">Terjemahan</string>
     <string name="development">Pengembangan</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">Daftar ini berisi semua orang yang secara nyata membantu aplikasi apa pun dalam rangkaian Simple Mobile Tools, tidak hanya yang ini. Penerjemahan ditangani oleh sukarelawan, beri tahu kami jika Anda ingin membantu juga. Panduan untuk menerjemahkan ada di &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;website ini&lt;/a&gt;, atau hubungi kami di &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; jika Anda memiliki pertanyaan. Terima kasih kepada semua kontributor dan pendukung lainnya!</string>
+    <string name="contributors_label">Daftar ini berisi semua orang yang secara nyata membantu aplikasi apa pun dalam rangkaian Simple Mobile Tools, tidak hanya yang ini. Penerjemahan ditangani oleh sukarelawan, beri tahu kami jika Anda ingin membantu juga. Panduan untuk menerjemahkan ada di &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;situs web ini&lt;/a&gt;, atau hubungi kami di &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; jika Anda memiliki pertanyaan. Terima kasih kepada semua kontributor dan pendukung lainnya!</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -1012,7 +1024,7 @@
     <string name="android_lame_title">AndroidLame (encoder mp3)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">TIDAK DIDUKUNG: Versi aplikasi ini tidak lagi dikembangkan, dapatkan versi Pro di https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Jangan lupa, jika anda untuk mencopot aplikasi berbayar manapun dalam waktu 2 jam, uang anda akan otomatis dikembalikan. Jika anda ingin pengembalian dilakukan lain waktu, cukup hubungi hello@simplemobiletools.com dan anda akan mendapatkannya. Mempermudah anda untuk mencobanya terlebih dahulu. :)</string>
+    <string name="pro_app_refund">Jangan lupa, jika Anda mencopot aplikasi berbayar apa pun dalam waktu 2 jam, uang Anda akan otomatis dikembalikan. Jika Anda ingin pengembalian dilakukan lain waktu, cukup hubungi hello@simplemobiletools.com dan Anda akan mendapatkannya. Itu mempermudah Anda untuk mencobanya terlebih dahulu. :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Sekelompok aplikasi Android sumber terbuka sederhana dengan widget yang dapat disesuaikan, tanpa iklan dan perizinan yang tidak diperlukan.</string>
 </resources>
