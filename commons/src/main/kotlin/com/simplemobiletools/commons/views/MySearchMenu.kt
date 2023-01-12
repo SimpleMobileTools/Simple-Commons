@@ -37,8 +37,6 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
             }
         }
 
-        top_toolbar_search.onFocusChangeListener = null
-        top_toolbar_search.clearFocus()
         post {
             top_toolbar_search.setOnFocusChangeListener { v, hasFocus ->
                 if (hasFocus) {
@@ -47,8 +45,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
             }
         }
 
-        top_toolbar_search.onTextChangeListener {
-            onSearchTextChangedListener?.invoke(it)
+        top_toolbar_search.onTextChangeListener { text ->
+            onSearchTextChangedListener?.invoke(text)
         }
     }
 
