@@ -50,6 +50,10 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         }
     }
 
+    fun focusView() {
+        top_toolbar_search.requestFocus()
+    }
+
     private fun openSearch() {
         isSearchOpen = true
         onSearchOpenListener?.invoke()
