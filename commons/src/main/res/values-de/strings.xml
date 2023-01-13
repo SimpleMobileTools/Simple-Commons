@@ -1051,15 +1051,22 @@
     <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Playlist-Dateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Testversion abgelaufen</string>
+    <string name="start_free_trial">Kostenlos testen</string>
+    <string name="welcome_to_app_name">Willkommen bei %s!</string>
+    <string name="trial_start_description">Vielen Dank, dass du unsere App benutzt. Du kannst diese freigeschaltete Version für <font color="#FFFFFF">%d Tage nutzen</font>. Nach Ablauf der Testphase solltest du ein Upgrade auf die Pro-Version in Betracht ziehen. Diese hat eine große Anzahl neuer Funktionen, ein modernes Design, keine Werbung und viele andere Verbesserungen.
+\n
+\nDu musst nur einmal im Leben dafür bezahlen und wenn du nicht zufrieden bist, kannst du die App deinstallieren und eine Rückerstattung erhalten.
+\n
+\nIch hoffe, es gefällt dir :)</string>
+    <string name="trial_end_description">Bitte führe ein Upgrade auf die Pro-Version durch, um die App in vollem Umfang genießen zu können.
+\n
+\nDu musst nur einmal im Leben dafür bezahlen und wenn du nicht zufrieden bist, kannst du die App deinstallieren und eine Rückerstattung erhalten.
+\n
+\nWir sehen uns dort :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Deine Testversion läuft in %d Tag ab.</item>
+        <item quantity="other">Deine Testversion läuft in %d Tagen ab.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hole dir die Pro-Version unter https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
