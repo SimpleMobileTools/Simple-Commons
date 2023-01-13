@@ -737,10 +737,32 @@
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">嘿，
+\n
+\n除了免费版，你似乎也已经安装了专业版。如果你觉得满意并且迁移了数据，你可以卸载免费版避免意外启动，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_calendar">嘿，
+\n
+\n你似乎从免费版升级到了专业版。如果你想把免费版中本地存储的事件迁移过来，你必须手动在免费版中把它们导出为 .ics 文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_contacts">嘿，
+\n
+\n你似乎刚从免费版升级到了专业版。如果你有任何存储在 \"%s\" 下的联系人，你必须手动在免费版中把它们导出为 .vcf 文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_notes">嘿，
+\n
+\n你似乎刚从免费版升级到了专业版。如果你想迁移笔记数据，你必须手动在免费版中把它们导出为文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
     <!-- About -->
     <string name="about">关于</string>
     <string name="website">网站</string>

@@ -813,10 +813,32 @@
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Привет,
+\n
+\nпохоже, что у вас уже есть Pro-версия приложения. Когда вы будете довольны им и, возможно, перенесёте в него свои данные, можно будет удалить это, чтобы избежать случайного запуска, поскольку эта версия вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_calendar">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести локально сохранённые события, вам нужно сделать это вручную, экспортировав их в ics-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_contacts">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если у вас есть какие-нибудь контакты, сохранённые в \"%s\", вам нужно перенести их вручную, экспортировав их в vcf-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_notes">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести свои заметки, вам нужно сделать это вручную, экспортировав их в файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
     <!-- About -->
     <string name="about">О приложении</string>
     <string name="website">Сайт</string>

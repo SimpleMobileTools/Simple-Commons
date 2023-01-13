@@ -135,7 +135,7 @@
     <string name="search_apps">Search apps</string>
     <string name="search_events">Search events</string>
     <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
+    <string name="search_history">سجل البحث</string>
     <string name="search_calls">Search calls</string>
     <string name="search_files">Search files</string>
     <string name="search_folders">Search folders</string>
@@ -801,12 +801,12 @@
     <string name="stop_showing_excluded">إيقاف عرض الملفات المستبعدة</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">إدارة التابات المعروضة</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
+    <string name="default_tab_to_open">اختر ما يُفتح عند بدء التطبيق</string>
+    <string name="contacts_tab">جهات الاتصال</string>
     <string name="favorites_tab">المفضّلات</string>
-    <string name="call_history_tab">Call History</string>
+    <string name="call_history_tab">سجل المكالمات</string>
     <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="last_used_tab">آخر استخدام</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->

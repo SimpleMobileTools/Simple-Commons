@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Mégse</string>
-    <string name="back">Back</string>
+    <string name="back">Vissza</string>
     <string name="nothing">Semmi</string>
     <string name="later">Később</string>
     <string name="save_as">Mentés másként</string>
@@ -66,11 +66,11 @@
     <string name="disclaimer">Nyilatkozat</string>
     <string name="take_photo">Fényképkészítés</string>
     <string name="choose_photo">Fénykép kiválasztása</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Videó kiválasztása</string>
+    <string name="choose_contact">Névjegy kiválasztása</string>
+    <string name="choose_file">Fájl kiválasztása</string>
+    <string name="record_audio">Hang felvétele</string>
+    <string name="record_video">Videó felvétele</string>
     <!-- Events -->
     <string name="birthday">Születésnap</string>
     <string name="anniversary">Évforduló</string>
@@ -98,8 +98,8 @@
     <string name="change_cover_image">Borítókép módosítása</string>
     <string name="select_photo">Válasszon fényképet</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d oszlop</item>
+        <item quantity="other">%d oszlop</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Letiltott telefonszámok kezelése</string>
@@ -124,25 +124,25 @@
     <string name="remove_from_favorites">Eltávolítás a kedvencek közül</string>
     <!-- Search -->
     <string name="search">Keresés</string>
-    <string name="search_in_placeholder">Search in %s</string>
+    <string name="search_in_placeholder">Keresés itt: %s</string>
     <string name="type_2_characters">Legalább 2 karaktert írjon be a keresés indításához.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_contacts">Névjegyek keresése</string>
+    <string name="search_favorites">Kedvencek keresése</string>
+    <string name="search_apps">Alkalmazások keresése</string>
+    <string name="search_events">Események keresése</string>
+    <string name="search_groups">Csoportok keresése</string>
+    <string name="search_history">Előzmények keresése</string>
+    <string name="search_calls">Hívások keresése</string>
+    <string name="search_files">Fájlok keresése</string>
+    <string name="search_folders">Mappák keresése</string>
+    <string name="search_files_and_folders">Fájlok és mappák keresése</string>
+    <string name="search_playlists">Lejátszási listák keresése</string>
+    <string name="search_artists">Előadók keresése</string>
+    <string name="search_albums">Albumok keresése</string>
+    <string name="search_tracks">Számok keresése</string>
+    <string name="search_text">Szöveg keresése</string>
+    <string name="search_conversations">Beszélgetések keresése</string>
+    <string name="search_recordings">Felvételek keresése</string>
     <!-- Filters -->
     <string name="filter">Szűrő</string>
     <string name="filter_pro">Szűrő (Pro)</string>
@@ -154,7 +154,7 @@
     <string name="no_camera_permissions">Kamera engedély szükséges</string>
     <string name="no_audio_permissions">Hang engedély szükséges</string>
     <string name="no_post_notifications_permissions">Értesítési engedély szükséges</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Nem szükséges engedély</string>
     <!-- Renaming -->
     <string name="rename_file">Fájl átnevezése</string>
     <string name="rename_folder">Mappa átnevezése</string>
@@ -185,7 +185,7 @@
     <string name="filename_without_txt">Fájlnév (.txt nélkül)</string>
     <string name="filename_without_json">Fájlnév (.json nélkül)</string>
     <string name="filename_without_zip">Fájlnév (.zip nélkül)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Az Android 11-től kezdődően így már nem rejtheti el a fájlokat és mappákat</string>
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>
     <string name="move">Áthelyezés</string>
@@ -215,7 +215,7 @@
     <string name="could_not_create_file">Nem lehet létrehozni a(z) %s fájlt</string>
     <string name="no_new_items">Nem található új elem</string>
     <string name="no_space">A célhelyen nincs elég szabad hely.\n%1$s szükséges, %2$s érhető el</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">A fájlok és mappák kiválasztásához szükséges rendszerszolgáltatás nem érhető el</string>
     <!-- Create new -->
     <string name="create_new">Új létrehozása</string>
     <string name="folder">Mappa</string>
@@ -235,23 +235,23 @@
     <string name="skip">Kihagyás</string>
     <string name="append">„_1” hozzáfűzése</string>
     <string name="apply_to_all">Alkalmaz az összesre</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="system_folder_restriction">A rendszer nem engedélyezi a műveletet ebben a mappában, válasszon másikat</string>
+    <string name="system_folder_copy_restriction">A rendszer nem engedélyezi az ebbe a mappába másolást, válasszon egy másikat</string>
+    <string name="rename_in_sd_card_system_restriction">A rendszer nem engedélyezi az átnevezést ebben a mappában</string>
+    <string name="rename_internal_system_restriction">A közvetlenül a belső tárhelyen lévő mappák nem nevezhetők át, csak azok almappái</string>
+    <string name="cannot_rename_folder">A mappa nem nevezhető át</string>
     <!-- File picker -->
     <string name="select_folder">Válasszon egy mappát</string>
     <string name="select_file">Válasszon egy fájlt</string>
     <string name="confirm_storage_access_title">Ellenőrizze a külső tároló hozzáférést</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Mappaelérés megerősítése</string>
     <string name="confirm_storage_access_text">Válassza ki az SD-kártya gyökérmappáját a következő képernyőn, hogy írási hozzáférést adjon</string>
     <string name="confirm_storage_access_text_sd">Ha nem látja az SD-kártyát, próbálja meg ezt</string>
     <string name="confirm_storage_access_android_text">Engedélyezze a következő képernyőn, hogy az alkalmazás hozzáférjen a kiválasztott tárolóhoz, úgy hogy a „Mappa használata” gombra kattint lent.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text_specific">Engedélyezze a(z) „<b>%s</b>” elérését a következő képernyő alján lévő „<b>Mappa használata</b>” gombra kattintással.</string>
+    <string name="confirm_create_doc_for_new_folder_text">A mappa létrehozásához kattintson a következő képernyőn alján lévő „<b>Mentés</b>” gombra.</string>
     <string name="confirm_selection">Kiválasztás megerősítése</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Betöltés…</string>
     <string name="access_storage_prompt">Adjon engedélyt az alkalmazásnak, hogy elérje az összes fájlját, enélkül lehet, hogy nem fog jól működni.</string>
     <plurals name="items">
         <item quantity="one">%d elem</item>
@@ -273,14 +273,14 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Válasszon tárolót</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Tároló</string>
     <string name="internal">Belső</string>
     <string name="sd_card">SD-kártya</string>
     <string name="root">Gyökér</string>
     <string name="wrong_root_selected">Hibás mappát választott ki, válassza ki az SD-kártya gyökérmappáját</string>
     <string name="sd_card_usb_same">Az SD-kártya és az USB-s eszköz elérési útvonala nem lehet azonos</string>
     <string name="app_on_sd_card">Úgy tűnik, hogy az alkalmazás az SD-kártyára van telepítve és emiatt az alkalmazás moduljai nem érhetők el. Nem fogja látni a rendelkezésre álló modulok között. Ez egy rendszerkorlátozás, így ha használni szeretné a modulokat, akkor át kell helyeznie az alkalmazást a belső tárterületre.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Hibás mappát választott ki, válassza ezt az útvonalat: „%s”</string>
     <!-- File properties -->
     <string name="properties">Tulajdonságok</string>
     <string name="path">Elérési útvonal</string>
@@ -300,9 +300,9 @@
     <string name="song_title">Szám címe</string>
     <string name="gps_coordinates">GPS koordináták</string>
     <string name="altitude">Magasság</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">EXIF-értékek eltávolítása</string>
+    <string name="remove_exif_confirmation">Biztos, hogy eltávolítja az EXIF-értékeket, mint a GPS koordináták, a kameramodell, stb.\?</string>
+    <string name="exif_removed">Az EXIF-értékek sikeresen eltávolítva</string>
     <!-- Color customization -->
     <string name="background_color">Háttérszín</string>
     <string name="text_color">Szöveg színe</string>
@@ -322,7 +322,7 @@
     <string name="discard">Elvetés</string>
     <string name="undo_changes">Változások visszavonása</string>
     <string name="undo_changes_confirmation">Biztos, hogy visszavonja a módosításait\?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Ez a művelet nem vonható vissza.</string>
     <string name="save_before_closing">Nem mentette a változtatásokat. Menti a kilépés előtt?</string>
     <string name="apply_to_all_apps">Színek alkalmazása az összes Simple Apps alkalmazásra</string>
     <string name="app_icon_color_warning">FIGYELMEZTETÉS: Néhány indító nem megfelelően kezeli az alkalmazásikon testreszabását. Ha az ikon eltűnik, próbálja meg elindítani az alkalmazást a Google Playen vagy egy modulon keresztül, ha elérhető. Miután elindult, állítsa vissza az alapértelmezett narancssárga (#F57C00) ikont. A legrosszabb esetben újra kellhet telepítenie az alkalmazást.</string>
@@ -333,9 +333,9 @@
     <string name="light_theme">Világos</string>
     <string name="dark_theme">Sötét</string>
     <string name="auto_theme">Automatikus</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Automatikus világos/sötét</string>
     <string name="solarized">Kiégetett</string>
-    <string name="dark_red">Sötét és piros</string>
+    <string name="dark_red">Sötétvörös</string>
     <string name="white">Fehér</string>
     <string name="black_white">Fekete-fehér</string>
     <string name="custom">Egyéni</string>
@@ -375,14 +375,14 @@
     <string name="toggle_filename">Fájlnév láthatóságának módosítása</string>
     <string name="move_to_top">Áthelyezés a tetejére</string>
     <string name="move_to_bottom">Áthelyezés alulra</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="pin_item">Elem rögzítése</string>
+    <string name="unpin_item">Elem rögzítésének megszüntetése</string>
+    <string name="send_sms">SMS küldése</string>
+    <string name="send_email">E-mail küldése</string>
+    <string name="call">Hívás</string>
+    <string name="contact_details">Névjegy részletei</string>
+    <string name="add_contact">Névjegy hozzáadása</string>
+    <string name="wallpapers">Háttérképek</string>
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
     <string name="name">Név</string>
@@ -453,7 +453,7 @@
     <string name="yesterday">Tegnap</string>
     <string name="today">Ma</string>
     <string name="tomorrow">Holnap</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Minden nap</string>
     <string name="hide_year">Év elrejtése</string>
     <string name="seconds_raw">másodperc</string>
     <string name="minutes_raw">perc</string>
@@ -581,7 +581,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">A riasztásig hátralévő idő eltűnik:\n%s</string>
     <string name="reminder_triggers_in">Az emlékeztető aktiválásáig hátralévő idő:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Hátralévő idő:
+\n%s</string>
     <string name="alarm_warning">Győződjön meg róla, hogy a riasztás megfelelően működik, mielőtt napi szinten használná. Az akkumulátor takarékossággal kapcsolatos rendszerkorlátozások miatt helytelenül is működhetnek.</string>
     <string name="reminder_warning">Győződjön meg róla, hogy az emlékeztetők megfelelően működnek, mielőtt napi szinten használná. Az akkumulátor takarékossággal kapcsolatos rendszerkorlátozások miatt helytelenül is működhetnek.</string>
     <string name="notifications_disabled">Az alkalmazás értesítései le vannak tiltva. Kérjük, lépjen be a készülék beállításaiba és engedélyezze ezeket.</string>
@@ -604,11 +605,11 @@
     <string name="color_customization">Színek testreszabása</string>
     <string name="customize_colors">Színek testreszabása</string>
     <string name="customize_colors_locked">Színek testreszabása (zárolva)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Zárolt</string>
     <string name="customize_widget_colors">Modulszínek testreszabása</string>
     <string name="customize_notifications">Értesítések testreszabása</string>
     <string name="use_english_language">Angol nyelv használata</string>
-    <string name="language">Language</string>
+    <string name="language">Nyelv</string>
     <string name="show_hidden_items">Rejtett elemek megjelenítése</string>
     <string name="font_size">Betűméret</string>
     <string name="small">Kicsi</string>
@@ -657,7 +658,7 @@
     <string name="list_view">Listanézet</string>
     <!-- Excluding -->
     <string name="exclude">Kizárás</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Mappa kizárása</string>
     <string name="excluded_folders">Kizárt mappák</string>
     <string name="excluded">(kizárt)</string>
     <string name="manage_excluded_folders">Kizárt mappák kezelése</string>
@@ -700,7 +701,7 @@
     <string name="importing_some_entries_failed">Egyes elemek importálása nem sikerült</string>
     <string name="exporting_some_entries_failed">Egyes elemek exportálása nem sikerült</string>
     <string name="no_entries_for_importing">Az importáláshoz nem találhatók bejegyzések</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Az importáláshoz nem találhatók bejegyzések</string>
     <string name="no_entries_for_exporting">Az exportáláshoz nem találhatók bejegyzések</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -721,18 +722,18 @@
     <string name="november">november</string>
     <string name="december">december</string>
     <!-- Short months -->
-    <string name="january_short">Jan</string>
-    <string name="february_short">Feb</string>
-    <string name="march_short">Mar</string>
-    <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
-    <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
-    <string name="october_short">Oct</string>
-    <string name="november_short">Nov</string>
-    <string name="december_short">Dec</string>
+    <string name="january_short">jan.</string>
+    <string name="february_short">feb.</string>
+    <string name="march_short">már.</string>
+    <string name="april_short">ápr.</string>
+    <string name="may_short">máj.</string>
+    <string name="june_short">jún.</string>
+    <string name="july_short">júl.</string>
+    <string name="august_short">aug.</string>
+    <string name="september_short">szept.</string>
+    <string name="october_short">okt.</string>
+    <string name="november_short">nov.</string>
+    <string name="december_short">dec.</string>
     <!-- in January -->
     <string name="in_january">januárban</string>
     <string name="in_february">februárban</string>
@@ -780,14 +781,14 @@
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Névjegy</string>
-    <string name="website">Website</string>
+    <string name="website">Weboldal</string>
     <string name="website_label">A forráskódok megtekintéséhez</string>
     <string name="email_label">Ide küldje a visszajelzését vagy a javaslatait</string>
     <string name="upgrade_to_pro">Frissítés Pro verzióra</string>
     <string name="more_apps">További alkalmazások</string>
     <string name="more_apps_from_us">További alkalmazásaink</string>
     <string name="invite_friends">Barátok meghívása</string>
-    <string name="share_text">Gyere el %1$s - %2$s</string>
+    <string name="share_text">Nézze meg ezt: %1$s – %2$s</string>
     <string name="invite_via">Meghívás</string>
     <string name="rate_us">Értékeljen minket</string>
     <string name="rate">Értékelés</string>
@@ -798,29 +799,23 @@
     <string name="help_us">Segítsen nekünk</string>
     <string name="social">Közösségi média</string>
     <string name="other">Egyéb</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Adatvédelmi irányelvek</string>
     <string name="version_placeholder">Verzió: %s</string>
     <string name="hello">Üdv :)</string>
     <string name="about_footer">Szeretettel ❤️ készült Szlovákiában</string>
     <string name="additional_info">Kiegészítő információ</string>
-    <string name="app_version">Alkalmazás verzió: %s</string>
+    <string name="app_version">Alkalmazásverzió: %s</string>
     <string name="device_os">Eszköz operációs rendszere: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Hello,<br><br>
-            remélem tetszett az alkalmazás. Nem tartalmaz hirdetéseket. Kérem támogasd a fejlesztést a <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> megvásárlásával. Utána ez a párbeszédablak sem látszik újra.<br><br>
-            Köszönöm!
-        ]]>
-    </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_please">Üdv,&lt;br&gt;&lt;br&gt; remélem tetszik az alkalmazás. Nem tartalmaz hirdetéseket. Kérjük támogassa a fejlesztést az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Egyszerű köszönet&lt;/a&gt; megvásárlásával. Utána ez a párbeszédablak sem jelenik meg újra.&lt;br&gt;&lt;br&gt; Köszönöm!</string>
+    <string name="donate_new">Üdv,&lt;br&gt;&lt;br&gt; remélem tetszik az alkalmazás. Nem tartalmaz hirdetéseket, és adatokat sem gyűjtünk. Kérjük támogassa a fejlesztést az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Egyszerű köszönet&lt;/a&gt; megvásárlásával. Utána feloldja az összes alkalmazásfunkciót, mint a színek testreszabása.&lt;br&gt;&lt;br&gt; Köszönöm!</string>
+    <string name="donate_short">Támogasson minket az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Egyszerű köszönet&lt;/a&gt; megvásárlásával. Ez feloldja az összes alkalmazásfunkciót, köztük a színek testreszabását is.</string>
     <string name="purchase">Vásárlás</string>
-    <string name="get_simple_phone">Get Simple Phone</string>
-    <string name="update_thank_you">Frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
+    <string name="get_simple_phone">Egyszerű telefon beszerzése</string>
+    <string name="update_thank_you">Frissítse az Egyszerű köszönet alkalmazást a legújabb verzióra</string>
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
     <string name="before_rate_read_faq">Az értékelés előtt nézze meg az alkalmazás beállításait, és olvassa el a gyakran ismételt kérdéseket. Ha problémája van, lehet, hogy a megoldás már ott van.</string>
     <string name="make_sure_latest">Arról is győződjön meg, hogy a legfrissebb verziót használja.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Vegye figyelembe, hogy ez az alkalmazásverziót már nem fejlesztjük, szerezze be a Pro változatot a számos fejlesztésért.</string>
     <string name="read_it">Elolvasás</string>
     <string name="read_faq">GYIK elolvasása</string>
     <string name="rate_us_prompt">Üdv,
@@ -844,10 +839,10 @@
     <string name="simple_calendar">Egyszerű naptár</string>
     <string name="simple_camera">Egyszerű kamera</string>
     <string name="simple_clock">Egyszerű óra</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_contacts">Egyszerű névjegyek</string>
     <string name="simple_dialer">Egyszerű tárcsázó</string>
     <string name="simple_draw">Egyszerű rajzolás</string>
-    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_file_manager">Egyszerű fájlkezelő</string>
     <string name="simple_flashlight">Egyszerű zseblámpa</string>
     <string name="simple_gallery">Egyszerű galéria</string>
     <string name="simple_keyboard">Simple Keyboard</string>

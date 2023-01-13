@@ -839,10 +839,32 @@
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Uaktualnij</string>
     <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w menu na ekranie głównym.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Witaj,
+\n
+\nWygląda na to, że masz już także wersję Pro aplikacji. Gdy będziesz z niej zadowolony(-a) i być może przeniesiesz swoje dane, możesz odinstalować tę, aby uniknąć przypadkowego uruchomienia, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_calendar">Witaj,
+\n
+\nWygląda na to, że uaktualniłeś(-aś) darmową aplikację na płatną. Jeśli chcesz przenieść przechowywane lokalnie wydarzenia, musisz zrobić to ręcznie, eksportując je do pliku .ics w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_contacts">Witaj,
+\n
+\nWygląda na to, że uaktualniłeś(-aś) darmową aplikację na płatną. Jeśli masz jakieś kontakty przechowywane w „%s”, musisz przenieść je ręcznie, eksportując do pliku .vcf w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_notes">Witaj,
+\n
+\nWygląda na to, że uaktualniłeś(-aś) darmową aplikację na płatną. Jeśli chcesz przenieść swoje notatki, musisz zrobić to ręcznie, eksportując je do pliku w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website">Strona internetowa</string>
@@ -870,13 +892,7 @@
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="app_version">Wersja aplikacji: %s</string>
     <string name="device_os">System: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Witaj!<br><br>
-            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju przez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
-            Dziękujemy!
-        ]]>
-    </string>
+    <string name="donate_please">Witaj,&lt;br&gt;&lt;br&gt; Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju przez zakup specjalnej aplikacji &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co poskutkuje również wyłączeniem tego komunikatu.&lt;br&gt;&lt;br&gt; Dziękujemy!</string>
     <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
     <string name="donate_short">Wesprzyj nas, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co również odblokuje wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.</string>
     <string name="purchase">Kup</string>
