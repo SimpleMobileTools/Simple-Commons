@@ -64,7 +64,7 @@
     <string name="add_to_existing_contact">Thêm vào một liên hệ hiện có</string>
     <string name="app_corrupt">Ứng dụng bị gián đoạn</string>
     <string name="disclaimer">Từ chối trách nhiệm</string>
-    <string name="take_photo">Chụp ảnh</string>    
+    <string name="take_photo">Chụp ảnh</string>
     <string name="choose_photo">Chọn hình ảnh</string>
     <string name="choose_video">Choose video</string>
     <string name="choose_contact">Choose contact</string>
@@ -233,7 +233,7 @@
     <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Không thể đổi tên thư mục này</string>
     <!-- File picker -->
     <string name="select_folder">Chọn một thư mục</string>
     <string name="select_file">Chọn một tập tin</string>
@@ -317,7 +317,7 @@
     <string name="discard">Bỏ qua</string>
     <string name="undo_changes">Hoàn tác thay đổi</string>
     <string name="undo_changes_confirmation">Bạn có chắc chắn muốn hoàn tác các thay đổi của mình?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Hành động này không thể được hoàn tác.</string>
     <string name="save_before_closing">Bạn có các thay đổi chưa lưu. Lưu trước khi thoát?</string>
     <string name="apply_to_all_apps">Áp dụng màu sắc cho tất cả Simple Apps</string>
     <string name="app_icon_color_warning">CẢNH BÁO: Một số trình khởi chạy không xử lý tùy chỉnh biểu tượng ứng dụng đúng cách. Trong trường hợp biểu tượng biến mất, hãy thử khởi chạy ứng dụng qua Google Play hoặc một số tiện ích, nếu có.
@@ -1052,7 +1052,7 @@
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">

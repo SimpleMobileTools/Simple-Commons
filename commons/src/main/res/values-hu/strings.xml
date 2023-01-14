@@ -990,51 +990,51 @@
     <string name="notice">Ez az alkalmazás a következő harmadik féltől származó programkönyvtárakat használja az életem megkönnyítéséhez. Köszönöm.</string>
     <string name="third_party_licences">Harmadik feles licencek</string>
     <string name="kotlin_title">Kotlin (programnyelv)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (nagyítható kép nézet)</string>
-    <string name="glide_title">Glide (kép betöltés és gyorsítótárazás)</string>
-    <string name="picasso_title">Picasso (kép betöltés és gyorsítótárazás)</string>
-    <string name="cropper_title">Android Image Cropper (kép vágás és forgatás)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (nagyítható képnézetek)</string>
+    <string name="glide_title">Glide (képbetöltés és gyorsítótárazás)</string>
+    <string name="picasso_title">Picasso (képbetöltés és gyorsítótárazás)</string>
+    <string name="cropper_title">Android Image Cropper (kép vágása és forgatása)</string>
     <string name="rtl_viewpager_title">RtlViewPager (jobbról balra csúsztatás)</string>
-    <string name="joda_title">Joda-Time (Java adat csere)</string>
+    <string name="joda_title">Joda-Time (alternatív javás dátumkezelés)</string>
     <string name="stetho_title">Stetho (debug adatbázisok)</string>
-    <string name="otto_title">Otto (esemény)</string>
-    <string name="photoview_title">PhotoView (nagyítható GIF)</string>
-    <string name="pattern_title">PatternLockView (minta védelem)</string>
+    <string name="otto_title">Otto (eseménybusz)</string>
+    <string name="photoview_title">PhotoView (nagyítható GIF-ek)</string>
+    <string name="pattern_title">PatternLockView (mintás zárolási védelem)</string>
     <string name="reprint_title">Reprint (ujjlenyomatos védelem)</string>
     <string name="gif_drawable_title">Gif Drawable (GIF betöltése)</string>
-    <string name="autofittextview_title">AutoFitTextView (szöveg átméretezés)</string>
-    <string name="robolectric_title">Robolectric (framework teszt)</string>
-    <string name="espresso_title">Espresso (teszt segéd)</string>
+    <string name="autofittextview_title">AutoFitTextView (szöveg átméretezése)</string>
+    <string name="robolectric_title">Robolectric (tesztelési keretrendszer)</string>
+    <string name="espresso_title">Espresso (tesztelési segéd)</string>
     <string name="gson_title">Gson (JSON értelmező)</string>
-    <string name="leak_canary_title">Leak Canary (memória szivárgás detektor)</string>
+    <string name="leak_canary_title">Leak Canary (memóriaszivárgás-észlelő)</string>
     <string name="number_picker_title">Number Picker (testreszabható számválasztó)</string>
-    <string name="exoplayer_title">ExoPlayer (videó lejátszó)</string>
+    <string name="exoplayer_title">ExoPlayer (videólejátszó)</string>
     <string name="panorama_view_title">VR Panorama View (panorámakép megjelenítése)</string>
-    <string name="sanselan_title">Apache Sanselan (kép metaadat kiolvasás)</string>
-    <string name="filters_title">Android Photo Filters (kép szűrők)</string>
+    <string name="sanselan_title">Apache Sanselan (kép metaadatainak kiolvasása)</string>
+    <string name="filters_title">Android Photo Filters (képszűrők)</string>
     <string name="gesture_views_title">Gesture Views (nagyítható képek)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (betűk a görgetősávon)</string>
-    <string name="event_bus_title">Event Bus (kommunikáció az alkalmazáson belül)</string>
+    <string name="event_bus_title">Event Bus (alkalmazáson belüli kommunikáció)</string>
     <string name="audio_record_view_title">Audio Record View (hangvizualizáció)</string>
     <string name="sms_mms_title">SMS MMS (SMS- és MMS-kezelés)</string>
     <string name="apng_title">APNG Android (animált WebP támogatása)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u lejátszási listák kezelése)</string>
+    <string name="android_lame_title">AndroidLame (mp3 kódoló)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_expired">A próbaidőszak lejárt</string>
+    <string name="start_free_trial">Ingyenes próbaidőszak elkezdése</string>
+    <string name="welcome_to_app_name">Üdvözli a(z) %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">A próbaverzió %d nap múlva lejár.</item>
+        <item quantity="other">A próbaverzió %d nap múlva lejár.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, töltse le a Pro verziót a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro címről</string>
     <string name="pro_app_refund">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a hello@simplemobiletools.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Egyszerű, nyílt forráskódú Android-alkalmazások gyűjteménye testreszabható modulokkal, hirdetések és felesleges engedélykérések nélkül.</string>
+    <string name="developer_description">Egyszerű, nyílt forráskódú androidos alkalmazásgyűjtemény testreszabható modulokkal, hirdetések és felesleges engedélykérések nélkül.</string>
 </resources>
