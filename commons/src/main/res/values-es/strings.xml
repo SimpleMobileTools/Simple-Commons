@@ -810,10 +810,32 @@
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Hola,
+\n
+\nparece que ya tienes la versión pro de la aplicación también. Una vez que esté satisfecho con ella y haya migrado sus datos, puede desinstalar esta aplicación. Para evitar ponerla en marcha accidentalmente porque ya no la necesitas.
+\n
+\n¡Muchas gracias!</string>
+    <string name="upgraded_to_pro_calendar">Hola,
+\n
+\nParece que has actualizado de la versión gratuita a la versión pro. Si desea migrar los eventos almacenados localmente desde la versión gratuita, debe exportarlos manualmente como archivos .ics en la versión gratuita e importarlos a la versión profesional a través del menú superior.
+\n
+\nSi está satisfecho con la configuración profesional, puede desinstalar la versión gratuita anterior, ya que ya no la necesita.
+\n
+\n¡Gracias!</string>
+    <string name="upgraded_to_pro_contacts">Hola,
+\n
+\nparece que acaba de actualizar desde la versión gratuita. Si tiene contactos guardados en \"%s\", deberá migrarlos manualmente exportándolos a un archivo .vcf en la versión gratuita de la aplicación e importándolos aquí desde el menú superior.
+\n
+\nUna vez que esté satisfecho con su configuración en la versión Pro, puede desinstalar la versión gratuita anterior ya que ya no la necesita.
+\n
+\n¡Muchas gracias!</string>
+    <string name="upgraded_to_pro_notes">Hola,
+\n
+\nparece que acaba de actualizar a partir de la versión gratuita. Si desea migrar las notas, es necesario hacerlo manualmente exportándolas a un archivo en la versión gratuita de la aplicación e importándolas aquí a través del menú superior.
+\n
+\nCuando esté satisfecho con su configuración de la versión Pro, puede desinstalar la antigua gratuita porque ya no la necesitará.
+\n
+\n¡Gracias!</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>
@@ -1086,15 +1108,23 @@
     <string name="m3u_parser_title">M3U Parser (manejo de archivos de listas de reproducción m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">La prueba ha caducado</string>
+    <string name="start_free_trial">Comienza tu prueba gratuita</string>
+    <string name="welcome_to_app_name">¡Bienvenido a %s!</string>
+    <string name="trial_start_description">Gracias por usar nuestra aplicación. Puedes usar esta versión desbloqueada durante <font color="#FFFFFF">%d días</font>. Considere actualizar a la versión Pro cuando finalice la prueba. La versión Pro tiene muchas funciones nuevas, un diseño moderno, sin anuncios y muchas otras mejoras.
+\n
+\nSolo paga una vez, y si no está satisfecho, puede desinstalarlo y recuperar su dinero.
+\n
+\nEspero que te guste :)</string>
+    <string name="trial_end_description">Por favor, actualice a la versión Pro para disfrutar de la aplicación al máximo.
+\n
+\nSólo tienes que pagar por ella una vez en la vida y si no quedas satisfecho, puedes desinstalarla y obtener un reembolso.
+\n
+\nNos vemos :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Su prueba expira en %d día.</item>
+        <item quantity="many">Su prueba expira en %d días.</item>
+        <item quantity="other">Su prueba expira en %d días.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
