@@ -1043,18 +1043,25 @@
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Proefperiode verlopen</string>
+    <string name="start_free_trial">Start gratis proefperiode</string>
+    <string name="welcome_to_app_name">Welkom bij %s!</string>
+    <string name="trial_start_description">Bedankt voor de interesse in onze app! Deze proefversie is te gebruiken voor <font color="#FFFFFF">%d dagen</font>. Als de proefperiode is afgelopen, overweeg dan een upgrade naar de Pro-versie. Het bevat geen advertenties en heeft een enorme hoeveelheid nieuwe functies, een modern ontwerp en vele andere verbeteringen.
+\n
+\nWij vragen om een kleine eenmalige betaling, die eenvoudig is terug te draaien indien de Pro-versie niet bevalt.
+\n
+\nVeel plezier! :)</string>
+    <string name="trial_end_description">Om van alle mogelijkheden die deze app biedt gebruik te kunnen maken, is een upgrade naar de Pro-versie aanbevolen.
+\n
+\nWij vragen om een kleine eenmalige betaling, die eenvoudig is terug te draaien indien de Pro-versie niet bevalt.
+\n
+\nProbeer het meteen! :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Deze proefversie verloopt over %d dag.</item>
+        <item quantity="other">Deze proefversie verloopt over %d dagen.</item>
     </plurals>
     <!-- Google Play listing -->
-    <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet meer onderhouden. De Pro-versie is de vinden op https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet meer onderhouden. De Pro-versie is te vinden op https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Bij het verwijderen van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties of onnodige rechten.</string>
