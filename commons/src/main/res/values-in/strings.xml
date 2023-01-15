@@ -1023,12 +1023,19 @@
     <string name="m3u_parser_title">M3U Parser (penanganan file daftar putar m3u)</string>
     <string name="android_lame_title">AndroidLame (encoder mp3)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Uji coba kedaluwarsa</string>
+    <string name="start_free_trial">Mulai uji coba gratis</string>
+    <string name="welcome_to_app_name">Selamat datang di %s!</string>
+    <string name="trial_start_description">Terima kasih telah menggunakan aplikasi kami. Anda dapat menggunakan versi yang tidak terkunci ini selama <font color="#FFFFFF">%d hari</font>. Setelah uji coba berakhir, harap pertimbangkan untuk meningkatkan ke versi Pro. Ini memiliki sejumlah besar fitur baru, desain modern, tidak ada iklan dan banyak peningkatan lainnya.
+\n
+\nAnda hanya perlu membayarnya sekali seumur hidup dan jika Anda tidak puas, Anda dapat menghapus instalannya dan mendapatkan pengembalian dana.
+\n
+\nSemoga Anda akan menyukainya :)</string>
+    <string name="trial_end_description">Silakan tingkatkan ke versi Pro untuk menikmati aplikasi ini sepenuhnya.
+\n
+\nAnda hanya perlu membayarnya sekali seumur hidup dan jika Anda tidak puas, Anda dapat menghapus instalannya dan mendapatkan pengembalian dana.
+\n
+\nSampai jumpa di sana :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Your trial expires in %d day.</item>
         <item quantity="other">Your trial expires in %d days.</item>
