@@ -36,6 +36,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
 import androidx.core.view.ScrollingView
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
@@ -227,11 +228,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, navigationBarHeight)
-                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, 0)
-                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
+            }
+            onApplyWindowInsets {
+                val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
+                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = insets.top
             }
         }
     }
