@@ -227,14 +227,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (useTransparentNavigation) {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-                nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, navigationBarHeight)
+                onApplyWindowInsets {
+                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
+                    nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, insets.bottom)
+                    (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = insets.top
+                }
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, 0)
-            }
-            onApplyWindowInsets {
-                val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
-                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = insets.top
+                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
             }
         }
     }
