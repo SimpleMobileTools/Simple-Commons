@@ -32,6 +32,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
+import androidx.core.view.WindowInsetsCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -1715,4 +1716,12 @@ fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? 
     }
 
     return File(folder, fileName)
+}
+
+fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
+    window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+        callback(WindowInsetsCompat.toWindowInsetsCompat(insets))
+        view.onApplyWindowInsets(insets)
+        insets
+    }
 }
