@@ -36,6 +36,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
 import androidx.core.view.ScrollingView
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
@@ -226,14 +227,23 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (useTransparentNavigation) {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-                nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, navigationBarHeight)
-                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+                updateTopBottomInsets(statusBarHeight, navigationBarHeight)
+                onApplyWindowInsets {
+                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
+                    updateTopBottomInsets(insets.top, insets.bottom)
+                }
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-                nestedView?.setPadding(nestedView!!.paddingLeft, nestedView!!.paddingTop, nestedView!!.paddingRight, 0)
-                (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = 0
+                updateTopBottomInsets(0, 0)
             }
         }
+    }
+
+    private fun updateTopBottomInsets(statusBarHeight: Int, navigationBarHeight: Int) {
+        nestedView?.run {
+            setPadding(paddingLeft, paddingTop, paddingRight, navigationBarHeight)
+        }
+        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
