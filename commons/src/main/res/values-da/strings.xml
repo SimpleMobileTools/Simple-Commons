@@ -98,8 +98,8 @@
     <string name="change_cover_image">Skift cover-billede</string>
     <string name="select_photo">Vælg billede</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d kolonne</item>
+        <item quantity="other">%d kolonner</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
@@ -124,7 +124,7 @@
     <string name="remove_from_favorites">Fjern fra bogmærker</string>
     <!-- Search -->
     <string name="search">Søg</string>
-    <string name="search_in_placeholder">Search in %s</string>
+    <string name="search_in_placeholder">Søg i %s</string>
     <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
     <string name="search_contacts">Search contacts</string>
     <string name="search_favorites">Search favorites</string>
@@ -317,7 +317,7 @@
     <string name="discard">Kassér</string>
     <string name="undo_changes">Fortryd ændringer</string>
     <string name="undo_changes_confirmation">Er du sikker på at du vil fortryde ændringerne?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Handlingen kan ikke fortrydes.</string>
     <string name="save_before_closing">Du har ændringer der ikke er gemt. Vil du gemme dem?</string>
     <string name="apply_to_all_apps">Anvend farverne på alle Simple Apps</string>
     <string name="app_icon_color_warning">ADVARSEL: Ikke alle app-launchers kan håndtere tilpasning af ikonfarve. Hvis et ikon skulle forsvinde kan du prøve at åbne appen via Google Play eller en widget.
@@ -462,7 +462,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">t</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">u.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -725,12 +725,12 @@
     <string name="february_short">Feb</string>
     <string name="march_short">Mar</string>
     <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
+    <string name="may_short">Maj</string>
+    <string name="june_short">Jun</string>
+    <string name="july_short">Jul</string>
     <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
-    <string name="october_short">Oct</string>
+    <string name="september_short">Sep</string>
+    <string name="october_short">Okt</string>
     <string name="november_short">Nov</string>
     <string name="december_short">Dec</string>
     <!-- in January -->
@@ -773,11 +773,11 @@
     <string name="it_is_free">Den er stadig gratis indtil: %s. Downloader du den indtil da kan du blive ved at bruge den gratis fremover.</string>
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
-    <string name="upgrade_calendar">Du må migrere lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgrade_calendar">Du må overføre lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
+    <string name="upgraded_to_pro">Hej,\n\ndet ser ud til, at du også allerede har Pro app-versionen. Når du er tilfreds med den og måske har overført dine data, kan du afinstallere denne for at undgå at starte den ved et uheld, da du ikke har brug for den længere.\n\nTak!</string>
+    <string name="upgraded_to_pro_calendar">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du ønsker at overføre dine lokalt gemte begivenheder, skal du gøre det manuelt ved at eksportere dem til en .ics-fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
+    <string name="upgraded_to_pro_contacts">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du havde nogen kontakter gemt under \"%s\", skal du overføre dem manuelt ved at eksportere dem i en .vcf-fil fra den gratis app-version og importere dem her via topmenuen.\n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den.\n\n\nTak!</string>
+    <string name="upgraded_to_pro_notes">HHej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du vil overføre dine noter, skal du gøre det manuelt ved at eksportere dem til en fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
@@ -1049,19 +1049,19 @@
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Prøveperioden er udløbet</string>
+    <string name="start_free_trial">Start en gratis prøveperiode</string>
+    <string name="welcome_to_app_name">Velkommen til %s!</string>
+    <string name="trial_start_description">Tak, fordi du bruger vores app. Du kan bruge denne ulåste version i &lt;font color=\'#FFFFFFFF\'>%d dage&lt;/font>. Når prøveversionen udløber, skal du overveje at opgradere til Pro-versionen. Den har en enorm mængde nye funktioner, et moderne design, ingen reklamer og mange andre forbedringer.
+        \n\nDu skal bare betale for det en gang for alle, og hvis du ikke er tilfreds, kan du afinstallere det og få pengene tilbage.\n\nHåber du vil kunne lide den :)</string>
+    <string name="trial_end_description">Opgrader venligst til Pro-versionen for at nyde appen fuldt ud.\n\nDu skal kun betale for den én gang i livet, og hvis du ikke er tilfreds, kan du afinstallere den og få pengene tilbage.\n\n\nVi ses :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Din prøveperiode udløber om %d dag.</item>
+        <item quantity="other">Din prøveperiode udløber om %d dage.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til hello@simplemobiletools.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
+    <string name="pro_app_refund">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til hello@simplemobiletools.com. På den måde kan du prøvekøre appen uden omkostninger :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">En gruppe simple, open source apps til Android med widgets, der kan tilpasses, uden reklamer og unødvendige tilladelser.</string>
 </resources>
