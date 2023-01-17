@@ -841,10 +841,32 @@
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Привіт,
+\n
+\nздається, у вас уже є версія застосунку Pro. Коли ви задоволені ним і, можливо, перенесете свої дані, ви можете видалити його, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
+\n
+\nДякую!</string>
+    <string name="upgraded_to_pro_calendar">Привіт,
+\n
+\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести локально збережені події, ви повинні зробити це вручну, експортувавши їх у файл .ics у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\n
+\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\n
+\nДякую!</string>
+    <string name="upgraded_to_pro_contacts">Привіт,
+\n
+\nздається, ви щойно оновили безкоштовну версію. Якщо у вас були будь-які контакти, збережені в \"%s\", вам потрібно перенести їх вручну, експортувавши у файл .vcf із безкоштовної версії застосунку та імпортувавши сюди через верхнє меню.
+\n
+\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\n
+\nДякую!</string>
+    <string name="upgraded_to_pro_notes">Привіт,
+\n
+\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести свої нотатки, ви повинні зробити це вручну, експортувавши їх у файл у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\n
+\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\n
+\nДякую!</string>
     <!-- About -->
     <string name="about">Про додаток</string>
     <string name="website">Веб-сайт</string>
@@ -1100,15 +1122,24 @@
     <string name="m3u_parser_title">M3U Парсер (обробка m3u-файлів списків відтворення)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Термін пробного періоду закінчився</string>
+    <string name="start_free_trial">Почати безкоштовну пробну версію</string>
+    <string name="welcome_to_app_name">Ласкаво просимо до %s!</string>
+    <string name="trial_start_description">Дякуємо за використання нашого застосунку. Ви можете використовувати цю розблоковану версію протягом <font color="#FFFFFF">%d днів</font>. Після завершення пробного періоду подумайте про оновлення до версії Pro. Він має величезну кількість нових функцій, сучасний дизайн, відсутність реклами та багато інших покращень.
+\n
+\nВи просто повинні заплатити за це один раз у житті, і якщо ви не будете задоволені, ви можете видалити його та отримати відшкодування.
+\n
+\nСподіваюся, вам сподобається :)</string>
+    <string name="trial_end_description">Перейдіть на версію Pro, щоб насолоджуватися застосунком у повному обсязі.
+\n
+\nВи просто повинні платити за це один раз в житті, і якщо ви не будете задоволені, ви можете видалити його і отримати відшкодування.
+\n
+\nПобачимося :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Термін дії пробного періоду закінчується через %d день.</item>
+        <item quantity="few">Термін дії пробного періоду закінчується через %d дні.</item>
+        <item quantity="many">Термін дії пробного періоду закінчується через %d днів.</item>
+        <item quantity="other">Термін дії пробного періоду закінчується через %d днів.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

@@ -116,7 +116,7 @@
     <string name="block_unknown_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
     <string name="block_unknown_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>
@@ -850,7 +850,7 @@
     <string name="simple_music_player">Egyszerű zenelejátszó</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Egyszerű SMS üzenetküldő</string>
-    <string name="simple_thank_you">Egyszerű „köszönöm”</string>
+    <string name="simple_thank_you">Egyszerű köszönet</string>
     <string name="simple_voice_recorder">Egyszerű hangrögzítő</string>
     <string name="app_launcher_short">Alkalmazásindító</string>
     <string name="calculator_short">Számológép</string>

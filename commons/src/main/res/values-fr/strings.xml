@@ -99,6 +99,7 @@
     <string name="select_photo">Sélectionner une image</string>
     <plurals name="column_counts">
         <item quantity="one">%d colonne</item>
+        <item quantity="many">%d colonnes</item>
         <item quantity="other">%d colonnes</item>
     </plurals>
     <!-- Blocked numbers -->
@@ -194,7 +195,7 @@
     <string name="please_select_destination">Veuillez sélectionner une destination</string>
     <string name="source_and_destination_same">La source et la destination ne peuvent pas être identiques</string>
     <string name="copy_failed">Impossible de copier les fichiers</string>
-    <string name="copying">Copie en cours...</string>
+    <string name="copying">Copie en cours…</string>
     <string name="copying_success">Fichiers copiés</string>
     <string name="copying_success_one">Fichier copié avec succès</string>
     <string name="copy_move_failed">Une erreur est survenue</string>
@@ -204,7 +205,7 @@
     <string name="moving_success_partial">Certains fichiers n\'ont pas pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pas pu être copiés</string>
     <string name="no_files_selected">Aucun fichier sélectionné</string>
-    <string name="saving">Enregistrement en cours...</string>
+    <string name="saving">Enregistrement en cours…</string>
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Aucun nouvel élément trouvé</string>
@@ -245,7 +246,7 @@
     <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à \"&lt;b&gt;%s&lt;/b&gt;\" sur l\'écran suivant en appuyant sur \"&lt;b&gt;Utiliser ce dossier&lt;/b&gt;\" en bas de l\'écran.</string>
     <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur \"&lt;b&gt;Enregistrer&lt;/b&gt;\" en bas de l\'écran suivant pour créer le nouveau dossier.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
-    <string name="loading">Chargement...</string>
+    <string name="loading">Chargement…</string>
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers, elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
@@ -769,18 +770,18 @@
     <string name="november_short">Nov</string>
     <string name="december_short">Déc</string>
     <!-- in January -->
-    <string name="in_january">en Janvier</string>
-    <string name="in_february">en Février</string>
-    <string name="in_march">en Mars</string>
-    <string name="in_april">en Avril</string>
-    <string name="in_may">en Mai</string>
-    <string name="in_june">en Juin</string>
-    <string name="in_july">en Juillet</string>
-    <string name="in_august">en Août</string>
-    <string name="in_september">en Septembre</string>
-    <string name="in_october">en Octobre</string>
-    <string name="in_november">en Novembre</string>
-    <string name="in_december">en Décembre</string>
+    <string name="in_january">en janvier</string>
+    <string name="in_february">en février</string>
+    <string name="in_march">en mars</string>
+    <string name="in_april">en avril</string>
+    <string name="in_may">en mai</string>
+    <string name="in_june">en juin</string>
+    <string name="in_july">en juillet</string>
+    <string name="in_august">en août</string>
+    <string name="in_september">en septembre</string>
+    <string name="in_october">en octobre</string>
+    <string name="in_november">en novembre</string>
+    <string name="in_december">en décembre</string>
     <string name="monday">Lundi</string>
     <string name="tuesday">Mardi</string>
     <string name="wednesday">Mercredi</string>
@@ -809,9 +810,25 @@
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Bonjour,
+\n
+\nil semble que vous ayez déjà la version Pro de l\'application également. Une fois que vous en serez satisfait et que vous aurez peut-être migré vos données, vous pourrez désinstaller celle-ci pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.
+\n
+\nMerci !</string>
+    <string name="upgraded_to_pro_calendar">Bonjour,
+\n
+\nIl semble que vous ayez effectué une mise à niveau depuis la version gratuite. Si vous souhaitez migrer vos évènements stockés localement, vous devez le faire manuellement en les exportant dans un fichier .ics dans la version gratuite de l\'application et en les important ici via le menu supérieur.
+\n
+\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
+\n
+\nMerci !</string>
+    <string name="upgraded_to_pro_contacts">Bonjour,
+\n
+\nIl semble que vous ayez effectué une mise à jour depuis la version gratuite. Si vous aviez des contacts stockés sous « %s », vous devez les migrer manuellement en les exportant dans un fichier .vcf depuis la version gratuite de l\'application et en les important ici via le menu supérieur.
+\n
+\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
+\n
+\nMerci !</string>
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">À propos</string>
@@ -1075,7 +1092,7 @@
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
