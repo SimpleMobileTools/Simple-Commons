@@ -98,8 +98,7 @@
     <string name="change_cover_image">更换封面图片</string>
     <string name="select_photo">选择图片</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="other">%d 列</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
