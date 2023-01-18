@@ -829,7 +829,13 @@
 \nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
 \n
 \nMerci !</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Bonjour,
+\n
+\nIl semble que vous ayez effectué une mise à niveau depuis la version gratuite. Si vous souhaitez migrer vos notes, vous devez le faire manuellement en les exportant dans un fichier dans la version gratuite de l\'application et en les important ici via le menu supérieur.
+\n
+\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
+\n
+\nMerci !</string>
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website">Site web</string>
@@ -1089,15 +1095,23 @@
     <string name="m3u_parser_title">M3U Parser (traitement des fichiers de listes de lecture m3u)</string>
     <string name="android_lame_title">AndroidLame (encodeur mp3)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Essai expiré</string>
+    <string name="start_free_trial">Commencer un essai gratuit</string>
+    <string name="welcome_to_app_name">Bienvenue sur %s !</string>
+    <string name="trial_start_description">Merci d\'utiliser notre application. Vous pouvez utiliser cette version déverrouillée pendant <font color="#FFFFFF">%d jours</font>. Une fois la période d\'essai terminée, pensez à passer à la version Pro. Elle comporte un grand nombre de nouvelles fonctionnalités, un design moderne, aucune publicité et de nombreuses autres améliorations.
+\n
+\nVous n\'avez qu\'à payer pour cette version une fois dans votre vie et si vous n\'êtes pas satisfait, vous pouvez la désinstaller et vous faire rembourser.
+\n
+\nJ\'espère que ça vous plaira :)</string>
+    <string name="trial_end_description">Veuillez passer à la version Pro pour profiter pleinement de l\'application.
+\n
+\nVous n\'avez qu\'à payer une fois dans votre vie et si vous n\'êtes pas satisfait, vous pouvez la désinstaller et vous faire rembourser.
+\n
+\nÀ bientôt :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Votre essai expire dans %d jour.</item>
+        <item quantity="many">Votre essai expire dans %d jours.</item>
+        <item quantity="other">Votre essai expire dans %d jours.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

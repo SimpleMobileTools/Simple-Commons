@@ -243,27 +243,31 @@
     <string name="confirm_storage_access_text">Por favor escolha a pasta raíz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se não conseguir ver o cartão SD, tente isto</string>
     <string name="confirm_storage_access_android_text">Por favor conceda o acesso ao armazenamento selecionado no ecrã seguinte, premindo \'Usar esta pasta\'.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text_specific">Deve permitir o acesso a \'<b>%s</b>\' no próximo ecrã, tocando em \'<b>Utilizar esta pasta</b>\'.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Toque em \'<b>Guardar</b>\' na base do próximo ecrã para criar uma nova pasta.</string>
     <string name="confirm_selection">Confirmar seleção</string>
-    <string name="loading">Loading…</string>
-    <string name="access_storage_prompt">Por favor conceda o acesso a todos os ficheiros, sem o qual a aplicação poderá não funcionar correctamente.</string>
+    <string name="loading">A carregar…</string>
+    <string name="access_storage_prompt">Por favor conceda o acesso a todos os ficheiros porque, sem isso, a aplicação pode não funcionar corretamente.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
+        <item quantity="many">%d itens</item>
         <item quantity="other">%d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="many">%d itens</item>
+        <item quantity="other">%d itens</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">A apagar %d item</item>
+        <item quantity="many">A apagar %d itens</item>
         <item quantity="other">A apagar %d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contacto</item>
+        <item quantity="many">%d contactos</item>
         <item quantity="other">%d contactos</item>
     </plurals>
     <!-- Storages -->
@@ -276,7 +280,7 @@
     <string name="sd_card_usb_same">Não pode utilizar o mesmo caminho para o cartão SD e para a unidade USB</string>
     <string name="app_on_sd_card">Parece que a aplicação está instalada no cartão SD, o que torna o widget indisponível. Nem sequer aparecerá na lista de widgets disponíveis.
         Esta é uma limitação do sistema e, se quiser usar widgets, tem que mover a aplicação para o armazenamento interno.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Selecionou a pasta errada, selecione o caminho \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propriedades</string>
     <string name="path">Caminho</string>
@@ -296,9 +300,9 @@
     <string name="song_title">Título da faixa</string>
     <string name="gps_coordinates">Coordenadas GPS</string>
     <string name="altitude">Altitude</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Remover EXIF</string>
+    <string name="remove_exif_confirmation">Tem a certeza de que pretende remover os dados EXIF tais como coordenadas GPS, modelo do equipamento....</string>
+    <string name="exif_removed">Dados EXIF removidos com sucesso</string>
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
@@ -318,7 +322,7 @@
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem a certeza de que pretende desfazer as alterações\?</string>
-    <string name="cannot_be_undone">Esta ação não pode ser desfeita.</string>
+    <string name="cannot_be_undone">Esta ação não pode ser revertida.</string>
     <string name="save_before_closing">Existem alterações não guardadas. Pretende guardar antes de sair\?</string>
     <string name="apply_to_all_apps">Aplicar cores a todas as aplicações Simple</string>
     <string name="app_icon_color_warning">AVISO: alguns launchers não gerem correctamente a personalização dos ícones. Se o ícone desaparecer, tente iniciar a aplicação através da Google Play ou do widget. Depois de iniciar a aplicação, reverta para a cor original (#F57C00). Em último caso, poderá ser necessário reinstalar a aplicação.</string>
@@ -332,15 +336,15 @@
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
-    <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_theme">Automático</string>
+    <string name="auto_light_dark_theme">Claro/escuro automático</string>
     <string name="solarized">Solar</string>
     <string name="dark_red">Vermelho escuro</string>
     <string name="white">Branco</string>
     <string name="black_white">Preto e branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Partilhado</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Sistema</string>
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
     <string name="whats_new_disclaimer">* apenas são listadas as alterações mais significativas. Contudo, existem sempre mais revisões do que as aqui referidas</string>
@@ -360,7 +364,7 @@
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
     <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneo</string>
-    <string name="empty_and_disable_recycle_bin">Esvaziar e desativar reciclagem</string>
+    <string name="empty_and_disable_recycle_bin">Limpar e desativar reciclagem</string>
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
@@ -368,33 +372,33 @@
     <string name="shortcut">Atalho</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="create_shortcut_pro">Criar atalho (Pro)</string>
-    <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
+    <string name="add_number_to_contact">Adicionar número a um contacto</string>
     <string name="view_contact_details">Ver detalhes do contacto</string>
     <string name="call_from_sim_1">Ligar do SIM 1</string>
     <string name="call_from_sim_2">Ligar do SIM 2</string>
     <string name="toggle_filename">Mostrar/ocultar nome do ficheiro</string>
     <string name="move_to_top">Mover para cima</string>
     <string name="move_to_bottom">Mover para baixo</string>
-    <string name="pin_item">Marcar item</string>
-    <string name="unpin_item">Desmarcar item</string>
+    <string name="pin_item">Fixar item</string>
+    <string name="unpin_item">Desafixar item</string>
     <string name="send_sms">Enviar SMS</string>
-    <string name="send_email">Enviar email</string>
-    <string name="call">Call</string>
+    <string name="send_email">Enviar e-mail</string>
+    <string name="call">Ligar</string>
     <string name="contact_details">Detalhes do contacto</string>
     <string name="add_contact">Adicionar contacto</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Papel de parede</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
     <string name="size">Tamanho</string>
     <string name="last_modified">Data de modificação</string>
-    <string name="date_created">Data criada</string>
+    <string name="date_created">Data de criação</string>
     <string name="date_taken">Data de obtenção</string>
     <string name="title">Título</string>
     <string name="filename">Nome do ficheiro</string>
     <string name="extension">Extensão</string>
     <string name="random">Aleatório</string>
-    <string name="sort_randomly">Ordenação aleatória</string>
+    <string name="sort_randomly">Ordem aleatória</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
@@ -406,7 +410,7 @@
     <string name="use_custom_sorting">Ordenação personalizada</string>
     <string name="change_order">Alterar ordem</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Tem a certeza de que pretende eliminar\?</string>
+    <string name="proceed_with_deletion">Tem a certeza de que pretende continuar\?</string>
     <string name="deletion_confirmation">Tem a certeza de que pretende apagar %s\?</string>
     <string name="deletion_confirmation_short">Apagar %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
@@ -421,6 +425,7 @@
     <string name="maybe">Talvez</string>
     <plurals name="delete_warning">
         <item quantity="one">AVISO: está prestes a apagar %d pasta</item>
+        <item quantity="many">AVISO: está prestes a apagar %d pastas</item>
         <item quantity="other">AVISO: está prestes a apagar %d pastas</item>
     </plurals>
     <!-- Password protection -->
@@ -437,12 +442,12 @@
     <string name="fingerprint">Impressão digital</string>
     <string name="add_fingerprint">Adicionar impressão digital</string>
     <string name="place_finger">Coloque o dedo no sensor de impressões digitais</string>
-    <string name="open_biometric_dialog">Abrir o diálogo de verificação da identificação biométrica</string>
+    <string name="open_biometric_dialog">Abrir diálogo de verificação biométrica</string>
     <string name="authenticate">Autenticar</string>
     <string name="authentication_failed">Falha na autentificação</string>
     <string name="authentication_blocked">Autentificação bloqueada. Por favor tente mais tarde</string>
-    <string name="no_fingerprints_registered">Não tem impressões digitais registadas. Adicione a sua impressão digital nas Definições do dispositivo</string>
-    <string name="go_to_settings">Ir para Definições</string>
+    <string name="no_fingerprints_registered">Não existem impressões digitais registadas. Adicione-a nas definições do dispositivo</string>
+    <string name="go_to_settings">Abrir definições</string>
     <string name="protection_setup_successfully">Palavra-passe definida com sucesso. Deve reinstalar esta aplicação se não se lembrar da palavra-passe.</string>
     <string name="fingerprint_setup_successfully">Proteção definida com sucesso. Deve reinstalar a aplicação se ocorrerem problemas.</string>
     <string name="lock_folder">Bloquear pasta</string>
