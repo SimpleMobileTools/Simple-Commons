@@ -470,117 +470,145 @@
     <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d segundo antes</item>
+        <item quantity="many">%d segundos antes</item>
         <item quantity="other">%d segundos antes</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto antes</item>
+        <item quantity="many">%d minutos antes</item>
         <item quantity="other">%d minutos antes</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d hora antes</item>
+        <item quantity="many">%d horas antes</item>
         <item quantity="other">%d horas antes</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d dia antes</item>
+        <item quantity="many">%d dias antes</item>
         <item quantity="other">%d dias antes</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semana antes</item>
+        <item quantity="many">%d semanas antes</item>
         <item quantity="other">%d semanas antes</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mês antes</item>
+        <item quantity="many">%d meses antes</item>
         <item quantity="other">%d meses antes</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d ano antes</item>
+        <item quantity="many">%d anos antes</item>
         <item quantity="other">%d anos antes</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -592,7 +620,7 @@
     <string name="notifications_disabled">As notificações desta aplicação estão desativadas. Aceda às definições do dispositivo para as poder ativar.</string>
     <!-- Alarms -->
     <string name="alarm">Alarme</string>
-    <string name="snooze">snooze</string>
+    <string name="snooze">Snooze</string>
     <string name="dismiss">Descartar</string>
     <string name="no_reminder">Sem lembrete</string>
     <string name="at_start">No início</string>
@@ -606,15 +634,15 @@
     <string name="settings">Definições</string>
     <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="general_settings">Geral</string>
-    <string name="color_customization">Personalização da cor</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="color_customization">Personalização de cores</string>
+    <string name="improved_color_customization">Personalização de cores melhorada</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Bloqueado)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Bloqueada</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
     <string name="customize_notifications">Personalizar notificações</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
-    <string name="language">Language</string>
+    <string name="language">Idioma</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
@@ -626,9 +654,9 @@
     <string name="password_protect_file_deletion">Impedir eliminação e movimentação de ficheiros com palavra-passe</string>
     <string name="keep_last_modified">Manter data/hora da última modificação nas operações de ficheiros</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
-    <string name="prevent_phone_from_sleeping">Impedir que o ecrã se apague quando a aplicação estiver em primeiro plano</string>
+    <string name="prevent_phone_from_sleeping">Impedir que o ecrã se desligue se a aplicação estiver em primeiro plano</string>
     <string name="skip_delete_confirmation">Ignorar sempre a confirmação de eliminação de ficheiros</string>
-    <string name="enable_pull_to_refresh">Ativar puxar-para-actualizar</string>
+    <string name="enable_pull_to_refresh">Ativar puxar para recarregar</string>
     <string name="use_24_hour_time_format">Utilizar formato 24 horas</string>
     <string name="change_date_and_time_format">Alterar formato da data/hora</string>
     <string name="sunday_first">Iniciar semana ao domingo</string>
