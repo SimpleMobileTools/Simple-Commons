@@ -316,9 +316,8 @@
     <string name="cannot_be_undone">この操作は元に戻せません。</string>
     <string name="save_before_closing">保存していない変更があります。保存しますか？</string>
     <string name="apply_to_all_apps">すべてのSimple Appsに色を適用する</string>
-    <string name="app_icon_color_warning">注意: 一部のランチャーはアプリアイコンのカスタマイズを適切に処理しません。アイコンが消える場合、可能であればGoogle Playかウィジェットでアプリを起動してみてください。
-       起動したら、デフォルトのオレンジ色(#F57C00)のアイコンを元に戻します。 最悪の場合、アプリの再インストールが必要となります。</string>
-    <string name="share_colors_success">色の更新に成功しました。新しいテーマ \'Shared\' が追加されたので、今後はそちらから全てのアプリの色変更を行ってください。</string>
+    <string name="app_icon_color_warning">注意: 一部のランチャーはアプリアイコンのカスタマイズを適切に処理しません。アイコンが消えた場合は、Google Playもしくはウィジェットからアプリを起動してみてください。起動したら、アイコンをデフォルトのオレンジ色(#F57C00)に戻してください。最悪の場合、アプリの再インストールが必要となります。</string>
+    <string name="share_colors_success">色の更新に成功しました。新しいテーマ \'共有\' が追加されたので、今後はそちらから全てのアプリの色変更を行ってください。</string>
     <string name="shared_theme_note">Pro版のアプリを使用していても、技術的な理由によりSimple Thank Youが必要であることにご留意下さい。色の同期を処理します。</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -1018,7 +1017,7 @@
     <!-- Trial -->
     <string name="trial_expired">試用期間の終了</string>
     <string name="start_free_trial">試用を開始</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">試用期間はまもなく終了します。</string>
     <string name="welcome_to_app_name">ようこそ %s へ！</string>
     <string name="trial_start_description">私たちのアプリをご利用いただきありがとうございます。このアプリのロック解除版を <font color="#FFFFFF">%d 日間</font> 試用することができます。試用が終了したら、Pro版へのアップグレードをご検討ください。多くの新しい機能、モダンなデザイン、広告なし、その他多くの改善点があります。
 \n
