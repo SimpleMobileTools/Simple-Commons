@@ -674,7 +674,7 @@
     <string name="settings_imported_successfully">Definições importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por apelido</string>
     <string name="clear_cache">Limpar cache</string>
-    <string name="show_call_confirmation_dialog">Mostrar diálogo a confirmar a chamada</string>
+    <string name="show_call_confirmation_dialog">Mostrar diálogo antes de efetuar uma chamada</string>
     <!-- Setting sections -->
     <string name="visibility">Exibição</string>
     <string name="security">Segurança</string>
@@ -686,21 +686,21 @@
     <string name="text">Texto</string>
     <string name="migrating">Migração</string>
     <string name="quality">Qualidade</string>
-    <string name="main_screen">Ecrã inicial</string>
+    <string name="main_screen">Ecrã principal</string>
     <string name="thumbnails">Miniaturas</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Ver em lista</string>
     <!-- Excluding -->
     <string name="exclude">Exclusão</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Excluir pasta</string>
     <string name="excluded_folders">Pastas excluídas</string>
     <string name="excluded">(excluída)</string>
     <string name="manage_excluded_folders">Gerir pastas excluídas</string>
     <string name="remove_all">Remover todas</string>
-    <string name="remove_all_description">Remover todas as pastas de lista de exclusões\? Esta acção não apaga as pastas.</string>
+    <string name="remove_all_description">Remover todas as pastas da lista de exclusões\? Esta ação não apaga as pastas.</string>
     <string name="temporarily_show_excluded">Mostrar temporariamente itens excluídos</string>
     <string name="stop_showing_excluded">Parar de mostrar itens excluídos</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Gerir separadores a mostrar</string>
+    <string name="manage_shown_tabs">Separadores a mostrar</string>
     <string name="default_tab_to_open">Separador a mostrar ao iniciar</string>
     <string name="contacts_tab">Contactos</string>
     <string name="favorites_tab">Favoritos</string>
@@ -708,7 +708,7 @@
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">Último utilizado</string>
     <string name="files_tab">Ficheiros</string>
-    <string name="recent_files_tab">Arquivos recentes</string>
+    <string name="recent_files_tab">Ficheiros recentes</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
     <string name="restore_selected_files">Restaurar ficheiros selecionados</string>
@@ -723,6 +723,7 @@
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">A mover %d item para a reciclagem</item>
+        <item quantity="many">A mover %d itens para a reciclagem</item>
         <item quantity="other">A mover %d itens para a reciclagem</item>
     </plurals>
     <!-- Import / Export -->
@@ -735,11 +736,11 @@
     <string name="importing_some_entries_failed">Falha ao importar alguns itens</string>
     <string name="exporting_some_entries_failed">Falha ao exportar alguns itens</string>
     <string name="no_entries_for_importing">Não existem itens para importação</string>
-    <string name="no_new_entries_for_importing">Não foi encontrada nenhuma entrada para importação</string>
+    <string name="no_new_entries_for_importing">Não existem novos itens para importação</string>
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Não parece existir nenhuma unidade USB conectada ao seu dispositivo. Para se certificar de que o ficheiro aparece, deve conceder algumas permissões adicionais.</string>
+    <string name="usb_detected">Não parece existir qualquer unidade USB conectada ao dispositivo. Para se certificar de que os ficheiro aparecem, deve conceder algumas permissões.</string>
     <string name="confirm_usb_storage_access_text">Escolha a pasta raíz da unidade USB no ecrã seguinte para conceder o acesso</string>
     <string name="wrong_root_selected_usb">Escolheu uma pasta inválida, deve selecionar a pasta raíz da unidade USB</string>
     <!-- Dates -->
