@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
-    <string name="back">Back</string>
+    <string name="back">Recuar</string>
     <string name="nothing">Nada</string>
     <string name="later">Mais tarde</string>
     <string name="save_as">Guardar como</string>
@@ -10,13 +10,13 @@
     <string name="invalid_file_format">Formato de ficheiro inválido</string>
     <string name="out_of_memory_error">Memória insuficiente</string>
     <string name="an_error_occurred">Ocorreu um erro: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Erro: %s</string>
     <string name="open_with">Abrir com</string>
     <string name="edit_with">Editar com</string>
     <string name="edit">Editar</string>
     <string name="no_app_found">Nenhuma aplicação encontrada</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Navegador não encontrado</string>
+    <string name="no_email_client_found">Cliente de e-mail não encontrado</string>
     <string name="set_as">Definir como</string>
     <string name="copy_to_clipboard">Copiar para a área de transferência</string>
     <string name="copy_number_to_clipboard">Copiar número para a área de transferência</string>
@@ -36,7 +36,7 @@
     <string name="select_a_different_color">Selecione uma cor diferente</string>
     <string name="download">Descarregar</string>
     <string name="notification">Notificação</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notificações</string>
     <string name="email">E-mail</string>
     <string name="previous">Anterior</string>
     <string name="playpause">Reproduzir/Pausa</string>
@@ -45,7 +45,7 @@
     <string name="no_contacts_found">Não existem contactos</string>
     <string name="request_the_required_permissions">Pedir permissão necessária</string>
     <string name="no_access_to_contacts">Não foi possível aceder aos contactos</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">A aplicação não tem permissão para fazer chamadas. Conceda as permissões necessárias nas definições do sistema</string>
     <string name="insert_text_here">Introduza aqui o texto</string>
     <string name="call_person">Ligar a %s</string>
     <string name="zero">Zero</string>
@@ -58,19 +58,19 @@
     <string name="seven">Sete</string>
     <string name="eight">Oito</string>
     <string name="nine">Nove</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">O campo do valor não pode ficar vazio</string>
+    <string name="value">Valor</string>
+    <string name="value_cannot_be_empty">O campo Valor não pode estar vazio</string>
     <string name="create_new_contact">Criar novo contacto</string>
     <string name="add_to_existing_contact">Adicionar a um contacto existente</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Aplicação danificada</string>
+    <string name="disclaimer">Aviso legal</string>
     <string name="take_photo">Tirar foto</string>
     <string name="choose_photo">Escolher foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Escolher vídeo</string>
+    <string name="choose_contact">Escolher contacto</string>
+    <string name="choose_file">Escolher ficheiro</string>
+    <string name="record_audio">Gravar áudio</string>
+    <string name="record_video">Gravar vídeo</string>
     <!-- Events -->
     <string name="birthday">Data de nascimento</string>
     <string name="anniversary">Aniversário</string>
@@ -88,15 +88,20 @@
     <string name="change_view_type">Mudar tipo de vista</string>
     <string name="grid">Grelha</string>
     <string name="grid_pro">Grelha (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Grelha ímpar</string>
     <string name="list">Lista</string>
     <string name="increase_column_count">Aumentar número de colunas</string>
     <string name="reduce_column_count">Diminuir número de colunas</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
-    <string name="change_cover_image">Alterar imagem de capa</string>
+    <string name="column_count">Número de colunas</string>
+    <string name="portrait_column_count">Número de colunas modo vertical</string>
+    <string name="landscape_column_count">Número de colunas modo horizontal</string>
+    <string name="change_cover_image">Alterar imagem do álbum</string>
     <string name="select_photo">Selecionar foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d coluna</item>
+        <item quantity="many">%d colunas</item>
+        <item quantity="other">%d colunas</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerir números bloqueados</string>
     <string name="not_blocking_anyone">Não existem números bloqueados.</string>
@@ -106,13 +111,13 @@
     <string name="blocked_numbers">Números bloqueados</string>
     <string name="export_blocked_numbers">Exportar números bloqueados</string>
     <string name="import_blocked_numbers">Importar números bloqueados</string>
-    <string name="must_make_default_dialer">Tem de tornar esta aplicação como padrão para poder bloquear números.</string>
+    <string name="must_make_default_dialer">Tem de tornar esta aplicação como marcador padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem a certeza de que pretende bloquear \"%s\"\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_unknown_calls">Bloquear chamadas de números não existentes nos contactos</string>
+    <string name="block_unknown_messages">Bloquear mensagens de números não existentes nos contactos</string>
+    <string name="add_blocked_number_helper_text">Introduza um número ou padrão (ex: *12345*, +1*8888) para bloquear todas as chamadas e mensagens de números que coincidam com o padrão.</string>
+    <string name="must_make_default_caller_id_app">Não é possível bloquear números desconhecidos sem não conceder a permissão \"Caller ID\".</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
@@ -120,7 +125,25 @@
     <string name="remove_from_favorites">Remover dos favoritos</string>
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Introduza pelo menos 2 caracteres para iniciar a pesquisa.</string>
+    <string name="search_in_placeholder">Pesquisar em %s</string>
+    <string name="type_2_characters">Introduza, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
+    <string name="search_contacts">Pesquisar contactos</string>
+    <string name="search_favorites">Pesquisar favoritos</string>
+    <string name="search_apps">Pesquisar aplicações</string>
+    <string name="search_events">Pesquisar eventos</string>
+    <string name="search_groups">Pesquisar grupos</string>
+    <string name="search_history">Pesquisar histórico</string>
+    <string name="search_calls">Pesquisar chamadas</string>
+    <string name="search_files">Pesquisar ficheiros</string>
+    <string name="search_folders">Pesquisar pastas</string>
+    <string name="search_files_and_folders">Pesquisar ficheiros e pastas</string>
+    <string name="search_playlists">Pesquisar listas de reprodução</string>
+    <string name="search_artists">Pesquisar artistas</string>
+    <string name="search_albums">Pesquisar álbuns</string>
+    <string name="search_tracks">Pesquisar faixas</string>
+    <string name="search_text">Pesquisar texto</string>
+    <string name="search_conversations">Pesquisar conversas</string>
+    <string name="search_recordings">Pesquisar gravações</string>
     <!-- Filters -->
     <string name="filter">Filtrar</string>
     <string name="filter_pro">Filtrar (Pro)</string>
@@ -131,8 +154,8 @@
     <string name="no_contacts_permission">Requer acesso aos contactos</string>
     <string name="no_camera_permissions">Requer acesso à câmara</string>
     <string name="no_audio_permissions">Requer acesso ao áudio</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_post_notifications_permissions">Requer acesso às notificações</string>
+    <string name="no_permission">Sem permissão</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -157,11 +180,11 @@
     <string name="filename_without_txt">Nome do ficheiro (sem .txt)</string>
     <string name="filename_without_json">Nome do ficheiro (sem .json)</string>
     <string name="filename_without_zip">Nome do ficheiro (sem .zip)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Em sistemas Android 11+, já não pode ocultar ficheiros e pastas desta forma</string>
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
     <string name="move">Mover</string>
-    <string name="copy_move">Copiar/mover para</string>
+    <string name="copy_move">Copiar/Mover</string>
     <string name="copy_to">Copiar para</string>
     <string name="move_to">Mover para</string>
     <string name="source">Origem</string>
@@ -175,7 +198,7 @@
     <string name="copying">A copiar…</string>
     <string name="copying_success">Ficheiros copiados com sucesso</string>
     <string name="copying_success_one">Ficheiro copiado com sucesso</string>
-    <string name="copy_move_failed">Ocorreu um erro ao copiar</string>
+    <string name="copy_move_failed">Ocorreu um erro</string>
     <string name="moving">A mover…</string>
     <string name="moving_success">Ficheiros movidos com sucesso</string>
     <string name="moving_success_one">Ficheiro movido com sucesso</string>
@@ -187,7 +210,7 @@
     <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
     <string name="no_new_items">Não foram encontrados novos itens</string>
     <string name="no_space">Não existe espaço livre suficiente no destino.\nPrecisa de %1$s e apenas existem %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">O serviço para selecionar ficheiros e pastas não está disponível</string>
     <!-- Create new -->
     <string name="create_new">Criar</string>
     <string name="folder">Pasta</string>
@@ -207,45 +230,49 @@
     <string name="skip">Ignorar</string>
     <string name="append">Anexar \'_1\'</string>
     <string name="apply_to_all">Aplicar a todos</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="system_folder_restriction">O sistema não permite operações nesta pasta, deve escolher outra</string>
+    <string name="system_folder_copy_restriction">O sistema não permite operações de cópia nesta pasta, deve escolher outra</string>
+    <string name="rename_in_sd_card_system_restriction">O sistema não permite alterações de nome nesta pasta</string>
+    <string name="rename_internal_system_restriction">Não é possível mudar diretamente o nome de pastas no armazenamento interno, apenas pode mudar o nome de subpastas</string>
+    <string name="cannot_rename_folder">Não pode mudar o nome desta pasta</string>
     <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar ficheiro</string>
     <string name="confirm_storage_access_title">Confirmar acesso ao armazenamento externo</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Confirmar acesso à pasta</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raíz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se não conseguir ver o cartão SD, tente isto</string>
-    <string name="confirm_storage_access_android_text">Por favor conceda o acesso ao armazenamento seleccionado no ecrã seguinte ao premir \'Usar esta pasta\' abaixo.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text">Por favor conceda o acesso ao armazenamento selecionado no ecrã seguinte, premindo \'Usar esta pasta\'.</string>
+    <string name="confirm_storage_access_android_text_specific">Deve permitir o acesso a \'<b>%s</b>\' no próximo ecrã, tocando em \'<b>Utilizar esta pasta</b>\'.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Toque em \'<b>Guardar</b>\' na base do próximo ecrã para criar uma nova pasta.</string>
     <string name="confirm_selection">Confirmar seleção</string>
-    <string name="loading">Loading…</string>
-    <string name="access_storage_prompt">Por favor conceda o acesso a todos os ficheiros, sem o qual a aplicação poderá não funcionar correctamente.</string>
+    <string name="loading">A carregar…</string>
+    <string name="access_storage_prompt">Por favor conceda o acesso a todos os ficheiros porque, sem isso, a aplicação pode não funcionar corretamente.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
+        <item quantity="many">%d itens</item>
         <item quantity="other">%d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="many">%d itens</item>
+        <item quantity="other">%d itens</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">A apagar %d item</item>
+        <item quantity="many">A apagar %d itens</item>
         <item quantity="other">A apagar %d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contacto</item>
+        <item quantity="many">%d contactos</item>
         <item quantity="other">%d contactos</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Armazenamento</string>
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
@@ -253,7 +280,7 @@
     <string name="sd_card_usb_same">Não pode utilizar o mesmo caminho para o cartão SD e para a unidade USB</string>
     <string name="app_on_sd_card">Parece que a aplicação está instalada no cartão SD, o que torna o widget indisponível. Nem sequer aparecerá na lista de widgets disponíveis.
         Esta é uma limitação do sistema e, se quiser usar widgets, tem que mover a aplicação para o armazenamento interno.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Selecionou a pasta errada, selecione o caminho \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propriedades</string>
     <string name="path">Caminho</string>
@@ -273,9 +300,9 @@
     <string name="song_title">Título da faixa</string>
     <string name="gps_coordinates">Coordenadas GPS</string>
     <string name="altitude">Altitude</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Remover EXIF</string>
+    <string name="remove_exif_confirmation">Tem a certeza de que pretende remover os dados EXIF tais como coordenadas GPS, modelo do equipamento....</string>
+    <string name="exif_removed">Dados EXIF removidos com sucesso</string>
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
@@ -295,6 +322,7 @@
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem a certeza de que pretende desfazer as alterações\?</string>
+    <string name="cannot_be_undone">Esta ação não pode ser revertida.</string>
     <string name="save_before_closing">Existem alterações não guardadas. Pretende guardar antes de sair\?</string>
     <string name="apply_to_all_apps">Aplicar cores a todas as aplicações Simple</string>
     <string name="app_icon_color_warning">AVISO: alguns launchers não gerem correctamente a personalização dos ícones. Se o ícone desaparecer, tente iniciar a aplicação através da Google Play ou do widget. Depois de iniciar a aplicação, reverta para a cor original (#F57C00). Em último caso, poderá ser necessário reinstalar a aplicação.</string>
@@ -308,15 +336,15 @@
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
-    <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_theme">Automático</string>
+    <string name="auto_light_dark_theme">Claro/escuro automático</string>
     <string name="solarized">Solar</string>
     <string name="dark_red">Vermelho escuro</string>
     <string name="white">Branco</string>
     <string name="black_white">Preto e branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Partilhado</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Sistema</string>
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
     <string name="whats_new_disclaimer">* apenas são listadas as alterações mais significativas. Contudo, existem sempre mais revisões do que as aqui referidas</string>
@@ -336,41 +364,41 @@
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
     <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneo</string>
-    <string name="empty_and_disable_recycle_bin">Esvaziar e desativar reciclagem</string>
+    <string name="empty_and_disable_recycle_bin">Limpar e desativar reciclagem</string>
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
     <string name="print_pro">Imprimir (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Atalho</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="create_shortcut_pro">Criar atalho (Pro)</string>
-    <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
+    <string name="add_number_to_contact">Adicionar número a um contacto</string>
     <string name="view_contact_details">Ver detalhes do contacto</string>
     <string name="call_from_sim_1">Ligar do SIM 1</string>
     <string name="call_from_sim_2">Ligar do SIM 2</string>
     <string name="toggle_filename">Mostrar/ocultar nome do ficheiro</string>
     <string name="move_to_top">Mover para cima</string>
     <string name="move_to_bottom">Mover para baixo</string>
-    <string name="pin_item">Marcar item</string>
-    <string name="unpin_item">Desmarcar item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="pin_item">Fixar item</string>
+    <string name="unpin_item">Desafixar item</string>
+    <string name="send_sms">Enviar SMS</string>
+    <string name="send_email">Enviar e-mail</string>
+    <string name="call">Ligar</string>
+    <string name="contact_details">Detalhes do contacto</string>
+    <string name="add_contact">Adicionar contacto</string>
+    <string name="wallpapers">Papel de parede</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
     <string name="size">Tamanho</string>
     <string name="last_modified">Data de modificação</string>
-    <string name="date_created">Data criada</string>
+    <string name="date_created">Data de criação</string>
     <string name="date_taken">Data de obtenção</string>
     <string name="title">Título</string>
     <string name="filename">Nome do ficheiro</string>
     <string name="extension">Extensão</string>
     <string name="random">Aleatório</string>
-    <string name="sort_randomly">Ordenação aleatória</string>
+    <string name="sort_randomly">Ordem aleatória</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
@@ -382,8 +410,9 @@
     <string name="use_custom_sorting">Ordenação personalizada</string>
     <string name="change_order">Alterar ordem</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Tem a certeza de que pretende eliminar\?</string>
+    <string name="proceed_with_deletion">Tem a certeza de que pretende continuar\?</string>
     <string name="deletion_confirmation">Tem a certeza de que pretende apagar %s\?</string>
+    <string name="deletion_confirmation_short">Apagar %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Tem a certeza de que pretende mover %s para a reciclagem\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -396,6 +425,7 @@
     <string name="maybe">Talvez</string>
     <plurals name="delete_warning">
         <item quantity="one">AVISO: está prestes a apagar %d pasta</item>
+        <item quantity="many">AVISO: está prestes a apagar %d pastas</item>
         <item quantity="other">AVISO: está prestes a apagar %d pastas</item>
     </plurals>
     <!-- Password protection -->
@@ -412,12 +442,12 @@
     <string name="fingerprint">Impressão digital</string>
     <string name="add_fingerprint">Adicionar impressão digital</string>
     <string name="place_finger">Coloque o dedo no sensor de impressões digitais</string>
-    <string name="open_biometric_dialog">Abrir o diálogo de verificação da identificação biométrica</string>
+    <string name="open_biometric_dialog">Abrir diálogo de verificação biométrica</string>
     <string name="authenticate">Autenticar</string>
     <string name="authentication_failed">Falha na autentificação</string>
     <string name="authentication_blocked">Autentificação bloqueada. Por favor tente mais tarde</string>
-    <string name="no_fingerprints_registered">Não tem impressões digitais registadas. Adicione a sua impressão digital nas Definições do dispositivo</string>
-    <string name="go_to_settings">Ir para Definições</string>
+    <string name="no_fingerprints_registered">Não existem impressões digitais registadas. Adicione-a nas definições do dispositivo</string>
+    <string name="go_to_settings">Abrir definições</string>
     <string name="protection_setup_successfully">Palavra-passe definida com sucesso. Deve reinstalar esta aplicação se não se lembrar da palavra-passe.</string>
     <string name="fingerprint_setup_successfully">Proteção definida com sucesso. Deve reinstalar a aplicação se ocorrerem problemas.</string>
     <string name="lock_folder">Bloquear pasta</string>
@@ -428,7 +458,7 @@
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
     <string name="tomorrow">Amanhã</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Todos os dias</string>
     <string name="hide_year">Ocultar ano</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -437,6 +467,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>
@@ -555,7 +586,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">O alarme está definido para daqui a:\n%s</string>
     <string name="reminder_triggers_in">O lembrete está definido para daqui a:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Tempo restante:\n%s</string>
     <string name="alarm_warning">Certifique-se de que o alarme está a funcionar correctamente antes de o utilizar. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="notifications_disabled">As notificações desta aplicação estão desativadas. Aceda às definições do dispositivo para as poder ativar.</string>
@@ -576,6 +607,7 @@
     <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="general_settings">Geral</string>
     <string name="color_customization">Personalização da cor</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Bloqueado)</string>
     <string name="feature_locked">Locked</string>
@@ -647,7 +679,7 @@
     <string name="call_history_tab">Registo de chamadas</string>
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">Último utilizado</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">Ficheiros</string>
     <string name="recent_files_tab">Arquivos recentes</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
@@ -694,6 +726,19 @@
     <string name="october">outubro</string>
     <string name="november">novembro</string>
     <string name="december">dezembro</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">em janeiro</string>
     <string name="in_february">em fevereiro</string>
@@ -735,10 +780,10 @@
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar versão</string>
     <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã inicial.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Acerca</string>
     <string name="website">Website</string>
@@ -759,7 +804,7 @@
     <string name="help_us">Ajude-nos</string>
     <string name="social">Redes sociais</string>
     <string name="other">Outros</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Política de privacidade</string>
     <string name="version_placeholder">Versão %s</string>
     <string name="hello">Olá :)</string>
     <string name="about_footer">Feito com ❤️ na Eslovaquia</string>
@@ -973,9 +1018,21 @@
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
     <string name="sms_mms_title">SMS MMS (gestão de SMS e MMS)</string>
     <string name="apng_title">APNG Android (suporte a animação WebP)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Trial expired</string>
+    <string name="start_free_trial">Start free trial</string>
+    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
+    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Your trial expires in %d day.</item>
+        <item quantity="other">Your trial expires in %d days.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não é mantida em desenvolvimento. Pode obter a versão Pro em https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de desinstalar qualquer aplicação paga no prazo de 2 horas para ser reembolsado automaticamente. Para ser reembolsado posteriormente, contacte-nos para hello@simplemobiletools.com. Assim é mais fácil testar :)</string>

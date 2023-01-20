@@ -21,8 +21,7 @@
     <string name="copy_to_clipboard">نسخ إلى الحافظة</string>
     <string name="copy_number_to_clipboard">نسخ الرقم إلى الحافظة</string>
     <string name="value_copied_to_clipboard">تم نسخ القيمة إلى الحافظة</string>
-    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلى الحافظة:
-\n%s</string>
+    <string name="value_copied_to_clipboard_show">تم نسخ القيمة إلى الحافظة:\n%s</string>
     <string name="dial_number">رقم الطلب</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
@@ -98,6 +97,14 @@
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">تغيير صورة الغلاف</string>
     <string name="select_photo">تحديد صورة</string>
+    <plurals name="column_counts">
+        <item quantity="zero">%d عمود</item>
+        <item quantity="one">%d عمود</item>
+        <item quantity="two">%d عمودان</item>
+        <item quantity="few">%d أعمدة</item>
+        <item quantity="many">%d أعمدة</item>
+        <item quantity="other">%d أعمدة</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
     <string name="not_blocking_anyone">لم تحظر أي شخص.</string>
@@ -121,7 +128,25 @@
     <string name="remove_from_favorites">إزالة من المفضلة</string>
     <!-- Search -->
     <string name="search">بحث</string>
+    <string name="search_in_placeholder">Search in %s</string>
     <string name="type_2_characters">أكتب ما لا يقل عن حرفين لبدء البحث.</string>
+    <string name="search_contacts">Search contacts</string>
+    <string name="search_favorites">Search favorites</string>
+    <string name="search_apps">Search apps</string>
+    <string name="search_events">Search events</string>
+    <string name="search_groups">Search groups</string>
+    <string name="search_history">سجل البحث</string>
+    <string name="search_calls">Search calls</string>
+    <string name="search_files">Search files</string>
+    <string name="search_folders">Search folders</string>
+    <string name="search_files_and_folders">Search files and folders</string>
+    <string name="search_playlists">Search playlists</string>
+    <string name="search_artists">Search artists</string>
+    <string name="search_albums">Search albums</string>
+    <string name="search_tracks">Search tracks</string>
+    <string name="search_text">Search text</string>
+    <string name="search_conversations">Search conversations</string>
+    <string name="search_recordings">Search recordings</string>
     <!-- Filters -->
     <string name="filter">فلتر</string>
     <string name="filter_pro">فلتر (Pro)</string>
@@ -236,20 +261,20 @@
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="zero">%d item</item>
-        <item quantity="one">%d items</item>
-        <item quantity="two">%d items</item>
-        <item quantity="few">%d items</item>
-        <item quantity="many">%d items</item>
-        <item quantity="other">%d items</item>
+        <item quantity="zero">%d مادة</item>
+        <item quantity="one">%d مادة</item>
+        <item quantity="two">%d مادتان</item>
+        <item quantity="few">%d مواد</item>
+        <item quantity="many">%d مواد</item>
+        <item quantity="other">%d مواد</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="zero">Deleting %d item</item>
-        <item quantity="one">Deleting %d items</item>
-        <item quantity="two">Deleting %d items</item>
-        <item quantity="few">Deleting %d items</item>
-        <item quantity="many">Deleting %d items</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="zero">حذف %d المادة</item>
+        <item quantity="one">حذف %d المادة</item>
+        <item quantity="two">حذف %d المادتان</item>
+        <item quantity="few">حذف %d المواد</item>
+        <item quantity="many">حذف %d المواد</item>
+        <item quantity="other">حذف %d المواد</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -311,10 +336,11 @@
     <string name="discard">تجاهل</string>
     <string name="undo_changes">التراجع عن التغييرات</string>
     <string name="undo_changes_confirmation">هل تريد بالتاكيد التراجع عن التغييرات التي أجريتها ؟</string>
+    <string name="cannot_be_undone">لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="save_before_closing">لديك تغييرات غير محفوظة. هل تريد الحفظ قبل الخروج ؟</string>
     <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
     <string name="app_icon_color_warning">تحذير: بعض المشغّلات لا تتعامل مع تخصيص أيقونة التطبيق بشكل صحيح. في حال اختفاء الأيقونة، حاول تشغيل التطبيق من خلال Google Play أو ويدجت، إذا توفر. بمجرد تشغيله، قم فقط بتعيين الأيقونة البرتقالية الافتراضية #F57C00. قد تضطر إلى إعادة تثبيت التطبيق في أسوأ الأحوال.</string>
-    <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \ المشتركة \' ، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
+    <string name="share_colors_success">تم تحديث الألوان بنجاح. تمت إضافة سمة جديدة تسمى \'المشتركة\'، يرجى إستخدام ذلك لتحديث جميع ألوان التطبيق في المستقبل.</string>
     <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -400,6 +426,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">هل تريد بالتأكيد متابعة عملية الحذف ؟</string>
     <string name="deletion_confirmation">هل تريد بالتأكيد حذف%s ؟</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">هل تريد بالتأكيد نقل %s إلى "سلة المحذوفات" ؟</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -411,12 +438,12 @@
     <string name="no">لا</string>
     <string name="maybe">أحياناً</string>
     <plurals name="delete_warning">
-        <item quantity="zero">WARNING: You are deleting %d folder</item>
-        <item quantity="one">WARNING: You are deleting %d folders</item>
-        <item quantity="two">WARNING: You are deleting %d folders</item>
-        <item quantity="few">WARNING: You are deleting %d folders</item>
-        <item quantity="many">WARNING: You are deleting %d folders</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="zero">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="one">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="two">تحذير: أنت تحذف %d مجلدان</item>
+        <item quantity="few">تحذير: أنت تحذف %d مجلدات</item>
+        <item quantity="many">تحذير: أنت تحذف %d مجلد</item>
+        <item quantity="other">تحذير: أنت تحذف %d مجلد</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">رمز الـ PIN</string>
@@ -457,37 +484,38 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
-        <item quantity="zero">%d second</item>
-        <item quantity="one">%d seconds</item>
-        <item quantity="two">%d seconds</item>
-        <item quantity="few">%d seconds</item>
-        <item quantity="many">%d seconds</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="zero">%d ثانية</item>
+        <item quantity="one">%d ثانية</item>
+        <item quantity="two">%d ثانيتان</item>
+        <item quantity="few">%d ثواني</item>
+        <item quantity="many">%d ثانية</item>
+        <item quantity="other">%d ثانية</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="zero">%d minute</item>
-        <item quantity="one">%d minutes</item>
-        <item quantity="two">%d minutes</item>
-        <item quantity="few">%d minutes</item>
-        <item quantity="many">%d minutes</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="zero">%d دقيقة</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="two">%d دقيقتان</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقة</item>
+        <item quantity="other">%d دقيقة</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="zero">%d hour</item>
-        <item quantity="one">%d hours</item>
-        <item quantity="two">%d hours</item>
-        <item quantity="few">%d hours</item>
-        <item quantity="many">%d hours</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="zero">%d ساعة</item>
+        <item quantity="one">%d ساعة</item>
+        <item quantity="two">%d ساعتان</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعة</item>
+        <item quantity="other">%d ساعة</item>
     </plurals>
     <plurals name="days">
-        <item quantity="zero">%d day</item>
-        <item quantity="one">%d days</item>
-        <item quantity="two">%d days</item>
-        <item quantity="few">%d days</item>
-        <item quantity="many">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">%d يوم</item>
+        <item quantity="two">%d يومان</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يوم</item>
+        <item quantity="other">%d يوم</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="zero">%d week</item>
@@ -708,11 +736,12 @@
     <string name="purchase_simple_thank_you">شراء تطبيق (Simple Thank You)</string>
     <string name="general_settings">عام</string>
     <string name="color_customization">تخصيص الألوان</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">تخصيص الألوان</string>
     <string name="customize_colors_locked">تخصيص الألوان (مقفل)</string>
     <string name="feature_locked">مقفل</string>
     <string name="customize_widget_colors">تخصيص ألوان الويدجت</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">تخصيص اﻹشعارات</string>
     <string name="use_english_language">استخدام اللغة الإنجليزية</string>
     <string name="language">اللغة</string>
     <string name="show_hidden_items">إظهار العناصر المخفية</string>
@@ -773,12 +802,12 @@
     <string name="stop_showing_excluded">إيقاف عرض الملفات المستبعدة</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">إدارة التابات المعروضة</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
+    <string name="default_tab_to_open">اختر ما يُفتح عند بدء التطبيق</string>
+    <string name="contacts_tab">جهات الاتصال</string>
     <string name="favorites_tab">المفضّلات</string>
-    <string name="call_history_tab">Call History</string>
+    <string name="call_history_tab">سجل المكالمات</string>
     <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="last_used_tab">آخر استخدام</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
@@ -830,6 +859,19 @@
     <string name="october">أكتوبر</string>
     <string name="november">نوفمبر</string>
     <string name="december">ديسمبر</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">في يناير</string>
     <string name="in_february">في فبراير</string>
@@ -871,10 +913,10 @@
     <string name="more_info">المزيد من المعلومات</string>
     <string name="upgrade">ترقية</string>
     <string name="upgrade_calendar">يجب عليك ترحيل الأحداث المخزنة محلياً يدوياً عن طريق التصدير في ملف .ics ، ثم الإستيراد. يمكنك العثور على أزرار التصدير / الإستيراد في قائمة الشاشة الرئيسية.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">حول</string>
     <string name="website">Website</string>
@@ -1011,7 +1053,7 @@
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">الترجمة</string>
-    <string name="development">Development</string>
+    <string name="development">التطوير</string>
     <string name="other_help">Other help</string>
     <string name="contributors_label">
         <![CDATA[
@@ -1088,7 +1130,7 @@
     <string name="why_upgrade_new_widgets">New widgets</string>
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_font_size_customization">تخصيص حجم الخط</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
@@ -1138,9 +1180,25 @@
     <string name="audio_record_view_title">عرض سجل الصوت (التصور الصوتي)</string>
     <string name="sms_mms_title">SMS MMS (معالجة الرسائل القصيرة ورسائل الوسائط المتعددة)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Trial expired</string>
+    <string name="start_free_trial">Start free trial</string>
+    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
+    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="zero">Your trial expires in %d day.</item>
+        <item quantity="one">Your trial expires in %d days.</item>
+        <item quantity="two">Your trial expires in %d days.</item>
+        <item quantity="few">Your trial expires in %d days.</item>
+        <item quantity="many">Your trial expires in %d days.</item>
+        <item quantity="other">Your trial expires in %d days.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على hello@simplemobiletools.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>

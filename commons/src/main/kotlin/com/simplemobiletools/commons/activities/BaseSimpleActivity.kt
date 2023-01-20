@@ -1,5 +1,7 @@
 package com.simplemobiletools.commons.activities
 
+import android.animation.ArgbEvaluator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
@@ -8,6 +10,7 @@ import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -23,13 +26,19 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
-import com.google.android.material.appbar.MaterialToolbar
+import androidx.core.view.ScrollingView
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.NestedScrollView
+import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.*
@@ -44,15 +53,23 @@ import java.io.OutputStream
 import java.util.regex.Pattern
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
+    var materialScrollColorAnimation: ValueAnimator? = null
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
     var showTransparentTop = false
-    var showTransparentNavigation = false
+    var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
     var checkedDocumentPath = ""
+    var currentScrollY = 0
     var configItemsToExport = LinkedHashMap<String, Any>()
 
+    private var mainCoordinatorLayout: CoordinatorLayout? = null
+    private var nestedView: View? = null
+    private var scrollingView: ScrollingView? = null
+    private var toolbar: Toolbar? = null
+    private var useTransparentNavigation = false
+    private var useTopSearchMenu = false
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
@@ -104,7 +121,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
-        } else {
+        } else if (!isMaterialActivity) {
             val color = if (baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_status_bar_color)
             } else {
@@ -115,13 +132,24 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         updateRecentsAppIcon()
-        updateNavigationBarColor()
+
+        var navBarColor = getProperBackgroundColor()
+        if (isMaterialActivity) {
+            navBarColor = navBarColor.adjustAlpha(HIGHER_ALPHA)
+        }
+
+        updateNavigationBarColor(navBarColor)
     }
 
     override fun onDestroy() {
         super.onDestroy()
         funAfterSAFPermission = null
         actionOnPermission = null
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        handleNavigationAndScrolling()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -150,12 +178,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color
 
-        if (isMarshmallowPlus()) {
-            if (color.getContrastColor() == 0xFF333333.toInt()) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            }
+        if (color.getContrastColor() == DARK_GREY) {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        } else {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         }
     }
 
@@ -164,32 +190,193 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
 
-    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor, isColorPreview: Boolean = false) {
-        if (showTransparentNavigation) {
-            return
-        }
+    fun updateNavigationBarColor(color: Int) {
+        window.navigationBarColor = color
+        updateNavigationBarButtons(color)
+    }
 
-        if (baseConfig.isUsingSystemTheme && !isColorPreview) {
-            val navBarColor = getBottomNavigationBackgroundColor()
-            window.navigationBarColor = navBarColor
-            if (navBarColor.getContrastColor() == 0xFF333333.toInt()) {
+    fun updateNavigationBarButtons(color: Int) {
+        if (isOreoPlus()) {
+            if (color.getContrastColor() == DARK_GREY) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
             }
-        } else if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
-            try {
-                val colorToUse = if (color == -2) -1 else color
-                window.navigationBarColor = colorToUse
+        }
+    }
 
-                if (isOreoPlus()) {
-                    if (colorToUse.getContrastColor() == 0xFF333333.toInt()) {
-                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-                    } else {
-                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-                    }
+    // use translucent navigation bar, set the background color to action and status bars
+    fun updateMaterialActivityViews(
+        mainCoordinatorLayout: CoordinatorLayout?,
+        nestedView: View?,
+        useTransparentNavigation: Boolean,
+        useTopSearchMenu: Boolean
+    ) {
+        this.mainCoordinatorLayout = mainCoordinatorLayout
+        this.nestedView = nestedView
+        this.useTransparentNavigation = useTransparentNavigation
+        this.useTopSearchMenu = useTopSearchMenu
+        handleNavigationAndScrolling()
+
+        val backgroundColor = getProperBackgroundColor()
+        updateStatusbarColor(backgroundColor)
+        updateActionbarColor(backgroundColor)
+    }
+
+    private fun handleNavigationAndScrolling() {
+        if (useTransparentNavigation) {
+            if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+                updateTopBottomInsets(statusBarHeight, navigationBarHeight)
+                onApplyWindowInsets {
+                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
+                    updateTopBottomInsets(insets.top, insets.bottom)
                 }
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+                updateTopBottomInsets(0, 0)
+            }
+        }
+    }
+
+    private fun updateTopBottomInsets(statusBarHeight: Int, navigationBarHeight: Int) {
+        nestedView?.run {
+            setPadding(paddingLeft, paddingTop, paddingRight, navigationBarHeight)
+        }
+        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+    }
+
+    // colorize the top toolbar and statusbar at scrolling down a bit
+    fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar) {
+        this.scrollingView = scrollingView
+        this.toolbar = toolbar
+        if (scrollingView is RecyclerView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                val newScrollY = scrollingView.computeVerticalScrollOffset()
+                scrollingChanged(newScrollY, currentScrollY)
+                currentScrollY = newScrollY
+            }
+        } else if (scrollingView is NestedScrollView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                scrollingChanged(scrollY, oldScrollY)
+            }
+        }
+    }
+
+    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int) {
+        if (newScrollY > 0 && oldScrollY == 0) {
+            val colorFrom = window.statusBarColor
+            val colorTo = getColoredMaterialStatusBarColor()
+            animateTopBarColors(colorFrom, colorTo)
+        } else if (newScrollY == 0 && oldScrollY > 0) {
+            val colorFrom = window.statusBarColor
+            val colorTo = getRequiredStatusBarColor()
+            animateTopBarColors(colorFrom, colorTo)
+        }
+    }
+
+    fun animateTopBarColors(colorFrom: Int, colorTo: Int) {
+        if (toolbar == null) {
+            return
+        }
+
+        materialScrollColorAnimation?.end()
+        materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+        materialScrollColorAnimation!!.addUpdateListener { animator ->
+            val color = animator.animatedValue as Int
+            if (toolbar != null) {
+                updateTopBarColors(toolbar!!, color)
+            }
+        }
+
+        materialScrollColorAnimation!!.start()
+    }
+
+    fun getRequiredStatusBarColor(): Int {
+        return if ((scrollingView is RecyclerView || scrollingView is NestedScrollView) && scrollingView?.computeVerticalScrollOffset() == 0) {
+            getProperBackgroundColor()
+        } else {
+            getColoredMaterialStatusBarColor()
+        }
+    }
+
+    fun updateTopBarColors(toolbar: Toolbar, color: Int) {
+        val contrastColor = if (useTopSearchMenu) {
+            getProperBackgroundColor().getContrastColor()
+        } else {
+            color.getContrastColor()
+        }
+
+        if (!useTopSearchMenu) {
+            updateStatusbarColor(color)
+            toolbar.setBackgroundColor(color)
+            toolbar.setTitleTextColor(contrastColor)
+            toolbar.navigationIcon?.applyColorFilter(contrastColor)
+            toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
+        }
+
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
+
+        val menu = toolbar.menu
+        for (i in 0 until menu.size()) {
+            try {
+                menu.getItem(i)?.icon?.setTint(contrastColor)
             } catch (ignored: Exception) {
+            }
+        }
+    }
+
+    fun updateStatusBarOnPageChange() {
+        if (scrollingView is RecyclerView || scrollingView is NestedScrollView) {
+            val scrollY = scrollingView!!.computeVerticalScrollOffset()
+            val colorFrom = window.statusBarColor
+            val colorTo = if (scrollY > 0) {
+                getColoredMaterialStatusBarColor()
+            } else {
+                getRequiredStatusBarColor()
+            }
+            animateTopBarColors(colorFrom, colorTo)
+            currentScrollY = scrollY
+        }
+    }
+
+    fun setupToolbar(
+        toolbar: Toolbar,
+        toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
+        statusBarColor: Int = getRequiredStatusBarColor(),
+        searchMenuItem: MenuItem? = null
+    ) {
+        val contrastColor = statusBarColor.getContrastColor()
+        if (toolbarNavigationIcon != NavigationIcon.None) {
+            val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+        }
+
+        toolbar.setNavigationOnClickListener {
+            hideKeyboard()
+            finish()
+        }
+
+        updateTopBarColors(toolbar, statusBarColor)
+
+        if (!useTopSearchMenu) {
+            searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
+                applyColorFilter(contrastColor)
+            }
+
+            searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
+                setTextColor(contrastColor)
+                setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+                hint = "${getString(R.string.search)}…"
+
+                if (isQPlus()) {
+                    textCursorDrawable = null
+                }
+            }
+
+            // search underline
+            searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
+                background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
             }
         }
     }
@@ -211,7 +398,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false) {
+    fun updateMenuItemColors(menu: Menu?, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false) {
         if (menu == null) {
             return
         }
@@ -226,51 +413,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 menu.getItem(i)?.icon?.setTint(color)
             } catch (ignored: Exception) {
             }
-        }
-    }
-
-    fun setupToolbar(
-        toolbar: MaterialToolbar,
-        toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
-        statusBarColor: Int = getProperStatusBarColor(),
-        searchMenuItem: MenuItem? = null
-    ) {
-        val contrastColor = statusBarColor.getContrastColor()
-        toolbar.setBackgroundColor(statusBarColor)
-        toolbar.setTitleTextColor(contrastColor)
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
-
-        if (toolbarNavigationIcon != NavigationIcon.None) {
-            val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
-            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
-        }
-
-        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, statusBarColor)
-        toolbar.setNavigationOnClickListener {
-            hideKeyboard()
-            finish()
-        }
-
-        // this icon is used at closing search
-        toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
-
-        searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
-            applyColorFilter(contrastColor)
-        }
-
-        searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
-            setTextColor(contrastColor)
-            setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
-            hint = "${getString(R.string.search)}…"
-
-            if (isQPlus()) {
-                textCursorDrawable = null
-            }
-        }
-
-        // search underline
-        searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
-            background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
         }
     }
 
@@ -833,7 +975,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        toast(R.string.no_post_notifications_permissions)
+                        toast(R.string.no_post_notifications_permissions, Toast.LENGTH_LONG)
                     }
                 }
             }

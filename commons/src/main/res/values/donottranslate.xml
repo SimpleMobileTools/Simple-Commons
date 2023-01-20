@@ -3,7 +3,7 @@
     <string name="pro">Pro</string>
     <string name="simple_commons">Simple Commons</string>
     <string name="progress">%1$s / %2$s</string>
-    <string name="donate_url">https://simplemobiletools.com/donate</string>
+    <string name="donate_url">https://www.simplemobiletools.com/donate#paypal</string>
     <string name="thank_you_url">https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou</string>
     <string name="a_m">am</string>
     <string name="p_m">pm</string>
@@ -19,7 +19,7 @@
     <string name="github">GitHub</string>
 
     <!-- Contributors -->
-    <string name="contributors_developers">Aga-C, AlbertoPellitteri, Alfavio, connyduck, correia55, dagkalis, DaPa, ForgottenUmbrella, KryptKode, qwertyfinger</string>
+    <string name="contributors_developers">Aga-C, AlbertoPellitteri, Alfavio, connyduck, correia55, dagkalis, DaPa, ForgottenUmbrella, KryptKode, Naveen3Singh, qwertyfinger</string>
     <string name="contributors_other_help"></string>
     <string name="translators_arabic">karmac2015, unofficial-hima</string>
     <string name="translators_azerbaijani">Gozzwip</string>
@@ -124,8 +124,8 @@
     <string name="sms_mms_url">https://github.com/klinker41/android-smsmms</string>
     <string name="apng_text">Copyright (C) 2019 Zhou Pengfei\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
     <string name="apng_url">https://github.com/penfeizhou/APNG4Android</string>
-    <string name="pdf_viewer_text">Copyright (C) 2017 Bartosz Schiller\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
-    <string name="pdf_viewer_url">https://github.com/barteksc/AndroidPdfViewer</string>
+    <string name="pdf_view_pager_text">Copyright 2016 Olmo Gallegos Hernández\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="pdf_view_pager_url">https://github.com/voghDev/PdfViewPager</string>
     <string name="m3u_parser_text">MIT License\n\nCopyright (c) 2022 Björn Petersen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
     <string name="m3u_parser_url">https://github.com/BjoernPetersen/m3u-parser</string>
     <string name="android_lame_text">Copyright (C) 2015 Naman Dwivedi\n\nThis is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this app. If not, see https://www.gnu.org/licenses/.</string>
@@ -147,6 +147,21 @@
         <item>@string/october</item>
         <item>@string/november</item>
         <item>@string/december</item>
+    </string-array>
+
+    <string-array name="months_short">
+        <item>@string/january_short</item>
+        <item>@string/february_short</item>
+        <item>@string/march_short</item>
+        <item>@string/april_short</item>
+        <item>@string/may_short</item>
+        <item>@string/june_short</item>
+        <item>@string/july_short</item>
+        <item>@string/august_short</item>
+        <item>@string/september_short</item>
+        <item>@string/october_short</item>
+        <item>@string/november_short</item>
+        <item>@string/december_short</item>
     </string-array>
 
     <string-array name="in_months">

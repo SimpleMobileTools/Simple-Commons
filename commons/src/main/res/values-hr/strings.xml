@@ -97,6 +97,11 @@
     <string name="landscape_column_count">Broj vodoravnih stupaca</string>
     <string name="change_cover_image">Promjeni naslovnu sliku</string>
     <string name="select_photo">Odaberi sliku</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d stupac</item>
+        <item quantity="few">%d stupca</item>
+        <item quantity="other">%d stupaca</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
     <string name="not_blocking_anyone">Ne blokirate nikoga.</string>
@@ -120,7 +125,25 @@
     <string name="remove_from_favorites">Ukloni iz favorita</string>
     <!-- Search -->
     <string name="search">Traži</string>
+    <string name="search_in_placeholder">Search in %s</string>
     <string name="type_2_characters">Upiši najmanje 2 znaka za početak pretraživanja.</string>
+    <string name="search_contacts">Pretraži kontakte</string>
+    <string name="search_favorites">Pretraži favorite</string>
+    <string name="search_apps">Pretraži aplikacije</string>
+    <string name="search_events">Pretraži događaje</string>
+    <string name="search_groups">Pretraži grupe</string>
+    <string name="search_history">Pretraži povijest</string>
+    <string name="search_calls">Pretraži pozive</string>
+    <string name="search_files">Pretraži datoteke</string>
+    <string name="search_folders">Pretraži mape</string>
+    <string name="search_files_and_folders">Pretraži datoteke i mape</string>
+    <string name="search_playlists">Pretraži playliste</string>
+    <string name="search_artists">Pretraži izvođače</string>
+    <string name="search_albums">Pretraži albume</string>
+    <string name="search_tracks">Pretraži pjesme</string>
+    <string name="search_text">Pretraži tekst</string>
+    <string name="search_conversations">Pretraži razgovore</string>
+    <string name="search_recordings">Pretraži snimanja</string>
     <!-- Filters -->
     <string name="filter">Filtar</string>
     <string name="filter_pro">Filtar (Pro)</string>
@@ -306,6 +329,7 @@
     <string name="discard">Odbaci</string>
     <string name="undo_changes">Poništi promjene</string>
     <string name="undo_changes_confirmation">Jeste li sigurni da želite poništiti Vaše promjene?</string>
+    <string name="cannot_be_undone">Ovo je nepovratna radnja.</string>
     <string name="save_before_closing">Imate ne spremljene promjene. Želite li spremiti prije izlaska?</string>
     <string name="apply_to_all_apps">Primjeni boje na sve Jednostavne Aplikacije</string>
     <string name="app_icon_color_warning">UPOZORENJE: neki pokretači ne rukuju ispravno s prilagodbama ikona aplikacija. Ako ikona nestane, pokušajte pokrenuti aplikaciju iz trgovine Google Play ili widgeta, ako je dostupna.
@@ -396,6 +420,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Jeste li sigurni da želite nastaviti s brisanjem?</string>
     <string name="deletion_confirmation">Jeste li sigurni da želite izbrisati %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Jeste li sigurni da se želite premjestiti %s u koš za smeće?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -450,6 +475,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekunde</item>
@@ -617,6 +643,7 @@
     <string name="purchase_simple_thank_you">Kupite Jednostavno Hvala</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Color customization</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">Prilagodi boje</string>
     <string name="customize_colors_locked">Prilagodi boje (Locked)</string>
     <string name="feature_locked">Locked</string>
@@ -736,6 +763,19 @@
     <string name="october">Listopad</string>
     <string name="november">Studeni</string>
     <string name="december">Prosinac</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">u Siječnju</string>
     <string name="in_february">u Veljači</string>
@@ -777,10 +817,10 @@
     <string name="more_info">Više informacija</string>
     <string name="upgrade">Nadogradi</string>
     <string name="upgrade_calendar">Lokalno pohranjene događaje morate migrirati ručno putem izvoza u .ics datoteku, a zatim uvoza. Možete pronaći oba gumba za izvoz/uvoz na izborniku glavnog zaslona.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">O nama</string>
     <string name="website">Website</string>
@@ -856,11 +896,11 @@
     <string name="simple_gallery">Jednostavna galerija</string>
     <string name="simple_keyboard">Jednostavna tipkovnica</string>
     <string name="simple_launcher">Simple Launcher</string>
-    <string name="simple_music_player">Jednostavan glazbeni player</string>
+    <string name="simple_music_player">Jednostavan player glazbe</string>
     <string name="simple_notes">Jednostavne bilješke</string>
-    <string name="simple_sms_messenger">Jadnostavan SMS messenger</string>
+    <string name="simple_sms_messenger">Jednostavan SMS messenger</string>
     <string name="simple_thank_you">Jednostavno hvala</string>
-    <string name="simple_voice_recorder">Jednostavno snimanje glasa</string>
+    <string name="simple_voice_recorder">Jednostavan diktafon</string>
     <string name="app_launcher_short">Pokretač aplikacija</string>
     <string name="calculator_short">Kalkulator</string>
     <string name="calendar_short">Kalendar</string>
@@ -874,11 +914,11 @@
     <string name="gallery_short">Galerija</string>
     <string name="keyboard_short">Tipkovnica</string>
     <string name="launcher_short">Launcher</string>
-    <string name="music_player_short">Glazbeni svirač</string>
+    <string name="music_player_short">Player glazbe</string>
     <string name="notes_short">Bilješke</string>
     <string name="sms_messenger_short">SMS messenger</string>
     <string name="thank_you_short">Hvala</string>
-    <string name="voice_recorder_short">Snimanje glasa</string>
+    <string name="voice_recorder_short">Diktafon</string>
     <string name="sideloaded_app">Čini se da je verzija aplikacije oštećena. Preuzmi izvornu verziju &lt;a href=%s&gt;ovdje&lt;/a&gt;.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Često postavljenja pitanja</string>
@@ -1031,7 +1071,7 @@
     <string name="autofittextview_title">AutoFitTextView (mijenjanje veličine teksta)</string>
     <string name="robolectric_title">Robolectric (framework za testiranje)</string>
     <string name="espresso_title">Espresso (pomoćnik testiranja)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="gson_title">Gson (JSON analizator)</string>
     <string name="leak_canary_title">Leak Canary (detektor propuštanja memorije)</string>
     <string name="number_picker_title">Number Picker (prilagodljiv birač brojeva)</string>
     <string name="exoplayer_title">ExoPlayer (video player)</string>
@@ -1044,9 +1084,21 @@
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Trial expired</string>
+    <string name="start_free_trial">Start free trial</string>
+    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
+    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Your trial expires in %d day.</item>
+        <item quantity="other">Your trial expires in %d days.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>

@@ -38,6 +38,7 @@ import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
@@ -98,7 +99,7 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
-fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
+fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
     BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
@@ -930,10 +931,22 @@ val Context.realScreenSize: Point
         return size
     }
 
+fun Context.isUsingGestureNavigation(): Boolean {
+    return try {
+        val resourceId = resources.getIdentifier("config_navBarInteractionMode", "integer", "android")
+        if (resourceId > 0) {
+            resources.getInteger(resourceId) == 2
+        } else {
+            false
+        }
+    } catch (e: Exception) {
+        false
+    }
+}
+
 fun Context.getCornerRadius() = resources.getDimension(R.dimen.rounded_corner_radius_small)
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
-@TargetApi(Build.VERSION_CODES.M)
 fun Context.isDefaultDialer(): Boolean {
     return if (!packageName.startsWith("com.simplemobiletools.contacts") && !packageName.startsWith("com.simplemobiletools.dialer")) {
         true
@@ -941,7 +954,7 @@ fun Context.isDefaultDialer(): Boolean {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
-        isMarshmallowPlus() && telecomManager.defaultDialerPackage == packageName
+        telecomManager.defaultDialerPackage == packageName
     }
 }
 
@@ -1039,11 +1052,16 @@ fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
     }
 }
 
-fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
+fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawableId: Int? = null) {
     val color = if (isActive) {
         getProperPrimaryColor()
     } else {
         getProperTextColor()
+    }
+
+    if (drawableId != null) {
+        val drawable = ResourcesCompat.getDrawable(resources, drawableId, theme)
+        view?.findViewById<ImageView>(R.id.tab_item_icon)?.setImageDrawable(drawable)
     }
 
     view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)

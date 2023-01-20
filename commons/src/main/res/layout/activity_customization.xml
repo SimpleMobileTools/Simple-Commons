@@ -5,27 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/customization_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/customization_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/customization_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:menu="@menu/menu_customization"
-            app:title="@string/customize_colors"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:menu="@menu/menu_customization"
+        app:title="@string/customize_colors"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/customization_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/customization_holder"
@@ -206,38 +201,10 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/customization_navigation_bar_color_holder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/customization_app_icon_color_holder"
-                android:layout_marginTop="@dimen/medium_margin"
-                android:background="?attr/selectableItemBackground"
-                android:padding="@dimen/activity_margin">
-
-                <com.simplemobiletools.commons.views.MyTextView
-                    android:id="@+id/customization_navigation_bar_color_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="@dimen/medium_margin"
-                    android:paddingRight="@dimen/medium_margin"
-                    android:text="@string/bottom_navigation_bar_color" />
-
-                <ImageView
-                    android:id="@+id/customization_navigation_bar_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/medium_margin"
-                    android:clickable="false" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/apply_to_all_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/customization_navigation_bar_color_holder"
+                android:layout_below="@+id/customization_app_icon_color_holder"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="@dimen/big_margin">
 

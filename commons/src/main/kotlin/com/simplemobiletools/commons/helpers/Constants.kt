@@ -29,7 +29,6 @@ const val BLOCKED_NUMBERS_EXPORT_EXTENSION = ".txt"
 const val NOMEDIA = ".nomedia"
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
-const val INVALID_NAVIGATION_BAR_COLOR = -1
 const val CHOPPED_LIST_DEFAULT_SIZE = 50
 const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
@@ -47,6 +46,10 @@ val DARK_GREY = 0xFF333333.toInt()
 const val LOWER_ALPHA = 0.25f
 const val MEDIUM_ALPHA = 0.5f
 const val HIGHER_ALPHA = 0.75f
+
+// alpha values on a scale 0 - 255
+const val LOWER_ALPHA_INT = 30
+const val MEDIUM_ALPHA_INT = 90
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -81,15 +84,12 @@ const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
 const val ACCENT_COLOR = "accent_color"
 const val APP_ICON_COLOR = "app_icon_color"
-const val NAVIGATION_BAR_COLOR = "navigation_bar_color"
-const val DEFAULT_NAVIGATION_BAR_COLOR = "default_navigation_bar_color"
 const val LAST_HANDLED_SHORTCUT_COLOR = "last_handled_shortcut_color"
 const val LAST_ICON_COLOR = "last_icon_color"
 const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 const val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
 const val CUSTOM_ACCENT_COLOR = "custom_accent_color"
-const val CUSTOM_NAVIGATION_BAR_COLOR = "custom_navigation_bar_color"
 const val CUSTOM_APP_ICON_COLOR = "custom_app_icon_color"
 const val WIDGET_BG_COLOR = "widget_bg_color"
 const val WIDGET_TEXT_COLOR = "widget_text_color"
@@ -163,7 +163,7 @@ const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
-internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
 
 // phone number/email types
 const val CELL = "CELL"
@@ -213,7 +213,7 @@ const val LICENSE_EVENT_BUS = 33554432L
 const val LICENSE_AUDIO_RECORD_VIEW = 67108864L
 const val LICENSE_SMS_MMS = 134217728L
 const val LICENSE_APNG = 268435456L
-const val LICENSE_PDF_VIEWER = 536870912L
+const val LICENSE_PDF_VIEW_PAGER = 536870912L
 const val LICENSE_M3U_PARSER = 1073741824L
 const val LICENSE_ANDROID_LAME = 2147483648L
 
@@ -411,9 +411,6 @@ fun ensureBackgroundThread(callback: () -> Unit) {
         callback()
     }
 }
-
-@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.M)
-fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.N)
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N

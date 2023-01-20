@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/license_coordinator"
+    android:id="@+id/licenses_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/license_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/licenses_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/license_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:title="@string/third_party_licences"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:title="@string/third_party_licences"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/license_nested_scrollview"
+        android:id="@+id/licenses_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:scrollbars="none">
 
         <LinearLayout
             android:id="@+id/licenses_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="@dimen/medium_margin"
-            android:paddingTop="@dimen/medium_margin"
-            android:paddingEnd="@dimen/medium_margin">
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:orientation="vertical">
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -97,6 +97,11 @@
     <string name="landscape_column_count">Recuento de columnas apaisadas</string>
     <string name="change_cover_image">Cambiar la imagen de la portada</string>
     <string name="select_photo">Seleccione Foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">Columna %d</item>
+        <item quantity="many">Columnas %d</item>
+        <item quantity="other">Columnas %d</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
     <string name="not_blocking_anyone">Aún no has bloqueado a nadie.</string>
@@ -120,7 +125,25 @@
     <string name="remove_from_favorites">Eliminar de favoritos</string>
     <!-- Search -->
     <string name="search">Buscar</string>
+    <string name="search_in_placeholder">Buscar en %s</string>
     <string name="type_2_characters">Escribe por lo menos dos caracteres para iniciar la búsqueda.</string>
+    <string name="search_contacts">Buscar los contactos</string>
+    <string name="search_favorites">Buscar los favoritos</string>
+    <string name="search_apps">Buscar las aplicaciones</string>
+    <string name="search_events">Buscar los eventos</string>
+    <string name="search_groups">Buscar los grupos</string>
+    <string name="search_history">Historial de las búsquedas</string>
+    <string name="search_calls">Buscar las llamadas</string>
+    <string name="search_files">Buscar los archivos</string>
+    <string name="search_folders">Buscar las carpetas</string>
+    <string name="search_files_and_folders">Buscar los archivos y las carpetas</string>
+    <string name="search_playlists">Buscar las listas de reproducción</string>
+    <string name="search_artists">Buscar los artistas</string>
+    <string name="search_albums">Buscar los álbumes</string>
+    <string name="search_tracks">Buscar las pistas</string>
+    <string name="search_text">Buscar el texto</string>
+    <string name="search_conversations">Buscar las conversaciones</string>
+    <string name="search_recordings">Buscar las grabaciones</string>
     <!-- Filters -->
     <string name="filter">Filtrar</string>
     <string name="filter_pro">Filtrar (Pro)</string>
@@ -299,6 +322,7 @@
     <string name="discard">Deshacer</string>
     <string name="undo_changes">Deshacer cambios</string>
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
+    <string name="cannot_be_undone">Esta acción no se puede deshacer.</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
     <string name="app_icon_color_warning">ADVERTENCIA: Algunos launchers no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
@@ -389,6 +413,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Estás seguro de que quieres proceder a la eliminación\?</string>
     <string name="deletion_confirmation">¿Estas seguro que quieres borrar %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">¿Estás seguro de que quieres mover %s a la papelera de reciclaje?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -443,6 +468,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="many">%d segundos</item>
@@ -611,6 +637,7 @@
     <string name="purchase_simple_thank_you">Comprar Simple Gracias</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Personalización del color</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="customize_colors_locked">Personalizar colores (Bloqueado)</string>
     <string name="feature_locked">Bloqueado</string>
@@ -668,7 +695,7 @@
     <string name="exclude">Excluir</string>
     <string name="exclude_folder">Excluir la carpeta</string>
     <string name="excluded_folders">Carpetas excluidas</string>
-    <string name="excluded">(Excluido)</string>
+    <string name="excluded">(no incluido)</string>
     <string name="manage_excluded_folders">Gestionar carpetas excluidas</string>
     <string name="remove_all">Eliminar todo</string>
     <string name="remove_all_description">¿Eliminar todas las carpetas de la lista de excluidas\? Nota: Esto no borrará las carpetas.</string>
@@ -730,6 +757,19 @@
     <string name="october">Octubre</string>
     <string name="november">Noviembre</string>
     <string name="december">Diciembre</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept.</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">en Enero</string>
     <string name="in_february">en Febrero</string>
@@ -771,12 +811,32 @@
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
-    <string name="upgraded_to_pro">Hola, 
-\n 
-\nparece que ya tienes la versión Pro también. Ya no necesitas esta, puedes desinstalarla.</string>
-    <string name="upgraded_to_pro_calendar">Debe migrar los eventos almacenados localmente, de forma manual. Mediante la exportación en un archivo .ics y luego importar. Puede encontrar los botones de exportación e importación en el menú superior.</string>
-    <string name="upgraded_to_pro_notes">You have to Tienes que migrar tus notas a la versión Profesional manualmente.</string>
-    <string name="upgraded_to_pro_contacts">Tienes que migrar manualmente los contactos almacenados de forma privada, a través de la exportación de un archivo .vcf, y luego la importación. Puedes encontrar los botones de exportación e importación en el menú superior.</string>
+    <string name="upgraded_to_pro">Hola,
+\n
+\nparece que ya tienes la versión pro de la aplicación también. Una vez que esté satisfecho con ella y haya migrado sus datos, puede desinstalar esta aplicación. Para evitar ponerla en marcha accidentalmente porque ya no la necesitas.
+\n
+\n¡Muchas gracias!</string>
+    <string name="upgraded_to_pro_calendar">Hola,
+\n
+\nParece que has actualizado de la versión gratuita a la versión pro. Si desea migrar los eventos almacenados localmente desde la versión gratuita, debe exportarlos manualmente como archivos .ics en la versión gratuita e importarlos a la versión profesional a través del menú superior.
+\n
+\nSi está satisfecho con la configuración profesional, puede desinstalar la versión gratuita anterior, ya que ya no la necesita.
+\n
+\n¡Gracias!</string>
+    <string name="upgraded_to_pro_contacts">Hola,
+\n
+\nparece que acaba de actualizar desde la versión gratuita. Si tiene contactos guardados en \"%s\", deberá migrarlos manualmente exportándolos a un archivo .vcf en la versión gratuita de la aplicación e importándolos aquí desde el menú superior.
+\n
+\nUna vez que esté satisfecho con su configuración en la versión Pro, puede desinstalar la versión gratuita anterior ya que ya no la necesita.
+\n
+\n¡Muchas gracias!</string>
+    <string name="upgraded_to_pro_notes">Hola,
+\n
+\nparece que acaba de actualizar a partir de la versión gratuita. Si desea migrar las notas, es necesario hacerlo manualmente exportándolas a un archivo en la versión gratuita de la aplicación e importándolas aquí a través del menú superior.
+\n
+\nCuando esté satisfecho con su configuración de la versión Pro, puede desinstalar la antigua gratuita porque ya no la necesitará.
+\n
+\n¡Gracias!</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>
@@ -1045,9 +1105,29 @@
     <string name="audio_record_view_title">Audio Record View (Visualización de audio)</string>
     <string name="sms_mms_title">SMS MMS (Manejo de SMS y MMS)</string>
     <string name="apng_title">APNG Android (Soporte WebP animado)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (visor de PDF)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (visor de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (manejo de archivos de listas de reproducción m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">La prueba ha caducado</string>
+    <string name="start_free_trial">Comienza tu prueba gratuita</string>
+    <string name="trial_expires_soon">Su período de prueba está a punto de expirar.</string>
+    <string name="welcome_to_app_name">¡Bienvenido a %s!</string>
+    <string name="trial_start_description">Gracias por usar nuestra aplicación. Puedes usar esta versión desbloqueada durante <font color="#FFFFFF">%d días</font>. Considere actualizar a la versión Pro cuando finalice la prueba. La versión Pro tiene muchas funciones nuevas, un diseño moderno, sin anuncios y muchas otras mejoras.
+\n
+\nSolo paga una vez, y si no está satisfecho, puede desinstalarlo y recuperar su dinero.
+\n
+\nEspero que te guste :)</string>
+    <string name="trial_end_description">Por favor, actualice a la versión Pro para disfrutar de la aplicación al máximo.
+\n
+\nSólo tienes que pagar por ella una vez en la vida y si no quedas satisfecho, puedes desinstalarla y obtener un reembolso.
+\n
+\nNos vemos :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Su prueba expira en %d día.</item>
+        <item quantity="many">Su prueba expira en %d días.</item>
+        <item quantity="other">Su prueba expira en %d días.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>

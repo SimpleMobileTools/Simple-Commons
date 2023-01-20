@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.*
 import android.content.Intent.EXTRA_STREAM
@@ -31,6 +32,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
+import androidx.core.view.WindowInsetsCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -80,6 +82,7 @@ fun Activity.appLaunched(appId: String) {
     }
 
     baseConfig.appRunCount++
+
     // if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
     //     if (!resources.getBoolean(R.bool.hide_google_relations)) {
     //         showDonateOrUpgradeDialog()
@@ -91,11 +94,6 @@ fun Activity.appLaunched(appId: String) {
     //         RateStarsDialog(this)
     //     }
     // }
-
-    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
-        baseConfig.defaultNavigationBarColor = window.navigationBarColor
-        baseConfig.navigationBarColor = window.navigationBarColor
-    }
 }
 
 fun Activity.showDonateOrUpgradeDialog() {
@@ -546,7 +544,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
         Intent(action).apply {
             data = Uri.fromParts("tel", recipient, null)
 
-            if (isMarshmallowPlus() && handle != null) {
+            if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 
@@ -1519,6 +1517,9 @@ fun Activity.setupDialogStuff(
             setView(view)
             setCancelable(cancelOnTouchOutside)
             show()
+            getButton(Dialog.BUTTON_POSITIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEGATIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEUTRAL)?.setTextColor(primaryColor)
             callback?.invoke(this)
         }
     } else {
@@ -1716,4 +1717,12 @@ fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? 
     }
 
     return File(folder, fileName)
+}
+
+fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
+    window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+        callback(WindowInsetsCompat.toWindowInsetsCompat(insets))
+        view.onApplyWindowInsets(insets)
+        insets
+    }
 }

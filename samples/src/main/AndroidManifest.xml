@@ -10,9 +10,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/commons_launcher"
         android:label="@string/smtco_app_name"
+        android:localeConfig="@xml/locale_config"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:localeConfig="@xml/locale_config"
         android:theme="@style/TranslucentTheme">
 
         <activity
@@ -25,7 +25,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.simplemobiletools.commons.activities.AboutActivity" />
-        <activity android:name="com.simplemobiletools.commons.activities.CustomizationActivity" />
+        <activity
+            android:name="com.simplemobiletools.commons.activities.AboutActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity"
+            android:label="@string/blocked_numbers" />
     </application>
 </manifest>

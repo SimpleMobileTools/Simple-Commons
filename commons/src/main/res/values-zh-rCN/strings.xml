@@ -97,6 +97,9 @@
     <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
     <string name="select_photo">选择图片</string>
+    <plurals name="column_counts">
+        <item quantity="other">%d 列</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
     <string name="not_blocking_anyone">你没有拦截任何人。</string>
@@ -120,7 +123,25 @@
     <string name="remove_from_favorites">从收藏中移除</string>
     <!-- Search -->
     <string name="search">搜索</string>
+    <string name="search_in_placeholder">在 %s 中搜索</string>
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
+    <string name="search_contacts">搜索联系人</string>
+    <string name="search_favorites">搜索收藏</string>
+    <string name="search_apps">搜索应用</string>
+    <string name="search_events">搜索事件</string>
+    <string name="search_groups">搜索组</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search_calls">搜索通话</string>
+    <string name="search_files">搜索文件</string>
+    <string name="search_folders">搜索文件夹</string>
+    <string name="search_files_and_folders">搜索文件和文件夹</string>
+    <string name="search_playlists">搜索播放列表</string>
+    <string name="search_artists">搜索艺术家</string>
+    <string name="search_albums">搜索专辑</string>
+    <string name="search_tracks">搜索曲目</string>
+    <string name="search_text">搜索文本</string>
+    <string name="search_conversations">搜索对话</string>
+    <string name="search_recordings">搜索录音</string>
     <!-- Filters -->
     <string name="filter">过滤</string>
     <string name="filter_pro">过滤 (Pro)</string>
@@ -292,6 +313,7 @@
     <string name="discard">丢弃</string>
     <string name="undo_changes">撤销更改</string>
     <string name="undo_changes_confirmation">是否撤销您的更改？</string>
+    <string name="cannot_be_undone">此操作无法撤销。</string>
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
     <string name="apply_to_all_apps">应用到所有简约系列应用</string>
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
@@ -378,6 +400,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
     <string name="deletion_confirmation">您确定要删除 %s？</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">您确定要移动 %s到回收站？</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -430,6 +453,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="other">%d 秒</item>
     </plurals>
@@ -541,6 +565,7 @@
     <string name="purchase_simple_thank_you">感谢购买</string>
     <string name="general_settings">通用</string>
     <string name="color_customization">颜色定制</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="customize_colors_locked">自定义颜色 (锁定)</string>
     <string name="feature_locked">已锁定</string>
@@ -598,7 +623,7 @@
     <string name="exclude">排除</string>
     <string name="exclude_folder">排除文件夹</string>
     <string name="excluded_folders">排除的文件夹</string>
-    <string name="excluded">（已排除）</string>
+    <string name="excluded">(已排除)</string>
     <string name="manage_excluded_folders">管理排除的文件夹</string>
     <string name="remove_all">全部移除</string>
     <string name="remove_all_description">是否移除排除列表中的所有项目？此操作不会删除文件夹本身。</string>
@@ -658,6 +683,19 @@
     <string name="october">十月</string>
     <string name="november">十一月</string>
     <string name="december">十二月</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">九月</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">一月</string>
     <string name="in_february">二月</string>
@@ -701,10 +739,30 @@
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
     <string name="upgraded_to_pro">嘿，
 \n
-\n你似乎已经有了专业版的应用程序。你不再需要这个，你可以卸载它。</string>
-    <string name="upgraded_to_pro_calendar">你必须通过在 .ics 文件中导出，然后导入的方式手动迁移本地存储的事件。你可以在顶部菜单中找到导出和导入按钮。</string>
-    <string name="upgraded_to_pro_notes">你必须手动将笔记迁移到专业版。</string>
-    <string name="upgraded_to_pro_contacts">你必须通过在 .vcf 文件中导出，然后导入的方式手动迁移私有存储的联系人。你可以在顶部菜单中找到导出和导入按钮。</string>
+\n除了免费版，你似乎也已经安装了专业版。如果你觉得满意并且迁移了数据，你可以卸载免费版避免意外启动，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_calendar">嘿，
+\n
+\n你似乎从免费版升级到了专业版。如果你想把免费版中本地存储的事件迁移过来，你必须手动在免费版中把它们导出为 .ics 文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_contacts">嘿，
+\n
+\n你似乎刚从免费版升级到了专业版。如果你有任何存储在 \"%s\" 下的联系人，你必须手动在免费版中把它们导出为 .vcf 文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_notes">嘿，
+\n
+\n你似乎刚从免费版升级到了专业版。如果你想迁移笔记数据，你必须手动在免费版中把它们导出为文件，并通过顶部菜单导入到专业版中。
+\n
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n
+\n谢谢！</string>
     <!-- About -->
     <string name="about">关于</string>
     <string name="website">网站</string>
@@ -952,9 +1010,28 @@
     <string name="audio_record_view_title">Audio Record View (音频可视化)</string>
     <string name="sms_mms_title">SMS MMS (短信和彩信处理)</string>
     <string name="apng_title">APNG Android (动画 WebP 支持)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF 查看器)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF 查看器)</string>
     <string name="m3u_parser_title">M3U 解析器 (m3u 播放列表文件处理)</string>
     <string name="android_lame_title">AndroidLame (mp3 编码器)</string>
+    <!-- Trial -->
+    <string name="trial_expired">试用期已过</string>
+    <string name="start_free_trial">开始免费试用</string>
+    <string name="trial_expires_soon">你的试用期即将结束。</string>
+    <string name="welcome_to_app_name">欢迎来到 %s!</string>
+    <string name="trial_start_description">谢谢你使用我们的应用。你可以使用此解锁版 <font color="#FFFFFF">%d 天</font>。试用结束后请考虑升级到专业版。专业版有大量新功能，现代设计，无广告及许多其他改进。
+\n
+\n你只需付款一次，如不满意你可以卸载它并获得退款。
+\n
+\n希望你会喜欢它 :)</string>
+    <string name="trial_end_description">请升级到专业版以最大程度享受本应用
+\n
+\n你只需付款一次，如不满意你可以卸载它并获得退款。
+\n
+\n希望你会喜欢它 :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Your trial expires in %d day.</item>
+        <item quantity="other">Your trial expires in %d days.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样您就可以放心试用了 :)</string>

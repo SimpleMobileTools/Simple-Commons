@@ -97,6 +97,10 @@
     <string name="landscape_column_count">Yatay sütun sayısı</string>
     <string name="change_cover_image">Kapak resmini değiştir</string>
     <string name="select_photo">Fotoğraf seç</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d sütun</item>
+        <item quantity="other">%d sütun</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engellenen numaraları yönet</string>
     <string name="not_blocking_anyone">Kimseyi engellemiyorsun.</string>
@@ -120,7 +124,25 @@
     <string name="remove_from_favorites">Favorilerden kaldır</string>
     <!-- Search -->
     <string name="search">Ara</string>
+    <string name="search_in_placeholder">%s içinde ara</string>
     <string name="type_2_characters">Aramaya başlamak için en az 2 karakter yazın.</string>
+    <string name="search_contacts">Kişileri ara</string>
+    <string name="search_favorites">Favorileri ara</string>
+    <string name="search_apps">Uygulama ara</string>
+    <string name="search_events">Etkinlikleri ara</string>
+    <string name="search_groups">Grupları ara</string>
+    <string name="search_history">Geçmişte ara</string>
+    <string name="search_calls">Aramalarda ara</string>
+    <string name="search_files">Dosyaları ara</string>
+    <string name="search_folders">Klasörleri ara</string>
+    <string name="search_files_and_folders">Dosya ve klasörleri ara</string>
+    <string name="search_playlists">Çalma listelerinde ara</string>
+    <string name="search_artists">Sanatçıları ara</string>
+    <string name="search_albums">Albümleri ara</string>
+    <string name="search_tracks">Parçaları ara</string>
+    <string name="search_text">Metin ara</string>
+    <string name="search_conversations">Görüşmeleri ara</string>
+    <string name="search_recordings">Kayıt ara</string>
     <!-- Filters -->
     <string name="filter">Filtre</string>
     <string name="filter_pro">Filtre (Pro)</string>
@@ -294,6 +316,7 @@
     <string name="discard">Çık</string>
     <string name="undo_changes">Değişiklikleri geri al</string>
     <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
+    <string name="cannot_be_undone">Bu eylem geri alınamaz.</string>
     <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydedilsin mi?</string>
     <string name="apply_to_all_apps">Tüm Basit Uygulamalara renk uygula</string>
     <string name="app_icon_color_warning">UYARI: Bazı başlatıcılar uygulama simgesi özelleştirmesini düzgün kullanamıyor. Simgenin kaybolması durumunda, uygulamayı Google Play\'den veya varsa bir widget kullanarak başlatmayı deneyin. Başlatıldıktan sonra, sadece öntanımlı turuncu simgeyi #F57C00 geri ayarlayın. En kötü durumda uygulamayı yeniden kurmanız gerekebilir.</string>
@@ -383,6 +406,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
     <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -436,6 +460,7 @@
     <string name="seconds_letter">sn</string>
     <string name="minutes_letter">dk</string>
     <string name="hours_letter">sa</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d saniye</item>
         <item quantity="other">%d saniye</item>
@@ -575,6 +600,7 @@
     <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
     <string name="general_settings">Genel</string>
     <string name="color_customization">Renk özelleştirme</string>
+    <string name="improved_color_customization">İyileştirilmiş renk özelleştirmesi</string>
     <string name="customize_colors">Renkleri özelleştir</string>
     <string name="customize_colors_locked">Renkleri özelleştir (Kilitli)</string>
     <string name="feature_locked">Kilitli</string>
@@ -693,6 +719,19 @@
     <string name="october">Ekim</string>
     <string name="november">Kasım</string>
     <string name="december">Aralık</string>
+    <!-- Short months -->
+    <string name="january_short">Oca</string>
+    <string name="february_short">Şub</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Nis</string>
+    <string name="may_short">May</string>
+    <string name="june_short">Haz</string>
+    <string name="july_short">Tem</string>
+    <string name="august_short">Ağu</string>
+    <string name="september_short">Eyl</string>
+    <string name="october_short">Eki</string>
+    <string name="november_short">Kas</string>
+    <string name="december_short">Ara</string>
     <!-- in January -->
     <string name="in_january">Ocak ayında</string>
     <string name="in_february">Şubat ayında</string>
@@ -736,10 +775,30 @@
     <string name="upgrade_calendar">Yerel olarak depolanan etkinlikleri bir .ics dosyasına dışa aktarıp ardından içe aktarma yoluyla el ile geçirmeniz gerekir. Her iki dışa aktarma/içe aktarma düğmelerini ana ekran menüsünde bulabilirsiniz.</string>
     <string name="upgraded_to_pro">Merhaba,
 \n
-\nGörünüşe göre zaten Pro uygulama sürümünüz de var. Artık buna ihtiyacınız olmayacak, kaldırabilirsiniz.</string>
-    <string name="upgraded_to_pro_calendar">Yerel olarak kaydedilen etkinlikleri bir .ics dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
-    <string name="upgraded_to_pro_notes">Notlarınızı Pro sürümüne elle taşımanız gerekmektedir.</string>
-    <string name="upgraded_to_pro_contacts">Özel olarak kaydedilen kişileri bir .vcf dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
+\nGörünüşe göre zaten Pro uygulama sürümüne de sahipsiniz. Bundan memnun olduğunuzda ve belki de verilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için bunu kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
+    <string name="upgraded_to_pro_calendar">Merhaba,
+\n
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Yerel olarak depolanan etkinliklerinizi taşımak istiyorsanız, ücretsiz uygulama sürümünde bunları bir .ics dosyasına aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
+\n
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
+    <string name="upgraded_to_pro_contacts">Merhaba,
+\n
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. \"%s\" altında kayıtlı kişileriniz varsa, ücretsiz uygulama sürümünde bunları bir .vcf dosyasına aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
+\n
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
+    <string name="upgraded_to_pro_notes">Merhaba,
+\n
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Notlarınızı taşımak istiyorsanız, ücretsiz uygulama sürümünde bunları bir dosyaya aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
+\n
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website">Web sitesi</string>
@@ -1001,9 +1060,28 @@
     <string name="audio_record_view_title">Audio Record View (ses görselleştirme)</string>
     <string name="sms_mms_title">SMS MMS (SMS ve MMS yönetimi)</string>
     <string name="apng_title">APNG Android (hareketli WebP desteği)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF görüntüleyici)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF görüntüleyici)</string>
     <string name="m3u_parser_title">M3U Ayrıştırıcı (m3u çalma listesi dosyası işleme)</string>
     <string name="android_lame_title">AndroidLame (mp3 kodlayıcı)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Deneme süresi sona erdi</string>
+    <string name="start_free_trial">Deneme sürümünü başlat</string>
+    <string name="trial_expires_soon">Deneme süreniz yakında sona eriyor.</string>
+    <string name="welcome_to_app_name">%s uygulamasına hoş geldiniz!</string>
+    <string name="trial_start_description">Uygulamamızı kullandığınız için teşekkür ederiz. Bu kilitsiz sürümü <font color="#FFFFFF">%d gün</font> kullanabilirsiniz. Deneme sürümü sona erdiğinde, lütfen Pro sürümüne yükseltmeyi düşünün. Çok sayıda yeni özelliğe, modern tasarıma, reklamsız kullanıma ve diğer birçok iyileştirmeye sahiptir.
+\n
+\nBunun için yalnızca bir kez ödeme yapmanız yeterlidir, memnun kalmazsanız kaldırabilir ve geri ödeme alabilirsiniz.
+\n
+\nUmarım beğenirsiniz :)</string>
+    <string name="trial_end_description">Uygulamanın keyfini sonuna kadar çıkarmak için lütfen Pro sürümüne yükseltin.
+\n
+\nYalnızca bir kez ödeme yapmanız yeterlidir, memnun kalmazsanız kaldırabilir ve geri ödeme alabilirsiniz.
+\n
+\nOrada görüşürüz :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Deneme süreniz %d gün içinde sona erecektir.</item>
+        <item quantity="other">Deneme süreniz %d gün içinde sona erecek.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>

@@ -85,27 +85,19 @@ open class BaseConfig(val context: Context) {
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
-        get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.default_primary_color))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var accentColor: Int
-        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.default_accent_color))
         set(accentColor) = prefs.edit().putInt(ACCENT_COLOR, accentColor).apply()
-
-    var navigationBarColor: Int
-        get() = prefs.getInt(NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
-        set(navigationBarColor) = prefs.edit().putInt(NAVIGATION_BAR_COLOR, navigationBarColor).apply()
-
-    var defaultNavigationBarColor: Int
-        get() = prefs.getInt(DEFAULT_NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
-        set(defaultNavigationBarColor) = prefs.edit().putInt(DEFAULT_NAVIGATION_BAR_COLOR, defaultNavigationBarColor).apply()
 
     var lastHandledShortcutColor: Int
         get() = prefs.getInt(LAST_HANDLED_SHORTCUT_COLOR, 1)
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
-        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.default_app_icon_color))
         set(appIconColor) {
             isUsingModifiedAppIcon = appIconColor != context.resources.getColor(R.color.color_primary)
             prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
@@ -135,16 +127,12 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(CUSTOM_APP_ICON_COLOR, appIconColor)
         set(customAppIconColor) = prefs.edit().putInt(CUSTOM_APP_ICON_COLOR, customAppIconColor).apply()
 
-    var customNavigationBarColor: Int
-        get() = prefs.getInt(CUSTOM_NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
-        set(customNavigationBarColor) = prefs.edit().putInt(CUSTOM_NAVIGATION_BAR_COLOR, customNavigationBarColor).apply()
-
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, context.resources.getInteger(R.integer.default_widget_bg_color))
+        get() = prefs.getInt(WIDGET_BG_COLOR, context.resources.getColor(R.color.default_widget_bg_color))
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
-        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getInteger(R.integer.default_widget_text_color))
+        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.default_widget_text_color))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
     // hidden folder visibility protection
@@ -240,7 +228,7 @@ open class BaseConfig(val context: Context) {
         set(isUsingAutoTheme) = prefs.edit().putBoolean(IS_USING_AUTO_THEME, isUsingAutoTheme).apply()
 
     var isUsingSystemTheme: Boolean
-        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, true)
+        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, isSPlus())
         set(isUsingSystemTheme) = prefs.edit().putBoolean(IS_USING_SYSTEM_THEME, isUsingSystemTheme).apply()
 
     var wasCustomThemeSwitchDescriptionShown: Boolean

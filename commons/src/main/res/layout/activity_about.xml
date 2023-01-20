@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/about_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/about_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/about_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/about_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:title="@string/about"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:title="@string/about"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/about_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:scrollbars="none">
 
         <LinearLayout
             android:id="@+id/about_holder"
@@ -38,565 +29,99 @@
 
             <TextView
                 android:id="@+id/about_support"
+                style="@style/MaterialSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin"
-                android:gravity="center_horizontal"
-                android:text="@string/support"
-                android:textSize="@dimen/big_text_size" />
+                android:text="@string/support" />
 
             <LinearLayout
-                android:id="@+id/about_support_holder"
+                android:id="@+id/about_support_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
-                android:background="@drawable/section_holder_stroke"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-                <RelativeLayout
-                    android:id="@+id/about_faq_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_top_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_faq_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_question_mark_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_faq"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_faq_icon"
-                        android:layout_alignBottom="@+id/about_faq_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_faq_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/frequently_asked_questions"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_email_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_email_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_mail_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_email"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_email_icon"
-                        android:layout_alignBottom="@+id/about_email_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_email_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/my_email"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/about_support_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_support_layout" />
 
             <TextView
                 android:id="@+id/about_help_us"
+                style="@style/MaterialSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin"
-                android:gravity="center_horizontal"
-                android:text="@string/help_us"
-                android:textSize="@dimen/big_text_size" />
+                android:text="@string/help_us" />
 
             <LinearLayout
-                android:id="@+id/about_help_us_holder"
+                android:id="@+id/about_help_us_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
-                android:background="@drawable/section_holder_stroke"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-                <RelativeLayout
-                    android:id="@+id/about_rate_us_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_top_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_rate_us_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_star_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_rate_us"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_rate_us_icon"
-                        android:layout_alignBottom="@+id/about_rate_us_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_rate_us_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/rate_us"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_invite_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_invite_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_add_person_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_invite"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_invite_icon"
-                        android:layout_alignBottom="@+id/about_invite_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_invite_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/invite_friends"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_contributors_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_contributors_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_face_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_contributors"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_contributors_icon"
-                        android:layout_alignBottom="@+id/about_contributors_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_contributors_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/contributors"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_donate_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:id="@+id/about_donate_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_dollar_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_donate"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_donate_icon"
-                        android:layout_alignBottom="@+id/about_donate_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_donate_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/donate"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/about_help_us_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_help_us_layout" />
 
             <TextView
                 android:id="@+id/about_social"
+                style="@style/MaterialSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin"
-                android:gravity="center_horizontal"
-                android:text="@string/social"
-                android:textSize="@dimen/big_text_size" />
+                android:text="@string/social" />
 
             <LinearLayout
-                android:id="@+id/about_social_holder"
+                android:id="@+id/about_social_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
-                android:background="@drawable/section_holder_stroke"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-                <RelativeLayout
-                    android:id="@+id/about_facebook_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_top_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_facebook_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_facebook_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_facebook"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_facebook_icon"
-                        android:layout_alignBottom="@+id/about_facebook_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_facebook_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/facebook"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_github_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_github_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_github_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_github"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_github_icon"
-                        android:layout_alignBottom="@+id/about_github_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_github_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/github"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_reddit_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_reddit_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_reddit_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_reddit"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_reddit_icon"
-                        android:layout_alignBottom="@+id/about_reddit_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_reddit_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/reddit"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_telegram_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_telegram_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_telegram_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_telegram"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_telegram_icon"
-                        android:layout_alignBottom="@+id/about_telegram_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_telegram_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/telegram"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/about_social_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_social_layout" />
 
             <TextView
                 android:id="@+id/about_other"
+                style="@style/MaterialSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin"
-                android:gravity="center_horizontal"
-                android:text="@string/other"
-                android:textSize="@dimen/big_text_size" />
+                android:text="@string/other" />
 
             <LinearLayout
-                android:id="@+id/about_other_holder"
+                android:id="@+id/about_other_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
-                android:background="@drawable/section_holder_stroke"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-                <RelativeLayout
-                    android:id="@+id/about_get_simple_phone_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_top_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_get_simple_phone_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_simple_phone_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_get_simple_phone"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_get_simple_phone_icon"
-                        android:layout_alignBottom="@+id/about_get_simple_phone_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_get_simple_phone_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/get_simple_phone"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_more_apps_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_more_apps_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_heart_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_more_apps"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_more_apps_icon"
-                        android:layout_alignBottom="@+id/about_more_apps_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_more_apps_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/more_apps_from_us"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_website_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:id="@+id/about_website_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_link_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_website"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_website_icon"
-                        android:layout_alignBottom="@+id/about_website_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_website_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/website"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_privacy_policy_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_privacy_policy_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_unhide_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_privacy_policy"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_privacy_policy_icon"
-                        android:layout_alignBottom="@+id/about_privacy_policy_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_privacy_policy_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/privacy_policy"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_licenses_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_background"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_licenses_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_article_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_licenses"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_licenses_icon"
-                        android:layout_alignBottom="@+id/about_licenses_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_licenses_icon"
-                        android:gravity="center_vertical"
-                        android:text="@string/third_party_licences"
-                        android:textSize="@dimen/bigger_text_size" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/about_version_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_bottom_corners"
-                    android:padding="@dimen/medium_margin">
-
-                    <ImageView
-                        android:id="@+id/about_version_icon"
-                        android:layout_width="@dimen/normal_icon_size"
-                        android:layout_height="@dimen/normal_icon_size"
-                        android:contentDescription="@null"
-                        android:padding="@dimen/medium_margin"
-                        android:src="@drawable/ic_info_vector" />
-
-                    <com.simplemobiletools.commons.views.MyTextView
-                        android:id="@+id/about_version"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignTop="@+id/about_version_icon"
-                        android:layout_alignBottom="@+id/about_version_icon"
-                        android:layout_marginStart="@dimen/normal_margin"
-                        android:layout_marginEnd="@dimen/normal_margin"
-                        android:layout_toEndOf="@+id/about_version_icon"
-                        android:gravity="center_vertical"
-                        android:textSize="@dimen/bigger_text_size"
-                        tools:text="@string/third_party_licences" />
-
-                </RelativeLayout>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/about_other_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_other_layout" />
 
             <com.simplemobiletools.commons.views.MyTextView
                 android:id="@+id/footer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:gravity="center_horizontal"
-                android:padding="@dimen/small_margin"
+                android:layout_marginStart="@dimen/label_start_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginBottom="@dimen/big_margin"
                 android:text="@string/about_footer"
                 android:textSize="@dimen/bigger_text_size" />
 

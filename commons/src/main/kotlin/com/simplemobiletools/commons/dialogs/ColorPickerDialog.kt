@@ -24,7 +24,6 @@ class ColorPickerDialog(
     val activity: Activity,
     color: Int,
     val removeDimmedBackground: Boolean = false,
-    showUseDefaultButton: Boolean = false,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
 ) {
@@ -146,10 +145,6 @@ class ColorPickerDialog(
             .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
             .setOnCancelListener { dialogDismissed() }
 
-        if (showUseDefaultButton) {
-            builder.setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
-        }
-
         builder.apply {
             activity.setupDialogStuff(view, this) { alertDialog ->
                 dialog = alertDialog
@@ -193,16 +188,9 @@ class ColorPickerDialog(
         } else {
             getColor()
         }
+
         addRecentColor(newColor)
-
         callback(true, newColor)
-    }
-
-    private fun useDefault() {
-        val defaultColor = baseConfig.defaultNavigationBarColor
-        addRecentColor(defaultColor)
-
-        callback(true, defaultColor)
     }
 
     private fun addRecentColor(color: Int) {

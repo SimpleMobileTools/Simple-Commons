@@ -45,6 +45,7 @@ class MyTextInputLayout : TextInputLayout {
 
             setBoxStrokeColorStateList(boxColorState)
             defaultTextColor.set(this, ColorStateList(arrayOf(intArrayOf(0)), intArrayOf(defaultHintTextColor)))
+            setHelperTextColor(ColorStateList.valueOf(textColor))
         } catch (e: Exception) {
         }
     }
