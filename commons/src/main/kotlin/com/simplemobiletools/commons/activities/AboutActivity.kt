@@ -158,7 +158,12 @@ class AboutActivity : BaseSimpleActivity() {
         try {
             startActivity(emailIntent)
         } catch (e: ActivityNotFoundException) {
-            toast(R.string.no_email_client_found)
+            val chooser = createChooser(emailIntent, getString(R.string.send_email))
+            try {
+                startActivity(chooser)
+            } catch (e: Exception) {
+                toast(R.string.no_email_client_found)
+            }
         } catch (e: Exception) {
             showErrorToast(e)
         }
