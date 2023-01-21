@@ -640,7 +640,7 @@
     <string name="purchase_simple_thank_you">Купить \"Простое спасибо\"</string>
     <string name="general_settings">Основные</string>
     <string name="color_customization">Настройка цвета</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Улучшенная настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
     <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
     <string name="feature_locked">Заблокировано</string>
@@ -815,7 +815,11 @@
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Привет,
+\n
+\nпохоже, что вы обновились с бесплатного приложения. Если вы будете довольны работой этого приложения и, возможно, перенесёте в него свои данные, то можете удалить старую бесплатную версию, чтобы избежать её случайного запуска, поскольку она вам больше не понадобится.
+\n
+\nСпасибо!</string>
     <string name="upgraded_to_pro">Привет,
 \n
 \nпохоже, что у вас уже есть Pro-версия приложения. Когда вы будете довольны им и, возможно, перенесёте в него свои данные, можно будет удалить это, чтобы избежать случайного запуска, поскольку эта версия вам больше не понадобится.
@@ -1107,7 +1111,7 @@
     <!-- Trial -->
     <string name="trial_expired">Пробный период истёк</string>
     <string name="start_free_trial">Начать пробный период</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">Пробный период скоро истечёт.</string>
     <string name="welcome_to_app_name">Добро пожаловать в %s!</string>
     <string name="trial_start_description">Благодарим вас за использование нашего приложения. Вы можете использовать эту разблокированную версию <font color="#FFFFFF">%d дней</font>. После окончания пробного периода рассмотрите возможность обновления до Pro-версии. Она имеет огромное количество новых функций, современный дизайн, отсутствие рекламы и множество других улучшений.
 \n
