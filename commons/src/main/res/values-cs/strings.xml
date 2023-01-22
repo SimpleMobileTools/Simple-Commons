@@ -367,7 +367,7 @@
     <string name="temporarily_show_hidden">Dočasně zobrazit skryté</string>
     <string name="stop_showing_hidden">Přestat zobrazovat skrytá média</string>
     <string name="maximum_share_reached">Nemůžete sdílet tolik obsahu najednou</string>
-    <string name="empty_and_disable_recycle_bin">Vysypat a deaktivovat odpadkový koš</string>
+    <string name="empty_and_disable_recycle_bin">Vysypat a deaktivovat koš</string>
     <string name="undo">Zpět</string>
     <string name="redo">Znovu</string>
     <string name="print">Tisk</string>
@@ -421,7 +421,7 @@
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Opravdu chcete smazat tuto položku\?</string>
     <string name="are_you_sure_recycle_bin">Opravdu chcete přesunout tuto položku do koše?</string>
-    <string name="do_not_ask_again">V tomto sezení se znovu neptat</string>
+    <string name="do_not_ask_again">V této relaci se již znovu neptat</string>
     <string name="do_not_show_again">Neukazovat znovu</string>
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
@@ -670,7 +670,7 @@
     <string name="vibrate_on_button_press">Vibrovat při stisku tlačítka</string>
     <string name="move_items_into_recycle_bin">Přesunout položky do koše namísto jejich vymazání</string>
     <string name="recycle_bin_cleaning_interval">Interval vysypání koše</string>
-    <string name="empty_recycle_bin">Vysypat odpadkový koš</string>
+    <string name="empty_recycle_bin">Vyprázdnit koš</string>
     <string name="force_portrait_mode">Vynutit zobrazení na výšku</string>
     <string name="export_settings">Export nastavení</string>
     <string name="import_settings">Import nastavení</string>
@@ -684,7 +684,7 @@
     <string name="security">Zabezpečení</string>
     <string name="scrolling">Posouvání</string>
     <string name="file_operations">Souborové operace</string>
-    <string name="recycle_bin">Odpadkový koš</string>
+    <string name="recycle_bin">Koš</string>
     <string name="saving_label">Ukládání</string>
     <string name="startup">Po spuštění</string>
     <string name="text">Text</string>
@@ -724,7 +724,7 @@
     <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše není povoleno, prosím použijte možnost Obnovit</string>
     <string name="show_the_recycle_bin">Zobrazit koš</string>
     <string name="hide_the_recycle_bin">Skrýt koš</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Otevřít koš</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka se přesouvá do koše</item>
         <item quantity="few">%d položky se přesouvají do koše</item>
@@ -808,37 +808,37 @@
     <string name="saturday_short">so</string>
     <string name="sunday_short">ne</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Tato verze aplikace již není podporována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi.</string>
-    <string name="upgrade_to_pro_long_click">Tato verze aplikace již nebude dále aktualizována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi kliknutím sem.</string>
+    <string name="upgrade_to_pro_long">Tato verze aplikace již není podporována. Pro nové opravy a jiná vylepšení prosím přejděte na verzi Pro.</string>
+    <string name="upgrade_to_pro_long_click">Tato verze aplikace již nebude dále aktualizována. Pro nové opravy a jiná vylepšení prosím přejděte na verzi Pro kliknutím sem.</string>
     <string name="it_is_free">Bude bezplatná do: %s. Pokud si ji do té doby stáhnete, budete ji moci používat bezplatně navždy.</string>
     <string name="more_info">Více informací</string>
     <string name="upgrade">Stáhnout</string>
-    <string name="upgrade_calendar">Lokálně uložené události musíte přenést ručně, exportováním do .ics souboru a následně je naimportovat. Tlačítka pro export/import najdete v menu na hlavní obrazovce.</string>
-    <string name="upgraded_from_free">Ahoj,
+    <string name="upgrade_calendar">Lokálně uložené události musíte přenést ručně, exportováním do .ics souboru a následně je naimportovat. Tlačítka pro export/import najdete v nabídce na hlavní obrazovce.</string>
+    <string name="upgraded_from_free">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění.
 \n
 \nDěkuji!</string>
-    <string name="upgraded_to_pro">Ahoj,
+    <string name="upgraded_to_pro">Zdravím,
 \n
 \nzdá se, že již máte nainstalovanou také verzi Pro. Jakmile s ní budete spokojeni a případně přenesete svá data, můžete tuto bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění.
 \n
 \nDěkuji!</string>
-    <string name="upgraded_to_pro_calendar">Ahoj,
+    <string name="upgraded_to_pro_calendar">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Pokud chcete přenést své lokálně uložené události, musíte to udělat ručně tak, že je exportujete do souboru .ics v bezplatné verzi aplikace a importujete je sem přes horní nabídku.
 \n
 \nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat.
 \n
 \nDěkuji!</string>
-    <string name="upgraded_to_pro_contacts">Ahoj,
+    <string name="upgraded_to_pro_contacts">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Pokud jste měli nějaké kontakty uložené pod „%s“, musíte je přenést ručně tak, že je exportujete do souboru .vcf v bezplatné verzi aplikace a imporujete je sem přes horní nabídku.
 \n
 \nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat.
 \n
 \nDěkuji!</string>
-    <string name="upgraded_to_pro_notes">Ahoj,
+    <string name="upgraded_to_pro_notes">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Chcete-li přenést své poznámky, musíte to udělat ručně tak, že je exportujete do souboru v bezplatné verzi aplikace a importujete je sem přes horní nabídku.
 \n
@@ -850,7 +850,7 @@
     <string name="website">Website</string>
     <string name="website_label">Pro zdrojové kódy navštivte</string>
     <string name="email_label">Zpětnou vazbu či návrhy zasílejte na</string>
-    <string name="upgrade_to_pro">Stáhnout Pro verzi</string>
+    <string name="upgrade_to_pro">Stáhnout verzi Pro</string>
     <string name="more_apps">Více aplikací</string>
     <string name="more_apps_from_us">Více aplikací od nás</string>
     <string name="invite_friends">Pozvat přátele</string>
@@ -950,24 +950,19 @@
     <string name="faq_1_text_commons">Je velmi pravděpodobné, že jste aplikaci přesunuli na SD kartu. Jde o omezení systému Android, které v takovém případě skryje widget dané aplikace.
         Jediným řešením je přesunutí aplikace zpět do interního úložiště skrze nastavení vašeho zařízení.</string>
     <string name="faq_2_title_commons">Chtěl bych vás podpořit, ale nemohu peněžně. Mohu pomoci i jiným způsobem?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">Ano, samozřejmě. Můžete šířit informace o aplikacích nebo poskytnout dobrou zpětnou vazbu a hodnocení. Můžete také pomoci překladem aplikací do nového jazyka nebo jen aktualizovat některé stávající překlady. Průvodce překladem je na &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;této webové stránce&lt;/a&gt;. Pokud máte nějaké dotazy, kontaktujte nás na adrese &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;.</string>
     <string name="faq_3_title_commons">Nechtěně jsem smazal některé soubory, jak je mohu obnovit?</string>
-    <string name="faq_3_text_commons">Bohužel, nijak. Soubory jsou mazány ihned po potvrzení, není zde dostupný žádný koš.</string>
+    <string name="faq_3_text_commons">Bohužel nemůžete. Soubory jsou smazány okamžitě po potvrzovacím dialogu, žádný koš není k dispozici.</string>
     <string name="faq_4_title_commons">Nelíbí se mi barvy widgetu, mohu je změnit?</string>
     <string name="faq_4_text_commons">Ano, po přidání widgetu na domovskou obrazovku se zobrazí obrazovka s konfigurací. Klepnutím na barevné čtverečky v levém dolním rohu můžete navolit nové barvy. Tažením posuvníku můžete upravit i průhlednost.</string>
     <string name="faq_5_title_commons">Mohu nějakým způsobem obnovit smazané soubory?</string>
-    <string name="faq_5_text_commons">Pokud byly skutečně smazány, bohužel nijak. Ve výchozím nastavení je však povolen koš, díky kterému jsou soubory pouze přesunuty do něj, namísto okamžitého vymazání.</string>
+    <string name="faq_5_text_commons">Pokud byly skutečně smazány, nemůžete. Ve výchozím nastavení je však povolen koš, což způsobí pouze přesunutí souborů do koše namísto jejich vymazání.</string>
     <string name="faq_6_title_commons">Ikona aplikace zmizela z domovské obrazovky. Co s tím?</string>
     <string name="faq_6_text_commons">Bude to způsobeno tím, že váš spouštěč nepodporuje úpravu ikon korektně. Zkuste aplikaci spustit skrze Obchod Play nebo nějaký widget, pokud je dostupný.
         Po spuštění aplikace zkuste nastavit původní oranžovou barvu ikony #F57C00. V nejhorším případě budete muset aplikaci přeinstalovat.</string>
     <string name="faq_7_title_commons">Peníze mi byly z bankovního účtu odepsány, aplikaci však nemohu stáhnout. Co s tím?</string>
     <string name="faq_7_text_commons">Platby jsou plně spravovány Googlem, jejich systém však občas nefunguje tak jak by měl. Zkuste vymazat mezipaměť aplikace Obchod Play, restartujte zařízení a zkuste aplikaci stáhnout znovu.</string>
-    <string name="faq_8_title_commons">Proč bych měl přejít na Pro verzi?</string>
+    <string name="faq_8_title_commons">Proč bych měl přejít na verzi Pro\?</string>
     <string name="faq_8_text_commons">Tato verze aplikace již nebude aktualizována. Chyby, které jste možná objevili, proto nebudou nikdy opraveny. Také již nepřibudou žádné nové funkce. Pro verzi získáte za malý poplatek v Obchodě Google Play.
         Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
         Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na hello@simplemobiletools.com a peníze vám vrátíme.</string>
@@ -978,17 +973,11 @@
     <string name="faq_10_title_commons">Koupil jsem si aplikaci, ale nemohu ji stáhnout do jiného zařízení.</string>
     <string name="faq_10_text_commons">Zkuste vymazat mezipaměť aplikace Google Play a restartovat zařízení. Je to nějaká závada Google Play, která ve skutečnosti nesouvisí se samotnou aplikací.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
+    <string name="contributors">Přispěvatelé</string>
+    <string name="translation">Překlad</string>
+    <string name="development">Vývoj</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label">Tento seznam obsahuje všechny, kteří výrazně pomohli jakékoli aplikaci v rámci sady Simple Mobile Tools, nejen této. O překlady se starají dobrovolníci, dejte nám vědět, pokud chcete pomoci i Vy. Průvodce překladem je na &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;této webové stránce&lt;/a&gt;. Pokud máte nějaké dotazy, kontaktujte nás na adrese &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Děkujeme všem přispěvatelům a dalším podporovatelům!</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -1035,51 +1024,51 @@
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">Získejte verzi Pro nyní!</string>
+    <string name="why_upgrade_basic_version">Základní</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_no_ads">Žádné reklamy</string>
+    <string name="why_upgrade_no_internet_access">Žádný přístup k internetu</string>
+    <string name="why_upgrade_footer">100% záruka vrácení peněz</string>
+    <string name="why_upgrade_footer_one_time_payment">Jednorázová platba</string>
+    <string name="why_upgrade_improved_design">Vylepšený vzhled</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor">Pokročilý editor fotografií</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Pokročilý editor fotografií a videa</string>
+    <string name="why_upgrade_heic_support">Podpora souborů HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Pokročilé dávkové přejmenování souborů</string>
+    <string name="why_upgrade_folder_locking">Zamykání jednotlivých složek</string>
+    <string name="why_upgrade_printing_support">Podpora tisku</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Podpora časových pásem</string>
+    <string name="why_upgrade_attendees_emails">Účastníci a e-mailová připomenutí</string>
+    <string name="why_upgrade_easy_event_importing">Snadný import událostí</string>
+    <string name="why_upgrade_new_widgets">Nové widgety</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_duplicate_contact_merging">Vylepšené slučování duplicitních kontaktů</string>
+    <string name="why_upgrade_font_size_customization">Přizpůsobení velikosti písma</string>
+    <string name="why_upgrade_private_contact_sharing">Volitelné sdílení soukromých kontaktů v rámci našich aplikací</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Přizpůsobitelné vyzváněcí tóny kontaktů</string>
     <string name="why_upgrade_contact_filtering">Filtrování kontaktů</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Soukromě uložené kontakty</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Zaškrtávací seznamy</string>
+    <string name="why_upgrade_different_note_per_widget">Jiná poznámka a barvy na každém widgetu</string>
+    <string name="why_upgrade_note_locking">Uzamykání poznámek</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
+    <string name="why_upgrade_date_and_time_format">Přizpůsobení formátu data a času</string>
+    <string name="why_upgrade_shortcuts">Zkratky na domovské obrazovce</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_background_color_customization">Přizpůsobení barvy pozadí</string>
+    <string name="why_upgrade_file_importing">Podpora importu souborů</string>
+    <string name="why_upgrade_zooming">Zoomování</string>
     <!-- License -->
     <string name="notice">Tato aplikace používá pro ulehčení mé práce následující knihovny třetích stran. Děkuji.</string>
     <string name="third_party_licences">Licence třetích stran</string>
     <string name="kotlin_title">Kotlin (programovací jazyk)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (přiblížitelné obrázky)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomovatelné zobrazení obrázků)</string>
     <string name="glide_title">Glide (načítání a mezipaměť obrázků)</string>
     <string name="picasso_title">Picasso (načítání a mezipaměť obrázků)</string>
     <string name="cropper_title">Android Image Cropper (ořez a otáčení obrázků)</string>
@@ -1087,7 +1076,7 @@
     <string name="joda_title">Joda-Time (náhrada datumů v Javě)</string>
     <string name="stetho_title">Stetho (ladění databází)</string>
     <string name="otto_title">Otto (sběrnice událostí)</string>
-    <string name="photoview_title">PhotoView (přiblížitelné GIFy)</string>
+    <string name="photoview_title">PhotoView (zoomovatelné GIFy)</string>
     <string name="pattern_title">PatternLockView (ochrana vzorem)</string>
     <string name="reprint_title">Reprint (ochrana otiskem prstu)</string>
     <string name="gif_drawable_title">Gif Drawable (zobrazování GIFů)</string>
@@ -1101,30 +1090,38 @@
     <string name="panorama_view_title">VR Panorama View (zobrazování panorámat)</string>
     <string name="sanselan_title">Apache Sanselan (čtení metadat obrázku)</string>
     <string name="filters_title">Android Photo Filters (filtry obrázků)</string>
-    <string name="gesture_views_title">Gesture Views (přiblížitelné obrázky)</string>
+    <string name="gesture_views_title">Gesture Views (zoomovatelné obrázky)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (písmena na posuvníku)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="event_bus_title">Event Bus (komunikace v rámci aplikace)</string>
+    <string name="audio_record_view_title">Audio Record View (vizualizace zvuku)</string>
     <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="apng_title">APNG Android (podpora animovaného WebP)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (prohlížeč PDF)</string>
+    <string name="m3u_parser_title">M3U Parser (zpracování souborů playlistů m3u)</string>
+    <string name="android_lame_title">AndroidLame (mp3 kodér)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Zkušební doba vypršela</string>
+    <string name="start_free_trial">Zahájit bezplatnou zkušební dobu</string>
+    <string name="trial_expires_soon">Vaše zkušební doba brzy vyprší.</string>
+    <string name="welcome_to_app_name">Vítejte v %s!</string>
+    <string name="trial_start_description">Děkujeme, že používáte naši aplikaci. Tuto odemčenou verzi můžete používat <font color="#FFFFFF">%d dnů</font>. Jakmile zkušební doba skončí, zvažte prosím upgrade na verzi Pro, která má obrovské množství nových funkcí, moderní vzhled, žádné reklamy a mnoho dalších vylepšení.
+\n
+\nStačí za ni jednou za život zaplatit a pokud nebudete spokojeni, můžete ji odinstalovat a peníze Vám budou vráceny.
+\n
+\nSnad se Vám bude líbit :)</string>
+    <string name="trial_end_description">Abyste si aplikaci užili naplno, přejděte prosím na verzi Pro.
+\n
+\nStačí za ni jednou za život zaplatit a pokud nebudete spokojeni, můžete ji odinstalovat a peníze Vám budou vráceny.
+\n
+\nUvidíme se tam :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Vaše zkušební doba vyprší za %d den.</item>
+        <item quantity="few">Vaše zkušební doba vyprší za %d dny.</item>
+        <item quantity="other">Vaše zkušební doba vyprší za %d dnů.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Tato verze aplikace již není podporována, stáhněte si Pro verzi na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Nezapomeňte, že pokud odinstalujete kteroukoliv placenou aplikaci do 2 hodin, budou vám automaticky vráceny peníze. Pokud budete chtít vrátit platbu kdykoliv později, kontaktujte nás prosím na hello@simplemobiletools.com . Tímto vám nic nebrání aplikace plně ozkoušet :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Skupina jednoduchých aplikací s otevřeným zdrojovým kódem pro Android s přizpůsobitelnými widgety, bez reklam a zbytečných oprávnění.</string>
 </resources>
