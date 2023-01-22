@@ -602,7 +602,7 @@
     <string name="purchase_simple_thank_you">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="general_settings">Γενικά</string>
     <string name="color_customization">Προσαρμογή χρώματος</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Βελτιωμένη προσαρμογή χρώματος</string>
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
     <string name="customize_colors_locked">Προσαρμογή χρωμάτων (Κλειδωμένο)</string>
     <string name="feature_locked">Κλειδωμένο</string>
@@ -687,7 +687,7 @@
     <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
     <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
     <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Άνοιγμα Κάδου Ανακύκλωσης</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>
         <item quantity="other">Μετακινήθηκαν %d στοιχεία στον Κάδο</item>
@@ -776,7 +776,7 @@
     <string name="more_info">Περισσότερα</string>
     <string name="upgrade">Αναβάθμιση</string>
     <string name="upgrade_calendar">Πρέπει να μεταφέρετε τα αποθηκευμένα τοπικά συμβάντα χειροκίνητα, μέσω Εξαγωγής σε αρχείο .ics και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τις επιλογές Εξαγωγής/Εισαγωγής, στο μενού της κύριας οθόνης.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Μόλις μείνετε ευχαριστημένοι με αυτή και ίσως μεταφέρετε τα δεδομένα σας, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση για να αποφύγετε τυχαία εκκίνησή της, καθώς δεν θα την χρειάζεστε πλέον.\n\nΕυχαριστώ!</string>
     <string name="upgraded_to_pro">Γεια σας,\n\nφαίνεται ότι έχετε ήδη την έκδοση της εφαρμογής Pro επίσης. Μόλις μείνετε ευχαριστημένοι με αυτήν και ίσως μεταφέρατε τα δεδομένα σας, μπορείτε να την απεγκαταστήσετε για να αποφύγετε την τυχαία εκκίνησή της, καθώς δεν θα την χρειάζεστε πια.\n\nΕυχαριστούμε!</string>
     <string name="upgraded_to_pro_calendar">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν θέλετε να μεταφέρετε τα τοπικά αποθηκευμένα συμβάντα σας, θα πρέπει να το κάνετε χειροκίνητα, εξάγοντάς τα σε αρχείο .ics στην έκδοση της δωρεάν εφαρμογής και εισάγοντας τα εδώ μέσω του μενού επάνω. \n\nΜόλις μείνετε ικανοποιημένοι με την εγκατάστασή σας στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν την χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
     <string name="upgraded_to_pro_contacts">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν είχατε αποθηκεύσει επαφές στο \"%s\", θα πρέπει να τις μεταφέρετε χειροκίνητα, εξάγοντας σε αρχείο .vcf από την έκδοση της δωρεάν εφαρμογής και εισάγοντας εδώ μέσω του επάνω μενού.\n\nΜόλις είστε ικανοποιημένοι με τη ρύθμιση στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν τη χρειάζεστε πλέον.\n\n Ευχαριστούμε!</string>
@@ -1054,7 +1054,7 @@
     <!-- Trial -->
     <string name="trial_expired">Η Δοκιμή έληξε</string>
     <string name="start_free_trial">Ξεκινήστε δωρεάν δοκιμή</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">Η Δοκιμή σας λήγει σύντομα.</string>
     <string name="welcome_to_app_name">Καλώς ήρθατε σε %s!</string>
     <string name="trial_start_description">Σας ευχαριστούμε που χρησιμοποιείτε την εφαρμογή μας. Μπορείτε να χρησιμοποιήσετε αυτή την ξεκλείδωτη έκδοση για &lt;font color=\'#FFFFFF\'>%d ημέρες&lt;/font>. Μετά το τέλος της δοκιμής, παρακαλούμε εξετάστε το ενδεχόμενο αναβάθμισης στην έκδοση Pro. Διαθέτει μεγάλο αριθμό νέων χαρακτηριστικών, μοντέρνο σχεδιασμό, χωρίς διαφημίσεις και πολλές άλλες βελτιώσεις.
         \n\nΑπλά πρέπει να πληρώσετε για αυτό μια φορά στη ζωή σας και αν δεν είστε ικανοποιημένοι, μπορείτε να την απεγκαταστήσετε και να λάβετε επιστροφή χρημάτων.\n\nΕλπίζω να σας αρέσει. :)</string>
