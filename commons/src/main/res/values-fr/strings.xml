@@ -713,7 +713,7 @@
     <string name="recent_files_tab">Fichiers récents</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurer ce fichier</string>
-    <string name="restore_selected_files">Restaurer les fichiers sélectionnés</string>
+    <string name="restore_selected_files">Restaurer la sélection</string>
     <string name="restore_all_files">Restaurer tous les fichiers</string>
     <string name="recycle_bin_emptied">Corbeille vidée</string>
     <string name="files_restored_successfully">Fichiers restaurés avec succès</string>
@@ -722,7 +722,7 @@
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé, veuillez utiliser la fonction de restauration</string>
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Ouvrir la corbeille</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d élément déplacé dans la corbeille</item>
         <item quantity="many">%d éléments déplacés dans la corbeille</item>
