@@ -809,16 +809,36 @@
     <string name="it_is_free">É gratuita até: %s. Se a descarregar até esta data, será sua para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar versão</string>
-    <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã inicial.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã principal.</string>
+    <string name="upgraded_from_free">Olá,
+\n
+\nParece que fez a atualização a partir da versão gratuita. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro">Olá,
+\n
+\nParece que você já tem a versão Pro. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro_calendar">Olá,
+\n
+\nParece que fez a atualização a partir da versão gratuita. Se quiser migrar os eventos guardados localmente, tem que os exportar para um ficheiro .ics através da aplicação gratuita e importá-los através do menu.
+\n
+\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro_contacts">Olá,
+\n
+\nParece que fez a atualização a partir da versão gratuita. Se tiver contactos guardados em \"%s\" e os quiser migrar para a versão Pro, tem que os exportar para um ficheiro .vcf através da aplicação gratuita e importá-los através do menu.
+\n
+\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer
+\n
+\nObrigado!</string>
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Acerca</string>
-    <string name="website">Website</string>
-    <string name="website_label">Mais aplicações Simple e código fonte em</string>
+    <string name="website">Site</string>
+    <string name="website_label">Mais aplicações Simple e código-fonte em</string>
     <string name="email_label">Envie os seus comentários ou sugestões para</string>
     <string name="upgrade_to_pro">Atualizar para versão Pro</string>
     <string name="more_apps">Mais aplicações</string>
@@ -838,7 +858,7 @@
     <string name="privacy_policy">Política de privacidade</string>
     <string name="version_placeholder">Versão %s</string>
     <string name="hello">Olá :)</string>
-    <string name="about_footer">Feito com ❤️ na Eslovaquia</string>
+    <string name="about_footer">Feito com ❤️ na Eslováquia</string>
     <string name="additional_info">Mais informações</string>
     <string name="app_version">Versão da aplicação: %s</string>
     <string name="device_os">SO do dispositivo: %s</string>
@@ -846,14 +866,14 @@
     <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
     <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Comprar</string>
-    <string name="get_simple_phone">Get Simple Phone</string>
-    <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
+    <string name="get_simple_phone">Obter Simple Phone</string>
+    <string name="update_thank_you">Deve atualizar a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
     <string name="before_rate_read_faq">Antes de dar uma avaliação, analise as definições da aplicação e leia as FAQ. Pode ser que a solução para o seu problema esteja aí mesmo.</string>
     <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
     <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
     <string name="read_it">Ler</string>
-    <string name="read_faq">Ler a FAQ</string>
+    <string name="read_faq">Ler as FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
     <string name="rate_our_app">Avalie a nossa aplicação :)</string>
     <string name="thank_you">Obrigado</string>
