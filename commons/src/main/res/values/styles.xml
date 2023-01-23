@@ -301,7 +301,7 @@
     </style>
 
     <style name="LightActionBarItems" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@android:color/white</item>
         <item name="android:textColorHint">@color/hint_white</item>
     </style>
 
