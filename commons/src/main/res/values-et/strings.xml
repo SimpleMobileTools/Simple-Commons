@@ -603,7 +603,7 @@
     <string name="purchase_simple_thank_you">Osta rakendus „Lihtne tänuavaldus“</string>
     <string name="general_settings">Üldine</string>
     <string name="color_customization">Värvide kohendamine</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Võimalus värvide detailseks kohendamiseks</string>
     <string name="customize_colors">Muuda rakenduse värve</string>
     <string name="customize_colors_locked">Muuda rakenduse värve (Lukustatud)</string>
     <string name="feature_locked">Lukus</string>
@@ -688,7 +688,7 @@
     <string name="moving_recycle_bin_items_disabled">Prügikastis olevaid faile ei saa mujale tõsta, palun kasuta taastamist</string>
     <string name="show_the_recycle_bin">Näita prügikasti</string>
     <string name="hide_the_recycle_bin">Peida prügikast</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Ava prügikast</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Viskan %d faili prügikasti</item>
         <item quantity="other">Viskan %d faili prügikasti</item>
@@ -777,7 +777,11 @@
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Tere,
+\n
+\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist.
+\n
+\nAitäh!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
@@ -1027,15 +1031,15 @@
     <string name="android_lame_title">AndroidLame (mp3 kodeerija)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="start_free_trial">Alusta tasuta prooviperioodi</string>
+    <string name="trial_expires_soon">Selle rakenduse prooviperiood lõppeb peagi.</string>
+    <string name="welcome_to_app_name">Tere tulemast %s kasutajaks!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Selle rakenduse prooviperiood lõppeb %d päeva pärast.</item>
+        <item quantity="other">Selle rakenduse prooviperiood lõppeb %d päeva pärast.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">AEGUNUD: Selle rakenduse versiooni arendus on lõppenud, laadi PRO-versioon aadressilt https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
