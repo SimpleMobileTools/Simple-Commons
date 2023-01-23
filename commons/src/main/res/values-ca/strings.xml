@@ -99,7 +99,7 @@
     <string name="select_photo">Selecciona una foto</string>
     <plurals name="column_counts">
         <item quantity="one">%d columna</item>
-        <item quantity="other">%d de columnes</item>
+        <item quantity="other">%d columnes</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
@@ -255,21 +255,21 @@
     <string name="access_storage_prompt">Si us plau, concediu accés de la nostra aplicació a tots els vostres fitxers, és possible que no funcioni bé sense això.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
-        <item quantity="other">%d d\'elements</item>
+        <item quantity="other">%d elements</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
-        <item quantity="other">%d d\'elements</item>
+        <item quantity="other">%d elements</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">S\'està suprimint %d element</item>
-        <item quantity="other">S\'estan suprimint %d d\'elements</item>
+        <item quantity="other">S\'estan suprimint %d elements</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contacte</item>
-        <item quantity="other">%d de contactes</item>
+        <item quantity="other">%d contactes</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Seleccioneu l\'emmagatzematge</string>
@@ -421,7 +421,7 @@
     <string name="maybe">Potser</string>
     <plurals name="delete_warning">
         <item quantity="one">ADVERTÈNCIA: Se suprimirà %d carpeta</item>
-        <item quantity="other">ADVERTÈNCIA: Se suprimiran %d de carpetes</item>
+        <item quantity="other">ADVERTÈNCIA: Se suprimiran %d carpetes</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -465,118 +465,118 @@
     <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d de segons</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d de minuts</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d d\'hores</item>
+        <item quantity="other">%d hores</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d de dies</item>
+        <item quantity="other">%d dies</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d de setmanes</item>
+        <item quantity="other">%d setmanes</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d de mesos</item>
+        <item quantity="other">%d mesos</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d d\'anys</item>
+        <item quantity="other">%d anys</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d de segons</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d de minuts</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d d\'hores</item>
+        <item quantity="other">%d hores</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d de dies</item>
+        <item quantity="other">%d dies</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d de setmanes</item>
+        <item quantity="other">%d setmanes</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d de mesos</item>
+        <item quantity="other">%d mesos</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d d\'anys</item>
+        <item quantity="other">%d anys</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d segon abans</item>
-        <item quantity="other">%d de segons abans</item>
+        <item quantity="other">%d segons abans</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minut abans</item>
-        <item quantity="other">%d de minuts abans</item>
+        <item quantity="other">%d minuts abans</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d hora abans</item>
-        <item quantity="other">%d d\'hores abans</item>
+        <item quantity="other">%d hores abans</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d dia abans</item>
-        <item quantity="other">%d de dies abans</item>
+        <item quantity="other">%d dies abans</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d setmana abans</item>
-        <item quantity="other">%d de setmanes abans</item>
+        <item quantity="other">%d setmanes abans</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mes abans</item>
-        <item quantity="other">%d de mesos abans</item>
+        <item quantity="other">%d mesos abans</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d any abans</item>
-        <item quantity="other">%d d\'anys abans</item>
+        <item quantity="other">%d anys abans</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="other">%d de segons</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="other">%d de minuts</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="other">%d d\'hores</item>
+        <item quantity="other">%d hores</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d dia</item>
-        <item quantity="other">%d de dies</item>
+        <item quantity="other">%d dies</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d setmana</item>
-        <item quantity="other">%d de setmanes</item>
+        <item quantity="other">%d setmanes</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mes</item>
-        <item quantity="other">%d de mesos</item>
+        <item quantity="other">%d mesos</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d any</item>
-        <item quantity="other">%d d\'anys</item>
+        <item quantity="other">%d anys</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Temps restant fins que soni l\'alarma: \n%s</string>
@@ -602,7 +602,7 @@
     <string name="purchase_simple_thank_you">Compra Simple Thank You</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Personalització del color</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Personalització del color millorada</string>
     <string name="customize_colors">Personalitza els colors</string>
     <string name="customize_colors_locked">Personalitza els colors (bloquejat)</string>
     <string name="feature_locked">Bloquejat</string>
@@ -690,7 +690,7 @@
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">S\'està movent %d element a la paperera de reciclatge</item>
-        <item quantity="other">S\'estan movent %d d\'elements a la paperera de reciclatge</item>
+        <item quantity="other">S\'estan movent %d elements a la paperera de reciclatge</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">S\'està important…</string>
@@ -776,7 +776,11 @@
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Hola
+\n
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més.
+\n
+\nGràcies!</string>
     <string name="upgraded_to_pro">Hola,
 \n
 \nsembla que ja teniu també la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser hàgiu migrat les dades, podeu desinstal·lar-la per evitar que l\'inicieu accidentalment, ja que ja no la necessitareu.
@@ -1048,7 +1052,7 @@
     <!-- Trial -->
     <string name="trial_expired">La prova ha caducat</string>
     <string name="start_free_trial">Comença la prova gratuïta</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">Aquesta versió de prova caduca aviat.</string>
     <string name="welcome_to_app_name">Us donem la benvinguda a %s!</string>
     <string name="trial_start_description">Gràcies per utilitzar la nostra aplicació. Podeu utilitzar aquesta versió desbloquejada durant <font color="#FFFFFF">%d dies</font>. Un cop finalitzi la prova, considereu l\'actualització a la versió Pro. Té una gran quantitat de funcions noves, un disseny modern, sense anuncis i moltes altres millores.
 \n
@@ -1061,8 +1065,8 @@
 \n
 \nEns veiem allà :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">La prova caduca en %d dia.</item>
-        <item quantity="other">La prova caduca en %d de dies.</item>
+        <item quantity="one">Aquesta versió de prova caduca en %d dia.</item>
+        <item quantity="other">Aquesta versió de prova caduca en %d dies.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETA: Aquesta versió de l\'aplicació ja no es manté, obteniu la versió Pro a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>

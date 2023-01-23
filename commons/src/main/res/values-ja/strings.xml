@@ -569,7 +569,7 @@
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
     <string name="general_settings">全般</string>
     <string name="color_customization">カラーカスタマイズ</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">カラーカスタマイズの改善</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="feature_locked">Locked</string>
@@ -654,7 +654,7 @@
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">ごみ箱を開く</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">%d件のアイテムをごみ箱に移動しています</item>
     </plurals>
@@ -742,7 +742,11 @@
     <string name="more_info">もっと見る</string>
     <string name="upgrade">アップグレードする</string>
     <string name="upgrade_calendar">ローカルに保存されたイベントは、手動で.icsファイルにエクスポートしてインポートする必要があります。インポート/エクスポートボタンはメイン画面のメニューにあります。</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">こんにちは、
+\n
+\n無料版からアップグレードされたようですね。データの移行やセットアップが完了したら、誤って起動しないように、無料版のアプリをアンインストールしてください。
+\n
+\nありがとうございます！</string>
     <string name="upgraded_to_pro">こんにちは、
 \n
 \nすでにPro版のアプリをお持ちのようですね。データの移行が完了したら、誤って起動しないように、こちらのアプリをアンインストールしてください。
@@ -876,9 +880,8 @@
     <string name="faq_4_text_commons">はい、ホーム画面でウィジェットをドラッグすると、ウィジェット設定画面が表示されます。左下に色付きの正方形が表示されるので、ボタンを押して色を選択してください。スライダーを使用して透明度を変更することも可能です。</string>
     <string name="faq_5_title_commons">削除したファイルを復元出来ますか？</string>
     <string name="faq_5_text_commons">本当に削除されてしまったのであれば、復元出来ません。ですが、デフォルトでごみ箱機能が有効になっているため、ファイルは削除されたのではなく、ごみ箱に移動している可能性があります。</string>
-    <string name="faq_6_title_commons">アプリランチャーのアイコンが消えました。どうしたらいいですか？</string>
-    <string name="faq_6_text_commons">ランチャーがアイコンカスタマイズを適切にサポートしていないことが原因となっています。可能であれば、Google Playかウィジェットでアプリを起動してみてください。
-      起動したら、デフォルトのオレンジ色(#F57C00)のアイコンを元に戻します。最悪の場合、アプリを再インストールする必要があります。</string>
+    <string name="faq_6_title_commons">ランチャーからアプリのアイコンが消えました。どうしたらいいですか？</string>
+    <string name="faq_6_text_commons">ランチャーがアイコンカスタマイズを適切にサポートしていないことが原因となっています。Google Playもしくはウィジェットからアプリを起動してみてください。起動したら、アイコンをデフォルトのオレンジ色(#F57C00)に戻してください。最悪の場合、アプリの再インストールが必要となります。</string>
     <string name="faq_7_title_commons">銀行口座から引き落としはされているけど、アプリがダウンロード出来ません。どうしたらいいですか？</string>
     <string name="faq_7_text_commons">お支払いはGoogleが対応していますが、時にシステム上で不具合があるようです。Google Playのアプリキャッシュを削除し、デバイスを再起動してダウンロードしてみてください。</string>
     <string name="faq_8_title_commons">なぜPro版にアップグレードしたほうがいいのですか？</string>

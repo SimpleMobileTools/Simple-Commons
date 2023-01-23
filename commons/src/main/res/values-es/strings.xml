@@ -722,7 +722,7 @@
     <string name="moving_recycle_bin_items_disabled">El movimiento de los elementos de la papelera de reciclaje está deshabilitado, utilice Restaurar</string>
     <string name="show_the_recycle_bin">Mostrar la paplera de reciclaje</string>
     <string name="hide_the_recycle_bin">Ocultar la papelera de reciclaje</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Abrir la papelera de reciclaje</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moviendo %d elemento a la papelera</item>
         <item quantity="many">Mover %d elementos a la papelera de reciclaje</item>
@@ -812,7 +812,11 @@
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Hola,
+\n
+\nparece que acaba de actualizar desde la versión gratuita. Una vez que esté satisfecho con él y haya migrado sus datos, puede desinstalar la versión gratuita anterior para evitar iniciarla accidentalmente porque ya no la necesita.
+\n
+\n¡Muchas gracias!</string>
     <string name="upgraded_to_pro">Hola,
 \n
 \nparece que ya tienes la versión pro de la aplicación también. Una vez que esté satisfecho con ella y haya migrado sus datos, puede desinstalar esta aplicación. Para evitar ponerla en marcha accidentalmente porque ya no la necesitas.
