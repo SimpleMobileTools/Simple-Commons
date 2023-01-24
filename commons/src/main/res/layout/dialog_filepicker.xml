@@ -106,6 +106,7 @@
             android:layout_marginEnd="@dimen/activity_margin"
             android:layout_marginBottom="@dimen/activity_margin"
             android:src="@drawable/ic_unhide_vector" />
+
     </LinearLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
