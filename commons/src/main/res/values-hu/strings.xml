@@ -327,8 +327,8 @@
     <string name="apply_to_all_apps">Színek alkalmazása az összes Simple Apps alkalmazásra</string>
     <string name="app_icon_color_warning">FIGYELMEZTETÉS: Néhány indító nem megfelelően kezeli az alkalmazásikon testreszabását. Ha az ikon eltűnik, próbálja meg elindítani az alkalmazást a Google Playen vagy egy modulon keresztül, ha elérhető. Miután elindult, állítsa vissza az alapértelmezett narancssárga (#F57C00) ikont. A legrosszabb esetben újra kellhet telepítenie az alkalmazást.</string>
     <string name="share_colors_success">A színek sikeresen frissültek. Hozzáadott egy új, „Közös” nevű témát, a jövőben ezt használja az összes alkalmazás színének frissítéséhez.</string>
-    <string name="shared_theme_note">Bár a Pro alkalmazásverziót használja, műszaki okokból így is szükséges a Simple Thank You alkalmazás telepítése, az gondoskodik ugyanis a színek szinkronizálásáról.</string>
-    <string name="purchase_thank_you">Kérjük, vásárolja meg a &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; alkalmazást a funkció feloldásához és a fejlesztés támogatásához. Köszönöm!</string>
+    <string name="shared_theme_note">Bár a Pro alkalmazásverziót használja, műszaki okokból így is szükséges az Egyszerű köszönet alkalmazás telepítése, az gondoskodik ugyanis a színek szinkronizálásáról.</string>
+    <string name="purchase_thank_you">Kérjük, vásárolja meg az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Egyszerű köszönet&lt;/a&gt; alkalmazást a funkció feloldásához és a fejlesztés támogatásához. Köszönöm!</string>
     <!-- Themes -->
     <string name="light_theme">Világos</string>
     <string name="dark_theme">Sötét</string>
@@ -600,10 +600,10 @@
     <string name="during_day_at">Napközben ekkor: %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Beállítások</string>
-    <string name="purchase_simple_thank_you">Simple Thank You megvásárlása</string>
+    <string name="purchase_simple_thank_you">Egyszerű köszönet megvásárlása</string>
     <string name="general_settings">Általános</string>
     <string name="color_customization">Színek testreszabása</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Továbbfejlesztett színtestreszabás</string>
     <string name="customize_colors">Színek testreszabása</string>
     <string name="customize_colors_locked">Színek testreszabása (zárolva)</string>
     <string name="feature_locked">Zárolt</string>
@@ -688,7 +688,7 @@
     <string name="moving_recycle_bin_items_disabled">A lomtárelemek áthelyezése le van tiltva, használja a Helyreállítás lehetőséget</string>
     <string name="show_the_recycle_bin">Lomtár megjelenítése</string>
     <string name="hide_the_recycle_bin">Lomtár elrejtése</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Lomtár megnyitása</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d elem áthelyezése a Lomtárba</item>
         <item quantity="other">%d elem áthelyezése a Lomtárba</item>
@@ -777,11 +777,37 @@
     <string name="more_info">További információk</string>
     <string name="upgrade">Frissítés</string>
     <string name="upgrade_calendar">A helyben tárolt eseményeket kézzel kell átköltöztetni egy .ics fájl exportálásával, majd importálással. Az exportálás/importálás gomb a főképernyő menüjében található.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Üdv,
+\n
+\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha elégedett ezzel, és átköltöztette az adatait, akkor eltávolíthatja a régi, ingyenes verziót, hogy nehogy azt indítsa el véletlenül, ha már nincs rá szüksége.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_to_pro">Üdv,
+\n
+\nÚgy néz ki, hogy már rendelkezik a Pro verzióval. Ha elégedett vele, és átköltöztette az adatait, akkor eltávolíthatja a régi, ingyenes verziót, hogy nehogy azt indítsa el véletlenül, ha már nincs rá szüksége.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_to_pro_calendar">Üdv,
+\n
+\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a helyileg tárolt eseményeit, akkor ezt kézzel kell megtennie, exportálja egy .ics fájlba az ingyenes verzióból, majd importálja a felső menüből.
+\n
+\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_to_pro_contacts">Üdv,
+\n
+\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha voltak névjegyei a(z) „%s” alatt, akkor az átköltöztetéshez kézzel kell exportálnia egy .vcf fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
+\n
+\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_to_pro_notes">Üdv,
+\n
+\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a jegyzeteit, akkor kézzel kell exportálnia egy fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
+\n
+\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
+\n
+\nKöszönöm!</string>
     <!-- About -->
     <string name="about">Névjegy</string>
     <string name="website">Weboldal</string>
@@ -834,7 +860,7 @@
     <string name="thank_you">Köszönjük</string>
     <string name="widget_locked_pro">A modul zárolt.
 \nFrissítsen a Pro verzióra a feloldásához.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Ez a funkció zárolt, vásárolja meg az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Egyszerű köszönet&lt;/a&gt; alkalmazást a teljes alkalmazás feloldásához.&lt;br&gt;&lt;br&gt;Ez egy egyszeri fizetés, és ha nem lesz elégedett, akkor visszatérítjük az árát.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Üdv!&lt;br&gt;&lt;br&gt;Csak tájékoztatni szeretnénk, hogy megjelent néhány új alkalmazás:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; A címeikre vagy ikonjaikra kattintva töltheti le őket.&lt;br&gt;&lt;br&gt; Köszönjük!</string>
     <string name="simple_app_launcher">Egyszerű alkalmazásindító</string>
@@ -848,8 +874,8 @@
     <string name="simple_file_manager">Egyszerű fájlkezelő</string>
     <string name="simple_flashlight">Egyszerű zseblámpa</string>
     <string name="simple_gallery">Egyszerű galéria</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_keyboard">Egyszerű billentyűzet</string>
+    <string name="simple_launcher">Egyszerű indító</string>
     <string name="simple_music_player">Egyszerű zenelejátszó</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Egyszerű SMS üzenetküldő</string>
@@ -866,8 +892,8 @@
     <string name="file_manager_short">Fájlkezelő</string>
     <string name="flashlight_short">Zseblámpa</string>
     <string name="gallery_short">Galéria</string>
-    <string name="keyboard_short">Keyboard</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="keyboard_short">Billentyűzet</string>
+    <string name="launcher_short">Indító</string>
     <string name="music_player_short">Zenelejátszó</string>
     <string name="notes_short">Jegyzetek</string>
     <string name="sms_messenger_short">SMS üzenetküldő</string>
@@ -955,11 +981,11 @@
     <string name="why_upgrade_no_ads">Reklámmentes</string>
     <string name="why_upgrade_no_internet_access">Internet-hozzáférés nem szükséges</string>
     <string name="why_upgrade_footer">100% pénzvisszatérítési garancia</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Egyszeri fizetés</string>
     <string name="why_upgrade_improved_design">Továbbfejlesztett megjelenés</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fejlett képszerkesztő</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Fejlett fénykép- és videószerkesztő</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF-fájlok támogatása</string>
     <string name="why_upgrade_batch_renaming">Fejlett tömeges fájlátnevezés</string>
     <string name="why_upgrade_folder_locking">Mappák egyenkénti zárolása</string>
@@ -975,7 +1001,7 @@
     <string name="why_upgrade_private_contact_sharing">Nem kötelező, privát névjegymegosztás az alkalmazásainkban</string>
     <string name="why_upgrade_customizable_contact_ringtones">Testreszabható névjegyenkénti csengőhangok</string>
     <string name="why_upgrade_contact_filtering">Névjegyszűrés</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Privát módon tárolt névjegyek</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Ellenőrzőlisták</string>
     <string name="why_upgrade_different_note_per_widget">Modulonként eltérő jegyzetek és színek</string>
@@ -1021,17 +1047,24 @@
     <string name="audio_record_view_title">Audio Record View (hangvizualizáció)</string>
     <string name="sms_mms_title">SMS MMS (SMS- és MMS-kezelés)</string>
     <string name="apng_title">APNG Android (animált WebP támogatása)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF megjelenítő)</string>
     <string name="m3u_parser_title">M3U Parser (m3u lejátszási listák kezelése)</string>
     <string name="android_lame_title">AndroidLame (mp3 kódoló)</string>
     <!-- Trial -->
     <string name="trial_expired">A próbaidőszak lejárt</string>
     <string name="start_free_trial">Ingyenes próbaidőszak elkezdése</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">A próbaverziója hamarosan lejár.</string>
     <string name="welcome_to_app_name">Üdvözli a(z) %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_start_description">Köszönjük, hogy az alkalmazásunkat használja. Ezt a feloldott verziót <font color="#FFFFFF">%d napig</font> használhatja. Amint a próbaverzió véget ér, fontolja meg a Pro verzióra történő frissítést. Számos új funkcióval és modern dizájnnal rendelkezik, nincsenek benne reklámok, és sok más fejlesztést tartalmaz.
+\n
+\nCsak egyetlen egyszer kell érte fizetnie, és ha nem elégedett vele, akkor eltávolíthatja és visszakérheti az árát.
+\n
+\nReméljük, hogy tetszeni fog :)</string>
+    <string name="trial_end_description">Frissítsen a Pro verzióra, hogy a teljes mértékig kiélvezhesse az alkalmazást.
+\n
+\nCsak egyetlen egyszer kell érte fizetnie, és ha nem elégedett vele, akkor eltávolíthatja és visszakérheti az árát.
+\n
+\nReméljük, hogy tetszeni fog :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">A próbaverzió %d nap múlva lejár.</item>
         <item quantity="other">A próbaverzió %d nap múlva lejár.</item>
