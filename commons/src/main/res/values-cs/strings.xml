@@ -96,8 +96,8 @@
     <string name="column_count">Počet sloupců</string>
     <string name="portrait_column_count">Počet sloupců na výšku</string>
     <string name="landscape_column_count">Počet sloupců na šířku</string>
-    <string name="change_cover_image">Změnit obal alba</string>
-    <string name="select_photo">Vybrat fotografii</string>
+    <string name="change_cover_image">Změnit obrázek složky</string>
+    <string name="select_photo">Vybrat obrázek</string>
     <plurals name="column_counts">
         <item quantity="one">%d sloupec</item>
         <item quantity="few">%d sloupce</item>
@@ -365,9 +365,9 @@
     <string name="hide_folder">Skrýt složku</string>
     <string name="unhide_folder">Odkrýt složku</string>
     <string name="temporarily_show_hidden">Dočasně zobrazit skryté</string>
-    <string name="stop_showing_hidden">Přestat zobrazovat skrytá média</string>
+    <string name="stop_showing_hidden">Přestat zobrazovat skryté</string>
     <string name="maximum_share_reached">Nemůžete sdílet tolik obsahu najednou</string>
-    <string name="empty_and_disable_recycle_bin">Vysypat a deaktivovat koš</string>
+    <string name="empty_and_disable_recycle_bin">Vyprázdnit a deaktivovat koš</string>
     <string name="undo">Zpět</string>
     <string name="redo">Znovu</string>
     <string name="print">Tisk</string>
@@ -669,7 +669,7 @@
     <string name="snooze_time">Čas odložení</string>
     <string name="vibrate_on_button_press">Vibrovat při stisku tlačítka</string>
     <string name="move_items_into_recycle_bin">Přesunout položky do koše namísto jejich vymazání</string>
-    <string name="recycle_bin_cleaning_interval">Interval vysypání koše</string>
+    <string name="recycle_bin_cleaning_interval">Interval vyprázdnění koše</string>
     <string name="empty_recycle_bin">Vyprázdnit koš</string>
     <string name="force_portrait_mode">Vynutit zobrazení na výšku</string>
     <string name="export_settings">Export nastavení</string>
@@ -688,7 +688,7 @@
     <string name="saving_label">Ukládání</string>
     <string name="startup">Po spuštění</string>
     <string name="text">Text</string>
-    <string name="migrating">Přenos</string>
+    <string name="migrating">Přenosy</string>
     <string name="quality">Kvalita</string>
     <string name="main_screen">Hlavní obrazovka</string>
     <string name="thumbnails">Miniatury</string>
@@ -721,7 +721,7 @@
     <string name="files_restored_successfully">Soubory byly úspěšně obnoveny</string>
     <string name="empty_recycle_bin_confirmation">Opravdu chcete vyprázdnit koš? Soubory budou navždy ztraceny.</string>
     <string name="recycle_bin_empty">Koš je prázdný</string>
-    <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše není povoleno, prosím použijte možnost Obnovit</string>
+    <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše je zakázáno, použijte obnovení</string>
     <string name="show_the_recycle_bin">Zobrazit koš</string>
     <string name="hide_the_recycle_bin">Skrýt koš</string>
     <string name="open_the_recycle_bin">Otevřít koš</string>
@@ -967,9 +967,7 @@
         Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
         Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na hello@simplemobiletools.com a peníze vám vrátíme.</string>
     <string name="faq_9_title_commons">Jak mohu vybrat více položek najednou?</string>
-    <string name="faq_9_text_commons">Existuje několik způsobů, jak toho dosáhnout. První spouští režim výběru dlouhým stisknutím jedné položky a následným krátkým kliknutím na ostatní, abyste je vybrali. Druhý způsob je podobný výběru položek na PC pomocí myši,
-        stačí spustit režim výběru dlouhým stisknutím jedné položky a potom ji prstem stále dolů přetahovat přes další položky pro výběr. Třetím způsobem výběru více položek je dlouhé stisknutí jedné položky, pak dlouhé stisknutí další a vybere se vše mezi nimi. jestli ty
-        chcete vybrat všechny položky, stačí dlouze stisknout jednu položku a poté kliknout na počítadlo vybraných položek v levém horním rohu. Tím se vybere nebo zruší výběr všeho.</string>
+    <string name="faq_9_text_commons">Existuje několik způsobů, jak toho dosáhnout. První spouští režim výběru dlouhým stisknutím jedné položky a následným krátkým kliknutím na ostatní, abyste je vybrali. Druhý způsob je podobný výběru položek na PC pomocí myši, stačí spustit režim výběru dlouhým stisknutím jedné položky a potom ji prstem stále dolů přetahovat přes další položky pro výběr. Třetím způsobem výběru více položek je dlouhé stisknutí jedné položky, pak dlouhé stisknutí další a vybere se vše mezi nimi. Pokud chcete vybrat všechny položky, stačí dlouze stisknout jednu položku a poté kliknout na počítadlo vybraných položek v levém horním rohu. Tím se vybere nebo zruší výběr všeho.</string>
     <string name="faq_10_title_commons">Koupil jsem si aplikaci, ale nemohu ji stáhnout do jiného zařízení.</string>
     <string name="faq_10_text_commons">Zkuste vymazat mezipaměť aplikace Google Play a restartovat zařízení. Je to nějaká závada Google Play, která ve skutečnosti nesouvisí se samotnou aplikací.</string>
     <!-- Contributors -->
