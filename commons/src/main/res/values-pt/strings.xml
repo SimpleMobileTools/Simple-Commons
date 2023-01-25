@@ -953,15 +953,15 @@
     <string name="other_help">Mais ajuda</string>
     <string name="contributors_label">Esta lista menciona todos aqueles que, de alguma forma, ajudaram significativamente no desenvolvimento das Simple Mobile Tools e não apenas desta aplicação. As traduções estão a cargo de voluntários. Se quiser participar, encontra o guia no &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;nosso site&lt;/a&gt; ou então, contacte-nos para &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; se tiver alguma questão. Obrigado a todos os que contribuiram e nos apoiaram!</string>
     <string name="translation_arabic">Árabe</string>
-    <string name="translation_azerbaijani">Azerbeijão</string>
-    <string name="translation_bengali">Bengali</string>
+    <string name="translation_azerbaijani">Azeri</string>
+    <string name="translation_bengali">Bengalês</string>
     <string name="translation_breton">Bretão</string>
-    <string name="translation_bulgarian">Bulgarian</string>
+    <string name="translation_bulgarian">Búlgaro</string>
     <string name="translation_catalan">Catalão</string>
     <string name="translation_czech">Checo</string>
     <string name="translation_welsh">Galês</string>
     <string name="translation_danish">Dinamarquês</string>
-    <string name="translation_english">English</string>
+    <string name="translation_english">Inglês</string>
     <string name="translation_german">Alemão</string>
     <string name="translation_greek">Grego</string>
     <string name="translation_spanish">Espanhol</string>
@@ -979,7 +979,7 @@
     <string name="translation_japanese">Japonês</string>
     <string name="translation_korean">Coreano</string>
     <string name="translation_lithuanian">Lituano</string>
-    <string name="translation_nepali">Nepali</string>
+    <string name="translation_nepali">Nepalês</string>
     <string name="translation_norwegian">Norueguês</string>
     <string name="translation_dutch">Holandês</string>
     <string name="translation_polish">Polaco</string>
@@ -995,20 +995,20 @@
     <string name="translation_ukrainian">Ucraniano</string>
     <string name="translation_vietnamese">Vietnamita</string>
     <string name="translation_chinese_hk">Chinês (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinês (Simplified)</string>
-    <string name="translation_chinese_tw">Chinês (Traditional)</string>
+    <string name="translation_chinese_cn">Chinês (Simplificado)</string>
+    <string name="translation_chinese_tw">Chinês (Tradicional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Atualize para a versão Pro agora!</string>
+    <string name="why_upgrade">Atualizar para a versão Pro agora!</string>
     <string name="why_upgrade_basic_version">Básico</string>
-    <string name="why_upgrade_pro_version">pro</string>
+    <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Sem anúncios</string>
     <string name="why_upgrade_no_internet_access">Sem acesso à internet</string>
     <string name="why_upgrade_footer">Garantia de reembolso a 100%</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Pagamento único</string>
     <string name="why_upgrade_improved_design">Design melhorado</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Editor avançado de fotos e de vídeos</string>
     <string name="why_upgrade_heic_support">Suporte a ficheiros HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Mudar nome de ficheiros em lote</string>
     <string name="why_upgrade_folder_locking">Bloqueio individual de pastas</string>
@@ -1022,22 +1022,22 @@
     <string name="why_upgrade_duplicate_contact_merging">Melhorias na triagem e combinação de contactos duplicados</string>
     <string name="why_upgrade_font_size_customization">Personalização do tipo de letra</string>
     <string name="why_upgrade_private_contact_sharing">Partilha opcional de contactos entre as aplicações Simple</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Personalização de sons de toque por contacto</string>
-    <string name="why_upgrade_contact_filtering">Filtragem de contatos</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Personalização de sons por contacto</string>
+    <string name="why_upgrade_contact_filtering">Filtro de contactos</string>
+    <string name="why_upgrade_contact_private_contacts">Contactos guardados localmente</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas de verificação</string>
     <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widget</string>
-    <string name="why_upgrade_note_locking">Bloquear nota</string>
+    <string name="why_upgrade_note_locking">Bloqueio de notas</string>
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personalização do formato de data e de hora</string>
     <string name="why_upgrade_shortcuts">Atalhos no ecrã inicial</string>
-    <string name="why_upgrade_file_compression">Suporte à compressão de arquivos</string>
-    <string name="why_upgrade_recents_tab">Guia de arquivos recentes</string>
+    <string name="why_upgrade_file_compression">Suporte à compressão de ficheiros</string>
+    <string name="why_upgrade_recents_tab">Separador com ficheiros recentes</string>
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalização da cor de fundo</string>
     <string name="why_upgrade_file_importing">Suporte à importação de ficheiros</string>
-    <string name="why_upgrade_zooming">Ampliando</string>
+    <string name="why_upgrade_zooming">Ampliação</string>
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
     <string name="third_party_licences">Licenças de terceiros</string>
@@ -1059,7 +1059,7 @@
     <string name="espresso_title">Espresso (apoio aos testes)</string>
     <string name="gson_title">Gson (processador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detector de falhas de memória)</string>
-    <string name="number_picker_title">Number Picker (selector de números personalizado)</string>
+    <string name="number_picker_title">Number Picker (seletor de números personalizado)</string>
     <string name="exoplayer_title">ExoPlayer (leitor de vídeo)</string>
     <string name="panorama_view_title">VR Panorama View (exibição panorâmica)</string>
     <string name="sanselan_title">Apache Sanselan (leitor de meta-dados das imagens)</string>
@@ -1070,14 +1070,14 @@
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
     <string name="sms_mms_title">SMS MMS (gestão de SMS e MMS)</string>
     <string name="apng_title">APNG Android (suporte a animação WebP)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (leitor de PDF)</string>
+    <string name="m3u_parser_title">M3U Parser (gestão de ficheiros m3u)</string>
+    <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_expired">Versão de testes caducada</string>
+    <string name="start_free_trial">Iniciar versão de teste</string>
+    <string name="trial_expires_soon">A versão de teste está quase a caducar.</string>
+    <string name="welcome_to_app_name">Bem-vindo a %s!</string>
     <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
@@ -1086,8 +1086,8 @@
         <item quantity="other">Your trial expires in %d days.</item>
     </plurals>
     <!-- Google Play listing -->
-    <string name="deprecated_app">AVISO: Esta versão da aplicação já não é mantida em desenvolvimento. Pode obter a versão Pro em https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">AVISO: Esta versão da aplicação já não está em desenvolvimento. Pode obter a versão Pro em https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de desinstalar qualquer aplicação paga no prazo de 2 horas para ser reembolsado automaticamente. Para ser reembolsado posteriormente, contacte-nos para hello@simplemobiletools.com. Assim é mais fácil testar :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Uma gama de aplicações para Android simples, open source, com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
+    <string name="developer_description">Uma gama de aplicações para Android, open source, com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
 </resources>
