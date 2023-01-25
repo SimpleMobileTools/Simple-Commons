@@ -6,7 +6,7 @@
     <string name="nothing">Nic</string>
     <string name="later">Později</string>
     <string name="save_as">Uložit jako</string>
-    <string name="file_saved">Soubor úspěšně uložen</string>
+    <string name="file_saved">Soubor byl úspěšně uložen</string>
     <string name="invalid_file_format">Neplatný formát souboru</string>
     <string name="out_of_memory_error">Zařízení nemá dostatek paměti</string>
     <string name="an_error_occurred">Vyskytla se chyba: %s</string>
@@ -252,7 +252,7 @@
     <string name="confirm_storage_access_text_sd">Pokud SD kartu nevidíte, vyzkoušejte následující</string>
     <string name="confirm_storage_access_android_text">Povolte aplikaci přístup k vybranému úložišti stisknutím „Použít tuto složku“ na další obrazovce dole.</string>
     <string name="confirm_storage_access_android_text_specific">Povolte prosím přístup k \'<b>%s</b>\' stisknutím \'<b>Použít tuto složku</b>\' na další obrazovce dole.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Pro vytvoření nové složky stiskněte „<b>Uložit</b>“ na další obrazovce dole.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Pro vytvoření nové složky stiskněte \'<b>Uložit</b>\' na další obrazovce dole.</string>
     <string name="confirm_selection">Potvrdit výběr</string>
     <string name="loading">Načítání…</string>
     <string name="access_storage_prompt">Prosím, poskytněte aplikaci přístup ke všem vašim souborům. Bez toho nemusí fungovat dobře.</string>
@@ -330,7 +330,7 @@
     <string name="undo_changes">Vrátit změny</string>
     <string name="undo_changes_confirmation">Opravdu chcete vrátit změny?</string>
     <string name="cannot_be_undone">Tuto akci nelze vrátit zpět.</string>
-    <string name="save_before_closing">Máte neuložené změny. Uložit před zavřením?</string>
+    <string name="save_before_closing">Máte neuložené změny. Chcete je před ukončením uložit\?</string>
     <string name="apply_to_all_apps">Použít barvy ve všech Jednoduchých aplikacích</string>
     <string name="app_icon_color_warning">UPOZORNĚNÍ: Některé spouštěče nepodporují změnu ikony. V případě, že ikona aplikace zmizí, zkuste ji spustit skrze obchod Google Play, nebo některý widget, pokud je dostupný. Po spuštění aplikace zkuste nastavit původní oranžovou barvu ikony #F57C00. V nejhorším případě budete muset aplikaci přeinstalovat.</string>
     <string name="share_colors_success">Barvy úspěšně aktualizovány. Byl přidán nový motiv „Sdílený“, v budoucnu jej prosím použijte pro úpravu barev u všech Jednoduchých aplikací zároveň.</string>
