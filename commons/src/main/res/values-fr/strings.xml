@@ -637,7 +637,7 @@
     <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
     <string name="general_settings">Général</string>
     <string name="color_customization">Personnalisation des couleurs</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Amélioration de la personnalisation des couleurs</string>
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_colors_locked">Modifier les couleurs (verrouillé)</string>
     <string name="feature_locked">Verrouillé</string>
@@ -812,7 +812,11 @@
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Bonjour,
+\n
+\nil semble que vous ayez effectué une mise à niveau depuis la version gratuite. Une fois que vous serez satisfait de celle-ci et que vous aurez peut-être migré vos données, vous pourrez désinstaller l\'ancienne version gratuite pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.
+\n
+\nMerci !</string>
     <string name="upgraded_to_pro">Bonjour,
 \n
 \nil semble que vous ayez déjà la version Pro de l\'application également. Une fois que vous en serez satisfait et que vous aurez peut-être migré vos données, vous pourrez désinstaller celle-ci pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.
@@ -1100,7 +1104,7 @@
     <!-- Trial -->
     <string name="trial_expired">Essai expiré</string>
     <string name="start_free_trial">Commencer un essai gratuit</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">Votre essai expire bientôt.</string>
     <string name="welcome_to_app_name">Bienvenue sur %s !</string>
     <string name="trial_start_description">Merci d\'utiliser notre application. Vous pouvez utiliser cette version déverrouillée pendant <font color="#FFFFFF">%d jours</font>. Une fois la période d\'essai terminée, pensez à passer à la version Pro. Elle comporte un grand nombre de nouvelles fonctionnalités, un design moderne, aucune publicité et de nombreuses autres améliorations.
 \n
