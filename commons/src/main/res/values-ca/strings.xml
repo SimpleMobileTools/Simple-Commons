@@ -687,7 +687,7 @@
     <string name="moving_recycle_bin_items_disabled">Moure els elements de la paperera està de reciclatge desactivat, utilitzeu la restauració</string>
     <string name="show_the_recycle_bin">Mostra la paperera de reciclatge</string>
     <string name="hide_the_recycle_bin">Oculta la paperera de reciclatge</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Obre la paperera de reciclatge</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">S\'està movent %d element a la paperera de reciclatge</item>
         <item quantity="other">S\'estan movent %d elements a la paperera de reciclatge</item>
@@ -1065,8 +1065,8 @@
 \n
 \nEns veiem allà :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Aquesta versió de prova caduca en %d dia.</item>
-        <item quantity="other">Aquesta versió de prova caduca en %d dies.</item>
+        <item quantity="one">Aquesta versió de prova caduca d\'aquí a %d dia.</item>
+        <item quantity="other">Aquesta versió de prova caduca d\'aquí a %d dies.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETA: Aquesta versió de l\'aplicació ja no es manté, obteniu la versió Pro a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
