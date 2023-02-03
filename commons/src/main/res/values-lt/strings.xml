@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Gerai</string>
     <string name="cancel">Atšaukti</string>
-    <string name="back">Back</string>
+    <string name="back">Atgal</string>
     <string name="nothing">Nieko</string>
     <string name="later">Vėliau</string>
     <string name="save_as">Įrašyti kaip</string>
@@ -15,8 +15,8 @@
     <string name="edit_with">Taisyti naudojant</string>
     <string name="edit">Redaguoti</string>
     <string name="no_app_found">Nerasta jokios tinkamos programėlės</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Nerasta jokios naršyklės</string>
+    <string name="no_email_client_found">Nerasta jokios el. pašto kliento programėlės</string>
     <string name="set_as">Nustatyti kaip</string>
     <string name="copy_to_clipboard">Kopijuoti į iškarpinę</string>
     <string name="copy_number_to_clipboard">Kopijuoti numerį į iškarpinę</string>
@@ -45,7 +45,7 @@
     <string name="no_contacts_found">Nerasta jokių adresatų</string>
     <string name="request_the_required_permissions">Prašyti reikalingų leidimų</string>
     <string name="no_access_to_contacts">Programėlei nepavyko gauti prieigą prie jūsų adresatų</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Programėlė neturi leidimo inicijuoti telefono skambučių, suteikite šį leidimą įrenginio nustatymuose</string>
     <string name="insert_text_here">Įterpkite tekstą čia</string>
     <string name="call_person">Skambinti %s</string>
     <string name="zero">Nulis</string>
@@ -58,12 +58,12 @@
     <string name="seven">Septyni</string>
     <string name="eight">Aštuoni</string>
     <string name="nine">Devyni</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value">Reikšmė</string>
+    <string name="value_cannot_be_empty">Reikšmė negali būti tuščia</string>
     <string name="create_new_contact">Sukurti naują adresatą</string>
     <string name="add_to_existing_contact">Pridėti prie esamo adresato</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Programėlė pažeista</string>
+    <string name="disclaimer">Atsakomybės ribojimas</string>
     <string name="take_photo">Fotografuoti</string>
     <string name="choose_photo">Pasirinkti nuotrauką</string>
     <string name="choose_video">Choose video</string>
@@ -92,7 +92,7 @@
     <string name="list">Sąrašas</string>
     <string name="increase_column_count">Padidinti stulpelių skaičių</string>
     <string name="reduce_column_count">Sumažinti stulpelių skaičių</string>
-    <string name="column_count">Column count</string>
+    <string name="column_count">Stulpelių skaičius</string>
     <string name="portrait_column_count">Portrait column count</string>
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Pakeisti viršelio paveikslą</string>
@@ -326,7 +326,7 @@
     <string name="discard">Atmesti</string>
     <string name="undo_changes">Atšaukti pakeitimus</string>
     <string name="undo_changes_confirmation">Ar tikrai norite atšaukti pakeitimus\?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Šio veiksmo neįmanoma atšaukti.</string>
     <string name="save_before_closing">Yra neįrašytų pakeitimų. Įrašyti prieš išeinant\?</string>
     <string name="apply_to_all_apps">Taikyti spalvas visoms paprastoms programėlėms</string>
     <string name="app_icon_color_warning">ĮSPĖJIMAS: Kai kurios paleidyklės tinkamai neapdoroja programėlės piktogramos tinkinimo. Jei piktograma išnyks, pabandykite, jei prieinama, paleisti programėlę per „Google Play“ ar per kokį nors valdiklį. Paleidę programėlę, atstatykite numatytąją oranžinę piktogramą #F57C00. Blogiausiu atveju, jums gali tekti įdiegti programėlę iš naujo.</string>
