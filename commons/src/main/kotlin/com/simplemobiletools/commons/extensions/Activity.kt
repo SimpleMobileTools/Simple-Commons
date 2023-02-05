@@ -345,6 +345,7 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
             putExtra(EXTRA_STREAM, newUri)
             type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            grantUriPermission("android", newUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
             try {
                 startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -1706,7 +1707,7 @@ fun Activity.showSideloadingDialog() {
     }
 }
 
-fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? {
+fun BaseSimpleActivity.getTempFile(folderName: String, filename: String): File? {
     val folder = File(cacheDir, folderName)
     if (!folder.exists()) {
         if (!folder.mkdir()) {
@@ -1715,7 +1716,7 @@ fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? 
         }
     }
 
-    return File(folder, fileName)
+    return File(folder, filename)
 }
 
 fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
