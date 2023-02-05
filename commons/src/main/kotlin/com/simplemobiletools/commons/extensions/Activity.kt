@@ -1516,7 +1516,9 @@ fun Activity.setupDialogStuff(
 
             setView(view)
             setCancelable(cancelOnTouchOutside)
-            show()
+            if (!isFinishing) {
+                show()
+            }
             getButton(Dialog.BUTTON_POSITIVE)?.setTextColor(primaryColor)
             getButton(Dialog.BUTTON_NEGATIVE)?.setTextColor(primaryColor)
             getButton(Dialog.BUTTON_NEUTRAL)?.setTextColor(primaryColor)
@@ -1548,7 +1550,9 @@ fun Activity.setupDialogStuff(
             requestWindowFeature(Window.FEATURE_NO_TITLE)
             setCustomTitle(title)
             setCanceledOnTouchOutside(cancelOnTouchOutside)
-            show()
+            if (!isFinishing) {
+                show()
+            }
             getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(dialogButtonColor)
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
             getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
