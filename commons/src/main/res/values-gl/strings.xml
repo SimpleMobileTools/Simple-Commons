@@ -132,17 +132,17 @@
     <string name="search_events">Buscalos eventos</string>
     <string name="search_groups">Atopalos grupos</string>
     <string name="search_history">Historial da busca</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_calls">Buscalas chamadas</string>
+    <string name="search_files">Buscalos ficheiros</string>
+    <string name="search_folders">Buscalos cartafoles</string>
+    <string name="search_files_and_folders">Buscalos ficheiros e cartafoles</string>
+    <string name="search_playlists">Buscalas listas de reproducions</string>
+    <string name="search_artists">Buscalos artistas</string>
+    <string name="search_albums">Buscalos álbums</string>
+    <string name="search_tracks">Buscalas pistas</string>
+    <string name="search_text">Buscalo texto</string>
+    <string name="search_conversations">Buscalas conversas</string>
+    <string name="search_recordings">Buscalas gravacións</string>
     <!-- Filters -->
     <string name="filter">Filtro</string>
     <string name="filter_pro">Filtro (Pro)</string>
@@ -605,7 +605,7 @@
     <string name="purchase_simple_thank_you">Mercar Grazas sinxelas</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Persoaliza a cor</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Persoalización mellorada das cores</string>
     <string name="customize_colors">Cambiar cores</string>
     <string name="customize_colors_locked">Persoalizalas cores (bloqueado)</string>
     <string name="feature_locked">Pechado</string>
@@ -690,7 +690,7 @@
     <string name="moving_recycle_bin_items_disabled">Mover ficheiros da Papeleira está inhabilitado, utiliza Restaurar</string>
     <string name="show_the_recycle_bin">Amosar a Papeleira</string>
     <string name="hide_the_recycle_bin">Ocultar a Papeleira</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Abrila papeleira de reciclaxe</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d elemento á Papeleira</item>
         <item quantity="other">Movendo %d elementos á Papeleira</item>
@@ -734,7 +734,7 @@
     <string name="june_short">June</string>
     <string name="july_short">July</string>
     <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
+    <string name="september_short">Set.</string>
     <string name="october_short">Oct</string>
     <string name="november_short">Nov</string>
     <string name="december_short">Dec</string>
@@ -779,11 +779,37 @@
     <string name="more_info">Máis información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tes que migrar os eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Ola,
+\n
+\nParece que acabas de actualizar dende a versión gratuíta. Unha vez que esteas satisfeito con este quizais migraches os teus datos, podes desinstalalo antigo gratuíto para evitalo lanzalo accidentalmente xa que non o necesitarás..
+\n
+\nGrazas!</string>
+    <string name="upgraded_to_pro">Ola,
+\n
+\nParece que xa tela versión pro da aplicación. Unha vez que esteas satisfeito con el e migraches os teus datos, podes desinstalar esta aplicación. Para evitar iniciala accidentalmente porque xa non a necesitas.
+\n
+\nMoitas grazas!</string>
+    <string name="upgraded_to_pro_calendar">Ola,
+\n
+\nParece que actualizaches a versión gratuíta á versión profesional. Se queres migralos teus eventos almacenados localmente dende a versión gratuíta, debes exportalos manualmente como ficheiros .ics na versión gratuíta e importalos á versión profesional a través do menú superior.
+\n
+\nSe estás satisfeito coa configuración profesional, podes desinstalala versión gratuíta anterior xa que xa non a necesitas.
+\n
+\nGrazas!</string>
+    <string name="upgraded_to_pro_contacts">Ola,
+\n
+\nParece que acabas de actualizar dende a versión gratuíta. Se tes contactos gardados en \"%s\", terás que migralos manualmente exportándoos a un ficheiro .vcf na versión gratuíta da aplicación e importándoos aquí desde o menú superior.
+\n
+\nUnha vez que estea satisfeito coa súa configuración na versión Pro, pode desinstalala versión gratuíta anterior porque xa non a necesita.
+\n
+\nMoitas grazas!</string>
+    <string name="upgraded_to_pro_notes">Ola,
+\n
+\nParece que acabas de actualizar desde a versión gratuíta. Se queres migralas notas, debes facelo manualmente exportándoas a un ficheiro na versión gratuíta da aplicación e importándoas aquí a través do menú superior.
+\n
+\nCando esteas satisfeito coa configuración da túa versión Pro, podes desinstalala antiga gratuíta porque xa non a necesitarás.
+\n
+\nGrazas!</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>
@@ -1029,16 +1055,23 @@
     <string name="m3u_parser_title">M3U Parser (xestor de ficheiros da lista de reprodución m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador mp3)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">A proba caducou</string>
+    <string name="start_free_trial">Comezala proba gratuíta</string>
+    <string name="trial_expires_soon">A túa proba caduca pronto.</string>
+    <string name="welcome_to_app_name">Benvido a %s!</string>
+    <string name="trial_start_description">Grazas por usala nosa aplicación. Podes usar esta versión desbloqueada durante <font color="#FFFFFF">%d días</font>. Unha vez que remate a proba, considere actualizalá versión Pro. Ten unha gran cantidade de novas funcións, deseño moderno, sen anuncios e moitas outras melloras.
+\n
+\nSó tes que pagalo unha vez na vida e se non estás satisfeito, podes desinstalalo e obter un reembolso.
+\n
+\nAgardo que vos guste :)</string>
+    <string name="trial_end_description">Por favor actualizalá versión Pro para gozar da aplicación ao máximo.
+\n
+\nSó tes que pagala unha vez na vida e se non estás satisfeito, podes desinstalala e obter un reembolso.
+\n
+\nVéxote alí :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">A túa proba caduca en %d día.</item>
+        <item quantity="other">A túa proba caduca en %d días.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
