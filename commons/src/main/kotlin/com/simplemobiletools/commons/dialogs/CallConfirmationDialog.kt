@@ -20,7 +20,7 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
                 val title = String.format(activity.getString(R.string.call_person), callee)
                 activity.setupDialogStuff(view, this, titleText = title) { alertDialog ->
                     view.call_confirm_phone.apply {
-                        startAnimation(AnimationUtils.loadAnimation(activity, R.anim.pulsing_animation))
+                        startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake_pulse_animation))
                         setOnClickListener {
                             callback.invoke()
                             alertDialog.dismiss()
