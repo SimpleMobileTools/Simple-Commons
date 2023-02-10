@@ -17,7 +17,7 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
         activity.getAlertDialogBuilder()
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                val title = String.format(activity.getString(R.string.call_person), callee)
+                val title = String.format(activity.getString(R.string.confirm_calling_person), callee)
                 activity.setupDialogStuff(view, this, titleText = title) { alertDialog ->
                     view.call_confirm_phone.apply {
                         startAnimation(AnimationUtils.loadAnimation(activity, R.anim.pulsing_animation))
