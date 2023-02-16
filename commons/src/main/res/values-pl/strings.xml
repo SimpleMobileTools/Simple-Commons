@@ -47,8 +47,7 @@
     <string name="no_access_to_contacts">Aplikacja nie mogła uzyskać dostępu do Twoich kontaktów</string>
     <string name="no_phone_call_permission">Aplikacja nie ma uprawnienia do nawiązywania połączeń telefonicznych. Nadaj je w ustawieniach urządzenia.</string>
     <string name="insert_text_here">Tutaj wstaw tekst</string>
-    <string name="call_person">Zadzwoń do %s</string>
-    <string name="confirm_calling_person">Potwierdź połączenie z %s</string>
+    <string name="call_person">Zadzwoń do: %s</string>
     <string name="zero">Zero</string>
     <string name="one">Jeden</string>
     <string name="two">Dwa</string>
@@ -672,7 +671,7 @@
     <string name="feature_locked">Zablokowane</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="customize_notifications">Dostosuj powiadomienia</string>
-    <string name="notification_sound">Dźwięk powiadomienia</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Wymuszaj używanie przez aplikację języka angielskiego</string>
     <string name="language">Język</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>

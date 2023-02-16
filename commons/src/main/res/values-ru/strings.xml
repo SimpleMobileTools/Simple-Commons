@@ -48,7 +48,6 @@
     <string name="no_phone_call_permission">У приложения нет разрешения на совершение телефонных вызовов, пожалуйста, предоставьте его в настройках устройства</string>
     <string name="insert_text_here">Введите текст здесь</string>
     <string name="call_person">Вызов %s</string>
-    <string name="confirm_calling_person">Подтверждение вызова %s</string>
     <string name="zero">Ноль</string>
     <string name="one">Один</string>
     <string name="two">Два</string>
@@ -647,7 +646,7 @@
     <string name="feature_locked">Заблокировано</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
-    <string name="notification_sound">Звук уведомления</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="language">Язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>

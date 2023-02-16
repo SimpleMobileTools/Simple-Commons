@@ -48,7 +48,6 @@
     <string name="no_phone_call_permission">Η εφαρμογή δεν έχει άδεια πραγματοποίησης τηλεφωνικών κλήσεων, παρακαλούμε παραχωρήσετε την στις ρυθμίσεις της συσκευής.</string>
     <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
     <string name="call_person">Κλήση %s</string>
-    <string name="confirm_calling_person">Επιβεβαίωση κλήσης %s</string>
     <string name="zero">Μηδέν</string>
     <string name="one">Ένα</string>
     <string name="two">Δύο</string>
@@ -609,7 +608,7 @@
     <string name="feature_locked">Κλειδωμένο</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
     <string name="customize_notifications">Προσαρμογή ειδοποιήσεων</string>
-    <string name="notification_sound">Ήχος ειδοποίησης</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Χρήση γλώσσας English</string>
     <string name="language">Γλώσσα</string>
     <string name="show_hidden_items">Εμφάνιση κρυφών στοιχείων</string>
