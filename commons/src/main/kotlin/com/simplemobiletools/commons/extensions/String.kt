@@ -258,6 +258,10 @@ fun String.normalizeString() = Normalizer.normalize(this, Normalizer.Form.NFD).r
 
 // if we are comparing phone numbers, compare just the last 9 digits
 fun String.trimToComparableNumber(): String {
+    // don't trim if it's not a phone number
+    if (!this.matches("^[0-9+\\-\\)\\( *#]+\$".toRegex())) {
+        return this
+    }
     val normalizedNumber = this.normalizeString()
     val startIndex = Math.max(0, normalizedNumber.length - 9)
     return normalizedNumber.substring(startIndex)
