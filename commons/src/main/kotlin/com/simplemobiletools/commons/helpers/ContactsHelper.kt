@@ -51,7 +51,7 @@ class ContactsHelper(val context: Context) {
             }
 
             val contactsSize = contacts.size()
-            val showOnlyContactsWithNumbers = context.contactsConfig.showOnlyContactsWithNumbers
+            val showOnlyContactsWithNumbers = context.baseConfig.showOnlyContactsWithNumbers
             val tempContacts = ArrayList<Contact>(contactsSize)
             val resultContacts = ArrayList<Contact>(contactsSize)
 
@@ -65,7 +65,7 @@ class ContactsHelper(val context: Context) {
                 contacts.valueAt(it)
             }
 
-            if (context.contactsConfig.mergeDuplicateContacts && ignoredContactSources.isEmpty() && !getAll) {
+            if (context.baseConfig.mergeDuplicateContacts && ignoredContactSources.isEmpty() && !getAll) {
                 tempContacts.filter { displayContactSources.contains(it.source) }.groupBy { it.getNameToDisplay().toLowerCase() }.values.forEach { it ->
                     if (it.size == 1) {
                         resultContacts.add(it.first())
@@ -86,8 +86,8 @@ class ContactsHelper(val context: Context) {
                 resultContacts.firstOrNull { it.contactId == key }?.groups = groups.valueAt(i)
             }
 
-            Contact.sorting = context.contactsConfig.sorting
-            Contact.startWithSurname = context.contactsConfig.startNameWithSurname
+            Contact.sorting = context.baseConfig.sorting
+            Contact.startWithSurname = context.baseConfig.startNameWithSurname
             resultContacts.sort()
 
             Handler(Looper.getMainLooper()).post {
@@ -129,7 +129,7 @@ class ContactsHelper(val context: Context) {
             return
         }
 
-        val ignoredSources = ignoredContactSources ?: context.contactsConfig.ignoredContactSources
+        val ignoredSources = ignoredContactSources ?: context.baseConfig.ignoredContactSources
         val uri = Data.CONTENT_URI
         val projection = getContactProjection()
 
@@ -792,9 +792,9 @@ class ContactsHelper(val context: Context) {
             return sources
         }
 
-        if (!context.contactsConfig.wasLocalAccountInitialized) {
+        if (!context.baseConfig.wasLocalAccountInitialized) {
             initializeLocalPhoneAccount()
-            context.contactsConfig.wasLocalAccountInitialized = true
+            context.baseConfig.wasLocalAccountInitialized = true
         }
 
         val accounts = AccountManager.get(context).accounts
@@ -867,7 +867,7 @@ class ContactsHelper(val context: Context) {
     )
 
     private fun getSortString(): String {
-        val sorting = context.contactsConfig.sorting
+        val sorting = context.baseConfig.sorting
         return when {
             sorting and SORT_BY_FIRST_NAME != 0 -> "${CommonDataKinds.StructuredName.GIVEN_NAME} COLLATE NOCASE"
             sorting and SORT_BY_MIDDLE_NAME != 0 -> "${CommonDataKinds.StructuredName.MIDDLE_NAME} COLLATE NOCASE"

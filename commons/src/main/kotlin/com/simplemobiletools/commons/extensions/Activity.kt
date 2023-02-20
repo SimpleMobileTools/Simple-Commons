@@ -48,47 +48,47 @@ import java.io.*
 import java.util.*
 
 fun Activity.appLaunched(appId: String) {
-    baseConfig.internalStoragePath = getInternalStoragePath()
+    this.baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
-    baseConfig.appId = appId
-    if (baseConfig.appRunCount == 0) {
-        baseConfig.wasOrangeIconChecked = true
+    this.baseConfig.appId = appId
+    if (this.baseConfig.appRunCount == 0) {
+        this.baseConfig.wasOrangeIconChecked = true
         checkAppIconColor()
-    } else if (!baseConfig.wasOrangeIconChecked) {
-        baseConfig.wasOrangeIconChecked = true
+    } else if (!this.baseConfig.wasOrangeIconChecked) {
+        this.baseConfig.wasOrangeIconChecked = true
         val primaryColor = resources.getColor(R.color.color_primary)
-        if (baseConfig.appIconColor != primaryColor) {
+        if (this.baseConfig.appIconColor != primaryColor) {
             getAppIconColors().forEachIndexed { index, color ->
                 toggleAppIconColor(appId, index, color, false)
             }
 
-            val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
+            val defaultClassName = "${this.baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
             packageManager.setComponentEnabledSetting(
-                ComponentName(baseConfig.appId, defaultClassName),
+                ComponentName(this.baseConfig.appId, defaultClassName),
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
                 PackageManager.DONT_KILL_APP
             )
 
-            val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
+            val orangeClassName = "${this.baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
             packageManager.setComponentEnabledSetting(
-                ComponentName(baseConfig.appId, orangeClassName),
+                ComponentName(this.baseConfig.appId, orangeClassName),
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                 PackageManager.DONT_KILL_APP
             )
 
-            baseConfig.appIconColor = primaryColor
-            baseConfig.lastIconColor = primaryColor
+            this.baseConfig.appIconColor = primaryColor
+            this.baseConfig.lastIconColor = primaryColor
         }
     }
 
-    baseConfig.appRunCount++
-    if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
+    this.baseConfig.appRunCount++
+    if (this.baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
         if (!resources.getBoolean(R.bool.hide_google_relations)) {
             showDonateOrUpgradeDialog()
         }
     }
 
-    if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
+    if (this.baseConfig.appRunCount % 40 == 0 && !this.baseConfig.wasAppRated) {
         if (!resources.getBoolean(R.bool.hide_google_relations)) {
             RateStarsDialog(this)
         }
@@ -111,7 +111,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 }
 
 fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
-    return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
+    return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (this.baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, Mode.SdCard) {
@@ -254,7 +254,7 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
 }
 
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
-    return if (!isRPlus() && isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
+    return if (!isRPlus() && isPathOnOTG(path) && (this.baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
         showOTGPermissionDialog(path)
         true
     } else {
@@ -301,7 +301,7 @@ fun Activity.launchPurchaseThankYouIntent() {
 fun Activity.launchUpgradeToProIntent() {
     hideKeyboard()
     try {
-        launchViewIntent("market://details?id=${baseConfig.appId.removeSuffix(".debug")}.pro")
+        launchViewIntent("market://details?id=${this.baseConfig.appId.removeSuffix(".debug")}.pro")
     } catch (ignored: Exception) {
         launchViewIntent(getStoreUrl())
     }
@@ -601,19 +601,19 @@ fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boo
 }
 
 fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {
-    if (baseConfig.lastVersion == 0) {
-        baseConfig.lastVersion = currVersion
+    if (this.baseConfig.lastVersion == 0) {
+        this.baseConfig.lastVersion = currVersion
         return
     }
 
     val newReleases = arrayListOf<Release>()
-    releases.filterTo(newReleases) { it.id > baseConfig.lastVersion }
+    releases.filterTo(newReleases) { it.id > this.baseConfig.lastVersion }
 
     if (newReleases.isNotEmpty()) {
         WhatsNewDialog(this, newReleases)
     }
 
-    baseConfig.lastVersion = currVersion
+    this.baseConfig.lastVersion = currVersion
 }
 
 fun BaseSimpleActivity.deleteFolders(folders: List<FileDirItem>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
@@ -626,7 +626,7 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: List<FileDirItem>, deleteMediaOn
     var wasSuccess = false
     var needPermissionForPath = ""
     for (folder in folders) {
-        if (needsStupidWritePermissions(folder.path) && baseConfig.sdTreeUri.isEmpty()) {
+        if (needsStupidWritePermissions(folder.path) && this.baseConfig.sdTreeUri.isEmpty()) {
             needPermissionForPath = folder.path
             break
         }
@@ -978,7 +978,7 @@ fun BaseSimpleActivity.renameFile(
 
                     updateInMediaStore(oldPath, newPath)
                     rescanPaths(arrayListOf(oldPath, newPath)) {
-                        if (!baseConfig.keepLastModified) {
+                        if (!this.baseConfig.keepLastModified) {
                             updateLastModified(newPath, System.currentTimeMillis())
                         }
                         deleteFromMediaStore(oldPath)
@@ -1058,7 +1058,7 @@ private fun BaseSimpleActivity.renameCasually(
                 scanPathRecursively(newPath)
             }
         } else {
-            if (!baseConfig.keepLastModified) {
+            if (!this.baseConfig.keepLastModified) {
                 newFile.setLastModified(System.currentTimeMillis())
             }
             updateInMediaStore(oldPath, newPath)
@@ -1101,7 +1101,7 @@ private fun BaseSimpleActivity.renameCasually(
                             if (copyTempSuccess) {
                                 contentResolver.delete(sourceUri, null)
                                 tempDestination.renameTo(File(newPath))
-                                if (!baseConfig.keepLastModified) {
+                                if (!this.baseConfig.keepLastModified) {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
                                 updateInMediaStore(oldPath, newPath)
@@ -1124,7 +1124,7 @@ private fun BaseSimpleActivity.renameCasually(
                             )
                             val copySuccessful = copySingleFileSdk30(sourceFile, destinationFile)
                             if (copySuccessful) {
-                                if (!baseConfig.keepLastModified) {
+                                if (!this.baseConfig.keepLastModified) {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
                                 contentResolver.delete(sourceUri, null)
@@ -1281,7 +1281,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
 
 fun BaseSimpleActivity.showFileCreateError(path: String) {
     val error = String.format(getString(R.string.could_not_create_file), path)
-    baseConfig.sdTreeUri = ""
+    this.baseConfig.sdTreeUri = ""
     showErrorToast(error)
 }
 
@@ -1411,8 +1411,8 @@ fun Activity.showBiometricPrompt(
 }
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
-    if (baseConfig.isHiddenPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { _, _, success ->
+    if (this.baseConfig.isHiddenPasswordProtectionOn) {
+        SecurityDialog(this, this.baseConfig.hiddenPasswordHash, this.baseConfig.hiddenProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -1423,8 +1423,8 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
 }
 
 fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
-    if (baseConfig.isAppPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { _, _, success ->
+    if (this.baseConfig.isAppPasswordProtectionOn) {
+        SecurityDialog(this, this.baseConfig.appPasswordHash, this.baseConfig.appProtectionType) { _, _, success ->
             callback(success)
         }
     } else {
@@ -1433,8 +1433,8 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
 }
 
 fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
-    if (baseConfig.isDeletePasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { _, _, success ->
+    if (this.baseConfig.isDeletePasswordProtectionOn) {
+        SecurityDialog(this, this.baseConfig.deletePasswordHash, this.baseConfig.deleteProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -1445,8 +1445,8 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
 }
 
 fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
-    if (baseConfig.isFolderProtected(path)) {
-        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { _, _, success ->
+    if (this.baseConfig.isFolderProtected(path)) {
+        SecurityDialog(this, this.baseConfig.getFolderProtectionHash(path), this.baseConfig.getFolderProtectionType(path)) { _, _, success ->
             callback(success)
         }
     } else {
@@ -1539,7 +1539,7 @@ fun Activity.setupDialogStuff(
         }
 
         // if we use the same primary and background color, use the text color for dialog confirmation buttons
-        val dialogButtonColor = if (primaryColor == baseConfig.backgroundColor) {
+        val dialogButtonColor = if (primaryColor == this.baseConfig.backgroundColor) {
             textColor
         } else {
             primaryColor
@@ -1559,8 +1559,8 @@ fun Activity.setupDialogStuff(
 
             val bgDrawable = when {
                 isBlackAndWhiteTheme() -> resources.getDrawable(R.drawable.black_dialog_background, theme)
-                baseConfig.isUsingSystemTheme -> resources.getDrawable(R.drawable.dialog_you_background, theme)
-                else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+                this@setupDialogStuff.baseConfig.isUsingSystemTheme -> resources.getDrawable(R.drawable.dialog_you_background, theme)
+                else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, this@setupDialogStuff.baseConfig.backgroundColor)
             }
 
             window?.setBackgroundDrawable(bgDrawable)
@@ -1569,7 +1569,7 @@ fun Activity.setupDialogStuff(
     }
 }
 
-fun Activity.getAlertDialogBuilder() = if (baseConfig.isUsingSystemTheme) {
+fun Activity.getAlertDialogBuilder() = if (this.baseConfig.isUsingSystemTheme) {
     MaterialAlertDialogBuilder(this)
 } else {
     AlertDialog.Builder(this)
@@ -1631,7 +1631,7 @@ fun Activity.showPickSecondsDialog(
                 TimePickerDialog(
                     this, getTimePickerDialogTheme(),
                     { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
-                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
+                    curSeconds / 3600, curSeconds % 3600, this.baseConfig.use24HourFormat
                 ).show()
             }
             else -> {
@@ -1682,13 +1682,13 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
 }
 
 fun Activity.checkAppSideloading(): Boolean {
-    val isSideloaded = when (baseConfig.appSideloadingStatus) {
+    val isSideloaded = when (this.baseConfig.appSideloadingStatus) {
         SIDELOADING_TRUE -> true
         SIDELOADING_FALSE -> false
         else -> isAppSideloaded()
     }
 
-    baseConfig.appSideloadingStatus = if (isSideloaded) SIDELOADING_TRUE else SIDELOADING_FALSE
+    this.baseConfig.appSideloadingStatus = if (isSideloaded) SIDELOADING_TRUE else SIDELOADING_FALSE
     if (isSideloaded) {
         showSideloadingDialog()
     }

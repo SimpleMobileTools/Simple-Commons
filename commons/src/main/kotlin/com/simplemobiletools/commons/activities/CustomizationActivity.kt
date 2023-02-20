@@ -64,9 +64,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                 try {
                     storedSharedTheme = getSharedThemeSync(cursorLoader)
                     if (storedSharedTheme == null) {
-                        baseConfig.isUsingSharedTheme = false
+                        this.baseConfig.isUsingSharedTheme = false
                     } else {
-                        baseConfig.wasSharedThemeEverActivated = true
+                        this.baseConfig.wasSharedThemeEverActivated = true
                     }
 
                     runOnUiThread {
@@ -83,17 +83,17 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         } else {
             setupThemes()
-            baseConfig.isUsingSharedTheme = false
+            this.baseConfig.isUsingSharedTheme = false
         }
 
-        val textColor = if (baseConfig.isUsingSystemTheme) {
+        val textColor = if (this.baseConfig.isUsingSystemTheme) {
             getProperTextColor()
         } else {
-            baseConfig.textColor
+            this.baseConfig.textColor
         }
 
         updateLabelColors(textColor)
-        originalAppIconColor = baseConfig.appIconColor
+        originalAppIconColor = this.baseConfig.appIconColor
 
         if (resources.getBoolean(R.bool.hide_google_relations) && !isThankYou) {
             apply_to_all_holder.beGone()
@@ -104,7 +104,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onResume()
         setTheme(getThemeId(getCurrentPrimaryColor()))
 
-        if (!baseConfig.isUsingSystemTheme) {
+        if (!this.baseConfig.isUsingSystemTheme) {
             updateBackgroundColor(getCurrentBackgroundColor())
             updateActionbarColor(getCurrentStatusBarColor())
         }
@@ -199,11 +199,11 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateAutoThemeFields()
         handleAccentColorLayout()
         customization_theme_holder.setOnClickListener {
-            if (baseConfig.wasAppIconCustomizationWarningShown) {
+            if (this.baseConfig.wasAppIconCustomizationWarningShown) {
                 themePickerClicked()
             } else {
                 ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
-                    baseConfig.wasAppIconCustomizationWarningShown = true
+                    this.baseConfig.wasAppIconCustomizationWarningShown = true
                     themePickerClicked()
                 }
             }
@@ -227,8 +227,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             updateColorTheme(it as Int, true)
-            if (it != THEME_CUSTOM && it != THEME_SHARED && it != THEME_AUTO && it != THEME_SYSTEM && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
-                baseConfig.wasCustomThemeSwitchDescriptionShown = true
+            if (it != THEME_CUSTOM && it != THEME_SHARED && it != THEME_AUTO && it != THEME_SYSTEM && !this.baseConfig.wasCustomThemeSwitchDescriptionShown) {
+                this.baseConfig.wasCustomThemeSwitchDescriptionShown = true
                 toast(R.string.changing_color_description)
             }
 
@@ -249,21 +249,21 @@ class CustomizationActivity : BaseSimpleActivity() {
         resources.apply {
             if (curSelectedThemeId == THEME_CUSTOM) {
                 if (useStored) {
-                    curTextColor = baseConfig.customTextColor
-                    curBackgroundColor = baseConfig.customBackgroundColor
-                    curPrimaryColor = baseConfig.customPrimaryColor
-                    curAccentColor = baseConfig.customAccentColor
-                    curAppIconColor = baseConfig.customAppIconColor
+                    curTextColor = this@CustomizationActivity.baseConfig.customTextColor
+                    curBackgroundColor = this@CustomizationActivity.baseConfig.customBackgroundColor
+                    curPrimaryColor = this@CustomizationActivity.baseConfig.customPrimaryColor
+                    curAccentColor = this@CustomizationActivity.baseConfig.customAccentColor
+                    curAppIconColor = this@CustomizationActivity.baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
                     updateMenuItemColors(customization_toolbar.menu, curPrimaryColor)
                     setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
                     setupColorsPickers()
                 } else {
-                    baseConfig.customPrimaryColor = curPrimaryColor
-                    baseConfig.customAccentColor = curAccentColor
-                    baseConfig.customBackgroundColor = curBackgroundColor
-                    baseConfig.customTextColor = curTextColor
-                    baseConfig.customAppIconColor = curAppIconColor
+                    this@CustomizationActivity.baseConfig.customPrimaryColor = curPrimaryColor
+                    this@CustomizationActivity.baseConfig.customAccentColor = curAccentColor
+                    this@CustomizationActivity.baseConfig.customBackgroundColor = curBackgroundColor
+                    this@CustomizationActivity.baseConfig.customTextColor = curTextColor
+                    this@CustomizationActivity.baseConfig.customAppIconColor = curAppIconColor
                 }
             } else if (curSelectedThemeId == THEME_SHARED) {
                 if (useStored) {
@@ -326,11 +326,11 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun getCurrentThemeId(): Int {
-        if (baseConfig.isUsingSharedTheme) {
+        if (this.baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
-        } else if ((baseConfig.isUsingSystemTheme && !hasUnsavedChanges) || curSelectedThemeId == THEME_SYSTEM) {
+        } else if ((this.baseConfig.isUsingSystemTheme && !hasUnsavedChanges) || curSelectedThemeId == THEME_SYSTEM) {
             return THEME_SYSTEM
-        } else if (baseConfig.isUsingAutoTheme || curSelectedThemeId == THEME_AUTO) {
+        } else if (this.baseConfig.isUsingAutoTheme || curSelectedThemeId == THEME_AUTO) {
             return THEME_AUTO
         }
 
@@ -382,7 +382,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun saveChanges(finishAfterSave: Boolean) {
         val didAppIconColorChange = curAppIconColor != originalAppIconColor
-        baseConfig.apply {
+        this.baseConfig.apply {
             textColor = curTextColor
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
@@ -403,10 +403,10 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
-        baseConfig.shouldUseSharedTheme = curSelectedThemeId == THEME_SHARED
-        baseConfig.isUsingAutoTheme = curSelectedThemeId == THEME_AUTO
-        baseConfig.isUsingSystemTheme = curSelectedThemeId == THEME_SYSTEM
+        this.baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
+        this.baseConfig.shouldUseSharedTheme = curSelectedThemeId == THEME_SHARED
+        this.baseConfig.isUsingAutoTheme = curSelectedThemeId == THEME_AUTO
+        this.baseConfig.isUsingSystemTheme = curSelectedThemeId == THEME_SYSTEM
 
         hasUnsavedChanges = false
         if (finishAfterSave) {
@@ -427,11 +427,11 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun initColorVariables() {
-        curTextColor = baseConfig.textColor
-        curBackgroundColor = baseConfig.backgroundColor
-        curPrimaryColor = baseConfig.primaryColor
-        curAccentColor = baseConfig.accentColor
-        curAppIconColor = baseConfig.appIconColor
+        curTextColor = this.baseConfig.textColor
+        curBackgroundColor = this.baseConfig.backgroundColor
+        curPrimaryColor = this.baseConfig.primaryColor
+        curAccentColor = this.baseConfig.accentColor
+        curAppIconColor = this.baseConfig.appIconColor
     }
 
     private fun setupColorsPickers() {
@@ -456,11 +456,11 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         customization_app_icon_color_holder.setOnClickListener {
-            if (baseConfig.wasAppIconCustomizationWarningShown) {
+            if (this.baseConfig.wasAppIconCustomizationWarningShown) {
                 pickAppIconColor()
             } else {
                 ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
-                    baseConfig.wasAppIconCustomizationWarningShown = true
+                    this.baseConfig.wasAppIconCustomizationWarningShown = true
                     pickAppIconColor()
                 }
             }
@@ -492,7 +492,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateApplyToAllColors(newColor: Int) {
-        if (newColor == baseConfig.primaryColor && !baseConfig.isUsingSystemTheme) {
+        if (newColor == this.baseConfig.primaryColor && !this.baseConfig.isUsingSystemTheme) {
             apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
         } else {
             val applyBackground = resources.getDrawable(R.drawable.button_background_rounded, theme) as RippleDrawable
@@ -541,7 +541,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        if (!packageName.startsWith("com.simplemobiletools.", true) && baseConfig.appRunCount > 50) {
+        if (!packageName.startsWith("com.simplemobiletools.", true) && this.baseConfig.appRunCount > 50) {
             finish()
             return
         }
@@ -608,7 +608,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     predefinedThemes[THEME_SHARED] = MyTheme(getString(R.string.shared), 0, 0, 0, 0)
                 }
 
-                baseConfig.wasSharedThemeEverActivated = true
+                this.baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
                 updateColorTheme(THEME_SHARED)
                 saveChanges(false)

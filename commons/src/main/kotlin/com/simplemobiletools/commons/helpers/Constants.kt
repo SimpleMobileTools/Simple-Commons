@@ -167,6 +167,22 @@ const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+const val SHOW_CONTACT_THUMBNAILS = "show_contact_thumbnails"
+const val SHOW_PHONE_NUMBERS = "show_phone_numbers"
+const val SHOW_ONLY_CONTACTS_WITH_NUMBERS = "show_only_contacts_with_numbers"
+const val IGNORED_CONTACT_SOURCES = "ignored_contact_sources_2"
+const val LAST_USED_CONTACT_SOURCE = "last_used_contact_source"
+const val ON_CONTACT_CLICK = "on_contact_click"
+const val SHOW_CONTACT_FIELDS = "show_contact_fields"
+const val SHOW_TABS = "show_tabs"
+const val SHOW_DIALPAD_BUTTON = "show_dialpad_button"
+const val SPEED_DIAL = "speed_dial"
+const val LAST_EXPORT_PATH = "last_export_path"
+const val WAS_LOCAL_ACCOUNT_INITIALIZED = "was_local_account_initialized"
+const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
+const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
+const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
+const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
 
 // phone number/email types
 const val CELL = "CELL"
@@ -534,28 +550,8 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
     return fileDrawables
 }
 
-//  contacts
-// shared prefs
-const val SHOW_CONTACT_THUMBNAILS = "show_contact_thumbnails"
-const val SHOW_PHONE_NUMBERS = "show_phone_numbers"
-const val SHOW_ONLY_CONTACTS_WITH_NUMBERS = "show_only_contacts_with_numbers"
-const val IGNORED_CONTACT_SOURCES = "ignored_contact_sources_2"
-const val LAST_USED_CONTACT_SOURCE = "last_used_contact_source"
-const val ON_CONTACT_CLICK = "on_contact_click"
-const val SHOW_CONTACT_FIELDS = "show_contact_fields"
-const val SHOW_TABS = "show_tabs"
-const val SHOW_DIALPAD_BUTTON = "show_dialpad_button"
-const val SPEED_DIAL = "speed_dial"
-const val LAST_EXPORT_PATH = "last_export_path"
-const val WAS_LOCAL_ACCOUNT_INITIALIZED = "was_local_account_initialized"
-const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
-const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
-const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
-const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
-
 const val FIRST_CONTACT_ID = 1000000
 const val DEFAULT_FILE_NAME = "contacts.vcf"
-
 
 // visible fields filtering
 const val SHOW_PREFIX_FIELD = 1
