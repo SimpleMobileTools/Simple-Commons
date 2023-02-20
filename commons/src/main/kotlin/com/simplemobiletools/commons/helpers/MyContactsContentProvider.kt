@@ -93,9 +93,10 @@ class MyContactsContentProvider {
                                 middleName = middleName,
                                 surname = surname,
                                 photoUri = photoUri,
-                                phoneNumbers = phoneNumbers)
-//                                birthdays,
-//                                anniversaries
+                                phoneNumbers = phoneNumbers).also {
+                                it.birthdays =  birthdays
+                                it.anniversaries = anniversaries
+                            }
 
                             contacts.add(contact)
                         } while (cursor.moveToNext())
