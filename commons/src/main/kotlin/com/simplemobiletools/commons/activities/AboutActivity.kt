@@ -122,8 +122,8 @@ class AboutActivity : BaseSimpleActivity() {
 
             setOnClickListener {
                 val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !this@AboutActivity.baseConfig.wasBeforeAskingShown) {
-                    this@AboutActivity.baseConfig.wasBeforeAskingShown = true
+                if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
+                    baseConfig.wasBeforeAskingShown = true
                     ConfirmationAdvancedDialog(this@AboutActivity, msg, 0, R.string.read_faq, R.string.skip) { success ->
                         if (success) {
                             launchFAQActivity()
@@ -184,10 +184,10 @@ class AboutActivity : BaseSimpleActivity() {
             about_help_us_layout.addView(this)
 
             setOnClickListener {
-                if (this@AboutActivity.baseConfig.wasBeforeRateShown) {
+                if (baseConfig.wasBeforeRateShown) {
                     launchRateUsPrompt()
                 } else {
-                    this@AboutActivity.baseConfig.wasBeforeRateShown = true
+                    baseConfig.wasBeforeRateShown = true
                     val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
                     ConfirmationAdvancedDialog(this@AboutActivity, msg, 0, R.string.read_faq, R.string.skip) { success ->
                         if (success) {
@@ -202,7 +202,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun launchRateUsPrompt() {
-        if (this.baseConfig.wasAppRated) {
+        if (baseConfig.wasAppRated) {
             redirectToRateUs()
         } else {
             RateStarsDialog(this@AboutActivity)
@@ -376,7 +376,7 @@ class AboutActivity : BaseSimpleActivity() {
             about_other_layout.addView(this)
 
             setOnClickListener {
-                val appId = this@AboutActivity.baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+                val appId = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
                 val url = "https://simplemobiletools.com/privacy/$appId.txt"
                 launchViewIntent(url)
             }
@@ -401,7 +401,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupVersion() {
         var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
-        if (this.baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
             version += " ${getString(R.string.pro)}"
         }
 
