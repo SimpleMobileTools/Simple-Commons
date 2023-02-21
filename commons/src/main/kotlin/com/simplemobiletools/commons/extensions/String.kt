@@ -256,8 +256,17 @@ fun String.getAvailableStorageB(): Long {
 // remove diacritics, for example č -> c
 fun String.normalizeString() = Normalizer.normalize(this, Normalizer.Form.NFD).replace(normalizeRegex, "")
 
+// checks if string is a phone number
+fun String.isPhoneNumber(): Boolean {
+    return this.matches("^[0-9+\\-\\)\\( *#]+\$".toRegex())
+}
+
 // if we are comparing phone numbers, compare just the last 9 digits
 fun String.trimToComparableNumber(): String {
+    // don't trim if it's not a phone number
+    if (!this.isPhoneNumber()) {
+        return this
+    }
     val normalizedNumber = this.normalizeString()
     val startIndex = Math.max(0, normalizedNumber.length - 9)
     return normalizedNumber.substring(startIndex)

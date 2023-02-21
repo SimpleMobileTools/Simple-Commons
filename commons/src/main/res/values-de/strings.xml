@@ -113,10 +113,10 @@
     <string name="import_blocked_numbers">Blockierte Nummern importieren</string>
     <string name="must_make_default_dialer">Du musst diese App als Standardtelefonie-App einstellen, um Nummern blockieren zu können.</string>
     <string name="set_as_default">Als Standard auswählen</string>
-    <string name="block_confirmation">Soll „%s“ blockiert werden\?</string>
+    <string name="block_confirmation">„%s“ wirklich blockieren\?</string>
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
-    <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
+    <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
@@ -303,7 +303,7 @@
     <string name="gps_coordinates">GPS Koordinaten</string>
     <string name="altitude">Höhe</string>
     <string name="remove_exif">EXIF Daten entfernen</string>
-    <string name="remove_exif_confirmation">Sollen wirklich alle EXIF Daten, wie z.B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
+    <string name="remove_exif_confirmation">Sollen wirklich alle EXIF-Daten, wie z. B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
     <string name="exif_removed">EXIF Daten erfolgreich entfernt</string>
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
@@ -413,7 +413,7 @@
     <string name="use_custom_sorting">Benutzerdefiniertes Sortieren anwenden</string>
     <string name="change_order">Reihenfolge ändern</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
+    <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
     <string name="deletion_confirmation">%s wirklich löschen\?</string>
     <string name="deletion_confirmation_short">%s löschen\?</string>
     <!-- Are you sure you want to delete 5 items? -->
@@ -691,7 +691,7 @@
     <string name="restore_all_files">Alle Dateien wiederherstellen</string>
     <string name="recycle_bin_emptied">Papierkorb erfolgreich geleert</string>
     <string name="files_restored_successfully">Dateien erfolgreich wiederhergestellt</string>
-    <string name="empty_recycle_bin_confirmation">Papierkorb wirklich leeren? Die Dateien sind dann unwiederbringlich gelöscht.</string>
+    <string name="empty_recycle_bin_confirmation">Den Papierkorb wirklich leeren\? Die Dateien sind dann unwiederbringlich gelöscht.</string>
     <string name="recycle_bin_empty">Der Papierkorb ist leer</string>
     <string name="moving_recycle_bin_items_disabled">Das Verschieben von Papierkorbobjekten ist deaktiviert, bitte Wiederherstellen verwenden</string>
     <string name="show_the_recycle_bin">Papierkorb anzeigen</string>
