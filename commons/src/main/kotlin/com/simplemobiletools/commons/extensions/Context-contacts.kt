@@ -23,7 +23,7 @@ val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applica
 val Context.groupsDB: GroupsDao get() = ContactsDatabase.getInstance(applicationContext).GroupsDao()
 
 fun Context.getEmptyContact(): Contact {
-    val originalContactSource = if (hasContactPermissions()) this.baseConfig.lastUsedContactSource else SMT_PRIVATE
+    val originalContactSource = if (hasContactPermissions()) baseConfig.lastUsedContactSource else SMT_PRIVATE
     val organization = Organization("", "")
     return Contact(
         0, "", "", "", "", "", "", "", ArrayList(), ArrayList(), ArrayList(), ArrayList(), originalContactSource, 0, 0, "",
@@ -258,7 +258,7 @@ fun Context.getContactPublicUri(contact: Contact): Uri {
 
 fun Context.getVisibleContactSources(): ArrayList<String> {
     val sources = getAllContactSources()
-    val ignoredContactSources = this.baseConfig.ignoredContactSources
+    val ignoredContactSources = baseConfig.ignoredContactSources
     return ArrayList(sources).filter { !ignoredContactSources.contains(it.getFullIdentifier()) }
         .map { it.name }.toMutableList() as ArrayList<String>
 }

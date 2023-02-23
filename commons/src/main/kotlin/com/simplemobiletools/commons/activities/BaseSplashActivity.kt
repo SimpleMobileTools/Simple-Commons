@@ -13,16 +13,16 @@ abstract class BaseSplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (this.baseConfig.appSideloadingStatus == SIDELOADING_UNCHECKED) {
+        if (baseConfig.appSideloadingStatus == SIDELOADING_UNCHECKED) {
             if (checkAppSideloading()) {
                 return
             }
-        } else if (this.baseConfig.appSideloadingStatus == SIDELOADING_TRUE) {
+        } else if (baseConfig.appSideloadingStatus == SIDELOADING_TRUE) {
             showSideloadingDialog()
             return
         }
 
-        this.baseConfig.apply {
+        baseConfig.apply {
             if (isUsingAutoTheme) {
                 val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
                 isUsingSharedTheme = false
@@ -31,10 +31,10 @@ abstract class BaseSplashActivity : AppCompatActivity() {
             }
         }
 
-        if (!this.baseConfig.isUsingAutoTheme && !this.baseConfig.isUsingSystemTheme && isThankYouInstalled()) {
+        if (!baseConfig.isUsingAutoTheme && !baseConfig.isUsingSystemTheme && isThankYouInstalled()) {
             getSharedTheme {
                 if (it != null) {
-                    this.baseConfig.apply {
+                    baseConfig.apply {
                         wasSharedThemeForced = true
                         isUsingSharedTheme = true
                         wasSharedThemeEverActivated = true
@@ -45,8 +45,8 @@ abstract class BaseSplashActivity : AppCompatActivity() {
                         accentColor = it.accentColor
                     }
 
-                    if (this.baseConfig.appIconColor != it.appIconColor) {
-                        this.baseConfig.appIconColor = it.appIconColor
+                    if (baseConfig.appIconColor != it.appIconColor) {
+                        baseConfig.appIconColor = it.appIconColor
                         checkAppIconColor()
                     }
                 }

@@ -40,11 +40,11 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 
-        val blockTitleRes = if (this.baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages
+        val blockTitleRes = if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages
 
         block_unknown.apply {
             setText(blockTitleRes)
-            isChecked = this@ManageBlockedNumbersActivity.baseConfig.blockUnknownNumbers
+            isChecked = baseConfig.blockUnknownNumbers
             if (isChecked) {
                 maybeSetDefaultCallerIdApp()
             }
@@ -52,7 +52,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
         block_unknown_holder.setOnClickListener {
             block_unknown.toggle()
-            this.baseConfig.blockUnknownNumbers = block_unknown.isChecked
+            baseConfig.blockUnknownNumbers = block_unknown.isChecked
             if (block_unknown.isChecked) {
                 maybeSetDefaultCallerIdApp()
             }
@@ -108,7 +108,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             exportBlockedNumbersTo(outputStream)
         } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
             toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
-            this.baseConfig.blockUnknownNumbers = false
+            baseConfig.blockUnknownNumbers = false
             block_unknown.isChecked = false
         }
     }
@@ -215,7 +215,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     private fun tryExportBlockedNumbers() {
         if (isQPlus()) {
-            ExportBlockedNumbersDialog(this, this.baseConfig.lastBlockedNumbersExportPath, true) { file ->
+            ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, true) { file ->
                 Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     type = "text/plain"
                     putExtra(Intent.EXTRA_TITLE, file.name)
@@ -233,7 +233,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         } else {
             handlePermission(PERMISSION_WRITE_STORAGE) {
                 if (it) {
-                    ExportBlockedNumbersDialog(this, this.baseConfig.lastBlockedNumbersExportPath, false) { file ->
+                    ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, false) { file ->
                         getFileOutputStream(file.toFileDirItem(this), true) { out ->
                             exportBlockedNumbersTo(out)
                         }
@@ -262,7 +262,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     }
 
     private fun maybeSetDefaultCallerIdApp() {
-        if (isQPlus() && this.baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
+        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
             setDefaultCallerIdApp()
         }
     }

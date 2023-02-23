@@ -95,9 +95,9 @@ fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
-val Context.sdCardPath: String get() = this.baseConfig.sdCardPath
-val Context.internalStoragePath: String get() = this.baseConfig.internalStoragePath
-val Context.otgPath: String get() = this.baseConfig.OTGPath
+val Context.sdCardPath: String get() = baseConfig.sdCardPath
+val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
+val Context.otgPath: String get() = baseConfig.OTGPath
 
 fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 
@@ -428,10 +428,10 @@ fun Context.getCurrentFormattedDateTime(): String {
 
 fun Context.updateSDCardPath() {
     ensureBackgroundThread {
-        val oldPath = this.baseConfig.sdCardPath
-        this.baseConfig.sdCardPath = getSDCardPath()
-        if (oldPath != this.baseConfig.sdCardPath) {
-            this.baseConfig.sdTreeUri = ""
+        val oldPath = baseConfig.sdCardPath
+        baseConfig.sdCardPath = getSDCardPath()
+        if (oldPath != baseConfig.sdCardPath) {
+            baseConfig.sdTreeUri = ""
         }
     }
 }
@@ -449,9 +449,9 @@ fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.th
 fun Context.isOrWasThankYouInstalled(): Boolean {
     return when {
         resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
-        this.baseConfig.hadThankYouInstalled -> true
+        baseConfig.hadThankYouInstalled -> true
         isThankYouInstalled() -> {
-            this.baseConfig.hadThankYouInstalled = true
+            baseConfig.hadThankYouInstalled = true
             true
         }
         else -> false
@@ -492,7 +492,7 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     val dayBits = arrayListOf(MONDAY_BIT, TUESDAY_BIT, WEDNESDAY_BIT, THURSDAY_BIT, FRIDAY_BIT, SATURDAY_BIT, SUNDAY_BIT)
     val weekDays = resources.getStringArray(R.array.week_days_short).toList() as ArrayList<String>
 
-    if (this.baseConfig.isSundayFirst) {
+    if (baseConfig.isSundayFirst) {
         dayBits.moveLastItemToFront()
         weekDays.moveLastItemToFront()
     }
@@ -611,7 +611,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     }
 
     val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
-    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(this.baseConfig.yourAlarmSounds, token)
+    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token)
         ?: ArrayList()
     val newAlarmSoundId = (yourAlarmSounds.maxByOrNull { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
     val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
@@ -619,7 +619,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
         yourAlarmSounds.add(newAlarmSound)
     }
 
-    this.baseConfig.yourAlarmSounds = Gson().toJson(yourAlarmSounds)
+    baseConfig.yourAlarmSounds = Gson().toJson(yourAlarmSounds)
 
     val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
     contentResolver.takePersistableUriPermission(uri, takeFlags)
@@ -651,15 +651,15 @@ fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
     exif.saveAttributes()
 }
 
-fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(this.baseConfig.appId)
+fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseConfig.appId)
 
-fun Context.getCanAppBeUpgraded() = proPackages.contains(this.baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))
+fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))
 
-fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${this.baseConfig.appId.removeSuffix(".debug")}.pro"
+fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"
 
 fun Context.getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 
-fun Context.getTimeFormat() = if (this.baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
+fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
 
 fun Context.getResolution(path: String): Point? {
     return if (path.isImageFast() || path.isImageSlow()) {
@@ -856,7 +856,7 @@ fun Context.getMediaStoreLastModified(path: String): Long {
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
 fun Context.getFontSizeText() = getString(
-    when (this.baseConfig.fontSize) {
+    when (baseConfig.fontSize) {
         FONT_SIZE_SMALL -> R.string.small
         FONT_SIZE_MEDIUM -> R.string.medium
         FONT_SIZE_LARGE -> R.string.large
@@ -864,7 +864,7 @@ fun Context.getFontSizeText() = getString(
     }
 )
 
-fun Context.getTextSize() = when (this.baseConfig.fontSize) {
+fun Context.getTextSize() = when (baseConfig.fontSize) {
     FONT_SIZE_SMALL -> resources.getDimension(R.dimen.smaller_text_size)
     FONT_SIZE_MEDIUM -> resources.getDimension(R.dimen.bigger_text_size)
     FONT_SIZE_LARGE -> resources.getDimension(R.dimen.big_text_size)

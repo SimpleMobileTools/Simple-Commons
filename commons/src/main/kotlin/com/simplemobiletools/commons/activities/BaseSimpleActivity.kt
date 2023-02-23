@@ -95,7 +95,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.simplemobiletools.", true)) {
-            if ((0..50).random() == 10 || this.baseConfig.appRunCount % 100 == 0) {
+            if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
                 ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
                     launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
@@ -110,10 +110,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
 
-            val backgroundColor = if (this.baseConfig.isUsingSystemTheme) {
+            val backgroundColor = if (baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_background_color, theme)
             } else {
-                this.baseConfig.backgroundColor
+                baseConfig.backgroundColor
             }
 
             updateBackgroundColor(backgroundColor)
@@ -122,7 +122,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
         } else if (!isMaterialActivity) {
-            val color = if (this.baseConfig.isUsingSystemTheme) {
+            val color = if (baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_status_bar_color)
             } else {
                 getProperStatusBarColor()
@@ -171,7 +171,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateBackgroundColor(color: Int = this.baseConfig.backgroundColor) {
+    fun updateBackgroundColor(color: Int = baseConfig.backgroundColor) {
         window.decorView.setBackgroundColor(color)
     }
 
@@ -382,7 +382,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateRecentsAppIcon() {
-        if (this.baseConfig.isUsingModifiedAppIcon) {
+        if (baseConfig.isUsingModifiedAppIcon) {
             val appIconIDs = getAppIconIDs()
             val currentAppIconColorIndex = getCurrentAppIconColorIndex()
             if (appIconIDs.size - 1 < currentAppIconColorIndex) {
@@ -391,7 +391,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
             val recentsIcon = BitmapFactory.decodeResource(resources, appIconIDs[currentAppIconColorIndex])
             val title = getAppLauncherName()
-            val color = this.baseConfig.primaryColor
+            val color = baseConfig.primaryColor
 
             val description = ActivityManager.TaskDescription(title, recentsIcon, color)
             setTaskDescription(description)
@@ -417,7 +417,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun getCurrentAppIconColorIndex(): Int {
-        val appIconColor = this.baseConfig.appIconColor
+        val appIconColor = baseConfig.appIconColor
         getAppIconColors().forEachIndexed { index, color ->
             if (color == appIconColor) {
                 return index
@@ -483,7 +483,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
-                    if (resultData.dataString == this.baseConfig.OTGTreeUri || resultData.dataString == this.baseConfig.sdTreeUri) {
+                    if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
                         val pathToSelect = createAndroidDataOrObbPath(checkedDocumentPath)
                         toast(getString(R.string.wrong_folder_selected, pathToSelect))
                         return
@@ -518,7 +518,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
                     .matches() && resultData.dataString!!.contains(partition))
                 if (isProperSDRootFolder(resultData.data!!) && isProperPartition) {
-                    if (resultData.dataString == this.baseConfig.OTGTreeUri) {
+                    if (resultData.dataString == baseConfig.OTGTreeUri) {
                         toast(R.string.sd_card_usb_same)
                         return
                     }
@@ -544,13 +544,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
                     .matches() && resultData.dataString!!.contains(partition))
                 if (isProperOTGRootFolder(resultData.data!!) && isProperPartition) {
-                    if (resultData.dataString == this.baseConfig.sdTreeUri) {
+                    if (resultData.dataString == baseConfig.sdTreeUri) {
                         funAfterSAFPermission?.invoke(false)
                         toast(R.string.sd_card_usb_same)
                         return
                     }
-                    this.baseConfig.OTGTreeUri = resultData.dataString!!
-                    this.baseConfig.OTGPartition = this.baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
+                    baseConfig.OTGTreeUri = resultData.dataString!!
+                    baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
                     updateOTGPathFromPartition()
 
                     val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
@@ -588,7 +588,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun saveTreeUri(resultData: Intent) {
         val treeUri = resultData.data
-        this.baseConfig.sdTreeUri = treeUri.toString()
+        baseConfig.sdTreeUri = treeUri.toString()
 
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
         applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
@@ -633,7 +633,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun startCustomizationActivity() {
         if (!packageName.contains("slootelibomelpmis".reversed(), true)) {
-            if (this.baseConfig.appRunCount > 100) {
+            if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
                 ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
                     launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
@@ -753,7 +753,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
         hideKeyboard()
-        if (this.baseConfig.OTGTreeUri.isNotEmpty()) {
+        if (baseConfig.OTGTreeUri.isNotEmpty()) {
             callback(true)
             return
         }
@@ -921,7 +921,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                         }
 
                                         if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
-                                            if (!this.baseConfig.keepLastModified) {
+                                            if (!baseConfig.keepLastModified) {
                                                 newFile.setLastModified(System.currentTimeMillis())
                                             }
                                             updatedPaths.add(newFile.absolutePath)
@@ -1080,8 +1080,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun checkAppOnSDCard() {
-        if (!this.baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
-            this.baseConfig.wasAppOnSDShown = true
+        if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
+            baseConfig.wasAppOnSDShown = true
             ConfirmationDialog(this, "", R.string.app_on_sd_card, R.string.ok, 0) {}
         }
     }
@@ -1136,7 +1136,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun getExportSettingsFilename(): String {
-        val appName = this.baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+        val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
         return "$appName-settings_${getCurrentFormattedDateTime()}"
     }
 
