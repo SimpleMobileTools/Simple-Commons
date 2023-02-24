@@ -4,9 +4,12 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Looper
+import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.normalizeString
+import com.simplemobiletools.commons.models.contacts.LocalContact
 import com.simplemobiletools.commons.overloads.times
 
 const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
@@ -164,6 +167,22 @@ const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+const val SHOW_CONTACT_THUMBNAILS = "show_contact_thumbnails"
+const val SHOW_PHONE_NUMBERS = "show_phone_numbers"
+const val SHOW_ONLY_CONTACTS_WITH_NUMBERS = "show_only_contacts_with_numbers"
+const val IGNORED_CONTACT_SOURCES = "ignored_contact_sources_2"
+const val LAST_USED_CONTACT_SOURCE = "last_used_contact_source"
+const val ON_CONTACT_CLICK = "on_contact_click"
+const val SHOW_CONTACT_FIELDS = "show_contact_fields"
+const val SHOW_TABS = "show_tabs"
+const val SHOW_DIALPAD_BUTTON = "show_dialpad_button"
+const val SPEED_DIAL = "speed_dial"
+const val LAST_EXPORT_PATH = "last_export_path"
+const val WAS_LOCAL_ACCOUNT_INITIALIZED = "was_local_account_initialized"
+const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
+const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
+const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
+const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
 
 // phone number/email types
 const val CELL = "CELL"
@@ -530,3 +549,82 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
     }
     return fileDrawables
 }
+
+const val FIRST_CONTACT_ID = 1000000
+const val DEFAULT_FILE_NAME = "contacts.vcf"
+
+// visible fields filtering
+const val SHOW_PREFIX_FIELD = 1
+const val SHOW_FIRST_NAME_FIELD = 2
+const val SHOW_MIDDLE_NAME_FIELD = 4
+const val SHOW_SURNAME_FIELD = 8
+const val SHOW_SUFFIX_FIELD = 16
+const val SHOW_PHONE_NUMBERS_FIELD = 32
+const val SHOW_EMAILS_FIELD = 64
+const val SHOW_ADDRESSES_FIELD = 128
+const val SHOW_EVENTS_FIELD = 256
+const val SHOW_NOTES_FIELD = 512
+const val SHOW_ORGANIZATION_FIELD = 1024
+const val SHOW_GROUPS_FIELD = 2048
+const val SHOW_CONTACT_SOURCE_FIELD = 4096
+const val SHOW_WEBSITES_FIELD = 8192
+const val SHOW_NICKNAME_FIELD = 16384
+const val SHOW_IMS_FIELD = 32768
+const val SHOW_RINGTONE_FIELD = 65536
+
+const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
+const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
+const val DEFAULT_ADDRESS_TYPE = ContactsContract.CommonDataKinds.StructuredPostal.TYPE_HOME
+const val DEFAULT_EVENT_TYPE = ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY
+const val DEFAULT_ORGANIZATION_TYPE = ContactsContract.CommonDataKinds.Organization.TYPE_WORK
+const val DEFAULT_WEBSITE_TYPE = ContactsContract.CommonDataKinds.Website.TYPE_HOMEPAGE
+const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
+const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
+
+// contact photo changes
+const val PHOTO_ADDED = 1
+const val PHOTO_REMOVED = 2
+const val PHOTO_CHANGED = 3
+const val PHOTO_UNCHANGED = 4
+
+const val ON_CLICK_CALL_CONTACT = 1
+const val ON_CLICK_VIEW_CONTACT = 2
+const val ON_CLICK_EDIT_CONTACT = 3
+const val ALL_TABS_MASK = TAB_CONTACTS or TAB_FAVORITES or TAB_GROUPS
+
+// apps with special handling
+const val TELEGRAM_PACKAGE = "org.telegram.messenger"
+const val SIGNAL_PACKAGE = "org.thoughtcrime.securesms"
+const val WHATSAPP_PACKAGE = "com.whatsapp"
+const val VIBER_PACKAGE = "com.viber.voip"
+const val THREEMA_PACKAGE = "ch.threema.app"
+
+const val SOCIAL_VOICE_CALL = 0
+const val SOCIAL_VIDEO_CALL = 1
+const val SOCIAL_MESSAGE = 2
+
+fun getEmptyLocalContact() = LocalContact(
+    0,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    null,
+    "",
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    0,
+    ArrayList(),
+    "",
+    ArrayList(),
+    "",
+    "",
+    ArrayList(),
+    ArrayList(),
+    null
+)
+
+fun getProperText(text: String, shouldNormalize: Boolean) = if (shouldNormalize) text.normalizeString() else text
