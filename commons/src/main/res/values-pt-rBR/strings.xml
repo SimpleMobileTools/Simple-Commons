@@ -827,7 +827,13 @@
 \nparece que você já tem a versão Pro também. Uma vez que você esteja feliz com e já tenha migrado seus dados, você pode desinstalar esta versão para evitar lançá-la acidentalmente, pois você não precisará mais dela.
 \n
 \nObrigado!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Olá
+\n
+\nparece que você acabou de atualizar a partir da versão gratuita. Se você quiser migrar seus eventos armazenados localmente, você tem que fazê-lo manualmente, exportando-os para um arquivo .ics na versão gratuita do aplicativo e importando aqui através do menu superior.
+\n
+\nUma vez que você esteja satisfeito com sua configuração na versão Pro, você pode desinstalar o antigo gratuito, pois você não precisará mais dele.
+\n
+\nObrigado!</string>
     <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
@@ -1098,7 +1104,7 @@
     <plurals name="trial_expires_days">
         <item quantity="one">Seu teste acaba em %d dia.</item>
         <item quantity="many">Seu teste acaba em %d dias.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="other">Seu teste acaba em %d dias.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
