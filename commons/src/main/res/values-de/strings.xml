@@ -72,7 +72,7 @@
     <string name="choose_file">Datei auswählen</string>
     <string name="record_audio">Audio aufnehmen</string>
     <string name="record_video">Video aufnehmen</string>
-    <string name="updating">Aktualisiere…</string>
+    <string name="updating">Aktualisieren …</string>
     <string name="phone_storage">Gerätespeicher</string>
     <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
     <!-- Events -->
@@ -204,17 +204,17 @@
     <string name="please_select_destination">Bitte Ziel auswählen</string>
     <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
     <string name="copy_failed">Die Dateien konnten nicht kopiert werden</string>
-    <string name="copying">Kopieren…</string>
+    <string name="copying">Kopieren …</string>
     <string name="copying_success">Datei(en) erfolgreich kopiert</string>
     <string name="copying_success_one">Datei erfolgreich kopiert</string>
     <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
-    <string name="moving">Verschieben…</string>
+    <string name="moving">Verschieben …</string>
     <string name="moving_success">Datei(en) erfolgreich verschoben</string>
     <string name="moving_success_one">Datei erfolgreich verschoben</string>
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
     <string name="no_files_selected">Keine Dateien ausgewählt</string>
-    <string name="saving">Speichern…</string>
+    <string name="saving">Speichern …</string>
     <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
     <string name="no_new_items">Keine neuen Elemente gefunden</string>
@@ -255,7 +255,7 @@
     <string name="confirm_storage_access_android_text_specific">Bitte auf dem nächsten Bildschirm durch Drücken auf „<b>Diesen Ordner verwenden</b>“ am unteren Bildschirmrand den Zugriff auf „<b>%s</b>“ gewähren.</string>
     <string name="confirm_create_doc_for_new_folder_text">Bitte am unteren Rand des nächsten Bildschirms auf „<b>Speichern</b>“ drücken, um den neuen Ordner zu erstellen.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
-    <string name="loading">Wird geladen …</string>
+    <string name="loading">Wird geladen …</string>
     <string name="access_storage_prompt">Bitte unserer App Zugriff auf alle Dateien gewähren, da sie sonst möglicherweise nicht richtig funktioniert.</string>
     <plurals name="items">
         <item quantity="one">%d Element</item>
@@ -705,8 +705,8 @@
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>
     </plurals>
     <!-- Import / Export -->
-    <string name="importing">Importieren…</string>
-    <string name="exporting">Exportieren…</string>
+    <string name="importing">Importieren …</string>
+    <string name="exporting">Exportieren …</string>
     <string name="importing_successful">Importieren erfolgreich</string>
     <string name="exporting_successful">Exportieren erfolgreich</string>
     <string name="importing_failed">Importieren fehlgeschlagen</string>
