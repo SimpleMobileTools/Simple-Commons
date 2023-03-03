@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
-    <string name="back">Back</string>
+    <string name="back">Voltar</string>
     <string name="nothing">Nada</string>
     <string name="later">Mais tarde</string>
     <string name="save_as">Salvar como</string>
@@ -15,8 +15,8 @@
     <string name="edit_with">Editar com</string>
     <string name="edit">Editar</string>
     <string name="no_app_found">Nenhum aplicativo encontrado</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Nenhum navegador encontrado</string>
+    <string name="no_email_client_found">Nenhum app de e-mail encontrado</string>
     <string name="set_as">Definir como</string>
     <string name="copy_to_clipboard">Copiar para área de transferência</string>
     <string name="copy_number_to_clipboard">Copiar número para área de transferência</string>
@@ -48,8 +48,9 @@
     <string name="no_phone_call_permission">O aplicativo não tem permissão para iniciar chamadas telefônicas, por favor, conceda-a nas configurações do dispositivo</string>
     <string name="insert_text_here">Insira o texto aqui</string>
     <string name="call_person">Ligar para %s</string>
+    <string name="confirm_calling_person">Confirmar chamada %s</string>
     <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="one">Um</string>
     <string name="two">Dois</string>
     <string name="three">Três</string>
     <string name="four">Quatro</string>
@@ -58,19 +59,22 @@
     <string name="seven">Sete</string>
     <string name="eight">Oito</string>
     <string name="nine">Nove</string>
-    <string name="value">Value</string>
+    <string name="value">Valor</string>
     <string name="value_cannot_be_empty">O valor não pode ficar vazio</string>
     <string name="create_new_contact">Criar novo contato</string>
     <string name="add_to_existing_contact">Adicionar um contato existente</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">App Corrompido</string>
+    <string name="disclaimer">Isenção</string>
     <string name="take_photo">Tirar foto</string>
     <string name="choose_photo">Escolher foto</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Escolher vídeo</string>
+    <string name="choose_contact">Escolher contato</string>
+    <string name="choose_file">Escolher arquivo</string>
+    <string name="record_audio">Gravar áudio</string>
+    <string name="record_video">Gravar vídeo</string>
+    <string name="updating">Atualizando…</string>
+    <string name="phone_storage">Armazenamento do telefone</string>
+    <string name="phone_storage_hidden">Armazenamento do telefone (não visível por outros aplicativos)</string>
     <!-- Events -->
     <string name="birthday">Data de Nascimento</string>
     <string name="anniversary">Data Especial</string>
@@ -92,11 +96,16 @@
     <string name="list">Lista</string>
     <string name="increase_column_count">Aumentar número de colunas</string>
     <string name="reduce_column_count">Reduzir número de colunas</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Número de colunas</string>
+    <string name="portrait_column_count">Colunas em retrato</string>
+    <string name="landscape_column_count">Colunas em paisagem</string>
     <string name="change_cover_image">Trocar imagem de capa</string>
     <string name="select_photo">Selecionar foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d coluna</item>
+        <item quantity="many">%d colunas</item>
+        <item quantity="other">%d colunas</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerenciar números bloqueados</string>
     <string name="not_blocking_anyone">Não há números bloqueados.</string>
@@ -111,8 +120,8 @@
     <string name="block_confirmation">Tem certeza que deseja bloquear \"%s\"?</string>
     <string name="block_unknown_calls">Bloquear chamadas de contatos não salvos</string>
     <string name="block_unknown_messages">Bloquear mensagens de contatos não salvos</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="add_blocked_number_helper_text">Digite um número ou um padrão (ex. *12345*, +1*8888) para bloquear todas as chamadas de números correspondentes.</string>
+    <string name="must_make_default_caller_id_app">Não é possível bloquear números desconhecidos sem a permissão de ID de chamadas.</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
@@ -120,7 +129,25 @@
     <string name="remove_from_favorites">Remover dos favoritos</string>
     <!-- Search -->
     <string name="search">Pesquisar</string>
+    <string name="search_in_placeholder">Pesquisar em %s</string>
     <string name="type_2_characters">Digite pelo menos 2 letras para iniciar a pesquisa.</string>
+    <string name="search_contacts">Pesquisar contatos</string>
+    <string name="search_favorites">Pesquisar favoritos</string>
+    <string name="search_apps">Pesquisar apps</string>
+    <string name="search_events">Pesquisar eventos</string>
+    <string name="search_groups">Pesquisar grupos</string>
+    <string name="search_history">Pesquisar histórico</string>
+    <string name="search_calls">Pesquisar chamadas</string>
+    <string name="search_files">Pesquisar arquivos</string>
+    <string name="search_folders">Pesquisar pastas</string>
+    <string name="search_files_and_folders">Pesquisar arquivos e pastas</string>
+    <string name="search_playlists">Pesquisar playlists</string>
+    <string name="search_artists">Pesquisar artistas</string>
+    <string name="search_albums">Pesquisar álbuns</string>
+    <string name="search_tracks">Pesquisar faixas</string>
+    <string name="search_text">Pesquisar texto</string>
+    <string name="search_conversations">Pesquisar conversas</string>
+    <string name="search_recordings">Pesquisar gravações</string>
     <!-- Filters -->
     <string name="filter">Filtrar</string>
     <string name="filter_pro">Filtrar (Pro)</string>
@@ -131,8 +158,8 @@
     <string name="no_contacts_permission">A permissão de Contatos é necessária</string>
     <string name="no_camera_permissions">A permissão de Câmera é necessária</string>
     <string name="no_audio_permissions">A permissão de Áudio é necessária</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_post_notifications_permissions">É necessária a permissão para emitir notificações</string>
+    <string name="no_permission">Sem permissão</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear arquivo</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -210,8 +237,8 @@
     <string name="system_folder_restriction">O sistema não permite a operação nesta pasta, por favor escolha outra</string>
     <string name="system_folder_copy_restriction">O sistema não permite copiar para esta pasta, por favor, escolha outra</string>
     <string name="rename_in_sd_card_system_restriction">O sistema não permite que você renomeie esta pasta</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="rename_internal_system_restriction">Não é possível renomear pastas diretamente no armazenamento interno, somente subpastas</string>
+    <string name="cannot_rename_folder">Não foi possível renomear esta pasta</string>
     <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar arquivo</string>
@@ -227,25 +254,29 @@
     <string name="access_storage_prompt">Conceda ao nosso aplicativo acesso a todos os seus arquivos, ele pode não funcionar bem sem ele.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
+        <item quantity="many">%d itens</item>
         <item quantity="other">%d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
+        <item quantity="many">%d itens</item>
         <item quantity="other">%d itens</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Excluindo %d item</item>
+        <item quantity="many">Excluindo %d itens</item>
         <item quantity="other">Excluindo %d itens</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contato</item>
+        <item quantity="many">%d contatos</item>
         <item quantity="other">%d contatos</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Armazenamento</string>
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
@@ -295,6 +326,7 @@
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem certeza que deseja desfazer as alterações?</string>
+    <string name="cannot_be_undone">Esta ação não pode ser revertida.</string>
     <string name="save_before_closing">Existem alterações não salvas. Salvar antes de sair?</string>
     <string name="apply_to_all_apps">Aplicar cores a todos os aplicativos Simple</string>
     <string name="app_icon_color_warning">AVISO: Alguns lançadores não são capazes de lidar corretamente com a customização de ícones. Nestes casos, se o icone desaparecer tente abrir o aplicativo pelo Google Play, ou através de um widget, se disponível.
@@ -342,7 +374,7 @@
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
     <string name="print_pro">Imprimir (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Atalho</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="create_shortcut_pro">Criar atalho (Pro)</string>
     <string name="add_number_to_contact">Adicionar número ao contato</string>
@@ -359,7 +391,7 @@
     <string name="call">Ligar</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Papeis de parede</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -385,6 +417,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
     <string name="deletion_confirmation">Deseja realmente excluir %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -397,6 +430,7 @@
     <string name="maybe">Talvez</string>
     <plurals name="delete_warning">
         <item quantity="one">AVISO: Você está excluindo %d pasta</item>
+        <item quantity="many">AVISO: Você está excluindo %d pastas</item>
         <item quantity="other">AVISO: Você está excluindo %d pastas</item>
     </plurals>
     <!-- Password protection -->
@@ -438,119 +472,148 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d segundo atrás</item>
+        <item quantity="many">%d segundos atrás</item>
         <item quantity="other">%d segundos atrás</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto atrás</item>
+        <item quantity="many">%d minutos atrás</item>
         <item quantity="other">%d minutos atrás</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d hora atrás</item>
+        <item quantity="many">%d horas atrás</item>
         <item quantity="other">%d horas atrás</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d dia atrás</item>
+        <item quantity="many">%d dias atrás</item>
         <item quantity="other">%d dias atrás</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semana atrás</item>
+        <item quantity="many">%d semanas atrás</item>
         <item quantity="other">%d semanas atrás</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mês atrás</item>
+        <item quantity="many">%d meses atrás</item>
         <item quantity="other">%d meses atrás</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d ano atrás</item>
+        <item quantity="many">%d anos atrás</item>
         <item quantity="other">%d anos atrás</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
         <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d dia</item>
+        <item quantity="many">%d dias</item>
         <item quantity="other">%d dias</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semana</item>
+        <item quantity="many">%d semanas</item>
         <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mês</item>
+        <item quantity="many">%d meses</item>
         <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d ano</item>
+        <item quantity="many">%d anos</item>
         <item quantity="other">%d anos</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -578,11 +641,13 @@
     <string name="purchase_simple_thank_you">Compre o Simple Thank You</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Personalização de cores</string>
+    <string name="improved_color_customization">Personalização de cores aprimorada</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Locked)</string>
     <string name="feature_locked">Trancado</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>
     <string name="customize_notifications">Personalizar notificações</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Usar o idioma inglês</string>
     <string name="language">Idioma</string>
     <string name="show_hidden_items">Exibir itens ocultos</string>
@@ -633,9 +698,9 @@
     <string name="list_view">Visualização em Lista</string>
     <!-- Excluding -->
     <string name="exclude">Ignorar</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Excluir pasta</string>
     <string name="excluded_folders">Pastas ignoradas</string>
-    <string name="excluded">(ignorado)</string>
+    <string name="excluded">(excluído)</string>
     <string name="manage_excluded_folders">Gerenciar pastas ignoradas</string>
     <string name="remove_all">Remover todas</string>
     <string name="remove_all_description">Remover todas as pastas da lista de pastas ignoradas\? Esta ação não exclui as pastas.</string>
@@ -662,8 +727,10 @@
     <string name="moving_recycle_bin_items_disabled">Não é permitido mover itens da Lixeira. Por favor, use a função Restaurar</string>
     <string name="show_the_recycle_bin">Exibir a Lixeira</string>
     <string name="hide_the_recycle_bin">Ocultar a Lixeira</string>
+    <string name="open_the_recycle_bin">Abrir a Lixeira</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d item para a Lixeira</item>
+        <item quantity="many">Movendo %d itens para a Lixeira</item>
         <item quantity="other">Movendo %d itens para a Lixeira</item>
     </plurals>
     <!-- Import / Export -->
@@ -696,6 +763,19 @@
     <string name="october">Outubro</string>
     <string name="november">Novembro</string>
     <string name="december">Dezembro</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Set</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- In January -->
     <string name="in_january">em Janeiro</string>
     <string name="in_february">em Fevereiro</string>
@@ -737,12 +817,25 @@
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
     <string name="upgrade_calendar">Você precisará migrar de forma manual os eventos armazenados localmente. Você pode fazer isso exportando-os para um arquivo .ics, e depois importando este arquivo. Você pode encontrar os botões de importar/exportar no menu da tela inicial.</string>
-    <string name="upgraded_to_pro">Ei,
+    <string name="upgraded_from_free">Olá,
 \n
-\nparece que você já tem a versão Pro deste app. Você não vai mais precisar dele, então, por favor, desinstale!</string>
-    <string name="upgraded_to_pro_calendar">Você precisa migrar eventos armazenados lcoalmente através da exportação de um arquivo .ics e depois importar. Você pode encontrar ambos os botões no menu ao topo.</string>
-    <string name="upgraded_to_pro_notes">Você precisa migrar suas notas para a versão Pro manualmente.</string>
-    <string name="upgraded_to_pro_contacts">Você precisa migrar seus contatos armazenados de forma privada ao exportar um arquivo .vcf e então importá-lo. Você pode encontrar ambos os botões no menu ao topo.</string>
+\nparece que você acabou de atualizar a partir da versão gratuita. Assim que você estiver feliz com esta versão e já tenha migrado seus dados, você pode desinstalar a antiga versão gratuita para evitar abri-la acidentalmente, pois você não precisará mais dela.
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro">Olá
+\n
+\nparece que você já tem a versão Pro também. Uma vez que você esteja feliz com e já tenha migrado seus dados, você pode desinstalar esta versão para evitar lançá-la acidentalmente, pois você não precisará mais dela.
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro_calendar">Olá
+\n
+\nparece que você acabou de atualizar a partir da versão gratuita. Se você quiser migrar seus eventos armazenados localmente, você tem que fazê-lo manualmente, exportando-os para um arquivo .ics na versão gratuita do aplicativo e importando aqui através do menu superior.
+\n
+\nUma vez que você esteja satisfeito com sua configuração na versão Pro, você pode desinstalar o antigo gratuito, pois você não precisará mais dele.
+\n
+\nObrigado!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website">Website</string>
@@ -817,7 +910,7 @@
     <string name="simple_flashlight">Lanterna Simples</string>
     <string name="simple_gallery">Galeria Simples</string>
     <string name="simple_keyboard">Teclado Simples</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Launcher Simples</string>
     <string name="simple_music_player">Player de Música Simples</string>
     <string name="simple_notes">Notas Simples</string>
     <string name="simple_sms_messenger">Mensagens SMS Simples</string>
@@ -828,15 +921,15 @@
     <string name="calendar_short">Calendário</string>
     <string name="camera_short">Câmara</string>
     <string name="clock_short">Relógio</string>
-    <string name="contacts_short">Contactos</string>
+    <string name="contacts_short">Contatos</string>
     <string name="dialer_short">Discador</string>
     <string name="draw_short">Desenho</string>
-    <string name="file_manager_short">Gestor de ficheiros</string>
+    <string name="file_manager_short">Gerenciador de Arquivos</string>
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galeria</string>
     <string name="keyboard_short">Teclado</string>
     <string name="launcher_short">Launcher</string>
-    <string name="music_player_short">Reprodutor de músicas</string>
+    <string name="music_player_short">Reprodutor de Músicas</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Mensagens SMS</string>
     <string name="thank_you_short">Obrigado</string>
@@ -931,11 +1024,11 @@
     <string name="why_upgrade_no_ads">Sem anúncios</string>
     <string name="why_upgrade_no_internet_access">Sem acesso à internet</string>
     <string name="why_upgrade_footer">Garantia 100% de Reembolso</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Pagamento único</string>
     <string name="why_upgrade_improved_design">Design aprimorado</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Editor avançado de foto e vídeo</string>
     <string name="why_upgrade_heic_support">Suporte para arquivos HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renomear arquivos em lote avançado</string>
     <string name="why_upgrade_folder_locking">Bloqueio de pastas individuais</string>
@@ -997,9 +1090,22 @@
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
     <string name="sms_mms_title">SMS MMS (uso de SMS e MMS)</string>
     <string name="apng_title">APNG Android (suporte para WebP animado)</string>
-    <string name="pdf_viewer_title">Visualizador PDF Android</string>
+    <string name="pdf_view_pager_title">Visualizador PDF Android</string>
     <string name="m3u_parser_title">M3U Parser (Gerenciador de Arquivo de Playlist m3u)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Teste expirado</string>
+    <string name="start_free_trial">Iniciar teste grátis</string>
+    <string name="trial_expires_soon">Seu teste acaba em breve.</string>
+    <string name="welcome_to_app_name">Bem-vindo ao app %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
+    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Seu teste acaba em %d dia.</item>
+        <item quantity="many">Seu teste acaba em %d dias.</item>
+        <item quantity="other">Seu teste acaba em %d dias.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Isso torna tudo mais fácil se você quiser testar :)</string>

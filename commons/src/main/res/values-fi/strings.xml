@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Peruuta</string>
-    <string name="back">Back</string>
+    <string name="back">Takaisin</string>
     <string name="nothing">Ei mitään</string>
     <string name="later">Myöhemmin</string>
     <string name="save_as">Tallenna nimellä</string>
@@ -42,12 +42,13 @@
     <string name="playpause">Toista / Tauota</string>
     <string name="next">Seuraava</string>
     <string name="number">Numero</string>
-    <string name="no_contacts_found">Kontakteja ei löytynyt</string>
+    <string name="no_contacts_found">Yhteystietoja ei löytynyt</string>
     <string name="request_the_required_permissions">Pyydä tarvittavia oikeuksia</string>
     <string name="no_access_to_contacts">Sovelluksella ei ole käyttöoikeutta yhteystietoihin</string>
     <string name="no_phone_call_permission">Sovelluksella ei ole käyttöoikeutta puhelujen aloittamiseen, myönnä käyttöoikeus laitteen asetuksissa</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
     <string name="call_person">Soita %s</string>
+    <string name="confirm_calling_person">Vahvista puhelu yhteystiedolle %s</string>
     <string name="zero">Nolla</string>
     <string name="one">Yksi</string>
     <string name="two">Kaksi</string>
@@ -66,11 +67,14 @@
     <string name="disclaimer">Vastuuvapauslauseke</string>
     <string name="take_photo">Ota kuva</string>
     <string name="choose_photo">Valitse kuva</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Valitse video</string>
+    <string name="choose_contact">Valitse yhteystieto</string>
+    <string name="choose_file">Valitse tiedosto</string>
+    <string name="record_audio">Tallenna ääntä</string>
+    <string name="record_video">Tallenna videota</string>
+    <string name="updating">Päivitetään…</string>
+    <string name="phone_storage">Puhelimen muisti</string>
+    <string name="phone_storage_hidden">Puhelimen muisti (piilotettu muilta sovelluksilta)</string>
     <!-- Events -->
     <string name="birthday">Syntymäpäivä</string>
     <string name="anniversary">Vuosipäivä</string>
@@ -97,6 +101,10 @@
     <string name="landscape_column_count">Maiseman sarakkeiden määrä</string>
     <string name="change_cover_image">Vaihda kansikuva</string>
     <string name="select_photo">Valitse kuva</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d sarake</item>
+        <item quantity="other">%d saraketta</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hallitse estettyjä numeroita</string>
     <string name="not_blocking_anyone">Ei estettyjä numeroita.</string>
@@ -112,7 +120,7 @@
     <string name="block_unknown_calls">Estä puhelut tallentamattomista yhteystiedoista</string>
     <string name="block_unknown_messages">Estä viestit tallentamattomista yhteystiedoista</string>
     <string name="add_blocked_number_helper_text">Anna numero tai kuvio (esim. *12345*, +1*8888) estääksesi kaikki puhelut ja viestit kuvion mukaisista numeroista.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Tuntemattomia numeroita ei voida estää ilman soittajan tunnistusoikeutta.</string>
     <!-- Favorites -->
     <string name="favorites">Suosikit</string>
     <string name="add_favorites">Lisää suosikkeja</string>
@@ -120,7 +128,25 @@
     <string name="remove_from_favorites">Poista suosikeista</string>
     <!-- Search -->
     <string name="search">Haku</string>
+    <string name="search_in_placeholder">Etsi kohteesta %s</string>
     <string name="type_2_characters">Syötä vähintään 2 merkkiä hakeaksesi.</string>
+    <string name="search_contacts">Etsi yhteystietoja</string>
+    <string name="search_favorites">Etsi suosikkeja</string>
+    <string name="search_apps">Etsi sovelluksia</string>
+    <string name="search_events">Etsi tapahtumia</string>
+    <string name="search_groups">Etsi ryhmiä</string>
+    <string name="search_history">Etsi historiasta</string>
+    <string name="search_calls">Etsi puheluita</string>
+    <string name="search_files">Etsi tiedostoja</string>
+    <string name="search_folders">Etsi kansioita</string>
+    <string name="search_files_and_folders">Etsi tiedostoja ja kansioita</string>
+    <string name="search_playlists">Etsi soittolistoja</string>
+    <string name="search_artists">Etsi esittäjiä</string>
+    <string name="search_albums">Etsi albumeita</string>
+    <string name="search_tracks">Etsi kappaleita</string>
+    <string name="search_text">Etsi tekstiä</string>
+    <string name="search_conversations">Etsi keskustelua</string>
+    <string name="search_recordings">Etsi äänitteitä</string>
     <!-- Filters -->
     <string name="filter">Suodata</string>
     <string name="filter_pro">Suodata (Pro)</string>
@@ -132,7 +158,7 @@
     <string name="no_camera_permissions">Lupa kameraan vaaditaan</string>
     <string name="no_audio_permissions">Lupa ääneen vaaditaan</string>
     <string name="no_post_notifications_permissions">Ilmoitusten lähettämiseen tarvitaan lupa</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Käyttöoikeutta ei ole</string>
     <!-- Renaming -->
     <string name="rename_file">Uudelleennimeä tiedosto</string>
     <string name="rename_folder">Uudelleennimeä kansio</string>
@@ -295,6 +321,7 @@
     <string name="discard">Hylkää</string>
     <string name="undo_changes">Peru muutokset</string>
     <string name="undo_changes_confirmation">Haluatko varmasti perua muutokset?</string>
+    <string name="cannot_be_undone">Toimintoa ei ole mahdollista kumota.</string>
     <string name="save_before_closing">Sinulla on tallentamattomia muutoksia. Tallennetaanko ennen sulkemista?</string>
     <string name="apply_to_all_apps">Käytä värejä kaikissa Simple App -sovelluksissa</string>
     <string name="app_icon_color_warning">VAROITUS: Jotkin käynnistinohjelmat eivät käsittele kuvakkeen mukauttamista oikein. Jos kuvake häviää, käynnistä sovellus Google Playn tai jonkin pienoissovelluksen kautta, jos mahdollista.
@@ -359,7 +386,7 @@
     <string name="call">Soita</string>
     <string name="contact_details">Yhteystiedot</string>
     <string name="add_contact">Lisää yhteystieto</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Taustat</string>
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
     <string name="name">Nimen perusteella</string>
@@ -385,6 +412,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Haluatko varmasti jatkaa poistotoimintoon?</string>
     <string name="deletion_confirmation">Haluatko varmasti poistaa %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Haluatko varmasti siirtää kohteen %s roskakoriin?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -438,6 +466,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekunti</item>
         <item quantity="other">%d sekuntia</item>
@@ -578,11 +607,13 @@
     <string name="purchase_simple_thank_you">Osta Simple Thank You</string>
     <string name="general_settings">Yleistä</string>
     <string name="color_customization">Värien mukautus</string>
+    <string name="improved_color_customization">Parannettu värien mukautus</string>
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
     <string name="customize_colors_locked">Muokkaa sovelluksen värejä (Locked)</string>
     <string name="feature_locked">Lukittu</string>
     <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
     <string name="customize_notifications">Mukauta ilmoituksia</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Käytä englannin kieltä</string>
     <string name="language">Kieli</string>
     <string name="show_hidden_items">Näytä piilotetut tiedostot</string>
@@ -605,7 +636,7 @@
     <string name="widgets">Pienoissovellukset</string>
     <string name="use_same_snooze">Käytä aina samaa torkkuaikaa</string>
     <string name="snooze_time">Torkkuaika</string>
-    <string name="vibrate_on_button_press">Värinä painikkeen painalluksella</string>
+    <string name="vibrate_on_button_press">Värähdä painikkeista</string>
     <string name="move_items_into_recycle_bin">Siirrä kohteet roskakoriin poistamisen sijaan</string>
     <string name="recycle_bin_cleaning_interval">Roskakorin tyhjennysväli</string>
     <string name="empty_recycle_bin">Tyhjennä roskakori</string>
@@ -633,9 +664,9 @@
     <string name="list_view">Luettelonäkymä</string>
     <!-- Excluding -->
     <string name="exclude">Poissulje</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Älä huomioi kansiota</string>
     <string name="excluded_folders">Poissuljetut kansiot</string>
-    <string name="excluded">(poissuljettu)</string>
+    <string name="excluded">(ohitettu)</string>
     <string name="manage_excluded_folders">Hallitse poissuljettuja kansioita</string>
     <string name="remove_all">Poista kaikki</string>
     <string name="remove_all_description">Poista kaikki kansiot poissuljettujen listasta\? Tämä ei poista kansioita.</string>
@@ -662,6 +693,7 @@
     <string name="moving_recycle_bin_items_disabled">Kohteiden siirto roskakorista on poissa käytöstä, käytä palautustoimintoa</string>
     <string name="show_the_recycle_bin">Näytä roskakori</string>
     <string name="hide_the_recycle_bin">Piilota roskakori</string>
+    <string name="open_the_recycle_bin">Avaa roskakori</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Siirretään %d kohde roskakoriin</item>
         <item quantity="other">Siirretään %d kohdetta roskakoriin</item>
@@ -696,6 +728,19 @@
     <string name="october">Lokakuu</string>
     <string name="november">Marraskuu</string>
     <string name="december">Joulukuu</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Syys</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">Tammikuussa</string>
     <string name="in_february">Helmikuussa</string>
@@ -737,12 +782,37 @@
     <string name="more_info">Lisää tietoa</string>
     <string name="upgrade">Päivitä</string>
     <string name="upgrade_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ne .ics-tiedostoon ja sen jälkeen tuomalla tiedostosta. Löydät vienti- ja tuontipainikkeet päävalikosta.</string>
+    <string name="upgraded_from_free">Hei,
+\n
+\nnäytät juuri päivittäneen ilmaisversiosta. Kun olet tyytyväinen tähän ja mahdollisesti siirtänyt tietosi, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
+\n
+\nKiitos!</string>
     <string name="upgraded_to_pro">Hei,
 \n
-\nnäyttää siltä, että sinulla on Pro-versio asennettuna. Et tarvitse tätä versiota enää, voit siis poistaa tämän.</string>
-    <string name="upgraded_to_pro_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ensin tapahtumat .ics-tiedostoon ja sen jälkeen tuomalla tapahtumat. Vienti- ja tuontitoiminnot löytyvät ylävalikosta.</string>
-    <string name="upgraded_to_pro_notes">Sinun tulee yhdistää muistiinpanot Pro-versioon manuaalisesti.</string>
-    <string name="upgraded_to_pro_contacts">Sinun tulee yhdistää yksityisesti tallennetut yhteystiedot manuaalisesti viemällä ne ensin .vcf-tiedostoon ja sen jälkeen tuomalla ne. Vienti- ja tuontitoiminnot löytyvät ylävalikosta.</string>
+\nsinulla näyttää jo olevan myös sovelluksen Pro-versio. Kun olet tyytyväinen siihen ja mahdollisesti siirtänyt tietosi, voit poistaa tämän sovelluksen asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
+\n
+\nKiitos!</string>
+    <string name="upgraded_to_pro_calendar">Hei,
+\n
+\nnäytät juuri päivittäneen ilmaisversiosta. Jos haluat siirtää paikallisesti säilytetyt tapahtumatiedot tähän sovellukseen, on se tehtävä manuaalisesti viemällä ne ensin ilmaisversiosta .ics-tiedostoon, joka voidaan sen jälkeen tuoda tähän sovellukseen ylävalikon kautta.
+\n
+\nKun olet tyytyväinen Pro-versioon, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
+\n
+\nKiitos!</string>
+    <string name="upgraded_to_pro_contacts">Hei,
+\n
+\nnäytät juuri päivittäneen ilmaisversiosta. Jos haluat siirtää kohteessa \"%s\" säilytetyt yhteystiedot tähän sovellukseen, on se tehtävä manuaalisesti viemällä ne ensin ilmaisversiosta .vcf-tiedostoon, joka voidaan sen jälkeen tuoda tähän sovellukseen ylävalikon kautta.
+\n
+\nKun olet tyytyväinen Pro-versioon, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
+\n
+\nKiitos!</string>
+    <string name="upgraded_to_pro_notes">Hei,
+\n
+\nnäytät juuri päivittäneen ilmaisversiosta. Jos haluat siirtää muistiinpanosi tähän sovellukseen, on se tehtävä manuaalisesti viemällä ne ensin ilmaisversiosta tiedostoon, joka voidaan sen jälkeen tuoda tähän sovellukseen ylävalikon kautta.
+\n
+\nKun olet tyytyväinen Pro-versioon, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
+\n
+\nKiitos!</string>
     <!-- About -->
     <string name="about">Tietoa</string>
     <string name="website">Verkkosivusto</string>
@@ -777,8 +847,8 @@
             Kiitos!
         ]]>
     </string>
-    <string name="donate_new">Hei,&lt;br&gt;&lt;br&gt;toivottavasti pidät sovelluksesta. Se ei sisällä mainoksia, emmekä myöskään kerää tietojasi. Tue sen kehitystä ostamalla &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Yksinkertainen kiitos sinä&lt;/a&gt;. Sinulla on myös kaikki sovellusominaisuudet ja värien mukauttaminen lukitsematta.&lt;br&gt;&lt;br&gt;Kiitos!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_new">Hei,&lt;br&gt;&lt;br&gt;toivottavasti pidät sovelluksesta. Se ei sisällä mainoksia, emmekä edes kerää tietojasi. Tue kehitystä ostamalla &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Yksinkertainen kiitos&lt;/a&gt;. Saat lisäksi käyttöösi kaikki sovelluksen ominaisuudet, kuten värien mukautuksen.&lt;br&gt;&lt;br&gt;Kiitos!</string>
+    <string name="donate_short">Tue meitä ostamalla &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Yksinkertainen kiitos&lt;/a&gt;, jolla saat myös käyttöösi sovelluksen kaikki ominaisuudet, kuten värien mukautuksen.</string>
     <string name="purchase">Osta</string>
     <string name="get_simple_phone">Hanki yksinkertainen puhelin</string>
     <string name="update_thank_you">Päivitä Yksinkertainen kiitos viimeisimpään versioon</string>
@@ -816,7 +886,7 @@
     <string name="simple_flashlight">Yksinkertainen taskulamppu</string>
     <string name="simple_gallery">Yksinkertainen galleria</string>
     <string name="simple_keyboard">Yksinkertainen näppäimistö</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Yksinkertainen käynnistin</string>
     <string name="simple_music_player">Yksinkertainen musiikkisoitin</string>
     <string name="simple_notes">Yksinkertaiset muistiinpanot</string>
     <string name="simple_sms_messenger">Yksinkertainen SMS Messenger</string>
@@ -834,7 +904,7 @@
     <string name="flashlight_short">Taskulamppu</string>
     <string name="gallery_short">Galleria</string>
     <string name="keyboard_short">Näppäimistö</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Käynnistin</string>
     <string name="music_player_short">Musiikkisoitin</string>
     <string name="notes_short">Muistiinpanot</string>
     <string name="sms_messenger_short">Tekstiviesti Messenger</string>
@@ -933,7 +1003,7 @@
     <string name="why_upgrade_improved_design">Kehittyneempi ulkoasu</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Edistynyt valokuva- ja videoeditori</string>
     <string name="why_upgrade_heic_support">Tuki HEIC/HEIF-tiedostoille</string>
     <string name="why_upgrade_batch_renaming">Kehittynyt monen tiedoston uudelleennimeäminen kerralla </string>
     <string name="why_upgrade_folder_locking">Yksittäisten hakemistojen lukitseminen</string>
@@ -944,11 +1014,11 @@
     <string name="why_upgrade_easy_event_importing">Helppo tapahtumien tuonti</string>
     <string name="why_upgrade_new_widgets">Uudet pienoissovellukset</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Paranneltu kontaktikopioiden yhdistäminen</string>
+    <string name="why_upgrade_duplicate_contact_merging">Parannettu yhteystietojen kaksoiskappaleiden yhdistys</string>
     <string name="why_upgrade_font_size_customization">Fonttikoon kustomointi</string>
-    <string name="why_upgrade_private_contact_sharing">Vaihtoehtona sovellustemme välinen kontaktien jako</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Mukautetut kontaktien soittoäänet </string>
-    <string name="why_upgrade_contact_filtering">Kontaktien suodatus</string>
+    <string name="why_upgrade_private_contact_sharing">Valinnainen yhteystietojako sovellustemme välillä</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Mukautettavat soittoäänet yhteystiedoille</string>
+    <string name="why_upgrade_contact_filtering">Yhteystietojen suodatus</string>
     <string name="why_upgrade_contact_private_contacts">Yksityisesti tallennetut yhteystiedot</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tarkistuslistat</string>
@@ -995,9 +1065,28 @@
     <string name="audio_record_view_title">Audio Record View (äänen visualisointi)</string>
     <string name="sms_mms_title">SMS MMS (SMS ja MMS-viestien käsittely)</string>
     <string name="apng_title">APNG Android (animoitu WebP-tuki)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF-katseluohjelma)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF-katseluohjelma)</string>
     <string name="m3u_parser_title">M3U Parser (m3u-soittolistan tiedostojen käsittely)</string>
     <string name="android_lame_title">AndroidLame (mp3-kooderi)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Kokeilujakso on päättynyt</string>
+    <string name="start_free_trial">Aloita ilmainen kokeilujakso</string>
+    <string name="trial_expires_soon">Ilmainen kokeilusi päättyy pian.</string>
+    <string name="welcome_to_app_name">Tervetuloa sovellukseen %s!</string>
+    <string name="trial_start_description">Kiitos sovelluksemme käytöstä. Voit käyttää tätä avattua versiota <font color="#FFFFFF">%d päivän ajan</font>. Harkitse kokeilujakson päättyessä päivitystä Pro-versioon. Se tarjoaa merkittävästi enemmän ominaisuuksoa, modernin ulkoasun ja monia muita parannuksia, eikä siinä ole mainoksia.
+\n
+\nSe on elinikäinen kertaostos ja jos et ole tyytyväinen, voit poistaa sen ja saada hyvityksen.
+\n
+\nToivottavasti pidät siitä :)</string>
+    <string name="trial_end_description">Päivitä Pro-versioon nauttiaksesi sovelluksesta täysin.
+\n
+\nSe on elinikäinen kertaostos ja jos et ole tyytyväinen, voit poistaa sen ja saada hyvityksen.
+\n
+\nNähdään siellä :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Kokeilujaksosi päättyy %d päivän kuluttua.</item>
+        <item quantity="other">Kokeilujaksosi päättyy %d päivän kuluttua.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse hello@simplemobiletools.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>

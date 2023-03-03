@@ -93,16 +93,8 @@ fun Context.getStorageDirectories(): Array<String> {
     val rawSecondaryStoragesStr = System.getenv("SECONDARY_STORAGE")
     val rawEmulatedStorageTarget = System.getenv("EMULATED_STORAGE_TARGET")
     if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
-        if (isMarshmallowPlus()) {
-            getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
-                .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
-        } else {
-            if (TextUtils.isEmpty(rawExternalStorage)) {
-                paths.addAll(physicalPaths)
-            } else {
-                paths.add(rawExternalStorage!!)
-            }
-        }
+        getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
+            .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
     } else {
         val path = Environment.getExternalStorageDirectory().absolutePath
         val folders = Pattern.compile("/").split(path)

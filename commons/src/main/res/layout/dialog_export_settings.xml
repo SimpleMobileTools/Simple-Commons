@@ -13,22 +13,20 @@
         android:paddingTop="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin">
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/export_settings_path_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/small_margin"
-            android:text="@string/path"
-            android:textSize="@dimen/smaller_text_size" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/export_settings_path"
+        <com.simplemobiletools.commons.views.MyTextInputLayout
+            android:id="@+id/export_settings_path_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:paddingStart="@dimen/small_margin"
-            android:paddingTop="@dimen/small_margin"
-            android:paddingBottom="@dimen/activity_margin" />
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:hint="@string/path">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/export_settings_path"
+                style="@style/UnclickableEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.simplemobiletools.commons.views.MyTextInputLayout>
 
         <com.simplemobiletools.commons.views.MyTextInputLayout
             android:id="@+id/export_settings_hint"

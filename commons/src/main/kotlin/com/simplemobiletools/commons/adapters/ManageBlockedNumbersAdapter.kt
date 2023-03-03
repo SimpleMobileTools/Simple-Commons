@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.adapters
 
-import android.content.Context
 import android.view.*
 import android.widget.PopupMenu
 import com.simplemobiletools.commons.R

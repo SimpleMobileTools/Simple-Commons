@@ -20,7 +20,7 @@ class DonateDialog(val activity: Activity) {
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchViewIntent(R.string.thank_you_url) }
-            .setNegativeButton(R.string.cancel, null)
+            .setNegativeButton(R.string.later, null)
             .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }

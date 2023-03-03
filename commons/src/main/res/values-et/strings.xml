@@ -48,6 +48,7 @@
     <string name="no_phone_call_permission">Rakendusel puuduvad õigused kõnede alustamiseks, palun määra seadistustes vastavad õigused</string>
     <string name="insert_text_here">Sisesta tekst siia</string>
     <string name="call_person">Helista %s</string>
+    <string name="confirm_calling_person">Kinnita kõne: %s</string>
     <string name="zero">Null</string>
     <string name="one">Üks</string>
     <string name="two">Kaks</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Vali fail</string>
     <string name="record_audio">Salvesta heli</string>
     <string name="record_video">Salvesta video</string>
+    <string name="updating">Uuendame…</string>
+    <string name="phone_storage">Andmeruum telefonis</string>
+    <string name="phone_storage_hidden">Telefonimälu (muud rakendused ei saa siia ligi)</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -97,6 +101,10 @@
     <string name="landscape_column_count">Maastikuline veergude arv</string>
     <string name="change_cover_image">Muuda kaanepilti</string>
     <string name="select_photo">Vali foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d veerg</item>
+        <item quantity="other">%d veergu</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
     <string name="not_blocking_anyone">Sa pole veel ühtegi telefoninumbrit blokeerinud.</string>
@@ -120,7 +128,25 @@
     <string name="remove_from_favorites">Eemalda lemmikute hulgast</string>
     <!-- Search -->
     <string name="search">Otsi</string>
+    <string name="search_in_placeholder">Otsi siit: %s</string>
     <string name="type_2_characters">Otsingu alustamiseks kirjuta vähemalt 2 tähemärki.</string>
+    <string name="search_contacts">Otsi kontaktide hulgast</string>
+    <string name="search_favorites">Otsi lemmikute hulgast</string>
+    <string name="search_apps">Otsi rakendusi</string>
+    <string name="search_events">Otsi sündmusi</string>
+    <string name="search_groups">Otsi rühmi</string>
+    <string name="search_history">Otsi ajaloost</string>
+    <string name="search_calls">Otsi seniste kõnede seast</string>
+    <string name="search_files">Otsi faile</string>
+    <string name="search_folders">Otsi kaustu</string>
+    <string name="search_files_and_folders">Otsi faile ja kaustu</string>
+    <string name="search_playlists">Otsi esitusloendeid</string>
+    <string name="search_artists">Otsi esitajate seast</string>
+    <string name="search_albums">Otsi albumite seast</string>
+    <string name="search_tracks">Otsi lugusid</string>
+    <string name="search_text">Otsi teksti</string>
+    <string name="search_conversations">Otsi vestluste seast</string>
+    <string name="search_recordings">Otsi salvestuste seast</string>
     <!-- Filters -->
     <string name="filter">Filtreeri</string>
     <string name="filter_pro">Sirvi (Pro)</string>
@@ -300,6 +326,7 @@
     <string name="discard">Loobu</string>
     <string name="undo_changes">Tühista muudatused</string>
     <string name="undo_changes_confirmation">Kas oled kindel, et soovid oma muudatusi tühistada\?</string>
+    <string name="cannot_be_undone">Seda tegevust ei saa tagasi pöörata.</string>
     <string name="save_before_closing">Sul on salvestamata muudatusi. Kas salvestame enne väljumist\?</string>
     <string name="apply_to_all_apps">Kasuta samu värvi kõikides Lihtsate tarvikute rakendsustes</string>
     <string name="app_icon_color_warning">HOIATUS: Mõned käivitajad ei käsitse rakenduste ikoonide kohandamist korralikult. Kui ikoon kaob, proovige käivitada rakendus Google Play või mõne vidina kaudu, kui see on saadaval. Kui olete käivitanud rakenduse, seadistage lihtsalt vaikimisi oranž ikoon #F57C00 tagasi. Halvemal juhul peate rakenduse võib-olla uuesti installima.</string>
@@ -385,6 +412,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Kas oled kindel, et soovid kustutamist jätkata\?</string>
     <string name="deletion_confirmation">Kas sa oled kindel, et soovid %s kustutada\?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Kas sa oled kindel, et soovid %s visata prügikasti\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -438,6 +466,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekundit</item>
@@ -578,11 +607,13 @@
     <string name="purchase_simple_thank_you">Osta rakendus „Lihtne tänuavaldus“</string>
     <string name="general_settings">Üldine</string>
     <string name="color_customization">Värvide kohendamine</string>
+    <string name="improved_color_customization">Võimalus värvide detailseks kohendamiseks</string>
     <string name="customize_colors">Muuda rakenduse värve</string>
     <string name="customize_colors_locked">Muuda rakenduse värve (Lukustatud)</string>
     <string name="feature_locked">Lukus</string>
     <string name="customize_widget_colors">Muuda vidina värve</string>
     <string name="customize_notifications">Kohenda teavitusi</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Kasuta inglise keelt</string>
     <string name="language">Keel</string>
     <string name="show_hidden_items">Näita peidetud valikuid</string>
@@ -662,6 +693,7 @@
     <string name="moving_recycle_bin_items_disabled">Prügikastis olevaid faile ei saa mujale tõsta, palun kasuta taastamist</string>
     <string name="show_the_recycle_bin">Näita prügikasti</string>
     <string name="hide_the_recycle_bin">Peida prügikast</string>
+    <string name="open_the_recycle_bin">Ava prügikast</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Viskan %d faili prügikasti</item>
         <item quantity="other">Viskan %d faili prügikasti</item>
@@ -696,6 +728,19 @@
     <string name="october">Oktoober</string>
     <string name="november">November</string>
     <string name="december">Detsember</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">jaanuaris</string>
     <string name="in_february">veebruaris</string>
@@ -737,12 +782,25 @@
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
+    <string name="upgraded_from_free">Tere,
+\n
+\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist.
+\n
+\nAitäh!</string>
     <string name="upgraded_to_pro">Hei,
 \n
-\ntundub, et sul on juba olemas ka Pro-rakenduse versioon. Sa ei vaja seda enam, võid selle eemaldada.</string>
-    <string name="upgraded_to_pro_calendar">Peate kohalikult salvestatud sündmused käsitsi migreerima, eksportides .ics faili ja seejärel importides. Nii ekspordi kui ka impordi nupud leiate ülemisest menüüst.</string>
-    <string name="upgraded_to_pro_notes">Peate oma märkmed Pro versioonile käsitsi üle viima.</string>
-    <string name="upgraded_to_pro_contacts">Te peate eraviisiliselt salvestatud kontaktid käsitsi eksportima .vcf-faili ja seejärel importima. Nii ekspordi kui ka impordi nupud leiate ülemisest menüüst.</string>
+\ntundub, et sul on juba olemas ka rakenduse Pro-versioon. Kui sa oled selle versiooniga rahul ning oled andmed üle tõstnud, siis vältimaks rakenduste risti-rästi kasutamist võid selle teise eemaldada.
+\n
+\nTänud!</string>
+    <string name="upgraded_to_pro_calendar">Hello,
+\n
+\nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sa soovid vanas rakenduses salvestatud sündmused uude kolida, siis ekspordi nad vanast tasuta rakendusest .ics failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
+\n
+\nKui sa oled Pro-versiooniga rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada.
+\n
+\nTänud!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Rakenduse teave</string>
     <string name="website">Veebileht</string>
@@ -983,9 +1041,28 @@
     <string name="audio_record_view_title">Audio Record View (heli visualiseerimine)</string>
     <string name="sms_mms_title">SMS MMS (SMS- ja MMS-sõnumite käsitlemine)</string>
     <string name="apng_title">APNG Android (animeeritud WebP tugi)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF failide kuvamise teek)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF failide kuvamise teek)</string>
     <string name="m3u_parser_title">M3U Parser (m3u esitusloendi käitleja)</string>
     <string name="android_lame_title">AndroidLame (mp3 kodeerija)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Prooviperiood on lõppenud</string>
+    <string name="start_free_trial">Alusta tasuta prooviperioodi</string>
+    <string name="trial_expires_soon">Selle rakenduse prooviperiood lõppeb peagi.</string>
+    <string name="welcome_to_app_name">Tere tulemast %s kasutajaks!</string>
+    <string name="trial_start_description">Täname, et võtsid kasutusele meie rakenduse. Praeguses olekus on ta pruugitav <font color="#FFFFFF">%d päeva</font>. Kui testperiood lõppeb, siis palun kaalu uuendust Pro-versiooniks. Sellel palju lisavõimalusi, moodne kujundus, reklaamivaba lahendus ning paljugi veel.
+\n
+\nSa maksad Pro-versiooni eest vaid ühe korra ning kasutad seda nii kaua kui soovid. Kui sa pole rakendusega rahul, siis eemalda ta oma nutiseadmest ja küsi makstud summa tagasi.
+\n
+\nLoodetavasti see rakendus meeldub sulle :)</string>
+    <string name="trial_end_description">Palun uuenda Pro-versiooniks ja kasuta rakendust täisfunktsionaalsuses.
+\n
+\nSa maksad Pro-versiooni eest vaid ühe korra ning kasuta seda nii kaua kui soovid. Kui sa pole rakendusega rahul, siis eemalda ta oma nutiseadmest ja küsi makstud summa tagasi.
+\n
+\nKohtume õige varsti :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Selle rakenduse prooviperiood lõppeb %d päeva pärast.</item>
+        <item quantity="other">Selle rakenduse prooviperiood lõppeb %d päeva pärast.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">AEGUNUD: Selle rakenduse versiooni arendus on lõppenud, laadi PRO-versioon aadressilt https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Palun arvesta, et kui eemaldad tasulise rakenduse nutiseadmest 2 tunni jooksul, siis ostusumma tagastatakse automaatselt. Kui soovit tagastust hiljem, siis saada e-kiri hello@simplemobiletools.com aadressile ning korraldame tagastuse. Mõlemal juhul on sul võimalik meie tasulisi rakendusi testida :)</string>

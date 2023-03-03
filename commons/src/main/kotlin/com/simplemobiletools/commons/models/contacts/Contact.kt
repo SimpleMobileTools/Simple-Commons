@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.models.contacts
 
 import android.graphics.Bitmap
+import android.provider.ContactsContract
 import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
@@ -9,30 +10,35 @@ import com.simplemobiletools.commons.models.PhoneNumber
 
 data class Contact(
     var id: Int,
-    var prefix: String,
-    var firstName: String,
-    var middleName: String,
-    var surname: String,
-    var suffix: String,
-    var nickname: String,
-    var photoUri: String,
-    var phoneNumbers: ArrayList<PhoneNumber>,
-    var emails: ArrayList<Email>,
-    var addresses: ArrayList<Address>,
-    var events: ArrayList<Event>,
-    var source: String,
-    var starred: Int,
+    var prefix: String= "",
+    var firstName: String= "",
+    var middleName: String= "",
+    var surname: String= "",
+    var suffix: String= "",
+    var nickname: String= "",
+    var photoUri: String= "",
+    var phoneNumbers: ArrayList<PhoneNumber> = arrayListOf(),
+    var emails: ArrayList<Email> = arrayListOf(),
+    var addresses: ArrayList<Address> = arrayListOf(),
+    var events: ArrayList<Event> = arrayListOf(),
+    var source: String= "",
+    var starred: Int = 0,
     var contactId: Int,
-    var thumbnailUri: String,
-    var photo: Bitmap?,
-    var notes: String,
-    var groups: ArrayList<Group>,
-    var organization: Organization,
-    var websites: ArrayList<String>,
-    var IMs: ArrayList<IM>,
-    var mimetype: String,
-    var ringtone: String?
+    var thumbnailUri: String= "",
+    var photo: Bitmap? = null,
+    var notes: String= "",
+    var groups: ArrayList<Group> = arrayListOf(),
+    var organization: Organization = Organization("",""),
+    var websites: ArrayList<String> = arrayListOf(),
+    var IMs: ArrayList<IM> = arrayListOf(),
+    var mimetype: String = "",
+    var ringtone: String? = ""
 ) : Comparable<Contact> {
+    val rawId = id
+    val name = getNameToDisplay()
+    var birthdays = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
+    var anniversaries = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_ANNIVERSARY }.map { it.value }.toMutableList() as ArrayList<String>
+
     companion object {
         var sorting = 0
         var startWithSurname = false
@@ -194,7 +200,7 @@ data class Contact(
     fun isABusinessContact() =
         prefix.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty() && suffix.isEmpty() && organization.isNotEmpty()
 
-    fun doesContainPhoneNumber(text: String, convertLetters: Boolean): Boolean {
+    fun doesContainPhoneNumber(text: String, convertLetters: Boolean = false): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = if (convertLetters) text.normalizePhoneNumber() else text
             phoneNumbers.any {
@@ -202,6 +208,26 @@ data class Contact(
                     it.value.contains(text) ||
                     it.normalizedNumber.contains(normalizedText) ||
                     it.value.normalizePhoneNumber().contains(normalizedText)
+            }
+        } else {
+            false
+        }
+    }
+
+    fun doesHavePhoneNumber(text: String): Boolean {
+        return if (text.isNotEmpty()) {
+            val normalizedText = text.normalizePhoneNumber()
+            if (normalizedText.isEmpty()) {
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
+                    phoneNumber == text
+                }
+            } else {
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
+                    PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                        phoneNumber == text ||
+                        phoneNumber.normalizePhoneNumber() == normalizedText ||
+                        phoneNumber == normalizedText
+                }
             }
         } else {
             false

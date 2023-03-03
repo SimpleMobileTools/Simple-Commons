@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Gerai</string>
     <string name="cancel">Atšaukti</string>
-    <string name="back">Back</string>
+    <string name="back">Atgal</string>
     <string name="nothing">Nieko</string>
     <string name="later">Vėliau</string>
     <string name="save_as">Įrašyti kaip</string>
@@ -13,10 +13,10 @@
     <string name="error">Error: %s</string>
     <string name="open_with">Atverti naudojant</string>
     <string name="edit_with">Taisyti naudojant</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Redaguoti</string>
     <string name="no_app_found">Nerasta jokios tinkamos programėlės</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Nerasta jokios naršyklės</string>
+    <string name="no_email_client_found">Nerasta jokios el. pašto kliento programėlės</string>
     <string name="set_as">Nustatyti kaip</string>
     <string name="copy_to_clipboard">Kopijuoti į iškarpinę</string>
     <string name="copy_number_to_clipboard">Kopijuoti numerį į iškarpinę</string>
@@ -45,9 +45,10 @@
     <string name="no_contacts_found">Nerasta jokių adresatų</string>
     <string name="request_the_required_permissions">Prašyti reikalingų leidimų</string>
     <string name="no_access_to_contacts">Programėlei nepavyko gauti prieigą prie jūsų adresatų</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Programėlė neturi leidimo inicijuoti telefono skambučių, suteikite šį leidimą įrenginio nustatymuose</string>
     <string name="insert_text_here">Įterpkite tekstą čia</string>
     <string name="call_person">Skambinti %s</string>
+    <string name="confirm_calling_person">Patvirtinti skambutį %us</string>
     <string name="zero">Nulis</string>
     <string name="one">Vienas</string>
     <string name="two">Du</string>
@@ -58,19 +59,22 @@
     <string name="seven">Septyni</string>
     <string name="eight">Aštuoni</string>
     <string name="nine">Devyni</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value">Reikšmė</string>
+    <string name="value_cannot_be_empty">Reikšmė negali būti tuščia</string>
     <string name="create_new_contact">Sukurti naują adresatą</string>
     <string name="add_to_existing_contact">Pridėti prie esamo adresato</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Programėlė pažeista</string>
+    <string name="disclaimer">Atsakomybės ribojimas</string>
     <string name="take_photo">Fotografuoti</string>
     <string name="choose_photo">Pasirinkti nuotrauką</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Pasirinkti vaizdo įrašą</string>
+    <string name="choose_contact">Pasirinkti kontaktą</string>
+    <string name="choose_file">Pasirinkti bylą</string>
+    <string name="record_audio">Įrašyti garso įrašą</string>
+    <string name="record_video">Įrašyti vaizdo įrašą</string>
+    <string name="updating">Atnaujinama…</string>
+    <string name="phone_storage">Telefono atmintis</string>
+    <string name="phone_storage_hidden">Telefono atmintis (nematoma kitoms programėlėms)</string>
     <!-- Events -->
     <string name="birthday">Gimtadienis</string>
     <string name="anniversary">Metinės</string>
@@ -88,15 +92,20 @@
     <string name="change_view_type">Keisti rodinio tipą</string>
     <string name="grid">Tinklelis</string>
     <string name="grid_pro">Tinklelis (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Nelyginis tinklelis</string>
     <string name="list">Sąrašas</string>
     <string name="increase_column_count">Padidinti stulpelių skaičių</string>
     <string name="reduce_column_count">Sumažinti stulpelių skaičių</string>
-    <string name="column_count">Column count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="column_count">Stulpelių skaičius</string>
+    <string name="portrait_column_count">Stulpelių skaičius portretiniame rėžime</string>
+    <string name="landscape_column_count">"Stulpelių skaičius  paverstame rėžime"</string>
     <string name="change_cover_image">Pakeisti viršelio paveikslą</string>
     <string name="select_photo">Pasirinkti nuotrauką</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d stulpelis</item>
+        <item quantity="few">%d stulpeliai</item>
+        <item quantity="other">%d stulpelių</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
     <string name="not_blocking_anyone">Jūs neturite užblokuotų numerių.</string>
@@ -109,10 +118,10 @@
     <string name="must_make_default_dialer">Norėdami blokuoti numerius, turite nustatyti šią programėlę kaip numatytąją numerių rinkimo programėlę.</string>
     <string name="set_as_default">Nustatyti kaip numatytąją</string>
     <string name="block_confirmation">Ar tikrai norite užblokuoti „%s“\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_unknown_calls">Blokuoti skambučius iš neįvestų numerių</string>
+    <string name="block_unknown_messages">Blokuoti žinutes iš neįvestų numerių</string>
+    <string name="add_blocked_number_helper_text">Įvesti skaičių ar šabloną (pvz. *12345*, +370*8888) kad blokuoti skambučius ir žinutes iš numerių atitinkančių šabloną.</string>
+    <string name="must_make_default_caller_id_app">Negalima blokuoti nežinomų numerių be skambintojo ID leidimo.</string>
     <!-- Favorites -->
     <string name="favorites">Mėgstami</string>
     <string name="add_favorites">Pridėti mėgstamus</string>
@@ -120,7 +129,25 @@
     <string name="remove_from_favorites">Šalinti iš mėgstamų</string>
     <!-- Search -->
     <string name="search">Ieškoti</string>
+    <string name="search_in_placeholder">Ieškoti %s</string>
     <string name="type_2_characters">Norėdami pradėti paiešką, įveskite bent 2 simbolius.</string>
+    <string name="search_contacts">Ieškoti kontaktuose</string>
+    <string name="search_favorites">Ieškoti mėgiamiausiuose</string>
+    <string name="search_apps">Ieškoti programėlėse</string>
+    <string name="search_events">Ieškoti renginiuose</string>
+    <string name="search_groups">Ieškoti grupėse</string>
+    <string name="search_history">Ieškoti istorijoje</string>
+    <string name="search_calls">Ieškoti skambučiuose</string>
+    <string name="search_files">Ieškoti bylose</string>
+    <string name="search_folders">Ieškoti aplankuose</string>
+    <string name="search_files_and_folders">Ieškoti bylose ir aplankuose</string>
+    <string name="search_playlists">Ieškoti grojaraščiuose</string>
+    <string name="search_artists">Ieškoti atlikėjų</string>
+    <string name="search_albums">Ieškoti albumų</string>
+    <string name="search_tracks">Ieškoti garso takelių</string>
+    <string name="search_text">Ieškoti teksto</string>
+    <string name="search_conversations">Ieškoti pokalbių</string>
+    <string name="search_recordings">Ieškoti įrašų</string>
     <!-- Filters -->
     <string name="filter">Filtras</string>
     <string name="filter_pro">Filtras (Pro)</string>
@@ -131,8 +158,8 @@
     <string name="no_contacts_permission">Yra reikalingas kontaktų leidimas</string>
     <string name="no_camera_permissions">Yra reikalingas fotoaparato leidimas</string>
     <string name="no_audio_permissions">Yra reikalingas garso leidimas</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_post_notifications_permissions">Reikalingas leidimas rodyti pranešimus</string>
+    <string name="no_permission">Nėra leidimo</string>
     <!-- Renaming -->
     <string name="rename_file">Pervadinti failą</string>
     <string name="rename_folder">Pervadinti aplanką</string>
@@ -163,7 +190,7 @@
     <string name="filename_without_txt">Failo pavadinimas (be .txt)</string>
     <string name="filename_without_json">Failo pavadinimas (be .json)</string>
     <string name="filename_without_zip">Failo pavadinimas (be .zip)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">"Pradedant nuo  Android 11 versijos, šitaip nebegalima slėpti bylų ir aplankų"</string>
     <!-- Copy / Move -->
     <string name="copy">Kopijuoti</string>
     <string name="move">Perkelti</string>
@@ -304,6 +331,7 @@
     <string name="discard">Atmesti</string>
     <string name="undo_changes">Atšaukti pakeitimus</string>
     <string name="undo_changes_confirmation">Ar tikrai norite atšaukti pakeitimus\?</string>
+    <string name="cannot_be_undone">Šio veiksmo neįmanoma atšaukti.</string>
     <string name="save_before_closing">Yra neįrašytų pakeitimų. Įrašyti prieš išeinant\?</string>
     <string name="apply_to_all_apps">Taikyti spalvas visoms paprastoms programėlėms</string>
     <string name="app_icon_color_warning">ĮSPĖJIMAS: Kai kurios paleidyklės tinkamai neapdoroja programėlės piktogramos tinkinimo. Jei piktograma išnyks, pabandykite, jei prieinama, paleisti programėlę per „Google Play“ ar per kokį nors valdiklį. Paleidę programėlę, atstatykite numatytąją oranžinę piktogramą #F57C00. Blogiausiu atveju, jums gali tekti įdiegti programėlę iš naujo.</string>
@@ -389,6 +417,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ar tikrai norite ištrinti?</string>
     <string name="deletion_confirmation">Ar tikrai norite ištrinti %s\?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Ar tikrai norite perkelti %s į šiukšlinę\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -443,6 +472,7 @@
     <string name="seconds_letter">sek.</string>
     <string name="minutes_letter">min.</string>
     <string name="hours_letter">val.</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekundė</item>
         <item quantity="few">%d sekundės</item>
@@ -610,11 +640,13 @@
     <string name="purchase_simple_thank_you">Įsigyti „Paprastą ačiū“</string>
     <string name="general_settings">Bendri</string>
     <string name="color_customization">Spalvos tinkinimas</string>
+    <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">Tinkinti spalvas</string>
     <string name="customize_colors_locked">Tinkinti spalvas (Užrakinta)</string>
     <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Tinkinti valdiklių spalvas</string>
     <string name="customize_notifications">Tinkinti pranešimus</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Naudoti anglų kalbą</string>
     <string name="language">Language</string>
     <string name="show_hidden_items">Rodyti paslėptus elementus</string>
@@ -667,7 +699,7 @@
     <string name="exclude">Išskirti</string>
     <string name="exclude_folder">Exclude folder</string>
     <string name="excluded_folders">Išskirti aplankai</string>
-    <string name="excluded">(excluded)</string>
+    <string name="excluded">(neįtraukta)</string>
     <string name="manage_excluded_folders">Tvarkyti išskirtus aplankus</string>
     <string name="remove_all">Pašalinti visus</string>
     <string name="remove_all_description">Pašalinti visus aplankus iš išskirtųjų sąrašo\? Tai neištrins aplankų.</string>
@@ -694,6 +726,7 @@
     <string name="moving_recycle_bin_items_disabled">Šiušklinės elementų perkėlimas yra išjungtas, naudokite „Atkurti“</string>
     <string name="show_the_recycle_bin">Rodyti šiukšlinę</string>
     <string name="hide_the_recycle_bin">Slėpti šiukšlinę</string>
+    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Perkeliamas %d elementas į šiukšlinę</item>
         <item quantity="few">Perkeliami %d elementai į šiukšlinę</item>
@@ -729,6 +762,19 @@
     <string name="october">Spalis</string>
     <string name="november">Lapkritis</string>
     <string name="december">Gruodis</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">sausį</string>
     <string name="in_february">vasarį</string>
@@ -770,10 +816,11 @@
     <string name="more_info">Daugiau informacijos</string>
     <string name="upgrade">Naujinti</string>
     <string name="upgrade_calendar">Vietos mastu saugomus įvykius turite perkelti rankiniu būdu, eksportuodami juos į .ics failą, o tuomet importuodami. Eksportavimo ir importavimo mygtukus galite rasti pagrindinio ekrano meniu.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Apie</string>
     <string name="website">Website</string>
@@ -1014,9 +1061,21 @@
     <string name="audio_record_view_title">Audio Record View (garso vizualizavimas)</string>
     <string name="sms_mms_title">SMS MMS (SMS ir MMS apdorojimas)</string>
     <string name="apng_title">APNG Android (animuotų WebP palaikymas)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Trial expired</string>
+    <string name="start_free_trial">Start free trial</string>
+    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
+    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Your trial expires in %d day.</item>
+        <item quantity="other">Your trial expires in %d days.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">PASENUSI: Ši programėlės versija daugiau nebeprižiūrima, gaukite „Pro“ versiją, adresu https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Nepamirškite, jog jeigu per 2 valandas pašalinsite bet kurią mokamą programėlę, jums automatiškai bus grąžinti pinigai. Jei norėsite susigrąžinti pinigus vėliau, susisiekite su mumis el. paštu hello@simplemobiletools.com ir juos atgausite. Tokiu būdu galite lengvai išbandyti programėlę :)</string>
