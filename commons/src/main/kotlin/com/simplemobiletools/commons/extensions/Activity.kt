@@ -94,8 +94,6 @@ fun Activity.appLaunched(appId: String) {
     //         RateStarsDialog(this)
     //     }
     // }
-
-    }
 }
 
 fun Activity.showDonateOrUpgradeDialog() {
