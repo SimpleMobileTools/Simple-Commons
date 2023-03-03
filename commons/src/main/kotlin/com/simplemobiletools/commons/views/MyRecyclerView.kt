@@ -236,7 +236,7 @@ open class MyRecyclerView : RecyclerView {
         super.onScrollStateChanged(state)
         if (endlessScrollListener != null) {
             if (totalItemCount == 0) {
-                totalItemCount = adapter!!.itemCount
+                totalItemCount = adapter?.itemCount ?: return
             }
 
             if (state == SCROLL_STATE_IDLE) {

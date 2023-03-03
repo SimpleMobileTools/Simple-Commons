@@ -201,7 +201,7 @@ class SimpleContactsHelper(val context: Context) {
         return contacts
     }
 
-    fun getContactEvents(getBirthdays: Boolean): SparseArray<ArrayList<String>> {
+    private fun getContactEvents(getBirthdays: Boolean): SparseArray<ArrayList<String>> {
         val eventDates = SparseArray<ArrayList<String>>()
         val uri = Data.CONTENT_URI
         val projection = arrayOf(

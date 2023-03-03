@@ -29,11 +29,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_blocked_numbers)
         updateBlockedNumbers()
         setupOptionsMenu()
 
+        updateMaterialActivityViews(block_numbers_coordinator, manage_blocked_numbers_list, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(manage_blocked_numbers_list, block_numbers_toolbar)
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 

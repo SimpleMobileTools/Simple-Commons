@@ -10,7 +10,7 @@
     <string name="invalid_file_format">Неправильный формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Ошибка: %s</string>
     <string name="open_with">Открыть в…</string>
     <string name="edit_with">Редактировать в…</string>
     <string name="edit">Редактировать</string>
@@ -48,8 +48,9 @@
     <string name="no_phone_call_permission">У приложения нет разрешения на совершение телефонных вызовов, пожалуйста, предоставьте его в настройках устройства</string>
     <string name="insert_text_here">Введите текст здесь</string>
     <string name="call_person">Вызов %s</string>
+    <string name="confirm_calling_person">Подтверждение вызова %s</string>
     <string name="zero">Ноль</string>
-    <string name="one">One</string>
+    <string name="one">Один</string>
     <string name="two">Два</string>
     <string name="three">Три</string>
     <string name="four">Четыре</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Выбор файла</string>
     <string name="record_audio">Запись звука</string>
     <string name="record_video">Запись видео</string>
+    <string name="updating">Обновление…</string>
+    <string name="phone_storage">Память устройства</string>
+    <string name="phone_storage_hidden">Память устройства (не видна другим приложениям)</string>
     <!-- Events -->
     <string name="birthday">День рождения</string>
     <string name="anniversary">Годовщина</string>
@@ -90,13 +94,19 @@
     <string name="grid_pro">Сетка (Pro)</string>
     <string name="uneven_grid">Неровная сетка</string>
     <string name="list">Список</string>
-    <string name="increase_column_count">Добавить столбец</string>
-    <string name="reduce_column_count">Убрать столбец</string>
-    <string name="column_count">Количество столбцов</string>
-    <string name="portrait_column_count">Количество столбцов в портретной ориентации</string>
-    <string name="landscape_column_count">Количество столбцов в альбомной ориентации</string>
+    <string name="increase_column_count">Добавить колонку</string>
+    <string name="reduce_column_count">Убрать колонку</string>
+    <string name="column_count">Количество колонок</string>
+    <string name="portrait_column_count">Количество колонок в портретной ориентации</string>
+    <string name="landscape_column_count">Количество колонок в альбомной ориентации</string>
     <string name="change_cover_image">Изменить обложку</string>
     <string name="select_photo">Выбрать изображение</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d колонка</item>
+        <item quantity="few">%d колонки</item>
+        <item quantity="many">%d колонок</item>
+        <item quantity="other">%d колонок</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
     <string name="not_blocking_anyone">Нет блокируемых номеров.</string>
@@ -120,7 +130,25 @@
     <string name="remove_from_favorites">Убрать из избранного</string>
     <!-- Search -->
     <string name="search">Поиск</string>
+    <string name="search_in_placeholder">Поиск в %s</string>
     <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
+    <string name="search_contacts">Поиск контактов</string>
+    <string name="search_favorites">Поиск избранного</string>
+    <string name="search_apps">Поиск приложений</string>
+    <string name="search_events">Поиск событий</string>
+    <string name="search_groups">Поиск групп</string>
+    <string name="search_history">Поиск истории</string>
+    <string name="search_calls">Поиск вызовов</string>
+    <string name="search_files">Поиск файлов</string>
+    <string name="search_folders">Поиск папок</string>
+    <string name="search_files_and_folders">Поиск файлов и папок</string>
+    <string name="search_playlists">Поиск списков воспроизведения</string>
+    <string name="search_artists">Поиск исполнителей</string>
+    <string name="search_albums">Поиск альбомов</string>
+    <string name="search_tracks">Поиск композиций</string>
+    <string name="search_text">Поиск текста</string>
+    <string name="search_conversations">Поиск переписок</string>
+    <string name="search_recordings">Поиск записей</string>
     <!-- Filters -->
     <string name="filter">Фильтр</string>
     <string name="filter_pro">Фильтр (Pro)</string>
@@ -306,6 +334,7 @@
     <string name="discard">Нет</string>
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Отменить изменения?</string>
+    <string name="cannot_be_undone">Это действие не может быть отменено.</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
     <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые рабочие столы неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
@@ -324,7 +353,7 @@
     <string name="black_white">Чёрно-белая</string>
     <string name="custom">Своя</string>
     <string name="shared">Общая</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Системное значение по умолчанию</string>
     <!-- What's new -->
     <string name="whats_new">Что нового</string>
     <string name="whats_new_disclaimer">* здесь представлены только значительные изменения, но всегда присутствуют и мелкие исправления</string>
@@ -392,6 +421,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
     <string name="deletion_confirmation">Удалить %s?</string>
+    <string name="deletion_confirmation_short">Удалить %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Переместить %s в корзину?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -446,6 +476,7 @@
     <string name="seconds_letter">с</string>
     <string name="minutes_letter">м</string>
     <string name="hours_letter">ч</string>
+    <string name="week_number_short">нед.</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
         <item quantity="few">%d секунды</item>
@@ -613,11 +644,13 @@
     <string name="purchase_simple_thank_you">Купить \"Простое спасибо\"</string>
     <string name="general_settings">Основные</string>
     <string name="color_customization">Настройка цвета</string>
+    <string name="improved_color_customization">Улучшенная настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
     <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
     <string name="feature_locked">Заблокировано</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
+    <string name="notification_sound">Звук уведомления</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="language">Язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
@@ -697,6 +730,7 @@
     <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
     <string name="show_the_recycle_bin">Показать корзину</string>
     <string name="hide_the_recycle_bin">Скрыть корзину</string>
+    <string name="open_the_recycle_bin">Открыть корзину</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d элемент перемещается в корзину</item>
         <item quantity="few">%d элемента перемещаются в корзину</item>
@@ -732,6 +766,19 @@
     <string name="october">Октябрь</string>
     <string name="november">Ноябрь</string>
     <string name="december">Декабрь</string>
+    <!-- Short months -->
+    <string name="january_short">янв</string>
+    <string name="february_short">фев</string>
+    <string name="march_short">мар</string>
+    <string name="april_short">апр</string>
+    <string name="may_short">май</string>
+    <string name="june_short">июн</string>
+    <string name="july_short">июл</string>
+    <string name="august_short">авг</string>
+    <string name="september_short">сен</string>
+    <string name="october_short">окт</string>
+    <string name="november_short">ноя</string>
+    <string name="december_short">дек</string>
     <!-- in January -->
     <string name="in_january">в январе</string>
     <string name="in_february">в феврале</string>
@@ -773,12 +820,37 @@
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
-    <string name="upgraded_to_pro">Эй,
+    <string name="upgraded_from_free">Привет,
 \n
-\nпохоже, у вас уже есть Pro-версия данного приложения. Эта версия вам больше не понадобится, её можно удалить.</string>
-    <string name="upgraded_to_pro_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в верхнем меню.</string>
-    <string name="upgraded_to_pro_notes">Необходимо вручную перенести свои заметки в Pro-версию.</string>
-    <string name="upgraded_to_pro_contacts">Локально сохранённые контакты необходимо перенести вручную через экспорт и последующий импорт vcf-файла. Кнопки экспорта/импорта находятся в верхнем меню.</string>
+\nпохоже, что вы обновились с бесплатного приложения. Если вы будете довольны работой этого приложения и, возможно, перенесёте в него свои данные, то можете удалить старую бесплатную версию, чтобы избежать её случайного запуска, поскольку она вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro">Привет,
+\n
+\nпохоже, что у вас уже есть Pro-версия приложения. Когда вы будете довольны им и, возможно, перенесёте в него свои данные, можно будет удалить это, чтобы избежать случайного запуска, поскольку эта версия вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_calendar">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести локально сохранённые события, вам нужно сделать это вручную, экспортировав их в ics-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_contacts">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если у вас есть какие-нибудь контакты, сохранённые в \"%s\", вам нужно перенести их вручную, экспортировав их в vcf-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
+    <string name="upgraded_to_pro_notes">Привет,
+\n
+\nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести свои заметки, вам нужно сделать это вручную, экспортировав их в файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
+\n
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\n
+\nСпасибо!</string>
     <!-- About -->
     <string name="about">О приложении</string>
     <string name="website">Сайт</string>
@@ -848,10 +920,10 @@
     <string name="simple_flashlight">Простой фонарик</string>
     <string name="simple_gallery">Простая галерея</string>
     <string name="simple_keyboard">Простая клавиатура</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Простой рабочий стол</string>
     <string name="simple_music_player">Простой музыкальный плеер</string>
     <string name="simple_notes">Простые заметки</string>
-    <string name="simple_sms_messenger">Простой SMS-мессенджер</string>
+    <string name="simple_sms_messenger">Простые сообщения</string>
     <string name="simple_thank_you">Простое спасибо</string>
     <string name="simple_voice_recorder">Простой диктофон</string>
     <string name="app_launcher_short">Рабочий стол</string>
@@ -1038,9 +1110,30 @@
     <string name="audio_record_view_title">Audio Record View (звуковая визуализация)</string>
     <string name="sms_mms_title">SMS, MMS (обработка SMS и MMS)</string>
     <string name="apng_title">APNG Android (отображение анимации WebP)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (просмотр PDF)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (просмотр PDF)</string>
     <string name="m3u_parser_title">M3U Parser (обработка файлов списков воспроизведения m3u)</string>
     <string name="android_lame_title">AndroidLame (кодировщик в mp3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Пробный период истёк</string>
+    <string name="start_free_trial">Начать пробный период</string>
+    <string name="trial_expires_soon">Пробный период скоро истечёт.</string>
+    <string name="welcome_to_app_name">Добро пожаловать в %s!</string>
+    <string name="trial_start_description">Благодарим вас за использование нашего приложения. Вы можете использовать эту разблокированную версию <font color="#FFFFFF">%d дней</font>. После окончания пробного периода рассмотрите возможность обновления до Pro-версии. Она имеет огромное количество новых функций, современный дизайн, отсутствие рекламы и множество других улучшений.
+\n
+\nОплата потребуется один раз в жизни и если вы не будете довольны работой приложения, то можете удалить его и получить возврат средств.
+\n
+\nНадеемся, вам понравится :)</string>
+    <string name="trial_end_description">Пожалуйста, обновитесь до Pro-версии, чтобы пользоваться приложением в полном объёме.
+\n
+\nОплата потребуется один раз в жизни и если вы не будете довольны работой приложения, то можете удалить его и получить возврат средств.
+\n
+\nУвидимся :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Пробный период истекает через %d день.</item>
+        <item quantity="few">Пробный период истекает через %d дня.</item>
+        <item quantity="many">Пробный период истекает через %d дней.</item>
+        <item quantity="other">Пробный период истекает через %d дней.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Не забывайте, что если вы удалите любое платное приложение в течение 2 часов, вам будет автоматически возвращена сумма покупки. Если вы захотите вернуть деньги позднее, просто свяжитесь с нами по адресу hello@simplemobiletools.com и вы их получите. Так что можно легко опробовать это приложение :)</string>

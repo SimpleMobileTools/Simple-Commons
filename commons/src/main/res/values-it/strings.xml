@@ -36,7 +36,7 @@
     <string name="select_a_different_color">Seleziona un colore diverso</string>
     <string name="download">Scarica</string>
     <string name="notification">Notifica</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notifiche</string>
     <string name="email">E-mail</string>
     <string name="previous">Precedente</string>
     <string name="playpause">Riproduci / Pausa</string>
@@ -48,6 +48,7 @@
     <string name="no_phone_call_permission">L\'app non ha il permesso di avviare chiamate telefoniche, per favore concedilo nelle impostazioni del dispositivo</string>
     <string name="insert_text_here">Inserisci qui il testo</string>
     <string name="call_person">Chiama %s</string>
+    <string name="confirm_calling_person">Confirm calling %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
     <string name="two">Due</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Scegli il file</string>
     <string name="record_audio">Registra audio</string>
     <string name="record_video">Registra video</string>
+    <string name="updating">Aggiornamento in corso…</string>
+    <string name="phone_storage">Memoria del telefono</string>
+    <string name="phone_storage_hidden">Memoria del telefono (non visibile alle altre applicazioni)</string>
     <!-- Events -->
     <string name="birthday">Compleanno</string>
     <string name="anniversary">Anniversario</string>
@@ -97,6 +101,11 @@
     <string name="landscape_column_count">Conteggio delle colonne del paesaggio</string>
     <string name="change_cover_image">Cambia immagine copertina</string>
     <string name="select_photo">Seleziona foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d colonna</item>
+        <item quantity="many">%d colonne</item>
+        <item quantity="other">%d colonne</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
     <string name="not_blocking_anyone">Nessun numero bloccato.</string>
@@ -120,7 +129,25 @@
     <string name="remove_from_favorites">Rimuovi dai preferiti</string>
     <!-- Search -->
     <string name="search">Cerca</string>
+    <string name="search_in_placeholder">Ricerca in %s</string>
     <string name="type_2_characters">Digita almeno 2 caratteri per iniziare la ricerca.</string>
+    <string name="search_contacts">Cerca contatti</string>
+    <string name="search_favorites">Cerca preferiti</string>
+    <string name="search_apps">Cerca applicazioni</string>
+    <string name="search_events">Cerca eventi</string>
+    <string name="search_groups">Cerca gruppi</string>
+    <string name="search_history">Cronologia di ricerca</string>
+    <string name="search_calls">Cerca chiamate</string>
+    <string name="search_files">Cerca file</string>
+    <string name="search_folders">Cerca cartelle</string>
+    <string name="search_files_and_folders">Cerca file e cartelle</string>
+    <string name="search_playlists">Cerca playlist</string>
+    <string name="search_artists">Cerca artisti</string>
+    <string name="search_albums">Cerca album</string>
+    <string name="search_tracks">Cerca brani</string>
+    <string name="search_text">Cerca testo</string>
+    <string name="search_conversations">Cerca conversazioni</string>
+    <string name="search_recordings">Cerca registrazioni</string>
     <!-- Filters -->
     <string name="filter">Filtro</string>
     <string name="filter_pro">Filtro (Pro)</string>
@@ -132,7 +159,7 @@
     <string name="no_camera_permissions">L\'autorizzazione Fotocamera è necessaria</string>
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
     <string name="no_post_notifications_permissions">È necessaria l\'autorizzazione a pubblicare notifiche</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Nessun permesso</string>
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
     <string name="rename_folder">Rinomina cartella</string>
@@ -299,6 +326,7 @@
     <string name="discard">Scarta</string>
     <string name="undo_changes">Annulla modifiche</string>
     <string name="undo_changes_confirmation">Sicuro di annullare le modifiche?</string>
+    <string name="cannot_be_undone">Questa azione non può essere annullata.</string>
     <string name="save_before_closing">Ci sono modifiche non salvate. Salvare prima di uscire?</string>
     <string name="apply_to_all_apps">Applica i colori a tutte le App Semplici</string>
     <string name="app_icon_color_warning">ATTENZIONE: alcuni lanciatori non gestiscono correttamente le personalizzazioni delle icone delle applicazioni. Se l\'icona scompare, provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
@@ -389,6 +417,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Procedere davvero con l\'eliminazione?</string>
     <string name="deletion_confirmation">Eliminare davvero %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Spostare davvero nel cestino %s?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -443,6 +472,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">o</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d secondo</item>
         <item quantity="many">%d secondi</item>
@@ -611,11 +641,13 @@
     <string name="purchase_simple_thank_you">Acquista Semplice Ringraziamento</string>
     <string name="general_settings">Generale</string>
     <string name="color_customization">Personalizzazione del colore</string>
+    <string name="improved_color_customization">Miglioramento della personalizzazione dei colori</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_colors_locked">Personalizza i colori (Locked)</string>
     <string name="feature_locked">Bloccato</string>
     <string name="customize_widget_colors">Personalizza i colori del widget</string>
     <string name="customize_notifications">Personalizza le notifiche</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Usa la lingua inglese</string>
     <string name="language">Lingua</string>
     <string name="show_hidden_items">Mostra gli elementi nascosti</string>
@@ -695,6 +727,7 @@
     <string name="moving_recycle_bin_items_disabled">Lo spostamento degli elementi dal cestino è disabilitato, utilizzare "Ripristina"</string>
     <string name="show_the_recycle_bin">Mostra il cestino</string>
     <string name="hide_the_recycle_bin">Nascondi il cestino</string>
+    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>
         <item quantity="many">Spostamento di %d elementi nel cestino</item>
@@ -730,6 +763,19 @@
     <string name="october">Ottobre</string>
     <string name="november">Novembre</string>
     <string name="december">Dicembre</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">a gennaio</string>
     <string name="in_february">a febbraio</string>
@@ -771,12 +817,33 @@
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
     <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
-    <string name="upgraded_to_pro">Ehi,
+    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Salve,
 \n
-\nsembra che tu abbia già la versione Pro dell\'applicazione. Questa non ti servirà più, puoi disinstallarla.</string>
-    <string name="upgraded_to_pro_calendar">È necessario migrare manualmente gli eventi memorizzati localmente esportandoli in un file .ics e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
-    <string name="upgraded_to_pro_notes">È necessario migrare manualmente le note alla versione Pro.</string>
-    <string name="upgraded_to_pro_contacts">È necessario migrare manualmente i contatti memorizzati privatamente esportandoli in un file .vcf e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
+\nsembra che tu abbia già anche la versione Pro dell\'app. Una volta che sarai soddisfatto e avrai migrato i tuoi dati, potrai disinstallare questa versione per evitare di lanciarla accidentalmente, dato che non ti servirà più.
+\n
+\nGrazie!</string>
+    <string name="upgraded_to_pro_calendar">Salve,
+\n
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se vuoi migrare gli eventi memorizzati localmente, devi farlo manualmente esportandoli in un file .ics nella versione gratuita dell\'app e importandoli qui attraverso il menu superiore.
+\n
+\nUna volta soddisfatti della propria configurazione nella versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria.
+\n
+\nGrazie!</string>
+    <string name="upgraded_to_pro_contacts">Salve,
+\n
+\nsembra che lei abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se aveva dei contatti memorizzati sotto «%s», deve migrarli manualmente esportandoli in un file .vcf dalla versione gratuita dell\'app e importandoli qui attraverso il menu superiore.
+\n
+\nUna volta soddisfatti della configurazione della versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria.
+\n
+\nGrazie!</string>
+    <string name="upgraded_to_pro_notes">Salve,
+\n
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se vuoi migrare le tue note, devi farlo manualmente esportandole in un file nella versione gratuita dell\'app e importandole qui attraverso il menu in alto.
+\n
+\nUna volta soddisfatta della sua configurazione nella versione Pro, può disinstallare la vecchia versione gratuita perché non ne avrà più bisogno.
+\n
+\nGrazie!</string>
     <!-- About -->
     <string name="about">Informazioni</string>
     <string name="website">Sito web</string>
@@ -1034,9 +1101,29 @@
     <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
     <string name="sms_mms_title">SMS MMS (gestione SMS e MMS)</string>
     <string name="apng_title">APNG Android (supporto WebP animati)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (visualizzatore di PDF)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (visualizzatore di PDF)</string>
     <string name="m3u_parser_title">Parser M3U (gestione dei file playlist m3u)</string>
     <string name="android_lame_title">AndroidLame (codificatore mp3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Prova scaduta</string>
+    <string name="start_free_trial">Inizia la prova gratuita</string>
+    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="welcome_to_app_name">Benvenuti su %s!</string>
+    <string name="trial_start_description">Grazie per aver utilizzato la nostra applicazione. È possibile utilizzare questa versione sbloccata per <font color="#FFFFFF">%d giorni</font>. Una volta terminata la prova, vi invitiamo a considerare l\'aggiornamento alla versione Pro. Questa versione offre un\'enorme quantità di nuove funzioni, un design moderno, l\'assenza di pubblicità e molti altri miglioramenti.
+\n
+\nDovrete pagare solo una volta nella vita e se non sarete soddisfatti, potrete disinstallarla e ottenere un rimborso.
+\n
+\nSpero che ti piaccia :)</string>
+    <string name="trial_end_description">Si prega di aggiornare alla versione Pro per godere appieno dell\'applicazione.
+\n
+\nDevi pagare solo una volta nella vita e se non sarai soddisfatto, potrai disinstallarla e ottenere un rimborso.
+\n
+\nCi vediamo :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">La prova scade tra %d giorno.</item>
+        <item quantity="many">La prova scade tra %d giorno.</item>
+        <item quantity="other">La prova scade tra %d giorni.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non dimenticarti che se disinstalli qualsiasi app a pagamento entro le due ore dall\'acquisto, verrai automaticamente rimborsato. Se vuoi essere rimborsato quando vuoi dopo le due ore, puoi contattarci a hello@simplemobiletools.com. In questo modo puoi facilmente provare l\'app :)</string>

@@ -47,7 +47,8 @@
     <string name="no_access_to_contacts">Aplikacja nie mogła uzyskać dostępu do Twoich kontaktów</string>
     <string name="no_phone_call_permission">Aplikacja nie ma uprawnienia do nawiązywania połączeń telefonicznych. Nadaj je w ustawieniach urządzenia.</string>
     <string name="insert_text_here">Tutaj wstaw tekst</string>
-    <string name="call_person">Zadzwoń do: %s</string>
+    <string name="call_person">Zadzwoń do %s</string>
+    <string name="confirm_calling_person">Potwierdź połączenie z %s</string>
     <string name="zero">Zero</string>
     <string name="one">Jeden</string>
     <string name="two">Dwa</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Wybierz plik</string>
     <string name="record_audio">Nagraj dźwięk</string>
     <string name="record_video">Nagraj wideo</string>
+    <string name="updating">Aktualizowanie…</string>
+    <string name="phone_storage">Pamięć telefonu</string>
+    <string name="phone_storage_hidden">Pamięć telefonu (niewidoczne dla innych aplikacji)</string>
     <!-- Events -->
     <string name="birthday">Urodziny</string>
     <string name="anniversary">Rocznica</string>
@@ -97,6 +101,12 @@
     <string name="landscape_column_count">Liczba kolumn w trybie poziomym</string>
     <string name="change_cover_image">Zmień okładkę</string>
     <string name="select_photo">Wybierz zdjęcie</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d kolumna</item>
+        <item quantity="few">%d kolumny</item>
+        <item quantity="many">%d kolumn</item>
+        <item quantity="other">%d kolumn</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>
     <string name="not_blocking_anyone">Nie blokujesz nikogo.</string>
@@ -120,7 +130,25 @@
     <string name="remove_from_favorites">Usuń z ulubionych</string>
     <!-- Search -->
     <string name="search">Szukaj</string>
+    <string name="search_in_placeholder">Szukaj w %s</string>
     <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
+    <string name="search_contacts">Szukaj kontaktów</string>
+    <string name="search_favorites">Szukaj ulubionych</string>
+    <string name="search_apps">Szukaj aplikacji</string>
+    <string name="search_events">Szukaj wydarzeń</string>
+    <string name="search_groups">Szukaj grup</string>
+    <string name="search_history">Szukaj w historii</string>
+    <string name="search_calls">Szukaj połączeń</string>
+    <string name="search_files">Szukaj plików</string>
+    <string name="search_folders">Szukaj folderów</string>
+    <string name="search_files_and_folders">Szukaj plików i folderów</string>
+    <string name="search_playlists">Szukaj playlist</string>
+    <string name="search_artists">Szukaj artystów</string>
+    <string name="search_albums">Szukaj albumów</string>
+    <string name="search_tracks">Szukaj utworów</string>
+    <string name="search_text">Szukaj tekstu</string>
+    <string name="search_conversations">Szukaj rozmów</string>
+    <string name="search_recordings">Szukaj nagrań</string>
     <!-- Filters -->
     <string name="filter">Filtruj</string>
     <string name="filter_pro">Filtruj (Pro)</string>
@@ -302,6 +330,7 @@
     <string name="discard">Odrzuć</string>
     <string name="undo_changes">Cofnij zmiany</string>
     <string name="undo_changes_confirmation">Czy cofnąć zmiany\?</string>
+    <string name="cannot_be_undone">Tej akcji nie można cofnąć.</string>
     <string name="save_before_closing">Masz niezapisane zmiany. Czy zapisać je przed wyjściem?</string>
     <string name="apply_to_all_apps">Zastosuj kolory we wszystkich Prostych aplikacjach</string>
     <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub przez widżet, jeśli jest dostępny.
@@ -388,6 +417,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy kontynuować usuwanie\?</string>
     <string name="deletion_confirmation">Czy usunąć %s\?</string>
+    <string name="deletion_confirmation_short">Czy usunąć %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Czy przenieść %s do kosza\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -443,6 +473,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">tydz.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>
@@ -638,11 +669,13 @@
     <string name="purchase_simple_thank_you">Kup aplikację „Proste podziękowanie”</string>
     <string name="general_settings">Ogólne</string>
     <string name="color_customization">Dostosowywanie kolorów</string>
+    <string name="improved_color_customization">Ulepszone dostosowywanie kolorów</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_colors_locked">Dostosuj kolory aplikacji (Zablokowane)</string>
     <string name="feature_locked">Zablokowane</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="customize_notifications">Dostosuj powiadomienia</string>
+    <string name="notification_sound">Dźwięk powiadomienia</string>
     <string name="use_english_language">Wymuszaj używanie przez aplikację języka angielskiego</string>
     <string name="language">Język</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
@@ -722,6 +755,7 @@
     <string name="moving_recycle_bin_items_disabled">Przenoszenie elementów z kosza jest wyłączone, użyj przywracania</string>
     <string name="show_the_recycle_bin">Pokaż kosz</string>
     <string name="hide_the_recycle_bin">Ukryj kosz</string>
+    <string name="open_the_recycle_bin">Otwórz kosz</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Przenoszenie %d elementu do kosza</item>
         <item quantity="few">Przenoszenie %d elementów do kosza</item>
@@ -758,6 +792,19 @@
     <string name="october">Październik</string>
     <string name="november">Listopad</string>
     <string name="december">Grudzień</string>
+    <!-- Short months -->
+    <string name="january_short">sty</string>
+    <string name="february_short">lut</string>
+    <string name="march_short">mar</string>
+    <string name="april_short">kwi</string>
+    <string name="may_short">maj</string>
+    <string name="june_short">cze</string>
+    <string name="july_short">lip</string>
+    <string name="august_short">sie</string>
+    <string name="september_short">wrz</string>
+    <string name="october_short">paź</string>
+    <string name="november_short">lis</string>
+    <string name="december_short">gru</string>
     <!-- in January -->
     <string name="in_january">w styczniu</string>
     <string name="in_february">w lutym</string>
@@ -799,12 +846,37 @@
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Uaktualnij</string>
     <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w menu na ekranie głównym.</string>
+    <string name="upgraded_from_free">Witaj,
+\n
+\nWygląda na to, że właśnie uaktualniłeś(-aś) darmową aplikację do płatnej. Gdy będziesz z niej zadowolony(-a) i być może przeniesiesz swoje dane, możesz odinstalować starą darmową, aby uniknąć przypadkowego jej uruchomienia, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
     <string name="upgraded_to_pro">Witaj,
 \n
-\nwygląda na to, że masz już także wersję Pro aplikacji. Nie będziesz już potrzebować tej wersji, możesz ją odinstalować.</string>
-    <string name="upgraded_to_pro_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w górnym menu.</string>
-    <string name="upgraded_to_pro_notes">Musisz ręcznie przenieść swoje notatki do wersji Pro.</string>
-    <string name="upgraded_to_pro_contacts">Musisz przenieść prywatne kontakty ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w górnym menu.</string>
+\nWygląda na to, że masz już także wersję Pro aplikacji. Gdy będziesz z niej zadowolony(-a) i być może przeniesiesz swoje dane, możesz odinstalować tę, aby uniknąć przypadkowego uruchomienia, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_calendar">Witaj,
+\n
+\nWygląda na to, że właśnie uaktualniłeś(-aś) darmową aplikację do płatnej. Jeśli chcesz przenieść przechowywane lokalnie wydarzenia, musisz zrobić to ręcznie, eksportując je do pliku .ics w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_contacts">Witaj,
+\n
+\nWygląda na to, że właśnie uaktualniłeś(-aś) darmową aplikację do płatnej. Jeśli masz jakieś kontakty przechowywane w „%s”, musisz przenieść je ręcznie, eksportując do pliku .vcf w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
+    <string name="upgraded_to_pro_notes">Witaj,
+\n
+\nWygląda na to, że właśnie uaktualniłeś(-aś) darmową aplikację do płatnej. Jeśli chcesz przenieść swoje notatki, musisz zrobić to ręcznie, eksportując je do pliku w darmowej wersji aplikacji i importując tutaj przez górne menu.
+\n
+\nGdy będziesz zadowolony(-a) z konfiguracji w wersji Pro, możesz odinstalować starą darmową wersję, ponieważ nie będziesz jej już potrzebować.
+\n
+\nDzięki!</string>
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website">Strona internetowa</string>
@@ -832,13 +904,7 @@
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="app_version">Wersja aplikacji: %s</string>
     <string name="device_os">System: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Witaj!<br><br>
-            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju przez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
-            Dziękujemy!
-        ]]>
-    </string>
+    <string name="donate_please">Witaj,&lt;br&gt;&lt;br&gt; Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju przez zakup specjalnej aplikacji &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co poskutkuje również wyłączeniem tego komunikatu.&lt;br&gt;&lt;br&gt; Dziękujemy!</string>
     <string name="donate_new">Witaj,&lt;br&gt;&lt;br&gt;Mamy nadzieję, że aplikacja przypadła Ci do gustu. Nie zawiera reklam oraz nie zbieramy Twoich danych, dlatego wesprzyj jej rozwój, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Będziesz także mieć odblokowane wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.&lt;br&gt;&lt;br&gt;Dziękujemy!</string>
     <string name="donate_short">Wesprzyj nas, kupując &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;, co również odblokuje wszystkie funkcje aplikacji, w tym dostosowywanie kolorów.</string>
     <string name="purchase">Kup</string>
@@ -1064,9 +1130,30 @@
     <string name="audio_record_view_title">Audio Record View (wizualizacja audio)</string>
     <string name="sms_mms_title">SMS MMS (obsługa SMS-ów i MMS-ów)</string>
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (czytnik PDF)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (czytnik PDF)</string>
     <string name="m3u_parser_title">M3U Parser (obsługa plików playlist M3U)</string>
     <string name="android_lame_title">AndroidLame (koder MP3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Okres próbny wygasł</string>
+    <string name="start_free_trial">Rozpocznij darmowy okres próbny</string>
+    <string name="trial_expires_soon">Twój okres próbny wkrótce wygaśnie.</string>
+    <string name="welcome_to_app_name">Witaj w %s!</string>
+    <string name="trial_start_description">Dziękujemy za korzystanie z naszej aplikacji. Możesz używać tej odblokowanej wersji przez <font color="#FFFFFF">%d dni</font>. Po zakończeniu okresu próbnego rozważ uaktualnienie do wersji Pro. Ma ona ogromną liczbę nowych funkcji, nowoczesny wygląd, brak reklam i wiele innych ulepszeń.
+\n
+\nWystarczy, że zapłacisz za nią tylko raz w życiu, a jeśli nie będziesz zadowolony(-a), możesz ją odinstalować i otrzymać zwrot pieniędzy.
+\n
+\nMamy nadzieję, że Ci się spodoba :)</string>
+    <string name="trial_end_description">Uaktualnij do wersji Pro, aby w pełni korzystać z aplikacji.
+\n
+\nWystarczy, że zapłacisz za nią tylko raz w życiu, a jeśli nie będziesz zadowolony(-a), możesz ją odinstalować i otrzymać zwrot pieniędzy.
+\n
+\nDo zobaczenia :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Twój okres próbny wygasa za %d dzień.</item>
+        <item quantity="few">Twój okres próbny wygasa za %d dni.</item>
+        <item quantity="many">Twój okres próbny wygasa za %d dni.</item>
+        <item quantity="other">Twój okres próbny wygasa za %d dni.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a go otrzymasz. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>

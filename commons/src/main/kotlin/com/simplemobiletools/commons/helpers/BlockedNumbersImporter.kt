@@ -17,7 +17,7 @@ class BlockedNumbersImporter(
         return try {
             val inputStream = File(path).inputStream()
             val numbers = inputStream.bufferedReader().use {
-                val content = it.readText().split(BLOCKED_NUMBERS_EXPORT_DELIMITER)
+                val content = it.readText().trimEnd().split(BLOCKED_NUMBERS_EXPORT_DELIMITER)
                 content.filter { text -> PhoneNumberUtils.isGlobalPhoneNumber(text) }
             }
             if (numbers.isNotEmpty()) {

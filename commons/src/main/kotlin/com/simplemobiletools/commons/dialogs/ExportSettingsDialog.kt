@@ -22,13 +22,12 @@ class ExportSettingsDialog(
             export_settings_filename.setText(defaultFilename.removeSuffix(".txt"))
 
             if (hidePath) {
-                export_settings_path_label.beGone()
-                export_settings_path.beGone()
+                export_settings_path_hint.beGone()
             } else {
-                export_settings_path.text = activity.humanizePath(folder)
+                export_settings_path.setText(activity.humanizePath(folder))
                 export_settings_path.setOnClickListener {
                     FilePickerDialog(activity, folder, false, showFAB = true) {
-                        export_settings_path.text = activity.humanizePath(it)
+                        export_settings_path.setText(activity.humanizePath(it))
                         folder = it
                     }
                 }

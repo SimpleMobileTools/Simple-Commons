@@ -48,6 +48,7 @@
     <string name="no_phone_call_permission">A aplicación non ten permiso para iniciar chamadas telefónicas. Concédeo na configuración do dispositivo</string>
     <string name="insert_text_here">Introduce o texto aquí</string>
     <string name="call_person">Chamar a %s</string>
+    <string name="confirm_calling_person">Confirmala chamada de %s</string>
     <string name="zero">Cero</string>
     <string name="one">Un</string>
     <string name="two">Dous</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Escolla un ficheiro</string>
     <string name="record_audio">Gravar audio</string>
     <string name="record_video">Gravar vídeo</string>
+    <string name="updating">Actualizando…</string>
+    <string name="phone_storage">Almacenaxe do móbil</string>
+    <string name="phone_storage_hidden">Almacenaxe do móbil (non visible por outras apps)</string>
     <!-- Events -->
     <string name="birthday">Aniversario</string>
     <string name="anniversary">Aniversario</string>
@@ -97,6 +101,10 @@
     <string name="landscape_column_count">Número das columnas horizontais</string>
     <string name="change_cover_image">Cambiar a imaxe de portada</string>
     <string name="select_photo">Escolle foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d columna</item>
+        <item quantity="other">%d columnas</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
     <string name="not_blocking_anyone">Non hai ninguén bloqueado.</string>
@@ -120,7 +128,25 @@
     <string name="remove_from_favorites">Eliminar dos favoritos</string>
     <!-- Search -->
     <string name="search">Buscar</string>
+    <string name="search_in_placeholder">Busca en %s</string>
     <string name="type_2_characters">Escribe polo menos dous caracteres para iniciar a busca.</string>
+    <string name="search_contacts">Buscar contactos</string>
+    <string name="search_favorites">Atopalos favoritos</string>
+    <string name="search_apps">Atopalas aplicacións</string>
+    <string name="search_events">Buscalos eventos</string>
+    <string name="search_groups">Atopalos grupos</string>
+    <string name="search_history">Historial da busca</string>
+    <string name="search_calls">Buscalas chamadas</string>
+    <string name="search_files">Buscalos ficheiros</string>
+    <string name="search_folders">Buscalos cartafoles</string>
+    <string name="search_files_and_folders">Buscalos ficheiros e cartafoles</string>
+    <string name="search_playlists">Buscalas listas de reproducions</string>
+    <string name="search_artists">Buscalos artistas</string>
+    <string name="search_albums">Buscalos álbums</string>
+    <string name="search_tracks">Buscalas pistas</string>
+    <string name="search_text">Buscalo texto</string>
+    <string name="search_conversations">Buscalas conversas</string>
+    <string name="search_recordings">Buscalas gravacións</string>
     <!-- Filters -->
     <string name="filter">Filtro</string>
     <string name="filter_pro">Filtro (Pro)</string>
@@ -301,6 +327,7 @@
     <string name="discard">Desfacer</string>
     <string name="undo_changes">Desfacer cambios</string>
     <string name="undo_changes_confirmation">Seguro que queres desfacer os cambios?</string>
+    <string name="cannot_be_undone">Esta acción non se pode desfacer.</string>
     <string name="save_before_closing">Tes cambios sen aplicar. Gardar antes de saír?</string>
     <string name="apply_to_all_apps">Aplicar cores a todos os aplicativos. Simple Apps</string>
     <string name="app_icon_color_warning">AVISO: algúns lanzadores non manexan ben a personalización da icona dos aplicativos. Se a icona desaparece, intenta iniciar o aplicativo mediante o Google Play ou algún widget, se está dispoñible.
@@ -387,6 +414,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Seguro que queres continuar coa eliminación?</string>
     <string name="deletion_confirmation">Seguro que queres eliminar %s?</string>
+    <string name="deletion_confirmation_short">Delete %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Seguro que queres mover %s á Papeleira?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -440,6 +468,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">wk.</string>
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>
@@ -580,11 +609,13 @@
     <string name="purchase_simple_thank_you">Mercar Grazas sinxelas</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Persoaliza a cor</string>
+    <string name="improved_color_customization">Persoalización mellorada das cores</string>
     <string name="customize_colors">Cambiar cores</string>
     <string name="customize_colors_locked">Persoalizalas cores (bloqueado)</string>
     <string name="feature_locked">Pechado</string>
     <string name="customize_widget_colors">Persoalizalas cores do widget</string>
     <string name="customize_notifications">Persoalizalas notificacións</string>
+    <string name="notification_sound">Notification sound</string>
     <string name="use_english_language">Usala lingua inglesa</string>
     <string name="language">Lingua</string>
     <string name="show_hidden_items">Amosar elementos ocultos</string>
@@ -664,6 +695,7 @@
     <string name="moving_recycle_bin_items_disabled">Mover ficheiros da Papeleira está inhabilitado, utiliza Restaurar</string>
     <string name="show_the_recycle_bin">Amosar a Papeleira</string>
     <string name="hide_the_recycle_bin">Ocultar a Papeleira</string>
+    <string name="open_the_recycle_bin">Abrila papeleira de reciclaxe</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d elemento á Papeleira</item>
         <item quantity="other">Movendo %d elementos á Papeleira</item>
@@ -698,6 +730,19 @@
     <string name="october">Outubro</string>
     <string name="november">Novembro</string>
     <string name="december">Decembro</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Set.</string>
+    <string name="october_short">Oct</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
     <!-- in January -->
     <string name="in_january">en xaneiro</string>
     <string name="in_february">en febreiro</string>
@@ -739,12 +784,37 @@
     <string name="more_info">Máis información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tes que migrar os eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
-    <string name="upgraded_to_pro">Ola, 
-\n 
-\nParece que xa tela versión da aplicación Pro. Xa non necesitarás ista, podes desinstalala.</string>
-    <string name="upgraded_to_pro_calendar">Tes que migrar manualmente os eventos almacenados localmente mediante a exportación nun ficheiro .ics e despois importando. Podes atopar os botóns de exportación e importación no menú superior.</string>
-    <string name="upgraded_to_pro_notes">Tes que migrar as túas notas á versión Pro manualmente.</string>
-    <string name="upgraded_to_pro_contacts">Tes que migrar manualmente os contactos almacenados de forma privada mediante a exportación nun ficheiro .vcf e despois importalo. Podes atopar os botóns de exportación e importación no menú superior.</string>
+    <string name="upgraded_from_free">Ola, 
+\n
+\nParece que acabas de actualizar dende a versión gratuíta. Unha vez que estea satisfeito e quizais migrou os seus datos, pode desinstalalo antigo gratuíto para evitar que o lance accidentalmente xa que xa non o necesitará. 
+\n
+\nGrazas!</string>
+    <string name="upgraded_to_pro">Ola,
+\n
+\nParece que xa tela versión pro da aplicación. Unha vez que esteas satisfeito con el e migraches os teus datos, podes desinstalar esta aplicación. Para evitar iniciala accidentalmente porque xa non a necesitas.
+\n
+\nMoitas grazas!</string>
+    <string name="upgraded_to_pro_calendar">Ola,
+\n
+\nParece que actualizaches a versión gratuíta á versión profesional. Se queres migralos teus eventos almacenados localmente dende a versión gratuíta, debes exportalos manualmente como ficheiros .ics na versión gratuíta e importalos á versión profesional a través do menú superior.
+\n
+\nSe estás satisfeito coa configuración profesional, podes desinstalala versión gratuíta anterior xa que xa non a necesitas.
+\n
+\nGrazas!</string>
+    <string name="upgraded_to_pro_contacts">Ola,
+\n
+\nParece que acabas de actualizar dende a versión gratuíta. Se tes contactos gardados en \"%s\", terás que migralos manualmente exportándoos a un ficheiro .vcf na versión gratuíta da aplicación e importándoos aquí desde o menú superior.
+\n
+\nUnha vez que estea satisfeito coa súa configuración na versión Pro, pode desinstalala versión gratuíta anterior porque xa non a necesita.
+\n
+\nMoitas grazas!</string>
+    <string name="upgraded_to_pro_notes">Ola,
+\n
+\nParece que acabas de actualizar desde a versión gratuíta. Se queres migralas notas, debes facelo manualmente exportándoas a un ficheiro na versión gratuíta da aplicación e importándoas aquí a través do menú superior.
+\n
+\nCando esteas satisfeito coa configuración da túa versión Pro, podes desinstalala antiga gratuíta porque xa non a necesitarás.
+\n
+\nGrazas!</string>
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website">Website</string>
@@ -986,9 +1056,28 @@
     <string name="audio_record_view_title">Audio Record View (visualización do audio)</string>
     <string name="sms_mms_title">SMS MMS (Manexo dos SMS e MMS)</string>
     <string name="apng_title">APNG Android (soporte para o WebP animado)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (visor de PDF)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (visor de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (xestor de ficheiros da lista de reprodución m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador mp3)</string>
+    <!-- Trial -->
+    <string name="trial_expired">A proba caducou</string>
+    <string name="start_free_trial">Comezala proba gratuíta</string>
+    <string name="trial_expires_soon">A túa proba caduca pronto.</string>
+    <string name="welcome_to_app_name">Benvido a %s!</string>
+    <string name="trial_start_description">Grazas por usala nosa aplicación. Podes usar esta versión desbloqueada durante <font color="#FFFFFF">%d días</font>. Unha vez que remate a proba, considere actualizalá versión Pro. Ten unha gran cantidade de novas funcións, deseño moderno, sen anuncios e moitas outras melloras.
+\n
+\nSó tes que pagalo unha vez na vida e se non estás satisfeito, podes desinstalalo e obter un reembolso.
+\n
+\nAgardo que vos guste :)</string>
+    <string name="trial_end_description">Por favor actualizalá versión Pro para gozar da aplicación ao máximo.
+\n
+\nSó tes que pagala unha vez na vida e se non estás satisfeito, podes desinstalala e obter un reembolso.
+\n
+\nVéxote alí :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">A túa proba caduca en %d día.</item>
+        <item quantity="other">A túa proba caduca en %d días.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en hello@simplemobiletools.com e terala. Isto fai que sexa fácil probala :)</string>

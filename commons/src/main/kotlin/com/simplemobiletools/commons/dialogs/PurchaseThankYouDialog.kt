@@ -22,7 +22,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchPurchaseThankYouIntent() }
-            .setNegativeButton(R.string.cancel, null)
+            .setNegativeButton(R.string.later, null)
             .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }

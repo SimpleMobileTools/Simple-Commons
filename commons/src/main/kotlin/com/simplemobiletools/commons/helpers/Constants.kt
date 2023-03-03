@@ -4,9 +4,12 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Looper
+import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.normalizeString
+import com.simplemobiletools.commons.models.contacts.LocalContact
 import com.simplemobiletools.commons.overloads.times
 
 const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
@@ -29,7 +32,6 @@ const val BLOCKED_NUMBERS_EXPORT_EXTENSION = ".txt"
 const val NOMEDIA = ".nomedia"
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
-const val INVALID_NAVIGATION_BAR_COLOR = -1
 const val CHOPPED_LIST_DEFAULT_SIZE = 50
 const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
@@ -47,6 +49,10 @@ val DARK_GREY = 0xFF333333.toInt()
 const val LOWER_ALPHA = 0.25f
 const val MEDIUM_ALPHA = 0.5f
 const val HIGHER_ALPHA = 0.75f
+
+// alpha values on a scale 0 - 255
+const val LOWER_ALPHA_INT = 30
+const val MEDIUM_ALPHA_INT = 90
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -81,15 +87,12 @@ const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
 const val ACCENT_COLOR = "accent_color"
 const val APP_ICON_COLOR = "app_icon_color"
-const val NAVIGATION_BAR_COLOR = "navigation_bar_color"
-const val DEFAULT_NAVIGATION_BAR_COLOR = "default_navigation_bar_color"
 const val LAST_HANDLED_SHORTCUT_COLOR = "last_handled_shortcut_color"
 const val LAST_ICON_COLOR = "last_icon_color"
 const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 const val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
 const val CUSTOM_ACCENT_COLOR = "custom_accent_color"
-const val CUSTOM_NAVIGATION_BAR_COLOR = "custom_navigation_bar_color"
 const val CUSTOM_APP_ICON_COLOR = "custom_app_icon_color"
 const val WIDGET_BG_COLOR = "widget_bg_color"
 const val WIDGET_TEXT_COLOR = "widget_text_color"
@@ -163,7 +166,23 @@ const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
-internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+const val SHOW_CONTACT_THUMBNAILS = "show_contact_thumbnails"
+const val SHOW_PHONE_NUMBERS = "show_phone_numbers"
+const val SHOW_ONLY_CONTACTS_WITH_NUMBERS = "show_only_contacts_with_numbers"
+const val IGNORED_CONTACT_SOURCES = "ignored_contact_sources_2"
+const val LAST_USED_CONTACT_SOURCE = "last_used_contact_source"
+const val ON_CONTACT_CLICK = "on_contact_click"
+const val SHOW_CONTACT_FIELDS = "show_contact_fields"
+const val SHOW_TABS = "show_tabs"
+const val SHOW_DIALPAD_BUTTON = "show_dialpad_button"
+const val SPEED_DIAL = "speed_dial"
+const val LAST_EXPORT_PATH = "last_export_path"
+const val WAS_LOCAL_ACCOUNT_INITIALIZED = "was_local_account_initialized"
+const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
+const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
+const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
+const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
 
 // phone number/email types
 const val CELL = "CELL"
@@ -213,7 +232,7 @@ const val LICENSE_EVENT_BUS = 33554432L
 const val LICENSE_AUDIO_RECORD_VIEW = 67108864L
 const val LICENSE_SMS_MMS = 134217728L
 const val LICENSE_APNG = 268435456L
-const val LICENSE_PDF_VIEWER = 536870912L
+const val LICENSE_PDF_VIEW_PAGER = 536870912L
 const val LICENSE_M3U_PARSER = 1073741824L
 const val LICENSE_ANDROID_LAME = 2147483648L
 
@@ -412,9 +431,6 @@ fun ensureBackgroundThread(callback: () -> Unit) {
     }
 }
 
-@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.M)
-fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.N)
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 
@@ -533,3 +549,82 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
     }
     return fileDrawables
 }
+
+const val FIRST_CONTACT_ID = 1000000
+const val DEFAULT_FILE_NAME = "contacts.vcf"
+
+// visible fields filtering
+const val SHOW_PREFIX_FIELD = 1
+const val SHOW_FIRST_NAME_FIELD = 2
+const val SHOW_MIDDLE_NAME_FIELD = 4
+const val SHOW_SURNAME_FIELD = 8
+const val SHOW_SUFFIX_FIELD = 16
+const val SHOW_PHONE_NUMBERS_FIELD = 32
+const val SHOW_EMAILS_FIELD = 64
+const val SHOW_ADDRESSES_FIELD = 128
+const val SHOW_EVENTS_FIELD = 256
+const val SHOW_NOTES_FIELD = 512
+const val SHOW_ORGANIZATION_FIELD = 1024
+const val SHOW_GROUPS_FIELD = 2048
+const val SHOW_CONTACT_SOURCE_FIELD = 4096
+const val SHOW_WEBSITES_FIELD = 8192
+const val SHOW_NICKNAME_FIELD = 16384
+const val SHOW_IMS_FIELD = 32768
+const val SHOW_RINGTONE_FIELD = 65536
+
+const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
+const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
+const val DEFAULT_ADDRESS_TYPE = ContactsContract.CommonDataKinds.StructuredPostal.TYPE_HOME
+const val DEFAULT_EVENT_TYPE = ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY
+const val DEFAULT_ORGANIZATION_TYPE = ContactsContract.CommonDataKinds.Organization.TYPE_WORK
+const val DEFAULT_WEBSITE_TYPE = ContactsContract.CommonDataKinds.Website.TYPE_HOMEPAGE
+const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
+const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
+
+// contact photo changes
+const val PHOTO_ADDED = 1
+const val PHOTO_REMOVED = 2
+const val PHOTO_CHANGED = 3
+const val PHOTO_UNCHANGED = 4
+
+const val ON_CLICK_CALL_CONTACT = 1
+const val ON_CLICK_VIEW_CONTACT = 2
+const val ON_CLICK_EDIT_CONTACT = 3
+const val ALL_TABS_MASK = TAB_CONTACTS or TAB_FAVORITES or TAB_GROUPS
+
+// apps with special handling
+const val TELEGRAM_PACKAGE = "org.telegram.messenger"
+const val SIGNAL_PACKAGE = "org.thoughtcrime.securesms"
+const val WHATSAPP_PACKAGE = "com.whatsapp"
+const val VIBER_PACKAGE = "com.viber.voip"
+const val THREEMA_PACKAGE = "ch.threema.app"
+
+const val SOCIAL_VOICE_CALL = 0
+const val SOCIAL_VIDEO_CALL = 1
+const val SOCIAL_MESSAGE = 2
+
+fun getEmptyLocalContact() = LocalContact(
+    0,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    null,
+    "",
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    0,
+    ArrayList(),
+    "",
+    ArrayList(),
+    "",
+    "",
+    ArrayList(),
+    ArrayList(),
+    null
+)
+
+fun getProperText(text: String, shouldNormalize: Boolean) = if (shouldNormalize) text.normalizeString() else text

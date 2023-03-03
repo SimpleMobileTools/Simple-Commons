@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -16,15 +15,17 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
+        updateTextColors(licenses_holder)
 
-        val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
+        updateMaterialActivityViews(licenses_coordinator, licenses_holder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
+
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
         val primaryColor = getProperPrimaryColor()
-
-        updateTextColors(licenses_holder)
 
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
@@ -32,7 +33,7 @@ class LicenseActivity : BaseSimpleActivity() {
         licenses.filter { licenseMask and it.id != 0L }.forEach {
             val license = it
             inflater.inflate(R.layout.item_license, null).apply {
-                background.applyColorFilter(backgroundColor.getContrastColor())
+                license_card.setCardBackgroundColor(backgroundColor)
                 license_title.apply {
                     text = getString(license.titleId)
                     setTextColor(primaryColor)
@@ -47,14 +48,13 @@ class LicenseActivity : BaseSimpleActivity() {
                 }
 
                 licenses_holder.addView(this)
-                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(license_toolbar, NavigationIcon.Arrow)
+        setupToolbar(licenses_toolbar, NavigationIcon.Arrow)
     }
 
     private fun initLicenses() = arrayOf(
@@ -87,7 +87,7 @@ class LicenseActivity : BaseSimpleActivity() {
         License(LICENSE_AUDIO_RECORD_VIEW, R.string.audio_record_view_title, R.string.audio_record_view_text, R.string.audio_record_view_url),
         License(LICENSE_SMS_MMS, R.string.sms_mms_title, R.string.sms_mms_text, R.string.sms_mms_url),
         License(LICENSE_APNG, R.string.apng_title, R.string.apng_text, R.string.apng_url),
-        License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
+        License(LICENSE_PDF_VIEW_PAGER, R.string.pdf_view_pager_title, R.string.pdf_view_pager_text, R.string.pdf_view_pager_url),
         License(LICENSE_M3U_PARSER, R.string.m3u_parser_title, R.string.m3u_parser_text, R.string.m3u_parser_url),
         License(LICENSE_ANDROID_LAME, R.string.android_lame_title, R.string.android_lame_text, R.string.android_lame_url)
     )

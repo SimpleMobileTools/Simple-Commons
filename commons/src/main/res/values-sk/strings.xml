@@ -47,6 +47,7 @@
     <string name="no_phone_call_permission">Apka nemá oprávnenie na iniciovanie hovorov, prosím udeľte ho v nastaveniach zariadenia</string>
     <string name="insert_text_here">Zadajte text sem</string>
     <string name="call_person">Zavolať %s</string>
+    <string name="confirm_calling_person">Potvrďte volanie %s</string>
     <string name="zero">Nula</string>
     <string name="one">Jedna</string>
     <string name="two">Dva</string>
@@ -70,6 +71,9 @@
     <string name="choose_file">Zvoliť súbor</string>
     <string name="record_audio">Nahrať audio</string>
     <string name="record_video">Nahrať video</string>
+    <string name="updating">Upravuje sa…</string>
+    <string name="phone_storage">Úložisko mobilu</string>
+    <string name="phone_storage_hidden">Úložisko mobilu (neviditeľné pre ostatné apky)</string>
 
     <!-- Events -->
     <string name="birthday">Narodeniny</string>
@@ -100,6 +104,11 @@
     <string name="landscape_column_count">Počet stĺpcov v zobrazení na šírku</string>
     <string name="change_cover_image">Zmeniť obal albumu</string>
     <string name="select_photo">Zvoliť foto</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d stĺpec</item>
+        <item quantity="few">%d stĺpce</item>
+        <item quantity="other">%d stĺpcov</item>
+    </plurals>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovať blokované čísla</string>
@@ -125,8 +134,26 @@
     <string name="remove_from_favorites">Odstrániť spomedzi obľúbených</string>
 
     <!-- Search -->
-    <string name="search">Hľadať</string>
-    <string name="type_2_characters">Zadajte aspoň 2 znaky pre spustenie hľadania.</string>
+    <string name="search">Vyhľadávanie</string>
+    <string name="search_in_placeholder">Vyhľadať v %s</string>
+    <string name="type_2_characters">Zadajte aspoň 2 znaky pre spustenie vyhľadávania.</string>
+    <string name="search_contacts">Vyhľadať kontakty</string>
+    <string name="search_favorites">Vyhľadať obľúbené</string>
+    <string name="search_apps">Vyhľadať apky</string>
+    <string name="search_events">Vyhľadať udalosti</string>
+    <string name="search_groups">Vyhľadať skupiny</string>
+    <string name="search_history">Vyhľadať v histórii</string>
+    <string name="search_calls">Vyhľadať hovor</string>
+    <string name="search_files">Vyhľadať súbory</string>
+    <string name="search_folders">Vyhľadať priečinky</string>
+    <string name="search_files_and_folders">Vyhľadať súbory a priečinky</string>
+    <string name="search_playlists">Vyhľadať playlisty</string>
+    <string name="search_artists">Vyhľadať interpretov</string>
+    <string name="search_albums">Vyhľadať albumy</string>
+    <string name="search_tracks">Vyhľadať skladby</string>
+    <string name="search_text">Vyhľadať text</string>
+    <string name="search_conversations">Vyhľadať konverzácie</string>
+    <string name="search_recordings">Vyhľadať nahrávky</string>
 
     <!-- Filters -->
     <string name="filter">Filtrovať</string>
@@ -319,6 +346,7 @@
     <string name="discard">Zahodiť</string>
     <string name="undo_changes">Vrátiť zmeny</string>
     <string name="undo_changes_confirmation">Ste si istý, že chcete vrátiť zmeny?</string>
+    <string name="cannot_be_undone">Táto akcia sa nedá vrátiť späť.</string>
     <string name="save_before_closing">Máte neuložené zmeny. Chcete ich uložiť pred ukončením?</string>
     <string name="apply_to_all_apps">Použiť farby na všetky Jednoduché Aplikácie</string>
     <string name="app_icon_color_warning">UPOZORNENIE: Niektoré spúšťače zariadení nepodporujú úpravu ikoniek. V prípade, že ikonka apky zmizne, ju skúste spustiť cez Google Play, alebo nejaký widget, ak je dostupný.
@@ -414,6 +442,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ste si istý, že chcete pokračovať s vymazaním?</string>
     <string name="deletion_confirmation">Ste si istý, že chcete vymazať %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_short">Odstrániť %s?</string>
     <string name="move_to_recycle_bin_confirmation">Ste si istý, že chcete vyhodiť %s do koša?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Ste si istý, že chcete vymazať túto položku?</string>
     <string name="are_you_sure_recycle_bin">Ste si istý, že chcete vyhodiť túto položku do odpadkového koša?</string>
@@ -469,6 +498,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
+    <string name="week_number_short">t.</string>
 
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
@@ -643,11 +673,13 @@
     <string name="purchase_simple_thank_you">Kúpiť Jednoduché Ďakujem</string>
     <string name="general_settings">Všeobecné</string>
     <string name="color_customization">Úprava farieb</string>
+    <string name="improved_color_customization">Vylepšená úprava farieb</string>
     <string name="customize_colors">Upraviť farby</string>
     <string name="customize_colors_locked">Upraviť farby (Uzamknuté)</string>
     <string name="feature_locked">Uzamknuté</string>
     <string name="customize_widget_colors">Upraviť farby widgetov</string>
     <string name="customize_notifications">Upraviť pripomienky</string>
+    <string name="notification_sound">Zvuk upozornenia</string>
     <string name="use_english_language">Použiť angličtinu</string>
     <string name="language">Jazyk</string>
     <string name="show_hidden_items">Zobraziť skryté položky</string>
@@ -731,6 +763,7 @@
     <string name="moving_recycle_bin_items_disabled">Presúvanie položiek z odpadkového koša je zakázané, prosím použite možnosť Obnoviť</string>
     <string name="show_the_recycle_bin">Zobraziť odpadkový kôš</string>
     <string name="hide_the_recycle_bin">Skryť odpadkový kôš</string>
+    <string name="open_the_recycle_bin">Otvoriť odpadkový kôš</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka sa presúva do odpadkového koša</item>
@@ -770,6 +803,19 @@
     <string name="october">Október</string>
     <string name="november">November</string>
     <string name="december">December</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">Máj</string>
+    <string name="june_short">Jún</string>
+    <string name="july_short">Júl</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sept</string>
+    <string name="october_short">Okt</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dec</string>
 
     <!-- in January -->
     <string name="in_january">v januári</string>
@@ -816,10 +862,11 @@
     <string name="more_info">Viac info</string>
     <string name="upgrade">Stiahnuť</string>
     <string name="upgrade_calendar">Lokálne uložené udalosti musíte exportovať manuálne do .ics súboru, následne importovať. Tlačidlá pre exportovanie/importovanie nájdete v menu hlavnej obrazovky.</string>
-    <string name="upgraded_to_pro">Zdravím,\n\nvyzerá to tak, že už máte Pro verziu. Túto už teda nebudete potrebovať, môžete ju odinštalovať.</string>
-    <string name="upgraded_to_pro_calendar">Lokálne uložené udalosti musíte premigrovať manuálne pomocou exportovania do .ics súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
-    <string name="upgraded_to_pro_notes">Poznámky musíte do Pro verzie skopírovať manuálne.</string>
-    <string name="upgraded_to_pro_contacts">Súkromne uložené kontakty musíte premigrovať manuálne pomocou exportovania do .vcf súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
+    <string name="upgraded_from_free">Zdravím,\n\nvyzerá to tak, že ste sem práve prešli z bezplatnej verzie apky. Ak ste s touto apkou spokojný a možno aj premigrovali nejaké dáta, môžete bezplatnú apku odinštalovať, aby ste ju nespúšťali náhodou. Nebudete ju už potrebovať.\n\nVďaka!</string>
+    <string name="upgraded_to_pro">Zdravím,\n\nvyzerá to tak, že už máte nainštalovanú aj Pro verziu apky. Ak ste s ňou spokojný a možno aj premigrovali nejaké dáta, túto verziu už nebudete potrebovať a môžete ju odinštalovať, aby ste ju nespúšťali náhodou.\n\nVďaka!</string>
+    <string name="upgraded_to_pro_calendar">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak si chcete premigrovať lokálne uložené udalosti, musíte to spraviť ručne exportovaním do .ics súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
+    <string name="upgraded_to_pro_contacts">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak ste mali niektoré kontakty uložené v \"%s\", musíte ich premigrovať ručne exportovaním do .vcf súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
+    <string name="upgraded_to_pro_notes">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak chcete premigrovať vaše poznámky, musíte to spraviť ručne exportovaním do súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>
@@ -1103,9 +1150,22 @@
     <string name="audio_record_view_title">Audio Record View (vizualizácia zvukov)</string>
     <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
     <string name="apng_title">APNG Android (podpora pre animované WebP súbory)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (prehliadač PDF súborov)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (prehliadač PDF súborov)</string>
     <string name="m3u_parser_title">M3U Parser (správa playlistových súborov m3u)</string>
     <string name="android_lame_title">AndroidLame (mp3 enkóder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Skúšobná doba vypršala</string>
+    <string name="start_free_trial">Začať bezplatnú skúšobnú dobu</string>
+    <string name="trial_expires_soon">Vaša skúšobná doba čoskoro vyprší.</string>
+    <string name="welcome_to_app_name">Vitajte v %s!</string>
+    <string name="trial_start_description">Ďakujeme za používanie našej apky. Túto odomknutú verziu môžete používať po dobu &lt;font color=\'#FFFFFF\'>%d dní&lt;/font>. Keď skúšobná doba skončí, zvážte prosím prechod na Pro verziu. Má veľké množstvo nových funkcií, moderný dizajn, žiadne reklamy a mnoho ďalších vylepšení.
+        \n\nPlatiť za ňu treba iba raz za život a ak nebudete spokojný, môžete ju odinštalovať a peniaze vám budú vrátené.\n\nDúfame, že sa vám bude páčiť :)</string>
+    <string name="trial_end_description">Prosím prejdite na Pro verziu, aby ste si apku mohli užívať naplno.\n\nPlatiť za ňu treba iba raz za život a ak nebudete spokojný, môžete ju odinštalovať a peniaze vám budú vrátené.\n\nStretneme sa tam :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Vaša skúšobná doba uplynie o %d deň.</item>
+        <item quantity="few">Vaša skúšobná doba uplynie o %d dni.</item>
+        <item quantity="other">Vaša skúšobná doba uplynie o %d dní.</item>
+    </plurals>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Táto verzia aplikácie už nie je podporovaná. Stiahnite si Pro verziu na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
