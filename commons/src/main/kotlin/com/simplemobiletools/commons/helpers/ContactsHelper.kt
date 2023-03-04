@@ -95,7 +95,20 @@ class ContactsHelper(val context: Context) {
             }
         }
     }
-
+    fun getContactFromUri(uri: Uri): Contact? {
+        val key = getLookupKeyFromUri(uri) ?: return null
+        return getContactWithLookupKey(key)
+    }
+    private fun getLookupKeyFromUri(lookupUri: Uri): String? {
+        val projection = arrayOf(Contacts.LOOKUP_KEY)
+        val cursor = context.contentResolver.query(lookupUri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(Contacts.LOOKUP_KEY)
+            }
+        }
+        return null
+    }
     private fun getContentResolverAccounts(): HashSet<ContactSource> {
         val sources = HashSet<ContactSource>()
         arrayOf(Groups.CONTENT_URI, Settings.CONTENT_URI, RawContacts.CONTENT_URI).forEach {
