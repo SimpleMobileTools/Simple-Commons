@@ -590,7 +590,6 @@ const val PHOTO_UNCHANGED = 4
 const val ON_CLICK_CALL_CONTACT = 1
 const val ON_CLICK_VIEW_CONTACT = 2
 const val ON_CLICK_EDIT_CONTACT = 3
-const val ALL_TABS_MASK = TAB_CONTACTS or TAB_FAVORITES or TAB_GROUPS
 
 // apps with special handling
 const val TELEGRAM_PACKAGE = "org.telegram.messenger"
