@@ -713,7 +713,8 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
             }
 
             val recycleBinPath = firstFile.isRecycleBinPath(this)
-            if (canManageMedia() && !recycleBinPath) {
+            val containsNoMedia = firstFile.path.doesThisOrParentHaveNoMedia(HashMap(), null)
+            if (canManageMedia() && !recycleBinPath && !containsNoMedia) {
                 val fileUris = getFileUrisFromFileDirItems(files)
 
                 deleteSDK30Uris(fileUris) { success ->
