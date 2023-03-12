@@ -272,7 +272,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Välj lagringsplats</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Lagringsutrymme</string>
     <string name="internal">Internt</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
@@ -365,7 +365,7 @@
     <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
     <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
     <string name="maximum_share_reached">Du kan inte dela så här mycket innehåll på en gång</string>
-    <string name="empty_and_disable_recycle_bin">Töm och inaktivera Papperskorgen</string>
+    <string name="empty_and_disable_recycle_bin">Töm och inaktivera papperskorgen</string>
     <string name="undo">Ångra</string>
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
@@ -413,12 +413,12 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
     <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Vill du ta bort %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>
+    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till papperskorgen\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Är du säker på att du vill ta bort det här objektet?</string>
-    <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till Papperskorgen?</string>
+    <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till papperskorgen\?</string>
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
     <string name="do_not_show_again">Visa inte igen</string>
     <string name="yes">Ja</string>
@@ -467,7 +467,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">v.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -613,7 +613,7 @@
     <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="customize_notifications">Anpassa aviseringar</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Aviseringsljud</string>
     <string name="use_english_language">Använd engelska</string>
     <string name="language">Språk</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
@@ -674,7 +674,7 @@
     <string name="stop_showing_excluded">Sluta visa uteslutna mappar</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="default_tab_to_open">Flik som öppnas när appen startas</string>
     <string name="contacts_tab">Kontakter</string>
     <string name="favorites_tab">Favoriter</string>
     <string name="call_history_tab">Samtalshistorik</string>
