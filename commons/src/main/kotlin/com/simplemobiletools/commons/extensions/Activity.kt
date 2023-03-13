@@ -702,19 +702,19 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 
     val firstFile = files.first()
-    handleSAFDialog(firstFile.path) {
+    val firstFilePath = firstFile.path
+    handleSAFDialog(firstFilePath) {
         if (!it) {
             return@handleSAFDialog
         }
 
-        checkManageMediaOrHandleSAFDialogSdk30(firstFile.path) {
+        checkManageMediaOrHandleSAFDialogSdk30(firstFilePath) {
             if (!it) {
                 return@checkManageMediaOrHandleSAFDialogSdk30
             }
 
             val recycleBinPath = firstFile.isRecycleBinPath(this)
-            val containsNoMedia = firstFile.path.doesThisOrParentHaveNoMedia(HashMap(), null)
-            if (canManageMedia() && !recycleBinPath && !containsNoMedia) {
+            if (canManageMedia() && !recycleBinPath && !firstFilePath.doesThisOrParentHaveNoMedia(HashMap(), null)) {
                 val fileUris = getFileUrisFromFileDirItems(files)
 
                 deleteSDK30Uris(fileUris) { success ->
