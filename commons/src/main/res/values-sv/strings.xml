@@ -45,10 +45,10 @@
     <string name="no_contacts_found">Inga kontakter hittades</string>
     <string name="request_the_required_permissions">Begär de behörigheter som krävs</string>
     <string name="no_access_to_contacts">Appen kunde inte nå dina kontakter</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Appen har inte behörighet att ringa telefonsamtal, ge den behörighet i din apparats inställningar</string>
     <string name="insert_text_here">Skriv här</string>
     <string name="call_person">Ring %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="confirm_calling_person">Bekräfta ringer %s</string>
     <string name="zero">Noll</string>
     <string name="one">Ett</string>
     <string name="two">Två</string>
@@ -72,9 +72,9 @@
     <string name="choose_file">Välj fil</string>
     <string name="record_audio">Spela in ljud</string>
     <string name="record_video">Spela in video</string>
-    <string name="updating">Updating…</string>
-    <string name="phone_storage">Phone storage</string>
-    <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
+    <string name="updating">Updaterar…</string>
+    <string name="phone_storage">Telefonlagring</string>
+    <string name="phone_storage_hidden">Telefonlagring (inte synligt för andra appar)</string>
     <!-- Events -->
     <string name="birthday">Födelsedag</string>
     <string name="anniversary">Årsdag</string>
@@ -119,7 +119,7 @@
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
     <string name="block_unknown_calls">Blockera samtal från okända nummer</string>
     <string name="block_unknown_messages">Blockera meddelanden från okända nummer</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="add_blocked_number_helper_text">Ange ett nummer eller en nummerserie (exempel *12345*, +1*8888) för att blockera alla samtal och meddelanden som matchar nummret eller nummerserien.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -157,8 +157,8 @@
     <string name="no_contacts_permission">Kontaktbehörighet krävs</string>
     <string name="no_camera_permissions">Kamerabehörighet krävs</string>
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_post_notifications_permissions">Behörighet att skicka aviseringar krävs</string>
+    <string name="no_permission">Ingen behörighet</string>
     <!-- Renaming -->
     <string name="rename_file">Byt namn på fil</string>
     <string name="rename_folder">Byt namn på mapp</string>
@@ -176,14 +176,14 @@
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
     <string name="prepend_filenames">Lägg till före filnamnen</string>
     <string name="append_filenames">Lägg till efter filnamnen</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="simple_renaming">Enkel namnändring</string>
+    <string name="pattern_renaming">Mönster</string>
     <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - år\n%M - månad\n%D - dag\n%h - timme\n%m - minut\n%s - sekund\n%i - number increasing from 1</string>
     <string name="filename_without_txt">Filnamn (utan .txt)</string>
     <string name="filename_without_json">Filnamn (utan .json)</string>
     <string name="filename_without_zip">Filnamn (utan .zip)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Sedan Android 11 kan du inte dölja filer och mappar på det viset</string>
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
     <string name="move">Flytta</string>
@@ -212,7 +212,8 @@
     <string name="could_not_create_folder">Det gick inte att skapa mappen %s</string>
     <string name="could_not_create_file">Det gick inte att skapa filen %s</string>
     <string name="no_new_items">Inga nya objekt hittades</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Otillräckligt med utrymme.
+\nBehövs %1$s, tillgängligt %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>
@@ -234,10 +235,10 @@
     <string name="append">Lägg till \'_1\'</string>
     <string name="apply_to_all">Använd på alla konflikter</string>
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="system_folder_copy_restriction">Systemet tillåter inte kopiering till denna mapp, välj någon annan</string>
+    <string name="rename_in_sd_card_system_restriction">Systemet tillåter inte namnändring i denna mapp</string>
+    <string name="rename_internal_system_restriction">Kan inte ändra namn på mappar direkt på det interna lagringsutrymmet, endast undermappar</string>
+    <string name="cannot_rename_folder">Går ej att ändra namn på denna mapp</string>
     <!-- File picker -->
     <string name="select_folder">Välj mapp</string>
     <string name="select_file">Välj fil</string>
@@ -271,7 +272,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Välj lagringsplats</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Lagringsutrymme</string>
     <string name="internal">Internt</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
@@ -364,7 +365,7 @@
     <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
     <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
     <string name="maximum_share_reached">Du kan inte dela så här mycket innehåll på en gång</string>
-    <string name="empty_and_disable_recycle_bin">Töm och inaktivera Papperskorgen</string>
+    <string name="empty_and_disable_recycle_bin">Töm och inaktivera papperskorgen</string>
     <string name="undo">Ångra</string>
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
@@ -412,12 +413,12 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
     <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Vill du ta bort %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>
+    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till papperskorgen\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Är du säker på att du vill ta bort det här objektet?</string>
-    <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till Papperskorgen?</string>
+    <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till papperskorgen\?</string>
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
     <string name="do_not_show_again">Visa inte igen</string>
     <string name="yes">Ja</string>
@@ -466,7 +467,7 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">v.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -612,7 +613,7 @@
     <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="customize_notifications">Anpassa aviseringar</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Aviseringsljud</string>
     <string name="use_english_language">Använd engelska</string>
     <string name="language">Språk</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
@@ -665,7 +666,7 @@
     <string name="exclude">Uteslut</string>
     <string name="exclude_folder">Uteslut mapp</string>
     <string name="excluded_folders">Uteslutna mappar</string>
-    <string name="excluded">(utesluten)</string>
+    <string name="excluded">(exkluderad)</string>
     <string name="manage_excluded_folders">Hantera uteslutna mappar</string>
     <string name="remove_all">Ta bort alla</string>
     <string name="remove_all_description">Vill du ta bort alla mappar från uteslutningslistan\? Detta raderar inte mapparna.</string>
@@ -673,7 +674,7 @@
     <string name="stop_showing_excluded">Sluta visa uteslutna mappar</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="default_tab_to_open">Flik som öppnas när appen startas</string>
     <string name="contacts_tab">Kontakter</string>
     <string name="favorites_tab">Favoriter</string>
     <string name="call_history_tab">Samtalshistorik</string>
@@ -775,17 +776,35 @@
     <string name="saturday_short">Lör</string>
     <string name="sunday_short">Sön</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Din appversion kommer inte updateras mer. Vänligen upgradera till Pro-versionen för att ta del av förbättringar och bugfixar.</string>
+    <string name="upgrade_to_pro_long_click">Din appversion kommer inte updateras mer. Vänligen upgradera till Pro-versionen för att ta del av förbättringar och bugfixar genom att klicka här.</string>
     <string name="it_is_free">Den är gratis fram till: %s. Om du hämtar den innan dess, kan du använda den kostnadsfritt för all framtid.</string>
     <string name="more_info">Mer information</string>
     <string name="upgrade">Uppgradera</string>
     <string name="upgrade_calendar">Lokalt sparade händelser kan bara migreras manuellt genom att exportera och importera dem till och från en .ics-fil. Du hittar knappar för både export och import i huvudvymenyn.</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_calendar">Hej,
+\n
+\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina lokalt sparade händelser, så behöver du manuellt exportera dem till en .ics-fil i gratisappen och importera de här genom menyn.
+\n
+\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\n
+\nTack!</string>
+    <string name="upgraded_to_pro_contacts">Hej,
+\n
+\ndet ser ut som du precis upgraderat från gratisversionen. Om du hade några kontakter lagrat under \"%s\" så behöver du manuellt exportera dem till en .vcf-fil i gratisappen och importera de här genom menyn.
+\n
+\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\n
+\nTack!</string>
+    <string name="upgraded_to_pro_notes">Hej,
+\n
+\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina anteckningar över, så behöver du manuellt exportera dem till en fil i gratisappen och importera de här genom menyn.
+\n
+\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\n
+\nTack!</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Webbplats</string>
@@ -820,17 +839,17 @@
             Tack!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
+    <string name="donate_new">Hejsvejs,&lt;br&gt;&lt;br&gt;hoppas du gillar appen. Den innehåller inga annonser och samlar inte in data om dig heller, vänligen stöd dess vidare utveckling genom att köpa &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Du får ytterligare funktioner inklusive färganpassning.&lt;br&gt;&lt;br&gt;Tackar!</string>
+    <string name="donate_short">Vänligen, stöd oss genom att köpa &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Det låser även upp ytterligare funktioner inklusive färganpassning.</string>
     <string name="purchase">Köp</string>
     <string name="get_simple_phone">Skaffa Simple Phone</string>
     <string name="update_thank_you">Uppdatera Simple Thank You till den senaste versionen</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
-    <string name="read_it">Read it</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="before_asking_question_read_faq">Innan du frågar, vänligen kolla appens inställningar och läs FAQ:en först. Kanske finns lösningen där.</string>
+    <string name="before_rate_read_faq">Innan du betygsätter oss, vänligen kolla appens inställningar och läs FAQ:en innan. Om du har några problem, kanske finns lösningen där.</string>
+    <string name="make_sure_latest">Dubbelkolla så du har den senaste versionen av appen.</string>
+    <string name="make_sure_upgrade">Notera att denna appversionen inte utvecklas längre, skaffa Pro-versionen för förbättringar istället.</string>
+    <string name="read_it">Läs</string>
+    <string name="read_faq">Läs FAQ</string>
     <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
     <string name="rate_our_app">Betygsätt vår app :)</string>
     <string name="thank_you">Tack</string>
