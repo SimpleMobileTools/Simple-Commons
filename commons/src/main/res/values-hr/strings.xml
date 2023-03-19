@@ -33,7 +33,7 @@
     <string name="label">Označi</string>
     <string name="transparent">Transparentan</string>
     <string name="transparent_color">Prozirna boja</string>
-    <string name="select_a_different_color">Odaberite drugu boju</string>
+    <string name="select_a_different_color">Odaberi jednu drugu boju</string>
     <string name="download">Download</string>
     <string name="notification">Notification</string>
     <string name="notifications">Notifications</string>
@@ -46,11 +46,11 @@
     <string name="request_the_required_permissions">Zatraži potrebna dopuštenja</string>
     <string name="no_access_to_contacts">Aplikacija nije mogla pristupiti vašim kontaktima</string>
     <string name="no_phone_call_permission">Aplikacija nema dopuštenje za pokretanje telefonskih poziva, dajte ga u postavkama uređaja</string>
-    <string name="insert_text_here">Ovdje umetnite tekst</string>
+    <string name="insert_text_here">Ovdje umetni tekst</string>
     <string name="call_person">Nazovi %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="confirm_calling_person">Potvrdi nazivanje %s</string>
+    <string name="zero">Nula</string>
+    <string name="one">Jedan</string>
     <string name="two">Dva</string>
     <string name="three">Tri</string>
     <string name="four">Četiri</string>
@@ -65,14 +65,14 @@
     <string name="add_to_existing_contact">Dodaj postojećem kontaktu</string>
     <string name="app_corrupt">Aplikacija oštećena</string>
     <string name="disclaimer">Odricanje</string>
-    <string name="take_photo">Uslikaj</string>
+    <string name="take_photo">Snimi fotografiju</string>
     <string name="choose_photo">Odaberi fotografiju</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
-    <string name="updating">Updating…</string>
+    <string name="choose_video">Odaberi video</string>
+    <string name="choose_contact">Odaberi kontakt</string>
+    <string name="choose_file">Odaberi datoteku</string>
+    <string name="record_audio">Snimi zvuk</string>
+    <string name="record_video">Snimi video</string>
+    <string name="updating">Aktualiziranje …</string>
     <string name="phone_storage">Phone storage</string>
     <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
     <!-- Events -->
@@ -115,13 +115,13 @@
     <string name="blocked_numbers">Blokirani brojevi</string>
     <string name="export_blocked_numbers">Izvoz blokiranih brojeva</string>
     <string name="import_blocked_numbers">Uvoz blokiranih brojeva</string>
-    <string name="must_make_default_dialer">Morate napraviti ovu aplikaciju zadanom aplikacijom za biranje da biste bili u mogućnosti koristiti blokirane brojeve.</string>
+    <string name="must_make_default_dialer">Za korištenje blokiranih brojeva, ovu aplikaciju moraš postaviti kao zadanu za biranje brojeva.</string>
     <string name="set_as_default">Postavi na zadano</string>
-    <string name="block_confirmation">Jeste li sigurni da želite blokirati \"%s\"\?</string>
+    <string name="block_confirmation">Stvarno želiš blokirati „%s”\?</string>
     <string name="block_unknown_calls">Blokiraj pozive nepohranjenih kontakata</string>
     <string name="block_unknown_messages">Blokiraj poruke nepohranjenih kontakata</string>
-    <string name="add_blocked_number_helper_text">Unesite broj ili uzorak (npr. *12345*, +1*8888) da biste blokirali sve pozive i poruke s brojeva koji odgovaraju uzorku.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="add_blocked_number_helper_text">Upiši broj ili uzorak (npr. *12345*, +1*8888) za blokiranje svih poziva i poruka od brojeva koji odgovaraju uzorku.</string>
+    <string name="must_make_default_caller_id_app">Blokiranje nepoznatih brojeva nije moguće bez dozvole ID-a pozivatelja.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriti</string>
     <string name="add_favorites">Dodaj favorite</string>
@@ -129,8 +129,8 @@
     <string name="remove_from_favorites">Ukloni iz favorita</string>
     <!-- Search -->
     <string name="search">Traži</string>
-    <string name="search_in_placeholder">Search in %s</string>
-    <string name="type_2_characters">Upiši najmanje 2 znaka za početak pretraživanja.</string>
+    <string name="search_in_placeholder">Traži u %s</string>
+    <string name="type_2_characters">Upiši barem dva znaka za pokretanje pretrage.</string>
     <string name="search_contacts">Pretraži kontakte</string>
     <string name="search_favorites">Pretraži favorite</string>
     <string name="search_apps">Pretraži aplikacije</string>
@@ -200,17 +200,17 @@
     <string name="source">Izvor</string>
     <string name="destination">Odredište</string>
     <string name="select_destination">Odabir odredišta</string>
-    <string name="click_select_destination">Kliknite ovdje za odabir odredišta</string>
+    <string name="click_select_destination">Pritisni ovdje za biranje odredišta</string>
     <string name="invalid_destination">Nije moguće zapisivanje na odabranom odredištu</string>
-    <string name="please_select_destination">Molim odaberite odredište</string>
+    <string name="please_select_destination">Odaberi odredište</string>
     <string name="source_and_destination_same">Izvor i odredište ne mogu biti isti</string>
-    <string name="copy_failed">Nije moguće kopiranje datoteka</string>
+    <string name="copy_failed">Nije bilo moguće kopirati datoteke</string>
     <string name="copying">Kopiranje…</string>
-    <string name="copying_success">Datoteke uspješno kopirane</string>
+    <string name="copying_success">Datoteke su uspješno kopirane</string>
     <string name="copying_success_one">Datoteka je uspješno kopirana</string>
     <string name="copy_move_failed">Dogodila se greška</string>
     <string name="moving">Premještanje…</string>
-    <string name="moving_success">Datoteke uspješno premještene</string>
+    <string name="moving_success">Datoteke su uspješno premještene</string>
     <string name="moving_success_one">Datoteka je uspješno premještena</string>
     <string name="moving_success_partial">Neke datoteke nije bilo moguće premjestiti</string>
     <string name="copying_success_partial">Neke datoteke nije bilo moguće kopirati</string>
@@ -229,7 +229,7 @@
     <string name="create_new_folder">Stvori novu mapu</string>
     <string name="name_taken">Datoteka ili mapa s tim nazivom već postoje</string>
     <string name="invalid_name">Naziv sadrži ne važeće znakove</string>
-    <string name="empty_name">Molimo unesite naziv</string>
+    <string name="empty_name">Upiši ime</string>
     <string name="unknown_error_occurred">Nepoznata greška se dogodila</string>
     <!-- File operation conflicts -->
     <string name="file_already_exists">Datoteka \"%s\" već postoji</string>
@@ -247,17 +247,17 @@
     <string name="rename_internal_system_restriction">Nije moguće preimenovati mape izravno u internoj pohrani, samo podmape</string>
     <string name="cannot_rename_folder">Nije moguće preimenovati ovu mapu</string>
     <!-- File picker -->
-    <string name="select_folder">Odaberite mapu</string>
-    <string name="select_file">Odaberite datoteku</string>
-    <string name="confirm_storage_access_title">Potvrdite pristup vanjskom prostoru za pohranu</string>
-    <string name="confirm_folder_access_title">Potvrdite pristup mapi</string>
+    <string name="select_folder">Odaberi mapu</string>
+    <string name="select_file">Odaberi datoteku</string>
+    <string name="confirm_storage_access_title">Potvrdi pristup vanjskoj memoriji</string>
+    <string name="confirm_folder_access_title">Potvrdi pristup mapi</string>
     <string name="confirm_storage_access_text">Odaberite root mapu SD kartice na sljedećem prozoru da biste omogućili upisivanje</string>
     <string name="confirm_storage_access_text_sd">Ukoliko ne vidite SD karticu, probajte ovo</string>
     <string name="confirm_storage_access_android_text">Dopustite aplikaciji pristup odabranoj pohrani na sljedećem zaslonu pritiskom na \'Koristi ovu mapu\' na dnu.</string>
     <string name="confirm_storage_access_android_text_specific">Dopustite pristup \'<b>%s</b>\' na sljedećem ekranu pritiskom na \'<b>Koristi ovu mapu</b>\' na dnu.</string>
     <string name="confirm_create_doc_for_new_folder_text">Molimo pritisnite \'<b>Spremi</b>\' na dnu sljedećeg zaslona za izradu nove mape.</string>
     <string name="confirm_selection">Potvrdi odabir</string>
-    <string name="loading">Učitavam…</string>
+    <string name="loading">Učitavanje …</string>
     <string name="access_storage_prompt">Omogućite našoj aplikaciji pristup svim svojim datotekama, bez nje možda neće dobro funkcionirati.</string>
     <plurals name="items">
         <item quantity="one">%d stavka</item>
@@ -829,29 +829,29 @@
     <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
-    <string name="about">O nama</string>
-    <string name="website">Website</string>
-    <string name="website_label">Za pregled izvornog koda posjetite</string>
-    <string name="email_label">Pošaljite nam povratne informacije ili prijedloge na</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps">Više aplikacija</string>
-    <string name="more_apps_from_us">More apps from us</string>
-    <string name="invite_friends">Pozovite prijatelje</string>
+    <string name="about">Informacije</string>
+    <string name="website">Web stranica</string>
+    <string name="website_label">Za izvorni kod posjeti</string>
+    <string name="email_label">Pošalji nam povratne informacije ili prijedloge na</string>
+    <string name="upgrade_to_pro">Nadogradi na Pro verziju</string>
+    <string name="more_apps">Daljnje aplikacije</string>
+    <string name="more_apps_from_us">Daljnje aplikacje od nas</string>
+    <string name="invite_friends">Pozovi prijatelje</string>
     <string name="share_text">Hej, posjeti nas na %1$s u %2$s</string>
-    <string name="invite_via">Pozovite preko</string>
-    <string name="rate_us">Ocijenite nas</string>
-    <string name="rate">Rate</string>
-    <string name="donate">Donirajte</string>
-    <string name="follow_us">Pratite nas</string>
+    <string name="invite_via">Pozovi putem</string>
+    <string name="rate_us">Ocijeni nas</string>
+    <string name="rate">Ocjena</string>
+    <string name="donate">Doniraj</string>
+    <string name="follow_us">Prati nas</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
-    <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="support">Podrška</string>
+    <string name="help_us">Pomogni nam</string>
+    <string name="social">Društvene mreže</string>
+    <string name="other">Ostalo</string>
+    <string name="privacy_policy">Politika privatnosti</string>
+    <string name="version_placeholder">Verzija %s</string>
+    <string name="hello">Zdravo :)</string>
+    <string name="about_footer">Izrađeno sa ❤️ u Slovačkoj</string>
     <string name="additional_info">Dodatne informacije</string>
     <string name="app_version">Verzija aplikacije: %s</string>
     <string name="device_os">OS uređaja: %s</string>
@@ -1100,12 +1100,13 @@
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Tvoje probno razdoblje isteče za %d dan.</item>
+        <item quantity="few">Tvoje probno razdoblje isteče za %d dana.</item>
+        <item quantity="other">Tvoje probno razdoblje isteče za %d dana.</item>
     </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
