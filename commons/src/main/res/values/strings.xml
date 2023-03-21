@@ -769,6 +769,7 @@
     <string name="october">October</string>
     <string name="november">November</string>
     <string name="december">December</string>
+    
     <!-- Short months -->
     <string name="january_short">Jan</string>
     <string name="february_short">Feb</string>
@@ -955,7 +956,7 @@
         ]]>
     </string>
     <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
+    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, and there is no trash bin available.</string>
     <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
     <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
