@@ -140,7 +140,7 @@
     <string name="search_files">Dateien durchsuchen</string>
     <string name="search_folders">Ordner durchsuchen</string>
     <string name="search_files_and_folders">Dateien und Ordner durchsuchen</string>
-    <string name="search_playlists">Playlists durchsuchen</string>
+    <string name="search_playlists">Wiedergabelisten durchsuchen</string>
     <string name="search_artists">Künstler durchsuchen</string>
     <string name="search_albums">Alben durchsuchen</string>
     <string name="search_tracks">Lieder durchsuchen</string>
@@ -153,11 +153,11 @@
     <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="change_filter">Filter ändern</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
-    <string name="no_contacts_permission">Kontakte-Berechtigung wird benötigt</string>
-    <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt</string>
-    <string name="no_audio_permissions">Audio-Berechtigung wird benötigt</string>
-    <string name="no_post_notifications_permissions">Die Berechtigung zur Anzeige von Benachrichtigungen ist erforderlich</string>
+    <string name="no_storage_permissions">Speicherberechtigung wird benötigt</string>
+    <string name="no_contacts_permission">Kontaktberechtigung wird benötigt</string>
+    <string name="no_camera_permissions">Kameraberechtigung wird benötigt</string>
+    <string name="no_audio_permissions">Audioberechtigung wird benötigt</string>
+    <string name="no_post_notifications_permissions">Berechtigung zur Anzeige von Benachrichtigungen wird benötigt</string>
     <string name="no_permission">Keine Berechtigung</string>
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
@@ -318,7 +318,7 @@
     <string name="app_icon_color">Farbe des Anwendungssymbols</string>
     <string name="bottom_navigation_bar_color">Farbe der unteren Navigationsleiste</string>
     <string name="restore_defaults">Vorgabe wiederherstellen</string>
-    <string name="use_default">Vorgabe benutzen</string>
+    <string name="use_default">Standard verwenden</string>
     <string name="default_color">Vorgabe</string>
     <string name="change_color">Farbe ändern</string>
     <string name="theme">Thema</string>
@@ -640,13 +640,13 @@
     <string name="change_date_and_time_format">Datums- und Zeitformat ändern</string>
     <string name="sunday_first">Wochenanfang am Sonntag</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Immer dasselbe Schlummer-Intervall nutzen</string>
-    <string name="snooze_time">Schlummer-Intervall</string>
+    <string name="use_same_snooze">Immer dasselbe Schlummerintervall verwenden</string>
+    <string name="snooze_time">Schlummerintervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
     <string name="move_items_into_recycle_bin">Elemente in den Papierkorb verschieben statt löschen</string>
     <string name="recycle_bin_cleaning_interval">Intervall zum Leeren des Papierkorbs</string>
     <string name="empty_recycle_bin">Papierkorb leeren</string>
-    <string name="force_portrait_mode">Porträt-Modus erzwingen</string>
+    <string name="force_portrait_mode">Porträtmodus erzwingen</string>
     <string name="export_settings">Einstellungen exportieren</string>
     <string name="import_settings">Einstellungen importieren</string>
     <string name="settings_exported_successfully">Einstellungen erfolgreich exportiert</string>
@@ -887,7 +887,7 @@
     <string name="simple_gallery">Schlichte Galerie</string>
     <string name="simple_keyboard">Schlichte Tastatur</string>
     <string name="simple_launcher">Einfacher Launcher</string>
-    <string name="simple_music_player">Schlichter Musik-Player</string>
+    <string name="simple_music_player">Schlichter Musikplayer</string>
     <string name="simple_notes">Schlichte Notizen</string>
     <string name="simple_sms_messenger">Schlichter SMS-Messenger</string>
     <string name="simple_thank_you">Einfaches Dankeschön</string>
@@ -905,7 +905,7 @@
     <string name="gallery_short">Galerie</string>
     <string name="keyboard_short">Tastatur</string>
     <string name="launcher_short">Startprogramm</string>
-    <string name="music_player_short">Musik-Player</string>
+    <string name="music_player_short">Musikplayer</string>
     <string name="notes_short">Notizblock</string>
     <string name="sms_messenger_short">SMS-Messenger</string>
     <string name="thank_you_short">Dankeschön</string>
@@ -998,10 +998,10 @@
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fortgeschrittener Fotoeditor</string>
     <string name="why_upgrade_advanced_photo_video_editor">Fortgeschrittener Foto- und Videoeditor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF-Datei-Unterstützung</string>
-    <string name="why_upgrade_batch_renaming">Fortschrittliche Datei-Umbenennung im Stapelverfahren</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF-Dateiunterstützung</string>
+    <string name="why_upgrade_batch_renaming">Fortschrittliche Dateiumbenennung im Stapelverfahren</string>
     <string name="why_upgrade_folder_locking">Individuelle Ordnersperre</string>
-    <string name="why_upgrade_printing_support">Druck-Unterstützung</string>
+    <string name="why_upgrade_printing_support">Druckunterstützung</string>
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Zeitzonen-Unterstützung</string>
     <string name="why_upgrade_attendees_emails">Teilnehmer und E-Mail-Erinnerungen</string>
@@ -1049,23 +1049,24 @@
     <string name="gson_title">Gson (JSON-Parser)</string>
     <string name="leak_canary_title">Leak Canary (Memory-Leak-Detektor)</string>
     <string name="number_picker_title">Number Picker (Konfigurierbarer Zahlenwähler)</string>
-    <string name="exoplayer_title">ExoPlayer (Video-Player)</string>
+    <string name="exoplayer_title">ExoPlayer (Videoplayer)</string>
     <string name="panorama_view_title">VR Panorama View (Panoramabilder anzeigen)</string>
     <string name="sanselan_title">Apache Sanselan (Bild-Metadaten lesen)</string>
     <string name="filters_title">Android Photo Filters (Bilder filtern)</string>
     <string name="gesture_views_title">Gesture Views (Zoombare Bilder)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (Buchstaben auf dem Scrollbalken)</string>
     <string name="event_bus_title">Event Bus (Kommunikation innerhalb der App)</string>
-    <string name="audio_record_view_title">Audio Record View (Audio-Visualisierung)</string>
+    <string name="audio_record_view_title">Audio Record View (Audiovisualisierung)</string>
     <string name="sms_mms_title">SMS MMS (SMS- und MMS-Handhabung)</string>
     <string name="apng_title">APNG Android (animierte WebP-Unterstützung)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF-Betrachter)</string>
-    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Playlist-Dateien)</string>
+    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelistendateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
     <!-- Trial -->
     <string name="trial_expired">Testversion abgelaufen</string>
     <string name="start_free_trial">Kostenlos testen</string>
     <string name="trial_expires_soon">Deine Testversion läuft bald ab.</string>
+    <string name="unlock_for_one_final_day">Die App für einen letzten Tag freischalten</string>
     <string name="welcome_to_app_name">Willkommen bei %s!</string>
     <string name="trial_start_description">Vielen Dank, dass du unsere App benutzt. Du kannst diese freigeschaltete Version für <font color="#FFFFFF">%d Tage nutzen</font>. Nach Ablauf der Testphase solltest du ein Upgrade auf die Pro-Version in Betracht ziehen. Diese hat eine große Anzahl neuer Funktionen, ein modernes Design, keine Werbung und viele andere Verbesserungen.
 \n

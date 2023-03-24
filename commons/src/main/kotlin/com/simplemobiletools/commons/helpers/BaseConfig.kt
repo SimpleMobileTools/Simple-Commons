@@ -510,11 +510,6 @@ open class BaseConfig(val context: Context) {
                 SHOW_ADDRESSES_FIELD or SHOW_EVENTS_FIELD or SHOW_NOTES_FIELD or SHOW_GROUPS_FIELD or SHOW_CONTACT_SOURCE_FIELD
         )
         set(showContactFields) = prefs.edit().putInt(SHOW_CONTACT_FIELDS, showContactFields).apply()
-
-    var showTabs: Int
-        get() = prefs.getInt(SHOW_TABS, ALL_TABS_MASK)
-        set(showTabs) = prefs.edit().putInt(SHOW_TABS, showTabs).apply()
-
     var showDialpadButton: Boolean
         get() = prefs.getBoolean(SHOW_DIALPAD_BUTTON, true)
         set(showDialpadButton) = prefs.edit().putBoolean(SHOW_DIALPAD_BUTTON, showDialpadButton).apply()

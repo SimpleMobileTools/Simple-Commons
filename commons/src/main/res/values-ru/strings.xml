@@ -5,7 +5,7 @@
     <string name="back">Назад</string>
     <string name="nothing">Ничего</string>
     <string name="later">Позже</string>
-    <string name="save_as">Сохранить как</string>
+    <string name="save_as">Сохранить как…</string>
     <string name="file_saved">Файл сохранён</string>
     <string name="invalid_file_format">Неправильный формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
@@ -419,7 +419,7 @@
     <string name="use_custom_sorting">Произвольная сортировка</string>
     <string name="change_order">Изменить порядок</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Подтверждение удаления</string>
+    <string name="proceed_with_deletion">Вы точно хотите удалить это\?</string>
     <string name="deletion_confirmation">Удалить %s?</string>
     <string name="deletion_confirmation_short">Удалить %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
@@ -1117,6 +1117,7 @@
     <string name="trial_expired">Пробный период истёк</string>
     <string name="start_free_trial">Начать пробный период</string>
     <string name="trial_expires_soon">Пробный период скоро истечёт.</string>
+    <string name="unlock_for_one_final_day">Разблокировать приложение на один последний день</string>
     <string name="welcome_to_app_name">Добро пожаловать в %s!</string>
     <string name="trial_start_description">Благодарим вас за использование нашего приложения. Вы можете использовать эту разблокированную версию <font color="#FFFFFF">%d дней</font>. После окончания пробного периода рассмотрите возможность обновления до Pro-версии. Она имеет огромное количество новых функций, современный дизайн, отсутствие рекламы и множество других улучшений.
 \n

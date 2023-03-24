@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
+import android.provider.ContactsContract
 import android.provider.ContactsContract.*
 import android.provider.MediaStore
 import android.text.TextUtils
@@ -693,6 +694,22 @@ class ContactsHelper(val context: Context) {
         val selection = "(${Data.MIMETYPE} = ? OR ${Data.MIMETYPE} = ?) AND ${Data.RAW_CONTACT_ID} = ?"
         val selectionArgs = arrayOf(CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE, CommonDataKinds.Organization.CONTENT_ITEM_TYPE, id.toString())
         return parseContactCursor(selection, selectionArgs)
+    }
+
+    fun getContactFromUri(uri: Uri): Contact? {
+        val key = getLookupKeyFromUri(uri) ?: return null
+        return getContactWithLookupKey(key)
+    }
+
+    private fun getLookupKeyFromUri(lookupUri: Uri): String? {
+        val projection = arrayOf(ContactsContract.Contacts.LOOKUP_KEY)
+        val cursor = context.contentResolver.query(lookupUri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(ContactsContract.Contacts.LOOKUP_KEY)
+            }
+        }
+        return null
     }
 
     fun getContactWithLookupKey(key: String): Contact? {
