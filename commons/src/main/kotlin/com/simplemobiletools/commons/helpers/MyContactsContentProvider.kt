@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.helpers
 
 import android.content.Context
 import android.database.Cursor
-import android.graphics.Bitmap
 import android.net.Uri
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -58,7 +57,6 @@ class MyContactsContentProvider {
                         } while (cursor.moveToNext())
                     }
                 }
-
             } catch (ignored: Exception) {
             }
             return contacts
@@ -88,13 +86,21 @@ class MyContactsContentProvider {
                             val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
-                                val (firstName, middleName, surname) = name.split(" ")
-                            val contact = Contact(id = rawId,contactId = contactId, firstName =  firstName,
+                            val names = name.split(" ")
+                            val firstName = names.firstOrNull() ?: ""
+                            val surname = names.lastOrNull() ?: ""
+                            val middleName = if (names.size == 3) names[2] else ""
+
+                            val contact = Contact(
+                                id = rawId,
+                                contactId = contactId,
+                                firstName = firstName,
                                 middleName = middleName,
                                 surname = surname,
                                 photoUri = photoUri,
-                                phoneNumbers = phoneNumbers).also {
-                                it.birthdays =  birthdays
+                                phoneNumbers = phoneNumbers
+                            ).also {
+                                it.birthdays = birthdays
                                 it.anniversaries = anniversaries
                             }
 
@@ -102,7 +108,6 @@ class MyContactsContentProvider {
                         } while (cursor.moveToNext())
                     }
                 }
-
             } catch (ignored: Exception) {
             }
             return contacts
