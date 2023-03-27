@@ -119,6 +119,7 @@ class LocalContactsHelper(val context: Context) {
             groups = storedGroups.filter { localContact.groups.contains(it.id) } as ArrayList<Group>
             organization = Organization(localContact.company, localContact.jobPosition)
             websites = localContact.websites
+            relations = localContact.relations
             IMs = localContact.IMs
             ringtone = localContact.ringtone
         }
@@ -150,6 +151,7 @@ class LocalContactsHelper(val context: Context) {
             company = contact.organization.company
             jobPosition = contact.organization.jobPosition
             websites = contact.websites
+            relations = contact.relations
             IMs = contact.IMs
             ringtone = contact.ringtone
         }

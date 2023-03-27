@@ -186,10 +186,13 @@ class ContactsHelper(val context: Context) {
                 val groups = ArrayList<Group>()
                 val organization = Organization("", "")
                 val websites = ArrayList<String>()
+                val relations = ArrayList<ContactRelation>()
                 val ims = ArrayList<IM>()
                 val contact = Contact(
-                    id, prefix, firstName, middleName, surname, suffix, nickname, photoUri, numbers, emails, addresses,
-                    events, accountName, starred, contactId, thumbnailUri, null, notes, groups, organization, websites, ims, mimetype, ringtone
+                    id, prefix, firstName, middleName, surname, suffix, nickname,
+                    photoUri, numbers, emails, addresses, events, accountName,
+                    starred, contactId, thumbnailUri, null, notes, groups, organization,
+                    websites, relations, ims, mimetype, ringtone
                 )
 
                 contacts.put(id, contact)
@@ -508,6 +511,171 @@ class ContactsHelper(val context: Context) {
         return websites
     }
 
+    private fun getRelations(contactId: Int? = null): SparseArray<ArrayList<ContactRelation>> {
+        val relations = SparseArray<ArrayList<ContactRelation>>()
+        val uri = Data.CONTENT_URI
+        val projection = arrayOf(
+            Data.RAW_CONTACT_ID,
+            CommonDataKinds.Relation.NAME,
+            CommonDataKinds.Relation.TYPE,
+            CommonDataKinds.Relation.LABEL
+        )
+
+        val selection = getSourcesSelection(true, contactId != null)
+        val selectionArgs = getSourcesSelectionArgs(CommonDataKinds.Relation.CONTENT_ITEM_TYPE, contactId)
+
+        context.queryCursor(uri, projection, selection, selectionArgs, showErrors = true) { cursor ->
+            val id: Int = cursor.getIntValue(Data.RAW_CONTACT_ID)
+            val name: String = cursor.getStringValue(CommonDataKinds.Relation.NAME) ?: return@queryCursor
+            val type: Int = cursor.getIntValue(CommonDataKinds.Relation.TYPE)
+            val label: String = cursor.getStringValue(CommonDataKinds.Relation.LABEL) ?: ""
+
+            val (editType, editLabel) = getRelationEditTypeLabelFromAndroidTypeLabel(type, label)
+
+            if (relations[id] == null) {
+                relations.put(id, ArrayList())
+            }
+
+            relations[id]!!.add(ContactRelation(name.trim(), editType, editLabel.trim()))
+        }
+        return relations
+    }
+
+    private fun getRelationEditTypeLabelFromAndroidTypeLabel(type: Int, label: String): Pair<Int, String> {
+        if (type != ContactRelation.TYPE_CUSTOM) {
+            return Pair(type, "")
+        } else {
+            val detectType = when (label.trim().lowercase()) {
+                "" -> ContactRelation.TYPE_CUSTOM
+                context.getString(R.string.relation_label_assistant) -> ContactRelation.TYPE_ASSISTANT
+                context.getString(R.string.relation_label_brother) -> ContactRelation.TYPE_BROTHER
+                context.getString(R.string.relation_label_child) -> ContactRelation.TYPE_CHILD
+                context.getString(R.string.relation_label_domestic_partner) -> ContactRelation.TYPE_DOMESTIC_PARTNER
+                context.getString(R.string.relation_label_father) -> ContactRelation.TYPE_FATHER
+                context.getString(R.string.relation_label_friend) -> ContactRelation.TYPE_FRIEND
+                context.getString(R.string.relation_label_manager) -> ContactRelation.TYPE_MANAGER
+                context.getString(R.string.relation_label_mother) -> ContactRelation.TYPE_MOTHER
+                context.getString(R.string.relation_label_parent) -> ContactRelation.TYPE_PARENT
+                context.getString(R.string.relation_label_partner) -> ContactRelation.TYPE_PARTNER
+                context.getString(R.string.relation_label_referred_by) -> ContactRelation.TYPE_REFERRED_BY
+                context.getString(R.string.relation_label_relative) -> ContactRelation.TYPE_RELATIVE
+                context.getString(R.string.relation_label_sister) -> ContactRelation.TYPE_SISTER
+                context.getString(R.string.relation_label_spouse) -> ContactRelation.TYPE_SPOUSE
+                context.getString(R.string.relation_label_contact) -> ContactRelation.TYPE_CONTACT
+                context.getString(R.string.relation_label_acquaintance) -> ContactRelation.TYPE_ACQUAINTANCE
+                context.getString(R.string.relation_label_met) -> ContactRelation.TYPE_MET
+                context.getString(R.string.relation_label_co_worker) -> ContactRelation.TYPE_CO_WORKER
+                context.getString(R.string.relation_label_colleague) -> ContactRelation.TYPE_COLLEAGUE
+                context.getString(R.string.relation_label_co_resident) -> ContactRelation.TYPE_CO_RESIDENT
+                context.getString(R.string.relation_label_neighbor) -> ContactRelation.TYPE_NEIGHBOR
+                context.getString(R.string.relation_label_sibling) -> ContactRelation.TYPE_SIBLING
+                context.getString(R.string.relation_label_kin) -> ContactRelation.TYPE_KIN
+                context.getString(R.string.relation_label_kin_alt) -> ContactRelation.TYPE_KIN
+                context.getString(R.string.relation_label_muse) -> ContactRelation.TYPE_MUSE
+                context.getString(R.string.relation_label_crush) -> ContactRelation.TYPE_CRUSH
+                context.getString(R.string.relation_label_date) -> ContactRelation.TYPE_DATE
+                context.getString(R.string.relation_label_sweetheart) -> ContactRelation.TYPE_SWEETHEART
+                context.getString(R.string.relation_label_agent) -> ContactRelation.TYPE_AGENT
+                context.getString(R.string.relation_label_emergency) -> ContactRelation.TYPE_EMERGENCY
+                context.getString(R.string.relation_label_me) -> ContactRelation.TYPE_ME
+                context.getString(R.string.relation_label_superior) -> ContactRelation.TYPE_SUPERIOR
+                context.getString(R.string.relation_label_subordinate) -> ContactRelation.TYPE_SUBORDINATE
+                context.getString(R.string.relation_label_husband) -> ContactRelation.TYPE_HUSBAND
+                context.getString(R.string.relation_label_wife) -> ContactRelation.TYPE_WIFE
+                context.getString(R.string.relation_label_son) -> ContactRelation.TYPE_SON
+                context.getString(R.string.relation_label_daughter) -> ContactRelation.TYPE_DAUGHTER
+                context.getString(R.string.relation_label_grandparent) -> ContactRelation.TYPE_GRANDPARENT
+                context.getString(R.string.relation_label_grandfather) -> ContactRelation.TYPE_GRANDFATHER
+                context.getString(R.string.relation_label_grandmother) -> ContactRelation.TYPE_GRANDMOTHER
+                context.getString(R.string.relation_label_grandchild) -> ContactRelation.TYPE_GRANDCHILD
+                context.getString(R.string.relation_label_grandson) -> ContactRelation.TYPE_GRANDSON
+                context.getString(R.string.relation_label_granddaughter) -> ContactRelation.TYPE_GRANDDAUGHTER
+                context.getString(R.string.relation_label_uncle) -> ContactRelation.TYPE_UNCLE
+                context.getString(R.string.relation_label_aunt) -> ContactRelation.TYPE_AUNT
+                context.getString(R.string.relation_label_nephew) -> ContactRelation.TYPE_NEPHEW
+                context.getString(R.string.relation_label_niece) -> ContactRelation.TYPE_NIECE
+                context.getString(R.string.relation_label_father_in_law) -> ContactRelation.TYPE_FATHER_IN_LAW
+                context.getString(R.string.relation_label_mother_in_law) -> ContactRelation.TYPE_MOTHER_IN_LAW
+                context.getString(R.string.relation_label_son_in_law) -> ContactRelation.TYPE_SON_IN_LAW
+                context.getString(R.string.relation_label_daughter_in_law) -> ContactRelation.TYPE_DAUGHTER_IN_LAW
+                context.getString(R.string.relation_label_brother_in_law) -> ContactRelation.TYPE_BROTHER_IN_LAW
+                context.getString(R.string.relation_label_sister_in_law) -> ContactRelation.TYPE_SISTER_IN_LAW
+                else -> ContactRelation.TYPE_CUSTOM
+            }
+            return if (detectType == ContactRelation.TYPE_CUSTOM)
+                Pair(detectType, label)
+            else
+                Pair(detectType, "")
+        }
+    }
+
+    private fun getRelationAndroidTypeLabelFromEditTypeLabel(type: Int, label: String): Pair<Int, String> {
+        return when (type) {
+            ContactRelation.TYPE_CUSTOM -> Pair(ContactRelation.TYPE_CUSTOM, label.trim())
+            ContactRelation.TYPE_ASSISTANT -> Pair(ContactRelation.TYPE_ASSISTANT, "")
+            ContactRelation.TYPE_BROTHER -> Pair(ContactRelation.TYPE_BROTHER, "")
+            ContactRelation.TYPE_CHILD -> Pair(ContactRelation.TYPE_CHILD, "")
+            ContactRelation.TYPE_DOMESTIC_PARTNER -> Pair(ContactRelation.TYPE_DOMESTIC_PARTNER, "")
+            ContactRelation.TYPE_FATHER -> Pair(ContactRelation.TYPE_FATHER, "")
+            ContactRelation.TYPE_FRIEND -> Pair(ContactRelation.TYPE_FRIEND, "")
+            ContactRelation.TYPE_MANAGER -> Pair(ContactRelation.TYPE_MANAGER, "")
+            ContactRelation.TYPE_MOTHER -> Pair(ContactRelation.TYPE_MOTHER, "")
+            ContactRelation.TYPE_PARENT -> Pair(ContactRelation.TYPE_PARENT, "")
+            ContactRelation.TYPE_PARTNER -> Pair(ContactRelation.TYPE_PARTNER, "")
+            ContactRelation.TYPE_REFERRED_BY -> Pair(ContactRelation.TYPE_REFERRED_BY, "")
+            ContactRelation.TYPE_RELATIVE -> Pair(ContactRelation.TYPE_RELATIVE, "")
+            ContactRelation.TYPE_SISTER -> Pair(ContactRelation.TYPE_SISTER, "")
+            ContactRelation.TYPE_SPOUSE -> Pair(ContactRelation.TYPE_SPOUSE, "")
+
+            // Relation types defined in vCard 4.0
+            ContactRelation.TYPE_CONTACT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_contact))
+            ContactRelation.TYPE_ACQUAINTANCE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_acquaintance))
+            // ContactRelation.TYPE_FRIEND -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_friend))
+            ContactRelation.TYPE_MET -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_met))
+            ContactRelation.TYPE_CO_WORKER -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_co_worker))
+            ContactRelation.TYPE_COLLEAGUE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_colleague))
+            ContactRelation.TYPE_CO_RESIDENT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_co_resident))
+            ContactRelation.TYPE_NEIGHBOR -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_neighbor))
+            // ContactRelation.TYPE_CHILD -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_child))
+            // ContactRelation.TYPE_PARENT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_parent))
+            ContactRelation.TYPE_SIBLING -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_sibling))
+            // ContactRelation.TYPE_SPOUSE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_spouse))
+            ContactRelation.TYPE_KIN -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_kin))
+            ContactRelation.TYPE_MUSE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_muse))
+            ContactRelation.TYPE_CRUSH -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_crush))
+            ContactRelation.TYPE_DATE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_date))
+            ContactRelation.TYPE_SWEETHEART -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_sweetheart))
+            ContactRelation.TYPE_ME -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_me))
+            ContactRelation.TYPE_AGENT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_agent))
+            ContactRelation.TYPE_EMERGENCY -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_emergency))
+
+            ContactRelation.TYPE_SUPERIOR -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_superior))
+            ContactRelation.TYPE_SUBORDINATE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_subordinate))
+            ContactRelation.TYPE_HUSBAND -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_husband))
+            ContactRelation.TYPE_WIFE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_wife))
+            ContactRelation.TYPE_SON -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_son))
+            ContactRelation.TYPE_DAUGHTER -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_daughter))
+            ContactRelation.TYPE_GRANDPARENT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_grandparent))
+            ContactRelation.TYPE_GRANDFATHER -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_grandfather))
+            ContactRelation.TYPE_GRANDMOTHER -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_grandmother))
+            ContactRelation.TYPE_GRANDCHILD -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_grandchild))
+            ContactRelation.TYPE_GRANDSON -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_grandson))
+            ContactRelation.TYPE_GRANDDAUGHTER -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_granddaughter))
+            ContactRelation.TYPE_UNCLE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_uncle))
+            ContactRelation.TYPE_AUNT -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_aunt))
+            ContactRelation.TYPE_NEPHEW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_nephew))
+            ContactRelation.TYPE_NIECE -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_niece))
+            ContactRelation.TYPE_FATHER_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_father_in_law))
+            ContactRelation.TYPE_MOTHER_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_mother_in_law))
+            ContactRelation.TYPE_SON_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_son_in_law))
+            ContactRelation.TYPE_DAUGHTER_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_daughter_in_law))
+            ContactRelation.TYPE_BROTHER_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_brother_in_law))
+            ContactRelation.TYPE_SISTER_IN_LAW -> Pair(ContactRelation.TYPE_CUSTOM, context.getString(R.string.relation_label_sister_in_law))
+
+            else -> Pair(ContactRelation.TYPE_CUSTOM, label.trim())
+        }
+    } // getRelationAndroidTypeLabelFromEditTypeLabel()
+
     private fun getContactGroups(storedGroups: ArrayList<Group>, contactId: Int? = null): SparseArray<ArrayList<Group>> {
         val groups = SparseArray<ArrayList<Group>>()
         if (!context.hasContactPermissions()) {
@@ -765,10 +933,13 @@ class ContactsHelper(val context: Context) {
                 val thumbnailUri = cursor.getStringValue(CommonDataKinds.StructuredName.PHOTO_THUMBNAIL_URI) ?: ""
                 val organization = getOrganizations(id)[id] ?: Organization("", "")
                 val websites = getWebsites(id)[id] ?: ArrayList()
+                val relations = getRelations(id)[id] ?: ArrayList<ContactRelation>()
                 val ims = getIMs(id)[id] ?: ArrayList()
                 return Contact(
-                    id, prefix, firstName, middleName, surname, suffix, nickname, photoUri, number, emails, addresses, events,
-                    accountName, starred, contactId, thumbnailUri, null, notes, groups, organization, websites, ims, mimetype, ringtone
+                    id, prefix, firstName, middleName, surname, suffix, nickname,
+                    photoUri, number, emails, addresses, events, accountName, starred,
+                    contactId, thumbnailUri, null, notes, groups, organization,
+                    websites, relations, ims, mimetype, ringtone
                 )
             }
         }
@@ -1103,6 +1274,27 @@ class ContactsHelper(val context: Context) {
                 }
             }
 
+            // delete relations
+            ContentProviderOperation.newDelete(Data.CONTENT_URI).apply {
+                val selection = "${Data.RAW_CONTACT_ID} = ? AND ${Data.MIMETYPE} = ? "
+                val selectionArgs = arrayOf(contact.id.toString(), CommonDataKinds.Relation.CONTENT_ITEM_TYPE)
+                withSelection(selection, selectionArgs)
+                operations.add(build())
+            }
+
+            // add relations
+            contact.relations.forEach {
+                ContentProviderOperation.newInsert(Data.CONTENT_URI).apply {
+                    withValue(Data.RAW_CONTACT_ID, contact.id)
+                    withValue(Data.MIMETYPE, CommonDataKinds.Relation.CONTENT_ITEM_TYPE)
+                    val (type, label) = getRelationAndroidTypeLabelFromEditTypeLabel(it.type, it.label)
+                    withValue(CommonDataKinds.Relation.NAME, it.name)
+                    withValue(CommonDataKinds.Relation.TYPE, type)
+                    withValue(CommonDataKinds.Relation.LABEL, label)
+                    operations.add(build())
+                }
+            }
+
             // delete groups
             val relevantGroupIDs = getStoredGroupsSync().map { it.id }
             if (relevantGroupIDs.isNotEmpty()) {
@@ -1353,6 +1545,19 @@ class ContactsHelper(val context: Context) {
                     withValue(Data.MIMETYPE, CommonDataKinds.Website.CONTENT_ITEM_TYPE)
                     withValue(CommonDataKinds.Website.URL, it)
                     withValue(CommonDataKinds.Website.TYPE, DEFAULT_WEBSITE_TYPE)
+                    operations.add(build())
+                }
+            }
+
+            // relations
+            contact.relations.forEach {
+                ContentProviderOperation.newInsert(Data.CONTENT_URI).apply {
+                    withValueBackReference(Data.RAW_CONTACT_ID, 0)
+                    withValue(Data.MIMETYPE, CommonDataKinds.Relation.CONTENT_ITEM_TYPE)
+                    val (type, label) = getRelationAndroidTypeLabelFromEditTypeLabel(it.type, it.label)
+                    withValue(CommonDataKinds.Relation.NAME, it.name)
+                    withValue(CommonDataKinds.Relation.TYPE, type)
+                    withValue(CommonDataKinds.Relation.LABEL, label)
                     operations.add(build())
                 }
             }

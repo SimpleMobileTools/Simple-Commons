@@ -27,7 +27,7 @@ fun Context.getEmptyContact(): Contact {
     val organization = Organization("", "")
     return Contact(
         0, "", "", "", "", "", "", "", ArrayList(), ArrayList(), ArrayList(), ArrayList(), originalContactSource, 0, 0, "",
-        null, "", ArrayList(), organization, ArrayList(), ArrayList(), DEFAULT_MIMETYPE, null
+        null, "", ArrayList(), organization, ArrayList(), ArrayList(), ArrayList(), DEFAULT_MIMETYPE, null
     )
 }
 

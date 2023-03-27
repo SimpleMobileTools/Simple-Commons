@@ -27,6 +27,7 @@ data class LocalContact(
     @ColumnInfo(name = "company") var company: String,
     @ColumnInfo(name = "job_position") var jobPosition: String,
     @ColumnInfo(name = "websites") var websites: ArrayList<String>,
+    @ColumnInfo(name = "relations") var relations: ArrayList<ContactRelation>,
     @ColumnInfo(name = "ims") var IMs: ArrayList<IM>,
     @ColumnInfo(name = "ringtone") var ringtone: String?
 ) {

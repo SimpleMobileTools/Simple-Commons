@@ -88,6 +88,66 @@
     <string name="home_fax">Fax de casa</string>
     <string name="pager">Localizador</string>
     <string name="no_phone_number_found">No se encontraron números de teléfono</string>
+    <!-- Relation types -->
+    <string name="relation">Relation</string>
+    <string name="relations">Related Persons</string>
+    <string name="relation_hint">Related Person</string>
+    <!-- Android Relation types -->
+    <string name="relation_assistant">Asistente</string>
+    <string name="relation_brother">Hermano</string>
+    <string name="relation_child">Hijo</string>
+    <string name="relation_domestic_partner">Compañeror</string>
+    <string name="relation_father">Padre</string>
+    <string name="relation_friend">Amigo</string>
+    <string name="relation_manager">Mánager</string>
+    <string name="relation_mother">Madre</string>
+    <string name="relation_parent">Progenitor</string>
+    <string name="relation_partner">Pareja</string>
+    <string name="relation_referred_by">Recomendado por</string>
+    <string name="relation_relative">Pariente</string>
+    <string name="relation_sister">Hermana</string>
+    <string name="relation_spouse">Cónyuge</string>
+    <!-- vCard 4.0 Relation types -->
+    <string name="relation_contact">Contacto</string>
+    <string name="relation_acquaintance">Conocido</string>
+    <string name="relation_met">Encontrado</string>
+    <string name="relation_co_worker">Compañero de trabajo</string>
+    <string name="relation_colleague">Colega</string>
+    <string name="relation_co_resident">Co-residente</string>
+    <string name="relation_neighbor">Vecino</string>
+    <string name="relation_sibling">Hermanos</string>
+    <string name="relation_kin">Familia</string>
+    <string name="relation_kin_alt">Clan</string>
+    <string name="relation_muse">Musa</string>
+    <string name="relation_crush">Enamorado</string>
+    <string name="relation_date">Date</string>
+    <string name="relation_sweetheart">Cariño</string>
+    <string name="relation_me">Yo</string>
+    <string name="relation_agent">Agente</string>
+    <string name="relation_emergency">Emergencia</string>
+    <!-- Additional Relation types -->
+    <string name="relation_superior">Jefe</string>
+    <string name="relation_subordinate">Subordinado</string>
+    <string name="relation_husband">Marido</string>
+    <string name="relation_wife">Esposa</string>
+    <string name="relation_son">Hijo</string>
+    <string name="relation_daughter">Hija</string>
+    <string name="relation_grandparent">Abuelos</string>
+    <string name="relation_grandfather">Abuelo</string>
+    <string name="relation_grandmother">Abuela</string>
+    <string name="relation_grandchild">Nietos</string>
+    <string name="relation_grandson">Nieto</string>
+    <string name="relation_granddaughter">Nieta</string>
+    <string name="relation_uncle">Tío</string>
+    <string name="relation_aunt">Tía</string>
+    <string name="relation_nephew">Sobrino</string>
+    <string name="relation_niece">Sobrina</string>
+    <string name="relation_father_in_law">Suegro</string>
+    <string name="relation_mother_in_law">Suegra</string>
+    <string name="relation_son_in_law">Yerno</string>
+    <string name="relation_daughter_in_law">Nuera</string>
+    <string name="relation_brother_in_law">Cuñado</string>
+    <string name="relation_sister_in_law">Cuñada</string>
     <!-- View types -->
     <string name="change_view_type">Cambiar tipo de vista</string>
     <string name="grid">Cuadrícula</string>
@@ -177,7 +237,7 @@
     <string name="source_file_doesnt_exist">El archivo %s no existe</string>
     <string name="prepend_filenames">Anteponer los nombres de los archivo</string>
     <string name="append_filenames">Agregar los nombres del archivo</string>
-    <string name="simple_renaming">Cambiar el nombre facilmente</string>
+    <string name="simple_renaming">Cambiar el nombre fácilmente</string>
     <string name="pattern_renaming">Patrón</string>
     <string name="string_to_add">Cadena para agregar</string>
     <string name="rename_date_time_pattern">%Y - Año\n%M - Mes\n%D - Día\n%h - Hora\n%m - Minuto\n%s - Segundo\n%i - número aumentando desde 1</string>

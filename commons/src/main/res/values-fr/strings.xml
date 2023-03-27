@@ -88,6 +88,66 @@
     <string name="home_fax">Télécopieur domicile</string>
     <string name="pager">Téléavertisseur</string>
     <string name="no_phone_number_found">Aucun numéro de téléphone n\'a été trouvé</string>
+    <!-- Relation types -->
+    <string name="relation">Relation</string>
+    <string name="relations">Related Persons</string>
+    <string name="relation_hint">Related Person</string>
+    <!-- Android Relation types -->
+    <string name="relation_assistant">Assistant</string>
+    <string name="relation_brother">Brother</string>
+    <string name="relation_child">Child</string>
+    <string name="relation_domestic_partner">Domestic Partner</string>
+    <string name="relation_father">Father</string>
+    <string name="relation_friend">Friend</string>
+    <string name="relation_manager">Manager</string>
+    <string name="relation_mother">Mother</string>
+    <string name="relation_parent">Parent</string>
+    <string name="relation_partner">Partner</string>
+    <string name="relation_referred_by">Referred by</string>
+    <string name="relation_relative">Relative</string>
+    <string name="relation_sister">Sister</string>
+    <string name="relation_spouse">Spouse</string>
+    <!-- vCard 4.0 Relation types -->
+    <string name="relation_contact">Contact</string>
+    <string name="relation_acquaintance">Acquaintance</string>
+    <string name="relation_met">Met</string>
+    <string name="relation_co_worker">Co-worker</string>
+    <string name="relation_colleague">Colleague</string>
+    <string name="relation_co_resident">Co-resident</string>
+    <string name="relation_neighbor">Neighbor</string>
+    <string name="relation_sibling">Sibling</string>
+    <string name="relation_kin">Kin</string>
+    <string name="relation_kin_alt">Relative</string>
+    <string name="relation_muse">Muse</string>
+    <string name="relation_crush">Crush</string>
+    <string name="relation_date">Date</string>
+    <string name="relation_sweetheart">Sweetheart</string>
+    <string name="relation_agent">Agent</string>
+    <string name="relation_emergency">Emergency Contact</string>
+    <string name="relation_me">Me</string>
+    <!-- Additional Relation types -->
+    <string name="relation_superior">Boss</string>
+    <string name="relation_subordinate">Subordinate</string>
+    <string name="relation_husband">Husband</string>
+    <string name="relation_wife">Wife</string>
+    <string name="relation_son">Son</string>
+    <string name="relation_daughter">Daughter</string>
+    <string name="relation_grandparent">Grandparent</string>
+    <string name="relation_grandfather">Grandfather</string>
+    <string name="relation_grandmother">Grandmother</string>
+    <string name="relation_grandchild">Grandchild</string>
+    <string name="relation_grandson">Grandson</string>
+    <string name="relation_granddaughter">Granddaughter</string>
+    <string name="relation_uncle">Uncle</string>
+    <string name="relation_aunt">Aunt</string>
+    <string name="relation_nephew">Nephew</string>
+    <string name="relation_niece">Niece</string>
+    <string name="relation_father_in_law">Father-in-law</string>
+    <string name="relation_mother_in_law">Mother-in-law</string>
+    <string name="relation_son_in_law">Son-in-law</string>
+    <string name="relation_daughter_in_law">Daughter-in-law</string>
+    <string name="relation_brother_in_law">Brother-in-law</string>
+    <string name="relation_sister_in_law">Sister-in-law</string>
     <!-- View types -->
     <string name="change_view_type">Modifier le mode d\'affichage</string>
     <string name="grid">Grille</string>
