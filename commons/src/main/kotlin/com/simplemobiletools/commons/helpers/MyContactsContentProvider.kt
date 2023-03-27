@@ -98,7 +98,8 @@ class MyContactsContentProvider {
                                 middleName = middleName,
                                 surname = surname,
                                 photoUri = photoUri,
-                                phoneNumbers = phoneNumbers
+                                phoneNumbers = phoneNumbers,
+                                source = SMT_PRIVATE
                             ).also {
                                 it.birthdays = birthdays
                                 it.anniversaries = anniversaries
