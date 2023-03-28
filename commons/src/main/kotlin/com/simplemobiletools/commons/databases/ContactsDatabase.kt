@@ -91,7 +91,7 @@ abstract class ContactsDatabase : RoomDatabase() {
         private val MIGRATION_3_4 = object : Migration(3, 4) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.apply {
-                    execSQL("ALTER TABLE contacts ADD COLUMN relations TEXT DEFAULT ''")
+                    execSQL("ALTER TABLE contacts ADD COLUMN relations TEXT NOT NULL DEFAULT ''")
                 }
             }
         }

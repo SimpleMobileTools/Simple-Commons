@@ -76,10 +76,11 @@ class Converters {
     fun IMsListToJson(list: ArrayList<IM>) = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToRelationList(value: String) = gson.fromJson<ArrayList<ContactRelation>>(value, relationType)
+    fun jsonToRelationList(value: String): ArrayList<ContactRelation> {
+        return (gson.fromJson<ArrayList<ContactRelation>>(value, relationType) ?: ArrayList())
+    }
 
     @TypeConverter
     fun relationListToJson(list: ArrayList<ContactRelation>) = gson.toJson(list)
-
 
 }

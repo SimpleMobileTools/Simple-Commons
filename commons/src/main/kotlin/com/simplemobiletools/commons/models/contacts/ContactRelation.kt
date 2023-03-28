@@ -161,4 +161,4 @@ data class ContactRelation(var name: String, var type: Int, var label: String) {
         const val TYPE_BROTHER_IN_LAW: Int = 121
         const val TYPE_SISTER_IN_LAW: Int = 122
     } // companion object
-}
+} // class ContactRelation
