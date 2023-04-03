@@ -9,7 +9,7 @@ import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
 import com.simplemobiletools.commons.models.PhoneNumber
 import com.simplemobiletools.commons.models.SimpleContact
-import com.simplemobiletools.commons.models.contacts.*
+import com.simplemobiletools.commons.models.contacts.Contact
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
 class MyContactsContentProvider {
@@ -61,6 +61,7 @@ class MyContactsContentProvider {
             }
             return contacts
         }
+
         fun getContacts(context: Context, cursor: Cursor?): ArrayList<Contact> {
             val contacts = ArrayList<Contact>()
             val packageName = context.packageName.removeSuffix(".debug")
@@ -88,12 +89,12 @@ class MyContactsContentProvider {
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
                             val names = name.split(" ")
                             val firstName = names.firstOrNull() ?: ""
-                            val surname = if (names.size > 1) {
-                                    names.lastOrNull() ?: ""
-                                } else {
-                                    ""
-                                }
                             val middleName = if (names.size == 3) names[2] else ""
+                            val surname = if (names.size > 1) {
+                                names.lastOrNull() ?: ""
+                            } else {
+                                ""
+                            }
 
                             val contact = Contact(
                                 id = rawId,
