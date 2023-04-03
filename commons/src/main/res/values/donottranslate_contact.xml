@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Relation labels are used to store non-standard
+         relation types in the Android ContactContract
+         relation storage. They are never displayed! -->
+    <!-- Android ContactContract.Relation types - Not strictly needed, we have standard types!! -->
+    <string name="relation_label_assistant">assistant</string>
+    <string name="relation_label_brother">brother</string>
+    <string name="relation_label_child">child</string>
+    <string name="relation_label_domestic_partner">domestic_partner</string>
+    <string name="relation_label_father">father</string>
+    <string name="relation_label_friend">friend</string>
+    <string name="relation_label_manager">manager</string>
+    <string name="relation_label_mother">mother</string>
+    <string name="relation_label_parent">parent</string>
+    <string name="relation_label_partner">partner</string>
+    <string name="relation_label_referred_by">referred_by</string>
+    <string name="relation_label_relative">relative</string>
+    <string name="relation_label_sister">sister</string>
+    <string name="relation_label_spouse">spouse</string>
+    <!-- vCard 4.0 relation types -->
+    <string name="relation_label_contact">contact</string>
+    <string name="relation_label_acquaintance">acquaintance</string>
+    <string name="relation_label_met">met</string>
+    <string name="relation_label_co_worker">co_worker</string>
+    <string name="relation_label_colleague">colleague</string>
+    <string name="relation_label_co_resident">co_resident</string>
+    <string name="relation_label_neighbor">neighbor</string>
+    <string name="relation_label_sibling">sibling</string>
+    <string name="relation_label_kin">kin</string>
+    <string name="relation_label_kin_alt">relative</string>
+    <string name="relation_label_muse">muse</string>
+    <string name="relation_label_crush">crush</string>
+    <string name="relation_label_date">date</string>
+    <string name="relation_label_sweetheart">sweetheart</string>
+    <string name="relation_label_me">me</string>
+    <string name="relation_label_agent">agent</string>
+    <string name="relation_label_emergency">emergency</string>
+    <!-- Additional relation types -->
+    <string name="relation_label_superior">superior</string>
+    <string name="relation_label_subordinate">subordinate</string>
+    <string name="relation_label_husband">husband</string>
+    <string name="relation_label_wife">wife</string>
+    <string name="relation_label_son">son</string>
+    <string name="relation_label_daughter">daughter</string>
+    <string name="relation_label_grandparent">grandparent</string>
+    <string name="relation_label_grandfather">grandfather</string>
+    <string name="relation_label_grandmother">grandmother</string>
+    <string name="relation_label_grandchild">grandchild</string>
+    <string name="relation_label_grandson">grandson</string>
+    <string name="relation_label_granddaughter">granddaughter</string>
+    <string name="relation_label_uncle">uncle</string>
+    <string name="relation_label_aunt">aunt</string>
+    <string name="relation_label_nephew">nephew</string>
+    <string name="relation_label_niece">niece</string>
+    <string name="relation_label_father_in_law">father_in_law</string>
+    <string name="relation_label_mother_in_law">mother_in_law</string>
+    <string name="relation_label_son_in_law">son_in_law</string>
+    <string name="relation_label_daughter_in_law">daughter_in_law</string>
+    <string name="relation_label_brother_in_law">brother_in_law</string>
+    <string name="relation_label_sister_in_law">sister_in_law</string>
+</resources>

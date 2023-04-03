@@ -571,6 +571,7 @@ const val SHOW_WEBSITES_FIELD = 8192
 const val SHOW_NICKNAME_FIELD = 16384
 const val SHOW_IMS_FIELD = 32768
 const val SHOW_RINGTONE_FIELD = 65536
+const val SHOW_RELATIONS_FIELD = (1 shl 17)
 
 const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
 const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
@@ -578,6 +579,7 @@ const val DEFAULT_ADDRESS_TYPE = ContactsContract.CommonDataKinds.StructuredPost
 const val DEFAULT_EVENT_TYPE = ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY
 const val DEFAULT_ORGANIZATION_TYPE = ContactsContract.CommonDataKinds.Organization.TYPE_WORK
 const val DEFAULT_WEBSITE_TYPE = ContactsContract.CommonDataKinds.Website.TYPE_HOMEPAGE
+const val DEFAULT_RELATION_TYPE = ContactsContract.CommonDataKinds.Relation.TYPE_FRIEND
 const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
 const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
 
@@ -621,6 +623,7 @@ fun getEmptyLocalContact() = LocalContact(
     ArrayList(),
     "",
     "",
+    ArrayList(),
     ArrayList(),
     ArrayList(),
     null

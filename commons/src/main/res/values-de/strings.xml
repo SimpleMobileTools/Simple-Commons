@@ -75,12 +75,15 @@
     <string name="updating">Aktualisieren …</string>
     <string name="phone_storage">Gerätespeicher</string>
     <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
+
     <!-- Events -->
     <string name="birthday">Geburtstag</string>
     <string name="anniversary">Jahrestag</string>
+
     <!-- Emails -->
     <string name="home">Privat</string>
     <string name="work">Arbeit</string>
+
     <!-- Phone numbers -->
     <string name="mobile">Mobil</string>
     <string name="main_number">Festnetz</string>
@@ -88,6 +91,68 @@
     <string name="home_fax">Privat Fax</string>
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
+
+    <!-- Contact relation types -->
+    <string name="relation">Zugehörige Person</string>
+    <string name="relations">Zugehörige Personen</string>
+    <string name="relation_hint">Zugehörige Person</string>
+    <!-- Android Relation types -->
+    <string name="relation_assistant">Assistent</string>
+    <string name="relation_brother">Bruder</string>
+    <string name="relation_child">Kind</string>
+    <string name="relation_domestic_partner">Lebenspartner</string>
+    <string name="relation_father">Vater</string>
+    <string name="relation_friend">Freund</string>
+    <string name="relation_manager">Manager</string>
+    <string name="relation_mother">Mutter</string>
+    <string name="relation_parent">Eltern</string>
+    <string name="relation_partner">Partner</string>
+    <string name="relation_referred_by">Empfohlen von</string>
+    <string name="relation_relative">Verwandter</string>
+    <string name="relation_sister">Schwester</string>
+    <string name="relation_spouse">Ehepartner</string>
+    <!-- vCard 4.0 Relation types -->
+    <string name="relation_contact">Kontakt</string>
+    <string name="relation_acquaintance">Bekanntschafft</string>
+    <string name="relation_met">Begegnung</string>
+    <string name="relation_co_worker">Mitarbeiter</string>
+    <string name="relation_colleague">Kollege</string>
+    <string name="relation_co_resident">Mitbewohner</string>
+    <string name="relation_neighbor">Nachbar</string>
+    <string name="relation_sibling">Geschwister</string>
+    <string name="relation_kin">Verwandschaft</string>
+    <string name="relation_kin_alt">Sippe</string>
+    <string name="relation_muse">Muse</string>
+    <string name="relation_crush">Schwarm</string>
+    <string name="relation_date">Date</string>
+    <string name="relation_sweetheart">Liebling</string>
+    <string name="relation_me">Ich</string>
+    <string name="relation_agent">Agent</string>
+    <string name="relation_emergency">Notfallskontakt</string>
+    <!-- Additional Relation types -->
+    <string name="relation_superior">Vorgesetzter</string>
+    <string name="relation_subordinate">Untergebener</string>
+    <string name="relation_husband">Ehemann</string>
+    <string name="relation_wife">Ehefrau</string>
+    <string name="relation_son">Sohn</string>
+    <string name="relation_daughter">Tochter</string>
+    <string name="relation_grandparent">Großeltern</string>
+    <string name="relation_grandfather">Großvater</string>
+    <string name="relation_grandmother">Großmutter</string>
+    <string name="relation_grandchild">Enkelkind</string>
+    <string name="relation_grandson">Enkel</string>
+    <string name="relation_granddaughter">Enkelin</string>
+    <string name="relation_uncle">Onkel</string>
+    <string name="relation_aunt">Tante</string>
+    <string name="relation_nephew">Neffe</string>
+    <string name="relation_niece">Nichte</string>
+    <string name="relation_father_in_law">Schwiegervater</string>
+    <string name="relation_mother_in_law">Schwiegermutter</string>
+    <string name="relation_son_in_law">Schwiegersohn</string>
+    <string name="relation_daughter_in_law">Schwiegertochter</string>
+    <string name="relation_brother_in_law">Schwager</string>
+    <string name="relation_sister_in_law">Schwägerin</string>
+
     <!-- View types -->
     <string name="change_view_type">Darstellung ändern</string>
     <string name="grid">Gitternetz</string>
@@ -105,6 +170,7 @@
         <item quantity="one">%d Spalte</item>
         <item quantity="other">%d Spalten</item>
     </plurals>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
     <string name="not_blocking_anyone">Du blockierst niemanden.</string>
@@ -121,11 +187,13 @@
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
+
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
     <string name="add_to_favorites">Zu Favoriten hinzufügen</string>
     <string name="remove_from_favorites">Aus Favoriten entfernen</string>
+
     <!-- Search -->
     <string name="search">Suchen</string>
     <string name="search_in_placeholder">Suchen in %s</string>
@@ -147,11 +215,13 @@
     <string name="search_text">Text durchsuchen</string>
     <string name="search_conversations">Unterhaltungen durchsuchen</string>
     <string name="search_recordings">Aufnahmen durchsuchen</string>
+
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
     <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="change_filter">Filter ändern</string>
+
     <!-- Permissions -->
     <string name="no_storage_permissions">Speicherberechtigung wird benötigt</string>
     <string name="no_contacts_permission">Kontaktberechtigung wird benötigt</string>
@@ -159,6 +229,7 @@
     <string name="no_audio_permissions">Audioberechtigung wird benötigt</string>
     <string name="no_post_notifications_permissions">Berechtigung zur Anzeige von Benachrichtigungen wird benötigt</string>
     <string name="no_permission">Keine Berechtigung</string>
+
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
@@ -190,6 +261,7 @@
     <string name="filename_without_json">Dateiname (ohne .json)</string>
     <string name="filename_without_zip">Dateiname (ohne .zip)</string>
     <string name="cannot_hide_files">Ab Android 11 kann man Dateien und Ordner nicht mehr auf diese Weise verstecken</string>
+
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
     <string name="move">Verschieben</string>
@@ -220,6 +292,7 @@
     <string name="no_new_items">Keine neuen Elemente gefunden</string>
     <string name="no_space">Der freie Platz im Zielverzeichnis ist nicht ausreichend.\nErforderlich: %1$s; Vorhanden: %2$s</string>
     <string name="system_service_disabled">Der Systemdienst zur Auswahl von Dateien und Ordnern ist nicht verfügbar</string>
+
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
     <string name="folder">Ordner</string>
@@ -229,6 +302,7 @@
     <string name="invalid_name">Der Name enthält unerlaubte Zeichen</string>
     <string name="empty_name">Bitte einen Namen angeben</string>
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
+
     <!-- File operation conflicts -->
     <string name="file_already_exists">Datei \"%s\" existiert bereits</string>
     <string name="file_already_exists_overwrite">Datei \"%s\" existiert bereits. Überschreiben?</string>
@@ -244,6 +318,7 @@
     <string name="rename_in_sd_card_system_restriction">Das System erlaubt keine Umbenennung in diesem Ordner</string>
     <string name="rename_internal_system_restriction">Ordner auf dem internen Speicher können nicht direkt umbenannt werden, nur Unterordner</string>
     <string name="cannot_rename_folder">Dieser Ordner kann nicht umbenannt werden</string>
+
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
@@ -261,6 +336,7 @@
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>
     </plurals>
+
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d Element</item>
@@ -270,11 +346,13 @@
         <item quantity="one">%d Element wird gelöscht</item>
         <item quantity="other">%d Elemente werden gelöscht</item>
     </plurals>
+
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d Kontakt</item>
         <item quantity="other">%d Kontakte</item>
     </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Speicher auswählen</string>
     <string name="storage">Speicherplatz</string>
@@ -286,6 +364,7 @@
     <string name="app_on_sd_card">Die App wurde anscheinend auf der SD-Karte installiert, daher sind die Widgets nicht verfügbar. Sie werden auch in der Liste der Widgets nicht angezeigt.
         Dies ist systemseitig so beschränkt. Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
     <string name="wrong_folder_selected">Falscher Ordner ausgewählt, bitte Pfad „%s“ wählen</string>
+
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
     <string name="path">Pfad</string>
@@ -308,6 +387,7 @@
     <string name="remove_exif">EXIF Daten entfernen</string>
     <string name="remove_exif_confirmation">Sollen wirklich alle EXIF-Daten, wie z. B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
     <string name="exif_removed">EXIF Daten erfolgreich entfernt</string>
+
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
     <string name="text_color">Schriftfarbe</string>
@@ -339,6 +419,7 @@
             Bitte kaufe <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Danke!
         ]]>
     </string>
+
     <!-- Themes -->
     <string name="light_theme">Hell</string>
     <string name="dark_theme">Dunkel</string>
@@ -351,9 +432,11 @@
     <string name="custom">Benutzerdefiniert</string>
     <string name="shared">Geteilt</string>
     <string name="system_default">Systemvorgabe</string>
+
     <!-- What's new -->
     <string name="whats_new">Neue Funktionen</string>
     <string name="whats_new_disclaimer">* Kleinere Verbesserungen werden nicht gelistet</string>
+
     <!-- Actionbar items -->
     <string name="delete">Löschen</string>
     <string name="remove">Entfernen</string>
@@ -393,6 +476,7 @@
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
     <string name="wallpapers">Bildschirmhintergründe</string>
+
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
@@ -415,12 +499,15 @@
     <string name="full_name">Vollständiger Name</string>
     <string name="use_custom_sorting">Benutzerdefiniertes Sortieren anwenden</string>
     <string name="change_order">Reihenfolge ändern</string>
+
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
     <string name="deletion_confirmation">%s wirklich löschen\?</string>
     <string name="deletion_confirmation_short">%s löschen\?</string>
+
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s wirklich in den Papierkorb verschieben\?</string>
+
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
@@ -433,6 +520,7 @@
         <item quantity="one">WARNUNG: %d Ordner soll gelöscht werden</item>
         <item quantity="other">WARNUNG: %d Ordner sollen gelöscht werden</item>
     </plurals>
+
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">PIN eingeben</string>
@@ -459,6 +547,7 @@
     <string name="lock_folder_pro">Ordner sperren (Pro)</string>
     <string name="unlock_folder">Ordner entsperren</string>
     <string name="lock_folder_notice">Dieser Schutz ist nur innerhalb dieser App wirksam und kann keine systemweite Datenträgerverschlüsselung ersetzen.</string>
+
     <!-- Times -->
     <string name="yesterday">Gestern</string>
     <string name="today">Heute</string>
@@ -596,6 +685,7 @@
     <string name="alarm_warning">Bitte vergewissere dich, dass der Alarm zuverlässig funktioniert, bevor du dich auf ihn verlässt. Er könnte wegen Systemeinschränkungen, wie der Stromsparfunktion, fehlschlagen.</string>
     <string name="reminder_warning">Bitte vergewissere dich, dass die Erinnerungen zuverlässig funktionieren, bevor du dich darauf verlässt. Überprüfe die Geräteakku- und Benachrichtigungseinstellungen, ob nichts die Erinnerungen sperrt oder die App im Hintergrund beendet.</string>
     <string name="notifications_disabled">Benachrichtigungen für diese App sind deaktiviert. Wechsle in die Systemeinstellungen und aktiviere sie.</string>
+
     <!-- Alarms -->
     <string name="alarm">Wecker</string>
     <string name="snooze">Schlummern</string>
@@ -608,6 +698,7 @@
     <string name="no_sound">Stumm</string>
     <string name="during_day_at_hh_mm">Tagsüber um hh:mm</string>
     <string name="during_day_at">Tagsüber am %02d:%02d</string>
+
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
     <string name="purchase_simple_thank_you">\"Simple Thank You\" App kaufen</string>
@@ -654,6 +745,7 @@
     <string name="start_name_with_surname">Namen mit Nachnamen beginnen</string>
     <string name="clear_cache">Cache leeren</string>
     <string name="show_call_confirmation_dialog">Bestätigungsdialog anzeigen, bevor ein Anruf durchgeführt wird</string>
+
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
     <string name="security">Sicherheit</string>
@@ -668,6 +760,7 @@
     <string name="main_screen">Hauptbildschirm</string>
     <string name="thumbnails">Vorschaubilder</string>
     <string name="list_view">Listenansicht</string>
+
     <!-- Excluding -->
     <string name="exclude">Ordner ausschließen</string>
     <string name="exclude_folder">Ordner ausschließen</string>
@@ -678,6 +771,7 @@
     <string name="remove_all_description">Alle Ordner aus der Liste ausgeschlossener Ordner entfernen\? Die Ordner selbst werden dabei nicht gelöscht.</string>
     <string name="temporarily_show_excluded">Ausgeschlossenes temporär anzeigen</string>
     <string name="stop_showing_excluded">Ausgeschlossenes wieder verbergen</string>
+
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Anzuzeigende Tabs festlegen</string>
     <string name="default_tab_to_open">Tab, der beim App-Start geöffnet werden soll</string>
@@ -688,6 +782,7 @@
     <string name="last_used_tab">Zuletzt verwendeter Tab</string>
     <string name="files_tab">Dateien</string>
     <string name="recent_files_tab">Letzte Dateien</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">Diese Datei wiederherstellen</string>
     <string name="restore_selected_files">Markierte Dateien wiederherstellen</string>
@@ -704,6 +799,7 @@
         <item quantity="one">%d Element wird in den Papierkorb verschoben</item>
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>
     </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importieren …</string>
     <string name="exporting">Exportieren …</string>
@@ -716,11 +812,13 @@
     <string name="no_entries_for_importing">Keine Einträge zum Importieren gefunden</string>
     <string name="no_new_entries_for_importing">Es wurden keine neuen Einträge zum Importieren gefunden</string>
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
+
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Es sieht so aus, als hättest du ein USB-Gerät an dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, damit die Dateien korrekt angezeigt werden.</string>
     <string name="confirm_usb_storage_access_text">Bitte das Hauptverzeichnis des USB-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
     <string name="wrong_root_selected_usb">Falscher Ordner gewählt, bitte das Hauptverzeichnis des USB-Geräts wählen</string>
+
     <!-- Dates -->
     <string name="january">Januar</string>
     <string name="february">Februar</string>
@@ -734,6 +832,7 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">Dezember</string>
+
     <!-- Short months -->
     <string name="january_short">Jan</string>
     <string name="february_short">Feb</string>
@@ -747,6 +846,7 @@
     <string name="october_short">Okt</string>
     <string name="november_short">Nov</string>
     <string name="december_short">Dez</string>
+
     <!-- in January -->
     <string name="in_january">im Januar</string>
     <string name="in_february">im Februar</string>
@@ -781,6 +881,7 @@
     <string name="friday_short">Fr</string>
     <string name="saturday_short">Sa</string>
     <string name="sunday_short">So</string>
+
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Deine App-Version wird keine weiteren Aktualisierungen erhalten. Wechsle zur Pro-Version, um Fehlerkorrekturen, Verbesserungen und neue Funktionen zu erhalten.</string>
     <string name="upgrade_to_pro_long_click">Deine App-Version wird keine weiteren Aktualisierungen erhalten. Wechsle zur Pro-Version, um Fehlerkorrekturen, Verbesserungen und neue Funktionen zu erhalten, indem du hier tippst.</string>
@@ -819,6 +920,7 @@
 \nSobald du mit deiner Einrichtung in der Pro-Version zufrieden bist, kannst du die alte kostenlose Version deinstallieren, da du sie nicht mehr benötigst.
 \n
 \nVielen Dank!</string>
+
     <!-- About -->
     <string name="about">Über</string>
     <string name="website">Website</string>
@@ -911,6 +1013,7 @@
     <string name="thank_you_short">Dankeschön</string>
     <string name="voice_recorder_short">Sprachaufzeichnungsprogramm</string>
     <string name="sideloaded_app">Deine App-Version scheint beschädigt zu sein. Bitte lade dir &lt;a href=%s&gt;hier&lt;/a&gt; die Originalversion herunter.</string>
+
     <!-- FAQ -->
     <string name="frequently_asked_questions">Häufig gestellte Fragen</string>
     <string name="before_asking_question">Bevor du eine Frage stellst, lies bitte zuerst die</string>
@@ -935,6 +1038,7 @@
     <string name="faq_9_text_commons">Es gibt mehrere Möglichkeiten, dies zu tun. Die erste ist, den Auswahlmodus durch langes Drücken eines Elements zu starten und anschließend die anderen Elemente durch kurzes Antippen auszuwählen. Die zweite Möglichkeit ähnelt dem Auswählen von Elementen auf PCs mit einer Maus: Starte den Auswahlmodus durch langes Drücken eines Elements und streiche, ohne den Finger vom Display abzuheben, über die anderen Elemente, um sie auszuwählen. Die dritte Möglichkeit, mehrere Elemente auszuwählen, besteht darin, nacheinander zwei Elemente lange zu drücken und dadurch auch alles dazwischen auszuwählen. Wenn du alle Elemente auswählen möchtest, drücke einfach lange auf ein beliebiges Element und tippe dann auf den Zähler für ausgewählte Elemente in der oberen linken Ecke. Durch Antippen des Zählers wird alles aus- oder abgewählt.</string>
     <string name="faq_10_title_commons">Ich habe die App gekauft, kann sie aber nicht auf ein anderes Gerät herunterladen.</string>
     <string name="faq_10_text_commons">Leere den Cache deiner Google Play App und starte dein Gerät neu. Es handelt sich um eine Störung bei Google Play, die nicht wirklich mit der App selbst zusammenhängt.</string>
+
     <!-- Contributors -->
     <string name="contributors">Beitragende</string>
     <string name="translation">Übersetzung</string>
@@ -986,6 +1090,7 @@
     <string name="translation_chinese_hk">Chinesisch (Hongkong)</string>
     <string name="translation_chinese_cn">Chinesisch (vereinfacht)</string>
     <string name="translation_chinese_tw">Chinesisch (traditionell)</string>
+
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Hol dir jetzt die Pro-Version!</string>
     <string name="why_upgrade_basic_version">Grundlegend</string>
@@ -995,6 +1100,7 @@
     <string name="why_upgrade_footer">100% Geld-zurück-Garantie</string>
     <string name="why_upgrade_footer_one_time_payment">Einmalige Zahlung</string>
     <string name="why_upgrade_improved_design">Verbessertes Design</string>
+
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fortgeschrittener Fotoeditor</string>
     <string name="why_upgrade_advanced_photo_video_editor">Fortgeschrittener Foto- und Videoeditor</string>
@@ -1002,11 +1108,13 @@
     <string name="why_upgrade_batch_renaming">Fortschrittliche Dateiumbenennung im Stapelverfahren</string>
     <string name="why_upgrade_folder_locking">Individuelle Ordnersperre</string>
     <string name="why_upgrade_printing_support">Druckunterstützung</string>
+
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Zeitzonen-Unterstützung</string>
     <string name="why_upgrade_attendees_emails">Teilnehmer und E-Mail-Erinnerungen</string>
     <string name="why_upgrade_easy_event_importing">Einfaches Importieren von Ereignissen</string>
     <string name="why_upgrade_new_widgets">Neue Widgets</string>
+
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Verbesserte Zusammenführung doppelter Kontakte</string>
     <string name="why_upgrade_font_size_customization">Anpassung der Schriftgröße</string>
@@ -1014,19 +1122,23 @@
     <string name="why_upgrade_customizable_contact_ringtones">Anpassbare Kontaktklingeltöne</string>
     <string name="why_upgrade_contact_filtering">Kontaktfilterung</string>
     <string name="why_upgrade_contact_private_contacts">Privat gespeicherte Kontakte</string>
+
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklisten</string>
     <string name="why_upgrade_different_note_per_widget">Unterschiedliche Notizen und Farben pro Widget</string>
     <string name="why_upgrade_note_locking">Sperren von Notizen</string>
+
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Anpassung von Datums- und Zeitformat</string>
     <string name="why_upgrade_shortcuts">Shortcuts für den Startbildschirm</string>
     <string name="why_upgrade_file_compression">Unterstützung für Dateikomprimierung</string>
     <string name="why_upgrade_recents_tab">Tab mit den letzten Dateien</string>
+
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Anpassung der Hintergrundfarbe</string>
     <string name="why_upgrade_file_importing">Unterstützung für den Dateiimport</string>
     <string name="why_upgrade_zooming">Zoomen</string>
+
     <!-- License -->
     <string name="notice">Diese Anwendung verwendet die folgenden Bibliotheken von Drittanbietern, um mir das Leben zu erleichtern. Vielen Dank dafür.</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
@@ -1062,6 +1174,7 @@
     <string name="pdf_view_pager_title">PDFViewPager (PDF-Betrachter)</string>
     <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelistendateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
+
     <!-- Trial -->
     <string name="trial_expired">Testversion abgelaufen</string>
     <string name="start_free_trial">Kostenlos testen</string>

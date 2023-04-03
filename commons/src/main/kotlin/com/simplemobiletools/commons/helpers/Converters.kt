@@ -16,6 +16,7 @@ class Converters {
     private val addressType = object : TypeToken<List<Address>>() {}.type
     private val eventType = object : TypeToken<List<Event>>() {}.type
     private val imType = object : TypeToken<List<IM>>() {}.type
+    private val relationType = object : TypeToken<List<ContactRelation>>() {}.type
 
     @TypeConverter
     fun jsonToStringList(value: String) = gson.fromJson<ArrayList<String>>(value, stringType)
@@ -73,4 +74,13 @@ class Converters {
 
     @TypeConverter
     fun IMsListToJson(list: ArrayList<IM>) = gson.toJson(list)
+
+    @TypeConverter
+    fun jsonToRelationList(value: String): ArrayList<ContactRelation> {
+        return (gson.fromJson<ArrayList<ContactRelation>>(value, relationType) ?: ArrayList())
+    }
+
+    @TypeConverter
+    fun relationListToJson(list: ArrayList<ContactRelation>) = gson.toJson(list)
+
 }
