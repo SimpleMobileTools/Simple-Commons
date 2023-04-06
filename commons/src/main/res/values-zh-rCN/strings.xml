@@ -671,6 +671,10 @@
     <string name="no_entries_for_importing">未找到要导入的项目</string>
     <string name="no_new_entries_for_importing">没有发现用于导入的新条目</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">检测到有 USB 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>

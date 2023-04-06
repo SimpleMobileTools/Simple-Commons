@@ -751,6 +751,10 @@
     <string name="no_entries_for_importing">Нема ставки за увоз</string>
     <string name="no_new_entries_for_importing">Нису пронађени нови уноси за увоз</string>
     <string name="no_entries_for_exporting">Нема ставки за извоз</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">УСБ</string>
     <string name="usb_detected">УСБ уреđај је прикаčен на уреđај. Доделите додатне дозволе да би се датотеке приказивале исправно.</string>

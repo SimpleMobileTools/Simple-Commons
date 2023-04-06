@@ -709,6 +709,10 @@
     <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_new_entries_for_importing">Der er ikke fundet nye poster til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Du ser ud til at have en USB-enhed tilsluttet. For at sikre at dens filer ses ordentligt, skal du tildele flere rettigheder.</string>

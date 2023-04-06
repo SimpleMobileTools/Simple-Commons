@@ -675,6 +675,10 @@
     <string name="no_entries_for_importing">インポートするエントリが見つかりませんでした</string>
     <string name="no_new_entries_for_importing">インポートする新しいエントリが見つかりませんでした</string>
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">デバイスにUSBが繋がっているようです。ファイルを正常に表示するためには、追加で許可を行ってください。</string>

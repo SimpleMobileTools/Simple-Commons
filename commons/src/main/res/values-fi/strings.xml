@@ -710,6 +710,10 @@
     <string name="no_entries_for_importing">Tuotavia kohteita ei löytynyt </string>
     <string name="no_new_entries_for_importing">Ei uusia tuotavia kohteita</string>
     <string name="no_entries_for_exporting">Vientikohteita ei löydetty</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Laitteeseesi on kytketty USB-lisälaite. Jotta tiedostot lisälaitteelta näkyvät oikein, vaaditaan lisäkäyttöoikeus.</string>
