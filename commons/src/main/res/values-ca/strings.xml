@@ -709,6 +709,17 @@
     <string name="no_entries_for_importing">No s\'ha trobat cap entrada per importar</string>
     <string name="no_new_entries_for_importing">No s\'ha trobat cap entrada nova per importar</string>
     <string name="no_entries_for_exporting">No s\'ha trobat cap entrada per exportar</string>
+    <string name="backups">Còpies de seguretat</string>
+    <string name="enable_automatic_backups">Activa les còpies de seguretat automàtiques</string>
+    <string name="manage_automatic_backups">Gestió de les còpies de seguretat automàtiques</string>
+    <string name="date_time_pattern_info">Podeu emprar els patrons següents per a donar nom automàticament als fitxers:
+\n
+\n%Y - any
+\n%M - mes
+\n%D - dia
+\n%h - hora
+\n%m - minut
+\n%s - segon</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Sembla que hi ha un dispositiu USB connectat al vostre dispositiu. Per assegurar que els fitxers apareguin adequadament, cal atorgar permisos addicionals.</string>

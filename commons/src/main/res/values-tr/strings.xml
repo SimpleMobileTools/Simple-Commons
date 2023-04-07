@@ -707,6 +707,17 @@
     <string name="no_entries_for_importing">İçe aktarılacak öge bulunamadı</string>
     <string name="no_new_entries_for_importing">İçe aktarılacak yeni öge bulunamadı</string>
     <string name="no_entries_for_exporting">Dışa aktarılacak öge bulunamadı</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">Dosyanızı otomatik olarak adlandırmak için aşağıdaki desenleri kullanabilirsiniz:
+\n
+\n%Y - yıl
+\n%M - ay
+\n%D - gün
+\n%h - saat
+\n%m - dakika
+\n%s - saniye</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Aygıtınıza takılı bir USB aygıtınız var gibi görünüyor. Dosyalarının düzgün görünmesini sağlamak için ek izinler vermeniz gerekiyor.</string>

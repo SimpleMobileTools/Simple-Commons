@@ -710,6 +710,17 @@
     <string name="no_entries_for_importing">Ühtegi importimiseks sobilikku kirjet ei leidu</string>
     <string name="no_new_entries_for_importing">Ühtegi uut kirjet importimiseks ei leidunud</string>
     <string name="no_entries_for_exporting">Ühtegi eksportimiseks sobilikku kirjet ei leidu</string>
+    <string name="backups">Varundus</string>
+    <string name="enable_automatic_backups">Kasuta automaatset varundust</string>
+    <string name="manage_automatic_backups">Halda automaatset varundust</string>
+    <string name="date_time_pattern_info">Failide nimede automaatsel loomisel saad kasutada järgnevaid asendusi:
+\n
+\n%Y - aasta
+\n%M - kuu
+\n%D - päev
+\n%h - tund
+\n%m - minut
+\n%s - sekund</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Tundub, et sinu nutiseadme küljes on USB-seade. Selleks, et seal asuvad failid oleks korrektselt loetavad, pead lubama täiendavad õigusi.</string>

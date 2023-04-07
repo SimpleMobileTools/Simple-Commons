@@ -745,6 +745,17 @@
     <string name="no_entries_for_importing">Aucun élément pouvant être importé n\'a été trouvé</string>
     <string name="no_new_entries_for_importing">Aucun nouvel élément pouvant être importé n\'a été trouvé</string>
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
+    <string name="backups">Sauvegardes</string>
+    <string name="enable_automatic_backups">Activer les sauvegardes automatiques</string>
+    <string name="manage_automatic_backups">Gérer les sauvegardes automatiques</string>
+    <string name="date_time_pattern_info">Vous pouvez utiliser les modèles suivants pour nommer votre fichier automatiquement :
+\n
+\n%Y - année
+\n%M - mois
+\n%D - jour
+\n%h - heure
+\n%m - minute
+\n%s - seconde</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Il semblerait qu\'un périphérique USB soit connecté à votre appareil. Pour que les fichiers de ce périphérique s\'affichent correctement, vous devez accorder des autorisations supplémentaires.</string>

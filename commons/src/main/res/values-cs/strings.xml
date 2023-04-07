@@ -747,6 +747,17 @@
     <string name="no_entries_for_importing">Nebyly nalezeny žádné položky pro import</string>
     <string name="no_new_entries_for_importing">Nebyly nalezeny žádné nové položky pro import</string>
     <string name="no_entries_for_exporting">Nebyly nalezeny žádné položky pro export</string>
+    <string name="backups">Zálohy</string>
+    <string name="enable_automatic_backups">Povolit automatické zálohování</string>
+    <string name="manage_automatic_backups">Spravovat automatické zálohování</string>
+    <string name="date_time_pattern_info">K automatickému pojmenování souboru můžete použít následující vzory:
+\n
+\n%Y – rok
+\n%M – měsíc
+\n%D – den
+\n%h – hodiny
+\n%m – minuta
+\n%s – sekunda</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Zdá se, že ke svému zařízení máte připojeno USB zařízení. Pro správné zobrazení jeho souborů jsou potřeba další oprávnění.</string>

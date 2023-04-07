@@ -743,6 +743,17 @@
     <string name="no_entries_for_importing">Não existem itens para importação</string>
     <string name="no_new_entries_for_importing">Não existem novos itens para importação</string>
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Ativar backups automáticos</string>
+    <string name="manage_automatic_backups">Gerir backups automáticos</string>
+    <string name="date_time_pattern_info">Pode utilizar os seguintes padrões para nomear automaticamente os seus ficheiros:
+\n
+\n%Y - ano
+\n%M - mês
+\n%D - dia
+\n%h - hora
+\n%m - minutos
+\n%s - segundos</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Não parece existir qualquer unidade USB conectada ao dispositivo. Para se certificar de que os ficheiro aparecem, deve conceder algumas permissões.</string>
