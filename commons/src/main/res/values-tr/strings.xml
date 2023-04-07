@@ -710,7 +710,14 @@
     <string name="backups">Backups</string>
     <string name="enable_automatic_backups">Enable automatic backups</string>
     <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="date_time_pattern_info">Dosyanızı otomatik olarak adlandırmak için aşağıdaki desenleri kullanabilirsiniz:
+\n
+\n%Y - yıl
+\n%M - ay
+\n%D - gün
+\n%h - saat
+\n%m - dakika
+\n%s - saniye</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Aygıtınıza takılı bir USB aygıtınız var gibi görünüyor. Dosyalarının düzgün görünmesini sağlamak için ek izinler vermeniz gerekiyor.</string>

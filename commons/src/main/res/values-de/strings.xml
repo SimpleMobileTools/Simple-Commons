@@ -716,10 +716,17 @@
     <string name="no_entries_for_importing">Keine Einträge zum Importieren gefunden</string>
     <string name="no_new_entries_for_importing">Es wurden keine neuen Einträge zum Importieren gefunden</string>
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
-    <string name="backups">Backups</string>
-    <string name="enable_automatic_backups">Enable automatic backups</string>
-    <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="backups">Sicherungen</string>
+    <string name="enable_automatic_backups">Automatische Sicherungen aktivieren</string>
+    <string name="manage_automatic_backups">Automatische Sicherungen verwalten</string>
+    <string name="date_time_pattern_info">Du kannst die folgenden Muster verwenden, um deine Datei automatisch zu benennen:
+\n
+\n%Y – Jahr
+\n%M – Monat
+\n%D – Tag
+\n%h – Stunde
+\n%m – Minute
+\n%s – Sekunde</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Es sieht so aus, als hättest du ein USB-Gerät an dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, damit die Dateien korrekt angezeigt werden.</string>

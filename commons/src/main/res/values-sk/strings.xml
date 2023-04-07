@@ -783,10 +783,10 @@
     <string name="no_entries_for_importing">Nenašli sa žiadne položky pre import</string>
     <string name="no_new_entries_for_importing">Nenašli sa žiadne nové položky pre import</string>
     <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
-    <string name="backups">Backups</string>
-    <string name="enable_automatic_backups">Enable automatic backups</string>
-    <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="backups">Zálohy</string>
+    <string name="enable_automatic_backups">Povoliť automatické zálohy</string>
+    <string name="manage_automatic_backups">Spravovať automatické zálohy</string>
+    <string name="date_time_pattern_info">Na pomenúvanie vašich súborov môžete použiť nasledovné vzory:\n\n%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
