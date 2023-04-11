@@ -1208,7 +1208,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 if (!getDoesFilePathExist(fileDirItem.path)) {
                     createAndroidSAFFile(fileDirItem.path)
                 }
-                callback.invoke(applicationContext.contentResolver.openOutputStream(uri))
+                callback.invoke(applicationContext.contentResolver.openOutputStream(uri, "wt"))
             }
         }
         needsStupidWritePermissions(fileDirItem.path) -> {
@@ -1234,7 +1234,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
 
                 if (document?.exists() == true) {
                     try {
-                        callback(applicationContext.contentResolver.openOutputStream(document.uri))
+                        callback(applicationContext.contentResolver.openOutputStream(document.uri, "wt"))
                     } catch (e: FileNotFoundException) {
                         showErrorToast(e)
                         callback(null)
@@ -1257,7 +1257,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                         if (!getDoesFilePathExist(fileDirItem.path)) {
                             createSAFFileSdk30(fileDirItem.path)
                         }
-                        applicationContext.contentResolver.openOutputStream(uri)
+                        applicationContext.contentResolver.openOutputStream(uri, "wt")
                     } catch (e: Exception) {
                         null
                     } ?: createCasualFileOutputStream(this, targetFile)
@@ -1268,7 +1268,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             callback.invoke(
                 try {
                     val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
-                    applicationContext.contentResolver.openOutputStream(fileUri.first())
+                    applicationContext.contentResolver.openOutputStream(fileUri.first(), "wt")
                 } catch (e: Exception) {
                     null
                 } ?: createCasualFileOutputStream(this, targetFile)
@@ -1295,7 +1295,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             if (!getDoesFilePathExist(path)) {
                 createAndroidSAFFile(path)
             }
-            applicationContext.contentResolver.openOutputStream(uri)
+            applicationContext.contentResolver.openOutputStream(uri, "wt")
         }
         needsStupidWritePermissions(path) -> {
             var documentFile = parentDocumentFile
@@ -1324,7 +1324,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 } else {
                     documentFile.createFile(mimeType, path.getFilenameFromPath())!!.uri
                 }
-                applicationContext.contentResolver.openOutputStream(uri)
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
             } catch (e: Exception) {
                 showErrorToast(e)
                 null
@@ -1336,7 +1336,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 if (!getDoesFilePathExist(path)) {
                     createSAFFileSdk30(path)
                 }
-                applicationContext.contentResolver.openOutputStream(uri)
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
             } catch (e: Exception) {
                 null
             } ?: createCasualFileOutputStream(this, targetFile)
