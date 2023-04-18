@@ -237,4 +237,9 @@ data class Contact(
     fun isPrivate() = source == SMT_PRIVATE
 
     fun getSignatureKey() = if (photoUri.isNotEmpty()) photoUri else hashCode()
+
+    fun getPrimaryNumber(): String? {
+        val primaryNumber = phoneNumbers.firstOrNull { it.isPrimary }
+        return primaryNumber?.normalizedNumber ?: phoneNumbers.firstOrNull()?.normalizedNumber
+    }
 }
