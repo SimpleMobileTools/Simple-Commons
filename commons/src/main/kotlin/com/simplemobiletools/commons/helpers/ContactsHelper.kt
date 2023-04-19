@@ -735,9 +735,9 @@ class ContactsHelper(val context: Context) {
                 var suffix = ""
                 var mimetype = cursor.getStringValue(Data.MIMETYPE)
 
-                // if first line is an Organization type contact, go to next line
+                // if first line is an Organization type contact, go to next line if available
                 if (mimetype != CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE) {
-                    if (cursor.moveToNext()) {
+                    if (!cursor.isLast() && cursor.moveToNext()) {
                         mimetype = cursor.getStringValue(Data.MIMETYPE)
                     }
                 }
