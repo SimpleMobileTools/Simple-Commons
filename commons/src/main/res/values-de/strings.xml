@@ -72,15 +72,11 @@
     <string name="choose_file">Datei auswählen</string>
     <string name="record_audio">Audio aufnehmen</string>
     <string name="record_video">Video aufnehmen</string>
-    <string name="updating">Aktualisieren …</string>
+    <string name="inserting">Einfügen…</string>
+    <string name="updating">Aktualisieren…</string>
     <string name="phone_storage">Gerätespeicher</string>
     <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
-    <!-- Events -->
-    <string name="birthday">Geburtstag</string>
-    <string name="anniversary">Jahrestag</string>
-    <!-- Emails -->
-    <string name="home">Privat</string>
-    <string name="work">Arbeit</string>
+
     <!-- Phone numbers -->
     <string name="mobile">Mobil</string>
     <string name="main_number">Festnetz</string>
@@ -88,6 +84,110 @@
     <string name="home_fax">Privat Fax</string>
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
+
+    <!-- InstantMsg - Currently no strings -->
+
+    <!-- Nicknames -->
+    <string name="nickname_default">Spitzname</string>
+    <string name="nickname_other_name">Pseudonym</string>
+    <string name="nickname_maiden_name">Mädchenname</string>
+    <string name="nickname_short_name">Kurzname</string>
+    <string name="nickname_initials">Initialien</string>
+
+    <!-- Emails -->
+    <string name="home">Privat</string>
+    <string name="work">Arbeit</string>
+
+    <!-- Addresses -->
+    <!-- Building a formatted address from a ContactsContract.CommonDataKinds.StructuredPostal address
+         Address field:
+            %A Streetaddress
+            %D Neighborhood
+            %B POBox
+            %C City
+            %S State/Region
+            %Z PostalCode
+            %N Nation/Country
+            %% %
+            %n NewLine
+          Segment limiters: { }
+            Segments that do not contain any (non-empty) address fields are eliminated
+            Other characters are copied verbatim
+            multiple consecutive spaces are combined to a single space
+          Separator limiters: []
+            Separators that are not followed by a non-empty segment are eliminated
+          Empty lines are eliminated
+          -->
+    <string name="address_format">%A%n%D%n%B%n{%Z}[ ]{%C}[ ]{(%S)}%n%N%n</string>
+
+    <!-- Events -->
+    <string name="birthday">Geburtstag</string>
+    <string name="anniversary">Jahrestag</string>
+
+    <!-- Websites -->
+    <string name="website_homepage">Homepage</string>
+    <string name="website_blog">Blog</string>
+    <string name="website_profile">Profil</string>
+    <string name="website_ftp">FTP</string>
+
+    <!-- Relations -->
+    <!-- Android ContactContract.Relation types -->
+    <string name="relation_assistant">Assistent</string>
+    <string name="relation_brother">Bruder</string>
+    <string name="relation_child">Kind</string>
+    <string name="relation_domestic_partner">Lebenspartner</string>
+    <string name="relation_father">Vater</string>
+    <string name="relation_friend">Freund</string>
+    <string name="relation_manager">Manager</string>
+    <string name="relation_mother">Mutter</string>
+    <string name="relation_parent">Eltern</string>
+    <string name="relation_partner">Partner</string>
+    <string name="relation_referred_by">Empfohlen von</string>
+    <string name="relation_relative">Verwandter</string>
+    <string name="relation_sister">Schwester</string>
+    <string name="relation_spouse">Ehepartner</string>
+    <!-- vCard 4.0 Relation types -->
+    <string name="relation_contact">Kontakt</string>
+    <string name="relation_acquaintance">Bekanntschafft</string>
+    <string name="relation_met">Begegnung</string>
+    <string name="relation_co_worker">Mitarbeiter</string>
+    <string name="relation_colleague">Kollege</string>
+    <string name="relation_co_resident">Mitbewohner</string>
+    <string name="relation_neighbor">Nachbar</string>
+    <string name="relation_sibling">Geschwister</string>
+    <string name="relation_kin">Sippe</string>
+    <string name="relation_kin_alt">Verwandschaft</string>
+    <string name="relation_muse">Muse</string>
+    <string name="relation_crush">Schwarm</string>
+    <string name="relation_date">Date</string>
+    <string name="relation_sweetheart">Liebling</string>
+    <string name="relation_agent">Agent</string>
+    <string name="relation_emergency">Notfallskontakt</string>
+    <string name="relation_me">Ich</string>
+    <!-- Additional Relation types -->
+    <string name="relation_superior">Vorgesetzter</string>
+    <string name="relation_subordinate">Untergebener</string>
+    <string name="relation_husband">Ehemann</string>
+    <string name="relation_wife">Ehefrau</string>
+    <string name="relation_son">Sohn</string>
+    <string name="relation_daughter">Tochter</string>
+    <string name="relation_grandparent">Großeltern</string>
+    <string name="relation_grandfather">Großvater</string>
+    <string name="relation_grandmother">Großmutter</string>
+    <string name="relation_grandchild">Enkelkind</string>
+    <string name="relation_grandson">Enkel</string>
+    <string name="relation_granddaughter">Enkelin</string>
+    <string name="relation_uncle">Onkel</string>
+    <string name="relation_aunt">Tante</string>
+    <string name="relation_nephew">Neffe</string>
+    <string name="relation_niece">Nichte</string>
+    <string name="relation_father_in_law">Schwiegervater</string>
+    <string name="relation_mother_in_law">Schwiegermutter</string>
+    <string name="relation_son_in_law">Schwiegersohn</string>
+    <string name="relation_daughter_in_law">Schwiegertochter</string>
+    <string name="relation_brother_in_law">Schwager</string>
+    <string name="relation_sister_in_law">Schwägerin</string>
+
     <!-- View types -->
     <string name="change_view_type">Darstellung ändern</string>
     <string name="grid">Gitternetz</string>
