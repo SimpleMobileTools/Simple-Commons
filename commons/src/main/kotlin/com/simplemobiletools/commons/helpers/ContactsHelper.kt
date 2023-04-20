@@ -1574,16 +1574,16 @@ class ContactsHelper(val context: Context) {
                 contact.websites.forEach { website ->
                     ContentProviderOperation.newInsert(Data.CONTENT_URI).apply {
                         if (insert) {
-                            withValueBackReference(Data.RAW_CONTACT_ID, 0)
+                            builder.withValueBackReference(Data.RAW_CONTACT_ID, 0)
                         } else {
-                            withValue(Data.RAW_CONTACT_ID, contact.id)
+                            builder.withValue(Data.RAW_CONTACT_ID, contact.id)
                         }
                         withValue(Data.MIMETYPE, CommonDataKinds.Website.CONTENT_ITEM_TYPE)
                         withValue(CommonDataKinds.Website.URL, website.URL)
                         withValue(CommonDataKinds.Website.TYPE, website.type)
                         withValue(CommonDataKinds.Website.LABEL, website.label)
                         operations.add(build())
-                    }
+            }
                 } // forEach(Website)
             } // if (changed || insert)
 
