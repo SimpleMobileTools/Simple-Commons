@@ -48,7 +48,7 @@
     <string name="no_phone_call_permission">Appen har ikke tilladelse til at foretage telefonopkald, du skal give tilladelse til det i enhedens indstillinger</string>
     <string name="insert_text_here">Indsæt tekst her</string>
     <string name="call_person">Ring til %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="confirm_calling_person">Bekræft opkald til %s</string>
     <string name="zero">Nul</string>
     <string name="one">En</string>
     <string name="two">To</string>
@@ -612,7 +612,7 @@
     <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
     <string name="customize_notifications">Tilpas notifikationer</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Notifikationslyd</string>
     <string name="use_english_language">Brug engelsk</string>
     <string name="language">Sprog</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
@@ -692,7 +692,7 @@
     <string name="moving_recycle_bin_items_disabled">Flytning af indhold i papirkurven er deaktiveret, gendan i stedet</string>
     <string name="show_the_recycle_bin">Vis papirkurven</string>
     <string name="hide_the_recycle_bin">Skjul papirkurven</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Åbn papirkurven</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter en fil til papirkurven</item>
         <item quantity="other">Flytter %d filer til papirkurven</item>
@@ -709,6 +709,10 @@
     <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_new_entries_for_importing">Der er ikke fundet nye poster til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Aktiver automatisk backup</string>
+    <string name="manage_automatic_backups">Administrer automatisk backup</string>
+    <string name="date_time_pattern_info">Du kan bruge disse pladsholdere til automatisk at navngive din fil:\n\n%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Du ser ud til at have en USB-enhed tilsluttet. For at sikre at dens filer ses ordentligt, skal du tildele flere rettigheder.</string>
@@ -781,7 +785,9 @@
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
     <string name="upgrade_calendar">Du må overføre lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Hej\n\nDet ser ud til at du lige har opgraderet fra den gratis version. Så snart du er tilfreds med denne og måske har flyttet dine data over, kan du afinstallere den gamle og dermed undgå at åbne den ved et uheld, du vil ikke have brug for den mere.\n\nTak!</string>
     <string name="upgraded_to_pro">Hej,\n\ndet ser ud til, at du også allerede har Pro app-versionen. Når du er tilfreds med den og måske har overført dine data, kan du afinstallere denne for at undgå at starte den ved et uheld, da du ikke har brug for den længere.\n\nTak!</string>
     <string name="upgraded_to_pro_calendar">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du ønsker at overføre dine lokalt gemte begivenheder, skal du gøre det manuelt ved at eksportere dem til en .ics-fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
     <string name="upgraded_to_pro_contacts">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du havde nogen kontakter gemt under \"%s\", skal du overføre dem manuelt ved at eksportere dem i en .vcf-fil fra den gratis app-version og importere dem her via topmenuen.\n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den.\n\n\nTak!</string>

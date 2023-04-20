@@ -703,6 +703,17 @@
     <string name="no_entries_for_importing">Er zijn geen items gevonden om te importeren</string>
     <string name="no_new_entries_for_importing">Er zijn geen nieuwe items gevonden om te importeren</string>
     <string name="no_entries_for_exporting">Er zijn geen items gevonden om te exporteren</string>
+    <string name="backups">Back-ups</string>
+    <string name="enable_automatic_backups">Automatisch back-ups maken</string>
+    <string name="manage_automatic_backups">Automatische back-ups beheren</string>
+    <string name="date_time_pattern_info">De volgende patronen worden ondersteund voor de bestandsnamen:
+\n
+\n%Y - jaar
+\n%M - maand
+\n%D - dag
+\n%h - uren
+\n%m - minuten
+\n%s - seconden</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te kunnen tonen heeft de app aanvullende rechten nodig.</string>
@@ -775,6 +786,8 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
+    <string name="upgraded_from_free_gallery">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de instellingen en favorieten zijn overgezet, dan kan de gratis versie worden verwijderd.</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de gegevens zijn overgezet, dan kan de gratis versie worden verwijderd.</string>
     <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Als de Pro-versie bevalt en de app-gegevens (indien gewenst) zijn overgezet vanuit deze versie, dan kan deze app worden verwijderd.</string>
     <string name="upgraded_to_pro_calendar">De gratis versie van deze app is ook (nog) geïnstalleerd. Lokaal opgeslagen afspraken uit de gratis versie zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.

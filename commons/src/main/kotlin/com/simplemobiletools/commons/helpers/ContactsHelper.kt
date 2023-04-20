@@ -27,6 +27,7 @@ class ContactsHelper(val context: Context) {
         getAll: Boolean = false,
         gettingDuplicates: Boolean = false,
         ignoredContactSources: HashSet<String> = HashSet(),
+        showOnlyContactsWithNumbers: Boolean = context.baseConfig.showOnlyContactsWithNumbers,
         callback: (ArrayList<Contact>) -> Unit
     ) {
         ensureBackgroundThread {
@@ -52,7 +53,6 @@ class ContactsHelper(val context: Context) {
             }
 
             val contactsSize = contacts.size()
-            val showOnlyContactsWithNumbers = context.baseConfig.showOnlyContactsWithNumbers
             val tempContacts = ArrayList<Contact>(contactsSize)
             val resultContacts = ArrayList<Contact>(contactsSize)
 

@@ -716,6 +716,17 @@
     <string name="no_entries_for_importing">Keine Einträge zum Importieren gefunden</string>
     <string name="no_new_entries_for_importing">Es wurden keine neuen Einträge zum Importieren gefunden</string>
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
+    <string name="backups">Sicherungen</string>
+    <string name="enable_automatic_backups">Automatische Sicherungen aktivieren</string>
+    <string name="manage_automatic_backups">Automatische Sicherungen verwalten</string>
+    <string name="date_time_pattern_info">Du kannst die folgenden Muster verwenden, um deine Datei automatisch zu benennen:
+\n
+\n%Y – Jahr
+\n%M – Monat
+\n%D – Tag
+\n%h – Stunde
+\n%m – Minute
+\n%s – Sekunde</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Es sieht so aus, als hättest du ein USB-Gerät an dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, damit die Dateien korrekt angezeigt werden.</string>
@@ -788,6 +799,12 @@
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Pro-Version installieren</string>
     <string name="upgrade_calendar">Um lokal gespeicherte Termine zu migrieren, musst du sie als ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hallo,
+\n
+\nes sieht so aus, als hättest du bereits die Pro-Version der App. Wenn du mit ihr zufrieden bist und deine Einstellungen und Favoriten übertragen hast, kannst du diese App deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
     <string name="upgraded_from_free">Hallo,
 \n
 \nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du mit ihr zufrieden bist und deine Daten migriert hast, kannst du die alte kostenlose Version deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.

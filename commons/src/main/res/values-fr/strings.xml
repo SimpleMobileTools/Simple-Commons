@@ -745,6 +745,17 @@
     <string name="no_entries_for_importing">Aucun élément pouvant être importé n\'a été trouvé</string>
     <string name="no_new_entries_for_importing">Aucun nouvel élément pouvant être importé n\'a été trouvé</string>
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
+    <string name="backups">Sauvegardes</string>
+    <string name="enable_automatic_backups">Activer les sauvegardes automatiques</string>
+    <string name="manage_automatic_backups">Gérer les sauvegardes automatiques</string>
+    <string name="date_time_pattern_info">Vous pouvez utiliser les modèles suivants pour nommer votre fichier automatiquement :
+\n
+\n%Y - année
+\n%M - mois
+\n%D - jour
+\n%h - heure
+\n%m - minute
+\n%s - seconde</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Il semblerait qu\'un périphérique USB soit connecté à votre appareil. Pour que les fichiers de ce périphérique s\'affichent correctement, vous devez accorder des autorisations supplémentaires.</string>
@@ -817,6 +828,8 @@
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Bonjour,
 \n
 \nil semble que vous ayez effectué une mise à niveau depuis la version gratuite. Une fois que vous serez satisfait de celle-ci et que vous aurez peut-être migré vos données, vous pourrez désinstaller l\'ancienne version gratuite pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.

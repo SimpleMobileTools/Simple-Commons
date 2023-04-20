@@ -707,6 +707,17 @@
     <string name="no_entries_for_importing">İçe aktarılacak öge bulunamadı</string>
     <string name="no_new_entries_for_importing">İçe aktarılacak yeni öge bulunamadı</string>
     <string name="no_entries_for_exporting">Dışa aktarılacak öge bulunamadı</string>
+    <string name="backups">Yedeklemeler</string>
+    <string name="enable_automatic_backups">Otomatik yedeklemeleri etkinleştir</string>
+    <string name="manage_automatic_backups">Otomatik yedeklemeleri yönet</string>
+    <string name="date_time_pattern_info">Dosyanızı otomatik olarak adlandırmak için aşağıdaki desenleri kullanabilirsiniz:
+\n
+\n%Y - yıl
+\n%M - ay
+\n%D - gün
+\n%h - saat
+\n%m - dakika
+\n%s - saniye</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Aygıtınıza takılı bir USB aygıtınız var gibi görünüyor. Dosyalarının düzgün görünmesini sağlamak için ek izinler vermeniz gerekiyor.</string>
@@ -779,9 +790,19 @@
     <string name="more_info">Daha fazla bilgi</string>
     <string name="upgrade">Yükselt</string>
     <string name="upgrade_calendar">Yerel olarak depolanan etkinlikleri bir .ics dosyasına dışa aktarıp ardından içe aktarma yoluyla el ile geçirmeniz gerekir. Her iki dışa aktarma/içe aktarma düğmelerini ana ekran menüsünde bulabilirsiniz.</string>
+    <string name="upgraded_from_free_gallery">Merhaba,
+\n
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bu sürümden memnun kaldığınızda ve belki de ayarlarınızı ve favorilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için eski ücretsiz sürümü kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
+    <string name="upgraded_to_pro_gallery">Merhaba,
+\n
+\nGörünüşe göre zaten Pro uygulama sürümüne de sahipsiniz. Bundan memnun kaldığınızda ve belki ayarlarınızı ve favorilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için bunu kaldırabilirsiniz.
+\n
+\nTeşekkürler!</string>
     <string name="upgraded_from_free">Merhaba,
 \n
-\nÜcretsiz sürümden yeni yükseltmişsiniz gibi görünüyor. Bundan memnun olduğunuzda ve belki de verilerinizi aktardığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatılmasını önlemek için eski ücretsiz olanı kaldırabilirsiniz.
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bundan memnun olduğunuzda ve belki de verilerinizi aktardığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatılmasını önlemek için eski ücretsiz olanı kaldırabilirsiniz.
 \n
 \nTeşekkürler!</string>
     <string name="upgraded_to_pro">Merhaba,

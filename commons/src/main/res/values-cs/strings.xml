@@ -747,6 +747,17 @@
     <string name="no_entries_for_importing">Nebyly nalezeny žádné položky pro import</string>
     <string name="no_new_entries_for_importing">Nebyly nalezeny žádné nové položky pro import</string>
     <string name="no_entries_for_exporting">Nebyly nalezeny žádné položky pro export</string>
+    <string name="backups">Zálohy</string>
+    <string name="enable_automatic_backups">Povolit automatické zálohování</string>
+    <string name="manage_automatic_backups">Spravovat automatické zálohování</string>
+    <string name="date_time_pattern_info">K automatickému pojmenování souboru můžete použít následující vzory:
+\n
+\n%Y – rok
+\n%M – měsíc
+\n%D – den
+\n%h – hodiny
+\n%m – minuta
+\n%s – sekunda</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Zdá se, že ke svému zařízení máte připojeno USB zařízení. Pro správné zobrazení jeho souborů jsou potřeba další oprávnění.</string>
@@ -819,6 +830,8 @@
     <string name="more_info">Více informací</string>
     <string name="upgrade">Stáhnout</string>
     <string name="upgrade_calendar">Lokálně uložené události musíte přenést ručně, exportováním do .ics souboru a následně je naimportovat. Tlačítka pro export/import najdete v nabídce na hlavní obrazovce.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění.
@@ -1106,7 +1119,7 @@
     <string name="trial_expired">Zkušební doba vypršela</string>
     <string name="start_free_trial">Zahájit bezplatnou zkušební dobu</string>
     <string name="trial_expires_soon">Vaše zkušební doba brzy vyprší.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Odemknout aplikaci na poslední jeden den</string>
     <string name="welcome_to_app_name">Vítejte v %s!</string>
     <string name="trial_start_description">Děkujeme, že používáte naši aplikaci. Tuto odemčenou verzi můžete používat <font color="#FFFFFF">%d dnů</font>. Jakmile zkušební doba skončí, zvažte prosím upgrade na verzi Pro, která má obrovské množství nových funkcí, moderní vzhled, žádné reklamy a mnoho dalších vylepšení.
 \n

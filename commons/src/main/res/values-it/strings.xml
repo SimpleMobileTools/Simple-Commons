@@ -727,7 +727,7 @@
     <string name="moving_recycle_bin_items_disabled">Lo spostamento degli elementi dal cestino è disabilitato, utilizzare "Ripristina"</string>
     <string name="show_the_recycle_bin">Mostra il cestino</string>
     <string name="hide_the_recycle_bin">Nascondi il cestino</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="open_the_recycle_bin">Apri il cestino</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>
         <item quantity="many">Spostamento di %d elementi nel cestino</item>
@@ -745,6 +745,17 @@
     <string name="no_entries_for_importing">Nessun elemento trovato da importare</string>
     <string name="no_new_entries_for_importing">Non sono state trovate nuove voci per l\'importazione</string>
     <string name="no_entries_for_exporting">Nessun elemento trovato da esportare</string>
+    <string name="backups">Backup</string>
+    <string name="enable_automatic_backups">Abilita i backup automatici</string>
+    <string name="manage_automatic_backups">Gestisci i backup automatici</string>
+    <string name="date_time_pattern_info">È possibile utilizzare i seguenti schemi per assegnare automaticamente un nome al file:
+\n
+\n%Y - anno
+\n%M - mese
+\n%D - giorno
+\n%h - ora
+\n%m - minuto
+\n%s - secondo</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">È collegato un dispositivo USB al dispositivo. Per assicurarsi che i file appaiano correttamente, è necessario accettare permessi aggiuntivi.</string>
@@ -817,6 +828,8 @@
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
     <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Salve,
 \n

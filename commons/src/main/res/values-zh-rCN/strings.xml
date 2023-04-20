@@ -671,6 +671,17 @@
     <string name="no_entries_for_importing">未找到要导入的项目</string>
     <string name="no_new_entries_for_importing">没有发现用于导入的新条目</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
+    <string name="backups">备份</string>
+    <string name="enable_automatic_backups">启用自动备份</string>
+    <string name="manage_automatic_backups">管理自动备份</string>
+    <string name="date_time_pattern_info">你可以使用下列模式自动命名你的文件：
+\n
+\n%Y - 年份
+\n%M - 月份
+\n%D - 天
+\n%h - 小时
+\n%m - 分钟
+\n%s - 秒</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">检测到有 USB 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>
@@ -743,6 +754,16 @@
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
+    <string name="upgraded_from_free_gallery">嘿，
+\n
+\n你似乎刚从免费版升级过来。 如果你对专业版感到满意，而且已经迁移了设置和收藏等必要项目，你可以卸载旧的免费版以免意外启动，因你不再需要它。
+\n
+\n谢谢！</string>
+    <string name="upgraded_to_pro_gallery">嘿，
+\n
+\n你似乎也安装了这个应用的专业版。如果你用得满意而且已经迁移了设置和收藏等必要项目，你可以卸载免费版以免意外启动，因为你不再需要它。
+\n
+\n谢谢！</string>
     <string name="upgraded_from_free">嘿，
 \n
 \n你似乎刚从免费版升级过来。 如果你对收费版用得满意并且已经迁移了数据，你可以卸载旧的免费版避免意外启动，因为你不再需要它了。

@@ -775,6 +775,10 @@
     <string name="no_entries_for_importing">Элементы для імпартавання не знойдзены</string>
     <string name="no_new_entries_for_importing">Новыя элементы для імпартавання не знойдзены</string>
     <string name="no_entries_for_exporting">Элементы для экспартавання не знойдзены</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Падобна на тое, да вашага прылады падлучанае USB-прылада. Каб пераканацца, што яго файлы адлюстроўваюцца правільна, вам неабходна прадаставіць дадатковыя дазволу.</string>
@@ -847,6 +851,8 @@
     <string name="more_info">Дадатковая інфармацыя</string>
     <string name="upgrade">Абнаўленне</string>
     <string name="upgrade_calendar">Вы павінны перанесці лакальна захаваныя падзеі ўручную шляхам экспарту ў файл .ics, а затым імпарту. Вы можаце знайсці абедзве кнопкі экспарту/імпарту ў галоўным меню экрана.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>

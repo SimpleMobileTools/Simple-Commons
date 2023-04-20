@@ -710,6 +710,17 @@
     <string name="no_entries_for_importing">Tuotavia kohteita ei löytynyt </string>
     <string name="no_new_entries_for_importing">Ei uusia tuotavia kohteita</string>
     <string name="no_entries_for_exporting">Vientikohteita ei löydetty</string>
+    <string name="backups">Varmuuskopiot</string>
+    <string name="enable_automatic_backups">Ota käyttöön automaattiset varmuuskopiot</string>
+    <string name="manage_automatic_backups">Hallitse automaattisia varmuuskopioita</string>
+    <string name="date_time_pattern_info">Voit käyttää seuraavia merkintöjä tiedostojen automaattiseen nimeämiseen:
+\n
+\n%Y - vuosi
+\n%M - kuukausi
+\n%D - päivä
+\n%h - tunti
+\n%m - minuutti
+\n%s - sekunti</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Laitteeseesi on kytketty USB-lisälaite. Jotta tiedostot lisälaitteelta näkyvät oikein, vaaditaan lisäkäyttöoikeus.</string>
@@ -782,6 +793,8 @@
     <string name="more_info">Lisää tietoa</string>
     <string name="upgrade">Päivitä</string>
     <string name="upgrade_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ne .ics-tiedostoon ja sen jälkeen tuomalla tiedostosta. Löydät vienti- ja tuontipainikkeet päävalikosta.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hei,
 \n
 \nnäytät juuri päivittäneen ilmaisversiosta. Kun olet tyytyväinen tähän ja mahdollisesti siirtänyt tietosi, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.

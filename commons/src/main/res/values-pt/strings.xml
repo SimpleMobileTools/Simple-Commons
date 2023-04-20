@@ -743,6 +743,17 @@
     <string name="no_entries_for_importing">Não existem itens para importação</string>
     <string name="no_new_entries_for_importing">Não existem novos itens para importação</string>
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Ativar backups automáticos</string>
+    <string name="manage_automatic_backups">Gerir backups automáticos</string>
+    <string name="date_time_pattern_info">Pode utilizar os seguintes padrões para nomear automaticamente os seus ficheiros:
+\n
+\n%Y - ano
+\n%M - mês
+\n%D - dia
+\n%h - hora
+\n%m - minutos
+\n%s - segundos</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Não parece existir qualquer unidade USB conectada ao dispositivo. Para se certificar de que os ficheiro aparecem, deve conceder algumas permissões.</string>
@@ -815,6 +826,8 @@
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar versão</string>
     <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã principal.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Olá,
 \n
 \nParece que fez a atualização a partir da versão gratuita. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.

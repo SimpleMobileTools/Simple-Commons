@@ -783,6 +783,10 @@
     <string name="no_entries_for_importing">Nenašli sa žiadne položky pre import</string>
     <string name="no_new_entries_for_importing">Nenašli sa žiadne nové položky pre import</string>
     <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
+    <string name="backups">Zálohy</string>
+    <string name="enable_automatic_backups">Povoliť automatické zálohy</string>
+    <string name="manage_automatic_backups">Spravovať automatické zálohy</string>
+    <string name="date_time_pattern_info">Na pomenúvanie vašich súborov môžete použiť nasledovné vzory:\n\n%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -862,6 +866,8 @@
     <string name="more_info">Viac info</string>
     <string name="upgrade">Stiahnuť</string>
     <string name="upgrade_calendar">Lokálne uložené udalosti musíte exportovať manuálne do .ics súboru, následne importovať. Tlačidlá pre exportovanie/importovanie nájdete v menu hlavnej obrazovky.</string>
+    <string name="upgraded_from_free_gallery">Zdravím,\n\nvyzerá to tak, že ste sem práve prešli z bezplatnej verzie apky. Ak ste s touto apkou spokojný a možno aj premigrovali obľúbené položky a nastavenia, môžete bezplatnú apku odinštalovať, aby ste ju nespúšťali náhodou. Nebudete ju už potrebovať.\n\nVďaka!</string>
+    <string name="upgraded_to_pro_gallery">Zdravím,\n\nvyzerá to tak, že už máte nainštalovanú aj Pro verziu apky. Ak ste s ňou spokojný a možno aj premigrovali obľúbené položky a nastavenia, túto verziu už nebudete potrebovať a môžete ju odinštalovať, aby ste ju nespúšťali náhodou.\n\nVďaka!</string>
     <string name="upgraded_from_free">Zdravím,\n\nvyzerá to tak, že ste sem práve prešli z bezplatnej verzie apky. Ak ste s touto apkou spokojný a možno aj premigrovali nejaké dáta, môžete bezplatnú apku odinštalovať, aby ste ju nespúšťali náhodou. Nebudete ju už potrebovať.\n\nVďaka!</string>
     <string name="upgraded_to_pro">Zdravím,\n\nvyzerá to tak, že už máte nainštalovanú aj Pro verziu apky. Ak ste s ňou spokojný a možno aj premigrovali nejaké dáta, túto verziu už nebudete potrebovať a môžete ju odinštalovať, aby ste ju nespúšťali náhodou.\n\nVďaka!</string>
     <string name="upgraded_to_pro_calendar">Zdravím,\n\nvyzerá to tak, že ste prišiel zo starej, bezplatnej apky. Ak si chcete premigrovať lokálne uložené udalosti, musíte to spraviť ručne exportovaním do .ics súboru v starej apke a následným importovaním do tejto cez horné menu.\n\nAk ste spokojný so všetkým v Pro verzii, môžete odinštalovať starú, keďže ju už potrebovať nebudete.\n\Vďaka!</string>

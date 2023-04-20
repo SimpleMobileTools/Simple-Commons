@@ -712,6 +712,10 @@
     <string name="no_entries_for_importing">Non se atopou ningunha entrada que importar</string>
     <string name="no_new_entries_for_importing">Non se atoparon novas entradas para importar</string>
     <string name="no_entries_for_exporting">Non se atopou ningunha entrada que exportar</string>
+    <string name="backups">Backups</string>
+    <string name="enable_automatic_backups">Enable automatic backups</string>
+    <string name="manage_automatic_backups">Manage automatic backups</string>
+    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Parece que tes un dispositivo USB conectado ao teu dispositivo. Para asegurar que os ficheiro nel aparecen correctamente, tes que conceder permisos adicionais.</string>
@@ -784,6 +788,8 @@
     <string name="more_info">Máis información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tes que migrar os eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Ola, 
 \n
 \nParece que acabas de actualizar dende a versión gratuíta. Unha vez que estea satisfeito e quizais migrou os seus datos, pode desinstalalo antigo gratuíto para evitar que o lance accidentalmente xa que xa non o necesitará. 

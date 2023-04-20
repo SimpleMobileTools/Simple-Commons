@@ -709,6 +709,17 @@
     <string name="no_entries_for_importing">No s\'ha trobat cap entrada per importar</string>
     <string name="no_new_entries_for_importing">No s\'ha trobat cap entrada nova per importar</string>
     <string name="no_entries_for_exporting">No s\'ha trobat cap entrada per exportar</string>
+    <string name="backups">Còpies de seguretat</string>
+    <string name="enable_automatic_backups">Activa les còpies de seguretat automàtiques</string>
+    <string name="manage_automatic_backups">Gestió de les còpies de seguretat automàtiques</string>
+    <string name="date_time_pattern_info">Podeu emprar els patrons següents per a donar nom automàticament als fitxers:
+\n
+\n%Y - any
+\n%M - mes
+\n%D - dia
+\n%h - hora
+\n%m - minut
+\n%s - segon</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Sembla que hi ha un dispositiu USB connectat al vostre dispositiu. Per assegurar que els fitxers apareguin adequadament, cal atorgar permisos addicionals.</string>
@@ -781,6 +792,16 @@
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
+    <string name="upgraded_from_free_gallery">Hola,
+\n
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar l\'antiga gratuïta per evitar que l\'inicieu accidentalment, ja que no la necessitareu.
+\n
+\nGràcies!</string>
+    <string name="upgraded_to_pro_gallery">Hola,
+\n
+\nsembla que ja teniu la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar-la per evitar que la inicieu accidentalment, ja que no la necessitareu.
+\n
+\nGràcies!</string>
     <string name="upgraded_from_free">Hola
 \n
 \nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més.

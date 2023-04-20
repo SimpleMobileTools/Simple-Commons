@@ -710,6 +710,17 @@
     <string name="no_entries_for_importing">Ühtegi importimiseks sobilikku kirjet ei leidu</string>
     <string name="no_new_entries_for_importing">Ühtegi uut kirjet importimiseks ei leidunud</string>
     <string name="no_entries_for_exporting">Ühtegi eksportimiseks sobilikku kirjet ei leidu</string>
+    <string name="backups">Varundus</string>
+    <string name="enable_automatic_backups">Kasuta automaatset varundust</string>
+    <string name="manage_automatic_backups">Halda automaatset varundust</string>
+    <string name="date_time_pattern_info">Failide nimede automaatsel loomisel saad kasutada järgnevaid asendusi:
+\n
+\n%Y - aasta
+\n%M - kuu
+\n%D - päev
+\n%h - tund
+\n%m - minut
+\n%s - sekund</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Tundub, et sinu nutiseadme küljes on USB-seade. Selleks, et seal asuvad failid oleks korrektselt loetavad, pead lubama täiendavad õigusi.</string>
@@ -782,6 +793,8 @@
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Tere,
 \n
 \nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist.

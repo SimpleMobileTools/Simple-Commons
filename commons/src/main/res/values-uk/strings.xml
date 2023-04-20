@@ -776,6 +776,17 @@
     <string name="no_entries_for_importing">Не знайдено елементів для імпортування</string>
     <string name="no_new_entries_for_importing">Не знайдено нові записи для імпортування</string>
     <string name="no_entries_for_exporting">Не знайдено елементів для експортування</string>
+    <string name="backups">Резервні копії</string>
+    <string name="enable_automatic_backups">Увімкнути автоматичне резервне копіювання</string>
+    <string name="manage_automatic_backups">Керувати автоматичними резервними копіями</string>
+    <string name="date_time_pattern_info">Ви можете використовувати наведені нижче шаблони для автоматичного присвоєння імені файлу:
+\n
+\n%Y - рік
+\n%M - місяць
+\n%D - день
+\n%h - година
+\n%m - хвилина
+\n%s - секунда</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Здається, до вашого пристрою приєднано USB-пристрій. Для коректного відображення його файлів вам необхідно надати додаткові дозволи.</string>
@@ -848,6 +859,8 @@
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Привіт,
 \n
 \nздається, ви щойно оновили безплатну версію. Коли ви задоволені цим і, можливо, перенесете свої дані, ви можете видалити старий безплатний, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
