@@ -12,10 +12,7 @@ import com.simplemobiletools.commons.databases.ContactsDatabase
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.ContactsDao
 import com.simplemobiletools.commons.interfaces.GroupsDao
-import com.simplemobiletools.commons.models.contacts.Contact
-import com.simplemobiletools.commons.models.contacts.ContactSource
-import com.simplemobiletools.commons.models.contacts.Organization
-import com.simplemobiletools.commons.models.contacts.SocialAction
+import com.simplemobiletools.commons.models.contacts.*
 import java.io.File
 
 val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applicationContext).ContactsDao()
@@ -23,12 +20,9 @@ val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applica
 val Context.groupsDB: GroupsDao get() = ContactsDatabase.getInstance(applicationContext).GroupsDao()
 
 fun Context.getEmptyContact(): Contact {
-    val originalContactSource = if (hasContactPermissions()) baseConfig.lastUsedContactSource else SMT_PRIVATE
-    val organization = Organization("", "")
-    return Contact(
-        0, "", "", "", "", "", "", "", ArrayList(), ArrayList(), ArrayList(), ArrayList(), originalContactSource, 0, 0, "",
-        null, "", ArrayList(), organization, ArrayList(), ArrayList(), DEFAULT_MIMETYPE, null
-    )
+    var emptyContact = getEmptyContact()
+    emptyContact.source = if (hasContactPermissions()) baseConfig.lastUsedContactSource else SMT_PRIVATE
+    return(emptyContact)
 }
 
 fun Context.sendAddressIntent(address: String) {
@@ -198,8 +192,8 @@ fun Context.sendEmailToContacts(contacts: ArrayList<Contact>) {
     val emails = ArrayList<String>()
     contacts.forEach {
         it.emails.forEach {
-            if (it.value.isNotEmpty()) {
-                emails.add(it.value)
+            if (it.address.isNotEmpty()) {
+                emails.add(it.address)
             }
         }
     }

@@ -506,10 +506,15 @@ open class BaseConfig(val context: Context) {
     var showContactFields: Int
         get() = prefs.getInt(
             SHOW_CONTACT_FIELDS,
-            SHOW_FIRST_NAME_FIELD or SHOW_SURNAME_FIELD or SHOW_PHONE_NUMBERS_FIELD or SHOW_EMAILS_FIELD or
-                SHOW_ADDRESSES_FIELD or SHOW_EVENTS_FIELD or SHOW_NOTES_FIELD or SHOW_GROUPS_FIELD or SHOW_CONTACT_SOURCE_FIELD
-        )
+            // SHOW_FIRST_NAME_FIELD or SHOW_SURNAME_FIELD or SHOW_PHONE_NUMBERS_FIELD or SHOW_EMAILS_FIELD or
+            //     SHOW_ADDRESSES_FIELD or SHOW_EVENTS_FIELD or SHOW_NOTES_FIELD or SHOW_GROUPS_FIELD or SHOW_CONTACT_SOURCE_FIELD
+            SHOW_DISPLAYNAME_FIELD or SHOW_FIRST_NAME_FIELD or SHOW_SURNAME_FIELD or
+                SHOW_PHONE_NUMBERS_FIELD or SHOW_EMAILS_FIELD or  SHOW_STRUCTURED_POSTAL_ACTIVE_ADDRESS_MASK or
+                SHOW_EVENTS_FIELD or SHOW_NOTES_FIELD or SHOW_WEBSITES_FIELD or SHOW_GROUPS_FIELD or SHOW_CONTACT_SOURCE_FIELD
+
+            )
         set(showContactFields) = prefs.edit().putInt(SHOW_CONTACT_FIELDS, showContactFields).apply()
+
     var showDialpadButton: Boolean
         get() = prefs.getBoolean(SHOW_DIALPAD_BUTTON, true)
         set(showDialpadButton) = prefs.edit().putBoolean(SHOW_DIALPAD_BUTTON, showDialpadButton).apply()

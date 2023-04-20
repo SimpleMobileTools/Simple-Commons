@@ -10,6 +10,7 @@ import androidx.annotation.ChecksSdkIntAtLeast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.normalizeString
 import com.simplemobiletools.commons.models.contacts.LocalContact
+import com.simplemobiletools.commons.models.contacts.Organization
 import com.simplemobiletools.commons.overloads.times
 
 const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
@@ -571,14 +572,39 @@ const val SHOW_WEBSITES_FIELD = 8192
 const val SHOW_NICKNAME_FIELD = 16384
 const val SHOW_IMS_FIELD = 32768
 const val SHOW_RINGTONE_FIELD = 65536
+const val SHOW_DISPLAYNAME_FIELD  = 1.shl(16)
+const val SHOW_PHONETIC_NAME_FIELDS = 1.shl(17)
+const val SHOW_NICKNAME_TYPES     = 1.shl(18)
+const val SHOW_MULTIPLE_NICKNAMES = 1.shl(19)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_STREET  = 1.shl(20)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_EXTADDR = 1.shl(21)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_POBOX   = 1.shl(22)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_CITY    = 1.shl(23)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_REGION  = 1.shl(24)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_POSTCODE= 1.shl(25)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_COUNTRY = 1.shl(26)
+const val SHOW_STRUCTURED_POSTAL_ACTIVE_ADDRESS_MASK = (SHOW_STRUCTURED_POSTAL_ADDRESS_STREET or
+    SHOW_STRUCTURED_POSTAL_ADDRESS_CITY or SHOW_STRUCTURED_POSTAL_ADDRESS_REGION or SHOW_STRUCTURED_POSTAL_ADDRESS_POSTCODE or
+    SHOW_STRUCTURED_POSTAL_ADDRESS_COUNTRY)
+const val SHOW_STRUCTURED_POSTAL_ADDRESS_MASK = (SHOW_STRUCTURED_POSTAL_ADDRESS_STREET or SHOW_STRUCTURED_POSTAL_ADDRESS_EXTADDR or
+    SHOW_STRUCTURED_POSTAL_ADDRESS_POBOX or
+    SHOW_STRUCTURED_POSTAL_ADDRESS_CITY or SHOW_STRUCTURED_POSTAL_ADDRESS_REGION or SHOW_STRUCTURED_POSTAL_ADDRESS_POSTCODE or
+    SHOW_STRUCTURED_POSTAL_ADDRESS_COUNTRY)
+const val SHOW_RELATIONS_FIELD = 1.shl(27)
 
-const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
+const val DEFAULT_NICKNAME_TYPE = ContactsContract.CommonDataKinds.Nickname.TYPE_DEFAULT
 const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
+const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
 const val DEFAULT_ADDRESS_TYPE = ContactsContract.CommonDataKinds.StructuredPostal.TYPE_HOME
+const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.TYPE_HOME
+// const val DEFAULT_IM_PROTOCOL = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
+const val DEFAULT_IM_PROTOCOL = ContactsContract.CommonDataKinds.Im.PROTOCOL_JABBER
+// const val DEFAULT_IM_PROTOCOL = IM.PROTOCOL_MATRIX
 const val DEFAULT_EVENT_TYPE = ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY
 const val DEFAULT_ORGANIZATION_TYPE = ContactsContract.CommonDataKinds.Organization.TYPE_WORK
 const val DEFAULT_WEBSITE_TYPE = ContactsContract.CommonDataKinds.Website.TYPE_HOMEPAGE
-const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
+const val DEFAULT_RELATION_TYPE = ContactsContract.CommonDataKinds.Relation.TYPE_FRIEND
+
 const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
 
 // contact photo changes
@@ -610,19 +636,23 @@ fun getEmptyLocalContact() = LocalContact(
     "",
     "",
     "",
+    "",
+    "",
+    "",
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
+    "",
+    Organization.getEmptyOrganization(), "",
+    ArrayList(),
+    ArrayList(),
+    ArrayList(),
     null,
     "",
-    ArrayList(),
-    ArrayList(),
-    ArrayList(),
     0,
-    ArrayList(),
-    "",
-    ArrayList(),
-    "",
-    "",
-    ArrayList(),
-    ArrayList(),
     null
 )
 
