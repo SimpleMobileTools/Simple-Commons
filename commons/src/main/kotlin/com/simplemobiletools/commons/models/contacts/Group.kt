@@ -14,6 +14,8 @@ data class Group(
     @ColumnInfo(name = "contacts_count") var contactsCount: Int = 0
 ) : Serializable {
 
+    fun deepCopy(): Group = Group(id, title, contactsCount)
+
     fun addContact() = contactsCount++
 
     fun getBubbleText() = title

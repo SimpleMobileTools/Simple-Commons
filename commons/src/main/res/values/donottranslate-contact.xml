@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- InstantMsg labels are used to store non-standard
+         IM types in the Android ContactContract IM storage.
+         They are never displayed! -->
+    <string name="im_label_sip">sip</string>
+    <string name="im_label_irc">irc</string>
+
+    <string name="im_label_matrix">matrix.org</string>
+    <string name="im_label_mastodon">mastodon.social</string>
+    <string name="im_label_signal">signal.org</string>
+    <string name="im_label_telegram">telegram.org</string>
+    <string name="im_label_diaspora">diasporafoundation.org</string>
+    <string name="im_label_viber">viber.com</string>
+    <string name="im_label_threema">threema.ch</string>
+    <string name="im_label_discord">discord.com</string>
+    <string name="im_label_mumble">mumble.info</string>
+    <string name="im_label_olvid">olvid.io</string>
+    <string name="im_label_teamspeak">teamspeak.com</string>
+    <string name="im_label_facebook">facebook.com</string>
+    <string name="im_label_instagram">instagram.com</string>
+    <string name="im_label_whatsapp">whatsapp.com</string>
+    <string name="im_label_twitter">twitter.com"</string>
+    <string name="im_label_wechat">wechat.com</string>
+    <string name="im_label_weibo">weibo.com</string>
+    <string name="im_label_tiktok">tiktok.com</string>
+    <string name="im_label_tumblr">tumblr.com</string>
+    <string name="im_label_flickr">flickr.com</string>
+    <string name="im_label_linkedin">linkedin.com</string>
+    <string name="im_label_xing">xing.com</string>
+    <string name="im_label_kik">kik.com</string>
+    <string name="im_label_line">line.me</string>
+    <string name="im_label_kakaotalk">kakaocorp.com</string>
+    <string name="im_label_zoom">zoom.us</string>
+    <string name="im_label_github">github.com</string>
+    <string name="im_label_googleplus">plus.google.com</string>
+    <string name="im_label_pinterest">pinterest.com</string>
+    <string name="im_label_qzone">qzone.qq.com</string>
+    <string name="im_label_youtube">youtube.com</string>
+    <string name="im_label_snapchat">snapchat.com</string>
+    <string name="im_label_teams">teams.microsoft.com</string>
+    <string name="im_label_googlemeet">workspace.google.com</string>
+    <string name="im_label_teamviewermeet">teamviewer.com</string>
+    <string name="im_label_nextcloudtalk">nextcloud.com</string>
+    <string name="im_label_slack">slack.com</string>
+    <string name="im_label_jitsi">jitsi.org</string>
+    <string name="im_label_webex">webex.com</string>
+    <string name="im_label_gotomeeting">goto.com</string>
+    <string name="im_label_bigbluebutton">bigbluebutton.org</string>
+
+    <!-- Relation labels are used to store non-standard
+         relation types in the Android ContactContract
+         relation storage. They are never displayed! -->
+    <!-- Android ContactContract.Relation types - Not strictly needed, we have standard types!! -->
+    <string name="relation_label_assistant">assistant</string>
+    <string name="relation_label_brother">brother</string>
+    <string name="relation_label_child">child</string>
+    <string name="relation_label_domestic_partner">domestic_partner</string>
+    <string name="relation_label_father">father</string>
+    <string name="relation_label_friend">friend</string>
+    <string name="relation_label_manager">manager</string>
+    <string name="relation_label_mother">mother</string>
+    <string name="relation_label_parent">parent</string>
+    <string name="relation_label_partner">partner</string>
+    <string name="relation_label_referred_by">referred_by</string>
+    <string name="relation_label_relative">relative</string>
+    <string name="relation_label_sister">sister</string>
+    <string name="relation_label_spouse">spouse</string>
+    <!-- vCard 4.0 relation types -->
+    <string name="relation_label_contact">contact</string>
+    <string name="relation_label_acquaintance">acquaintance</string>
+    <string name="relation_label_met">met</string>
+    <string name="relation_label_co_worker">co_worker</string>
+    <string name="relation_label_colleague">colleague</string>
+    <string name="relation_label_co_resident">co_resident</string>
+    <string name="relation_label_neighbor">neighbor</string>
+    <string name="relation_label_sibling">sibling</string>
+    <string name="relation_label_kin">kin</string>
+    <string name="relation_label_kin_alt">relative</string>
+    <string name="relation_label_muse">muse</string>
+    <string name="relation_label_crush">crush</string>
+    <string name="relation_label_date">date</string>
+    <string name="relation_label_sweetheart">sweetheart</string>
+    <string name="relation_label_me">me</string>
+    <string name="relation_label_agent">agent</string>
+    <string name="relation_label_emergency">emergency</string>
+    <!-- Additional relation types -->
+    <string name="relation_label_superior">superior</string>
+    <string name="relation_label_subordinate">subordinate</string>
+    <string name="relation_label_husband">husband</string>
+    <string name="relation_label_wife">wife</string>
+    <string name="relation_label_son">son</string>
+    <string name="relation_label_daughter">daughter</string>
+    <string name="relation_label_grandparent">grandparent</string>
+    <string name="relation_label_grandfather">grandfather</string>
+    <string name="relation_label_grandmother">grandmother</string>
+    <string name="relation_label_grandchild">grandchild</string>
+    <string name="relation_label_grandson">grandson</string>
+    <string name="relation_label_granddaughter">granddaughter</string>
+    <string name="relation_label_uncle">uncle</string>
+    <string name="relation_label_aunt">aunt</string>
+    <string name="relation_label_nephew">nephew</string>
+    <string name="relation_label_niece">niece</string>
+    <string name="relation_label_father_in_law">father_in_law</string>
+    <string name="relation_label_mother_in_law">mother_in_law</string>
+    <string name="relation_label_son_in_law">son_in_law</string>
+    <string name="relation_label_daughter_in_law">daughter_in_law</string>
+    <string name="relation_label_brother_in_law">brother_in_law</string>
+    <string name="relation_label_sister_in_law">sister_in_law</string>
+</resources>

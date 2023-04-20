@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.databases
 
 import android.content.Context
+import android.graphics.Bitmap
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -12,12 +13,12 @@ import com.simplemobiletools.commons.helpers.FIRST_CONTACT_ID
 import com.simplemobiletools.commons.helpers.FIRST_GROUP_ID
 import com.simplemobiletools.commons.helpers.getEmptyLocalContact
 import com.simplemobiletools.commons.interfaces.ContactsDao
-import com.simplemobiletools.commons.models.contacts.Group
-import com.simplemobiletools.commons.models.contacts.LocalContact
 import com.simplemobiletools.commons.interfaces.GroupsDao
+import com.simplemobiletools.commons.models.PhoneNumber
+import com.simplemobiletools.commons.models.contacts.*
 import java.util.concurrent.Executors
 
-@Database(entities = [LocalContact::class, Group::class], version = 3)
+@Database(entities = [LocalContact::class, Group::class], version = 4)
 @TypeConverters(Converters::class)
 abstract class ContactsDatabase : RoomDatabase() {
 
@@ -41,6 +42,7 @@ abstract class ContactsDatabase : RoomDatabase() {
                             })
                             .addMigrations(MIGRATION_1_2)
                             .addMigrations(MIGRATION_2_3)
+                            .addMigrations(MIGRATION_3_4)
                             .build()
                     }
                 }
@@ -83,6 +85,17 @@ abstract class ContactsDatabase : RoomDatabase() {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.apply {
                     execSQL("ALTER TABLE contacts ADD COLUMN ringtone TEXT DEFAULT ''")
+                }
+            }
+        }
+
+        private val MIGRATION_3_4 = object : Migration(3, 4) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.apply {
+                    execSQL("ALTER TABLE contacts ADD COLUMN display_name TEXT NOT NULL DEFAULT ''")
+                    execSQL("ALTER TABLE contacts ADD COLUMN phonetic_given_name TEXT NOT NULL DEFAULT ''")
+                    execSQL("ALTER TABLE contacts ADD COLUMN phonetic_middle_name TEXT NOT NULL DEFAULT ''")
+                    execSQL("ALTER TABLE contacts ADD COLUMN phonetic_family_name TEXT NOT NULL DEFAULT ''")
                 }
             }
         }

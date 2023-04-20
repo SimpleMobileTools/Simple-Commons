@@ -99,28 +99,28 @@ class LocalContactsHelper(val context: Context) {
 
         return context.getEmptyContact().apply {
             id = localContact.id!!
-            prefix = localContact.prefix
-            firstName = localContact.firstName
-            middleName = localContact.middleName
-            surname = localContact.surname
-            suffix = localContact.suffix
-            nickname = localContact.nickname
+            name = ContactName(localContact.displayName,
+                    localContact.prefix, localContact.firstName, localContact.middleName, localContact.surname, localContact.suffix,
+                    localContact.phoneticGivenName, localContact.phoneticMiddleName, localContact.phoneticFamilyName)
+            nicknames = localContact.nicknames
             phoneNumbers = localContact.phoneNumbers
             emails = localContact.emails
             addresses = localContact.addresses
+            IMs = localContact.IMs
             events = localContact.events
-            source = SMT_PRIVATE
-            starred = localContact.starred
-            contactId = localContact.id!!
+            notes = localContact.notes
+            organization = localContact.organization
+            websites = localContact.websites
+            relations = localContact.relations
+            groups = storedGroups.filter { localContact.groups.contains(it.id) } as ArrayList<Group>
             thumbnailUri = ""
             photo = contactPhoto
             photoUri = localContact.photoUri
-            notes = localContact.notes
-            groups = storedGroups.filter { localContact.groups.contains(it.id) } as ArrayList<Group>
-            organization = Organization(localContact.company, localContact.jobPosition)
-            websites = localContact.websites
-            IMs = localContact.IMs
+            starred = localContact.starred
             ringtone = localContact.ringtone
+            contactId = localContact.id!!
+            source = SMT_PRIVATE
+            mimetype = DEFAULT_MIMETYPE
         }
     }
 
@@ -133,24 +133,27 @@ class LocalContactsHelper(val context: Context) {
 
         return getEmptyLocalContact().apply {
             id = if (contact.id <= FIRST_CONTACT_ID) null else contact.id
-            prefix = contact.prefix
-            firstName = contact.firstName
-            middleName = contact.middleName
-            surname = contact.surname
-            suffix = contact.suffix
-            nickname = contact.nickname
-            photo = photoByteArray
+            displayName = contact.name.formattedName
+            prefix = contact.name.prefix
+            firstName = contact.name.givenName
+            middleName = contact.name.middleName
+            surname = contact.name.familyName
+            suffix = contact.name.suffix
+            nicknames = contact.nicknames
             phoneNumbers = contact.phoneNumbers
             emails = contact.emails
-            events = contact.events
-            starred = contact.starred
             addresses = contact.addresses
-            notes = contact.notes
-            groups = contact.groups.map { it.id }.toMutableList() as ArrayList<Long>
-            company = contact.organization.company
-            jobPosition = contact.organization.jobPosition
-            websites = contact.websites
             IMs = contact.IMs
+            events = contact.events
+            notes = contact.notes
+            organization = contact.organization
+            jobPosition = ""  // Obsolete
+            websites = contact.websites
+            relations = contact.relations
+            groups = contact.groups.map { it.id }.toMutableList() as ArrayList<Long>
+            photo = photoByteArray
+            photoUri = contact.photoUri
+            starred = contact.starred
             ringtone = contact.ringtone
         }
     }
@@ -159,12 +162,12 @@ class LocalContactsHelper(val context: Context) {
         convertContactToSimpleContact(it, withPhoneNumbersOnly)
     }
     companion object{
-        fun convertContactToSimpleContact(contact: Contact?, withPhoneNumbersOnly: Boolean): SimpleContact?{
-            return if (contact == null || (withPhoneNumbersOnly && contact.phoneNumbers.isEmpty())) {
+        fun convertContactToSimpleContact(contact: Contact?, withPhoneNumbersOnly: Boolean): SimpleContact? {
+            return if ((contact == null) || (withPhoneNumbersOnly && contact.phoneNumbers.isEmpty())) {
                 null
             } else {
-                val birthdays = contact.events.filter { it.type == Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
-                val anniversaries = contact.events.filter { it.type == Event.TYPE_ANNIVERSARY }.map { it.value }.toMutableList() as ArrayList<String>
+                val birthdays = contact.events.filter { it.type == Event.TYPE_BIRTHDAY }.map { it.startDate }.toMutableList() as ArrayList<String>
+                val anniversaries = contact.events.filter { it.type == Event.TYPE_ANNIVERSARY }.map { it.startDate }.toMutableList() as ArrayList<String>
                 SimpleContact(contact.id, contact.id, contact.getNameToDisplay(), contact.photoUri, contact.phoneNumbers, birthdays, anniversaries)
             }
         }
