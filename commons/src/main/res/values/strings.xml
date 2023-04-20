@@ -77,6 +77,13 @@
     <string name="phone_storage">Phone storage</string>
     <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
 
+    <!-- Nicknames -->
+    <string name="nickname_default">Default</string>
+    <string name="nickname_other_name">Alias</string>
+    <string name="nickname_maiden_name">Maiden name</string>
+    <string name="nickname_short_name">Short name</string>
+    <string name="nickname_initials">Initials</string>
+
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
     <string name="main_number">Main</string>
@@ -85,21 +92,11 @@
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">No phone number has been found</string>
 
-    <!-- InstantMsg - See. DoNotTranslate.xml -->
-    <string name="instantmsg_assistant">Assistant</string>
-
-    <!-- Nicknames -->
-    <string name="nickname_default">Default</string>
-    <string name="nickname_other_name">Alias</string>
-    <string name="nickname_maiden_name">Maiden name</string>
-    <string name="nickname_short_name">Short name</string>
-    <string name="nickname_initials">Initials</string>
-
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Work</string>
 
-    <!-- Addresses -->
+    <!-- Postal Addresses -->
     <!-- Building a formatted address from a ContactsContract.CommonDataKinds.StructuredPostal address
          Address field:
             %A Streetaddress
@@ -120,6 +117,8 @@
           Empty lines are eliminated
           -->
     <string name="address_format">%A%n%D%n%B%n{%C}[, ]{%S}[ ]{%Z}%n%N%n</string>
+
+    <!-- InstantMsg - Currently no strings -->
 
     <!-- Events -->
     <string name="birthday">Birthday</string>

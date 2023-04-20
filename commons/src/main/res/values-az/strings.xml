@@ -72,17 +72,17 @@
     <string name="choose_file">Choose file</string>
     <string name="record_audio">Record audio</string>
     <string name="record_video">Record video</string>
+    <string name="inserting">Daxil edilir…</string>
     <string name="updating">Yenilənir…</string>
     <string name="phone_storage">Telefon yaddaşı</string>
     <string name="phone_storage_hidden">Telefon yaddaşı (digər tətbiqlərə görünmür)</string>
 
-    <!-- Events -->
-    <string name="birthday">Ad günü</string>
-    <string name="anniversary">İl dönümü</string>
-
-    <!-- Emails -->
-    <string name="home">Ev</string>
-    <string name="work">İş</string>
+    <!-- Nicknames -->
+    <string name="nickname_default">Default</string>
+    <string name="nickname_other_name">Alias</string>
+    <string name="nickname_maiden_name">Maiden name</string>
+    <string name="nickname_short_name">Short name</string>
+    <string name="nickname_initials">Initials</string>
 
     <!-- Phone numbers -->
     <string name="mobile">Mobil</string>
@@ -91,6 +91,102 @@
     <string name="home_fax">Ev Faksı</string>
     <string name="pager">Zəng cihazı</string>
     <string name="no_phone_number_found">Heçbir telefon nömrəsi tapılmadı</string>
+
+    <!-- Emails -->
+    <string name="home">Ev</string>
+    <string name="work">İş</string>
+
+    <!-- Postal Addresses -->
+    <!-- Building a formatted address from a ContactsContract.CommonDataKinds.StructuredPostal address
+         Address field:
+            %A Streetaddress
+            %D Neighborhood
+            %B POBox
+            %C City
+            %S State/Region
+            %Z PostalCode
+            %N Nation/Country
+            %% %
+            %n NewLine
+          Segment limiters: { }
+            Segments that do not contain any (non-empty) address fields are eliminated
+            Other characters are copied verbatim
+            multiple consecutive spaces are combined to a single space
+          Separator limiters: []
+            Separators that are not followed by a non-empty segment are eliminated
+          Empty lines are eliminated
+          -->
+    <string name="address_format">%A%n%D%n%B%n{%C}[, ]{%S}[ ]{%Z}%n%N%n</string>
+
+    <!-- InstantMsg - Currently no strings -->
+
+    <!-- Events -->
+    <string name="birthday">Ad günü</string>
+    <string name="anniversary">İl dönümü</string>
+
+    <!-- Websites -->
+    <string name="website_homepage">Homepage</string>
+    <string name="website_blog">Blog</string>
+    <string name="website_profile">Profile</string>
+    <string name="website_ftp">FTP</string>
+
+    <!-- Relations -->
+    <!-- Android ContactContract.Relation types -->
+    <string name="relation_assistant">Assistant</string>
+    <string name="relation_brother">Brother</string>
+    <string name="relation_child">Child</string>
+    <string name="relation_domestic_partner">Domestic Partner</string>
+    <string name="relation_father">Father</string>
+    <string name="relation_friend">Friend</string>
+    <string name="relation_manager">Manager</string>
+    <string name="relation_mother">Mother</string>
+    <string name="relation_parent">Parent</string>
+    <string name="relation_partner">Partner</string>
+    <string name="relation_referred_by">Referred by</string>
+    <string name="relation_relative">Relative</string>
+    <string name="relation_sister">Sister</string>
+    <string name="relation_spouse">Spouse</string>
+    <!-- vCard 4.0 relation types -->
+    <string name="relation_contact">Contact</string>
+    <string name="relation_acquaintance">Acquaintance</string>
+    <string name="relation_met">Met</string>
+    <string name="relation_co_worker">Co-worker</string>
+    <string name="relation_colleague">Colleague</string>
+    <string name="relation_co_resident">Co-resident</string>
+    <string name="relation_neighbor">Neighbor</string>
+    <string name="relation_sibling">Sibling</string>
+    <string name="relation_kin">Kin</string>
+    <string name="relation_kin_alt">Relative</string>
+    <string name="relation_muse">Muse</string>
+    <string name="relation_crush">Crush</string>
+    <string name="relation_date">Date</string>
+    <string name="relation_sweetheart">Sweetheart</string>
+    <string name="relation_me">Me</string>
+    <string name="relation_agent">Agent</string>
+    <string name="relation_emergency">Emergency Contact</string>
+    <!-- Additional relation types -->
+    <string name="relation_superior">Boss</string>
+    <string name="relation_subordinate">Subordinate</string>
+    <string name="relation_husband">Husband</string>
+    <string name="relation_wife">Wife</string>
+    <string name="relation_son">Son</string>
+    <string name="relation_daughter">Daughter</string>
+    <string name="relation_grandparent">Grandparent</string>
+    <string name="relation_grandfather">Grandfather</string>
+    <string name="relation_grandmother">Grandmother</string>
+    <string name="relation_grandchild">Grandchild</string>
+    <string name="relation_grandson">Grandson</string>
+    <string name="relation_granddaughter">Granddaughter</string>
+    <string name="relation_uncle">Uncle</string>
+    <string name="relation_aunt">Aunt</string>
+    <string name="relation_nephew">Nephew</string>
+    <string name="relation_niece">Niece</string>
+    <string name="relation_father_in_law">Father-in-law</string>
+    <string name="relation_mother_in_law">Mother-in-law</string>
+    <string name="relation_son_in_law">Son-in-law</string>
+    <string name="relation_daughter_in_law">Daughter-in-law</string>
+    <string name="relation_brother_in_law">Brother-in-law</string>
+    <string name="relation_sister_in_law">Sister-in-law</string>
 
     <!-- View types -->
     <string name="change_view_type">Change view type</string>
