@@ -94,9 +94,7 @@ class MyContactsContentProvider {
                             val contact = Contact(
                                 id = rawId,
                                 contactId = contactId,
-                                firstName = firstName,
-                                middleName = middleName,
-                                surname = surname,
+                                name = ContactName("", "", firstName, middleName, surname, "", "", "", ""),
                                 photoUri = photoUri,
                                 phoneNumbers = phoneNumbers,
                                 source = SMT_PRIVATE
