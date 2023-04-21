@@ -31,8 +31,8 @@ data class Contact(
     var source: String= "",
     var mimetype: String = ""
 ) : Comparable<Contact> {
-    // val rawId = id
-    // val displayname = getNameToDisplay(contactListShowFormattedName, contactListNameFormat)
+    val rawId = id
+    val displayname = getNameToDisplay(contactListShowFormattedName, contactListNameFormat)
     var birthdays = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY }.map { it.startDate }.toMutableList() as ArrayList<String>
     var anniversaries = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_ANNIVERSARY }.map { it.startDate }.toMutableList() as ArrayList<String>
 
