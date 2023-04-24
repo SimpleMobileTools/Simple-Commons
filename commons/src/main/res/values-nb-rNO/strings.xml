@@ -35,8 +35,8 @@
     <string name="transparent_color">Transparent color</string>
     <string name="select_a_different_color">Select a different color</string>
     <string name="download">Download</string>
-    <string name="notification">Notification</string>
-    <string name="notifications">Notifications</string>
+    <string name="notification">Varsel</string>
+    <string name="notifications">Varsler</string>
     <string name="email">Email</string>
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
@@ -106,7 +106,7 @@
         <item quantity="other">%d columns</item>
     </plurals>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
+    <string name="manage_blocked_numbers">Håndter blokkerte numre</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
     <string name="add_a_blocked_number">Add a blocked number</string>
     <string name="block_number">Block number</string>
@@ -321,7 +321,7 @@
     <string name="discard">Forkast</string>
     <string name="undo_changes">Angre endringer</string>
     <string name="undo_changes_confirmation">Er du sikker på at du vil angre dine endringer?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Denne handlingen kan ikke angres.</string>
     <string name="save_before_closing">Du har endringer som ikke er lagret. Lagre før du avslutter?</string>
     <string name="apply_to_all_apps">Bruk fargene i alle Simple Apps</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
@@ -612,7 +612,7 @@
     <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Tilpass modulfarger</string>
     <string name="customize_notifications">Tilpass varsler</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Varslingslyd</string>
     <string name="use_english_language">Bruk engelsk språk</string>
     <string name="language">Language</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
@@ -1068,7 +1068,7 @@
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">

@@ -159,7 +159,7 @@
     <string name="no_camera_permissions">Potrebno je dopuštenje za kameru</string>
     <string name="no_audio_permissions">Potrebno je dopuštenje za zvuk</string>
     <string name="no_post_notifications_permissions">Potrebna je dozvola za objavljivanje obavijesti</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">Bez dozvole</string>
     <!-- Renaming -->
     <string name="rename_file">Preimenuj datoteku</string>
     <string name="rename_folder">Preimenuj mapu</string>
@@ -362,13 +362,13 @@
     <string name="whats_new_disclaimer">* samo velika ažuriranja su ovdje izlistana, ali i mala ažuriranja su također prisutna</string>
     <!-- Actionbar items -->
     <string name="delete">Izbriši</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Ukloni</string>
     <string name="rename">Preimenuj</string>
     <string name="share">Dijeli</string>
     <string name="share_via">Dijeli preko</string>
     <string name="resize">Promjeni veličinu</string>
     <string name="select_all">Odaberi sve</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Odaberi tekst</string>
     <string name="hide">Sakrij</string>
     <string name="unhide">Otkrij</string>
     <string name="hide_folder">Sakrij mapu</string>
@@ -376,16 +376,16 @@
     <string name="temporarily_show_hidden">Privremeno prikaži skriveno</string>
     <string name="stop_showing_hidden">Zaustavi prikazivanje skrivenih stavki</string>
     <string name="maximum_share_reached">Nije moguće dijeliti ovoliko stavki odjednom</string>
-    <string name="empty_and_disable_recycle_bin">Ispraznite i onemogućite koš za smeće</string>
-    <string name="undo">Poništi promjenu</string>
-    <string name="redo">Ponovi promjenu</string>
-    <string name="print">Print</string>
-    <string name="print_pro">Print (Pro)</string>
-    <string name="shortcut">Shortcut</string>
-    <string name="create_shortcut">Create shortcut</string>
-    <string name="create_shortcut_pro">Create shortcut (Pro)</string>
-    <string name="add_number_to_contact">Add number to contact</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="empty_and_disable_recycle_bin">Isprazni i onemogući koš za smeće</string>
+    <string name="undo">Poništi</string>
+    <string name="redo">Ponovi</string>
+    <string name="print">Ispiši</string>
+    <string name="print_pro">Ispiši (Pro)</string>
+    <string name="shortcut">Prečac</string>
+    <string name="create_shortcut">Stvori prečac</string>
+    <string name="create_shortcut_pro">Stvori prečac (Pro)</string>
+    <string name="add_number_to_contact">Dodaj broj kontaktu</string>
+    <string name="view_contact_details">Prikaži detalje kontakta</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Uključi prikaz naziva datoteka</string>
