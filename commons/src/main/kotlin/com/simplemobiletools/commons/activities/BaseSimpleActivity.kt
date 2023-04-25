@@ -228,22 +228,22 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 updateTopBottomInsets(statusBarHeight, navigationBarHeight)
-                onApplyWindowInsets {
-                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
-                    updateTopBottomInsets(insets.top, insets.bottom)
-                }
             } else {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 updateTopBottomInsets(0, 0)
             }
+            onApplyWindowInsets {
+                val insets = it.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
+                updateTopBottomInsets(insets.top, insets.bottom)
+            }
         }
     }
 
-    private fun updateTopBottomInsets(statusBarHeight: Int, navigationBarHeight: Int) {
+    private fun updateTopBottomInsets(top: Int, bottom: Int) {
         nestedView?.run {
-            setPadding(paddingLeft, paddingTop, paddingRight, navigationBarHeight)
+            setPadding(paddingLeft, paddingTop, paddingRight, bottom)
         }
-        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = top
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
