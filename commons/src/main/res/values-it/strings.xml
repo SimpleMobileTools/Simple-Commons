@@ -828,9 +828,21 @@
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
     <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Ciao,
+\n
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa versione e magari hai migrato le tue impostazioni e i tuoi preferiti, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più.
+\n
+\nGrazie!</string>
+    <string name="upgraded_to_pro_gallery">Ciao,
+\n
+\nsembra che tu abbia già la versione Pro dell\'app. Una volta che sarai soddisfatto e magari avrai migrato le tue impostazioni e i tuoi preferiti, potrai disinstallare questa versione per evitare di avviarla accidentalmente, dato che non ti servirà più.
+\n
+\nGrazie!</string>
+    <string name="upgraded_from_free">Ciao,
+\n
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa e magari hai migrato i tuoi dati, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più.
+\n
+\nGrazie!</string>
     <string name="upgraded_to_pro">Salve,
 \n
 \nsembra che tu abbia già anche la versione Pro dell\'app. Una volta che sarai soddisfatto e avrai migrato i tuoi dati, potrai disinstallare questa versione per evitare di lanciarla accidentalmente, dato che non ti servirà più.
@@ -1120,7 +1132,7 @@
     <!-- Trial -->
     <string name="trial_expired">Prova scaduta</string>
     <string name="start_free_trial">Inizia la prova gratuita</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
+    <string name="trial_expires_soon">Il periodo di prova sta per scadere.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Benvenuti su %s!</string>
     <string name="trial_start_description">Grazie per aver utilizzato la nostra applicazione. È possibile utilizzare questa versione sbloccata per <font color="#FFFFFF">%d giorni</font>. Una volta terminata la prova, vi invitiamo a considerare l\'aggiornamento alla versione Pro. Questa versione offre un\'enorme quantità di nuove funzioni, un design moderno, l\'assenza di pubblicità e molti altri miglioramenti.
