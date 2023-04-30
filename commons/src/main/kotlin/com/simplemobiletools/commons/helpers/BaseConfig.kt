@@ -466,7 +466,7 @@ open class BaseConfig(val context: Context) {
         set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()
 
     // color picker last used colors
-    internal var colorPickerRecentColors: LinkedList<Int>
+    var colorPickerRecentColors: LinkedList<Int>
         get(): LinkedList<Int> {
             val defaultList = arrayListOf(
                 context.resources.getColor(R.color.md_red_700),
