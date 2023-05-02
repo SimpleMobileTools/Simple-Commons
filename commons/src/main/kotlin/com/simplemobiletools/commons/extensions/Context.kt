@@ -1076,3 +1076,15 @@ fun Context.sendEmailIntent(recipient: String) {
         launchActivityIntent(this)
     }
 }
+fun Context.openNotificationSettings() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+        intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+        startActivity(intent)
+    } else {
+        // For Android versions below Lollipop, you can't directly open the app's notification settings.
+        // You can open the general notification settings instead.
+        val intent = Intent(Settings.ACTION_SETTINGS)
+        startActivity(intent)
+    }
+}
