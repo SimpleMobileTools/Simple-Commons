@@ -210,7 +210,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         mainCoordinatorLayout: CoordinatorLayout?,
         nestedView: View?,
         useTransparentNavigation: Boolean,
-        useTopSearchMenu: Boolean
+        useTopSearchMenu: Boolean,
     ) {
         this.mainCoordinatorLayout = mainCoordinatorLayout
         this.nestedView = nestedView
@@ -975,7 +975,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        toast(R.string.no_post_notifications_permissions, Toast.LENGTH_LONG)
+                        PermissionRequiredDialog(this, messageId = R.string.no_post_notifications_permissions) {
+                            openNotificationSettings()
+                        }
                     }
                 }
             }
