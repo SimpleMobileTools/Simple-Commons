@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">Ados</string>
     <string name="cancel">Utzi</string>
@@ -75,14 +76,12 @@
     <string name="phone_storage">Telefono memoria</string>
     <string name="phone_storage_hidden">Telefono memoria (beste aplikazioentzat ikustezina)</string>
     <string name="audio">Audio</string>
-
     <!-- Events -->
     <string name="birthday">Urtebetetzea</string>
     <string name="anniversary">Urteurrena</string>
     <!-- Emails -->
     <string name="home">Etxea</string>
     <string name="work">Lana</string>
-
     <!-- Phone numbers -->
     <string name="mobile">Mugikorra</string>
     <string name="main_number">Nagusia</string>
@@ -107,7 +106,6 @@
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
     </plurals>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Kudeatu blokeatutako zenbakiak</string>
     <string name="not_blocking_anyone">Ez duzu inor blokeatu.</string>
@@ -124,13 +122,11 @@
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
-
     <!-- Favorites -->
     <string name="favorites">Gogokoak</string>
     <string name="add_favorites">Gehitu gogokoak</string>
     <string name="add_to_favorites">Gehitu gogokoetara</string>
     <string name="remove_from_favorites">Kendu gogokoetatik</string>
-
     <!-- Search -->
     <string name="search">Bilatu</string>
     <string name="search_in_placeholder">Search in %s</string>
@@ -139,7 +135,7 @@
     <string name="search_favorites">Search favorites</string>
     <string name="search_apps">Search apps</string>
     <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
+    <string name="search_groups">Bilatu taldeak</string>
     <string name="search_history">Search history</string>
     <string name="search_calls">Search calls</string>
     <string name="search_files">Search files</string>
@@ -152,13 +148,11 @@
     <string name="search_text">Search text</string>
     <string name="search_conversations">Search conversations</string>
     <string name="search_recordings">Search recordings</string>
-
     <!-- Filters -->
     <string name="filter">Iragazkia</string>
     <string name="filter_pro">Iragazkia (Pro)</string>
     <string name="no_items_found">Elementurik ez da aurkitu.</string>
     <string name="change_filter">Aldatu iragazkia</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Biltegiratzerako baimena behar da</string>
     <string name="no_contacts_permission">Kontaktuetarako baimena behar da</string>
@@ -166,7 +160,6 @@
     <string name="no_audio_permissions">Audiorako baimena behar da</string>
     <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
     <string name="no_permission">No permission</string>
-
     <!-- Renaming -->
     <string name="rename_file">Berrizendatu fitxategia</string>
     <string name="rename_folder">Berrizendatu karpeta</string>
@@ -192,7 +185,6 @@
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="filename_without_zip">Filename (without .zip)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Kopiatu</string>
     <string name="move">Mugitu</string>
@@ -223,7 +215,6 @@
     <string name="no_new_items">Ez da elementu berririk aurkitu</string>
     <string name="no_space">Helburuak ez du espazio nahikorik.\n%1$s behar da, %2$s erabilgarri</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">Sortu berria</string>
     <string name="folder">Karpeta</string>
@@ -233,7 +224,6 @@
     <string name="invalid_name">Izenak baliogabeko karaktereak ditu</string>
     <string name="empty_name">Sartu izena</string>
     <string name="unknown_error_occurred">Errore ezezaguna gertatu da</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">\"%s\" fitxategia jada badago</string>
     <string name="file_already_exists_overwrite">\"%s\" fitxategia jada badago. Gainidatzi?</string>
@@ -249,7 +239,6 @@
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <string name="cannot_rename_folder">Cannot rename this folder</string>
-
     <!-- File picker -->
     <string name="select_folder">Hautatu karpeta</string>
     <string name="select_file">Hautatu fitxategia</string>
@@ -263,29 +252,24 @@
     <string name="confirm_selection">Berretsi hautaketa</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="one">Elementu %d</item>
         <item quantity="other">%d elementu</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">elementu %d</item>
         <item quantity="other">%d elementu</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Elementu %d ezabatzen</item>
         <item quantity="other">%d elementu ezabatzen</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">kontaktu %d</item>
         <item quantity="other">%d kontaktu</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Hautatu biltegiratzea</string>
     <string name="storage">Storage</string>
@@ -297,7 +281,6 @@
     <string name="app_on_sd_card">Badirudi aplikazioa SD txartel batean instalatu duzula, horrek aplikazioen widgetak erabilgarri egotea ekiditen du. Ezingo dituzu erabilgarri dauden widgeten zerrendan ikusi.
         Sistemaren muga da, beraz, widgetak erabili nahi badituzu, aplikazioa barneko biltegiratzera mugitu behar duzu.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Propietateak</string>
     <string name="path">Bide-izena</string>
@@ -320,7 +303,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Hondoaren kolorea</string>
     <string name="text_color">Testuaren kolorea</string>
@@ -352,7 +334,6 @@
             Erosi <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> funtzio hau desblokeatzeko eta garatzaileari laguntzeko. Eskerrik asko!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Argia</string>
     <string name="dark_theme">Iluna</string>
@@ -365,11 +346,9 @@
     <string name="custom">Pertsonalizatuta</string>
     <string name="shared">Partekatuta</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">Zer berri</string>
     <string name="whats_new_disclaimer">* hemen eguneraketa handienak agertzen dira soilik, hobekuntza txikiak ere beti egoten dira</string>
-
     <!-- Actionbar items -->
     <string name="delete">Ezabatu</string>
     <string name="remove">Kendu</string>
@@ -409,7 +388,6 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Wallpapers</string>
-
     <!-- Sorting -->
     <string name="sort_by">Ordenatze-irizpidea</string>
     <string name="name">Izena</string>
@@ -432,12 +410,13 @@
     <string name="full_name">Izen-abizenak</string>
     <string name="use_custom_sorting">Erabili pertsonalizatutako ordenatzea</string>
     <string name="change_order">Aldatu ordena</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ziur zaude ezabatzearekin jarraitu nahi duzula?</string>
-    <string name="deletion_confirmation">Ziur zaude %s ezabatu nahi d(it)uzula?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">Ziur zaude %s ezabatu nahi d(it)uzula?</string>
+    <!-- Are you sure you want to delete 5 items? -->
     <string name="deletion_confirmation_short">Delete %s?</string>
-    <string name="move_to_recycle_bin_confirmation">Ziur zaude %s zakarrontzira mugitu nahi d(it)uzula?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Ziur zaude %s zakarrontzira mugitu nahi d(it)uzula?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Ziur zaude elementu hau ezabatu nahi duzula?</string>
     <string name="are_you_sure_recycle_bin">Ziur zaude elementu hau zakarrontzira mugitu nahi duzula?</string>
     <string name="do_not_ask_again">Ez galdetu berriro saio honetan</string>
@@ -445,12 +424,10 @@
     <string name="yes">Bai</string>
     <string name="no">Ez</string>
     <string name="maybe">Agian</string>
-
     <plurals name="delete_warning">
         <item quantity="one">ABISUA: Karpeta %d ezabatuko duzu</item>
         <item quantity="other">ABISUA: %d karpeta ezabatuko dituzu</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PINa</string>
     <string name="enter_pin">Sartu PINa</string>
@@ -477,7 +454,6 @@
     <string name="lock_folder_pro">Blokeatu karpeta (Pro)</string>
     <string name="unlock_folder">Deblokeatu karpeta</string>
     <string name="lock_folder_notice">Protekzio hau aplikazio honetan soilik funtzionatuko du, ez du balio it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">Atzo</string>
     <string name="today">Gaur</string>
@@ -492,7 +468,6 @@
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
     <string name="week_number_short">wk.</string>
-
     <plurals name="seconds">
         <item quantity="one">segundo %d</item>
         <item quantity="other">%d segundo</item>
@@ -521,7 +496,6 @@
         <item quantity="one">urtebete</item>
         <item quantity="other">%d urte</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">segundo %d barru</item>
@@ -551,7 +525,6 @@
         <item quantity="one">urtebete barru</item>
         <item quantity="other">%d urte barru</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">segundo %d lehenago</item>
@@ -581,7 +554,6 @@
         <item quantity="one">urtebete lehenago</item>
         <item quantity="other">%d urte lehenago</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">segundo %d-ez</item>
@@ -611,7 +583,6 @@
         <item quantity="one">urtebetez</item>
         <item quantity="other">%d urtez</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Alarma itzaltzeko geratzen den denbora:\n%s</string>
     <string name="reminder_triggers_in">Oroigarria azaltzeko geratzen den denbora:\n%s</string>
@@ -619,7 +590,6 @@
     <string name="alarm_warning">Mesedez, ziurtatu alarma ondo dabilela. Arazoak egon daitezke bateria aurreztearekin zerikusia duten sistemaren murrizketak direla-eta.</string>
     <string name="reminder_warning">Mesedez, ziurtatu oroigarria ondo dabilela. Arazoak egon daitezke bateria aurreztearekin zerikusia duten sistemaren murrizketak direla-eta.</string>
     <string name="notifications_disabled">Aplikazio honen jakinarazpenak desgaituta daude. Gailuko ezarpenetan gaitu ditzakezu.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
     <string name="snooze">Atzeratu</string>
@@ -632,7 +602,6 @@
     <string name="no_sound">Soinurik ez</string>
     <string name="during_day_at_hh_mm">Egunean zehar ordu honetan: hh:mm</string>
     <string name="during_day_at">Egunean zehar ordun honetan: %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Ezarpenak</string>
     <string name="purchase_simple_thank_you">Erosi Simple Thank You</string>
@@ -679,7 +648,6 @@
     <string name="start_name_with_surname">Hasi izen-abizenarekin</string>
     <string name="clear_cache">Garbitu cachea</string>
     <string name="show_call_confirmation_dialog">Erakutsi egiaztatze mezua dei bat hasi baino lehen</string>
-
     <!-- Setting sections -->
     <string name="visibility">Ikusgaitasuna</string>
     <string name="security">Segurtasuna</string>
@@ -694,7 +662,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Excluding -->
     <string name="exclude">Baztertu</string>
     <string name="exclude_folder">Exclude folder</string>
@@ -705,7 +672,6 @@
     <string name="remove_all_description">Kendu karpeta guztiak baztertutako zerrendatik\? Honek ez ditu karpetak ezabatuko.</string>
     <string name="temporarily_show_excluded">Temporarily show excluded</string>
     <string name="stop_showing_excluded">Stop showing excluded</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Kudeatu erakutsitako fitxak</string>
     <string name="default_tab_to_open">Aplikazioa hasterakoan irekiko den fitxa</string>
@@ -716,7 +682,6 @@
     <string name="last_used_tab">Erabilitako azkena</string>
     <string name="files_tab">Fitxategiak</string>
     <string name="recent_files_tab">Azken fitxategiak</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Leheneratu fitxategi hau</string>
     <string name="restore_selected_files">Leheneratu hautatutako fitxategiak</string>
@@ -729,12 +694,10 @@
     <string name="show_the_recycle_bin">Erakutsi zakarrontzia</string>
     <string name="hide_the_recycle_bin">Ezkutatu zakarrontzia</string>
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">elementu %d zakarrontzira mugitzen</item>
         <item quantity="other">%d elementu zakarrontzira mugitzen</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Inportatzen…</string>
     <string name="exporting">Esportatzen…</string>
@@ -751,13 +714,11 @@
     <string name="enable_automatic_backups">Enable automatic backups</string>
     <string name="manage_automatic_backups">Manage automatic backups</string>
     <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Badirudi USB gailuren bat konektatuta duzula zure gailura. Fitxategiak ondo agertzen direla ziurtatzeko, baimen gehigarriak eman behar dituzu.</string>
     <string name="confirm_usb_storage_access_text">Hautatu USB gailuaren karpeta nagusia hurrengo pantailan, baimena emateko</string>
     <string name="wrong_root_selected_usb">Karpeta okerra hautatu da, hautatu USB gailuaren erro-karpeta</string>
-
     <!-- Dates -->
     <string name="january">Urtarrila</string>
     <string name="february">Otsaila</string>
@@ -784,7 +745,6 @@
     <string name="october_short">Oct</string>
     <string name="november_short">Nov</string>
     <string name="december_short">Dec</string>
-
     <!-- in January -->
     <string name="in_january">urtarrilean</string>
     <string name="in_february">otsailean</string>
@@ -798,7 +758,6 @@
     <string name="in_october">urrian</string>
     <string name="in_november">azaroan</string>
     <string name="in_december">abenduan</string>
-
     <string name="monday">Astelehena</string>
     <string name="tuesday">Asteartea</string>
     <string name="wednesday">Asteazkena</string>
@@ -806,7 +765,6 @@
     <string name="friday">Ostirala</string>
     <string name="saturday">Larunbata</string>
     <string name="sunday">Igandea</string>
-
     <string name="monday_letter">A</string>
     <string name="tuesday_letter">A</string>
     <string name="wednesday_letter">A</string>
@@ -814,7 +772,6 @@
     <string name="friday_letter">O</string>
     <string name="saturday_letter">L</string>
     <string name="sunday_letter">I</string>
-
     <string name="monday_short">Al</string>
     <string name="tuesday_short">Ar</string>
     <string name="wednesday_short">Az</string>
@@ -822,7 +779,6 @@
     <string name="friday_short">Or</string>
     <string name="saturday_short">Lr</string>
     <string name="sunday_short">Ig</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Zure aplikazioaren bertsioa ez da berriro berrituko. Aldatu Pro bertsiora konponketa eta hobekuntza gehiago jasotzeko.</string>
     <string name="upgrade_to_pro_long_click">Zure aplikazioaren bertsioa ez da berriro berrituko. Aldatu Pro bertsiora konponketa eta hobekuntza gehiago jasotzeko hemen klik eginez.</string>
@@ -837,7 +793,6 @@
     <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-
     <!-- About -->
     <string name="about">Honi buruz</string>
     <string name="website">Website</string>
@@ -861,7 +816,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Informazio gehigarria</string>
     <string name="app_version">Aplikazioaren bertsioa: %s</string>
     <string name="device_os">Gailuaren SE: %s</string>
@@ -888,7 +843,6 @@
     <string name="thank_you">Eskerrik asko</string>
     <string name="widget_locked_pro">Trepeta blokeatuta dago.\nEguneratu Pro bertsiora desblokeatzeko.</string>
     <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -901,7 +855,6 @@
             Eskerrik asko
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -920,7 +873,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">Aplikazio abiarazlea</string>
     <string name="calculator_short">Kalkulagailua</string>
     <string name="calendar_short">Egutegia</string>
@@ -939,13 +891,11 @@
     <string name="sms_messenger_short">SMS mezularia</string>
     <string name="thank_you_short">Eskerrik asko</string>
     <string name="voice_recorder_short">Grabagailua</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Badirudi zure aplikazioaren bertsioa hondatuta dagoela. Deskargatu bertsio originala <a href="%s">hemen</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Maiz egindako galderak</string>
     <string name="before_asking_question">Galdera bat egin aurretik, irakurri</string>
@@ -980,7 +930,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -993,7 +942,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -1039,7 +987,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -1049,7 +996,6 @@
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
@@ -1057,13 +1003,11 @@
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
@@ -1071,23 +1015,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Aplikazio honk hurrengo hirugarrenen liburutegi hauek erabiltzen ditu, nire bizitza errazago egiteko. Eskerrik asko.</string>
     <string name="third_party_licences">Hirugarrenen lizentziak</string>
@@ -1129,20 +1069,19 @@
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Your trial expires in %d day.</item>
         <item quantity="other">Your trial expires in %d days.</item>
     </plurals>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+
     <string name="grant_permission">Grant Permission</string>
     <string name="permission_required">Permission Required</string>
 </resources>
