@@ -18,10 +18,18 @@ class PermissionRequiredDialog(
 ) {
     private var dialog: AlertDialog? = null
     init {
-        val title: String by lazy { dialogTitle.ifEmpty { activity.getString(dialogTitleId) } }
+        val title: String = if (dialogTitle.isEmpty()) {
+            activity.getString(dialogTitleId)
+        } else {
+            dialogTitle
+        }
 
         val view = activity.layoutInflater.inflate(R.layout.dialog_message, null)
-        view.message.text = message.ifEmpty { activity.resources.getString(messageId) }
+        view.message.text = if (message.isEmpty()) {
+            activity.getString(messageId)
+        } else {
+            message
+        }
 
         val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.grant_permission) { dialog, which -> dialogConfirmed() }
