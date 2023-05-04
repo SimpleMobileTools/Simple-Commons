@@ -24,6 +24,7 @@ class ColorPickerDialog(
     val activity: Activity,
     color: Int,
     val removeDimmedBackground: Boolean = false,
+    val addDefaultColorButton: Boolean = false,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
 ) {
@@ -141,9 +142,15 @@ class ColorPickerDialog(
 
         val textColor = activity.getProperTextColor()
         val builder = activity.getAlertDialogBuilder()
-            .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
-            .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
+            .setPositiveButton(R.string.ok) { _, _ -> confirmNewColor() }
             .setOnCancelListener { dialogDismissed() }
+            .apply {
+                if (addDefaultColorButton) {
+                    setNeutralButton(R.string.default_color) { _, _ -> confirmDefaultColor() }
+                } else {
+                    setNegativeButton(R.string.cancel) { _, _ -> dialogDismissed() }
+                }
+            }
 
         builder.apply {
             activity.setupDialogStuff(view, this) { alertDialog ->
@@ -179,6 +186,10 @@ class ColorPickerDialog(
 
     private fun dialogDismissed() {
         callback(false, 0)
+    }
+
+    private fun confirmDefaultColor() {
+        callback(true, 0)
     }
 
     private fun confirmNewColor() {
