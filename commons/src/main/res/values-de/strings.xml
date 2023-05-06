@@ -800,7 +800,11 @@
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Pro-Version installieren</string>
     <string name="upgrade_calendar">Um lokal gespeicherte Termine zu migrieren, musst du sie als ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hallo,
+\n
+\nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du mit ihr zufrieden bist und deine Einstellungen und Favoriten übertragen hast, kannst du die alte kostenlose Version deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
     <string name="upgraded_to_pro_gallery">Hallo,
 \n
 \nes sieht so aus, als hättest du bereits die Pro-Version der App. Wenn du mit ihr zufrieden bist und deine Einstellungen und Favoriten übertragen hast, kannst du diese App deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
@@ -1105,6 +1109,6 @@
     <string name="pro_app_refund">Vergiss nicht, dass dir der Betrag erstattet wird, wenn du eine bezahlte App innerhalb von zwei Stunden wieder deinstallierst. Falls du später eine Rückerstattung wünschst, kontaktiere uns einfach unter hello@simplemobiletools.com, und du wirst sie bekommen. So kann man ganz einfach die App ausprobieren :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Eine Gruppe von einfachen, quelloffenen Android-Apps mit anpassbaren Widgets, ohne Werbung und unnötige Berechtigungen.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="grant_permission">Berechtigung erteilen</string>
+    <string name="permission_required">Berechtigung erforderlich</string>
 </resources>
