@@ -160,6 +160,11 @@
     <string name="no_audio_permissions">Vajalik on õigus kasutada helisüsteemi</string>
     <string name="no_post_notifications_permissions">Teatiste postitamiseks on vaja luba</string>
     <string name="no_permission">Õigused puuduvad</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
     <!-- Renaming -->
     <string name="rename_file">Muuda faili nime</string>
     <string name="rename_folder">Muuda kausta nime</string>

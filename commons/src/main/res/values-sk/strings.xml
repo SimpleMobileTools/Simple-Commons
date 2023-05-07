@@ -169,6 +169,11 @@
     <string name="no_audio_permissions">Je potrebné povolenie pre prístup ku zvuku</string>
     <string name="no_post_notifications_permissions">Je potrebné povolenie na zobrazovanie upozornení</string>
     <string name="no_permission">Chýba oprávnenie</string>
+    <string name="allow_notifications_reminders">Musíte apke povoliť zobrazovanie upozornení, ináč nevie zobrazovať pripomienky.</string>
+    <string name="allow_notifications_files">Musíte apke povoliť zobrazovanie upozornení, ináč nevie zobraziť stav kopírovania.</string>
+    <string name="allow_notifications_music_player">Musíte apke povoliť zobrazovanie upozornení, ináč nevie prehrávať pesničky.</string>
+    <string name="allow_notifications_voice_recorder">Musíte apke povoliť zobrazovanie upozornení, ináč nevie nahrať audio.</string>
+    <string name="allow_notifications_incoming_calls">Musíte apke povoliť zobrazovanie upozornení, ináč nevie zobraziť prichádzajúce hovory.</string>
 
     <!-- Renaming -->
     <string name="rename_file">Premenovať súbor</string>
