@@ -161,12 +161,12 @@
     <string name="no_camera_permissions">Требуется разрешение для доступа к камере</string>
     <string name="no_audio_permissions">Требуется разрешение для доступа аудиосистеме</string>
     <string name="no_permission">Отсутствует разрешение</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_notifications_reminders">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать напоминания.</string>
+    <string name="allow_notifications_files">Необходимо разрешить приложению отображать уведомления, иначе оно не может показывать индикатор выполнения.</string>
+    <string name="allow_notifications_music_player">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет воспроизводить композиции.</string>
+    <string name="allow_notifications_voice_recorder">Необходимо разрешить приложению отображать уведомления, иначе оно не может записывать звук.</string>
+    <string name="allow_notifications_incoming_calls">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие вызовы.</string>
+    <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
     <string name="rename_folder">Изменение имени папки</string>
