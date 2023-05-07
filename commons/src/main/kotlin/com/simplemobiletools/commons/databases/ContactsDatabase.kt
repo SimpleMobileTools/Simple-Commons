@@ -96,6 +96,7 @@ abstract class ContactsDatabase : RoomDatabase() {
                     execSQL("ALTER TABLE contacts ADD COLUMN phonetic_given_name TEXT NOT NULL DEFAULT ''")
                     execSQL("ALTER TABLE contacts ADD COLUMN phonetic_middle_name TEXT NOT NULL DEFAULT ''")
                     execSQL("ALTER TABLE contacts ADD COLUMN phonetic_family_name TEXT NOT NULL DEFAULT ''")
+                    execSQL("ALTER TABLE contacts ADD COLUMN relations TEXT NOT NULL DEFAULT ''")
                 }
             }
         }

@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.helpers
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.simplemobiletools.commons.extensions.showErrorToast
 import com.simplemobiletools.commons.models.PhoneNumber
 import com.simplemobiletools.commons.models.contacts.*
 
@@ -46,8 +47,10 @@ class Converters {
 
     @TypeConverter
     fun jsonToNicknameList(value: String): ArrayList<ContactNickname> {
-        var nicknames = gson.fromJson<ArrayList<ContactNickname>>(value, nicknameType)
-        if (nicknames == null) {
+        var nicknames: ArrayList<ContactNickname>
+        try {
+            nicknames = gson.fromJson<ArrayList<ContactNickname>>(value, nicknameType)
+        } catch (e: Exception) {
             nicknames = ArrayList()
             val nickname = value
             if ((nickname != null) && nickname.isNotEmpty())
@@ -66,7 +69,7 @@ class Converters {
     @TypeConverter
     fun jsonToPhoneNumberList(value: String): ArrayList<PhoneNumber> {
         val numbers = gson.fromJson<ArrayList<PhoneNumber>>(value, numberType)
-        return if (numbers.any { it.value == null }) {
+        return if (numbers.any { (it.value == null) || (it.value == "") }) {
             val phoneNumbers = ArrayList<PhoneNumber>()
             val numberConverters = gson.fromJson<ArrayList<PhoneNumberConverter>>(value, numberConverterType)
             numberConverters.forEach { converter ->
@@ -87,7 +90,7 @@ class Converters {
     @TypeConverter
     fun jsonToEmailList(value: String): ArrayList<Email> {
         var emails = gson.fromJson<ArrayList<Email>>(value, emailType)
-        if (emails == null) {
+        if (emails.any { (it.address == null) || (it.address == "") }) {
             emails = ArrayList()
             val emailConverters = gson.fromJson<ArrayList<EmailConverter>>(value, emailConverterType)
             emailConverters.forEach { converter ->
@@ -106,7 +109,7 @@ class Converters {
     @TypeConverter
     fun jsonToAddressList(value: String): ArrayList<Address> {
         var addresses = gson.fromJson<ArrayList<Address>>(value, addressType)
-        if (addresses == null) {
+        if (addresses.any { (it.formattedAddress == null) || (it.formattedAddress == "") }) {
             addresses = ArrayList()
             val addressConverters = gson.fromJson<ArrayList<AddressConverter>>(value, addressConverterType)
             addressConverters.forEach { converter ->
@@ -126,7 +129,7 @@ class Converters {
     @TypeConverter
     fun jsonToIMsList(value: String): ArrayList<IM> {
         var IMs = gson.fromJson<ArrayList<IM>>(value, imType)
-        if (IMs == null) {
+        if (IMs.any { (it.data == null) || (it.data == "") }) {
             IMs = ArrayList()
             val IMConverters = gson.fromJson<ArrayList<IMConverter>>(value, imConverterType)
             IMConverters.forEach { converter ->
@@ -146,7 +149,7 @@ class Converters {
     @TypeConverter
     fun jsonToEventList(value: String): ArrayList<Event> {
         var events = gson.fromJson<ArrayList<Event>>(value, eventType)
-        if (events == null) {
+        if (events.any { (it.startDate == null) || (it.startDate == "") }) {
             events = ArrayList()
             val eventConverters = gson.fromJson<ArrayList<EventConverter>>(value, eventConverterType)
             eventConverters.forEach { converter ->
@@ -164,10 +167,13 @@ class Converters {
 
     @TypeConverter
     fun jsonToOrganisation(value: String): Organization {
-        var organization = gson.fromJson<Organization>(value, organizationType)
-        if (organization == null) {
-            val converter = gson.fromJson<OrganizationConverter>(value, organizationConverterType)
-            organization = Organization(converter.company, converter.jobTitle,
+        var organization: Organization = Organization.getEmptyOrganization()
+        try {
+            gson.fromJson<Organization>(value, organizationType)
+        } catch (e: Exception) {
+            val company = value
+            if ((company != null) && company.isNotEmpty())
+               organization = Organization(company, "",
                 "", "", "", "", "", DEFAULT_ORGANIZATION_TYPE, "")
         }
         return(organization)
@@ -180,8 +186,10 @@ class Converters {
 
     @TypeConverter
     fun jsonToWebsiteList(value: String): ArrayList<ContactWebsite> {
-        var websites = gson.fromJson<ArrayList<ContactWebsite>>(value, websiteType)
-        if (websites == null) {
+        var websites: ArrayList<ContactWebsite>
+        try {
+            websites = gson.fromJson<ArrayList<ContactWebsite>>(value, websiteType)
+        } catch (e: Exception) {
             websites = ArrayList()
             val websiteConverters = gson.fromJson<ArrayList<String>>(value, stringType)
             websiteConverters.forEach { converter ->
