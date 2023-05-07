@@ -20,7 +20,7 @@ val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applica
 val Context.groupsDB: GroupsDao get() = ContactsDatabase.getInstance(applicationContext).GroupsDao()
 
 fun Context.getEmptyContact(): Contact {
-    var emptyContact = getEmptyContact()
+    var emptyContact = Contact.getEmptyContact()
     emptyContact.source = if (hasContactPermissions()) baseConfig.lastUsedContactSource else SMT_PRIVATE
     return(emptyContact)
 }

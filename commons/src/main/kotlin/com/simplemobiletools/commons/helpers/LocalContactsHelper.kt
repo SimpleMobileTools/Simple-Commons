@@ -16,13 +16,24 @@ import com.simplemobiletools.commons.models.contacts.LocalContact
 class LocalContactsHelper(val context: Context) {
     fun getAllContacts(favoritesOnly: Boolean = false): ArrayList<Contact> {
         val contacts = if (favoritesOnly) context.contactsDB.getFavoriteContacts() else context.contactsDB.getContacts()
+        contacts.forEach {
+            if (it.jobPosition != "") {
+                it.organization.jobTitle = it.jobPosition
+                it.jobPosition = ""
+            }
+        }
         val storedGroups = ContactsHelper(context).getStoredGroupsSync()
         return (contacts.map { convertLocalContactToContact(it, storedGroups) }.toMutableList() as? ArrayList<Contact>) ?: arrayListOf()
     }
 
     fun getContactWithId(id: Int): Contact? {
         val storedGroups = ContactsHelper(context).getStoredGroupsSync()
-        return convertLocalContactToContact(context.contactsDB.getContactWithId(id), storedGroups)
+        val contact = context.contactsDB.getContactWithId(id)
+        if ((contact != null) && (contact.jobPosition != "")) {
+            contact.organization.jobTitle = contact.jobPosition
+            contact.jobPosition = ""
+        }
+        return convertLocalContactToContact(contact, storedGroups)
     }
 
     fun insertOrUpdateContact(contact: Contact): Boolean {
