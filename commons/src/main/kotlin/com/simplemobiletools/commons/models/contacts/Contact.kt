@@ -311,8 +311,20 @@ data class Contact(
 
     fun getLetterForFastScroller(sortBy: ContactNameSortBy,
                                  showFormattedName: Boolean, nameFormat: ContactNameFormat): String {
-        val sortKey: String = getPrimarySortKey(sortBy, showFormattedName, nameFormat)
-        return(sortKey[0].toString())
+        val C: String
+        if (!isABusinessContact()) {
+            C = name.getNameForShortcutList(showFormattedName, nameFormat.startsWithFamilyName())
+        } else {
+            if (organization.company.isNotEmpty()) {
+                C = getFullCompany()
+            } else {
+                C = emails.firstOrNull()?.address?.trim() ?: ""
+            }
+        }
+
+        if (C.isNotEmpty())
+            return(C[0].uppercase().normalizeString())
+        return("*")
     } // Contact.getLetterForFastScroller()
 
     // *****************************************************************
