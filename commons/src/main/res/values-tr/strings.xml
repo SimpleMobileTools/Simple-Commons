@@ -159,12 +159,12 @@
     <string name="no_camera_permissions">Kamera izni gerekiyor</string>
     <string name="no_audio_permissions">Ses izni gerekiyor</string>
     <string name="no_permission">İzin yok</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_notifications_reminders">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde hatırlatıcıları gösteremez.</string>
+    <string name="allow_notifications_files">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ilerleme çubuğunu gösteremez.</string>
+    <string name="allow_notifications_music_player">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde şarkı çalamaz.</string>
+    <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
+    <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
+    <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
     <!-- Renaming -->
     <string name="rename_file">Dosyayı yeniden adlandır</string>
     <string name="rename_folder">Klasörü yeniden adlandır</string>
