@@ -662,6 +662,7 @@
     <string name="show_the_recycle_bin">显示回收站</string>
     <string name="hide_the_recycle_bin">隐藏回收站</string>
     <string name="open_the_recycle_bin">打开回收站</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">正在移动 %d 个项目到回收站</item>
     </plurals>

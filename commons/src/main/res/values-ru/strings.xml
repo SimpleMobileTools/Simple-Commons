@@ -737,6 +737,7 @@
     <string name="show_the_recycle_bin">Показать корзину</string>
     <string name="hide_the_recycle_bin">Скрыть корзину</string>
     <string name="open_the_recycle_bin">Открыть корзину</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d элемент перемещается в корзину</item>
         <item quantity="few">%d элемента перемещаются в корзину</item>

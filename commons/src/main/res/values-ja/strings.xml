@@ -666,6 +666,7 @@
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
     <string name="open_the_recycle_bin">ごみ箱を開く</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">%d件のアイテムをごみ箱に移動しています</item>
     </plurals>
