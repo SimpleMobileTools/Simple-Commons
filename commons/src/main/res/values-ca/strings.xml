@@ -159,12 +159,12 @@
     <string name="no_camera_permissions">Es requereix permís d\'accés a la càmera</string>
     <string name="no_audio_permissions">Es requereix permís d\'accés a l\'àudio</string>
     <string name="no_permission">Sense permís</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_notifications_reminders">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els recordatoris.</string>
+    <string name="allow_notifications_files">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar la barra de progrés.</string>
+    <string name="allow_notifications_music_player">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà reproduir cançons.</string>
+    <string name="allow_notifications_voice_recorder">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
+    <string name="allow_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
+    <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
     <!-- Renaming -->
     <string name="rename_file">Canvia el nom del fitxer</string>
     <string name="rename_folder">Canvia el nom de la carpeta</string>
