@@ -165,6 +165,8 @@
     <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
     <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
     <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
+    <string name="grant_permission">İzin Ver</string>
+    <string name="permission_required">İzin Gerekli</string>
     <!-- Renaming -->
     <string name="rename_file">Dosyayı yeniden adlandır</string>
     <string name="rename_folder">Klasörü yeniden adlandır</string>
@@ -1127,6 +1129,4 @@
     <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Özelleştirilebilir widget\'lara sahip, reklamlar ve gereksiz izinler içermeyen bir grup basit, açık kaynaklı Android uygulaması.</string>
-    <string name="grant_permission">İzin Ver</string>
-    <string name="permission_required">İzin Gerekli</string>
 </resources>

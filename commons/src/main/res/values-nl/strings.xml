@@ -165,6 +165,8 @@
     <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
     <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="grant_permission">Toestemming geven</string>
+    <string name="permission_required">Toestemming vereist</string>
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>
     <string name="rename_folder">Map hernoemen</string>
@@ -1095,6 +1097,4 @@
     <string name="pro_app_refund">Bij het verwijderen van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Een verzameling eenvoudige open-source Android-apps met widgets, zonder advertenties of onnodige rechten.</string>
-    <string name="grant_permission">Toestemming geven</string>
-    <string name="permission_required">Toestemming vereist</string>
 </resources>
