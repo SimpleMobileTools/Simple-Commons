@@ -267,12 +267,15 @@ data class ContactName(var formattedName: String,
         var C: Char = '*'
         if (showFormattedName && formattedName.isNotEmpty())
             C = formattedName[0]
-        if (startWithFamilyName && familyName.isNotEmpty())
-            C = familyName[0]
-        else if (!startWithFamilyName && givenName.isNotEmpty())
-            C = givenName[0]
-        else
-            return("")
+        if (startWithFamilyName) {
+            if (familyName.isNotEmpty()) {
+                C = familyName[0]
+            }
+        } else {
+            if (givenName.isNotEmpty()) {
+                C = givenName[0]
+            }
+        }
 
         return(C.toString().uppercase().normalizeString())
     } // ContactName.getNameForLetterPlaceholder()

@@ -47,7 +47,8 @@ class ContactsHelper(val context: Context) {
             getDeviceContacts(contacts, ignoredContactSources, gettingDuplicates)
 
             if (displayContactSources.contains(SMT_PRIVATE)) {
-                LocalContactsHelper(context).getAllContacts().forEach {
+                val localContacts = LocalContactsHelper(context).getAllContacts()
+                localContacts.forEach {
                     contacts.put(it.id, it)
                 }
             }
@@ -1573,9 +1574,9 @@ class ContactsHelper(val context: Context) {
                 contact.websites.forEach { website ->
                     ContentProviderOperation.newInsert(Data.CONTENT_URI).apply {
                         if (insert) {
-                            builder.withValueBackReference(Data.RAW_CONTACT_ID, 0)
+                            withValueBackReference(Data.RAW_CONTACT_ID, 0)
                         } else {
-                            builder.withValue(Data.RAW_CONTACT_ID, contact.id)
+                            withValue(Data.RAW_CONTACT_ID, contact.id)
                         }
                         withValue(Data.MIMETYPE, CommonDataKinds.Website.CONTENT_ITEM_TYPE)
                         withValue(CommonDataKinds.Website.URL, website.URL)
