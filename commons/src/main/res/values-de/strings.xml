@@ -76,7 +76,6 @@
     <string name="updating">Aktualisieren…</string>
     <string name="phone_storage">Gerätespeicher</string>
     <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
-<<<<<<< HEAD
     <string name="audio">Audio</string>
 
     <!-- Nicknames -->
@@ -85,8 +84,6 @@
     <string name="nickname_maiden_name">Mädchenname</string>
     <string name="nickname_short_name">Kurzname</string>
     <string name="nickname_initials">Initialien</string>
-=======
->>>>>>> 3930d9910 (Spread the resource strings to all localistation strings.xml files for)
 
     <!-- Phone numbers -->
     <string name="mobile">Mobil</string>
@@ -96,18 +93,6 @@
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
 
-<<<<<<< HEAD
-=======
-    <!-- InstantMsg - Currently no strings -->
-
-    <!-- Nicknames -->
-    <string name="nickname_default">Spitzname</string>
-    <string name="nickname_other_name">Pseudonym</string>
-    <string name="nickname_maiden_name">Mädchenname</string>
-    <string name="nickname_short_name">Kurzname</string>
-    <string name="nickname_initials">Initialien</string>
-
->>>>>>> 3930d9910 (Spread the resource strings to all localistation strings.xml files for)
     <!-- Emails -->
     <string name="home">Privat</string>
     <string name="work">Arbeit</string>
@@ -138,11 +123,8 @@
     <string name="birthday">Geburtstag</string>
     <string name="anniversary">Jahrestag</string>
 
-<<<<<<< HEAD
     <!-- InstantMsg - Currently no strings -->
 
-=======
->>>>>>> 3930d9910 (Spread the resource strings to all localistation strings.xml files for)
     <!-- Websites -->
     <string name="website_homepage">Homepage</string>
     <string name="website_blog">Blog</string>

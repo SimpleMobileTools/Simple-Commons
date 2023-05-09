@@ -1583,7 +1583,7 @@ class ContactsHelper(val context: Context) {
                         withValue(CommonDataKinds.Website.TYPE, website.type)
                         withValue(CommonDataKinds.Website.LABEL, website.label)
                         operations.add(build())
-            }
+                    }
                 } // forEach(Website)
             } // if (changed || insert)
 
