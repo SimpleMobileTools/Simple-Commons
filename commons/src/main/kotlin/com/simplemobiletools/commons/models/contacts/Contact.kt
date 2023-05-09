@@ -313,7 +313,14 @@ data class Contact(
                                  showFormattedName: Boolean, nameFormat: ContactNameFormat): String {
         val C: String
         if (!isABusinessContact()) {
-            C = name.getNameForShortcutList(showFormattedName, nameFormat.startsWithFamilyName())
+            C = when (sortBy) {
+                ContactNameSortBy.NAMESORTBY_GIVEN_NAME -> name.givenName
+                ContactNameSortBy.NAMESORTBY_MIDDLE_NAME -> name.middleName
+                ContactNameSortBy.NAMESORTBY_FAMILY_NAME -> name.familyName
+                ContactNameSortBy.NAMESORTBY_FORMATTED_NAME -> name.formattedName
+                ContactNameSortBy.NAMESORTBY_DISPLAY_NAME -> name.getNameForShortcutList(showFormattedName, nameFormat.startsWithFamilyName())
+                else -> name.familyName
+            }
         } else {
             if (organization.company.isNotEmpty()) {
                 C = getFullCompany()
