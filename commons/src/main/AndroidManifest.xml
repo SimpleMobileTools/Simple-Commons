@@ -25,7 +25,9 @@
         android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"
         tools:node="remove" />
 
-    <application android:supportsRtl="true">
+    <application
+        android:localeConfig="@xml/locale_config"
+        android:supportsRtl="true">
         <activity
             android:name="com.simplemobiletools.commons.activities.ContributorsActivity"
             android:configChanges="orientation"
