@@ -77,15 +77,6 @@
     <string name="phone_storage">Gerätespeicher</string>
     <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
     <string name="audio">Audio</string>
-    <!-- Phone numbers -->
-    <string name="mobile">Mobil</string>
-    <string name="main_number">Festnetz</string>
-    <string name="work_fax">Arbeit Fax</string>
-    <string name="home_fax">Privat Fax</string>
-    <string name="pager">Pager</string>
-    <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
-
-    <!-- InstantMsg - Currently no strings -->
 
     <!-- Nicknames -->
     <string name="nickname_default">Spitzname</string>
@@ -93,6 +84,14 @@
     <string name="nickname_maiden_name">Mädchenname</string>
     <string name="nickname_short_name">Kurzname</string>
     <string name="nickname_initials">Initialien</string>
+
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Festnetz</string>
+    <string name="work_fax">Arbeit Fax</string>
+    <string name="home_fax">Privat Fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
 
     <!-- Emails -->
     <string name="home">Privat</string>
@@ -123,6 +122,8 @@
     <!-- Events -->
     <string name="birthday">Geburtstag</string>
     <string name="anniversary">Jahrestag</string>
+
+    <!-- InstantMsg - Currently no strings -->
 
     <!-- Websites -->
     <string name="website_homepage">Homepage</string>
