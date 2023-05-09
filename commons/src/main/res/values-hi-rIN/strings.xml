@@ -76,8 +76,11 @@
     <string name="updating">Updating…</string>
     <string name="phone_storage">Phone storage</string>
     <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
+<<<<<<< HEAD
     <string name="audio">Audio</string>
 
+=======
+>>>>>>> 3930d9910 (Spread the resource strings to all localistation strings.xml files for)
     <!-- Nicknames -->
     <string name="nickname_default">Default</string>
     <string name="nickname_other_name">Alias</string>
