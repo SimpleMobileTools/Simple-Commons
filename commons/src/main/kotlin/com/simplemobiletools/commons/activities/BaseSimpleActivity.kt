@@ -229,6 +229,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 updateTopBottomInsets(statusBarHeight, navigationBarHeight)
+                // Don't touch this. Window Inset API often has a domino effect and things will most likely break.
                 onApplyWindowInsets {
                     val insets = it.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
                     updateTopBottomInsets(insets.top, insets.bottom)
