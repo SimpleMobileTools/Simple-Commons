@@ -159,12 +159,12 @@
     <string name="no_camera_permissions">Kameraberechtigung wird benötigt</string>
     <string name="no_audio_permissions">Audioberechtigung wird benötigt</string>
     <string name="no_permission">Keine Berechtigung</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_notifications_reminders">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine Erinnerungen anzeigen.</string>
+    <string name="allow_notifications_files">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie den Fortschrittsbalken nicht anzeigen.</string>
+    <string name="allow_notifications_music_player">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine Lieder abspielen.</string>
+    <string name="allow_notifications_voice_recorder">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keinen Ton aufnehmen.</string>
+    <string name="allow_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Anrufe anzeigen.</string>
+    <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
     <!-- Renaming -->
@@ -708,7 +708,7 @@
     <string name="show_the_recycle_bin">Papierkorb anzeigen</string>
     <string name="hide_the_recycle_bin">Papierkorb verstecken</string>
     <string name="open_the_recycle_bin">Papierkorb öffnen</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Den Papierkorb überspringen, Dateien sofort löschen</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d Element wird in den Papierkorb verschoben</item>
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>
