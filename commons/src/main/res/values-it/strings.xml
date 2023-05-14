@@ -48,7 +48,7 @@
     <string name="no_phone_call_permission">L\'app non ha il permesso di avviare chiamate telefoniche, per favore concedilo nelle impostazioni del dispositivo</string>
     <string name="insert_text_here">Inserisci qui il testo</string>
     <string name="call_person">Chiama %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="confirm_calling_person">Conferma chiamata %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
     <string name="two">Due</string>
@@ -160,14 +160,14 @@
     <string name="no_camera_permissions">L\'autorizzazione Fotocamera è necessaria</string>
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
     <string name="no_permission">Nessun permesso</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i promemoria.</string>
+    <string name="allow_notifications_files">È necessario consentire all\'applicazione di visualizzare le notifiche, altrimenti non potrà mostrare la barra di avanzamento.</string>
+    <string name="allow_notifications_music_player">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà riprodurre i brani.</string>
+    <string name="allow_notifications_voice_recorder">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà registrare l\'audio.</string>
+    <string name="allow_notifications_incoming_calls">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare le chiamate in arrivo.</string>
+    <string name="allow_notifications_incoming_messages">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i messaggi in arrivo.</string>
+    <string name="grant_permission">Concedi autorizzazione</string>
+    <string name="permission_required">Autorizzazione richiesta</string>
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
     <string name="rename_folder">Rinomina cartella</string>
@@ -736,7 +736,7 @@
     <string name="show_the_recycle_bin">Mostra il cestino</string>
     <string name="hide_the_recycle_bin">Nascondi il cestino</string>
     <string name="open_the_recycle_bin">Apri il cestino</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Ignora il Cestino, elimina direttamente i file</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>
         <item quantity="many">Spostamento di %d elementi nel cestino</item>
