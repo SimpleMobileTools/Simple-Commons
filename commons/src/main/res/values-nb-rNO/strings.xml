@@ -67,17 +67,17 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Ta bilde</string>
     <string name="choose_photo">Velg bilde</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Velg video</string>
+    <string name="choose_contact">Velg kontakt</string>
+    <string name="choose_file">Velg fil</string>
+    <string name="record_audio">Ta opp lyd</string>
+    <string name="record_video">Ta opp video</string>
     <string name="updating">Oppdaterer …</string>
     <string name="phone_storage">Telefonlager</string>
     <string name="phone_storage_hidden">Telefonlager (ikke synlig for andre programmer)</string>
-    <string name="audio">Audio</string>
+    <string name="audio">Lyd</string>
     <!-- Events -->
-    <string name="birthday">Geburtsdag</string>
+    <string name="birthday">Fødselsdag</string>
     <string name="anniversary">Jubileum</string>
     <!-- Emails -->
     <string name="home">Privat</string>
@@ -1065,7 +1065,7 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="audio_record_view_title">Audio Record View (lydvisualisering)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
