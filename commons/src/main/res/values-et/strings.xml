@@ -159,14 +159,14 @@
     <string name="no_camera_permissions">Vajalik on õigus kasutada kaamerat</string>
     <string name="no_audio_permissions">Vajalik on õigus kasutada helisüsteemi</string>
     <string name="no_permission">Õigused puuduvad</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Selleks et rakendus saaks näidata meeldetuletusi, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_files">Selleks et rakendus saaks näidata edenemisriba, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_music_player">Selleks et rakendus saaks esitada muusikat, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_voice_recorder">Selleks et rakendus saaks salvestada heli, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_incoming_calls">Selleks et rakendus saaks näidata kõnesid, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
+    <string name="grant_permission">Anna vastavad õigused</string>
+    <string name="permission_required">Luba on nõutav</string>
     <!-- Renaming -->
     <string name="rename_file">Muuda faili nime</string>
     <string name="rename_folder">Muuda kausta nime</string>
@@ -702,7 +702,7 @@
     <string name="show_the_recycle_bin">Näita prügikasti</string>
     <string name="hide_the_recycle_bin">Peida prügikast</string>
     <string name="open_the_recycle_bin">Ava prügikast</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Ära viska faile prügikasti, vaid kustuta nad kohe jäädavalt</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Viskan %d faili prügikasti</item>
         <item quantity="other">Viskan %d faili prügikasti</item>
@@ -1070,7 +1070,7 @@
     <string name="trial_expired">Prooviperiood on lõppenud</string>
     <string name="start_free_trial">Alusta tasuta prooviperioodi</string>
     <string name="trial_expires_soon">Selle rakenduse prooviperiood lõppeb peagi.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Luba lukustatud rakendust kasutada veel ühe viimase päeva</string>
     <string name="welcome_to_app_name">Tere tulemast %s kasutajaks!</string>
     <string name="trial_start_description">Täname, et võtsid kasutusele meie rakenduse. Praeguses olekus on ta pruugitav <font color="#FFFFFF">%d päeva</font>. Kui testperiood lõppeb, siis palun kaalu uuendust Pro-versiooniks. Sellel palju lisavõimalusi, moodne kujundus, reklaamivaba lahendus ning paljugi veel.
 \n
