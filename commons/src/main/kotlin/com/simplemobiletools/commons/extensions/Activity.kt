@@ -36,6 +36,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
@@ -537,7 +538,6 @@ fun Activity.launchViewContactIntent(uri: Uri) {
         launchActivityIntent(this)
     }
 }
-
 fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null) {
     handlePermission(PERMISSION_CALL_PHONE) {
         val action = if (it) Intent.ACTION_CALL else Intent.ACTION_DIAL
@@ -546,6 +546,15 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
 
             if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
+            }
+
+            if (isDefaultDialer()) {
+                val packageName = when(BuildConfig.DEBUG) {
+                    true -> "com.simplemobiletools.dialer.debug"
+                    false -> "com.simplemobiletools.dialer"
+                }
+                val className = "com.simplemobiletools.dialer.activities.DialerActivity"
+                this.setClassName(packageName, className)
             }
 
             launchActivityIntent(this)
