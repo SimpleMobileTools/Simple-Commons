@@ -73,8 +73,8 @@
     <string name="record_audio">Snimi zvuk</string>
     <string name="record_video">Snimi video</string>
     <string name="updating">Aktualiziranje …</string>
-    <string name="phone_storage">Phone storage</string>
-    <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
+    <string name="phone_storage">Spremište na mobitelu</string>
+    <string name="phone_storage_hidden">Spremište na mobitelu (nije vidljivo za druge aplikacije)</string>
     <string name="audio">Audio</string>
     <!-- Events -->
     <string name="birthday">Rođendan</string>
@@ -160,14 +160,14 @@
     <string name="no_camera_permissions">Potrebno je dopuštenje za kameru</string>
     <string name="no_audio_permissions">Potrebno je dopuštenje za zvuk</string>
     <string name="no_permission">Bez dozvole</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati podsjetnike.</string>
+    <string name="allow_notifications_files">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati traku napretka.</string>
+    <string name="allow_notifications_music_player">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može reproducirati pjesme.</string>
+    <string name="allow_notifications_voice_recorder">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može snimati zvuk.</string>
+    <string name="allow_notifications_incoming_calls">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne pozive.</string>
+    <string name="allow_notifications_incoming_messages">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne poruke.</string>
+    <string name="grant_permission">Odobri dozvolu</string>
+    <string name="permission_required">Zahtijeva dozvolu</string>
     <!-- Renaming -->
     <string name="rename_file">Preimenuj datoteku</string>
     <string name="rename_folder">Preimenuj mapu</string>
@@ -394,55 +394,55 @@
     <string name="create_shortcut_pro">Stvori prečac (Pro)</string>
     <string name="add_number_to_contact">Dodaj broj kontaktu</string>
     <string name="view_contact_details">Prikaži detalje kontakta</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Poziv sa SIM 1</string>
+    <string name="call_from_sim_2">Poziv sa SIM 2</string>
     <string name="toggle_filename">Uključi prikaz naziva datoteka</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="move_to_top">Pomakni skroz gore</string>
+    <string name="move_to_bottom">Pomakni skroz dolje</string>
+    <string name="pin_item">Prikvači stavku</string>
+    <string name="unpin_item">Otkvači stavku</string>
+    <string name="send_sms">Pošalji SMS</string>
+    <string name="send_email">Pošalji e-mail</string>
+    <string name="call">Poziv</string>
+    <string name="contact_details">Detalji kontakta</string>
+    <string name="add_contact">Dodaj kontakt</string>
+    <string name="wallpapers">Slike pozadine</string>
     <!-- Sorting -->
     <string name="sort_by">Sortiraj po</string>
     <string name="name">Naziv</string>
     <string name="size">Veličina</string>
     <string name="last_modified">Datum zadnje izmjenjene</string>
-    <string name="date_created">Date created</string>
-    <string name="date_taken">Datum stvaranja</string>
+    <string name="date_created">Datum stvaranja</string>
+    <string name="date_taken">Datum snimanja</string>
     <string name="title">Naslov</string>
     <string name="filename">Naziv datoteke</string>
     <string name="extension">Tip datoteke</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Slučajno</string>
+    <string name="sort_randomly">Sortiraj slučajnim redoslijedom</string>
     <string name="ascending">Uzlazno</string>
     <string name="descending">Silazno</string>
     <string name="use_for_this_folder">Koristi samo za ovu mapu</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Sortiraj numeričke dijelove prema stvarnoj vrijednosti</string>
     <string name="first_name">Ime</string>
     <string name="middle_name">Srednje ime</string>
     <string name="surname">Prezime</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Ime i prezime</string>
+    <string name="use_custom_sorting">Koristi prilagođeno sortiranje</string>
+    <string name="change_order">Promijeni redoslijed</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Jeste li sigurni da želite nastaviti s brisanjem?</string>
     <string name="deletion_confirmation">Jeste li sigurni da želite izbrisati %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Izbrisati %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Jeste li sigurni da se želite premjestiti %s u koš za smeće?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Jeste li sigurni da želite izbrisati ovu stavku?</string>
     <string name="are_you_sure_recycle_bin">Jeste li sigurni da želite premjestiti ovu stavku u koš za smeće?</string>
     <string name="do_not_ask_again">Ne pitaj me više u ovoj sesiji</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Nemoj više prikazivati</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Možda</string>
     <plurals name="delete_warning">
         <item quantity="one">UPOZORENJE: Brišeš %d mapu</item>
         <item quantity="few">UPOZORENJE: Brišeš %d mape</item>
@@ -458,36 +458,36 @@
     <string name="insert_pattern">Unesite uzorak</string>
     <string name="wrong_pattern">Krivi uzorak</string>
     <string name="repeat_pattern">Ponovite uzorak</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometrija</string>
     <string name="fingerprint">Otisak prsta</string>
     <string name="add_fingerprint">Dodajte otisak prsta</string>
     <string name="place_finger">Molimo postavite prst na senzor otiska prsta</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Otvori dijaloga za provjeru biometrijskog ID-a</string>
+    <string name="authenticate">Autentifikacija</string>
     <string name="authentication_failed">Neuspješna autentifikacija</string>
     <string name="authentication_blocked">Blokirana autentifikacija, molimo pokušajte za par trenutaka</string>
     <string name="no_fingerprints_registered">Nemate registiranih otisaka prstiju, molimo dodajte ih u postavkama Vašeg uređaja</string>
     <string name="go_to_settings">Idi u Postavke</string>
     <string name="protection_setup_successfully">Uspješno postavljanje lozinke. Molimo reinstalirajte aplikaciju u slučaju da je zaboravite.</string>
     <string name="fingerprint_setup_successfully">Uspješno postavljanje zaštite. Molimo reinstalirajte aplikaciju u slučaju problema s resetiranjem.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="lock_folder_pro">Lock folder (Pro)</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Zaključaj mapu</string>
+    <string name="lock_folder_pro">Zaključaj mapu (Pro)</string>
+    <string name="unlock_folder">Otključaj mapu</string>
+    <string name="lock_folder_notice">Ova zaštita radi samo u ovoj aplikaciji. Nije namijenjena za stvarno mijenjanje šifriranja mapa cijelog sustava.</string>
     <!-- Times -->
     <string name="yesterday">Jučer</string>
     <string name="today">Danas</string>
     <string name="tomorrow">Sutra</string>
-    <string name="every_day">Every day</string>
-    <string name="hide_year">Hide year</string>
+    <string name="every_day">Svaki dan</string>
+    <string name="hide_year">Sakrij godinu</string>
     <string name="seconds_raw">sekunde</string>
     <string name="minutes_raw">minute</string>
     <string name="hours_raw">sati</string>
     <string name="days_raw">dani</string>
     <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
+    <string name="minutes_letter">min</string>
     <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
+    <string name="week_number_short">tj.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekunde</item>
@@ -496,7 +496,7 @@
     <plurals name="minutes">
         <item quantity="one">%d minuta</item>
         <item quantity="few">%d minute</item>
-        <item quantity="other">%d minuti</item>
+        <item quantity="other">%d minuta</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d sat</item>
@@ -506,7 +506,7 @@
     <plurals name="days">
         <item quantity="one">%d dan</item>
         <item quantity="few">%d dana</item>
-        <item quantity="other">%d dani</item>
+        <item quantity="other">%d dana</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d tjedan</item>
@@ -525,119 +525,120 @@
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d sekundu</item>
-        <item quantity="few">%d sekundi</item>
-        <item quantity="other">%d sekunde</item>
+        <item quantity="one">%d sekunde</item>
+        <item quantity="few">%d sekunde</item>
+        <item quantity="other">%d sekundi</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minutu</item>
-        <item quantity="few">%d minuta</item>
-        <item quantity="other">%d minute</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="few">%d minute</item>
+        <item quantity="other">%d minuta</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d sat</item>
-        <item quantity="few">%d sati</item>
-        <item quantity="other">%d sate</item>
+        <item quantity="few">%d sata</item>
+        <item quantity="other">%d sati</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="few">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dan</item>
+        <item quantity="few">%d dana</item>
+        <item quantity="other">%d dana</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d tjedan</item>
+        <item quantity="few">%d tjedna</item>
+        <item quantity="other">%d tjedana</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="few">%d months</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mjesec</item>
+        <item quantity="few">%d mjeseca</item>
+        <item quantity="other">%d mjeseci</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="few">%d years</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d godina</item>
+        <item quantity="few">%d godine</item>
+        <item quantity="other">%d godina</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekunda prije</item>
-        <item quantity="few">%d sekundi prije</item>
-        <item quantity="other">%d sekunde prije</item>
+        <item quantity="few">%d sekunde prije</item>
+        <item quantity="other">%d sekundi prije</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuta prije</item>
-        <item quantity="few">%d minuta prije</item>
-        <item quantity="other">%d minute prije</item>
+        <item quantity="few">%d minute prije</item>
+        <item quantity="other">%d minuta prije</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d sat prije</item>
-        <item quantity="few">%d sati prije</item>
-        <item quantity="other">%d sate prije</item>
+        <item quantity="few">%d sata prije</item>
+        <item quantity="other">%d sati prije</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d dan prije</item>
         <item quantity="few">%d dana prije</item>
-        <item quantity="other">%d dane prije</item>
+        <item quantity="other">%d dana prije</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="few">%d weeks before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d tjedan prije</item>
+        <item quantity="few">%d tjedna prije</item>
+        <item quantity="other">%d tjedana prije</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="few">%d months before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mjesec prije</item>
+        <item quantity="few">%d mjeseca prije</item>
+        <item quantity="other">%d mjeseci prije</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="few">%d years before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d godina prije</item>
+        <item quantity="few">%d godine prije</item>
+        <item quantity="other">%d godina prije</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekundu</item>
-        <item quantity="few">%d sekundi</item>
-        <item quantity="other">%d sekunde</item>
+        <item quantity="few">%d sekunde</item>
+        <item quantity="other">%d sekundi</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minutu</item>
-        <item quantity="few">%d minuta</item>
-        <item quantity="other">%d minute</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minute</item>
+        <item quantity="other">%d minuta</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d sat</item>
-        <item quantity="few">%d sati</item>
-        <item quantity="other">%d sate</item>
+        <item quantity="few">%d sata</item>
+        <item quantity="other">%d sati</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="few">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dan</item>
+        <item quantity="few">%d dana</item>
+        <item quantity="other">%d dana</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d tjedan</item>
+        <item quantity="few">%d tjedna</item>
+        <item quantity="other">%d tjedna</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="few">%d months</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mjesec</item>
+        <item quantity="few">%d mjeseca</item>
+        <item quantity="other">%d mjeseci</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="few">%d years</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d godina</item>
+        <item quantity="few">%d godine</item>
+        <item quantity="other">%d godina</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Preostalo vrijeme do pokretanja alarma:\n%s</string>
     <string name="reminder_triggers_in">Preostalo vrijeme do pokretanja podsjetnika:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Preostalo vrijeme:
+\n%s</string>
     <string name="alarm_warning">Provjerite da li alarm ispravno funkcionira prije nego što se oslonite na njega. Moglo bi se dogoditi pogreška zbog ograničenja sustava vezanih uz štednju baterije.</string>
     <string name="reminder_warning">Pazite da podsjetnici ispravno rade prije nego što se oslonite na njih. Moglo bi se dogoditi pogreška zbog ograničenja sustava vezanih uz štednju baterije.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">Obavijesti ove aplikacije su deaktivirane. Aktiviraj ih u postavkama uređaja.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Odgodi</string>
@@ -648,22 +649,22 @@
     <string name="your_sounds">Vaši zvukovi</string>
     <string name="add_new_sound">Dodaj novi zvuk</string>
     <string name="no_sound">Nema zvuka</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Tijekom dana u hh:mm</string>
+    <string name="during_day_at">Tijekom dana u %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Postavke</string>
     <string name="purchase_simple_thank_you">Kupite Jednostavno Hvala</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="general_settings">Opće</string>
+    <string name="color_customization">Prilagođavanje boja</string>
+    <string name="improved_color_customization">Poboljšano prilagođavanje boja</string>
     <string name="customize_colors">Prilagodi boje</string>
-    <string name="customize_colors_locked">Prilagodi boje (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="customize_colors_locked">Prilagodi boje (zaključano)</string>
+    <string name="feature_locked">Zaključano</string>
     <string name="customize_widget_colors">Prilagodi boje widgeta</string>
-    <string name="customize_notifications">Customize notifications</string>
-    <string name="notification_sound">Notification sound</string>
-    <string name="use_english_language">Koristi Engleski jezik</string>
-    <string name="language">Language</string>
+    <string name="customize_notifications">Prilagodi obavijesti</string>
+    <string name="notification_sound">Zvuk obavijesti</string>
+    <string name="use_english_language">Koristi engleski jezik</string>
+    <string name="language">Jezik</string>
     <string name="show_hidden_items">Prikaži skrivene stavke</string>
     <string name="font_size">Veličina fonta</string>
     <string name="small">Mala</string>
@@ -672,14 +673,14 @@
     <string name="extra_large">Jako velika</string>
     <string name="password_protect_hidden_items">Vidljivost skrivenih, lozinkom zaštićenih stavki</string>
     <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="password_protect_file_deletion">Zaštiti brisanje i premještanje datoteka lozinkom</string>
+    <string name="keep_last_modified">Zadrži staru vrijednost zadnje promjene pri operacijama nad datotekama</string>
     <string name="show_info_bubble">Prikaži informativni balončić prilikom prelistavanja stavki povlačenjem klizne trake</string>
     <string name="prevent_phone_from_sleeping">Spriječite da uređaj prijeđe u stanje mirovanja dok je aplikacija u prvom planu</string>
     <string name="skip_delete_confirmation">Uvijek preskoči dijaloški okvir za potvrdu brisanja</string>
     <string name="enable_pull_to_refresh">Omogućite osvježavanje povlačenjem s vrha</string>
     <string name="use_24_hour_time_format">Koristite 24-satni format</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Promijeni formate datuma i vremena</string>
     <string name="sunday_first">Početak tjedna u nedjelju</string>
     <string name="widgets">Widgeti</string>
     <string name="use_same_snooze">Uvijek koristi isto vrijeme odgode</string>
