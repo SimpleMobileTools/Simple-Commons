@@ -160,14 +160,14 @@
     <string name="no_camera_permissions">Se requiere permiso para la Cámara</string>
     <string name="no_audio_permissions">Se requiere permiso de Audio</string>
     <string name="no_permission">Sin autorización</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar recordatorios.</string>
+    <string name="allow_notifications_files">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar la barra de progreso.</string>
+    <string name="allow_notifications_music_player">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá reproducir las canciones.</string>
+    <string name="allow_notifications_voice_recorder">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá grabar audio.</string>
+    <string name="allow_notifications_incoming_calls">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar las llamadas entrantes.</string>
+    <string name="allow_notifications_incoming_messages">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar los mensajes entrantes.</string>
+    <string name="grant_permission">Conceder el permiso</string>
+    <string name="permission_required">Permiso necesario</string>
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>
     <string name="rename_folder">Renombrar carpeta</string>
@@ -736,7 +736,7 @@
     <string name="show_the_recycle_bin">Mostrar la paplera de reciclaje</string>
     <string name="hide_the_recycle_bin">Ocultar la papelera de reciclaje</string>
     <string name="open_the_recycle_bin">Abrir la papelera de reciclaje</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Sáltate la papelera de reciclaje y elimina archivos directamente</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moviendo %d elemento a la papelera</item>
         <item quantity="many">Mover %d elementos a la papelera de reciclaje</item>
@@ -837,8 +837,16 @@
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hola,
+\n
+\nparece que acabas de actualizar desde la versión gratuita. Una vez que estés satisfecho con ésta y hayas migrado tu configuración y favoritos, puedes desinstalar la antigua versión gratuita para evitar iniciarla accidentalmente, ya que no la necesitarás más.
+\n
+\n¡Gracias!</string>
+    <string name="upgraded_to_pro_gallery">Hola,
+\n
+\nparece que ya tienes la versión Pro de la aplicación también. Una vez que estés satisfecho con ella y hayas migrado tus ajustes y favoritos, puedes desinstalar esta para evitar iniciarla accidentalmente, ya que no la necesitarás más.
+\n
+\n¡Gracias!</string>
     <string name="upgraded_from_free">Hola,
 \n
 \nparece que acaba de actualizar desde la versión gratuita. Una vez que esté satisfecho con él y haya migrado sus datos, puede desinstalar la versión gratuita anterior para evitar iniciarla accidentalmente porque ya no la necesita.
