@@ -161,14 +161,14 @@
     <string name="no_camera_permissions">Je vyžadováno oprávnění pro přístup k fotoaparátu</string>
     <string name="no_audio_permissions">Je vyžadováno oprávnění pro přístup ke zvuku</string>
     <string name="no_permission">Žádné oprávnění</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat upomínky.</string>
+    <string name="allow_notifications_files">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat stav postupu.</string>
+    <string name="allow_notifications_music_player">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct přehrávat hudbu.</string>
+    <string name="allow_notifications_voice_recorder">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct nahrávat zvuk.</string>
+    <string name="allow_notifications_incoming_calls">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí hovory.</string>
+    <string name="allow_notifications_incoming_messages">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí zprávy.</string>
+    <string name="grant_permission">Povolit oprávnění</string>
+    <string name="permission_required">Vyžadováno oprávnění</string>
     <!-- Renaming -->
     <string name="rename_file">Přejmenovat soubor</string>
     <string name="rename_folder">Přejmenovat složku</string>
@@ -738,7 +738,7 @@
     <string name="show_the_recycle_bin">Zobrazit koš</string>
     <string name="hide_the_recycle_bin">Skrýt koš</string>
     <string name="open_the_recycle_bin">Otevřít koš</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Nepoužívat koš, odstranit soubory přímo</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka se přesouvá do koše</item>
         <item quantity="few">%d položky se přesouvají do koše</item>
