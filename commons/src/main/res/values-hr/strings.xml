@@ -188,13 +188,13 @@
     <string name="simple_renaming">Jednostavno preimenovanje</string>
     <string name="pattern_renaming">Uzorak</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - godina
-\n%M - mjesec
-\n%D - dan
-\n%h - sat
-\n%m - minuta
-\n%s - sekunda
-\n%i - broj raste od 1</string>
+    <string name="rename_date_time_pattern">%Y – godina
+\n%M – mjesec
+\n%D – dan
+\n%h – sat
+\n%m – minuta
+\n%s – sekunda
+\n%i – broj se povećava od 1</string>
     <string name="filename_without_txt">Naziv datoteke (bez .txt)</string>
     <string name="filename_without_json">Naziv datoteke (bez .json)</string>
     <string name="filename_without_zip">Naziv datoteke (bez .zip)</string>
@@ -678,7 +678,7 @@
     <string name="show_info_bubble">Prikaži informativni balončić prilikom prelistavanja stavki povlačenjem klizne trake</string>
     <string name="prevent_phone_from_sleeping">Spriječite da uređaj prijeđe u stanje mirovanja dok je aplikacija u prvom planu</string>
     <string name="skip_delete_confirmation">Uvijek preskoči dijaloški okvir za potvrdu brisanja</string>
-    <string name="enable_pull_to_refresh">Omogućite osvježavanje povlačenjem s vrha</string>
+    <string name="enable_pull_to_refresh">Aktiviraj aktualiziranje povlačenjem odozgo</string>
     <string name="use_24_hour_time_format">Koristite 24-satni format</string>
     <string name="change_date_and_time_format">Promijeni formate datuma i vremena</string>
     <string name="sunday_first">Početak tjedna u nedjelju</string>
@@ -690,12 +690,12 @@
     <string name="recycle_bin_cleaning_interval">Interval čišćenja koša za smeće</string>
     <string name="empty_recycle_bin">Isprazni koš za smeće</string>
     <string name="force_portrait_mode">Prikaz stavke u portretnom formatu</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Izvezi postavke</string>
+    <string name="import_settings">Uvezi postavke</string>
+    <string name="settings_exported_successfully">Postavke su uspješno izvezene</string>
+    <string name="settings_imported_successfully">Postavke su uspješno uvezene</string>
     <string name="start_name_with_surname">Započnite imena s prezimenima</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Izbriši predmemoriju</string>
     <string name="show_call_confirmation_dialog">Pokažite dijaloški okvir za potvrdu poziva prije pokretanja poziva</string>
     <!-- Setting sections -->
     <string name="visibility">Vidljivost</string>
@@ -706,14 +706,14 @@
     <string name="saving_label">Spremanje</string>
     <string name="startup">Pokretanje</string>
     <string name="text">Tekst</string>
-    <string name="migrating">Migrating</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="migrating">Migriranje</string>
+    <string name="quality">Kvaliteta</string>
+    <string name="main_screen">Glavni ekran</string>
+    <string name="thumbnails">Sličice</string>
     <string name="list_view">List view</string>
     <!-- Excluding -->
     <string name="exclude">Isključi</string>
-    <string name="exclude_folder">Exclude folder</string>
+    <string name="exclude_folder">Isključi mapu</string>
     <string name="excluded_folders">Isključene mape</string>
     <string name="excluded">(isključene)</string>
     <string name="manage_excluded_folders">Upravljaj isključenim mapama</string>
@@ -723,12 +723,12 @@
     <string name="stop_showing_excluded">Prekini prikazivanje isključenih</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Upravljaj prikazanim karticama</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="default_tab_to_open">Kartica koja se otvara nakon pokretanja programa</string>
     <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="favorites_tab">Favoriti</string>
+    <string name="call_history_tab">Povijest poziva</string>
+    <string name="groups_tab">Grupe</string>
+    <string name="last_used_tab">Zadnje korištena</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
@@ -740,10 +740,10 @@
     <string name="empty_recycle_bin_confirmation">Jeste li sigurni da želite isprazniti koš za smeće? Datoteke će biti trajno izgubljene.</string>
     <string name="recycle_bin_empty">Koš za smeće je prazan</string>
     <string name="moving_recycle_bin_items_disabled">Premještanje stavki koša za smeće je onemogućeno, koristite Obnavljanje</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="show_the_recycle_bin">Prikaži koš za smeće</string>
+    <string name="hide_the_recycle_bin">Sakrij koš za smeće</string>
+    <string name="open_the_recycle_bin">Otvori koš za smeće</string>
+    <string name="skip_the_recycle_bin">Preskoči koš za smeće, izbriši datoteke odmah</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d stavka se premješta u koš za smeće</item>
         <item quantity="few">%d stavke se premještaju u koš za smeće</item>
@@ -758,18 +758,25 @@
     <string name="exporting_failed">Izvoz nije uspio</string>
     <string name="importing_some_entries_failed">Uvoz nekih unosa nije uspio</string>
     <string name="exporting_some_entries_failed">Izvoz nekih unosa nije uspio</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_entries_for_importing">Nije pronađen nijedan unos za uvoz</string>
+    <string name="no_new_entries_for_importing">Nije pronađen nijedan nov unos za uvoz</string>
     <string name="no_entries_for_exporting">Nije pronađen nijedan unos za izvoz</string>
-    <string name="backups">Backups</string>
-    <string name="enable_automatic_backups">Enable automatic backups</string>
-    <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="backups">Sigurnosne kopije</string>
+    <string name="enable_automatic_backups">Aktiviraj automatsko spremanje sigurnosnih kopija</string>
+    <string name="manage_automatic_backups">Upravljaj automatskim spremanjem sigurnosnih kopija</string>
+    <string name="date_time_pattern_info">Za automatsko imenovanje datoteke možeš koristiti sljedeće elemente:
+\n
+\n%Y – godina
+\n%M – mjesec
+\n%D – dan
+\n%h – sat
+\n%m – minuta
+\n%s – sekunda</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Čini se da na uređaj imate priključen USB uređaj. Da biste provjerili prikazuju li se datoteke ispravno, morate dodijeliti dodatna dopuštenja.</string>
     <string name="confirm_usb_storage_access_text">Molimo odaberite root mapu USB uređaja na sljedećem zaslonu, kako biste odobrili pristup</string>
-    <string name="wrong_root_selected_usb">Odabrana mapa je pogrešna, odaberite root mapu svog USB uređaja</string>
+    <string name="wrong_root_selected_usb">Odabrana je pogrešna mapa. Odaberite glavnu mapu USB uređaja</string>
     <!-- Dates -->
     <string name="january">Siječanj</string>
     <string name="february">Veljača</string>
@@ -945,8 +952,8 @@
     <string name="sideloaded_app">Čini se da je verzija aplikacije oštećena. Preuzmi izvornu verziju &lt;a href=%s&gt;ovdje&lt;/a&gt;.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Često postavljenja pitanja</string>
-    <string name="before_asking_question">Prije postavljanja pitanja, najprije pročitajte</string>
-    <string name="faq_1_title_commons">Kako ne vidim widgete ove aplikacije na popisu widgeta?</string>
+    <string name="before_asking_question">Prije postavljanja pitanja, najprije pročitaj</string>
+    <string name="faq_1_title_commons">Zašto ne vidim widgete ove aplikacije u popisu widgeta\?</string>
     <string name="faq_1_text_commons">Najvjerojatnije zato jer ste premjestili aplikaciju na SD karticu. Postoji ograničenje Android sustava koje skriva dane widgete aplikacije u tom slučaju.
         Jedino je rješenje vratiti aplikaciju na internu pohranu putem postavki uređaja.</string>
     <string name="faq_2_title_commons">Želim Vam pomoći, ali ne mogu donirati novac. Ima li još nešto što mogu učiniti?</string>
@@ -956,12 +963,12 @@
             The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
         ]]>
     </string>
-    <string name="faq_3_title_commons">Pogrešno sam izbrisao neke datoteke, kako ih mogu vratiti?</string>
+    <string name="faq_3_title_commons">Slučajno sam izbrisao/la neke datoteke. Kako ih mogu obnoviti\?</string>
     <string name="faq_3_text_commons">Nažalost, ne možete. Datoteke se brišu odmah nakon dijaloškog okvira za potvrdu, nema dostupnog koša za smeće.</string>
     <string name="faq_4_title_commons">Ne sviđa mi se boja widgeta, mogu li ih promijeniti?</string>
     <string name="faq_4_text_commons">Da, kada povlačite widget na početnom zaslonu, pojavit će se zaslon za konfiguraciju widgeta. U donjem lijevom kutu vidjet ćete obojene kvadrate, samo ih pritisnite da biste odabrali novu boju. Možete koristiti i klizač za podešavanje alphe.</string>
     <string name="faq_5_title_commons">Mogu li nekako vratiti izbrisane datoteke?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Ako su stvarno izbrisane, ne možete. Međutim, postoji koš za smeće koji je standardno aktiviran. Na taj se način datoteke samo premještaju u koš umjesto da se izbrišu.</string>
     <string name="faq_6_title_commons">Ikona pokretača aplikacija je nestala. Što mogu učiniti?</string>
     <string name="faq_6_text_commons">Uzrok je to što pokretač ne podržava ispravnu prilagodbu ikone. Pokušajte pokrenuti aplikaciju putem Google Playa ili nekog widgeta, ako je dostupan.
         Nakon pokretanja, zadanu ikonu postavite na narančastu #F57C00. Možda će biti potrebno ponovno instalirati aplikaciju ako to ne radi.</string>
