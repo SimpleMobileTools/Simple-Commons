@@ -88,16 +88,13 @@ class MyContactsContentProvider {
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
-                            // Modified how names is calculated because of Issue #598
-                            var names:  List<String>
-                            if(name.contains(",")) {
-                                names = name.split(",")
+                            var names = if (name.contains(",")) {
+                                name.split(",")
                             } else {
-                                names = name.split(" ")
+                                name.split(" ")
                             }
-
                             var firstName = names.firstOrNull() ?: ""
-                            if(name.contains(",")) {
+                            if (name.contains(",")) {
                                 firstName += ", "
                             }
                             val middleName = if (names.size == 3) names[2] else ""
