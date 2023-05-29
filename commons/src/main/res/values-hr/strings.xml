@@ -839,53 +839,53 @@
     <string name="saturday_short">Sub</string>
     <string name="sunday_short">Ned</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Tvoja verzija aplikacije se više neće ažurirati. Nadogradi na Pro verziju za primanje novih ispravki i druga poboljšanja.</string>
+    <string name="upgrade_to_pro_long_click">Tvoja verzija aplikacije se više neće ažurirati. Pritisni ovdje za nadogradnju na Pro verziju za primanje novih ispravki i druga poboljšanja.</string>
     <string name="it_is_free">Besplatno je do: %s. Ako je preuzmete do tada, moći ćete je koristiti zauvijek.</string>
     <string name="more_info">Više informacija</string>
     <string name="upgrade">Nadogradi</string>
     <string name="upgrade_calendar">Lokalno pohranjene događaje morate migrirati ručno putem izvoza u .ics datoteku, a zatim uvoza. Možete pronaći oba gumba za izvoz/uvoz na izborniku glavnog zaslona.</string>
-    <string name="upgraded_from_free_gallery">Hello,
+    <string name="upgraded_from_free_gallery">Zdravo,
 \n
-\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš svoje postavke i favorite, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,
+\nHvala!</string>
+    <string name="upgraded_to_pro_gallery">Zdravo,
 \n
-\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.
+\nčini se da već imaš i Pro verziju aplikacije. Ako ti Pro verzija odgovara i ako preuzmeš svoje postavke i favorite, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_from_free">Hello,
+\nHvala!</string>
+    <string name="upgraded_from_free">Zdravo,
 \n
-\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš tvoje podatke, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,
+\nHvala!</string>
+    <string name="upgraded_to_pro">Zdravo,
 \n
-\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.
+\nčini se da već imaš i Pro verziju aplikacije. Ako ti Pro verzija odgovara i ako preuzmeš tvoje podatke, ovu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje te verzije jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,
+\nHvala!</string>
+    <string name="upgraded_from_free_calendar">Zdravo,
 \n
-\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako želiš preuzeti tvoje lokalno spremljene događaje, to moraš učiniti ručno izvozom u .ics datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare besplatne verzije jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,
+\nHvala!</string>
+    <string name="upgraded_from_free_contacts">Zdravo,
 \n
-\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Tvoje spremljene kontakte u „%s” moraš preuzeti ručno izvozom u .vcf datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati.
 \n
-\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,
+\nHvala!</string>
+    <string name="upgraded_from_free_notes">Zdravo,
 \n
-\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako želiš preuzeti tvoje lokalno spremljene bilješke, to moraš učiniti ručno izvozom u datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati.
 \n
-\nThanks!</string>
+\nHvala!</string>
     <!-- About -->
     <string name="about">Informacije</string>
     <string name="website">Web stranica</string>
@@ -925,25 +925,25 @@
     <string name="purchase">Kupi</string>
     <string name="get_simple_phone">Nabavi „Jednostavni telefon”</string>
     <string name="update_thank_you">Ažurirajte „Jednostavno hvala” na najnoviju verziju</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="before_asking_question_read_faq">Prije nego što postaviš pitanje, provjeri postavke aplikacije i najprije pročitaj stranicu „Često postavljena pitanja”. Rješenje možda već postoji.</string>
+    <string name="before_rate_read_faq">Prije nego što nas ocijeniš, provjeri postavke aplikacije i najprije pročitaj stranicu „Često postavljena pitanja”. Ako imaš bilo koji problem, rješenje možda već postoji.</string>
+    <string name="make_sure_latest">Također osiguraj da koristiš najnoviju verziju aplikacije.</string>
+    <string name="make_sure_upgrade">Također imaj na umu da se ova verzija aplikacije više ne razvija. Nabavi Pro verziju za mnoga poboljšanja.</string>
     <string name="read_it">Pročitajte</string>
     <string name="read_faq">Pročitaj ČPP</string>
-    <string name="rate_us_prompt">Hello,
+    <string name="rate_us_prompt">Zdravo,
 \n
-\nit looks like you are using this app for quite a while already, and we really appreciate it.
+\nČini se da već duže vrijeme koristiš ovu aplikaciju i mi to jako cijenimo.
 \n
-\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.
+\nMolimo te da nas ocijeniš nas na Google Playu. To bi nam stvarno puno pomoglo.
 \n
-\nNo matter how you decide, you will not see this message again.
+\nKako god odlučiš, ovu poruku više nećeš vidjeti.
 \n
-\nThanks!</string>
+\nHvala!</string>
     <string name="rate_our_app">Ocijeni našu aplikaciju :)</string>
     <string name="thank_you">Hvala</string>
-    <string name="widget_locked_pro">The widget is locked.
-\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Widget je zaključan.
+\nZa otključavanje widgeta nadogradi na Pro verziju.</string>
     <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hej,&lt;br&gt;&lt;br&gt; nedavno su objavljene nove aplikacije:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Možeš ih preuzeti pritiskom na njihove naslove ili ikone.&lt;br&gt;&lt;br&gt; Hvala</string>
@@ -1089,9 +1089,9 @@
     <string name="why_upgrade_contact_filtering">Filtriranje kontakata</string>
     <string name="why_upgrade_contact_private_contacts">Privatno spremljeni kontakti</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Popisi zadataka</string>
+    <string name="why_upgrade_different_note_per_widget">Različite bilješke i boje po widgetu</string>
+    <string name="why_upgrade_note_locking">Zaključavanje bilješki</string>
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Prilagođavanje formata datuma i vremena</string>
     <string name="why_upgrade_shortcuts">Prečaci za početni ekran</string>
@@ -1106,53 +1106,57 @@
     <string name="third_party_licences">Licence trećih strana</string>
     <string name="kotlin_title">Kotlin (programski jezik)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zumiranje prikaza slika)</string>
-    <string name="glide_title">Glide (učitavanje slika i predmemoriranje)</string>
-    <string name="picasso_title">Picasso (učitavanje slike i predmemoriranje)</string>
-    <string name="cropper_title">Android Image Cropper (rezanje slika i rotacija)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (pomicanje ulijevo ili udesno)</string>
-    <string name="joda_title">Joda-Time (zamjena Java datuma)</string>
-    <string name="stetho_title">Stetho (baza podataka za uklanjanje pogrešaka)</string>
-    <string name="otto_title">Otto (predajnik događaja)</string>
-    <string name="photoview_title">PhotoView (zumirajući GIF-ove)</string>
+    <string name="glide_title">Glide (učitavanje i predmemoriranje slika)</string>
+    <string name="picasso_title">Picasso (učitavanje i predmemoriranje slika)</string>
+    <string name="cropper_title">Android Image Cropper (rezanje i okretanje slika)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (povlačenje zdesna ulijevo)</string>
+    <string name="joda_title">Joda-Time (zamjena datuma pomoću Java)</string>
+    <string name="stetho_title">Stetho (uklanjanje grešaka u bazama podataka)</string>
+    <string name="otto_title">Otto (kanal događaja)</string>
+    <string name="photoview_title">PhotoView (zumiranje GIF-ova)</string>
     <string name="pattern_title">PatternLockView (zaštita uzorcima)</string>
     <string name="reprint_title">Reprint (zaštita otiskom prsta)</string>
     <string name="gif_drawable_title">Gif Drawable (učitavanje GIF-ova)</string>
     <string name="autofittextview_title">AutoFitTextView (mijenjanje veličine teksta)</string>
     <string name="robolectric_title">Robolectric (framework za testiranje)</string>
-    <string name="espresso_title">Espresso (pomoćnik testiranja)</string>
+    <string name="espresso_title">Espresso (pomoćnik za testiranje)</string>
     <string name="gson_title">Gson (JSON analizator)</string>
     <string name="leak_canary_title">Leak Canary (detektor propuštanja memorije)</string>
     <string name="number_picker_title">Number Picker (prilagodljiv birač brojeva)</string>
     <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (prikaz panorama)</string>
+    <string name="panorama_view_title">VR Panorama View (panoramski prikaz)</string>
     <string name="sanselan_title">Apache Sanselan (čitanje metapodataka slike)</string>
     <string name="filters_title">Android Photo Filters (filteri za slike)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (vizualizacije zvuka)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="gesture_views_title">Gesture Views (zumiranje slika)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (slova u kliznoj traci)</string>
+    <string name="event_bus_title">Event Bus (komunikacija unutar aplikacije)</string>
+    <string name="audio_record_view_title">Audio Record View (vizualizacija zvuka)</string>
+    <string name="sms_mms_title">SMS MMS (rukovanje SMS i MMS porukama)</string>
     <string name="apng_title">APNG Android (podrška za animirani WebP)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (čitač PDF-ova)</string>
+    <string name="m3u_parser_title">M3U Parser (rukovanje datotekama m3u playlista)</string>
+    <string name="android_lame_title">AndroidLame (mp3 koder)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
+    <string name="trial_expired">Probni rok je istekao</string>
+    <string name="start_free_trial">Pokreni besplatan probni rok</string>
+    <string name="trial_expires_soon">Tvoj probni rok uskoro isteče.</string>
+    <string name="unlock_for_one_final_day">Otključaj aplikaciju za još jedan zadnji dan</string>
+    <string name="welcome_to_app_name">Pozdrav u %s!</string>
     <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_end_description">Nadogradi na Pro verziju za potpuni užitak.
+\n
+\nPlati samo jednom. Ako ti Pro verzija ne odgovara, deinstaliraj je i dobij povrat novca.
+\n
+\nVidimo se tamo :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Tvoje probno razdoblje isteče za %d dan.</item>
         <item quantity="few">Tvoje probno razdoblje isteče za %d dana.</item>
         <item quantity="other">Tvoje probno razdoblje isteče za %d dana.</item>
     </plurals>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">ZASTARJELO: Ova verzija aplikacije se više ne održava. Nabavi Pro verziju na https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Ako deinstaliraš bilo koju plaćenu aplikaciju u roku od 2 sata automatski ćeš dobiti povrat novca. Ako kasnije želiš povrat novca, jednostavno nas kontaktiraj na hello@simplemobiletools.com. To olakšava isprobavanje :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Skup jednostavnih Android aplikacija otvorenog koda s prilagodljivim widgetima, bez oglasa i nepotrebnih dozvola.</string>
 </resources>
