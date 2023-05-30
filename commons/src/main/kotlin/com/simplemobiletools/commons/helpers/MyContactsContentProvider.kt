@@ -93,10 +93,12 @@ class MyContactsContentProvider {
                             } else {
                                 name.split(" ")
                             }
+
                             var firstName = names.firstOrNull() ?: ""
                             if (name.contains(",")) {
                                 firstName += ", "
                             }
+
                             val middleName = if (names.size == 3) names[2] else ""
                             val surname = if (names.size > 1) {
                                 names.lastOrNull() ?: ""
