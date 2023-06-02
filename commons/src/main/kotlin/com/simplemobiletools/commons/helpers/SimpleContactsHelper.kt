@@ -331,8 +331,8 @@ class SimpleContactsHelper(val context: Context) {
     fun getContactLookupKey(contactId: String): String {
         val uri = Data.CONTENT_URI
         val projection = arrayOf(Data.CONTACT_ID, Data.LOOKUP_KEY)
-        val selection = "${Data.MIMETYPE} = ? AND ${Data.RAW_CONTACT_ID} = ?"
-        val selectionArgs = arrayOf(StructuredName.CONTENT_ITEM_TYPE, contactId)
+        val selection = "${Data.RAW_CONTACT_ID} = ?"
+        val selectionArgs = arrayOf(contactId)
 
         val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {
