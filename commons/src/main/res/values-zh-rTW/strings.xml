@@ -326,7 +326,7 @@
     <string name="discard">丟棄</string>
     <string name="undo_changes">恢復變更</string>
     <string name="undo_changes_confirmation">確定要恢復變更嗎?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">此操作無法撤消。</string>
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
     <string name="apply_to_all_apps">將顏色套用於[簡易]系列全部應用程式</string>
     <string name="app_icon_color_warning">警告:部分啟動器無法正確地處理應用程式圖標自訂化。要是圖標消失了，如果可以，試著透過Google Play或某些小工具來啟動應用程式。
@@ -1044,7 +1044,7 @@
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">
