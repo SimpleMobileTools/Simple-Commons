@@ -998,19 +998,25 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
-        if (getDoesFilePathExist(newFileDirItem.path)) {
-            FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
-                if (applyForAll) {
-                    conflictResolutions.clear()
-                    conflictResolutions[""] = resolution
-                    checkConflicts(files, destinationPath, files.size, conflictResolutions, callback)
-                } else {
-                    conflictResolutions[newFileDirItem.path] = resolution
+        ensureBackgroundThread {
+            if (getDoesFilePathExist(newFileDirItem.path)) {
+                runOnUiThread {
+                    FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
+                        if (applyForAll) {
+                            conflictResolutions.clear()
+                            conflictResolutions[""] = resolution
+                            checkConflicts(files, destinationPath, files.size, conflictResolutions, callback)
+                        } else {
+                            conflictResolutions[newFileDirItem.path] = resolution
+                            checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
+                        }
+                    }
+                }
+            } else {
+                runOnUiThread {
                     checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
                 }
             }
-        } else {
-            checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
         }
     }
 
