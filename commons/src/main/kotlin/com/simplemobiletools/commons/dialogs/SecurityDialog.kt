@@ -95,7 +95,10 @@ class SecurityDialog(
     override fun receivedHash(hash: String, type: Int) {
         callback(hash, type, true)
         if (!activity.isFinishing) {
-            dialog?.dismiss()
+            try {
+                dialog?.dismiss()
+            } catch (ignored: Exception) {
+            }
         }
     }
 
