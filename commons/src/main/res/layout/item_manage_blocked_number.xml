@@ -3,7 +3,7 @@
     android:id="@+id/manage_blocked_number_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/selector"
+    android:background="@drawable/selector_clickable"
     android:clickable="true"
     android:focusable="true">
 

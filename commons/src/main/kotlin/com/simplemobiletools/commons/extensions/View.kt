@@ -54,8 +54,8 @@ fun View.fadeOut() {
 
 fun View.setupViewBackground(context: Context) {
     background = if (context.baseConfig.isUsingSystemTheme) {
-        resources.getDrawable(R.drawable.selector_you)
+        resources.getDrawable(R.drawable.selector_clickable_you)
     } else {
-        resources.getDrawable(R.drawable.selector)
+        resources.getDrawable(R.drawable.selector_clickable)
     }
 }
