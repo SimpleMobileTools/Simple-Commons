@@ -131,23 +131,23 @@
     <string name="search">Søg</string>
     <string name="search_in_placeholder">Søg i %s</string>
     <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
+    <string name="search_contacts">Søg i kontakter</string>
+    <string name="search_favorites">Søg blandt favoritter</string>
+    <string name="search_apps">Søg blandt apps</string>
     <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
+    <string name="search_groups">Søg blandt grupper</string>
+    <string name="search_history">Søgehistorik</string>
+    <string name="search_calls">Søg i opkald</string>
+    <string name="search_files">Søg blandt filer</string>
+    <string name="search_folders">Søg blandt mapper</string>
+    <string name="search_files_and_folders">Søg blandt filer og mapper</string>
     <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
+    <string name="search_artists">Søg blandt kunstnere</string>
+    <string name="search_albums">Søg blandt album</string>
     <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="search_text">Søgetekst</string>
+    <string name="search_conversations">Søg blandt samtaler</string>
+    <string name="search_recordings">Søg blandt optagelser</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
@@ -1077,7 +1077,7 @@
     <string name="trial_expires_soon">Din prøveperiode udløber snart.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Velkommen til %s!</string>
-    <string name="trial_start_description">Tak, fordi du bruger vores app. Du kan bruge denne ulåste version i &lt;font color=\'#FFFFFFFF\'>%d dage&lt;/font>. Når prøveversionen udløber, skal du overveje at opgradere til Pro-versionen. Den har en enorm mængde nye funktioner, et moderne design, ingen reklamer og mange andre forbedringer.
+    <string name="trial_start_description">Tak, fordi du bruger vores app. Du kan bruge denne ulåste version i &lt;font color=\'#FFFFFFFF\'&gt;%d dage&lt;/font&gt;. Når prøveversionen udløber, skal du overveje at opgradere til Pro-versionen. Den har en enorm mængde nye funktioner, et moderne design, ingen reklamer og mange andre forbedringer.
         \n\nDu skal bare betale for det en gang for alle, og hvis du ikke er tilfreds, kan du afinstallere det og få pengene tilbage.\n\nHåber du vil kunne lide den :)</string>
     <string name="trial_end_description">Opgrader venligst til Pro-versionen for at nyde appen fuldt ud.\n\nDu skal kun betale for den én gang i livet, og hvis du ikke er tilfreds, kan du afinstallere den og få pengene tilbage.\n\n\nVi ses :)</string>
     <plurals name="trial_expires_days">
