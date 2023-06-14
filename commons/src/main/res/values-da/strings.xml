@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
-    <string name="close">Close</string>
+    <string name="close">Luk</string>
     <string name="back">Tilbage </string>
     <string name="nothing">Intet</string>
     <string name="later">Senere</string>
@@ -133,22 +133,22 @@
     <string name="search_in_placeholder">Søg i %s</string>
     <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
     <string name="search_contacts">Søg i kontakter</string>
-    <string name="search_favorites">Søg blandt favoritter</string>
+    <string name="search_favorites">Søg i favoritter</string>
     <string name="search_apps">Søg blandt apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Søg blandt grupper</string>
+    <string name="search_events">Søg i begivenheder</string>
+    <string name="search_groups">Søg i grupper</string>
     <string name="search_history">Søgehistorik</string>
     <string name="search_calls">Søg i opkald</string>
-    <string name="search_files">Søg blandt filer</string>
-    <string name="search_folders">Søg blandt mapper</string>
-    <string name="search_files_and_folders">Søg blandt filer og mapper</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Søg blandt kunstnere</string>
-    <string name="search_albums">Søg blandt album</string>
-    <string name="search_tracks">Search tracks</string>
+    <string name="search_files">Søg i filer</string>
+    <string name="search_folders">Søg i mapper</string>
+    <string name="search_files_and_folders">Søg i filer og mapper</string>
+    <string name="search_playlists">Søg i spillelister</string>
+    <string name="search_artists">Søg i kunstnere</string>
+    <string name="search_albums">Søg i album</string>
+    <string name="search_tracks">Søg i numre</string>
     <string name="search_text">Søgetekst</string>
-    <string name="search_conversations">Søg blandt samtaler</string>
-    <string name="search_recordings">Søg blandt optagelser</string>
+    <string name="search_conversations">Søg i samtaler</string>
+    <string name="search_recordings">Søg i optagelser</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
