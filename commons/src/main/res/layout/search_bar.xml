@@ -39,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/previous"
             android:padding="@dimen/medium_margin"
             android:src="@drawable/ic_chevron_left_vector" />
 
@@ -48,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/next"
             android:padding="@dimen/medium_margin"
             android:src="@drawable/ic_chevron_right_vector" />
 
@@ -57,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
             android:padding="@dimen/medium_margin"
             android:src="@drawable/ic_cross_vector" />
 
