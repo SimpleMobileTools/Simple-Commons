@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
-    <string name="close">Close</string>
+    <string name="close">Cerrar</string>
     <string name="back">Atrás</string>
     <string name="nothing">Nada</string>
     <string name="later">Más tarde</string>
@@ -840,7 +840,7 @@
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
     <string name="upgraded_from_free_gallery">Hola,
 \n
-\nparece que acabas de actualizar desde la versión gratuita. Una vez que estés satisfecho con ésta y hayas migrado tu configuración y favoritos, puedes desinstalar la antigua versión gratuita para evitar iniciarla accidentalmente, ya que no la necesitarás más.
+\nparece que acabas de actualizar desde la versión gratuita. Una vez que estés contento con esta y tal vez hayas migrado tu configuración y favoritos, puedes desinstalar la antigua versión gratuita para evitar lanzarla accidentalmente, ya que no la necesitarás más, también evitarás que aparezca este cuadro de diálogo.
 \n
 \n¡Gracias!</string>
     <string name="upgraded_to_pro_gallery">Hola,
@@ -850,9 +850,9 @@
 \n¡Gracias!</string>
     <string name="upgraded_from_free">Hola,
 \n
-\nparece que acaba de actualizar desde la versión gratuita. Una vez que esté satisfecho con él y haya migrado sus datos, puede desinstalar la versión gratuita anterior para evitar iniciarla accidentalmente porque ya no la necesita.
+\nparece que acabas de actualizar desde la versión gratuita. Una vez que estés contento con esta y tal vez hayas migrado tus datos, puedes desinstalar la antigua versión gratuita para evitar lanzarla accidentalmente, ya que no la necesitarás más, también evitarás que aparezca este cuadro de diálogo.
 \n
-\n¡Muchas gracias!</string>
+\n¡Gracias!</string>
     <string name="upgraded_to_pro">Hola,
 \n
 \nparece que ya tienes la versión pro de la aplicación también. Una vez que esté satisfecho con ella y haya migrado sus datos, puede desinstalar esta aplicación. Para evitar ponerla en marcha accidentalmente porque ya no la necesitas.
@@ -860,23 +860,23 @@
 \n¡Muchas gracias!</string>
     <string name="upgraded_from_free_calendar">Hola,
 \n
-\nParece que has actualizado de la versión gratuita a la versión pro. Si desea migrar los eventos almacenados localmente desde la versión gratuita, debe exportarlos manualmente como archivos .ics en la versión gratuita e importarlos a la versión profesional a través del menú superior.
+\nparece que acabas de actualizarte desde la versión gratuita. Si quieres migrar tus eventos almacenados localmente, tienes que hacerlo manualmente exportándolos a un archivo .ics en la versión gratuita e importándolos aquí a través del menú superior.
 \n
-\nSi está satisfecho con la configuración profesional, puede desinstalar la versión gratuita anterior, ya que ya no la necesita.
+\nUna vez que estés satisfecho con tu configuración en la versión Pro, puedes desinstalar la antigua versión gratuita ya que no la necesitarás más, también evitará que aparezca este cuadro de diálogo.
 \n
 \n¡Gracias!</string>
     <string name="upgraded_from_free_contacts">Hola,
 \n
-\nparece que acaba de actualizar desde la versión gratuita. Si tiene contactos guardados en \"%s\", deberá migrarlos manualmente exportándolos a un archivo .vcf en la versión gratuita de la aplicación e importándolos aquí desde el menú superior.
+\nparece que acabas de actualizar desde la versión gratuita. Si tenías contactos almacenados en \"%s\", tienes que migrarlos manualmente exportándolos en un archivo .vcf desde la versión gratuita de la aplicación e importándolos aquí a través del menú superior.
 \n
-\nUna vez que esté satisfecho con su configuración en la versión Pro, puede desinstalar la versión gratuita anterior ya que ya no la necesita.
+\nUna vez que estés satisfecho con tu configuración en la versión Pro, puedes desinstalar la antigua versión gratuita ya que no la necesitarás más, también evitarás que este diálogo aparezca.
 \n
-\n¡Muchas gracias!</string>
+\n¡Gracias!</string>
     <string name="upgraded_from_free_notes">Hola,
 \n
-\nparece que acaba de actualizar a partir de la versión gratuita. Si desea migrar las notas, es necesario hacerlo manualmente exportándolas a un archivo en la versión gratuita de la aplicación e importándolas aquí a través del menú superior.
+\nparece que acabas de actualizar desde la versión gratuita. Si quieres migrar tus notas, tienes que hacerlo manualmente exportándolas a un archivo en la versión gratuita e importándolas aquí a través del menú superior.
 \n
-\nCuando esté satisfecho con su configuración de la versión Pro, puede desinstalar la antigua gratuita porque ya no la necesitará.
+\nUna vez que estés satisfecho con tu configuración en la versión Pro, puedes desinstalar la antigua versión gratuita ya que no la necesitarás más, también evitarás que aparezca este cuadro de diálogo.
 \n
 \n¡Gracias!</string>
     <!-- About -->
@@ -1083,7 +1083,7 @@
     <string name="why_upgrade_footer">Garantía de devolución del 100% del dinero</string>
     <string name="why_upgrade_footer_one_time_payment">Pago único</string>
     <string name="why_upgrade_improved_design">Diseño mejorado</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Muchas otras mejoras</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avanzado</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avanzado de fotos y videos</string>
