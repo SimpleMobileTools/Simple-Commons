@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Oke</string>
     <string name="cancel">Batal</string>
-    <string name="close">Close</string>
+    <string name="close">Tutup</string>
     <string name="back">Kembali</string>
     <string name="nothing">Tidak ada</string>
     <string name="later">Kemudian</string>
@@ -49,7 +49,7 @@
     <string name="no_phone_call_permission">Aplikasi tidak diizinkan untuk memulai panggilan, mohon berikan izin di setelan perangkat</string>
     <string name="insert_text_here">Masukkan teks di sini</string>
     <string name="call_person">Panggil %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="confirm_calling_person">Konfirmasi memanggil %s</string>
     <string name="zero">Nol</string>
     <string name="one">Satu</string>
     <string name="two">Dua</string>
@@ -91,7 +91,7 @@
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">Tidak ada nomor telepon yang ditemukan</string>
     <!-- View types -->
-    <string name="change_view_type">Ubah tampilan</string>
+    <string name="change_view_type">Ubah jenis tampilan</string>
     <string name="grid">Kotak</string>
     <string name="grid_pro">Kotak (Pro)</string>
     <string name="uneven_grid">Grid Tidak Rata</string>
@@ -160,14 +160,14 @@
     <string name="no_camera_permissions">Izin kamera diperlukan</string>
     <string name="no_audio_permissions">Izin audio diperlukan</string>
     <string name="no_permission">Tidak ada izin</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya bisa menampilkan pengingat.</string>
+    <string name="allow_notifications_files">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan bilah proses.</string>
+    <string name="allow_notifications_music_player">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat memutar lagu.</string>
+    <string name="allow_notifications_voice_recorder">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat merekam audio.</string>
+    <string name="allow_notifications_incoming_calls">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan panggilan masuk.</string>
+    <string name="allow_notifications_incoming_messages">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan pesan masuk.</string>
+    <string name="grant_permission">Berikan Izin</string>
+    <string name="permission_required">Izin Dibutuhkan</string>
     <!-- Renaming -->
     <string name="rename_file">Ubah nama berkas</string>
     <string name="rename_folder">Ubah nama folder</string>
@@ -580,7 +580,7 @@
     <string name="purchase_simple_thank_you">Beli Terima Kasih Simpel</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Kustomisasi warna</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Kustomisasi warna ditingkatkan</string>
     <string name="customize_colors">Sesuaikan warna</string>
     <string name="customize_colors_locked">Sesuaikan warna (Locked)</string>
     <string name="feature_locked">Terkunci</string>
@@ -666,8 +666,8 @@
     <string name="moving_recycle_bin_items_disabled">Memindahkan item Keranjang Sampah dinonaktifkan, silakan gunakan fitur Pemulihan</string>
     <string name="show_the_recycle_bin">Tampilkan Keranjang Sampah</string>
     <string name="hide_the_recycle_bin">Sembunyikan Keranjang Sampah</string>
-    <string name="open_the_recycle_bin">Open the Recycle Bin</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="open_the_recycle_bin">Buka Tempat Sampah</string>
+    <string name="skip_the_recycle_bin">Lewati Tempat Sampah, hapus berkas secara langsung</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">Memindahkan %d item ke Keranjang Sampah</item>
     </plurals>
@@ -683,10 +683,17 @@
     <string name="no_entries_for_importing">Tidak ditemukan entri untuk bisa diimpor</string>
     <string name="no_new_entries_for_importing">Tidak ada entri untuk diimpor</string>
     <string name="no_entries_for_exporting">Tidak ditemukan entri untuk bisa diekspor</string>
-    <string name="backups">Backups</string>
-    <string name="enable_automatic_backups">Enable automatic backups</string>
-    <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="backups">Cadangan</string>
+    <string name="enable_automatic_backups">Aktifkan cadangan otomatis</string>
+    <string name="manage_automatic_backups">Kelola cadangan otomatis</string>
+    <string name="date_time_pattern_info">Anda dapat menggunakan pola berikut untuk menamai berkas Anda secara otomatis:
+\n
+\n%Y - tahun
+\n%M - bulan
+\n%D - hari
+\n%h - jam
+\n%m - menit
+\n%s - detik</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Sepertinya anda memiliki perangkat USB di perangkat anda. Untuk memastikan berkas ditampilkan dengan benar, anda perlu memberi izin akses tambahan.</string>
@@ -759,9 +766,21 @@
     <string name="more_info">Info selengkapnya</string>
     <string name="upgrade">Tingkatkan</string>
     <string name="upgrade_calendar">Anda perlu memindahkan acara yang disimpan lokal secara manual dengan cara mengekspornya ke berkas .ics, lalu mengimpornya kembali. Anda bisa menemukan tombol ekspor/impor di layar menu utama.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Halo,
+\n
+\nsepertinya Anda baru saja meng-upgrade dari versi gratis. Setelah Anda puas dengan yang ini dan mungkin memindahkan pengaturan dan favorit Anda, Anda dapat menghapus instalasi yang lama yang gratis untuk menghindari meluncurkannya secara tidak sengaja karena Anda tidak akan membutuhkannya lagi, ini juga akan mencegah dialog ini muncul.
+\n
+\nTerima kasih!</string>
+    <string name="upgraded_to_pro_gallery">Halo,
+\n
+\nSepertinya Anda sudah memiliki versi aplikasi Pro juga. Setelah Anda puas dengan aplikasi ini dan mungkin memindahkan pengaturan dan favorit Anda, Anda bisa menghapus instalan aplikasi ini untuk menghindari peluncurannya secara tidak sengaja karena Anda tidak memerlukannya lagi.
+\n
+\nTerima kasih!</string>
+    <string name="upgraded_from_free">Halo,
+\n
+\nsepertinya Anda baru saja meng-upgrade dari versi gratis. Setelah Anda puas dengan yang ini dan mungkin memindahkan data Anda, Anda dapat menghapus instalasi yang lama untuk menghindari peluncurannya secara tidak sengaja karena Anda tidak akan membutuhkannya lagi, ini juga akan mencegah dialog ini muncul.
+\n
+\nTerima kasih!</string>
     <string name="upgraded_to_pro">Halo,
 \n
 \nsepertinya Anda sudah memiliki versi aplikasi Pro juga. Setelah Anda puas dengan aplikasi ini dan mungkin memigrasikan data Anda, Anda dapat menghapus instalasi aplikasi ini untuk menghindari peluncuran aplikasi ini secara tidak sengaja karena Anda tidak akan membutuhkannya lagi.
@@ -769,23 +788,23 @@
 \nTerima kasih!</string>
     <string name="upgraded_from_free_calendar">Halo,
 \n
-\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda ingin memigrasikan acara yang disimpan secara lokal, Anda harus melakukannya secara manual dengan mengekspornya ke dalam berkas .ics dalam versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\nsepertinya Anda baru saja melakukan upgrade dari versi gratis. Jika Anda ingin memindahkan acara yang tersimpan secara lokal, Anda harus melakukannya secara manual dengan mengekspornya ke file .ics di versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
 \n
-\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda bisa menghapus instalasi versi gratis yang lama karena Anda tidak memerlukannya lagi.
+\nSetelah Anda puas dengan pengaturan Anda di versi Pro, Anda dapat menghapus instalasi versi gratis yang lama karena Anda tidak memerlukannya lagi, ini juga akan mencegah dialog ini muncul.
 \n
 \nTerima kasih!</string>
     <string name="upgraded_from_free_contacts">Halo,
 \n
-\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda memiliki kontak yang tersimpan di bawah \"%s\", Anda harus memigrasikannya secara manual dengan mengekspor dalam berkas .vcf dari versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\nsepertinya Anda baru saja melakukan upgrade dari versi gratis. Jika Anda memiliki kontak yang tersimpan di bawah \"%s\", Anda harus memigrasikannya secara manual dengan mengekspor file .vcf dari versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
 \n
-\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda dapat menghapus instalasi versi gratis yang lama karena Anda tidak memerlukannya lagi.
+\nSetelah Anda puas dengan pengaturan Anda di versi Pro, Anda dapat menghapus versi gratis yang lama karena Anda tidak memerlukannya lagi, ini juga akan mencegah dialog ini muncul.
 \n
 \nTerima kasih!</string>
     <string name="upgraded_from_free_notes">Halo,
 \n
-\nsepertinya Anda baru saja meningkatkan dari versi gratis. Jika Anda ingin memigrasikan catatan Anda, Anda harus melakukannya secara manual dengan mengekspornya ke dalam berkas di versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
+\nsepertinya Anda baru saja meng-upgrade dari versi gratis. Jika Anda ingin memindahkan catatan Anda, Anda harus melakukannya secara manual dengan mengekspornya ke dalam file di versi aplikasi gratis dan mengimpornya di sini melalui menu atas.
 \n
-\nSetelah Anda puas dengan pengaturan Anda dalam versi Pro, Anda dapat menghapus versi gratis yang lama karena Anda tidak akan membutuhkannya lagi.
+\nSetelah Anda puas dengan pengaturan Anda di versi Pro, Anda dapat menghapus instalasi versi gratis yang lama karena Anda tidak akan membutuhkannya lagi, ini juga akan mencegah dialog ini muncul.
 \n
 \nTerima kasih!</string>
     <!-- About -->
@@ -979,7 +998,7 @@
     <string name="why_upgrade_footer">Jaminan Uang Kembali 100%</string>
     <string name="why_upgrade_footer_one_time_payment">Pembayaran satu kali</string>
     <string name="why_upgrade_improved_design">Desain yang ditingkatkan</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Banyak peningkatan lainnya</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor foto tingkat lanjut</string>
     <string name="why_upgrade_advanced_photo_video_editor">Penyunting foto &amp; video tingkat lanjut</string>
@@ -1050,8 +1069,8 @@
     <!-- Trial -->
     <string name="trial_expired">Uji coba kedaluwarsa</string>
     <string name="start_free_trial">Mulai uji coba gratis</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="trial_expires_soon">Masa percobaan Anda akan segera berakhir.</string>
+    <string name="unlock_for_one_final_day">Buka kunci aplikasi untuk satu hari terakhir</string>
     <string name="welcome_to_app_name">Selamat datang di %s!</string>
     <string name="trial_start_description">Terima kasih telah menggunakan aplikasi kami. Anda dapat menggunakan versi yang tidak terkunci ini selama <font color="#FFFFFF">%d hari</font>. Setelah uji coba berakhir, harap pertimbangkan untuk meningkatkan ke versi Pro. Ini memiliki sejumlah besar fitur baru, desain modern, tidak ada iklan dan banyak peningkatan lainnya.
 \n
