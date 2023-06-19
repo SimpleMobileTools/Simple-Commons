@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
-    <string name="close">Close</string>
+    <string name="close">Закрити</string>
     <string name="back">Назад</string>
     <string name="nothing">Нічого</string>
     <string name="later">Пізніше</string>
@@ -30,7 +30,7 @@
     <string name="details">Подробиці</string>
     <string name="notes">Нотатки</string>
     <string name="deleting_folder">Видалення теки \'%s\'</string>
-    <string name="none">Нічого</string>
+    <string name="none">Немає</string>
     <string name="label">Позначка</string>
     <string name="transparent">Прозорий</string>
     <string name="transparent_color">Колір прозорості</string>
@@ -162,14 +162,14 @@
     <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
     <string name="no_permission">Без дозволу</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати нагадування.</string>
+    <string name="allow_notifications_files">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати індикатор виконання.</string>
+    <string name="allow_notifications_music_player">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе відтворювати пісні.</string>
+    <string name="allow_notifications_voice_recorder">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе записувати аудіо.</string>
+    <string name="allow_notifications_incoming_calls">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
+    <string name="allow_notifications_incoming_messages">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні повідомлення.</string>
+    <string name="grant_permission">Надати дозвіл</string>
+    <string name="permission_required">Потрібен дозвіл</string>
     <!-- Renaming -->
     <string name="rename_file">Перейменувати файл</string>
     <string name="rename_folder">Перейменувати теку</string>
@@ -767,7 +767,7 @@
     <string name="show_the_recycle_bin">Показати Кошик</string>
     <string name="hide_the_recycle_bin">Приховати Кошик</string>
     <string name="open_the_recycle_bin">Відкрити Кошик</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Пропустити кошик, видалити файли безпосередньо</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Переміщення %d елемента в Кошик</item>
         <item quantity="few">Переміщення %d елементів у Кошик</item>
@@ -871,7 +871,7 @@
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
     <string name="upgraded_from_free_gallery">Привіт,
 \n
-\nсхоже, ви щойно оновили безплатну версію. Якщо ви задоволені цією версією і, можливо, перенесли свої налаштування і вибране, ви можете видалити стару безплатну версію, щоб випадково не запустити її, оскільки вона вам більше не знадобиться.
+\nсхоже, ви щойно оновили безплатну версію. Якщо ви задоволені цією версією і, можливо, перенесли свої налаштування і вибране, ви можете видалити стару безплатну версію, щоб уникнути її випадкового запуску, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
 \nДякуємо!</string>
     <string name="upgraded_to_pro_gallery">Привіт,
@@ -881,9 +881,9 @@
 \nДякуємо!</string>
     <string name="upgraded_from_free">Привіт,
 \n
-\nздається, ви щойно оновили безплатну версію. Коли ви задоволені цим і, можливо, перенесете свої дані, ви можете видалити старий безплатний, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
+\nсхоже, що ви щойно оновили безплатну версію. Якщо ви задоволені цією версією і, можливо, перенесли свої дані, ви можете видалити стару безплатну версію, щоб уникнути її випадкового запуску, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <string name="upgraded_to_pro">Привіт,
 \n
 \nздається, у вас уже є версія застосунку Pro. Коли ви задоволені ним і, можливо, перенесете свої дані, ви можете видалити його, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
@@ -891,25 +891,25 @@
 \nДякую!</string>
     <string name="upgraded_from_free_calendar">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести локально збережені події, ви повинні зробити це вручну, експортувавши їх у файл .ics у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, ви щойно оновили безплатну версію. Якщо ви хочете перенести ваші локально збережені події, вам доведеться зробити це вручну, експортувавши їх у файл .ics у безплатній версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nЯкщо ви задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <string name="upgraded_from_free_contacts">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо у вас були будь-які контакти, збережені в \"%s\", вам потрібно перенести їх вручну, експортувавши у файл .vcf із безкоштовної версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, ви щойно оновили безплатну версію. Якщо у вас були контакти, збережені за адресою \"%s\", вам потрібно перенести їх вручну, експортувавши у .vcf-файл з безплатної версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nПісля того, як ви будете задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <string name="upgraded_from_free_notes">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести свої нотатки, ви повинні зробити це вручну, експортувавши їх у файл у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, що ви щойно оновили безплатну версію. Якщо ви хочете перенести свої нотатки, вам доведеться зробити це вручну, експортувавши їх у файл у безплатній версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nКоли ви будете задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <!-- About -->
     <string name="about">Про додаток</string>
     <string name="website">Веб-сайт</string>
@@ -1097,7 +1097,7 @@
     <string name="why_upgrade_footer">100% гарантія повернення коштів</string>
     <string name="why_upgrade_footer_one_time_payment">Одноразовий платіж</string>
     <string name="why_upgrade_improved_design">Покращений дизайн</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Багато інших поліпшень</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений редактор світлин</string>
     <string name="why_upgrade_advanced_photo_video_editor">Розширений редактор фото &amp; відео</string>
