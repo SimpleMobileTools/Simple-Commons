@@ -840,7 +840,7 @@
     <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
     <string name="upgraded_from_free_gallery">Ciao,
 \n
-\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa versione e magari hai migrato le tue impostazioni e i tuoi preferiti, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più.
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa versione e magari hai migrato le tue impostazioni e i tuoi preferiti, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più; ciò eviterà anche la comparsa di questa finestra di dialogo.
 \n
 \nGrazie!</string>
     <string name="upgraded_to_pro_gallery">Ciao,
@@ -850,7 +850,7 @@
 \nGrazie!</string>
     <string name="upgraded_from_free">Ciao,
 \n
-\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa e magari hai migrato i tuoi dati, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più.
+\nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Una volta che sei soddisfatto di questa e magari hai migrato i tuoi dati, puoi disinstallare la vecchia versione gratuita per evitare di avviarla accidentalmente, dato che non ti servirà più; ciò eviterà anche la comparsa di questa finestra di dialogo.
 \n
 \nGrazie!</string>
     <string name="upgraded_to_pro">Salve,
@@ -862,21 +862,21 @@
 \n
 \nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se vuoi migrare gli eventi memorizzati localmente, devi farlo manualmente esportandoli in un file .ics nella versione gratuita dell\'app e importandoli qui attraverso il menu superiore.
 \n
-\nUna volta soddisfatti della propria configurazione nella versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria.
+\nUna volta soddisfatti della propria configurazione nella versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria; ciò eviterà anche la comparsa di questa finestra di dialogo.
 \n
 \nGrazie!</string>
     <string name="upgraded_from_free_contacts">Salve,
 \n
 \nsembra che lei abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se aveva dei contatti memorizzati sotto «%s», deve migrarli manualmente esportandoli in un file .vcf dalla versione gratuita dell\'app e importandoli qui attraverso il menu superiore.
 \n
-\nUna volta soddisfatti della configurazione della versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria.
+\nUna volta soddisfatti della configurazione della versione Pro, è possibile disinstallare la vecchia versione gratuita, poiché non è più necessaria; ciò eviterà anche la comparsa di questa finestra di dialogo.
 \n
 \nGrazie!</string>
     <string name="upgraded_from_free_notes">Salve,
 \n
 \nsembra che tu abbia appena effettuato l\'aggiornamento dalla versione gratuita. Se vuoi migrare le tue note, devi farlo manualmente esportandole in un file nella versione gratuita dell\'app e importandole qui attraverso il menu in alto.
 \n
-\nUna volta soddisfatta della sua configurazione nella versione Pro, può disinstallare la vecchia versione gratuita perché non ne avrà più bisogno.
+\nUna volta soddisfatta della sua configurazione nella versione Pro, può disinstallare la vecchia versione gratuita perché non ne avrà più bisogno; ciò eviterà anche la comparsa di questa finestra di dialogo.
 \n
 \nGrazie!</string>
     <!-- About -->
