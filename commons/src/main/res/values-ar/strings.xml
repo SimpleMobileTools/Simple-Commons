@@ -123,8 +123,10 @@
     <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الافتراضي للاستفادة من الأرقام المحظورة.</string>
     <string name="set_as_default">ضبط الى الافتراضي</string>
     <string name="block_confirmation">هل تريد بالتأكيد حظر \"%s\"؟</string>
-    <string name="block_unknown_calls">حظر المكالمات من جهات الاتصال غير المخزنة</string>
-    <string name="block_unknown_messages">حظر الرسائل من جهات الاتصال غير المخزنة</string>
+    <string name="block_not_stored_calls">حظر المكالمات من جهات الاتصال غير المخزنة</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">حظر الرسائل من جهات الاتصال غير المخزنة</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">أدخل رقما أو نمطا (على سبيل المثال، *12345*، +1*8888) لحظر جميع المكالمات والرسائل من الأرقام المطابقة للنمط.</string>
     <string name="must_make_default_caller_id_app">لا يمكن حظر الأرقام غير المعروفة دون إذن معرف المتصل.</string>
     <!-- Favorites -->

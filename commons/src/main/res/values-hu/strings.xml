@@ -119,8 +119,10 @@
     <string name="must_make_default_dialer">A letiltott telefonszámok használatához be kell állítani, hogy ez az alkalmazás legyen az alapértelmezett tárcsázó.</string>
     <string name="set_as_default">Beállítás alapértelmezettként</string>
     <string name="block_confirmation">Biztos, hogy letiltja a következőt: „%s”\?</string>
-    <string name="block_unknown_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
-    <string name="block_unknown_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
+    <string name="block_not_stored_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
     <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
     <!-- Favorites -->

@@ -119,8 +119,10 @@
     <string name="must_make_default_dialer">தடுக்கப்பட்ட எண்களைப் பயன்படுத்த இப்பயன்பாட்டை இயல்புநிலை டயலர் பயன்பாடாக மாற்ற வேண்டும்.</string>
     <string name="set_as_default">இயல்புநிலையாக அமை</string>
     <string name="block_confirmation">\"%s\" ஐத் தடுக்க விரும்புகிறீர்களா?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_not_stored_calls">Block calls from not stored contacts</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Block messages from not stored contacts</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->

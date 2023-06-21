@@ -119,8 +119,10 @@
     <string name="must_make_default_dialer">Kui soovid kasutada blokeeritud telefoninumbrite funktsionaalsust, siis peab see rakendus olema vaikimisi telefonirakendus.</string>
     <string name="set_as_default">Määra vaikimisi</string>
     <string name="block_confirmation">Kas sa oled kindel, et soovid blokeerida „%s“ telefoninumbrit\?</string>
-    <string name="block_unknown_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
-    <string name="block_unknown_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
+    <string name="block_not_stored_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <!-- Favorites -->

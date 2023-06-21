@@ -120,8 +120,10 @@
     <string name="must_make_default_dialer">За да използвате блокираните номера, трябва да настроите това приложение като приложение за набиране по подразбиране.</string>
     <string name="set_as_default">Задаване по подразбиране</string>
     <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
-    <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
-    <string name="block_unknown_messages">Блокиране на съобщения от незапазени контакти</string>
+    <string name="block_not_stored_calls">Блокиране на повиквания от незапазени контакти</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Блокиране на съобщения от незапазени контакти</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->

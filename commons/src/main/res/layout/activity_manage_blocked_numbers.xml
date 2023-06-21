@@ -36,7 +36,7 @@
                 style="@style/SettingsCheckboxStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/block_unknown_calls" />
+                android:text="@string/block_not_stored_calls" />
 
         </RelativeLayout>
 

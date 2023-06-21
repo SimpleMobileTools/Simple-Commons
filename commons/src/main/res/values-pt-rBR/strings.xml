@@ -120,8 +120,10 @@
     <string name="must_make_default_dialer">Você precisa tornar este aplicativo padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem certeza que deseja bloquear \"%s\"?</string>
-    <string name="block_unknown_calls">Bloquear chamadas de contatos não salvos</string>
-    <string name="block_unknown_messages">Bloquear mensagens de contatos não salvos</string>
+    <string name="block_not_stored_calls">Bloquear chamadas de contatos não salvos</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Bloquear mensagens de contatos não salvos</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Digite um número ou um padrão (ex. *12345*, +1*8888) para bloquear todas as chamadas de números correspondentes.</string>
     <string name="must_make_default_caller_id_app">Não é possível bloquear números desconhecidos sem a permissão de ID de chamadas.</string>
     <!-- Favorites -->

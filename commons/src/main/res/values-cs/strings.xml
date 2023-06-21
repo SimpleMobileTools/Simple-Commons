@@ -121,8 +121,10 @@
     <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit tuto aplikaci jako výchozí pro správu hovorů.</string>
     <string name="set_as_default">Nastavit jako výchozí</string>
     <string name="block_confirmation">Jste si jistí, že chcete zablokovat „%s“\?</string>
-    <string name="block_unknown_calls">Blokovat volání z neznámých čísel</string>
-    <string name="block_unknown_messages">Blokovat zprávy z neznámých čísel</string>
+    <string name="block_not_stored_calls">Blokovat volání z neznámých čísel</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blokovat zprávy z neznámých čísel</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Zadáním čísla nebo vzoru (např. *12345*, +1*8888) zablokujete všechny hovory a zprávy z čísel odpovídajících vzoru.</string>
     <string name="must_make_default_caller_id_app">Nelze blokovat neznámá čísla bez povolení ID volajícího.</string>
     <!-- Favorites -->

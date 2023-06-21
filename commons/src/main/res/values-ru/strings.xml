@@ -121,8 +121,10 @@
     <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Простые контакты\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
     <string name="block_confirmation">Заблокировать \"%s\"?</string>
-    <string name="block_unknown_calls">Блокировать вызовы от несохранённых контактов</string>
-    <string name="block_unknown_messages">Блокировать сообщения от несохранённых контактов</string>
+    <string name="block_not_stored_calls">Блокировать вызовы от несохранённых контактов</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Блокировать сообщения от несохранённых контактов</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Введите номер или шаблон (например: *12345*, +1*8888), чтобы блокировать все вызовы и сообщения с номеров, соответствующих шаблону.</string>
     <string name="must_make_default_caller_id_app">Невозможно блокировать неизвестные номера без разрешения идентификации вызывающего абонента.</string>
     <!-- Favorites -->

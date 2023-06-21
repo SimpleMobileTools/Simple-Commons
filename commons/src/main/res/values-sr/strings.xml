@@ -119,8 +119,10 @@
     <string name="must_make_default_dialer">Морате да подесите ову апликацију као подразумевану апликацију за бирање бројева да бисте користили блокиране бројеве.</string>
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Да ли сте сигурни да желите да блокирате \"%s\"\?</string>
-    <string name="block_unknown_calls">Блокирајте позиве из несачуваних контаката</string>
-    <string name="block_unknown_messages">Блокирајте поруке од несачуваних контаката</string>
+    <string name="block_not_stored_calls">Блокирајте позиве из несачуваних контаката</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Блокирајте поруке од несачуваних контаката</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Унесите број или образац (нпр. *12345*, +1*8888) да бисте блокирали све позиве и поруке са бројева који одговарају шаблону.</string>
     <string name="must_make_default_caller_id_app">Не могу блокирати непознате бројеве без дозволе ИД позиваоца.</string>
     <!-- Favorites -->

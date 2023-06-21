@@ -121,8 +121,10 @@
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
-    <string name="block_unknown_calls">Блокувати дзвінки від не збережених контактів</string>
-    <string name="block_unknown_messages">Блокувати повідомлення від не збережених контактів</string>
+    <string name="block_not_stored_calls">Блокувати дзвінки від не збережених контактів</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Блокувати повідомлення від не збережених контактів</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Введіть номер або шаблон (наприклад, *12345*, +1*8888), щоб заблокувати всі дзвінки та повідомлення з номерів, що відповідають шаблону.</string>
     <string name="must_make_default_caller_id_app">Неможливо заблокувати невідомі номери без дозволу ідентифікатора абонента.</string>
     <!-- Favorites -->

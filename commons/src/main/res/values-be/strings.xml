@@ -121,8 +121,10 @@
     <string name="must_make_default_dialer">Вы павінны зрабіць гэта дадатак стандартным дадаткам дазвону, каб выкарыстоўваць заблакіраваныя нумары.</string>
     <string name="set_as_default">Ўсталяваць па змаўчанні</string>
     <string name="block_confirmation">Заблакаваць \"%s\"\?</string>
-    <string name="block_unknown_calls">Блакаваць выклікі ад невядомых кантактаў</string>
-    <string name="block_unknown_messages">Блакаваць паведамленні ад невядомых кантактаў</string>
+    <string name="block_not_stored_calls">Блакаваць выклікі ад невядомых кантактаў</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Блакаваць паведамленні ад невядомых кантактаў</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Увядзіце нумар або шаблон (напрыклад, *12345*, +1*8888), каб заблакіраваць усе выклікі і паведамленні з нумароў, якія адпавядаюць шаблону.</string>
     <string name="must_make_default_caller_id_app">Немагчыма заблакіраваць невядомыя нумары без дазволу ідэнтыфікатара абанента.</string>
     <!-- Favorites -->

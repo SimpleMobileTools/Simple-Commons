@@ -120,8 +120,10 @@
     <string name="must_make_default_dialer">Norėdami blokuoti numerius, turite nustatyti šią programėlę kaip numatytąją numerių rinkimo programėlę.</string>
     <string name="set_as_default">Nustatyti kaip numatytąją</string>
     <string name="block_confirmation">Ar tikrai norite užblokuoti „%s“\?</string>
-    <string name="block_unknown_calls">Blokuoti skambučius iš neįvestų numerių</string>
-    <string name="block_unknown_messages">Blokuoti žinutes iš neįvestų numerių</string>
+    <string name="block_not_stored_calls">Blokuoti skambučius iš neįvestų numerių</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blokuoti žinutes iš neįvestų numerių</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Įvesti skaičių ar šabloną (pvz. *12345*, +370*8888) kad blokuoti skambučius ir žinutes iš numerių atitinkančių šabloną.</string>
     <string name="must_make_default_caller_id_app">Negalima blokuoti nežinomų numerių be skambintojo ID leidimo.</string>
     <!-- Favorites -->
