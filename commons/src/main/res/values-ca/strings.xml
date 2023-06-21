@@ -120,9 +120,9 @@
     <string name="set_as_default">Estableix com a predeterminada</string>
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
     <string name="block_not_stored_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Bloqueja les trucades des de números ocults</string>
     <string name="block_not_stored_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Bloqueja els missatges des de números ocults</string>
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
     <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
     <!-- Favorites -->
@@ -405,7 +405,7 @@
     <string name="last_modified">Última modificació</string>
     <string name="date_created">Data de creació</string>
     <string name="date_taken">Data de realització</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Data d\'incorporació</string>
     <string name="title">Títol</string>
     <string name="filename">Nom de fitxer</string>
     <string name="extension">Extensió</string>
