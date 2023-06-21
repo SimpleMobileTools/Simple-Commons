@@ -122,9 +122,9 @@
     <string name="set_as_default">Ustaw jako domyślną</string>
     <string name="block_confirmation">Czy zablokować „%s”\?</string>
     <string name="block_not_stored_calls">Blokuj połączenia od niezapisanych kontaktów</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Blokuj połączenia od ukrytych numerów</string>
     <string name="block_not_stored_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Blokuj wiadomości od ukrytych numerów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
     <!-- Favorites -->
