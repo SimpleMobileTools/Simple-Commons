@@ -119,10 +119,10 @@
     <string name="must_make_default_dialer">Maak van deze app de standaard telefoon-app om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
     <string name="block_confirmation">Nummer \"%s\" echt blokkeren\?</string>
-    <string name="block_not_stored_calls">Oproepen van onopgeslagen contacten blokkeren</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
-    <string name="block_not_stored_messages">Berichten van onopgeslagen contacten blokkeren</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_not_stored_calls">Oproepen van niet-opgeslagen contacten blokkeren</string>
+    <string name="block_hidden_calls">Oproepen van verborgen nummers blokkeren</string>
+    <string name="block_not_stored_messages">Berichten van niet-opgeslagen contacten blokkeren</string>
+    <string name="block_hidden_messages">Berichten van verborgen nummers blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
     <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
     <!-- Favorites -->
@@ -399,7 +399,7 @@
     <string name="last_modified">Laatst gewijzigd</string>
     <string name="date_created">Datum gemaakt</string>
     <string name="date_taken">Datum opname</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Datum toevoeging</string>
     <string name="title">Titel</string>
     <string name="filename">Bestandsnaam</string>
     <string name="extension">Extensie</string>

@@ -120,9 +120,9 @@
     <string name="set_as_default">Öntanımlı olarak ayarla</string>
     <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
     <string name="block_not_stored_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Gizli numaralardan gelen aramaları engelle</string>
     <string name="block_not_stored_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Gizli numaralardan gelen mesajları engelle</string>
     <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
     <string name="must_make_default_caller_id_app">Arayan kimliği izni olmadan bilinmeyen numaralar engellenemiyor.</string>
     <!-- Favorites -->
@@ -403,7 +403,7 @@
     <string name="last_modified">Son değiştirilme</string>
     <string name="date_created">Oluşturma tarihi</string>
     <string name="date_taken">Alınan tarih</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Eklenme tarihi</string>
     <string name="title">Başlık</string>
     <string name="filename">Dosya adı</string>
     <string name="extension">Uzantı</string>
