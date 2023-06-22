@@ -418,6 +418,7 @@ val letterBackgroundColors = arrayListOf(
 // view types
 const val VIEW_TYPE_GRID = 1
 const val VIEW_TYPE_LIST = 2
+const val VIEW_TYPE_UNEVEN_GRID = 3
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
