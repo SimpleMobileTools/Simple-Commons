@@ -206,7 +206,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/customization_app_icon_color_holder"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/big_margin">
+                android:layout_margin="@dimen/big_margin"
+                android:visibility="gone">
 
                 <android.widget.TextView
                     android:id="@+id/apply_to_all"
