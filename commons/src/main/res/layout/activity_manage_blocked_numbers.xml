@@ -21,24 +21,47 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <RelativeLayout
-            android:id="@+id/block_unknown_holder"
-            style="@style/SettingsHolderCheckboxStyle"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/block_options_list"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/ripple_background"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.simplemobiletools.commons.views.MyAppCompatCheckbox
-                android:id="@+id/block_unknown"
-                style="@style/SettingsCheckboxStyle"
+            <RelativeLayout
+                android:id="@+id/block_unknown_holder"
+                style="@style/SettingsHolderCheckboxStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/block_not_stored_calls" />
+                android:background="@drawable/ripple_background">
 
-        </RelativeLayout>
+                <com.simplemobiletools.commons.views.MyAppCompatCheckbox
+                    android:id="@+id/block_unknown"
+                    style="@style/SettingsCheckboxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/block_not_stored_calls" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/block_hidden_holder"
+                style="@style/SettingsHolderCheckboxStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_background">
+
+                <com.simplemobiletools.commons.views.MyAppCompatCheckbox
+                    android:id="@+id/block_hidden"
+                    style="@style/SettingsCheckboxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/block_hidden_calls" />
+
+            </RelativeLayout>
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/block_numbers_divider"
@@ -47,7 +70,7 @@
             android:background="@color/divider_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/block_unknown_holder" />
+            app:layout_constraintTop_toBottomOf="@+id/block_options_list" />
 
         <com.simplemobiletools.commons.views.MyRecyclerView
             android:id="@+id/manage_blocked_numbers_list"
@@ -75,7 +98,7 @@
             android:textSize="@dimen/bigger_text_size"
             android:textStyle="italic"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@+id/block_unknown_holder" />
+            app:layout_constraintTop_toBottomOf="@+id/block_options_list" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/manage_blocked_numbers_placeholder_2"

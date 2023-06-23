@@ -383,7 +383,7 @@ open class BaseConfig(val context: Context) {
     private fun getDefaultDateFormat(): String {
         val format = DateFormat.getDateFormat(context)
         val pattern = (format as SimpleDateFormat).toLocalizedPattern()
-        return when (pattern.toLowerCase().replace(" ", "")) {
+        return when (pattern.lowercase().replace(" ", "")) {
             "d.M.y" -> DATE_FORMAT_ONE
             "dd/mm/y" -> DATE_FORMAT_TWO
             "mm/dd/y" -> DATE_FORMAT_THREE
@@ -439,6 +439,10 @@ open class BaseConfig(val context: Context) {
     var blockUnknownNumbers: Boolean
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
+
+    var blockHiddenNumbers: Boolean
+        get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
+        set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
