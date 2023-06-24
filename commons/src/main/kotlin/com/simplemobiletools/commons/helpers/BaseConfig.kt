@@ -195,6 +195,10 @@ open class BaseConfig(val context: Context) {
 
     fun getFolderProtectionType(path: String) = prefs.getInt("$PROTECTED_FOLDER_TYPE$path", PROTECTION_NONE)
 
+    var lastCopyPath: String
+        get() = prefs.getString(LAST_COPY_PATH, "")!!
+        set(lastCopyPath) = prefs.edit().putString(LAST_COPY_PATH, lastCopyPath).apply()
+
     var keepLastModified: Boolean
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
