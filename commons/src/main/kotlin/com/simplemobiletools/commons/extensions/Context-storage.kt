@@ -991,3 +991,19 @@ fun Context.getFileUrisFromFileDirItems(fileDirItems: List<FileDirItem>): List<U
 
     return fileUris
 }
+
+fun Context.getDefaultCopyDestinationPath(showHidden: Boolean, currentPath: String): String {
+    val lastCopyPath = baseConfig.lastCopyPath
+
+    return if (getDoesFilePathExist(lastCopyPath)) {
+        val isLastCopyPathVisible = !lastCopyPath.split(File.separator).any { it.startsWith(".") && it.length > 1 }
+
+        if (showHidden || isLastCopyPathVisible) {
+            lastCopyPath
+        } else {
+            currentPath
+        }
+    } else {
+        currentPath
+    }
+}
