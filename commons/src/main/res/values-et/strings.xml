@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Sobib</string>
     <string name="cancel">Katkesta</string>
-    <string name="close">Close</string>
+    <string name="close">Sulge</string>
     <string name="back">Tagasi</string>
     <string name="nothing">Mitte midagi</string>
     <string name="later">Hiljem</string>
@@ -120,9 +120,9 @@
     <string name="set_as_default">Määra vaikimisi</string>
     <string name="block_confirmation">Kas sa oled kindel, et soovid blokeerida „%s“ telefoninumbrit\?</string>
     <string name="block_not_stored_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Blokeeri kõned varjatud numbritelt</string>
     <string name="block_not_stored_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Blokeeri sõnumid varjatud numbritelt</string>
     <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <!-- Favorites -->
@@ -405,10 +405,10 @@
     <string name="last_modified">Viimati muutmise alusel</string>
     <string name="date_created">Loomise aja alusel</string>
     <string name="date_taken">Pildistamise aja alusel</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Lisamise kuupäev</string>
     <string name="title">Pealkiri</string>
     <string name="filename">Faili nimi</string>
-    <string name="extension">Faili tüüp</string>
+    <string name="extension">Faili laiend</string>
     <string name="random">Juhuslik</string>
     <string name="sort_randomly">Sorteeri juhuslikult</string>
     <string name="ascending">Kasvavalt</string>
@@ -806,11 +806,19 @@
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Tere,
+\n
+\nTundub, et sa oled hiljuti teinud uuenduse tasuta versioonist. Kui sa oled rakenduse uue versiooniga rahul ning oled eelistused ja järjehoidjad üle tõstnud, siis vältimaks vana rakenduse juhuslikku käivitamist palun eemalda ta oma nutiseadmest. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
+    <string name="upgraded_to_pro_gallery">Tere,
+\n
+\nTundub, et sul on nutiseadmes ka selle rakenduse Pro-versioon. Kui sa oled rakenduse Pro-versiooniga rahul ning oled eelistused ja järjehoidjad üle tõstnud, siis vältimaks selle vana rakenduse juhuslikku käivitamist palun eemalda ta oma nutiseadmest.
+\n
+\nTänud!</string>
     <string name="upgraded_from_free">Tere,
 \n
-\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist.
+\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist. Samaga väldid ka selle teate uuesti kuvamist.
 \n
 \nAitäh!</string>
     <string name="upgraded_to_pro">Hei,
@@ -822,11 +830,23 @@
 \n
 \nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sa soovid vanas rakenduses salvestatud sündmused uude kolida, siis ekspordi nad vanast tasuta rakendusest .ics failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
 \n
-\nKui sa oled Pro-versiooniga rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada.
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
 \n
 \nTänud!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,
+\n
+\nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sul oli vanas rakenduses „%s“ kontakte, siis ekspordi nad vanast tasuta rakendusest .vcf failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
+\n
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
+    <string name="upgraded_from_free_notes">Hello,
+\n
+\nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sa soovid vanast rakendusest märkmed üle kolida, siis ekspordi nad vanast tasuta rakendusest .failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
+\n
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
     <!-- About -->
     <string name="about">Rakenduse teave</string>
     <string name="website">Veebileht</string>
@@ -1003,7 +1023,7 @@
     <string name="why_upgrade_footer">100% raha tagasi garantii</string>
     <string name="why_upgrade_footer_one_time_payment">Ühekordne makse</string>
     <string name="why_upgrade_improved_design">Parem disain</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Palju täiendavaid parandusi</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Täiustatud fototöötlusprogramm</string>
     <string name="why_upgrade_advanced_photo_video_editor">Täiustatud foto- ja videotöötlusprogramm</string>
