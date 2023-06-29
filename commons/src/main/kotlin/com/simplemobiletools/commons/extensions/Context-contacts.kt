@@ -347,7 +347,6 @@ fun BaseSimpleActivity.initiateCall(contact: Contact, onStartCallIntent: (phoneN
     }
 }
 
-
 fun BaseSimpleActivity.tryInitiateCall(contact: Contact, onStartCallIntent: (phoneNumber: String) -> Unit) {
     if (baseConfig.showCallConfirmation) {
         CallConfirmationDialog(this, contact.getNameToDisplay()) {
