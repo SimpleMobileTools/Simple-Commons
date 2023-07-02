@@ -118,7 +118,7 @@
     <string name="must_make_default_dialer">您必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
-    <string name="block_not_stored_calls">拦截来自未存储联系人的通话</string>
+    <string name="block_not_stored_calls">拦截来自未存储联系人的来电</string>
     <string name="block_hidden_calls">拦截来自隐藏号码的电话</string>
     <string name="block_not_stored_messages">拦截来自未存储联系人的消息</string>
     <string name="block_hidden_messages">拦截来自隐藏号码的短信</string>
@@ -297,7 +297,7 @@
     <string name="duration">时长</string>
     <string name="artist">艺术家</string>
     <string name="album">专辑</string>
-    <string name="genre">Genre</string>
+    <string name="genre">流派</string>
     <string name="focal_length">焦距</string>
     <string name="exposure_time">曝光时间</string>
     <string name="iso_speed">ISO 速度</string>
