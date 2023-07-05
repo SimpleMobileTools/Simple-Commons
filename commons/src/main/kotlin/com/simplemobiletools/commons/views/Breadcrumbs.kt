@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.item_breadcrumb.view.*
+import kotlinx.android.synthetic.main.item_breadcrumb.view.breadcrumb_text
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
     private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -99,19 +99,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         }
 
         recomputeStickyRootLocation(left)
-    }
-
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
-        var heightMeasureSpec = heightMeasureSpec
-        if (heightMode == MeasureSpec.UNSPECIFIED || heightMode == MeasureSpec.AT_MOST) {
-            var height = context.resources.getDimensionPixelSize(R.dimen.breadcrumbs_layout_height)
-            if (heightMode == MeasureSpec.AT_MOST) {
-                height = height.coerceAtMost(MeasureSpec.getSize(heightMeasureSpec))
-            }
-            heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
-        }
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
     private fun scrollToSelectedItem() {
