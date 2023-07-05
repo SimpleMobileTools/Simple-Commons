@@ -132,6 +132,8 @@
     <string name="m3u_parser_url">https://github.com/BjoernPetersen/m3u-parser</string>
     <string name="android_lame_text">Copyright (C) 2015 Naman Dwivedi\n\nThis is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this app. If not, see https://www.gnu.org/licenses/.</string>
     <string name="android_lame_url">https://github.com/naman14/TAndroidLame</string>
+    <string name="pdf_viewer_text">Copyright (C) 2017 Bartosz Schiller\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="pdf_viewer_url">https://github.com/tibbi/AndroidPdfViewer</string>
 
     <!-- Message digest algorithms -->
     <string name="md5">MD5</string>
