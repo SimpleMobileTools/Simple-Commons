@@ -472,6 +472,10 @@
     <string name="lock_folder_pro">Bloquear carpeta (Pro)</string>
     <string name="unlock_folder">Desbloquear carpeta</string>
     <string name="lock_folder_notice">Esta protección funciona solo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Ayer</string>
     <string name="today">Hoy</string>

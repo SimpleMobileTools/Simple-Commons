@@ -458,6 +458,10 @@
     <string name="lock_folder_pro">Kunci folder (Pro)</string>
     <string name="unlock_folder">Buka kunci folder</string>
     <string name="lock_folder_notice">Perlindungan ini hanya bekerja di aplikasi ini saja, tidak dibuat untuk menggantikan fitur enkripsi folder keseluruhan sistem.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Kemarin</string>
     <string name="today">Hari ini</string>

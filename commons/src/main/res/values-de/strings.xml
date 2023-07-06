@@ -472,6 +472,10 @@
     <string name="lock_folder_pro">Ordner sperren (Pro)</string>
     <string name="unlock_folder">Ordner entsperren</string>
     <string name="lock_folder_notice">Dieser Schutz ist nur innerhalb dieser App wirksam und kann keine systemweite Datenträgerverschlüsselung ersetzen.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Gestern</string>
     <string name="today">Heute</string>

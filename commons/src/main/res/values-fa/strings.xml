@@ -491,6 +491,10 @@
     <string name="lock_folder_pro">قفل کردن پوشه (Pro)</string>
     <string name="unlock_folder">باز کردن قفل پوشه</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
 
     <!-- Times -->
     <string name="yesterday">دیروز</string>

@@ -466,6 +466,10 @@
     <string name="lock_folder_pro">Mappa zárolása (Pro)</string>
     <string name="unlock_folder">Mappa zárolásának feloldása</string>
     <string name="lock_folder_notice">Ez a védelem csak ezen az alkalmazáson belül működik, nem célja egy valódi rendszerszintű mappatitkosítás helyettesítése.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Tegnap</string>
     <string name="today">Ma</string>

@@ -474,6 +474,10 @@
     <string name="lock_folder_pro">Заблокувати теку (Pro)</string>
     <string name="unlock_folder">Розблокувати теку</string>
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>

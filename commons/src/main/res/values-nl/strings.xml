@@ -460,6 +460,10 @@
     <string name="lock_folder_pro">Map vergrendelen (Pro)</string>
     <string name="unlock_folder">Map ontgrendelen</string>
     <string name="lock_folder_notice">Deze bescherming werkt alleen in deze app, het is niet de bedoeling dat het een echte systeembrede mapversleuteling vervangt.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Gisteren</string>
     <string name="today">Vandaag</string>

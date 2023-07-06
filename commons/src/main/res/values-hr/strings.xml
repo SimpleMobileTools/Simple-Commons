@@ -480,6 +480,10 @@
     <string name="lock_folder_pro">Zaključaj mapu (Pro)</string>
     <string name="unlock_folder">Otključaj mapu</string>
     <string name="lock_folder_notice">Ova zaštita radi samo u ovoj aplikaciji. Nije namijenjena za stvarno mijenjanje šifriranja mapa cijelog sustava.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Jučer</string>
     <string name="today">Danas</string>

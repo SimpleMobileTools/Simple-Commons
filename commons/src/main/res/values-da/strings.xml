@@ -466,6 +466,10 @@
     <string name="lock_folder_pro">Lås mappe (Pro)</string>
     <string name="unlock_folder">Lås mappe op</string>
     <string name="lock_folder_notice">Denne beskyttelse virker kun i denne app, den er ikke beregnet som erstatning for rigtig kryptering af mapper på systemniveau.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
