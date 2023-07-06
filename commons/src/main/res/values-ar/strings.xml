@@ -488,6 +488,10 @@
     <string name="lock_folder_pro">قفل المجلد (Pro)</string>
     <string name="unlock_folder">فتح المجلد</string>
     <string name="lock_folder_notice">تعمل هذه الحماية فقط في هذا التطبيق، ومن المفترض ألا تحل محل تشفير المجلد الحقيقي علي مستوي النظام.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">أمس</string>
     <string name="today">اليوم</string>

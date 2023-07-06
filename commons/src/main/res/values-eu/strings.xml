@@ -466,6 +466,10 @@
     <string name="lock_folder_pro">Blokeatu karpeta (Pro)</string>
     <string name="unlock_folder">Deblokeatu karpeta</string>
     <string name="lock_folder_notice">Protekzio hau aplikazio honetan soilik funtzionatuko du, ez du balio it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Atzo</string>
     <string name="today">Gaur</string>

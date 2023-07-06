@@ -468,6 +468,10 @@
     <string name="lock_folder_pro">Заключи папка (Про)</string>
     <string name="unlock_folder">Отключи папка</string>
     <string name="lock_folder_notice">Тази защита работи само в това приложение, не е предвидена да замества реално систено криптиране на папките в цялата система.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Вчера</string>
     <string name="today">Днес</string>

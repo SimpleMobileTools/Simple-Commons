@@ -466,6 +466,10 @@
     <string name="lock_folder_pro">Lukusta kaust (Pro)</string>
     <string name="unlock_folder">Eemalda kausta lukustus</string>
     <string name="lock_folder_notice">See turvameede toimib vaid selles rakenduses ega ole mõeldud asendama süsteemiülest krüptimist.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Eile</string>
     <string name="today">Täna</string>

@@ -472,6 +472,10 @@
     <string name="lock_folder_pro">Užrakinti aplanką (Pro)</string>
     <string name="unlock_folder">Atrakinti aplanką</string>
     <string name="lock_folder_notice">Ši apsauga veikia tik šioje programėlėje ir ji nepakeičia tikrojo aplankų šifravimo sistemos mastu.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Vakar</string>
     <string name="today">Šiandien</string>

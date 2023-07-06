@@ -460,6 +460,10 @@
     <string name="lock_folder_pro">폴더 잠그기 (Pro)</string>
     <string name="unlock_folder">폴더 잠금 해제</string>
     <string name="lock_folder_notice">이 보안 설정은 이 앱에서만 작동하며, 실제 시스템 폴더 암호화를 대체할 수 없습니다.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">어제</string>
     <string name="today">오늘</string>

@@ -479,6 +479,10 @@
     <string name="lock_folder_pro">Zakleni mapo (Pro)</string>
     <string name="unlock_folder">Odkleni mapo</string>
     <string name="lock_folder_notice">Ta zaščita deluje samo v tej aplikaciji in ni mišljena kot nadomestek pravega sistemskega šifriranja map.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Včeraj</string>
     <string name="today">Danes</string>

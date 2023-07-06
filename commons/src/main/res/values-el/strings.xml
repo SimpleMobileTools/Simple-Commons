@@ -467,6 +467,10 @@
     <string name="lock_folder_pro">Κλείδωμα Φακέλου (Pro)</string>
     <string name="unlock_folder">Ξεκλείδωμα Φακέλου</string>
     <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Χθές</string>
     <string name="today">Σήμερα</string>

@@ -466,6 +466,10 @@
     <string name="lock_folder_pro">Bloqueja la carpeta (Pro)</string>
     <string name="unlock_folder">Desbloqueja la carpeta</string>
     <string name="lock_folder_notice">Aquesta protecció només funciona en aquesta aplicació. No substituirà un xifratge real de carpetes de tot el sistema.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Ahir</string>
     <string name="today">Avui</string>
