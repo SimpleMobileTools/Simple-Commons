@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
@@ -11,14 +12,17 @@ class EnterPasswordDialog(
     private val callback: (password: String) -> Unit,
     private val cancelCallback: () -> Unit
 ) {
-    init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_enter_password, null)
 
+    private var dialog: AlertDialog? = null
+    private val view: View = activity.layoutInflater.inflate(R.layout.dialog_enter_password, null)
+
+    init {
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {
                 activity.setupDialogStuff(view, this, R.string.enter_password) { alertDialog ->
+                    dialog = alertDialog
                     alertDialog.showKeyboard(view.password)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         val password = view.password.value
@@ -29,8 +33,6 @@ class EnterPasswordDialog(
                         }
 
                         callback(password)
-                        alertDialog.setOnDismissListener(null)
-                        alertDialog.dismiss()
                     }
 
                     alertDialog.setOnDismissListener {
@@ -38,5 +40,16 @@ class EnterPasswordDialog(
                     }
                 }
             }
+    }
+
+    fun dismiss(notify: Boolean = true) {
+        if (!notify) {
+            dialog?.setOnDismissListener(null)
+        }
+        dialog?.dismiss()
+    }
+
+    fun clearPassword() {
+        view.password.text?.clear()
     }
 }
