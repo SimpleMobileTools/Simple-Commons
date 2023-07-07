@@ -680,14 +680,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 startActivity(this)
             }
         } catch (e: Exception) {
-            try {
-                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                    data = Uri.fromParts("package", packageName, null)
-                    startActivity(this)
-                }
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
+            openAppSettings()
         }
     }
 
