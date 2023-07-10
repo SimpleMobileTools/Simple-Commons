@@ -812,29 +812,37 @@
     <string name="more_info">Mer information</string>
     <string name="upgrade">Uppgradera</string>
     <string name="upgrade_calendar">Lokalt sparade händelser kan bara migreras manuellt genom att exportera och importera dem till och från en .ics-fil. Du hittar knappar för både export och import i huvudvymenyn.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina inställningar och favoriter över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina data över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hej,
+    <string name="upgraded_from_free_calendar">Hallå,
 \n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina lokalt sparade händelser, så behöver du manuellt exportera dem till en .ics-fil i gratisappen och importera de här genom menyn.
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du vill migrera dina lokalt lagrade händelser över måste du göra det manuellt genom att exportera dem till en .ics-fil i gratisappversionen och importera hit via toppmenyn.
 \n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
-\n
-\nTack!</string>
-    <string name="upgraded_from_free_contacts">Hej,
-\n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du hade några kontakter lagrat under \"%s\" så behöver du manuellt exportera dem till en .vcf-fil i gratisappen och importera de här genom menyn.
-\n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
-    <string name="upgraded_from_free_notes">Hej,
+    <string name="upgraded_from_free_contacts">Hallå,
 \n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina anteckningar över, så behöver du manuellt exportera dem till en fil i gratisappen och importera de här genom menyn.
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du hade några kontakter lagrade under \"%s\" måste du migrera dem manuellt genom att exportera i en .vcf-fil från gratisappversionen och importera hit via toppmenyn.
 \n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
+    <string name="upgraded_from_free_notes">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du vill migrera dina anteckningar över måste du göra det manuellt genom att exportera dem till en fil i gratisappversionen och importera hit via toppmenyn.
+\n
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
     <!-- About -->
