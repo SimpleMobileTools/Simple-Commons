@@ -170,6 +170,7 @@
     <string name="allow_notifications_voice_recorder">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła nagrywać dźwięku.</string>
     <string name="allow_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać połączeń przychodzących.</string>
     <string name="allow_notifications_incoming_messages">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać wiadomości przychodzących.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Nadaj uprawnienie</string>
     <string name="permission_required">Wymagane uprawnienie</string>
     <!-- Renaming -->

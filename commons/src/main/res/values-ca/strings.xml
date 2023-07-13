@@ -168,6 +168,7 @@
     <string name="allow_notifications_voice_recorder">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
     <string name="allow_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
     <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Atorga el permís</string>
     <string name="permission_required">Es requereix permís</string>
     <!-- Renaming -->

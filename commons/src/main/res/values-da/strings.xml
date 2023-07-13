@@ -168,6 +168,7 @@
     <string name="allow_notifications_voice_recorder">Du skal tillade, at appen viser notifikationer, ellers kan den ikke optage lyd.</string>
     <string name="allow_notifications_incoming_calls">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående opkald.</string>
     <string name="allow_notifications_incoming_messages">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående meddelelser.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Giv tilladelse</string>
     <string name="permission_required">Tilladelse påkrævet</string>
     <!-- Renaming -->

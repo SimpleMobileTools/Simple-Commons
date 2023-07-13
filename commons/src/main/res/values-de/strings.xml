@@ -168,6 +168,7 @@
     <string name="allow_notifications_voice_recorder">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keinen Ton aufnehmen.</string>
     <string name="allow_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Anrufe anzeigen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
     <!-- Renaming -->

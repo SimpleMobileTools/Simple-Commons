@@ -170,6 +170,7 @@
     <string name="allow_notifications_voice_recorder">Необходимо разрешить приложению отображать уведомления, иначе оно не может записывать звук.</string>
     <string name="allow_notifications_incoming_calls">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие вызовы.</string>
     <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Разрешить</string>
     <string name="permission_required">Требуется разрешение</string>
     <!-- Renaming -->

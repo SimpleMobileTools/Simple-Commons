@@ -169,6 +169,7 @@
     <string name="allow_notifications_voice_recorder">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να καταγράψει ήχο.</string>
     <string name="allow_notifications_incoming_calls">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τις εισερχόμενες κλήσεις.</string>
     <string name="allow_notifications_incoming_messages">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τα εισερχόμενα μηνύματα.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Χορήγηση άδειας</string>
     <string name="permission_required">Απαιτείται άδεια</string>
     <!-- Renaming -->

@@ -168,6 +168,7 @@
     <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
     <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
     <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">İzin Ver</string>
     <string name="permission_required">İzin Gerekli</string>
     <!-- Renaming -->

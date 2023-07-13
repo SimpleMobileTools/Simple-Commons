@@ -170,6 +170,7 @@
     <string name="allow_notifications_voice_recorder">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može snimati zvuk.</string>
     <string name="allow_notifications_incoming_calls">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne pozive.</string>
     <string name="allow_notifications_incoming_messages">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne poruke.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Odobri dozvolu</string>
     <string name="permission_required">Zahtijeva dozvolu</string>
     <!-- Renaming -->

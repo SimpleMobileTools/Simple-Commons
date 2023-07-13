@@ -168,6 +168,7 @@
     <string name="allow_notifications_voice_recorder">Selleks et rakendus saaks salvestada heli, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_incoming_calls">Selleks et rakendus saaks näidata kõnesid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="grant_permission">Anna vastavad õigused</string>
     <string name="permission_required">Luba on nõutav</string>
     <!-- Renaming -->
