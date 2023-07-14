@@ -134,7 +134,7 @@
     <string name="search">Ara</string>
     <string name="search_in_placeholder">%s içinde ara</string>
     <string name="type_2_characters">Aramaya başlamak için en az 2 karakter yazın.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Arama çubuğu göster</string>
     <string name="search_contacts">Kişileri ara</string>
     <string name="search_favorites">Favorileri ara</string>
     <string name="search_apps">Uygulama ara</string>
@@ -169,7 +169,7 @@
     <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
     <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
     <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Uygulamanın dahili alarmlara erişmesine izin vermelisiniz, aksi takdirde zamanlanan mesajlar gönderemez.</string>
     <string name="grant_permission">İzin Ver</string>
     <string name="permission_required">İzin Gerekli</string>
     <!-- Renaming -->
