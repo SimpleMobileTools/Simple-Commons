@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_max="@dimen/grid_view_image_size" />
+        app:layout_constraintWidth_max="@dimen/contact_grid_item_max_size" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/item_contact_name"
