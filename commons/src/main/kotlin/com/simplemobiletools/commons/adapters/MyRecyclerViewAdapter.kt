@@ -12,6 +12,8 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.MyRecyclerView
+import kotlin.math.max
+import kotlin.math.min
 
 abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
     RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
@@ -162,8 +164,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         lastLongPressedItem = if (lastLongPressedItem == -1) {
             position
         } else {
-            val min = Math.min(lastLongPressedItem, position)
-            val max = Math.max(lastLongPressedItem, position)
+            val min = min(lastLongPressedItem, position)
+            val max = max(lastLongPressedItem, position)
             for (i in min..max) {
                 toggleItemSelection(true, i, false)
             }
