@@ -135,6 +135,7 @@
     <string name="search">Αναζήτηση</string>
     <string name="search_in_placeholder">Αναζήτηση σε %s</string>
     <string name="type_2_characters">Πληκτρολογήστε τουλάχιστον 2 χαρακτήρες για να ξεκινήσετε την αναζήτηση.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Αναζήτηση επαφών</string>
     <string name="search_favorites">Αναζήτηση αγαπημένων</string>
     <string name="search_apps">Αναζήτηση εφαρμογών</string>
@@ -169,7 +170,7 @@
     <string name="allow_notifications_voice_recorder">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να καταγράψει ήχο.</string>
     <string name="allow_notifications_incoming_calls">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τις εισερχόμενες κλήσεις.</string>
     <string name="allow_notifications_incoming_messages">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τα εισερχόμενα μηνύματα.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να στείλει προγραμματισμένα μηνύματα.</string>
     <string name="grant_permission">Χορήγηση άδειας</string>
     <string name="permission_required">Απαιτείται άδεια</string>
     <!-- Renaming -->
@@ -468,10 +469,10 @@
     <string name="lock_folder_pro">Κλείδωμα Φακέλου (Pro)</string>
     <string name="unlock_folder">Ξεκλείδωμα Φακέλου</string>
     <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="enter_password">Εισαγωγή κωδικού</string>
+    <string name="password">Κωδικός πρόσβασης</string>
+    <string name="empty_password">Παρακαλώ εισάγετε τον κωδικό</string>
+    <string name="invalid_password">Εσφαλμένος κωδικός</string>
     <!-- Times -->
     <string name="yesterday">Χθές</string>
     <string name="today">Σήμερα</string>

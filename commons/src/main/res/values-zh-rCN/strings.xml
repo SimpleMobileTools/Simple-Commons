@@ -133,6 +133,7 @@
     <string name="search">搜索</string>
     <string name="search_in_placeholder">在 %s 中搜索</string>
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">搜索联系人</string>
     <string name="search_favorites">搜索收藏</string>
     <string name="search_apps">搜索应用</string>
@@ -167,7 +168,7 @@
     <string name="allow_notifications_voice_recorder">你必须允许应用展示通知，否则它无法录音。</string>
     <string name="allow_notifications_incoming_calls">你必须允许应用展示通知，否则它无法显示来电。</string>
     <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
     <string name="grant_permission">授予权限</string>
     <string name="permission_required">权限是必需的</string>
     <!-- Renaming -->

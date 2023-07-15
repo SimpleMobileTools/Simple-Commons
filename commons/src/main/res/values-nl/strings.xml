@@ -134,6 +134,7 @@
     <string name="search">Zoeken</string>
     <string name="search_in_placeholder">Zoeken in %s</string>
     <string name="type_2_characters">Vul tenminste 2 tekens in om de zoekopdracht te starten.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Contact zoeken</string>
     <string name="search_favorites">Favoriet zoeken</string>
     <string name="search_apps">App zoeken</string>
@@ -168,7 +169,7 @@
     <string name="allow_notifications_voice_recorder">Deze app heeft het recht om meldingen te tonen nodig om geluid te kunnen opnemen.</string>
     <string name="allow_notifications_incoming_calls">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij inkomende gesprekken.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
     <string name="grant_permission">Toestemming geven</string>
     <string name="permission_required">Toestemming vereist</string>
     <!-- Renaming -->
