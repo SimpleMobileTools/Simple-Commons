@@ -1089,3 +1089,12 @@ fun Context.openNotificationSettings() {
         startActivity(intent)
     }
 }
+
+@RequiresApi(Build.VERSION_CODES.S)
+fun Context.openRequestExactAlarmSettings() {
+    if (isSPlus()) {
+        val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+        intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+        startActivity(intent)
+    }
+}
