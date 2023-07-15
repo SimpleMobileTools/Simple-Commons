@@ -479,10 +479,12 @@
     <string name="lock_folder_pro">Закључај мапу (Про)</string>
     <string name="unlock_folder">Откључај мапу</string>
     <string name="lock_folder_notice">Ова заштита функционише само у овој апликацији, не би требало да замени право шифровање директоријума у целом систему.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="enter_password">Унесите шифру</string>
+    <string name="password">Шифра</string>
+    <string name="add_password">Додај шифру</string>
+    <string name="empty_password_new">Молимо унесите шифру</string>
+    <string name="empty_password">Молимо унесите шифру</string>
+    <string name="invalid_password">Погрешна шифра</string>
     <!-- Times -->
     <string name="yesterday">Јуче</string>
     <string name="today">Данас</string>
