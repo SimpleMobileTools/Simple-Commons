@@ -185,6 +185,13 @@ const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
 const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
 const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
 const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
+const val VIEW_TYPE = "view_type"
+const val CONTACTS_GRID_COLUMN_COUNT = "favourites_column_count"
+
+// contact grid view constants
+const val CONTACTS_GRID_DEFAULT_COLUMNS_COUNT = 3
+const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
+const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
 // phone number/email types
 const val CELL = "CELL"
