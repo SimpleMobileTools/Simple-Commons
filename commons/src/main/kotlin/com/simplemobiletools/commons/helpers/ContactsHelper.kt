@@ -17,6 +17,9 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.PhoneNumber
 import com.simplemobiletools.commons.models.contacts.*
 import com.simplemobiletools.commons.overloads.times
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import java.io.OutputStream
 import java.util.Locale
 
 class ContactsHelper(val context: Context) {
@@ -1553,6 +1556,25 @@ class ContactsHelper(val context: Context) {
                 }
                 callback(duplicates)
             }
+        }
+    }
+
+    fun getContactsToExport(selectedContactSources: Set<String>, callback: (List<Contact>) -> Unit) {
+        getContacts(getAll = true) { receivedContacts ->
+            val contacts = receivedContacts.filter { it.source in selectedContactSources }
+            callback(contacts)
+        }
+    }
+
+    fun exportContacts(contacts: List<Contact>, outputStream: OutputStream): ExportResult {
+        return try {
+            val jsonString = Json.encodeToString(contacts)
+            outputStream.use {
+                it.write(jsonString.toByteArray())
+            }
+            ExportResult.EXPORT_OK
+        } catch (_: Error) {
+            ExportResult.EXPORT_FAIL
         }
     }
 }
