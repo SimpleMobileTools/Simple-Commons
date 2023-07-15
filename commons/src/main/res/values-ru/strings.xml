@@ -136,7 +136,7 @@
     <string name="search">Поиск</string>
     <string name="search_in_placeholder">Поиск в %s</string>
     <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Показывать панель поиска</string>
     <string name="search_contacts">Поиск контактов</string>
     <string name="search_favorites">Поиск избранного</string>
     <string name="search_apps">Поиск приложений</string>
@@ -171,7 +171,7 @@
     <string name="allow_notifications_voice_recorder">Необходимо разрешить приложению отображать уведомления, иначе оно не может записывать звук.</string>
     <string name="allow_notifications_incoming_calls">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие вызовы.</string>
     <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Необходимо разрешить приложению доступ к внутренним будильникам, иначе оно не сможет отправлять запланированные сообщения.</string>
     <string name="grant_permission">Разрешить</string>
     <string name="permission_required">Требуется разрешение</string>
     <!-- Renaming -->
