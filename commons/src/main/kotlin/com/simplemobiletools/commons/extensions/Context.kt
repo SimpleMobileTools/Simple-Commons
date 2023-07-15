@@ -1076,6 +1076,7 @@ fun Context.sendEmailIntent(recipient: String) {
         launchActivityIntent(this)
     }
 }
+
 fun Context.openNotificationSettings() {
     if (isOreoPlus()) {
         val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
