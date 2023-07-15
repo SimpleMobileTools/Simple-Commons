@@ -556,6 +556,6 @@ open class BaseConfig(val context: Context) {
 
     var contactsGridColumnCnt: Int
         get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, CONTACTS_GRID_DEFAULT_COLUMNS_COUNT)
-        set(gridLayoutSpanCount) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, gridLayoutSpanCount).apply()
+        set(gridLayoutColumnCount) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, gridLayoutColumnCount).apply()
 
 }
