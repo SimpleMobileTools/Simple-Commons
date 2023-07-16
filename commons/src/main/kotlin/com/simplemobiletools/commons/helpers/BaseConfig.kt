@@ -575,4 +575,3 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getLong(LAST_AUTO_BACKUP_TIME, 0L)
         set(lastAutoBackupTime) = prefs.edit().putLong(LAST_AUTO_BACKUP_TIME, lastAutoBackupTime).apply()
 }
-}
