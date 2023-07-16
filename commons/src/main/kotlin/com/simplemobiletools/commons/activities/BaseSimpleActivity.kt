@@ -977,7 +977,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        PermissionRequiredDialog(this, R.string.allow_notifications_files)
+                        PermissionRequiredDialog(this, R.string.allow_notifications_files, { openNotificationSettings() })
                     }
                 }
             }
