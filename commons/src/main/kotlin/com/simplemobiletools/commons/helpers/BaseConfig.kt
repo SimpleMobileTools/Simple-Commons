@@ -1,13 +1,16 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
+import android.content.res.Configuration
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.LinkedList
+import java.util.Locale
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -555,7 +558,17 @@ open class BaseConfig(val context: Context) {
         set(viewType) = prefs.edit().putInt(VIEW_TYPE, viewType).apply()
 
     var contactsGridColumnCnt: Int
-        get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, CONTACTS_GRID_DEFAULT_COLUMNS_COUNT)
-        set(gridLayoutColumnCount) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, gridLayoutColumnCount).apply()
+        get() = prefs.getInt(
+            valueByConfiguration(CONTACTS_GRID_COLUMN_COUNT_PORTRAIT, CONTACTS_GRID_COLUMN_COUNT_LANDSCAPE),
+            valueByConfiguration(CONTACTS_GRID_DEFAULT_COLUMNS_COUNT_PORTRAIT, CONTACTS_GRID_DEFAULT_COLUMNS_COUNT_LANDSCAPE)
+        )
+        set(contactsGridColumnCnt) = prefs.edit().putInt(
+            valueByConfiguration(CONTACTS_GRID_COLUMN_COUNT_PORTRAIT, CONTACTS_GRID_COLUMN_COUNT_LANDSCAPE),
+            contactsGridColumnCnt
+        ).apply()
 
+    private fun <T> valueByConfiguration(portraitValue: T, landScapeValue: T): T {
+        val isPortrait = context.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+        return if (isPortrait) portraitValue else landScapeValue
+    }
 }
