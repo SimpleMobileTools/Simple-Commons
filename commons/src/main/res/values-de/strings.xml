@@ -110,7 +110,7 @@
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
     <string name="not_blocking_anyone">Du blockierst niemanden.</string>
-    <string name="add_a_blocked_number">Eine blockierte Nummer hinzufügen</string>
+    <string name="add_a_blocked_number">Eine zu blockierende Nummer hinzufügen</string>
     <string name="block_number">Nummer blockieren</string>
     <string name="block_numbers">Nummern blockieren</string>
     <string name="blocked_numbers">Blockierte Nummern</string>
@@ -1108,7 +1108,7 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF-Betrachter)</string>
     <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelistendateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (ZIP-Komprimierung und -Dekomprimierung)</string>
     <!-- Trial -->
     <string name="trial_expired">Testversion abgelaufen</string>
     <string name="start_free_trial">Kostenlos testen</string>
