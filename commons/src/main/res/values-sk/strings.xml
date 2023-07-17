@@ -112,6 +112,11 @@
         <item quantity="few">%d stĺpce</item>
         <item quantity="other">%d stĺpcov</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d riadok</item>
+        <item quantity="few">%d riadky</item>
+        <item quantity="other">%d riadkov</item>
+    </plurals>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovať blokované čísla</string>

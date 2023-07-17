@@ -107,6 +107,10 @@
     <plurals name="column_counts">
         <item quantity="other">%d 列</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
     <string name="not_blocking_anyone">你没有拦截任何人。</string>

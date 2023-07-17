@@ -111,6 +111,10 @@
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
+    </plurals>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>

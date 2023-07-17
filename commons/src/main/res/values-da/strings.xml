@@ -108,6 +108,10 @@
         <item quantity="one">%d kolonne</item>
         <item quantity="other">%d kolonner</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
     <string name="not_blocking_anyone">Du blokerer ikke nogen.</string>

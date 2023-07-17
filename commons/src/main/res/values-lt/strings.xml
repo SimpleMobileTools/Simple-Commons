@@ -109,6 +109,10 @@
         <item quantity="few">%d stulpeliai</item>
         <item quantity="other">%d stulpelių</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
     <string name="not_blocking_anyone">Jūs neturite užblokuotų numerių.</string>
