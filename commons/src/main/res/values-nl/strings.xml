@@ -109,8 +109,8 @@
         <item quantity="other">%d kolommen</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d rij</item>
+        <item quantity="other">%d rijen</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
