@@ -775,13 +775,39 @@
     <string name="more_info">更多資訊</string>
     <string name="upgrade">升級</string>
     <string name="upgrade_calendar">你必須手動搬移儲存在本機端的活動，透過匯出.ics檔案再接著匯入。你可以在主畫面選單中，找到 匯出/匯入 兩個按鈕。</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">您好，
+\n
+\n看起來您剛從免費版升級。一旦您對這個版本感到滿意，並且可能已經遷移了您的設定和收藏，您可以卸載舊的免費版本，以避免意外啟動它，因為您將不再需要它，這也將防止此對話框彈出。
+\n
+\n謝謝！</string>
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">您好，
+\n
+\n看起來您剛剛從免費版升級到付費版。一旦您對新版本滿意，並且可能已經將您的數據遷移過來，您就可以卸載舊的免費版，以避免意外啟動它，因為您將不再需要它了，這也將防止此對話框顯示。
+\n
+\n謝謝！</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">您好，
+\n
+\n看來您剛從免費版本升級上來。如果您想要將本地儲存的活動遷移到新版本，您必須手動將它們從免費的應用版本中導出成 .ics 檔案，然後透過頂部選單導入。
+\n
+\n一旦您對 Pro 版本的設定感到滿意，您可以卸載舊的免費版本，因為您將不再需要它，這也將阻止此對話框的再次出現。
+\n
+\n謝謝！</string>
+    <string name="upgraded_from_free_contacts">您好，
+\n
+\n看來您剛從免費版本升級過來。若您在「%s」之下儲存了任何聯絡人，您需要手動進行遷移，方法是從免費版本的應用程式匯出 .vcf 檔案，然後透過頂部選單在這裡匯入。
+\n
+\n一旦您對於 Pro 版本的設定感到滿意，您就可以卸載舊的免費版本，因為您將不再需要它，這也將阻止此對話框再次出現。
+\n
+\n謝謝！</string>
+    <string name="upgraded_from_free_notes">您好，
+\n
+\n看起來您剛剛由免費版本升級過來。如果您想要將您的筆記遷移過來，您需要手動進行，首先在免費版本的應用程式中將它們匯出成一個檔案，然後透過上方選單匯入到這裡。
+\n
+\n一旦您對 Pro 版本的設定感到滿意，您就可以卸載舊的免費版本，因為您將不再需要它，這也會避免這個對話框再次彈出。
+\n
+\n謝謝！</string>
     <!-- About -->
     <string name="about">關於</string>
     <string name="website">Website</string>
