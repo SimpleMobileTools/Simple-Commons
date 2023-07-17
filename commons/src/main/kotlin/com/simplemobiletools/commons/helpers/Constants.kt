@@ -190,8 +190,6 @@ const val CONTACTS_GRID_COLUMN_COUNT_PORTRAIT = "contacts_grid_column_count_port
 const val CONTACTS_GRID_COLUMN_COUNT_LANDSCAPE = "contacts_grid_column_count_landscape"
 
 // contact grid view constants
-const val CONTACTS_GRID_DEFAULT_COLUMNS_COUNT_PORTRAIT = 3
-const val CONTACTS_GRID_DEFAULT_COLUMNS_COUNT_LANDSCAPE = 5
 const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
