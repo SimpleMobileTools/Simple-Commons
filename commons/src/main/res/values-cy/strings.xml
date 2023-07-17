@@ -113,7 +113,11 @@
         <item quantity="other">%d columns</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
+        <item quantity="zero">%d row</item>
+        <item quantity="one">%d rows</item>
+        <item quantity="two">%d rows</item>
+        <item quantity="few">%d rows</item>
+        <item quantity="many">%d rows</item>
         <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
