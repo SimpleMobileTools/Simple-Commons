@@ -135,7 +135,7 @@
     <string name="search">Suchen</string>
     <string name="search_in_placeholder">Suchen in %s</string>
     <string name="type_2_characters">Du musst mindestens 2 Zeichen eingeben, um die Suche zu starten.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Eine Suchleiste anzeigen</string>
     <string name="search_contacts">Kontakte durchsuchen</string>
     <string name="search_favorites">Favoriten durchsuchen</string>
     <string name="search_apps">Apps durchsuchen</string>
@@ -170,7 +170,7 @@
     <string name="allow_notifications_voice_recorder">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keinen Ton aufnehmen.</string>
     <string name="allow_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Anrufe anzeigen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie keine geplanten Nachrichten senden.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
     <!-- Renaming -->
@@ -477,8 +477,8 @@
     <string name="lock_folder_notice">Dieser Schutz ist nur innerhalb dieser App wirksam und kann keine systemweite Datenträgerverschlüsselung ersetzen.</string>
     <string name="enter_password">Passwort eingeben</string>
     <string name="password">Passwort</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="add_password">Passwort hinzufügen</string>
+    <string name="empty_password_new">Bitte ein Passwort eingeben</string>
     <string name="empty_password">Bitte das Passwort eingeben</string>
     <string name="invalid_password">Passwort falsch</string>
     <!-- Times -->
