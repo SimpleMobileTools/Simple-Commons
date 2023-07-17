@@ -111,8 +111,10 @@
         <item quantity="other">%d kolumn</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d wiersz</item>
+        <item quantity="few">%d wiersze</item>
+        <item quantity="many">%d wierszy</item>
+        <item quantity="other">%d wierszy</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>

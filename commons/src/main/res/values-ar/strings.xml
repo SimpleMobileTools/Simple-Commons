@@ -77,7 +77,7 @@
     <string name="phone_storage">ذاكرة الهاتف</string>
     <string name="phone_storage_hidden">ذاكرة الهاتف (غير مرئية من قبل التطبيقات الأخرى)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">يفحص…</string>
     <!-- Events -->
     <string name="birthday">تاريخ الميلاد</string>
     <string name="anniversary">مناسبة</string>
@@ -113,8 +113,12 @@
         <item quantity="other">%d أعمدة</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="zero">صف %d</item>
+        <item quantity="one">صف %d</item>
+        <item quantity="two">صفوف %d</item>
+        <item quantity="few">صفوف %d</item>
+        <item quantity="many">صفوف %d</item>
+        <item quantity="other">صفوف %d</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
