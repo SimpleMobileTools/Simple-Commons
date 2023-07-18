@@ -352,6 +352,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (toolbarNavigationIcon != NavigationIcon.None) {
             val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+            toolbar.setNavigationContentDescription(toolbarNavigationIcon.accessibilityResId)
         }
 
         toolbar.setNavigationOnClickListener {

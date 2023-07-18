@@ -7,6 +7,7 @@ import android.os.Looper
 import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
+import androidx.annotation.StringRes
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.normalizeString
 import com.simplemobiletools.commons.models.contacts.LocalContact
@@ -376,10 +377,10 @@ const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
 // possible icons at the top left corner
-enum class NavigationIcon {
-    Cross,
-    Arrow,
-    None
+enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
+    Cross(R.string.close),
+    Arrow(R.string.back),
+    None(0)
 }
 
 val appIconColorStrings = arrayListOf(
