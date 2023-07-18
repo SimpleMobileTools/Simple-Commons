@@ -558,20 +558,15 @@ open class BaseConfig(val context: Context) {
         set(viewType) = prefs.edit().putInt(VIEW_TYPE, viewType).apply()
 
     var contactsGridColumnCnt: Int
-        get() = prefs.getInt(
-            valueByConfiguration(CONTACTS_GRID_COLUMN_COUNT_PORTRAIT, CONTACTS_GRID_COLUMN_COUNT_LANDSCAPE),
-            valueByConfiguration(
-                context.resources.getInteger(R.integer.contacts_grid_columns_count_portrait),
-                context.resources.getInteger(R.integer.contacts_grid_columns_count_landscape)
-            )
-        )
-        set(contactsGridColumnCnt) = prefs.edit().putInt(
-            valueByConfiguration(CONTACTS_GRID_COLUMN_COUNT_PORTRAIT, CONTACTS_GRID_COLUMN_COUNT_LANDSCAPE),
-            contactsGridColumnCnt
-        ).apply()
+        get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, getColumnsCountBasedOnConfiguration())
+        set(contactsGridColumnCnt) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, contactsGridColumnCnt).apply()
 
-    private fun <T> valueByConfiguration(portraitValue: T, landScapeValue: T): T {
+    private fun getColumnsCountBasedOnConfiguration(): Int {
         val isPortrait = context.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
-        return if (isPortrait) portraitValue else landScapeValue
+        return if (isPortrait) {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_portrait)
+        } else {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_landscape)
+        }
     }
 }
