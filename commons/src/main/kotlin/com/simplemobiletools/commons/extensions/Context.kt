@@ -1093,7 +1093,7 @@ fun Context.openNotificationSettings() {
 @RequiresApi(Build.VERSION_CODES.S)
 fun Context.openRequestExactAlarmSettings(appId: String) {
     if (isSPlus()) {
-        val uri = Uri.fromParts(Settings.EXTRA_APP_PACKAGE, appId, null)
+        val uri = Uri.fromParts("package", appId, null)
         val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
         intent.data = uri
         startActivity(intent)
