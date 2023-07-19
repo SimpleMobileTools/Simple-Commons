@@ -13,7 +13,6 @@ import com.simplemobiletools.commons.dialogs.ExportBlockedNumbersDialog
 import com.simplemobiletools.commons.dialogs.FilePickerDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.helpers.BlockedNumbersExporter.ExportResult
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
@@ -286,7 +285,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     toast(
                         when (it) {
                             ExportResult.EXPORT_OK -> R.string.exporting_successful
-                            ExportResult.EXPORT_FAIL -> R.string.exporting_failed
+                            else -> R.string.exporting_failed
                         }
                     )
                 }

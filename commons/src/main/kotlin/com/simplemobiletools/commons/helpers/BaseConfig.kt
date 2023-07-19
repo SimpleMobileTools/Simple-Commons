@@ -2,15 +2,14 @@ package com.simplemobiletools.commons.helpers
 
 import android.content.Context
 import android.content.res.Configuration
+import android.os.Environment
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.LinkedList
-import java.util.Locale
+import java.util.*
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -569,4 +568,20 @@ open class BaseConfig(val context: Context) {
             context.resources.getInteger(R.integer.contacts_grid_columns_count_landscape)
         }
     }
+
+    var autoBackup: Boolean
+        get() = prefs.getBoolean(AUTO_BACKUP, false)
+        set(autoBackup) = prefs.edit().putBoolean(AUTO_BACKUP, autoBackup).apply()
+
+    var autoBackupFolder: String
+        get() = prefs.getString(AUTO_BACKUP_FOLDER, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath)!!
+        set(autoBackupFolder) = prefs.edit().putString(AUTO_BACKUP_FOLDER, autoBackupFolder).apply()
+
+    var autoBackupFilename: String
+        get() = prefs.getString(AUTO_BACKUP_FILENAME, "")!!
+        set(autoBackupFilename) = prefs.edit().putString(AUTO_BACKUP_FILENAME, autoBackupFilename).apply()
+
+    var lastAutoBackupTime: Long
+        get() = prefs.getLong(LAST_AUTO_BACKUP_TIME, 0L)
+        set(lastAutoBackupTime) = prefs.edit().putLong(LAST_AUTO_BACKUP_TIME, lastAutoBackupTime).apply()
 }

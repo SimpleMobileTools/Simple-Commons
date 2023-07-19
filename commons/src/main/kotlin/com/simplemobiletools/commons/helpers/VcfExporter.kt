@@ -23,9 +23,6 @@ import java.io.OutputStream
 import java.util.*
 
 class VcfExporter {
-    enum class ExportResult {
-        EXPORT_FAIL, EXPORT_OK, EXPORT_PARTIAL
-    }
 
     private var contactsExported = 0
     private var contactsFailed = 0

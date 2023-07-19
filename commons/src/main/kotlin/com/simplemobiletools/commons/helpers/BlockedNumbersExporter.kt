@@ -5,9 +5,6 @@ import java.io.OutputStream
 import java.util.ArrayList
 
 class BlockedNumbersExporter {
-    enum class ExportResult {
-        EXPORT_FAIL, EXPORT_OK
-    }
 
     fun exportBlockedNumbers(
         blockedNumbers: ArrayList<BlockedNumber>,
