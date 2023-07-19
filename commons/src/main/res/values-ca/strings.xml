@@ -100,7 +100,7 @@
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
     <string name="column_count">Comptador de columnes</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Nombre de files</string>
     <string name="portrait_column_count">Nombre de columnes verticals</string>
     <string name="landscape_column_count">Nombre de columnes horitzontals</string>
     <string name="change_cover_image">Canvia la imatge de la portada</string>
@@ -110,8 +110,8 @@
         <item quantity="other">%d columnes</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d fila</item>
+        <item quantity="other">%d files</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
