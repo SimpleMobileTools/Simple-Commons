@@ -7,6 +7,7 @@ import android.os.Looper
 import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
+import androidx.annotation.StringRes
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.normalizeString
 import com.simplemobiletools.commons.models.contacts.LocalContact
@@ -186,14 +187,13 @@ const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
 const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
 const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
 const val VIEW_TYPE = "view_type"
-const val CONTACTS_GRID_COLUMN_COUNT = "favourites_column_count"
+const val CONTACTS_GRID_COLUMN_COUNT = "contacts_grid_column_count"
 const val AUTO_BACKUP = "auto_backup"
 const val AUTO_BACKUP_FOLDER = "auto_backup_folder"
 const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
 const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
 
 // contact grid view constants
-const val CONTACTS_GRID_DEFAULT_COLUMNS_COUNT = 3
 const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
@@ -387,10 +387,10 @@ const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
 // possible icons at the top left corner
-enum class NavigationIcon {
-    Cross,
-    Arrow,
-    None
+enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
+    Cross(R.string.close),
+    Arrow(R.string.back),
+    None(0)
 }
 
 val appIconColorStrings = arrayListOf(

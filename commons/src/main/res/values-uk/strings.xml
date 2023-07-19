@@ -77,6 +77,7 @@
     <string name="phone_storage">Пам\'ять пристрою</string>
     <string name="phone_storage_hidden">Пам\'ять пристрою (прихована від інших застосунків)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">День народження</string>
     <string name="anniversary">Річниця</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Збільшити кількість колонок</string>
     <string name="reduce_column_count">Зменшити кількість колонок</string>
     <string name="column_count">Кількість стовпців</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Кількість портретних стовпців</string>
     <string name="landscape_column_count">Альбомна кількість стовпців</string>
     <string name="change_cover_image">Змінити обкладинку</string>
@@ -108,6 +110,10 @@
         <item quantity="few">%d стовпці</item>
         <item quantity="many">%d стовпців</item>
         <item quantity="other">%d стовпців</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
@@ -478,6 +484,8 @@
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Будь ласка, введіть пароль</string>
     <string name="invalid_password">Неправильний пароль</string>
     <!-- Times -->

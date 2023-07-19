@@ -77,6 +77,7 @@
     <string name="phone_storage">Memoria del telefono</string>
     <string name="phone_storage_hidden">Memoria del telefono (non visibile alle altre applicazioni)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Compleanno</string>
     <string name="anniversary">Anniversario</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Aumenta numero colonne</string>
     <string name="reduce_column_count">Riduci numero colonne</string>
     <string name="column_count">Conteggio colonne</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Conteggio delle colonne del ritratto</string>
     <string name="landscape_column_count">Conteggio delle colonne del paesaggio</string>
     <string name="change_cover_image">Cambia immagine copertina</string>
@@ -107,6 +109,10 @@
         <item quantity="one">%d colonna</item>
         <item quantity="many">%d colonne</item>
         <item quantity="other">%d colonne</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -476,6 +482,8 @@
     <string name="lock_folder_notice">Questa protezione funziona solo nell\'app, non è pensata per sostituire una vera cifratura delle cartelle a livello di sistema.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

@@ -77,6 +77,7 @@
     <string name="phone_storage">Andmeruum telefonis</string>
     <string name="phone_storage_hidden">Telefonimälu (muud rakendused ei saa siia ligi)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Suurenda veergude arvu</string>
     <string name="reduce_column_count">Vähenda veergude arvu</string>
     <string name="column_count">Veergude arv</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Portree veergude arv</string>
     <string name="landscape_column_count">Maastikuline veergude arv</string>
     <string name="change_cover_image">Muuda kaanepilti</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d veerg</item>
         <item quantity="other">%d veergu</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
@@ -470,6 +476,8 @@
     <string name="lock_folder_notice">See turvameede toimib vaid selles rakenduses ega ole mõeldud asendama süsteemiülest krüptimist.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Palun sisesta salasõna</string>
     <string name="invalid_password">Vigane salasõna</string>
     <!-- Times -->

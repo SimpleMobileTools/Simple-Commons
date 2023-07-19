@@ -77,6 +77,7 @@
     <string name="phone_storage">Меморија телефона</string>
     <string name="phone_storage_hidden">Складиште телефона (није видљиво другим апликацијама)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Рођендан</string>
     <string name="anniversary">Годишњица</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Повећај број колона</string>
     <string name="reduce_column_count">Смањи број колона</string>
     <string name="column_count">Број колона</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Портретни број колона</string>
     <string name="landscape_column_count">Пејзажни број колона</string>
     <string name="change_cover_image">Промени насловну слику</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управљајте блокираним бројевима</string>
@@ -479,10 +485,12 @@
     <string name="lock_folder_pro">Закључај мапу (Про)</string>
     <string name="unlock_folder">Откључај мапу</string>
     <string name="lock_folder_notice">Ова заштита функционише само у овој апликацији, не би требало да замени право шифровање директоријума у целом систему.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="enter_password">Унесите шифру</string>
+    <string name="password">Шифра</string>
+    <string name="add_password">Додај шифру</string>
+    <string name="empty_password_new">Молимо унесите шифру</string>
+    <string name="empty_password">Молимо унесите шифру</string>
+    <string name="invalid_password">Погрешна шифра</string>
     <!-- Times -->
     <string name="yesterday">Јуче</string>
     <string name="today">Данас</string>

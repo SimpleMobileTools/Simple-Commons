@@ -77,6 +77,7 @@
     <string name="phone_storage">Telefoonopslag</string>
     <string name="phone_storage_hidden">Telefoonopslag (niet zichtbaar voor andere apps)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Bezig met zoeken…</string>
     <!-- Events -->
     <string name="birthday">Verjaardag</string>
     <string name="anniversary">Jubileum</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Meer kolommen</string>
     <string name="reduce_column_count">Minder kolommen</string>
     <string name="column_count">Aantal kolommen</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Aantal kolommen in portretmodus</string>
     <string name="landscape_column_count">Aantal kolommen in landschapsmodus</string>
     <string name="change_cover_image">Omslagafbeelding wijzigen</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d kolom</item>
         <item quantity="other">%d kolommen</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d rij</item>
+        <item quantity="other">%d rijen</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -134,7 +140,7 @@
     <string name="search">Zoeken</string>
     <string name="search_in_placeholder">Zoeken in %s</string>
     <string name="type_2_characters">Vul tenminste 2 tekens in om de zoekopdracht te starten.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Zoekbalk tonen</string>
     <string name="search_contacts">Contact zoeken</string>
     <string name="search_favorites">Favoriet zoeken</string>
     <string name="search_apps">App zoeken</string>
@@ -464,6 +470,8 @@
     <string name="lock_folder_notice">Deze bescherming werkt alleen in deze app, het is niet de bedoeling dat het een echte systeembrede mapversleuteling vervangt.</string>
     <string name="enter_password">Wachtwoord invoeren</string>
     <string name="password">Wachtwoord</string>
+    <string name="add_password">Wachtwoord toevoegen</string>
+    <string name="empty_password_new">Voer een wachtwoord in</string>
     <string name="empty_password">Voer het wachtwoord in</string>
     <string name="invalid_password">Onjuist wachtwoord</string>
     <!-- Times -->

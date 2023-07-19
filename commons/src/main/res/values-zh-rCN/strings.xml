@@ -77,6 +77,7 @@
     <string name="phone_storage">手机存储</string>
     <string name="phone_storage_hidden">手机空间 (其他程序不可见)</string>
     <string name="audio">音频</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">生日</string>
     <string name="anniversary">纪念日</string>
@@ -99,12 +100,17 @@
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
     <string name="column_count">列数</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">垂直列数</string>
     <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
     <string name="select_photo">选择图片</string>
     <plurals name="column_counts">
         <item quantity="other">%d 列</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
@@ -133,7 +139,7 @@
     <string name="search">搜索</string>
     <string name="search_in_placeholder">在 %s 中搜索</string>
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">显示搜索栏</string>
     <string name="search_contacts">搜索联系人</string>
     <string name="search_favorites">搜索收藏</string>
     <string name="search_apps">搜索应用</string>
@@ -461,6 +467,8 @@
     <string name="lock_folder_notice">此保护仅适用于此应用程序，不应取代真正的系统级文件夹加密。</string>
     <string name="enter_password">输入密码</string>
     <string name="password">密码</string>
+    <string name="add_password">添加密码</string>
+    <string name="empty_password_new">请输入密码</string>
     <string name="empty_password">请输入密码</string>
     <string name="invalid_password">密码不正确</string>
     <!-- Times -->

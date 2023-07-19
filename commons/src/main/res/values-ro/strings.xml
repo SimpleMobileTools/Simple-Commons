@@ -77,6 +77,7 @@
     <string name="phone_storage">Stocarea telefonului</string>
     <string name="phone_storage_hidden">Stocarea telefonului (nu este vizibilă de către alte aplicații)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Ziua de naștere</string>
     <string name="anniversary">Aniversare</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Creşte numărul de coloane</string>
     <string name="reduce_column_count">Reduce numărul de coloane</string>
     <string name="column_count">Număr de coloane</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Număr de coloane în mod portret</string>
     <string name="landscape_column_count">Număr de coloane în mod peisaj</string>
     <string name="change_cover_image">Schimbă imaginea de copertă</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestionaţi numerele blocate</string>
@@ -474,6 +480,8 @@
     <string name="lock_folder_notice">Această protecție funcționează doar în această aplicație, ea nu ar trebui să înlocuiască o criptare reală a dosarelor la nivel de sistem.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

@@ -78,6 +78,7 @@
     <string name="phone_storage">Úložiště telefonu</string>
     <string name="phone_storage_hidden">Úložiště telefonu (neviditelné pro ostatní aplikace)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Narozeniny</string>
     <string name="anniversary">Výročí</string>
@@ -100,6 +101,7 @@
     <string name="increase_column_count">Zvýšit počet sloupců</string>
     <string name="reduce_column_count">Snížit počet sloupců</string>
     <string name="column_count">Počet sloupců</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Počet sloupců na výšku</string>
     <string name="landscape_column_count">Počet sloupců na šířku</string>
     <string name="change_cover_image">Změnit obrázek složky</string>
@@ -108,6 +110,10 @@
         <item quantity="one">%d sloupec</item>
         <item quantity="few">%d sloupce</item>
         <item quantity="other">%d sloupců</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
@@ -478,6 +484,8 @@
     <string name="lock_folder_notice">Tato ochrana funguje pouze v této aplikaci, nemá za cíl nahradit šifrování složky fungující napříč systémem.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

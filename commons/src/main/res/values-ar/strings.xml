@@ -77,6 +77,7 @@
     <string name="phone_storage">ذاكرة الهاتف</string>
     <string name="phone_storage_hidden">ذاكرة الهاتف (غير مرئية من قبل التطبيقات الأخرى)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">يفحص…</string>
     <!-- Events -->
     <string name="birthday">تاريخ الميلاد</string>
     <string name="anniversary">مناسبة</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">زيادة عدد الأعمدة</string>
     <string name="reduce_column_count">تقليل عدد الأعمدة</string>
     <string name="column_count">عدد الأعمدة</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">عدد الأعمدة الرأسية</string>
     <string name="landscape_column_count">عدد الأعمدة الأفقية</string>
     <string name="change_cover_image">تغيير صورة الغلاف</string>
@@ -110,6 +112,14 @@
         <item quantity="few">%d أعمدة</item>
         <item quantity="many">%d أعمدة</item>
         <item quantity="other">%d أعمدة</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="zero">صف %d</item>
+        <item quantity="one">صف %d</item>
+        <item quantity="two">صفوف %d</item>
+        <item quantity="few">صفوف %d</item>
+        <item quantity="many">صفوف %d</item>
+        <item quantity="other">صفوف %d</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -138,7 +148,7 @@
     <string name="search">بحث</string>
     <string name="search_in_placeholder">البحث في %s</string>
     <string name="type_2_characters">أكتب ما لا يقل عن حرفين لبدء البحث.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">عرض شريط البحث</string>
     <string name="search_contacts">بحث في جهات الاتصال</string>
     <string name="search_favorites">بحث في المفضلة</string>
     <string name="search_apps">البحث في التطبيقات</string>
@@ -492,6 +502,8 @@
     <string name="lock_folder_notice">تعمل هذه الحماية فقط في هذا التطبيق، ومن المفترض ألا تحل محل تشفير المجلد الحقيقي علي مستوي النظام.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">الرجاء إدخال كلمة المرور</string>
     <string name="empty_password">الرجاء إدخال كلمة المرور</string>
     <string name="invalid_password">كلمة المرور غير صحيحة</string>
     <!-- Times -->

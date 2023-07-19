@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Environment
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
@@ -555,9 +556,18 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(VIEW_TYPE, VIEW_TYPE_LIST)
         set(viewType) = prefs.edit().putInt(VIEW_TYPE, viewType).apply()
 
-    var contactsGridColumnCnt: Int
-        get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, CONTACTS_GRID_DEFAULT_COLUMNS_COUNT)
-        set(contactsGridColumnCnt) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, contactsGridColumnCnt).apply()
+    var contactsGridColumnCount: Int
+        get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, getDefaultContactColumnsCount())
+        set(contactsGridColumnCount) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, contactsGridColumnCount).apply()
+
+    private fun getDefaultContactColumnsCount(): Int {
+        val isPortrait = context.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+        return if (isPortrait) {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_portrait)
+        } else {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_landscape)
+        }
+    }
 
     var autoBackup: Boolean
         get() = prefs.getBoolean(AUTO_BACKUP, false)

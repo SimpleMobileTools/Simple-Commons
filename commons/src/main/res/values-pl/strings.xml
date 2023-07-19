@@ -77,6 +77,7 @@
     <string name="phone_storage">Pamięć telefonu</string>
     <string name="phone_storage_hidden">Pamięć telefonu (niewidoczne dla innych aplikacji)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Skanowanie…</string>
     <!-- Events -->
     <string name="birthday">Urodziny</string>
     <string name="anniversary">Rocznica</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Zwiększ liczbę kolumn</string>
     <string name="reduce_column_count">Zmniejsz liczbę kolumn</string>
     <string name="column_count">Liczba kolumn</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Liczba kolumn w trybie pionowym</string>
     <string name="landscape_column_count">Liczba kolumn w trybie poziomym</string>
     <string name="change_cover_image">Zmień okładkę</string>
@@ -108,6 +110,12 @@
         <item quantity="few">%d kolumny</item>
         <item quantity="many">%d kolumn</item>
         <item quantity="other">%d kolumn</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d wiersz</item>
+        <item quantity="few">%d wiersze</item>
+        <item quantity="many">%d wierszy</item>
+        <item quantity="other">%d wierszy</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>
@@ -136,7 +144,7 @@
     <string name="search">Szukaj</string>
     <string name="search_in_placeholder">Szukaj w %s</string>
     <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Pokazuj pasek wyszukiwania</string>
     <string name="search_contacts">Szukaj kontaktów</string>
     <string name="search_favorites">Szukaj ulubionych</string>
     <string name="search_apps">Szukaj aplikacji</string>
@@ -477,6 +485,8 @@
     <string name="lock_folder_notice">Ta ochrona działa tylko w tej aplikacji i nie ma zastępować prawdziwego szyfrowania folderów w całym systemie.</string>
     <string name="enter_password">Wprowadź hasło</string>
     <string name="password">Hasło</string>
+    <string name="add_password">Dodaj hasło</string>
+    <string name="empty_password_new">Wprowadź hasło</string>
     <string name="empty_password">Wprowadź hasło</string>
     <string name="invalid_password">Nieprawidłowe hasło</string>
     <!-- Times -->

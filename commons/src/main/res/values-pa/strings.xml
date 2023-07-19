@@ -77,6 +77,7 @@
     <string name="phone_storage">ਫ਼ੋਨ ਸਟੋਰੇਜ</string>
     <string name="phone_storage_hidden">ਫ਼ੋਨ ਸਟੋਰੇਜ (ਜੋ ਹੋਰ ਐਪਾਂ ਦੁਆਰਾ ਦਿਖਾਈ ਨਹੀਂ ਦਿੰਦੀ)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
 
     <!-- Events -->
     <string name="birthday">Birthday</string>
@@ -103,6 +104,7 @@
     <string name="increase_column_count">Increase column count</string>
     <string name="reduce_column_count">Reduce column count</string>
     <string name="column_count">Column count</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Portrait column count</string>
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Change cover image</string>
@@ -110,6 +112,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
 
     <!-- Blocked numbers -->
@@ -495,6 +501,8 @@
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
 

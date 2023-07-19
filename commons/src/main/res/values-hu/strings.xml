@@ -77,6 +77,7 @@
     <string name="phone_storage">Telefon tárhelye</string>
     <string name="phone_storage_hidden">Telefon tárhelye (többi alkalmazás számára nem látható)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Születésnap</string>
     <string name="anniversary">Évforduló</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Oszlopszám növelése</string>
     <string name="reduce_column_count">Oszlopszám csökkentése</string>
     <string name="column_count">Oszlopszám</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Oszlopszám álló módban</string>
     <string name="landscape_column_count">Oszlopszám fekvő módban</string>
     <string name="change_cover_image">Borítókép módosítása</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d oszlop</item>
         <item quantity="other">%d oszlop</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Letiltott telefonszámok kezelése</string>
@@ -470,6 +476,8 @@
     <string name="lock_folder_notice">Ez a védelem csak ezen az alkalmazáson belül működik, nem célja egy valódi rendszerszintű mappatitkosítás helyettesítése.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

@@ -77,6 +77,7 @@
     <string name="phone_storage">Telefon belleği</string>
     <string name="phone_storage_hidden">Telefon belleği (diğer uygulamalar tarafından görülmez)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Taranıyor…</string>
     <!-- Events -->
     <string name="birthday">Doğum günü</string>
     <string name="anniversary">Yıldönümü</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Sütun sayısını artır</string>
     <string name="reduce_column_count">Sütun sayısını azalt</string>
     <string name="column_count">Sütun sayısı</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Dikey sütun sayısı</string>
     <string name="landscape_column_count">Yatay sütun sayısı</string>
     <string name="change_cover_image">Kapak resmini değiştir</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d sütun</item>
         <item quantity="other">%d sütun</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d satır</item>
+        <item quantity="other">%d satır</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engellenen numaraları yönet</string>
@@ -134,7 +140,7 @@
     <string name="search">Ara</string>
     <string name="search_in_placeholder">%s içinde ara</string>
     <string name="type_2_characters">Aramaya başlamak için en az 2 karakter yazın.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Arama çubuğu göster</string>
     <string name="search_contacts">Kişileri ara</string>
     <string name="search_favorites">Favorileri ara</string>
     <string name="search_apps">Uygulama ara</string>
@@ -169,7 +175,7 @@
     <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
     <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
     <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Uygulamanın dahili alarmlara erişmesine izin vermelisiniz, aksi takdirde zamanlanan mesajlar gönderemez.</string>
     <string name="grant_permission">İzin Ver</string>
     <string name="permission_required">İzin Gerekli</string>
     <!-- Renaming -->
@@ -468,6 +474,8 @@
     <string name="lock_folder_notice">Bu koruma yalnızca bu uygulamada çalışır, gerçek bir sistem çapında klasör şifrelemesinin yerini almaz.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Lütfen bir parola girin</string>
     <string name="empty_password">Lütfen parolayı girin</string>
     <string name="invalid_password">Yanlış parola</string>
     <!-- Times -->
