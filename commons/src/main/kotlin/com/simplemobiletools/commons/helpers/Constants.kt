@@ -194,7 +194,6 @@ const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
 const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
 
 // contact grid view constants
-const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
 // phone number/email types
