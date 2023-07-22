@@ -189,7 +189,6 @@ const val VIEW_TYPE = "view_type"
 const val CONTACTS_GRID_COLUMN_COUNT = "contacts_grid_column_count"
 
 // contact grid view constants
-const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
 // phone number/email types
