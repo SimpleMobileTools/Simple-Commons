@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="close">Close</string>
+    <string name="close">Stäng</string>
     <string name="back">Tillbaka</string>
     <string name="nothing">Ingenting</string>
     <string name="later">Senare</string>
@@ -49,7 +49,7 @@
     <string name="no_phone_call_permission">Appen har inte behörighet att ringa telefonsamtal, ge den behörighet i din apparats inställningar</string>
     <string name="insert_text_here">Skriv här</string>
     <string name="call_person">Ring %s</string>
-    <string name="confirm_calling_person">Bekräfta ringer %s</string>
+    <string name="confirm_calling_person">Bekräfta att du vill ringa %s</string>
     <string name="zero">Noll</string>
     <string name="one">Ett</string>
     <string name="two">Två</string>
@@ -73,11 +73,11 @@
     <string name="choose_file">Välj fil</string>
     <string name="record_audio">Spela in ljud</string>
     <string name="record_video">Spela in video</string>
-    <string name="updating">Updaterar…</string>
+    <string name="updating">Uppdaterar…</string>
     <string name="phone_storage">Telefonlagring</string>
     <string name="phone_storage_hidden">Telefonlagring (inte synligt för andra appar)</string>
-    <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="audio">Ljud</string>
+    <string name="scanning">Skannar…</string>
     <!-- Events -->
     <string name="birthday">Födelsedag</string>
     <string name="anniversary">Årsdag</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Öka antalet kolumner</string>
     <string name="reduce_column_count">Minska antalet kolumner</string>
     <string name="column_count">Antal kolumner</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Antal rader</string>
     <string name="portrait_column_count">Antal kolumner i stående läge</string>
     <string name="landscape_column_count">Antal kolumner i liggande läge</string>
     <string name="change_cover_image">Byt omslagsbild</string>
@@ -110,8 +110,8 @@
         <item quantity="other">%d kolumner</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d rad</item>
+        <item quantity="other">%d rader</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hantera blockerade nummer</string>
@@ -126,11 +126,11 @@
     <string name="set_as_default">Ange som standard</string>
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
     <string name="block_not_stored_calls">Blockera samtal från okända nummer</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Blockera samtal från dolda nummer</string>
     <string name="block_not_stored_messages">Blockera meddelanden från okända nummer</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Blockera meddelanden från dolda nummer</string>
     <string name="add_blocked_number_helper_text">Ange ett nummer eller en nummerserie (exempel *12345*, +1*8888) för att blockera alla samtal och meddelanden som matchar nummret eller nummerserien.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="must_make_default_caller_id_app">Det går inte att blockera okända nummer utan nummerpresentatörsbehörighet.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
@@ -140,7 +140,7 @@
     <string name="search">Sök</string>
     <string name="search_in_placeholder">Sök i %s</string>
     <string name="type_2_characters">Skriv in minst två tecken för att starta sökningen.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Visa ett sökfält</string>
     <string name="search_contacts">Sök efter kontakter</string>
     <string name="search_favorites">Sök efter favoriter</string>
     <string name="search_apps">Sök efter appar</string>
@@ -413,9 +413,9 @@
     <string name="name">Namn</string>
     <string name="size">Storlek</string>
     <string name="last_modified">Senast ändrad</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Skapelsedatum</string>
     <string name="date_taken">Fotodatum</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Tilläggsdatum</string>
     <string name="title">Titel</string>
     <string name="filename">Filnamn</string>
     <string name="extension">Filnamnstillägg</string>
@@ -475,12 +475,12 @@
     <string name="lock_folder_pro">Lås mapp (Pro)</string>
     <string name="unlock_folder">Lås upp mapp</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="enter_password">Ange lösenord</string>
+    <string name="password">Lösenord</string>
+    <string name="add_password">Lägg till lösenord</string>
+    <string name="empty_password_new">Ange ett lösenord</string>
+    <string name="empty_password">Ange lösenordet</string>
+    <string name="invalid_password">Fel lösenord</string>
     <!-- Times -->
     <string name="yesterday">Igår</string>
     <string name="today">Idag</string>
