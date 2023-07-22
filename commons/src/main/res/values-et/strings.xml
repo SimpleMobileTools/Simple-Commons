@@ -28,21 +28,21 @@
     <string name="always">Alati</string>
     <string name="never">Mitte kunagi</string>
     <string name="details">Üksikasjad</string>
-    <string name="notes">Märkused</string>
+    <string name="notes">Märkmed</string>
     <string name="deleting_folder">Kustutame „%s“ kausta</string>
     <string name="none">Ükski</string>
     <string name="label">Silt</string>
     <string name="transparent">Läbipaistev</string>
     <string name="transparent_color">Läbipaistev värv</string>
     <string name="select_a_different_color">Vali mõni muu värv</string>
-    <string name="download">Lae alla</string>
+    <string name="download">Laadi alla</string>
     <string name="notification">Teavitus</string>
-    <string name="notifications">Teated</string>
+    <string name="notifications">Teavitused</string>
     <string name="email">E-post</string>
     <string name="previous">Eelmine</string>
     <string name="playpause">Esita / Peata esitus</string>
     <string name="next">Järgmine</string>
-    <string name="number">Arv</string>
+    <string name="number">Number</string>
     <string name="no_contacts_found">Kontakte ei leidu</string>
     <string name="request_the_required_permissions">Taotle vajalikke õigusi</string>
     <string name="no_access_to_contacts">Rakendusel puudub ligipääs sinu telefoniraamatule</string>
@@ -77,7 +77,7 @@
     <string name="phone_storage">Andmeruum telefonis</string>
     <string name="phone_storage_hidden">Telefonimälu (muud rakendused ei saa siia ligi)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Uurime andmeid…</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -85,7 +85,7 @@
     <string name="home">Kodu</string>
     <string name="work">Töö</string>
     <!-- Phone numbers -->
-    <string name="mobile">Mobiilne</string>
+    <string name="mobile">Mobiiltelefon</string>
     <string name="main_number">Peamine</string>
     <string name="work_fax">Tööfaks</string>
     <string name="home_fax">Kodufaks</string>
@@ -100,9 +100,9 @@
     <string name="increase_column_count">Suurenda veergude arvu</string>
     <string name="reduce_column_count">Vähenda veergude arvu</string>
     <string name="column_count">Veergude arv</string>
-    <string name="row_count">Row count</string>
-    <string name="portrait_column_count">Portree veergude arv</string>
-    <string name="landscape_column_count">Maastikuline veergude arv</string>
+    <string name="row_count">Ridade arv</string>
+    <string name="portrait_column_count">Portreevaate veergude arv</string>
+    <string name="landscape_column_count">Maastikuvaate veergude arv</string>
     <string name="change_cover_image">Muuda kaanepilti</string>
     <string name="select_photo">Vali foto</string>
     <plurals name="column_counts">
@@ -110,8 +110,8 @@
         <item quantity="other">%d veergu</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d rida</item>
+        <item quantity="other">%d rida</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
@@ -123,13 +123,13 @@
     <string name="export_blocked_numbers">Ekspordi blokeeritud telefoninumbrid</string>
     <string name="import_blocked_numbers">Impordi blokeeritud telefoninumbrid</string>
     <string name="must_make_default_dialer">Kui soovid kasutada blokeeritud telefoninumbrite funktsionaalsust, siis peab see rakendus olema vaikimisi telefonirakendus.</string>
-    <string name="set_as_default">Määra vaikimisi</string>
+    <string name="set_as_default">Määra vaikimisi väärtuseks</string>
     <string name="block_confirmation">Kas sa oled kindel, et soovid blokeerida „%s“ telefoninumbrit\?</string>
     <string name="block_not_stored_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
     <string name="block_hidden_calls">Blokeeri kõned varjatud numbritelt</string>
     <string name="block_not_stored_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
     <string name="block_hidden_messages">Blokeeri sõnumid varjatud numbritelt</string>
-    <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
+    <string name="add_blocked_number_helper_text">Sisesta number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
@@ -140,7 +140,7 @@
     <string name="search">Otsi</string>
     <string name="search_in_placeholder">Otsi siit: %s</string>
     <string name="type_2_characters">Otsingu alustamiseks kirjuta vähemalt 2 tähemärki.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Näita otsinguriba</string>
     <string name="search_contacts">Otsi kontaktide hulgast</string>
     <string name="search_favorites">Otsi lemmikute hulgast</string>
     <string name="search_apps">Otsi rakendusi</string>
@@ -175,7 +175,7 @@
     <string name="allow_notifications_voice_recorder">Selleks et rakendus saaks salvestada heli, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_incoming_calls">Selleks et rakendus saaks näidata kõnesid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Selleks et rakendus saaks plaanitud ajal sõnumeid saata, pead lubama tal kasutada süsteemseid äratusi.</string>
     <string name="grant_permission">Anna vastavad õigused</string>
     <string name="permission_required">Luba on nõutav</string>
     <!-- Renaming -->
@@ -197,7 +197,7 @@
     <string name="append_filenames">Lisa faili nimele suffiks</string>
     <string name="simple_renaming">Lihtne ümbernimetamine</string>
     <string name="pattern_renaming">Muster</string>
-    <string name="string_to_add">String lisada</string>
+    <string name="string_to_add">Lisa sõne</string>
     <string name="rename_date_time_pattern">%Y - aasta
 \n%M - kuu
 \n%D - päev
@@ -242,7 +242,7 @@
     <!-- Create new -->
     <string name="create_new">Loo uus</string>
     <string name="folder">Kaust</string>
-    <string name="file">Faili</string>
+    <string name="file">Fail</string>
     <string name="create_new_folder">Loo uus kaust</string>
     <string name="name_taken">Selle nimega fail või kaust on juba olemas</string>
     <string name="invalid_name">Nimes leidub valesid tähemärke</string>
@@ -252,7 +252,7 @@
     <string name="file_already_exists">„%s“ fail on juba olemas</string>
     <string name="file_already_exists_overwrite">„%s“ fail on juba olemas, kas kirjutame üle\?</string>
     <string name="folder_already_exists">„%s“ kaust on juba olemas</string>
-    <string name="merge">Ühinemine</string>
+    <string name="merge">Liida</string>
     <string name="keep_both">Jäta mõlemad alles</string>
     <string name="overwrite">Kirjuta üle</string>
     <string name="skip">Jäta vahele</string>
@@ -277,13 +277,13 @@
     <string name="loading">Laadin…</string>
     <string name="access_storage_prompt">Palun anna rakendusele õigused lugeda kõiki sinu faile, vastasel juhul ta ei toimi eriti hästi.</string>
     <plurals name="items">
-        <item quantity="one">%d Üksuse</item>
-        <item quantity="other">%d esemed</item>
+        <item quantity="one">%d kirje</item>
+        <item quantity="other">%d kirjet</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d Üksuse</item>
-        <item quantity="other">%d esemed</item>
+        <item quantity="one">%d kirje</item>
+        <item quantity="other">%d kirjet</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Kustutame %d kirje</item>
@@ -292,14 +292,14 @@
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
-        <item quantity="other">%d kontaktid</item>
+        <item quantity="other">%d kontakti</item>
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Vali salvestusruum</string>
     <string name="storage">Andmehoidla</string>
     <string name="internal">Sisemine</string>
     <string name="sd_card">SD-kaart</string>
-    <string name="root">Juur</string>
+    <string name="root">Juurkaust</string>
     <string name="wrong_root_selected">Valisid vale kausta, palun vali SD-kaardi juurkaust, mis on kõige esimene kaust</string>
     <string name="sd_card_usb_same">SD-kaardi ja USB-seadme asukohad ei saa olla samad</string>
     <string name="app_on_sd_card">Tundub, et oled rakenduse paigaldanud SD-kaardile, mis muudab rakenduse vidinad mittekasutatavateks. Sa isegi ei näe neid olemasolevate vidinate nimekirjas. Tegemist on süsteemipiiranguga, seega kui soovid vidinaid kasutada, pead rakenduse tagasi sisemällu tõstma.</string>
@@ -312,13 +312,13 @@
     <string name="files_count">Faile kokku</string>
     <string name="resolution">Resolutsioon</string>
     <string name="duration">Kestus</string>
-    <string name="artist">Kunstnik</string>
+    <string name="artist">Esitaja</string>
     <string name="album">Album</string>
     <string name="genre">Genre</string>
     <string name="focal_length">Fookuskaugus</string>
     <string name="exposure_time">Säriaeg</string>
     <string name="iso_speed">ISO kiirus</string>
-    <string name="f_number">F-arv</string>
+    <string name="f_number">F-number</string>
     <string name="camera">Kaamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Pala pealkiri</string>
@@ -329,7 +329,7 @@
     <string name="exif_removed">EXIF-väljade kustutamine õnnestus</string>
     <!-- Color customization -->
     <string name="background_color">Taustavärv</string>
-    <string name="text_color">Teksti värvus</string>
+    <string name="text_color">Teksti värv</string>
     <string name="primary_color">Põhivärv</string>
     <string name="accent_color_white">Valge teema aktsentvärv</string>
     <string name="accent_color_black_and_white">Mustvalge teema aktsentvärv</string>
@@ -349,14 +349,14 @@
     <string name="cannot_be_undone">Seda tegevust ei saa tagasi pöörata.</string>
     <string name="save_before_closing">Sul on salvestamata muudatusi. Kas salvestame enne väljumist\?</string>
     <string name="apply_to_all_apps">Kasuta samu värvi kõikides Lihtsate tarvikute rakendsustes</string>
-    <string name="app_icon_color_warning">HOIATUS: Mõned käivitajad ei käsitse rakenduste ikoonide kohandamist korralikult. Kui ikoon kaob, proovige käivitada rakendus Google Play või mõne vidina kaudu, kui see on saadaval. Kui olete käivitanud rakenduse, seadistage lihtsalt vaikimisi oranž ikoon #F57C00 tagasi. Halvemal juhul peate rakenduse võib-olla uuesti installima.</string>
+    <string name="app_icon_color_warning">HOIATUS: Mõned käivitajad ei käsitse rakenduste ikoonide kohandamist korralikult. Kui ikoon kaob, proovi käivitada rakendus Google Play\'st või mõne muu olemasoleva vidina abil. Kui oled käivitanud rakenduse, seadista lihtsalt ikooni vaikimisi oranž toon #F57C00 tagasi. Halvemal juhul pead rakenduse võib-olla uuesti paigaldama.</string>
     <string name="share_colors_success">Värvide uuendamine õnnestus. Lisasime uue „Jagatud“ teema - edaspidisel värvide muutmisel palun kasuta seda.</string>
     <string name="shared_theme_note">Kuigi sa kasutad rakenduse Pro-versiooni, palun siiski tehnilistel põhjustel paigalda rakendus „Lihtne tänuavaldus“. Muu hulgas tema haldab värvide sünkroniseerimist kõikide meie rakenduste vahel.</string>
     <string name="purchase_thank_you">Selle funktsionaalsuse kasutamiseks ja meie toetamiseks palun osta &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Tänud juba ette!</string>
     <!-- Themes -->
     <string name="light_theme">Hele</string>
     <string name="dark_theme">Tume</string>
-    <string name="auto_theme">Automaatne</string>
+    <string name="auto_theme">Automaatne teema</string>
     <string name="auto_light_dark_theme">Määra hele või tume teema automaatselt</string>
     <string name="solarized">Päikese käes</string>
     <string name="dark_red">Tumepunane</string>
@@ -364,7 +364,7 @@
     <string name="black_white">Must-valge</string>
     <string name="custom">Kohandatud</string>
     <string name="shared">Jagatud</string>
-    <string name="system_default">Süsteemi vaikimisi</string>
+    <string name="system_default">Süsteemi vaikimisi teema</string>
     <!-- What's new -->
     <string name="whats_new">Mida on meil uut</string>
     <string name="whats_new_disclaimer">* siin on kirjas vaid suuremad muudatused, kuid alati oleme teinud ka pisikohendusi</string>
@@ -392,14 +392,14 @@
     <string name="shortcut">Otsetee</string>
     <string name="create_shortcut">Loo otsetee</string>
     <string name="create_shortcut_pro">Loo otsetee (Pro)</string>
-    <string name="add_number_to_contact">Lisa kontaktnumber</string>
+    <string name="add_number_to_contact">Lisa kontaktile telefoninumber</string>
     <string name="view_contact_details">Vaata kontaktandmeid</string>
     <string name="call_from_sim_1">Kõne SIM-kaardilt 1</string>
     <string name="call_from_sim_2">Kõne SIM-kaardilt 2</string>
     <string name="toggle_filename">Muuda failinime nähtavust</string>
     <string name="move_to_top">Tõsta kõige ülemiseks</string>
     <string name="move_to_bottom">Tõsta kõige alumiseks</string>
-    <string name="pin_item">Pin üksus</string>
+    <string name="pin_item">Klammerda kirje</string>
     <string name="unpin_item">Eemalda klammerdus</string>
     <string name="send_sms">Saada SMS sõnum</string>
     <string name="send_email">Saada e-kiri</string>
@@ -417,7 +417,7 @@
     <string name="date_added">Lisamise kuupäev</string>
     <string name="title">Pealkiri</string>
     <string name="filename">Faili nimi</string>
-    <string name="extension">Faili laiend</string>
+    <string name="extension">Faililaiend</string>
     <string name="random">Juhuslik</string>
     <string name="sort_randomly">Sorteeri juhuslikult</string>
     <string name="ascending">Kasvavalt</string>
@@ -427,7 +427,7 @@
     <string name="first_name">Eesnimi</string>
     <string name="middle_name">Keskmine nimi</string>
     <string name="surname">Perenimi</string>
-    <string name="full_name">Täielik nimi</string>
+    <string name="full_name">Täisnimi</string>
     <string name="use_custom_sorting">Kasuta kohandatud sortimist</string>
     <string name="change_order">Muuda järjekorda</string>
     <!-- Confirmation dialog -->
@@ -446,7 +446,7 @@
     <string name="maybe">Võib-olla</string>
     <plurals name="delete_warning">
         <item quantity="one">Hoiatus: Oled kustutamas %d kausta</item>
-        <item quantity="other">Hoiatus: Oled kustutamas %d kaustad</item>
+        <item quantity="other">Hoiatus: Oled kustutamas %d kausta</item>
     </plurals>
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -477,7 +477,7 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password_new">Palun sisesta salasõna</string>
     <string name="empty_password">Palun sisesta salasõna</string>
     <string name="invalid_password">Vigane salasõna</string>
     <!-- Times -->
@@ -487,7 +487,7 @@
     <string name="every_day">Iga päev</string>
     <string name="hide_year">Peida aasta</string>
     <string name="seconds_raw">sekundit</string>
-    <string name="minutes_raw">Minutit</string>
+    <string name="minutes_raw">minutit</string>
     <string name="hours_raw">tundi</string>
     <string name="days_raw">päevad</string>
     <string name="seconds_letter">s</string>
@@ -525,31 +525,31 @@
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundi pärast</item>
-        <item quantity="other">%d sekundit pärast</item>
+        <item quantity="other">%d sekundi pärast</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minut</item>
         <item quantity="other">%d minutit</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d tund pärast</item>
-        <item quantity="other">%d tundi pärast</item>
+        <item quantity="one">%d tunni pärast</item>
+        <item quantity="other">%d tunni pärast</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d päev pärast</item>
+        <item quantity="one">%d päeva pärast</item>
         <item quantity="other">%d päeva pärast</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d nädal pärast</item>
-        <item quantity="other">%d nädalat pärast</item>
+        <item quantity="one">%d nädala pärast</item>
+        <item quantity="other">%d nädala pärast</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d kuu pärast</item>
-        <item quantity="other">%d kuud pärast</item>
+        <item quantity="other">%d kuu pärast</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d aasta pärast</item>
-        <item quantity="other">%d aastat pärast</item>
+        <item quantity="other">%d aasta pärast</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -582,32 +582,32 @@
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d sekund võrra</item>
-        <item quantity="other">%d sekundit võrra</item>
+        <item quantity="one">%d sekundi võrra</item>
+        <item quantity="other">%d sekundi võrra</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minut</item>
-        <item quantity="other">%d minutit</item>
+        <item quantity="one">%d minuti võrra</item>
+        <item quantity="other">%d minuti võrra</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d tund võrra</item>
-        <item quantity="other">%d tundi võrra</item>
+        <item quantity="one">%d tunni võrra</item>
+        <item quantity="other">%d tunni võrra</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d päev võrra</item>
+        <item quantity="one">%d päeva võrra</item>
         <item quantity="other">%d päeva võrra</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d nädal võrra</item>
-        <item quantity="other">%d nädalat võrra</item>
+        <item quantity="one">%d nädala võrra</item>
+        <item quantity="other">%d nädala võrra</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d kuu võrra</item>
-        <item quantity="other">%d kuud võrra</item>
+        <item quantity="other">%d kuu võrra</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d aasta võrra</item>
-        <item quantity="other">%d aastat võrra</item>
+        <item quantity="other">%d aasta võrra</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Äratuseni jäänud aeg:\n%s</string>
@@ -618,7 +618,7 @@
     <string name="reminder_warning">Palun veendu, et meeldetuletused töötavad korralikult, enne kui sa sellega arvestad. Kontrolli oma nutiseadme aku ja teavituse seadistusi, kas midagi ei blokeeri meeldetuletusi ega sulge taustal töötavat rakendust.</string>
     <string name="notifications_disabled">Selle rakenduse teavitused on välja lülitatud. Nende lubamiseks ava oma nutiseadme seadistused.</string>
     <!-- Alarms -->
-    <string name="alarm">Häire</string>
+    <string name="alarm">Äratus</string>
     <string name="snooze">Tukasta</string>
     <string name="dismiss">Jäta vahele</string>
     <string name="no_reminder">Meeldetuletus puudub</string>
@@ -685,11 +685,11 @@
     <string name="saving_label">Salvestame</string>
     <string name="startup">Käivitamine</string>
     <string name="text">Tekst</string>
-    <string name="migrating">Migreerimine</string>
+    <string name="migrating">Andmete ümbertõstmine</string>
     <string name="quality">Kvaliteet</string>
     <string name="main_screen">Põhivaade</string>
     <string name="thumbnails">Pisipildid</string>
-    <string name="list_view">Nimekirja vaade</string>
+    <string name="list_view">Loendivaade</string>
     <!-- Excluding -->
     <string name="exclude">Välista</string>
     <string name="exclude_folder">Välista kaust</string>
@@ -709,7 +709,7 @@
     <string name="groups_tab">Rühmad</string>
     <string name="last_used_tab">Viimatikasutatu</string>
     <string name="files_tab">Failid</string>
-    <string name="recent_files_tab">Hiljutine failid</string>
+    <string name="recent_files_tab">Hiljutised failid</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Taasta see fail</string>
     <string name="restore_selected_files">Taasta valitud failid</string>
@@ -753,7 +753,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Tundub, et sinu nutiseadme küljes on USB-seade. Selleks, et seal asuvad failid oleks korrektselt loetavad, pead lubama täiendavad õigusi.</string>
-    <string name="confirm_usb_storage_access_text">Palun valige järgmisel ekraanil USB-seadme ülemine kaust, et anda juurdepääs</string>
+    <string name="confirm_usb_storage_access_text">Ligipääsu andmiseks palun vali järgmises vaates USB-seadme juurkaust (ülemine kaust)</string>
     <string name="wrong_root_selected_usb">Valisid vale kausta, palun vali USB-seadme juurkaust</string>
     <!-- Dates -->
     <string name="january">Jaanuar</string>
@@ -785,15 +785,15 @@
     <string name="in_january">jaanuaris</string>
     <string name="in_february">veebruaris</string>
     <string name="in_march">märtsis</string>
-    <string name="in_april">Aprillis</string>
-    <string name="in_may">Maikuus</string>
-    <string name="in_june">Juunis</string>
-    <string name="in_july">Juulis</string>
-    <string name="in_august">Augustis</string>
-    <string name="in_september">Septembris</string>
-    <string name="in_october">Oktoobris</string>
-    <string name="in_november">Novembris</string>
-    <string name="in_december">Detsembris</string>
+    <string name="in_april">aprillis</string>
+    <string name="in_may">mais</string>
+    <string name="in_june">juunis</string>
+    <string name="in_july">juulis</string>
+    <string name="in_august">augustis</string>
+    <string name="in_september">septembris</string>
+    <string name="in_october">oktoobris</string>
+    <string name="in_november">novembris</string>
+    <string name="in_december">detsembris</string>
     <string name="monday">Esmaspäev</string>
     <string name="tuesday">Teisipäev</string>
     <string name="wednesday">Kolmapäev</string>
@@ -879,7 +879,7 @@
     <string name="donate">Toeta meid</string>
     <string name="follow_us">Jälgi meid</string>
     <string name="copyright">v %1$s
-\nAutoriõigus © Lihtsad mobiilsed tööriistad %2$d</string>
+\nAutoriõigused © Simple Mobile Tools (Lihtsad mobiiitarvikud) %2$d</string>
     <string name="support">Kasutajatugi</string>
     <string name="help_us">Osale arenduses</string>
     <string name="social">Sotsiaalmeedia</string>
@@ -891,32 +891,32 @@
     <string name="additional_info">Lisateave</string>
     <string name="app_version">Rakenduse versioon: %s</string>
     <string name="device_os">Seadme operatsioonisüsteem: %s</string>
-    <string name="donate_please">Tere,&lt;br&gt;&lt;br&gt; loodan, et naudite rakendust. See ei sisalda reklaame, palun toetage selle arendamist, ostes &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Limple Aitäh&lt;/a&gt; rakendus, see takistab ka selle dialoogi uuesti ilmumist. &lt;br&gt;&lt;br&gt; Täname!</string>
-    <string name="donate_new">Tere!&lt;br&gt;&lt;br&gt;Loodan, et teile meeldib see rakendus. Ta ei sisalda reklaame ja me ei kogu ka sinu andmeid. Palun toeta meie arendustegevust, ostes rakenduse &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Seejärel muutuvad kasutatavaks ka rakenduse lisafunktsionaalsused ja värvide kohandamine.&lt;br&gt;&lt;br&gt;Täname!</string>
+    <string name="donate_please">Tere,&lt;br&gt;&lt;br&gt; loodan, et sulle meie rakendus meeldib. See ei sisalda reklaame, palun toeta selle arendamist, ostes rakenduse &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt; ja samaga väldid selle vaate uuesti kuvamist.&lt;br&gt;&lt;br&gt; Täname!</string>
+    <string name="donate_new">Tere,&lt;br&gt;&lt;br&gt; loodan, et sulle meie rakendus meeldib. See ei sisalda reklaame, palun toeta selle arendamist, ostes rakenduse &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Seejärel muutuvad kasutatavaks ka rakenduse lisafunktsionaalsused ja värvide kohandamine.&lt;br&gt;&lt;br&gt;Täname!</string>
     <string name="donate_short">Palun toeta meid ostes rakenduse &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Muu hulgas avab see antud rakenduse kõik funktsionaalsused ja sealhulgas võimaldab kohandada liidese värve.</string>
     <string name="purchase">Osta</string>
     <string name="get_simple_phone">Telli rakendus Lihtne telefon</string>
     <string name="update_thank_you">Palun uuenda raklendus Lihtne tänuavaldus viimase versioonini</string>
-    <string name="before_asking_question_read_faq">Enne küsimuse esitamist kontrollige rakenduse seadeid ja lugege esmalt Korduma kippuvad küsimused. Võib-olla on lahendus seal olemas.</string>
-    <string name="before_rate_read_faq">Enne kui hindate meid, kontrollige palun rakenduse seadeid ja lugege esmalt Korduma kippuvad küsimused. Kui teil on mingeid probleeme, võib-olla on lahendus seal.</string>
+    <string name="before_asking_question_read_faq">Enne küsimuse esitamist palun kontrolli rakenduse seadeid ja loe esmalt lehte „Korduma kippuvad küsimused„“. Võib-olla on lahendus seal olemas.</string>
+    <string name="before_rate_read_faq">Enne kui hindad meid, palun kontrolli rakenduse seadeid ja loe esmalt lehte „Korduma kippuvad küsimused“. Kui sul on rakenduse kasutamisel mingeid probleeme, võib-olla on lahendus seal kirjas.</string>
     <string name="make_sure_latest">Lisaks palun kontrolli, et kasutad rakenduse viimast versiooni.</string>
-    <string name="make_sure_upgrade">Pange ka tähele, et seda rakenduse versiooni enam ei arendata, hankige Pro versioon, mis sisaldab palju täiustusi.</string>
+    <string name="make_sure_upgrade">Palun arvesta, et seda rakenduse versiooni enam ei arendata, laadi alla Pro versioon, mis sisaldab palju täiustusi.</string>
     <string name="read_it">Loe järgnevat</string>
     <string name="read_faq">Loe korduma kippuvaid küsimusi</string>
     <string name="rate_us_prompt">Tere,
 \n
-\ntundub, et kasutate seda rakendust juba mõnda aega ja me hindame seda väga kõrgelt.
+\ntundub, et kasutad seda rakendust juba mõnda aega ja me hindame seda väga kõrgelt.
 \n
-\nKui me võime paluda teilt teeneid, siis palun hinnake meid Google Play\'s. See aitaks meid tõesti palju.
+\nKui me võime seda paluda, siis palun hinda meid Google Play\'s. See aitaks meid tõesti palju.
 \n
-\nÜkskõik, kuidas te otsustate, te ei näe seda sõnumit enam.
+\nÜkskõik, kuidas sa otsustad toimida, siis seda sõnumit rohkem ei kuvata.
 \n
 \nAitäh!</string>
     <string name="rate_our_app">Palun hinda meie rakendust :)</string>
     <string name="thank_you">Suur tänu</string>
     <string name="widget_locked_pro">Rakendus on lukustatud.
 \nLukustuse eemaldamiseks palun uuenda ta Pro-versioonini.</string>
-    <string name="features_locked">See funktsioon on lukus, palun ostke &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Limple Aitäh&lt;/a&gt; kogu rakenduse avamise &lt;br&gt;&lt;br&gt;eest.See on ainult ühekordne makse ja kui te ei jää rahule, saame teile raha tagasi maksta.</string>
+    <string name="features_locked">See funktsionaalsus on lukus, palun osta rakendus &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt; ning kogu rakendus on siis kasutatav.See on ainult ühekordne makse ja kui sa ei jää rahule, saame raha tagasi maksta.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hei,&lt;br&gt;&lt;br&gt; tahtsime lihtsalt teada anda, et oleme teinud mõned uued rakendused :&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Klõpsides ikooni või nimel saad sa neid alla laadida.&lt;br&gt;&lt;br&gt; Tänud</string>
     <string name="simple_app_launcher">Lihtne rakenduste käivitaja</string>
@@ -933,7 +933,7 @@
     <string name="simple_keyboard">Lihtne klahvistik</string>
     <string name="simple_launcher">Lihtne käivitaja</string>
     <string name="simple_music_player">Lihtne muusikamängija</string>
-    <string name="simple_notes">Lihtsad märkused</string>
+    <string name="simple_notes">Lihtne märkmik</string>
     <string name="simple_sms_messenger">Lihtne SMS sõnumiklient</string>
     <string name="simple_thank_you">Lihtne tänuavaldus</string>
     <string name="simple_voice_recorder">Lihtne helisalvestaja</string>
@@ -951,7 +951,7 @@
     <string name="keyboard_short">Klahvistik</string>
     <string name="launcher_short">Rakenduste käivitaja</string>
     <string name="music_player_short">Muusikamängija</string>
-    <string name="notes_short">Märkused</string>
+    <string name="notes_short">Märkmik</string>
     <string name="sms_messenger_short">SMS sõnumid</string>
     <string name="thank_you_short">Suur tänu</string>
     <string name="voice_recorder_short">Helisalvestaja</string>
@@ -970,75 +970,75 @@
     <string name="faq_5_title_commons">Kas ma mingil viisil saan kustutatud faile taastada\?</string>
     <string name="faq_5_text_commons">Kui need on tõesti kustutatud, ei saa sa seda teha. Siiski on vaikimisi kasutusel prügikast ning kustutatud failid esialgu teisaldatakse sinna.</string>
     <string name="faq_6_title_commons">Rakenduse käivitaja ikoon kadus. Mida ma saan teha\?</string>
-    <string name="faq_6_text_commons">Selle põhjuseks on see, et teie käivitaja ei toeta ikoonide kohandamist korralikult. Proovige käivitada rakendus Google Play või mõne vidina kaudu, kui see on saadaval. Kui olete käivitanud, seadistage lihtsalt tagasi vaikimisi oranž ikoon #F57C00. Halvemal juhul peate rakenduse võib-olla uuesti installima.</string>
+    <string name="faq_6_text_commons">Selle põhjuseks on asjaolu, et see käivitaja ei toeta ikoonide kohandamist korralikult. Proovi käivitada rakendus Google Play või mõne sarnase saadaoleva vidina abil. Peale käivitamist, seadista lihtsalt tagasi ikooni vaikimisi oranž toon #F57C00. Halvemal juhul pead rakenduse võib-olla uuesti paigaldama.</string>
     <string name="faq_7_title_commons">Raha on minu pangakontolt maha kantud, kuid ma ei saa rakendust alla laadida. Mida ma saan teha\?</string>
-    <string name="faq_7_text_commons">Makseid teostab täielikult Google, nende süsteemis esineb aeg-ajalt tõrkeid. Lihtsalt tühjendage oma Google Play rakenduse vahemälu ja taaskäivitage seade, seejärel proovige uuesti alla laadida.</string>
-    <string name="faq_8_title_commons">Miks peaksin uuendama Pro-versiooni\?</string>
-    <string name="faq_8_text_commons">Kuna teie rakenduse versiooni enam ei uuendata, siis ei parandata kunagi teie poolt avastatud vigu. Samuti ei lisata uusi funktsioone. Pro-versiooni saate osta Google Play\'st väikese summa eest. See on ühekordne makse, mis tähendab, et kui olete selle ostnud, ei pea te enam kunagi maksma. Isegi mitte pärast uue seadme soetamist. Kui Pro-versioon ei meeldi teile, saate selle mõne tunni jooksul lihtsalt eemaldada ja saate automaatselt oma raha tagasi. Kui soovite tagasimakseid igal ajal hiljem, võtke meiega ühendust aadressil hello@simplemobiletools.com ja te saate selle.</string>
+    <string name="faq_7_text_commons">Makseid teostab täielikult Google, nende süsteemis esineb aeg-ajalt tõrkeid. Lihtsalt tühjenda oma Google Play rakenduse vahemälu ja taaskäivita seade, seejärel proovi rakendust uuesti alla laadida.</string>
+    <string name="faq_8_title_commons">Miks peaksin kasutusele võtma Pro-versiooni\?</string>
+    <string name="faq_8_text_commons">Kuna seda rakenduse versiooni enam ei uuendata, siis ei parandata kunagi sinu ja teiste kasutajate poolt avastatud vigu. Samuti ei lisata uusi funktsioone. Pro-versiooni saad osta Google Play\'st väikese summa eest. See on ühekordne makse, mis tähendab, et kui oled selle ostnud, ei pea sa selle rakenduse eest enam kunagi maksma. Isegi mitte pärast uue seadme soetamist. Kui Pro-versioon ei meeldi sulle, saad selle mõne tunni pärast lihtsalt eemaldada ja saad automaatselt oma raha tagasi. Kui soovid tagasimakset mingil ajal hiljem, võta meiega ühendust aadressil hello@simplemobiletools.com ja me korraldame makse vastavat sinu soovidele.</string>
     <string name="faq_9_title_commons">Kuidas ma saan valida mitu objekti korraga\?</string>
-    <string name="faq_9_text_commons">Selleks on mitu võimalust. Esimene neist on valikurežiimi käivitamine, vajutades pikalt ühe objektile ja seejärel teiste valimiseks lühikese klõpsuga. Teine viis on sarnane arvutite elementide valimisega hiirega, lihtsalt käivitage valikurežiim, vajutades pikalt ühele elemendile, seejärel lohistage sõrmega üle teiste elementide valimiseks. Kolmas viis mitme elemendi valimiseks on ühe elemendi pikalt vajutamine, seejärel teise elemendi pikalt vajutamine ja kõik vahepealsed elemendid valitakse. Kui soovite valida kõik elemendid, vajutage lihtsalt pikalt ühe elemendi peale, seejärel klõpsake vasakus ülanurgas asuval valitud elemendi loenduril. See valib või tühistab kõigi valikute valiku.</string>
+    <string name="faq_9_text_commons">Selleks on mitu võimalust. Esimene neist on valikurežiimi käivitamine, vajutades pikalt ühe objektile ja seejärel teiste valimine lühikese vajutusega. Teine viis on sarnane arvutites kasutatavale sisu valimisele hiirega, lihtsalt alusta valimist vajutades pikalt ühele kirjel, seejärel lohista teiste kirjete valimiseks sõrmega üle nende. Kolmas viis mitme kirje valimiseks on ühe kirje pikalt vajutamine, seejärel teise kirje pikalt vajutamine ja kõik vahepealsed kirjed saavad ka valituks. Kui soovid valida kõik kirjed, vajuta pikalt ühte kirjet, seejärel klõpsa vasakus ülanurgas asuval valitud kirjete loenduril. See valib või tühistab kõikide kirjete valiku.</string>
     <string name="faq_10_title_commons">Ma olen rakenduse ostnud, kuid ma ei saa seda teise seadmesse alla laadida.</string>
-    <string name="faq_10_text_commons">Proovige tühjendada Google Play rakenduse vahemälu ja taaskäivitada seade. See on mingi Google Play tõrge, mis ei ole tegelikult seotud rakenduse endaga.</string>
+    <string name="faq_10_text_commons">Proovi tühjendada Google Play rakenduse vahemälu ja taaskäivita nutiseade. See on ilmselt mingi Google Play tõrge, mis ei ole tegelikult seotud rakenduse endaga.</string>
     <!-- Contributors -->
     <string name="contributors">Kaasautorid</string>
     <string name="translation">Tõlked</string>
     <string name="development">Arendus</string>
     <string name="other_help">Muu abi</string>
-    <string name="contributors_label">See loendis on kõik, kes aitasid märgatavalt arendada või tõlkida mis tahes rakendust komplektis „Lihtsad nutitarvikud“. Tõlkimisega tegelevad vabatahtlikud, anna meile teada, kui soovid ka osaleda. Tõlkimise juhend asub &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;meie Github\'i lehel&lt;/a&gt; või kui sul on küsimusi, siis võta meiega ühendust aadressil &lt;href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Aitäh kõigile panustajatele ja teistele toetajatele!</string>
-    <string name="translation_arabic">Araabia</string>
-    <string name="translation_azerbaijani">Aserbaidžaan</string>
+    <string name="contributors_label">Selles loendis on kõik, kes aitasid märgatavalt arendada või tõlkida mis tahes rakendust komplektis „Lihtsad nutitarvikud“. Tõlkimisega tegelevad vabatahtlikud, anna meile teada, kui soovid ka osaleda. Tõlkimise juhend asub &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;meie Github\'i lehel&lt;/a&gt; või kui sul on küsimusi, siis võta meiega ühendust aadressil &lt;href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Aitäh kõigile panustajatele ja teistele toetajatele!</string>
+    <string name="translation_arabic">araabia keel</string>
+    <string name="translation_azerbaijani">aserbaidžaani keel</string>
     <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Bretooni</string>
-    <string name="translation_bulgarian">Bulgaaria</string>
-    <string name="translation_catalan">Katalaani</string>
-    <string name="translation_czech">Tšehhi</string>
-    <string name="translation_welsh">Walesi</string>
-    <string name="translation_danish">Taani</string>
+    <string name="translation_breton">bretooni keel</string>
+    <string name="translation_bulgarian">bulgaaria keel</string>
+    <string name="translation_catalan">katalaani keel</string>
+    <string name="translation_czech">tšehhi keel</string>
+    <string name="translation_welsh">kõmri keel</string>
+    <string name="translation_danish">taani keel</string>
     <string name="translation_english">English</string>
-    <string name="translation_german">Saksa</string>
-    <string name="translation_greek">Kreeka</string>
-    <string name="translation_spanish">Hispaania</string>
-    <string name="translation_basque">Baski</string>
-    <string name="translation_persian">Pärsia</string>
-    <string name="translation_finnish">Soome</string>
-    <string name="translation_french">Prantsuse</string>
-    <string name="translation_galician">Galicia</string>
+    <string name="translation_german">saksa keel</string>
+    <string name="translation_greek">kreeka keel</string>
+    <string name="translation_spanish">hispaania keel</string>
+    <string name="translation_basque">baski keel</string>
+    <string name="translation_persian">pärsia keel</string>
+    <string name="translation_finnish">soome keel</string>
+    <string name="translation_french">prantsuse keel</string>
+    <string name="translation_galician">galeegi keel</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Horvaatia</string>
-    <string name="translation_hungarian">Ungari</string>
-    <string name="translation_indonesian">Indoneesia</string>
-    <string name="translation_italian">Itaalia</string>
-    <string name="translation_hebrew">Heebrea</string>
-    <string name="translation_japanese">Jaapani</string>
-    <string name="translation_korean">Korea</string>
-    <string name="translation_lithuanian">Leedu</string>
+    <string name="translation_croatian">horvaadi keel</string>
+    <string name="translation_hungarian">ungari keel</string>
+    <string name="translation_indonesian">indoneesia keel</string>
+    <string name="translation_italian">itaalia keel</string>
+    <string name="translation_hebrew">heebrea keel</string>
+    <string name="translation_japanese">jaapani keel</string>
+    <string name="translation_korean">korea keel</string>
+    <string name="translation_lithuanian">leedu keel</string>
     <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norra</string>
-    <string name="translation_dutch">Hollandi</string>
-    <string name="translation_polish">Poola</string>
-    <string name="translation_portuguese">Portugali</string>
-    <string name="translation_romanian">Rumeenia</string>
-    <string name="translation_russian">Vene</string>
-    <string name="translation_slovak">Slovakkia</string>
-    <string name="translation_slovenian">Sloveenia</string>
+    <string name="translation_norwegian">norra keel</string>
+    <string name="translation_dutch">hollandi keel</string>
+    <string name="translation_polish">poola keel</string>
+    <string name="translation_portuguese">portugali keel</string>
+    <string name="translation_romanian">rumeenia keel</string>
+    <string name="translation_russian">vene keel</string>
+    <string name="translation_slovak">slovaki keel</string>
+    <string name="translation_slovenian">sloveeni keel</string>
     <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Rootsi</string>
+    <string name="translation_swedish">rootsi keel</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Türgi</string>
-    <string name="translation_ukrainian">Ukraina</string>
-    <string name="translation_vietnamese">Vietnami</string>
-    <string name="translation_chinese_hk">Hiina (Hongkong)</string>
-    <string name="translation_chinese_cn">Hiina keel (lihtsustatud)</string>
-    <string name="translation_chinese_tw">Hiina (traditsiooniline)</string>
+    <string name="translation_turkish">türgi keel</string>
+    <string name="translation_ukrainian">ukraina keel</string>
+    <string name="translation_vietnamese">vietnami keel</string>
+    <string name="translation_chinese_hk">hiina keel (Hongkong)</string>
+    <string name="translation_chinese_cn">hiina keel (lihtsustatud)</string>
+    <string name="translation_chinese_tw">hiina keel (traditsiooniline)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Osta Pro-versioon nüüd!</string>
-    <string name="why_upgrade_basic_version">Põhiline</string>
+    <string name="why_upgrade_basic_version">Tavaversioon</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Ei mingeid reklaame</string>
-    <string name="why_upgrade_no_internet_access">Interneti-ühendus puudub</string>
+    <string name="why_upgrade_no_internet_access">Ei kasutata võrguteenuseid</string>
     <string name="why_upgrade_footer">100% raha tagasi garantii</string>
     <string name="why_upgrade_footer_one_time_payment">Ühekordne makse</string>
-    <string name="why_upgrade_improved_design">Parem disain</string>
+    <string name="why_upgrade_improved_design">Parem kujundus</string>
     <string name="why_upgrade_many_other_improvements">Palju täiendavaid parandusi</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Täiustatud fototöötlusprogramm</string>
@@ -1067,7 +1067,7 @@
     <string name="why_upgrade_date_and_time_format">Kuupäeva ja kellaaja vormingu kohandamine</string>
     <string name="why_upgrade_shortcuts">Lingid avavaates</string>
     <string name="why_upgrade_file_compression">Faili pakkimise tugi</string>
-    <string name="why_upgrade_recents_tab">Värskete failide vahekaart</string>
+    <string name="why_upgrade_recents_tab">Hiljutiste failide vahekaart</string>
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Taustavärvi kohandamine</string>
     <string name="why_upgrade_file_importing">Failide impordi tugi</string>

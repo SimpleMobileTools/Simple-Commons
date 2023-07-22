@@ -77,7 +77,7 @@
     <string name="phone_storage">Память устройства</string>
     <string name="phone_storage_hidden">Память устройства (не видна другим приложениям)</string>
     <string name="audio">Аудио</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Сканирование…</string>
     <!-- Events -->
     <string name="birthday">День рождения</string>
     <string name="anniversary">Годовщина</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Добавить колонку</string>
     <string name="reduce_column_count">Убрать колонку</string>
     <string name="column_count">Количество колонок</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Количество строк</string>
     <string name="portrait_column_count">Количество колонок в портретной ориентации</string>
     <string name="landscape_column_count">Количество колонок в альбомной ориентации</string>
     <string name="change_cover_image">Изменить обложку</string>
@@ -112,8 +112,10 @@
         <item quantity="other">%d колонок</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d строка</item>
+        <item quantity="few">%d строки</item>
+        <item quantity="many">%d строк</item>
+        <item quantity="other">%d строк</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -486,8 +488,8 @@
     <string name="lock_folder_notice">Данная защита работает только в этом приложении, она не должна заменять собой реальное общесистемное шифрование.</string>
     <string name="enter_password">Введите пароль</string>
     <string name="password">Пароль</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="add_password">Добавить пароль</string>
+    <string name="empty_password_new">Введите пароль</string>
     <string name="empty_password">Пожалуйста, введите пароль</string>
     <string name="invalid_password">Неправильный пароль</string>
     <!-- Times -->
