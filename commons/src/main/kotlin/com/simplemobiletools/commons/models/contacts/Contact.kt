@@ -7,7 +7,10 @@ import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.PhoneNumber
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Contact(
     var id: Int,
     var prefix: String= "",
@@ -25,6 +28,7 @@ data class Contact(
     var starred: Int = 0,
     var contactId: Int,
     var thumbnailUri: String= "",
+    @Contextual
     var photo: Bitmap? = null,
     var notes: String= "",
     var groups: ArrayList<Group> = arrayListOf(),

@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 import com.simplemobiletools.commons.helpers.FIRST_GROUP_ID
 import java.io.Serializable
 
+@kotlinx.serialization.Serializable
 @Entity(tableName = "groups", indices = [(Index(value = ["id"], unique = true))])
 data class Group(
     @PrimaryKey(autoGenerate = true) var id: Long?,

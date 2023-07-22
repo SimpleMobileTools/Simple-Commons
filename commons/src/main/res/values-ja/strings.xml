@@ -77,6 +77,7 @@
     <string name="phone_storage">内部ストレージ</string>
     <string name="phone_storage_hidden">内部ストレージ (他のアプリからは表示されません)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">誕生日</string>
     <string name="anniversary">記念日</string>
@@ -99,12 +100,17 @@
     <string name="increase_column_count">列数を増やす</string>
     <string name="reduce_column_count">列数を減らす</string>
     <string name="column_count">列数</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">縦向きの列数</string>
     <string name="landscape_column_count">横向きの列数</string>
     <string name="change_cover_image">カバー画像を変更</string>
     <string name="select_photo">写真を選択</string>
     <plurals name="column_counts">
         <item quantity="other">%d 列</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
@@ -464,6 +470,8 @@
     <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際にフォルダ全体を暗号化保護しているわけではありません。</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

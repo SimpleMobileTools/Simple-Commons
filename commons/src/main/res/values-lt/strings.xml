@@ -77,6 +77,7 @@
     <string name="phone_storage">Telefono atmintis</string>
     <string name="phone_storage_hidden">Telefono atmintis (nematoma kitoms programėlėms)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Gimtadienis</string>
     <string name="anniversary">Metinės</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Padidinti stulpelių skaičių</string>
     <string name="reduce_column_count">Sumažinti stulpelių skaičių</string>
     <string name="column_count">Stulpelių skaičius</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Stulpelių skaičius portretiniame rėžime</string>
     <string name="landscape_column_count">"Stulpelių skaičius  paverstame rėžime"</string>
     <string name="change_cover_image">Pakeisti viršelio paveikslą</string>
@@ -107,6 +109,10 @@
         <item quantity="one">%d stulpelis</item>
         <item quantity="few">%d stulpeliai</item>
         <item quantity="other">%d stulpelių</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
@@ -476,6 +482,8 @@
     <string name="lock_folder_notice">Ši apsauga veikia tik šioje programėlėje ir ji nepakeičia tikrojo aplankų šifravimo sistemos mastu.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Please enter the password</string>
     <string name="invalid_password">Incorrect password</string>
     <!-- Times -->

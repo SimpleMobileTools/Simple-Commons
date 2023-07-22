@@ -58,6 +58,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         isSearchOpen = true
         onSearchOpenListener?.invoke()
         top_toolbar_search_icon.setImageResource(R.drawable.ic_arrow_left_vector)
+        top_toolbar_search_icon.contentDescription = resources.getString(R.string.back)
     }
 
     fun closeSearch() {
@@ -66,6 +67,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         top_toolbar_search.setText("")
         if (!useArrowIcon) {
             top_toolbar_search_icon.setImageResource(R.drawable.ic_search_vector)
+            top_toolbar_search_icon.contentDescription = resources.getString(R.string.search)
         }
         (context as? Activity)?.hideKeyboard()
     }
@@ -87,13 +89,14 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
 
     fun toggleForceArrowBackIcon(useArrowBack: Boolean) {
         this.useArrowIcon = useArrowBack
-        val icon = if (useArrowBack) {
-            R.drawable.ic_arrow_left_vector
+        val (icon, accessibilityString) = if (useArrowBack) {
+            Pair(R.drawable.ic_arrow_left_vector, R.string.back)
         } else {
-            R.drawable.ic_search_vector
+            Pair(R.drawable.ic_search_vector, R.string.search)
         }
 
         top_toolbar_search_icon.setImageResource(icon)
+        top_toolbar_search_icon.contentDescription = resources.getString(accessibilityString)
     }
 
     fun updateColors() {

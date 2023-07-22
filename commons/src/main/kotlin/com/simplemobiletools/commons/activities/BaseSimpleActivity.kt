@@ -352,6 +352,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (toolbarNavigationIcon != NavigationIcon.None) {
             val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+            toolbar.setNavigationContentDescription(toolbarNavigationIcon.accessibilityResId)
         }
 
         toolbar.setNavigationOnClickListener {
@@ -977,7 +978,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        PermissionRequiredDialog(this, R.string.allow_notifications_files)
+                        PermissionRequiredDialog(this, R.string.allow_notifications_files, { openNotificationSettings() })
                     }
                 }
             }

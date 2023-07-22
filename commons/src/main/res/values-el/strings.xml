@@ -77,6 +77,7 @@
     <string name="phone_storage">Αποθηκευτικός χώρος Τηλεφώνου</string>
     <string name="phone_storage_hidden">Ο Αποθηκευτικός χώρος του τηλεφώνου (δεν είναι ορατός από άλλες εφαρμογές)</string>
     <string name="audio">Ήχος</string>
+    <string name="scanning">Scanning…</string>
 
     <!-- Events -->
     <string name="birthday">Γενέθλια</string>
@@ -100,6 +101,7 @@
     <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
     <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
     <string name="column_count">Αρίθμηση στηλών</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Αρίθμηση στηλών πορτρέτου</string>
     <string name="landscape_column_count">Αρίθμηση στηλών τοπίου</string>
     <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
@@ -107,6 +109,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d στήλη</item>
         <item quantity="other">%d στήλες</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
@@ -471,6 +477,8 @@
     <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
     <string name="enter_password">Εισαγωγή κωδικού</string>
     <string name="password">Κωδικός πρόσβασης</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
     <string name="empty_password">Παρακαλώ εισάγετε τον κωδικό</string>
     <string name="invalid_password">Εσφαλμένος κωδικός</string>
     <!-- Times -->

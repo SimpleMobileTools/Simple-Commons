@@ -76,6 +76,7 @@
     <string name="phone_storage">Úložisko mobilu</string>
     <string name="phone_storage_hidden">Úložisko mobilu (neviditeľné pre ostatné apky)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Skenuje sa…</string>
 
     <!-- Events -->
     <string name="birthday">Narodeniny</string>
@@ -101,7 +102,8 @@
     <string name="list">Zoznam</string>
     <string name="increase_column_count">Zvýšiť počet stĺpcov</string>
     <string name="reduce_column_count">Znížiť počet stĺpcov</string>
-    <string name="column_count">Počet stĺpcov Column count</string>
+    <string name="column_count">Počet stĺpcov</string>
+    <string name="row_count">Počet riadkov</string>
     <string name="portrait_column_count">Počet stĺpcov v zobrazení na výšku</string>
     <string name="landscape_column_count">Počet stĺpcov v zobrazení na šírku</string>
     <string name="change_cover_image">Zmeniť obal albumu</string>
@@ -110,6 +112,11 @@
         <item quantity="one">%d stĺpec</item>
         <item quantity="few">%d stĺpce</item>
         <item quantity="other">%d stĺpcov</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d riadok</item>
+        <item quantity="few">%d riadky</item>
+        <item quantity="other">%d riadkov</item>
     </plurals>
 
     <!-- Blocked numbers -->
@@ -501,6 +508,8 @@
     <string name="lock_folder_notice">Táto ochrana funguje iba v tejto aplikácii, nemá za cieľ nahradiť šifrovanie fungujúce po celom systéme.</string>
     <string name="enter_password">Zadajte heslo</string>
     <string name="password">Heslo</string>
+    <string name="add_password">Zaheslovať</string>
+    <string name="empty_password_new">Prosím zadajte heslo</string>
     <string name="empty_password">Prosím zadajte heslo</string>
     <string name="invalid_password">Nesprávne heslo</string>
 

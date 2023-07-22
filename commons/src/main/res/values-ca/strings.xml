@@ -77,6 +77,7 @@
     <string name="phone_storage">Emmagatzematge del telèfon</string>
     <string name="phone_storage_hidden">Emmagatzematge del telèfon (no visible per altres aplicacions)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">S\'està explorant…</string>
     <!-- Events -->
     <string name="birthday">Data de naixement</string>
     <string name="anniversary">Aniversari</string>
@@ -99,6 +100,7 @@
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
     <string name="column_count">Comptador de columnes</string>
+    <string name="row_count">Nombre de files</string>
     <string name="portrait_column_count">Nombre de columnes verticals</string>
     <string name="landscape_column_count">Nombre de columnes horitzontals</string>
     <string name="change_cover_image">Canvia la imatge de la portada</string>
@@ -106,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d columna</item>
         <item quantity="other">%d columnes</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d fila</item>
+        <item quantity="other">%d files</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
@@ -134,7 +140,7 @@
     <string name="search">Cerca</string>
     <string name="search_in_placeholder">Cerca a %s</string>
     <string name="type_2_characters">Escriviu com a mínim 2 caràcters per iniciar la cerca.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Mostra una barra de cerca</string>
     <string name="search_contacts">Cerca contactes</string>
     <string name="search_favorites">Cerca als preferits</string>
     <string name="search_apps">Cerca aplicacions</string>
@@ -169,7 +175,7 @@
     <string name="allow_notifications_voice_recorder">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
     <string name="allow_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
     <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Heu de permetre que l\'aplicació accedeixi a alarmes internes, en cas contrari no pot enviar missatges programats.</string>
     <string name="grant_permission">Atorga el permís</string>
     <string name="permission_required">Es requereix permís</string>
     <!-- Renaming -->
@@ -470,6 +476,8 @@
     <string name="lock_folder_notice">Aquesta protecció només funciona en aquesta aplicació. No substituirà un xifratge real de carpetes de tot el sistema.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Introduïu una contrasenya</string>
     <string name="empty_password">Introduïu la contrasenya</string>
     <string name="invalid_password">Contrasenya incorrecta</string>
     <!-- Times -->

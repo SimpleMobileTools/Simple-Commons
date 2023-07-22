@@ -78,6 +78,7 @@
     <string name="phone_storage">Spremište na mobitelu</string>
     <string name="phone_storage_hidden">Spremište na mobitelu (nije vidljivo za druge aplikacije)</string>
     <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Rođendan</string>
     <string name="anniversary">Obljetnica</string>
@@ -100,6 +101,7 @@
     <string name="increase_column_count">Povećaj broj stupaca</string>
     <string name="reduce_column_count">Smanji broj stupaca</string>
     <string name="column_count">Broj stupaca</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Broj stupaca portreta</string>
     <string name="landscape_column_count">Broj vodoravnih stupaca</string>
     <string name="change_cover_image">Promjeni naslovnu sliku</string>
@@ -108,6 +110,10 @@
         <item quantity="one">%d stupac</item>
         <item quantity="few">%d stupca</item>
         <item quantity="other">%d stupaca</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
@@ -482,10 +488,12 @@
     <string name="lock_folder_pro">Zaključaj mapu (Pro)</string>
     <string name="unlock_folder">Otključaj mapu</string>
     <string name="lock_folder_notice">Ova zaštita radi samo u ovoj aplikaciji. Nije namijenjena za stvarno mijenjanje šifriranja mapa cijelog sustava.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="enter_password">Unesite lozinku</string>
+    <string name="password">Lozinka</string>
+    <string name="add_password">Dodaj lozinku</string>
+    <string name="empty_password_new">Molimo unesite lozinku</string>
+    <string name="empty_password">Molimo unesite lozinku</string>
+    <string name="invalid_password">Netočna lozinka</string>
     <!-- Times -->
     <string name="yesterday">Jučer</string>
     <string name="today">Danas</string>

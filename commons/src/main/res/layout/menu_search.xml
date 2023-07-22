@@ -22,7 +22,8 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:paddingStart="@dimen/activity_margin"
-            android:src="@drawable/ic_search_vector" />
+            android:src="@drawable/ic_search_vector"
+            android:contentDescription="@string/search" />
 
         <EditText
             android:id="@+id/top_toolbar_search"
