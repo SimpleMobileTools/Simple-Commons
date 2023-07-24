@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.ksp).apply(false)
     alias(libs.plugins.kapt).apply(false)
     alias(libs.plugins.parcelize).apply(false)
-    alias(libs.plugins.kotlinAndroidExtensions).apply(false)
     alias(libs.plugins.library).apply(false)
     alias(libs.plugins.kotlinSerialization).apply(false)
 }

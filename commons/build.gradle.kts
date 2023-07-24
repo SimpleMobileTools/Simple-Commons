@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kapt)
     alias(libs.plugins.kotlinSerialization)
-    alias(libs.plugins.kotlinAndroidExtensions) //todo remove and add parcelize since we have 1 model with it
     `maven-publish`
 }
 

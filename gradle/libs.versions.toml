@@ -137,7 +137,6 @@ android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 library = { id = "com.android.library", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlinAndroidExtensions = { id = "org.jetbrains.kotlin.android.extensions", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
