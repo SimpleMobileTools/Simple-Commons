@@ -4,31 +4,28 @@ import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
-import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.getProperBackgroundColor
-import com.simplemobiletools.commons.extensions.getProperPrimaryColor
-import com.simplemobiletools.commons.extensions.getProperTextColor
-import com.simplemobiletools.commons.extensions.removeUnderlines
+import com.simplemobiletools.commons.databinding.ActivityFaqBinding
+import com.simplemobiletools.commons.databinding.ItemFaqBinding
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.models.FAQItem
-import kotlinx.android.synthetic.main.activity_faq.*
-import kotlinx.android.synthetic.main.item_faq.view.*
 
 class FAQActivity : BaseSimpleActivity() {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
+    private val binding by viewBinding(ActivityFaqBinding::inflate)
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_faq)
+        setContentView(binding.root)
 
-        updateMaterialActivityViews(faq_coordinator, faq_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(faq_nested_scrollview, faq_toolbar)
+        updateMaterialActivityViews(binding.faqCoordinator, binding.faqHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(binding.faqNestedScrollview, binding.faqToolbar)
 
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
@@ -38,14 +35,15 @@ class FAQActivity : BaseSimpleActivity() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
-            inflater.inflate(R.layout.item_faq, null).apply {
-                faq_card.setCardBackgroundColor(backgroundColor)
-                faq_title.apply {
+
+            ItemFaqBinding.inflate(inflater, null, false).apply {
+                faqCard.setCardBackgroundColor(backgroundColor)
+                faqTitle.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
                     setTextColor(primaryColor)
                 }
 
-                faq_text.apply {
+                faqText.apply {
                     text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
                     setTextColor(textColor)
                     setLinkTextColor(primaryColor)
@@ -54,13 +52,13 @@ class FAQActivity : BaseSimpleActivity() {
                     removeUnderlines()
                 }
 
-                faq_holder.addView(this)
+                binding.faqHolder.addView(root)
             }
         }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(faq_toolbar, NavigationIcon.Arrow)
+        setupToolbar(binding.faqToolbar, NavigationIcon.Arrow)
     }
 }

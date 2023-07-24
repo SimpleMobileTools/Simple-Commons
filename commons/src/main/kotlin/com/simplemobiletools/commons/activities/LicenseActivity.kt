@@ -3,25 +3,69 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.databinding.ActivityLicenseBinding
+import com.simplemobiletools.commons.databinding.ItemLicenseBinding
+import com.simplemobiletools.commons.extensions.getProperBackgroundColor
+import com.simplemobiletools.commons.extensions.getProperPrimaryColor
+import com.simplemobiletools.commons.extensions.getProperTextColor
+import com.simplemobiletools.commons.extensions.launchViewIntent
+import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.viewBinding
+import com.simplemobiletools.commons.helpers.APP_ICON_IDS
+import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
+import com.simplemobiletools.commons.helpers.APP_LICENSES
+import com.simplemobiletools.commons.helpers.LICENSE_ANDROID_LAME
+import com.simplemobiletools.commons.helpers.LICENSE_APNG
+import com.simplemobiletools.commons.helpers.LICENSE_AUDIO_RECORD_VIEW
+import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.simplemobiletools.commons.helpers.LICENSE_CROPPER
+import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
+import com.simplemobiletools.commons.helpers.LICENSE_EVENT_BUS
+import com.simplemobiletools.commons.helpers.LICENSE_EXOPLAYER
+import com.simplemobiletools.commons.helpers.LICENSE_FILTERS
+import com.simplemobiletools.commons.helpers.LICENSE_GESTURE_VIEWS
+import com.simplemobiletools.commons.helpers.LICENSE_GIF_DRAWABLE
+import com.simplemobiletools.commons.helpers.LICENSE_GLIDE
+import com.simplemobiletools.commons.helpers.LICENSE_GSON
+import com.simplemobiletools.commons.helpers.LICENSE_INDICATOR_FAST_SCROLL
+import com.simplemobiletools.commons.helpers.LICENSE_JODA
+import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
+import com.simplemobiletools.commons.helpers.LICENSE_LEAK_CANARY
+import com.simplemobiletools.commons.helpers.LICENSE_M3U_PARSER
+import com.simplemobiletools.commons.helpers.LICENSE_NUMBER_PICKER
+import com.simplemobiletools.commons.helpers.LICENSE_OTTO
+import com.simplemobiletools.commons.helpers.LICENSE_PANORAMA_VIEW
+import com.simplemobiletools.commons.helpers.LICENSE_PATTERN
+import com.simplemobiletools.commons.helpers.LICENSE_PDF_VIEWER
+import com.simplemobiletools.commons.helpers.LICENSE_PDF_VIEW_PAGER
+import com.simplemobiletools.commons.helpers.LICENSE_PHOTOVIEW
+import com.simplemobiletools.commons.helpers.LICENSE_PICASSO
+import com.simplemobiletools.commons.helpers.LICENSE_REPRINT
+import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
+import com.simplemobiletools.commons.helpers.LICENSE_RTL
+import com.simplemobiletools.commons.helpers.LICENSE_SANSELAN
+import com.simplemobiletools.commons.helpers.LICENSE_SMS_MMS
+import com.simplemobiletools.commons.helpers.LICENSE_STETHO
+import com.simplemobiletools.commons.helpers.LICENSE_SUBSAMPLING
+import com.simplemobiletools.commons.helpers.LICENSE_ZIP4J
+import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.models.License
-import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.item_license.view.*
 
 class LicenseActivity : BaseSimpleActivity() {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
+    private val binding by viewBinding(ActivityLicenseBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_license)
-        updateTextColors(licenses_holder)
+        setContentView(binding.root)
+        updateTextColors(binding.licensesHolder)
 
-        updateMaterialActivityViews(licenses_coordinator, licenses_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
+        updateMaterialActivityViews(binding.licensesCoordinator, binding.licensesHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(binding.licensesNestedScrollview, binding.licensesToolbar)
 
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
@@ -32,9 +76,10 @@ class LicenseActivity : BaseSimpleActivity() {
         val licenseMask = intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
         licenses.filter { licenseMask and it.id != 0L }.forEach {
             val license = it
-            inflater.inflate(R.layout.item_license, null).apply {
-                license_card.setCardBackgroundColor(backgroundColor)
-                license_title.apply {
+
+            ItemLicenseBinding.inflate(inflater, null, false).apply {
+                licenseCard.setCardBackgroundColor(backgroundColor)
+                licenseTitle.apply {
                     text = getString(license.titleId)
                     setTextColor(primaryColor)
                     setOnClickListener {
@@ -42,19 +87,19 @@ class LicenseActivity : BaseSimpleActivity() {
                     }
                 }
 
-                license_text.apply {
+                licenseText.apply {
                     text = getString(license.textId)
                     setTextColor(textColor)
                 }
 
-                licenses_holder.addView(this)
+                binding.licensesHolder.addView(root)
             }
         }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(licenses_toolbar, NavigationIcon.Arrow)
+        setupToolbar(binding.licensesToolbar, NavigationIcon.Arrow)
     }
 
     private fun initLicenses() = arrayOf(
