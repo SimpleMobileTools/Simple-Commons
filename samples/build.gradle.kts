@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android)
     alias(libs.plugins.kotlinAndroid)
-    alias(libs.plugins.kotlinAndroidExtensions)
+    alias(libs.plugins.kotlinAndroidExtensions) //todo remove
 }
 android {
     compileSdk = libs.versions.app.build.compileSDKVersion.get().toInt()
