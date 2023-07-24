@@ -7,7 +7,7 @@ import com.simplemobiletools.commons.extensions.openAppSettings
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_open_app_settings.view.open_app_settings
 
-class OpenAppSettingsDialog(val activity: BaseSimpleActivity, message: String, val callback: (() -> Unit)? = null) {
+class OpenAppSettingsDialog(val activity: BaseSimpleActivity, message: String) {
 
     init {
         activity.apply {
@@ -16,15 +16,10 @@ class OpenAppSettingsDialog(val activity: BaseSimpleActivity, message: String, v
             getAlertDialogBuilder()
                 .setNegativeButton(R.string.close, null)
                 .setPositiveButton(R.string.go_to_settings) { _, _ ->
-                    dialogConfirmed()
+                    openAppSettings()
                 }.apply {
                     setupDialogStuff(view, this)
                 }
         }
-    }
-
-    private fun dialogConfirmed() {
-        callback?.invoke()
-        activity.openAppSettings()
     }
 }
