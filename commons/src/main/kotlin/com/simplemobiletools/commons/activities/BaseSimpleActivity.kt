@@ -680,7 +680,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 startActivity(this)
             }
         } catch (e: Exception) {
-            openAppSettings()
+            openDeviceSettings()
         }
     }
 
