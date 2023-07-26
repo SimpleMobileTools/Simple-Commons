@@ -21,7 +21,8 @@ class AutoStaggeredGridLayoutManager(
         }
     }
 
-    override fun onLayoutChildren(recycler: RecyclerView.Recycler?, state: RecyclerView.State?) {
+    override fun onLayoutCompleted(state: RecyclerView.State?) {
+        super.onLayoutCompleted(state)
         val width = width
         val height = height
         if (itemSize > 0 && width > 0 && height > 0) {
@@ -32,6 +33,5 @@ class AutoStaggeredGridLayoutManager(
             }
             spanCount = max(1, totalSpace / itemSize)
         }
-        super.onLayoutChildren(recycler, state)
     }
 }
