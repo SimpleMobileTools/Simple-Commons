@@ -14,7 +14,6 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -23,6 +22,20 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    compileOptions {
+        val currentJavaVersionFromLibs = JavaVersion.valueOf(libs.versions.app.build.javaVersion.get().toString())
+        sourceCompatibility = currentJavaVersionFromLibs
+        targetCompatibility = currentJavaVersionFromLibs
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = project.libs.versions.app.build.kotlinJVMTarget.get()
+        kotlinOptions.freeCompilerArgs = listOf(
+            "-opt-in=kotlin.RequiresOptIn",
+            "-Xcontext-receivers"
+        )
     }
 
     buildFeatures {

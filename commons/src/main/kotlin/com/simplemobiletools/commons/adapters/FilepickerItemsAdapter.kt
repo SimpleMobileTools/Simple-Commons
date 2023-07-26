@@ -46,7 +46,7 @@ class FilepickerItemsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
-        holder.bindView(fileDirItem, true, false) { itemView, adapterPosition ->
+        holder.bindView(fileDirItem, allowSingleClick = true, allowLongClick = false) { itemView, adapterPosition ->
             setupView(ItemFilepickerListBinding.bind(itemView), fileDirItem)
         }
         bindViewHolder(holder)

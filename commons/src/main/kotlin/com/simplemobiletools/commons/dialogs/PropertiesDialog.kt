@@ -6,7 +6,6 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.R
@@ -14,8 +13,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.dialog_properties.view.*
-import kotlinx.android.synthetic.main.item_property.view.*
+import com.simplemobiletools.commons.views.MyTextView
 import java.io.File
 import java.util.*
 
@@ -48,7 +46,7 @@ class PropertiesDialog : BasePropertiesDialog {
         }
 
         builder.apply {
-            mActivity.setupDialogStuff(mDialogView, this, R.string.properties) { alertDialog ->
+            mActivity.setupDialogStuff(mDialogView.root, this, R.string.properties) { alertDialog ->
                 alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
                     removeEXIFFromPath(path)
                 }
@@ -73,11 +71,11 @@ class PropertiesDialog : BasePropertiesDialog {
             }
 
             this.mActivity.runOnUiThread {
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
+                (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_size).findViewById<MyTextView>(R.id.property_value)).text = size
 
                 if (fileDirItem.isDirectory) {
-                    (mDialogView.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
-                    (mDialogView.findViewById<LinearLayout>(R.id.properties_direct_children_count).property_value as TextView).text =
+                    (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_file_count).findViewById<MyTextView>(R.id.property_value)).text = fileCount.toString()
+                    (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_direct_children_count).findViewById<MyTextView>(R.id.property_value)).text =
                         directChildrenCount.toString()
                 }
             }
@@ -91,9 +89,9 @@ class PropertiesDialog : BasePropertiesDialog {
                 cursor?.use {
                     if (cursor.moveToFirst()) {
                         val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED) * 1000L
-                        updateLastModified(mActivity, mDialogView, dateModified)
+                        updateLastModified(mActivity, mDialogView.root, dateModified)
                     } else {
-                        updateLastModified(mActivity, mDialogView, fileDirItem.getLastModified(mActivity))
+                        updateLastModified(mActivity, mDialogView.root, fileDirItem.getLastModified(mActivity))
                     }
                 }
 
@@ -140,15 +138,18 @@ class PropertiesDialog : BasePropertiesDialog {
                 addProperty(R.string.direct_children_count, "…", R.id.properties_direct_children_count)
                 addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
+
             fileDirItem.path.isImageSlow() -> {
                 fileDirItem.getResolution(mActivity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
             }
+
             fileDirItem.path.isAudioSlow() -> {
                 fileDirItem.getDuration(mActivity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getTitle(mActivity)?.let { addProperty(R.string.song_title, it) }
                 fileDirItem.getArtist(mActivity)?.let { addProperty(R.string.artist, it) }
                 fileDirItem.getAlbum(mActivity)?.let { addProperty(R.string.album, it) }
             }
+
             fileDirItem.path.isVideoSlow() -> {
                 fileDirItem.getDuration(mActivity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getResolution(mActivity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
@@ -179,9 +180,9 @@ class PropertiesDialog : BasePropertiesDialog {
 
                     mActivity.runOnUiThread {
                         if (md5 != null) {
-                            (mDialogView.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
+                            (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_md5).findViewById<MyTextView>(R.id.property_value)).text = md5
                         } else {
-                            mDialogView.findViewById<LinearLayout>(R.id.properties_md5).beGone()
+                            mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_md5).beGone()
                         }
                     }
                 }
@@ -191,7 +192,7 @@ class PropertiesDialog : BasePropertiesDialog {
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
         activity.runOnUiThread {
-            (view.findViewById<LinearLayout>(R.id.properties_last_modified).property_value as TextView).text = timestamp.formatDate(activity)
+            (view.findViewById<LinearLayout>(R.id.properties_last_modified).findViewById<MyTextView>(R.id.property_value)).text = timestamp.formatDate(activity)
         }
     }
 
@@ -225,8 +226,8 @@ class PropertiesDialog : BasePropertiesDialog {
             val fileCount = fileDirItems.sumByInt { it.getProperFileCount(activity, countHiddenItems) }
             val size = fileDirItems.sumByLong { it.getProperSize(activity, countHiddenItems) }.formatSize()
             activity.runOnUiThread {
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
+                (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_size).findViewById<MyTextView>(R.id.property_value)).text = size
+                (mDialogView.propertiesHolder.findViewById<LinearLayout>(R.id.properties_file_count).findViewById<MyTextView>(R.id.property_value)).text = fileCount.toString()
             }
         }
 
@@ -240,7 +241,7 @@ class PropertiesDialog : BasePropertiesDialog {
         }
 
         builder.apply {
-            mActivity.setupDialogStuff(mDialogView, this, R.string.properties) { alertDialog ->
+            mActivity.setupDialogStuff(mDialogView.root, this, R.string.properties) { alertDialog ->
                 alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
                     removeEXIFFromPaths(paths)
                 }
@@ -288,8 +289,7 @@ class PropertiesDialog : BasePropertiesDialog {
             try {
                 ExifInterface(path).removeValues()
                 mActivity.toast(R.string.exif_removed)
-
-                mPropertyView.properties_holder.removeAllViews()
+                mPropertyView.findViewById<LinearLayout>(R.id.properties_holder).removeAllViews()
                 addProperties(path)
             } catch (e: Exception) {
                 mActivity.showErrorToast(e)

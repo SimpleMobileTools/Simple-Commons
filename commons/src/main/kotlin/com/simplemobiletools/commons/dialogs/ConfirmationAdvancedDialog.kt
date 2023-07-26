@@ -3,9 +3,9 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.databinding.DialogMessageBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_message.view.*
 
 // similar fo ConfirmationDialog, but has a callback for negative button too
 class ConfirmationAdvancedDialog(
@@ -15,14 +15,14 @@ class ConfirmationAdvancedDialog(
     private var dialog: AlertDialog? = null
 
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_message, null)
-        view.message.text = if (message.isEmpty()) activity.resources.getString(messageId) else message
+        val view = DialogMessageBinding.inflate(activity.layoutInflater, null, false)
+        view.message.text = message.ifEmpty { activity.resources.getString(messageId) }
 
         val builder = activity.getAlertDialogBuilder()
-            .setPositiveButton(positive) { dialog, which -> positivePressed() }
+            .setPositiveButton(positive) { _, _ -> positivePressed() }
 
         if (negative != 0) {
-            builder.setNegativeButton(negative) { dialog, which -> negativePressed() }
+            builder.setNegativeButton(negative) { _, _ -> negativePressed() }
         }
 
         if (!cancelOnTouchOutside) {
@@ -30,7 +30,7 @@ class ConfirmationAdvancedDialog(
         }
 
         builder.apply {
-            activity.setupDialogStuff(view, this, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
+            activity.setupDialogStuff(view.root, this, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
                 dialog = alertDialog
             }
         }

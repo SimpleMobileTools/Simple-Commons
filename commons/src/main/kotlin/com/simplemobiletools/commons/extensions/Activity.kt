@@ -25,7 +25,6 @@ import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.biometric.BiometricPrompt
@@ -38,12 +37,12 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.DialogTitleBinding
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog.Mode
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
-import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
 import java.util.*
 
@@ -1532,10 +1531,10 @@ fun Activity.setupDialogStuff(
             callback?.invoke(this)
         }
     } else {
-        var title: TextView? = null
+        var title: DialogTitleBinding? = null
         if (titleId != 0 || titleText.isNotEmpty()) {
-            title = layoutInflater.inflate(R.layout.dialog_title, null) as TextView
-            title.dialog_title_textview.apply {
+            title = DialogTitleBinding.inflate(layoutInflater, null, false)
+            title.dialogTitleTextview.apply {
                 if (titleText.isNotEmpty()) {
                     text = titleText
                 } else {
@@ -1555,7 +1554,7 @@ fun Activity.setupDialogStuff(
         dialog.create().apply {
             setView(view)
             requestWindowFeature(Window.FEATURE_NO_TITLE)
-            setCustomTitle(title)
+            setCustomTitle(title?.root)
             setCanceledOnTouchOutside(cancelOnTouchOutside)
             if (!isFinishing) {
                 show()

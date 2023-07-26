@@ -3,8 +3,8 @@ package com.simplemobiletools.commons.dialogs
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.DialogRenameItemBinding
 import com.simplemobiletools.commons.extensions.*
-import kotlinx.android.synthetic.main.dialog_rename_item.view.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
     init {
@@ -13,31 +13,31 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
         val dotAt = fullName.lastIndexOf(".")
         var name = fullName
 
-        val view = activity.layoutInflater.inflate(R.layout.dialog_rename_item, null).apply {
+        val view = DialogRenameItemBinding.inflate(activity.layoutInflater, null, false).apply {
             if (dotAt > 0 && !activity.getIsPathDirectory(path)) {
                 name = fullName.substring(0, dotAt)
                 val extension = fullName.substring(dotAt + 1)
-                rename_item_extension.setText(extension)
+                renameItemExtension.setText(extension)
             } else {
-                rename_item_extension_hint.beGone()
+                renameItemExtensionHint.beGone()
             }
 
-            rename_item_name.setText(name)
+            renameItemName.setText(name)
         }
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                activity.setupDialogStuff(view, this, R.string.rename) { alertDialog ->
-                    alertDialog.showKeyboard(view.rename_item_name)
+                activity.setupDialogStuff(view.root, this, R.string.rename) { alertDialog ->
+                    alertDialog.showKeyboard(view.renameItemName)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
 
-                        var newName = view.rename_item_name.value
-                        val newExtension = view.rename_item_extension.value
+                        var newName = view.renameItemName.value
+                        val newExtension = view.renameItemExtension.value
 
                         if (newName.isEmpty()) {
                             activity.toast(R.string.empty_name)

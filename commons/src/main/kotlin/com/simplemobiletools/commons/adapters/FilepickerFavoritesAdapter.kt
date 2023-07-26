@@ -26,7 +26,7 @@ class FilepickerFavoritesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val path = paths[position]
-        holder.bindView(path, true, false) { itemView, adapterPosition ->
+        holder.bindView(path, allowSingleClick = true, allowLongClick = false) { itemView, adapterPosition ->
             setupView(FilepickerFavoriteBinding.bind(itemView), path)
         }
         bindViewHolder(holder)

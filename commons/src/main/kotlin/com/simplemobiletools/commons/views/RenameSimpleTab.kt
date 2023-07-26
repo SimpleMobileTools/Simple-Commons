@@ -4,14 +4,15 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.MediaStore
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.TabRenameSimpleBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.RenameTab
 import com.simplemobiletools.commons.models.Android30RenameFormat
 import com.simplemobiletools.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.tab_rename_simple.view.*
 import java.io.File
 
 class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
@@ -20,9 +21,11 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
+    private val binding = TabRenameSimpleBinding.inflate(LayoutInflater.from(context), this, true)
+
     override fun onFinishInflate() {
         super.onFinishInflate()
-        context.updateTextColors(rename_simple_holder)
+        context.updateTextColors(binding.renameSimpleHolder)
     }
 
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
@@ -32,8 +35,8 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
     override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
         stopLooping = false
-        val valueToAdd = rename_simple_value.text.toString()
-        val append = rename_simple_radio_group.checkedRadioButtonId == rename_simple_radio_append.id
+        val valueToAdd = binding.renameSimpleValue.text.toString()
+        val append = binding.renameSimpleRadioGroup.checkedRadioButtonId == binding.renameSimpleRadioAppend.id
 
         if (valueToAdd.isEmpty()) {
             callback(false)

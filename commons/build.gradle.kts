@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kapt)
     alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.parcelize)
     `maven-publish`
 }
 
@@ -73,6 +74,12 @@ dependencies {
     implementation(libs.androidx.exifinterface)
     implementation(libs.androidx.biometric.ktx)
     implementation(libs.ez.vcard)
+
+
+    implementation(libs.bundles.lifecycle)
+    implementation(libs.bundles.compose)
+    implementation(libs.bundles.accompanist)
+    debugImplementation(libs.bundles.compose.preview)
 
     api(libs.joda.time)
     api(libs.recyclerView.fastScroller)

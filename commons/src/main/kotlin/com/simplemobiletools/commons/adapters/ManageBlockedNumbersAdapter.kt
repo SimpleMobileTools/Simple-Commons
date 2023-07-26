@@ -53,7 +53,7 @@ class ManageBlockedNumbersAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val blockedNumber = blockedNumbers[position]
-        holder.bindView(blockedNumber, true, true) { itemView, _ ->
+        holder.bindView(blockedNumber, allowSingleClick = true, allowLongClick = true) { itemView, _ ->
             setupView(ItemManageBlockedNumberBinding.bind(itemView), blockedNumber)
         }
         bindViewHolder(holder)

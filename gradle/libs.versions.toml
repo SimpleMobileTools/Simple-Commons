@@ -1,8 +1,5 @@
 [versions]
 #jetbrains
-ezVcard = "0.11.3"
-gson = "2.10.1"
-jodaTime = "2.12.4"
 kotlin = "1.9.0"
 #KSP
 kotlinxSerializationJson = "1.5.1"
@@ -38,8 +35,12 @@ accompanist = "0.31.5-beta"
 glide = "4.15.1"
 #Room
 room = "2.5.2"
-#Publish
-androidMavenGradlePlugin = "2.1"
+#ezVcard
+ezVcard = "0.11.3"
+#gson
+gson = "2.10.1"
+#jodaTime
+jodaTime = "2.12.4"
 #Gradle
 gradlePlugins-agp = "8.0.1"
 #build
