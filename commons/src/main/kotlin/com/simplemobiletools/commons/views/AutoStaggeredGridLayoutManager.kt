@@ -21,8 +21,7 @@ class AutoStaggeredGridLayoutManager(
         }
     }
 
-    override fun onLayoutCompleted(state: RecyclerView.State?) {
-        super.onLayoutCompleted(state)
+    override fun onLayoutChildren(recycler: RecyclerView.Recycler?, state: RecyclerView.State?) {
         val width = width
         val height = height
         if (itemSize > 0 && width > 0 && height > 0) {
@@ -31,7 +30,14 @@ class AutoStaggeredGridLayoutManager(
             } else {
                 height - paddingTop - paddingBottom
             }
-            spanCount = max(1, totalSpace / itemSize)
+            postOnAnimation {
+                spanCount = max(1, totalSpace / itemSize)
+            }
         }
+        super.onLayoutChildren(recycler, state)
     }
+
+    // fixes crash java.lang.IndexOutOfBoundsException: Inconsistency detected...
+    // taken from https://stackoverflow.com/a/33985508/1967672
+    override fun supportsPredictiveItemAnimations() = false
 }
