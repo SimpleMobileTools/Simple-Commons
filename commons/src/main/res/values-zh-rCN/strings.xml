@@ -174,7 +174,7 @@
     <string name="allow_notifications_incoming_calls">你必须允许应用展示通知，否则它无法显示来电。</string>
     <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
     <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_location_permission">你必须允许应用访问你的位置，否则它不知道位置。</string>
     <string name="grant_permission">授予权限</string>
     <string name="permission_required">权限是必需的</string>
     <!-- Renaming -->
