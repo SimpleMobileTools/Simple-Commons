@@ -47,6 +47,10 @@ android {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
     namespace = "com.simplemobiletools.commons.samples"
+
+    lint {
+        disable.add("Instantiatable")
+    }
 }
 
 dependencies {
