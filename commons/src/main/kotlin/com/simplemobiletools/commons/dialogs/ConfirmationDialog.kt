@@ -3,9 +3,9 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.databinding.DialogMessageBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_message.view.*
 
 /**
  * A simple dialog without any view, just a messageId, a positive button and optionally a negative button
@@ -24,18 +24,18 @@ class ConfirmationDialog(
     private var dialog: AlertDialog? = null
 
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_message, null)
-        view.message.text = if (message.isEmpty()) activity.resources.getString(messageId) else message
+        val view = DialogMessageBinding.inflate(activity.layoutInflater, null, false)
+        view.message.text = message.ifEmpty { activity.resources.getString(messageId) }
 
         val builder = activity.getAlertDialogBuilder()
-            .setPositiveButton(positive) { dialog, which -> dialogConfirmed() }
+            .setPositiveButton(positive) { _, _ -> dialogConfirmed() }
 
         if (negative != 0) {
             builder.setNegativeButton(negative, null)
         }
 
         builder.apply {
-            activity.setupDialogStuff(view, this, titleText = dialogTitle, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
+            activity.setupDialogStuff(view.root, this, titleText = dialogTitle, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
                 dialog = alertDialog
             }
         }

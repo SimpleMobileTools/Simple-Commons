@@ -3,8 +3,8 @@ package com.simplemobiletools.commons.dialogs
 import android.os.Bundle
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
-import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.setupSimpleListItem
+import com.simplemobiletools.commons.databinding.ItemSimpleListBinding
 import com.simplemobiletools.commons.fragments.BaseBottomSheetDialogFragment
 import com.simplemobiletools.commons.models.SimpleListItem
 
@@ -15,11 +15,11 @@ open class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
     override fun setupContentView(parent: ViewGroup) {
         val listItems = arguments?.getParcelableArray(ITEMS) as Array<SimpleListItem>
         listItems.forEach { item ->
-            val view = layoutInflater.inflate(R.layout.item_simple_list, parent, false)
+            val view = ItemSimpleListBinding.inflate(layoutInflater, parent, false)
             setupSimpleListItem(view, item) {
                 onItemClick?.invoke(it)
             }
-            parent.addView(view)
+            parent.addView(view.root)
         }
     }
 

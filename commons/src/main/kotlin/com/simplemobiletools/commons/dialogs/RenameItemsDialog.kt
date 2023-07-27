@@ -3,28 +3,28 @@ package com.simplemobiletools.commons.dialogs
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.DialogRenameItemsBinding
 import com.simplemobiletools.commons.extensions.*
-import kotlinx.android.synthetic.main.dialog_rename_items.view.*
 
 // used at renaming folders
 class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
     init {
         var ignoreClicks = false
-        val view = activity.layoutInflater.inflate(R.layout.dialog_rename_items, null)
+        val view = DialogRenameItemsBinding.inflate(activity.layoutInflater,null, false)
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                activity.setupDialogStuff(view, this, R.string.rename) { alertDialog ->
-                    alertDialog.showKeyboard(view.rename_items_value)
+                activity.setupDialogStuff(view.root, this, R.string.rename) { alertDialog ->
+                    alertDialog.showKeyboard(view.renameItemsValue)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
 
-                        val valueToAdd = view.rename_items_value.text.toString()
-                        val append = view.rename_items_radio_group.checkedRadioButtonId == view.rename_items_radio_append.id
+                        val valueToAdd = view.renameItemsValue.text.toString()
+                        val append = view.renameItemsRadioGroup.checkedRadioButtonId == view.renameItemsRadioAppend.id
 
                         if (valueToAdd.isEmpty()) {
                             callback()

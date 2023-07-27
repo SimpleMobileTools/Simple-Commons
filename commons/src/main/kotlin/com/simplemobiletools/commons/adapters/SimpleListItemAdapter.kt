@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.databinding.ItemSimpleListBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.SimpleListItem
-import kotlinx.android.synthetic.main.item_simple_list.view.*
 
 open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (SimpleListItem) -> Unit) :
     ListAdapter<SimpleListItem, SimpleListItemAdapter.SimpleItemViewHolder>(SimpleListItemDiffCallback()) {
@@ -25,9 +25,9 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 
     open inner class SimpleItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        val binding = ItemSimpleListBinding.bind(itemView)
         fun bindView(item: SimpleListItem) {
-            setupSimpleListItem(itemView, item, onItemClicked)
+            setupSimpleListItem(binding, item, onItemClicked)
         }
     }
 
@@ -42,22 +42,22 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 }
 
-fun setupSimpleListItem(view: View, item: SimpleListItem, onItemClicked: (SimpleListItem) -> Unit) {
+fun setupSimpleListItem(view: ItemSimpleListBinding, item: SimpleListItem, onItemClicked: (SimpleListItem) -> Unit) {
     view.apply {
         val color = if (item.selected) {
-            context.getProperPrimaryColor()
+            root.context.getProperPrimaryColor()
         } else {
-            context.getProperTextColor()
+            root.context.getProperTextColor()
         }
 
-        bottom_sheet_item_title.setText(item.textRes)
-        bottom_sheet_item_title.setTextColor(color)
-        bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
-        bottom_sheet_item_icon.applyColorFilter(color)
-        bottom_sheet_selected_icon.beVisibleIf(item.selected)
-        bottom_sheet_selected_icon.applyColorFilter(color)
+        bottomSheetItemTitle.setText(item.textRes)
+        bottomSheetItemTitle.setTextColor(color)
+        bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
+        bottomSheetItemIcon.applyColorFilter(color)
+        bottomSheetSelectedIcon.beVisibleIf(item.selected)
+        bottomSheetSelectedIcon.applyColorFilter(color)
 
-        setOnClickListener {
+        root.setOnClickListener {
             onItemClicked(item)
         }
     }

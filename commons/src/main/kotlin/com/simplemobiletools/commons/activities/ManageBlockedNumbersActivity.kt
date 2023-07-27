@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.ManageBlockedNumbersAdapter
+import com.simplemobiletools.commons.databinding.ActivityManageBlockedNumbersBinding
 import com.simplemobiletools.commons.dialogs.AddBlockedNumberDialog
 import com.simplemobiletools.commons.dialogs.ExportBlockedNumbersDialog
 import com.simplemobiletools.commons.dialogs.FilePickerDialog
@@ -15,7 +16,6 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
-import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
 import java.io.FileOutputStream
 import java.io.OutputStream
 
@@ -27,22 +27,29 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
+    private val binding by viewBinding(ActivityManageBlockedNumbersBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_manage_blocked_numbers)
+        setContentView(binding.root)
         updateBlockedNumbers()
         setupOptionsMenu()
 
-        updateMaterialActivityViews(block_numbers_coordinator, manage_blocked_numbers_list, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(manage_blocked_numbers_list, block_numbers_toolbar)
-        updateTextColors(manage_blocked_numbers_wrapper)
+        updateMaterialActivityViews(
+            binding.blockNumbersCoordinator,
+            binding.manageBlockedNumbersList,
+            useTransparentNavigation = true,
+            useTopSearchMenu = false
+        )
+        setupMaterialScrollListener(binding.manageBlockedNumbersList, binding.blockNumbersToolbar)
+        updateTextColors(binding.manageBlockedNumbersWrapper)
         updatePlaceholderTexts()
 
         setupBlockUnknown()
         setupBlockHidden()
 
-        manage_blocked_numbers_placeholder_2.apply {
+        binding.manageBlockedNumbersPlaceholder2.apply {
             underlineText()
             setTextColor(getProperPrimaryColor())
             setOnClickListener {
@@ -59,7 +66,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         val blockHiddenTitleRes =
             if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_hidden_calls else R.string.block_hidden_messages
 
-        block_hidden.apply {
+        binding.blockHidden.apply {
             setText(blockHiddenTitleRes)
             isChecked = baseConfig.blockHiddenNumbers
             if (isChecked) {
@@ -67,10 +74,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             }
         }
 
-        block_hidden_holder.setOnClickListener {
-            block_hidden.toggle()
-            baseConfig.blockHiddenNumbers = block_hidden.isChecked
-            if (block_hidden.isChecked) {
+        binding.blockHiddenHolder.setOnClickListener {
+            binding.blockHidden.toggle()
+            baseConfig.blockHiddenNumbers = binding.blockHidden.isChecked
+            if (binding.blockHidden.isChecked) {
                 maybeSetDefaultCallerIdApp()
             }
         }
@@ -80,7 +87,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         val blockUnknownTitleRes =
             if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_not_stored_calls else R.string.block_not_stored_messages
 
-        block_unknown.apply {
+        binding.blockUnknown.apply {
             setText(blockUnknownTitleRes)
             isChecked = baseConfig.blockUnknownNumbers
             if (isChecked) {
@@ -88,10 +95,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             }
         }
 
-        block_unknown_holder.setOnClickListener {
-            block_unknown.toggle()
-            baseConfig.blockUnknownNumbers = block_unknown.isChecked
-            if (block_unknown.isChecked) {
+        binding.blockUnknownHolder.setOnClickListener {
+            binding.blockUnknown.toggle()
+            baseConfig.blockUnknownNumbers = binding.blockUnknown.isChecked
+            if (binding.blockUnknown.isChecked) {
                 maybeSetDefaultCallerIdApp()
             }
         }
@@ -99,11 +106,11 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(block_numbers_toolbar, NavigationIcon.Arrow)
+        setupToolbar(binding.blockNumbersToolbar, NavigationIcon.Arrow)
     }
 
     private fun setupOptionsMenu() {
-        block_numbers_toolbar.setOnMenuItemClickListener { menuItem ->
+        binding.blockNumbersToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.add_blocked_number -> {
                     addOrEditBlockedNumber()
@@ -139,8 +146,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
             baseConfig.blockUnknownNumbers = false
             baseConfig.blockHiddenNumbers = false
-            block_unknown.isChecked = false
-            block_hidden.isChecked = false
+            binding.blockUnknown.isChecked = false
+            binding.blockHidden.isChecked = false
         }
     }
 
@@ -149,22 +156,22 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     }
 
     private fun updatePlaceholderTexts() {
-        manage_blocked_numbers_placeholder.text = getString(if (isDefaultDialer()) R.string.not_blocking_anyone else R.string.must_make_default_dialer)
-        manage_blocked_numbers_placeholder_2.text = getString(if (isDefaultDialer()) R.string.add_a_blocked_number else R.string.set_as_default)
+        binding.manageBlockedNumbersPlaceholder.text = getString(if (isDefaultDialer()) R.string.not_blocking_anyone else R.string.must_make_default_dialer)
+        binding.manageBlockedNumbersPlaceholder2.text = getString(if (isDefaultDialer()) R.string.add_a_blocked_number else R.string.set_as_default)
     }
 
     private fun updateBlockedNumbers() {
         ensureBackgroundThread {
             val blockedNumbers = getBlockedNumbers()
             runOnUiThread {
-                ManageBlockedNumbersAdapter(this, blockedNumbers, this, manage_blocked_numbers_list) {
+                ManageBlockedNumbersAdapter(this, blockedNumbers, this, binding.manageBlockedNumbersList) {
                     addOrEditBlockedNumber(it as BlockedNumber)
                 }.apply {
-                    manage_blocked_numbers_list.adapter = this
+                    binding.manageBlockedNumbersList.adapter = this
                 }
 
-                manage_blocked_numbers_placeholder.beVisibleIf(blockedNumbers.isEmpty())
-                manage_blocked_numbers_placeholder_2.beVisibleIf(blockedNumbers.isEmpty())
+                binding.manageBlockedNumbersPlaceholder.beVisibleIf(blockedNumbers.isEmpty())
+                binding.manageBlockedNumbersPlaceholder2.beVisibleIf(blockedNumbers.isEmpty())
 
                 if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
                     maybeSetDefaultCallerIdApp()

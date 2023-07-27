@@ -3,15 +3,15 @@ package com.simplemobiletools.commons.dialogs
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.DialogAddBlockedNumberBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.BlockedNumber
-import kotlinx.android.synthetic.main.dialog_add_blocked_number.view.*
 
 class AddBlockedNumberDialog(val activity: BaseSimpleActivity, val originalNumber: BlockedNumber? = null, val callback: () -> Unit) {
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_add_blocked_number, null).apply {
+        val view = DialogAddBlockedNumberBinding.inflate(activity.layoutInflater, null, false).apply {
             if (originalNumber != null) {
-                add_blocked_number_edittext.setText(originalNumber.number)
+                addBlockedNumberEdittext.setText(originalNumber.number)
             }
         }
 
@@ -19,10 +19,10 @@ class AddBlockedNumberDialog(val activity: BaseSimpleActivity, val originalNumbe
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                activity.setupDialogStuff(view, this) { alertDialog ->
-                    alertDialog.showKeyboard(view.add_blocked_number_edittext)
+                activity.setupDialogStuff(view.root, this) { alertDialog ->
+                    alertDialog.showKeyboard(view.addBlockedNumberEdittext)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        var newBlockedNumber = view.add_blocked_number_edittext.value
+                        var newBlockedNumber = view.addBlockedNumberEdittext.value
                         if (originalNumber != null && newBlockedNumber != originalNumber.number) {
                             activity.deleteBlockedNumber(originalNumber.number)
                         }

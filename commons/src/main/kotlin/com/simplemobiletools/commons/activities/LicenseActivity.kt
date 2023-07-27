@@ -3,25 +3,27 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.databinding.ActivityLicenseBinding
+import com.simplemobiletools.commons.databinding.ItemLicenseBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
-import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.item_license.view.*
 
 class LicenseActivity : BaseSimpleActivity() {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
+    private val binding by viewBinding(ActivityLicenseBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_license)
-        updateTextColors(licenses_holder)
+        setContentView(binding.root)
+        updateTextColors(binding.licensesHolder)
 
-        updateMaterialActivityViews(licenses_coordinator, licenses_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
+        updateMaterialActivityViews(binding.licensesCoordinator, binding.licensesHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(binding.licensesNestedScrollview, binding.licensesToolbar)
 
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
@@ -32,9 +34,10 @@ class LicenseActivity : BaseSimpleActivity() {
         val licenseMask = intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
         licenses.filter { licenseMask and it.id != 0L }.forEach {
             val license = it
-            inflater.inflate(R.layout.item_license, null).apply {
-                license_card.setCardBackgroundColor(backgroundColor)
-                license_title.apply {
+
+            ItemLicenseBinding.inflate(inflater, null, false).apply {
+                licenseCard.setCardBackgroundColor(backgroundColor)
+                licenseTitle.apply {
                     text = getString(license.titleId)
                     setTextColor(primaryColor)
                     setOnClickListener {
@@ -42,19 +45,19 @@ class LicenseActivity : BaseSimpleActivity() {
                     }
                 }
 
-                license_text.apply {
+                licenseText.apply {
                     text = getString(license.textId)
                     setTextColor(textColor)
                 }
 
-                licenses_holder.addView(this)
+                binding.licensesHolder.addView(root)
             }
         }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(licenses_toolbar, NavigationIcon.Arrow)
+        setupToolbar(binding.licensesToolbar, NavigationIcon.Arrow)
     }
 
     private fun initLicenses() = arrayOf(

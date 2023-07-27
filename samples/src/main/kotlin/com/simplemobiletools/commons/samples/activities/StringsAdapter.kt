@@ -1,9 +1,7 @@
 package com.simplemobiletools.commons.samples.activities
 
-import android.view.Menu
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
+import android.annotation.SuppressLint
+import android.view.*
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -13,9 +11,8 @@ import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.interfaces.ItemMoveCallback
 import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
-import com.simplemobiletools.commons.samples.R
+import com.simplemobiletools.commons.samples.databinding.ListItemBinding
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.list_item.view.*
 import java.util.*
 
 class StringsAdapter(
@@ -39,7 +36,7 @@ class StringsAdapter(
         }
     }
 
-    override fun getActionMenuId() = R.menu.cab_delete_only
+    override fun getActionMenuId() = com.simplemobiletools.commons.R.menu.cab_delete_only
 
     override fun prepareActionMode(menu: Menu) {}
 
@@ -49,7 +46,7 @@ class StringsAdapter(
         }
 
         when (id) {
-            R.id.cab_delete -> changeOrder()
+            com.simplemobiletools.commons.R.id.cab_delete -> changeOrder()
         }
     }
 
@@ -61,7 +58,7 @@ class StringsAdapter(
 
     override fun getItemKeyPosition(key: Int) = strings.indexOfFirst { it.hashCode() == key }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.list_item, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false).run { ViewHolder(root) }
 
     override fun onActionModeCreated() {}
 
@@ -76,7 +73,7 @@ class StringsAdapter(
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val item = strings[position]
         holder.bindView(item, true, true) { itemView, layoutPosition ->
-            setupView(itemView, item, holder)
+            setupView(ListItemBinding.bind(itemView), item, holder)
         }
         bindViewHolder(holder)
     }
@@ -88,16 +85,17 @@ class StringsAdapter(
         notifyDataSetChanged()
     }
 
-    private fun setupView(view: View, string: String, holder: ViewHolder) {
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setupView(view: ListItemBinding, string: String, holder: ViewHolder) {
         val isSelected = selectedKeys.contains(string.hashCode())
         view.apply {
-            item_frame.isSelected = isSelected
-            item_name.text = string
+            itemFrame.isSelected = isSelected
+            itemName.text = string
 
-            drag_handle.beVisibleIf(isChangingOrder)
+            dragHandle.beVisibleIf(isChangingOrder)
 
             if (isChangingOrder) {
-                drag_handle.setOnTouchListener { v, event ->
+                dragHandle.setOnTouchListener { v, event ->
                     if (event.action == MotionEvent.ACTION_DOWN) {
                         startReorderDragListener.requestDrag(holder)
                     }

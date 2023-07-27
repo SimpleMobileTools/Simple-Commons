@@ -5,10 +5,11 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.viewBinding
 import com.simplemobiletools.commons.models.SimpleListItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
-import kotlinx.android.synthetic.main.activity_main.*
+import com.simplemobiletools.commons.samples.databinding.ActivityMainBinding
 
 class MainActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = getString(R.string.smtco_app_name)
@@ -19,42 +20,34 @@ class MainActivity : BaseSimpleActivity() {
         return ids
     }
 
+    private val binding by viewBinding(ActivityMainBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        updateMaterialActivityViews(main_coordinator, main_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
+        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
 
-        main_color_customization.setOnClickListener {
+        binding.mainColorCustomization.setOnClickListener {
             startCustomizationActivity()
         }
-
-        //startCustomizationActivity()
-        //startAboutActivity(R.string.smtco_app_name, 3, "0.2", arrayListOf(FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons)), false)
-
-        /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")
-        StringsAdapter(this, letters, media_grid, media_refresh_layout) {
-        }.apply {
-            media_grid.adapter = this
-        }
-
-        media_refresh_layout.setOnRefreshListener {
-            Handler().postDelayed({
-                media_refresh_layout.isRefreshing = false
-            }, 1000L)
-        }*/
     }
 
     private fun launchBottomSheetDemo() {
         BottomSheetChooserDialog.createChooser(
             fragmentManager = supportFragmentManager,
-            title = R.string.please_select_destination,
+            title = com.simplemobiletools.commons.R.string.please_select_destination,
             items = arrayOf(
-                SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
-                SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
-                SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
+                SimpleListItem(1, com.simplemobiletools.commons.R.string.record_video, com.simplemobiletools.commons.R.drawable.ic_camera_vector),
+                SimpleListItem(
+                    2,
+                    com.simplemobiletools.commons.R.string.record_audio,
+                    com.simplemobiletools.commons.R.drawable.ic_microphone_vector,
+                    selected = true
+                ),
+                SimpleListItem(4, com.simplemobiletools.commons.R.string.choose_contact, com.simplemobiletools.commons.R.drawable.ic_add_person_vector)
             )
         ) {
             toast("Clicked ${it.id}")
@@ -63,6 +56,6 @@ class MainActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(main_toolbar)
+        setupToolbar(binding.mainToolbar)
     }
 }

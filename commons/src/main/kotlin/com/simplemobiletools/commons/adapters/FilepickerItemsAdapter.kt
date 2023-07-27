@@ -4,7 +4,6 @@ import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import android.view.Menu
-import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -15,12 +14,12 @@ import com.bumptech.glide.request.RequestOptions
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.databinding.ItemFilepickerListBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.item_filepicker_list.view.*
-import java.util.*
+import java.util.Locale
 
 class FilepickerItemsAdapter(
     activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
@@ -47,8 +46,8 @@ class FilepickerItemsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
-        holder.bindView(fileDirItem, true, false) { itemView, adapterPosition ->
-            setupView(itemView, fileDirItem)
+        holder.bindView(fileDirItem, allowSingleClick = true, allowLongClick = false) { itemView, adapterPosition ->
+            setupView(ItemFilepickerListBinding.bind(itemView), fileDirItem)
         }
         bindViewHolder(holder)
     }
@@ -74,26 +73,26 @@ class FilepickerItemsAdapter(
     override fun onViewRecycled(holder: ViewHolder) {
         super.onViewRecycled(holder)
         if (!activity.isDestroyed && !activity.isFinishing) {
-            Glide.with(activity).clear(holder.itemView.list_item_icon!!)
+            Glide.with(activity).clear(ItemFilepickerListBinding.bind(holder.itemView).listItemIcon)
         }
     }
 
-    private fun setupView(view: View, fileDirItem: FileDirItem) {
+    private fun setupView(view: ItemFilepickerListBinding, fileDirItem: FileDirItem) {
         view.apply {
-            list_item_name.text = fileDirItem.name
-            list_item_name.setTextColor(textColor)
-            list_item_name.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+            listItemName.text = fileDirItem.name
+            listItemName.setTextColor(textColor)
+            listItemName.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
 
-            list_item_details.setTextColor(textColor)
-            list_item_details.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+            listItemDetails.setTextColor(textColor)
+            listItemDetails.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
 
             if (fileDirItem.isDirectory) {
-                list_item_icon.setImageDrawable(folderDrawable)
-                list_item_details.text = getChildrenCnt(fileDirItem)
+                listItemIcon.setImageDrawable(folderDrawable)
+                listItemDetails.text = getChildrenCnt(fileDirItem)
             } else {
-                list_item_details.text = fileDirItem.size.formatSize()
+                listItemDetails.text = fileDirItem.size.formatSize()
                 val path = fileDirItem.path
-                val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").toLowerCase(Locale.getDefault()), { fileDrawable })
+                val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").lowercase(Locale.getDefault())) { fileDrawable }
                 val options = RequestOptions()
                     .signature(fileDirItem.getKey())
                     .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
@@ -101,12 +100,12 @@ class FilepickerItemsAdapter(
                     .error(placeholder)
 
                 var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
-                    val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
+                    val packageInfo = root.context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
                     if (packageInfo != null) {
                         val appInfo = packageInfo.applicationInfo
                         appInfo.sourceDir = path
                         appInfo.publicSourceDir = path
-                        appInfo.loadIcon(context.packageManager)
+                        appInfo.loadIcon(root.context.packageManager)
                     } else {
                         path
                     }
@@ -122,14 +121,14 @@ class FilepickerItemsAdapter(
                     }
 
                     if (itemToLoad.toString().isGif()) {
-                        Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(list_item_icon)
+                        Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(listItemIcon)
                     } else {
                         Glide.with(activity)
                             .load(itemToLoad)
                             .transition(withCrossFade())
                             .apply(options)
                             .transform(CenterCrop(), RoundedCorners(cornerRadius))
-                            .into(list_item_icon)
+                            .into(listItemIcon)
                     }
                 }
             }

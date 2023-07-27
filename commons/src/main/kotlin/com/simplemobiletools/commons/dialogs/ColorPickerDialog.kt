@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Color
 import android.view.MotionEvent
@@ -11,15 +12,16 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.databinding.DialogColorPickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isQPlus
 import com.simplemobiletools.commons.views.ColorPickerSquare
-import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 import java.util.LinkedList
 
 private const val RECENT_COLORS_NUMBER = 5
 
 // forked from https://github.com/yukuku/ambilwarna
+@SuppressLint("ClickableViewAccessibility")
 class ColorPickerDialog(
     val activity: Activity,
     color: Int,
@@ -45,28 +47,28 @@ class ColorPickerDialog(
     init {
         Color.colorToHSV(color, currentColorHsv)
 
-        val view = activity.layoutInflater.inflate(R.layout.dialog_color_picker, null).apply {
+        val view = DialogColorPickerBinding.inflate(activity.layoutInflater, null, false).apply {
             if (isQPlus()) {
-                isForceDarkAllowed = false
+                root.isForceDarkAllowed = false
             }
 
-            viewHue = color_picker_hue
-            viewSatVal = color_picker_square
-            viewCursor = color_picker_hue_cursor
+            viewHue = colorPickerHue
+            viewSatVal = colorPickerSquare
+            viewCursor = colorPickerHueCursor
 
-            viewNewColor = color_picker_new_color
-            viewTarget = color_picker_cursor
-            viewContainer = color_picker_holder
-            newHexField = color_picker_new_hex
+            viewNewColor = colorPickerNewColor
+            viewTarget = colorPickerCursor
+            viewContainer = colorPickerHolder
+            newHexField = colorPickerNewHex
 
             viewSatVal.setHue(getHue())
 
             viewNewColor.setFillWithStroke(getColor(), backgroundColor)
-            color_picker_old_color.setFillWithStroke(color, backgroundColor)
+            colorPickerOldColor.setFillWithStroke(color, backgroundColor)
 
             val hexCode = getHexCode(color)
-            color_picker_old_hex.text = "#$hexCode"
-            color_picker_old_hex.setOnLongClickListener {
+            colorPickerOldHex.text = "#$hexCode"
+            colorPickerOldHex.setOnLongClickListener {
                 activity.copyToClipboard(hexCode)
                 true
             }
@@ -152,33 +154,33 @@ class ColorPickerDialog(
             }
 
         builder.apply {
-            activity.setupDialogStuff(view, this) { alertDialog ->
+            activity.setupDialogStuff(view.root, this) { alertDialog ->
                 dialog = alertDialog
-                view.color_picker_arrow.applyColorFilter(textColor)
-                view.color_picker_hex_arrow.applyColorFilter(textColor)
+                view.colorPickerArrow.applyColorFilter(textColor)
+                view.colorPickerHexArrow.applyColorFilter(textColor)
                 viewCursor.applyColorFilter(textColor)
             }
         }
 
-        view.onGlobalLayout {
+        view.root.onGlobalLayout {
             moveHuePicker()
             moveColorPicker()
         }
     }
 
-    private fun View.setupRecentColors() {
-        val recentColors = baseConfig.colorPickerRecentColors
-        if (recentColors.isNotEmpty()) {
-            recent_colors.beVisible()
-            val squareSize = context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
-            recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
-                val recentColorView = ImageView(context)
+    private fun DialogColorPickerBinding.setupRecentColors() {
+        val colorPickerRecentColors = baseConfig.colorPickerRecentColors
+        if (colorPickerRecentColors.isNotEmpty()) {
+            recentColors.beVisible()
+            val squareSize = root.context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
+            colorPickerRecentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
+                val recentColorView = ImageView(root.context)
                 recentColorView.id = View.generateViewId()
                 recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
                 recentColorView.setFillWithStroke(recentColor, backgroundColor)
                 recentColorView.setOnClickListener { newHexField.setText(getHexCode(recentColor)) }
-                recent_colors.addView(recentColorView)
-                recent_colors_flow.addView(recentColorView)
+                recentColors.addView(recentColorView)
+                recentColorsFlow.addView(recentColorView)
             }
         }
     }
