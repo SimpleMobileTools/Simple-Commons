@@ -24,3 +24,5 @@
   **[] $VALUES;
   public *;
 }
+-dontwarn java.lang.invoke.StringConcatFactory
+-dontwarn javax.swing.tree.TreeNode
