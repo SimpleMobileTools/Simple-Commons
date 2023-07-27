@@ -177,6 +177,7 @@
     <string name="allow_notifications_incoming_calls">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar las llamadas entrantes.</string>
     <string name="allow_notifications_incoming_messages">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar los mensajes entrantes.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Conceder el permiso</string>
     <string name="permission_required">Permiso necesario</string>
     <!-- Renaming -->

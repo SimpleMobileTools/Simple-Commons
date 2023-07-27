@@ -177,6 +177,7 @@
     <string name="allow_notifications_incoming_calls">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи повиквания.</string>
     <string name="allow_notifications_incoming_messages">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи съобщения.</string>
     <string name="allow_alarm_scheduled_messages">Трябва да разрешите на приложението достъп до вътрешни аларми, в противен случай то не може да изпраща планирани съобщения.</string>
+    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Предоставяне на разрешение</string>
     <string name="permission_required">Изисква се разрешение</string>
     <!-- Renaming -->

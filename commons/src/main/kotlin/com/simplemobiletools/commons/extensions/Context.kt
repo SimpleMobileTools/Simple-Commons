@@ -15,10 +15,7 @@ import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.Build
-import android.os.Environment
-import android.os.Handler
-import android.os.Looper
+import android.os.*
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.BaseTypes
@@ -246,6 +243,8 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_MEDIA_IMAGES -> Manifest.permission.READ_MEDIA_IMAGES
     PERMISSION_READ_MEDIA_VIDEO -> Manifest.permission.READ_MEDIA_VIDEO
     PERMISSION_READ_MEDIA_AUDIO -> Manifest.permission.READ_MEDIA_AUDIO
+    PERMISSION_ACCESS_COARSE_LOCATION -> Manifest.permission.ACCESS_COARSE_LOCATION
+    PERMISSION_ACCESS_FINE_LOCATION -> Manifest.permission.ACCESS_FINE_LOCATION
     else -> ""
 }
 
@@ -327,6 +326,30 @@ fun Context.queryCursor(
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
+fun Context.queryCursor(
+    uri: Uri,
+    projection: Array<String>,
+    queryArgs: Bundle,
+    showErrors: Boolean = false,
+    callback: (cursor: Cursor) -> Unit
+) {
+    try {
+        val cursor = contentResolver.query(uri, projection, queryArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                do {
+                    callback(cursor)
+                } while (cursor.moveToNext())
+            }
+        }
+    } catch (e: Exception) {
+        if (showErrors) {
+            showErrorToast(e)
+        }
+    }
+}
+
 fun Context.getFilenameFromUri(uri: Uri): String {
     return if (uri.scheme == "file") {
         File(uri.toString()).name
@@ -351,12 +374,15 @@ fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
         hasProperStoredAndroidTreeUri(path) && isRestrictedSAFOnlyRoot(path) -> {
             getAndroidSAFUri(path)
         }
+
         hasProperStoredDocumentUriSdk30(path) && isAccessibleWithSAFSdk30(path) -> {
             createDocumentUriUsingFirstParentTreeUri(path)
         }
+
         isPathOnOTG(path) -> {
             getDocumentFile(path)?.uri
         }
+
         else -> {
             val uri = Uri.parse(path)
             if (uri.scheme == "content") {
@@ -454,6 +480,7 @@ fun Context.isOrWasThankYouInstalled(): Boolean {
             baseConfig.hadThankYouInstalled = true
             true
         }
+
         else -> false
     }
 }
@@ -552,30 +579,37 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
                 val minutes = -seconds / 60
                 getString(R.string.during_day_at).format(minutes / 60, minutes % 60)
             }
+
             seconds % YEAR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.years_before else R.plurals.by_years
                 resources.getQuantityString(base, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
             }
+
             seconds % MONTH_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.months_before else R.plurals.by_months
                 resources.getQuantityString(base, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
             }
+
             seconds % WEEK_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.weeks_before else R.plurals.by_weeks
                 resources.getQuantityString(base, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
             }
+
             seconds % DAY_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.days_before else R.plurals.by_days
                 resources.getQuantityString(base, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
             }
+
             seconds % HOUR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.hours_before else R.plurals.by_hours
                 resources.getQuantityString(base, seconds / HOUR_SECONDS, seconds / HOUR_SECONDS)
             }
+
             seconds % MINUTE_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.minutes_before else R.plurals.by_minutes
                 resources.getQuantityString(base, seconds / MINUTE_SECONDS, seconds / MINUTE_SECONDS)
             }
+
             else -> {
                 val base = if (showBefore) R.plurals.seconds_before else R.plurals.by_seconds
                 resources.getQuantityString(base, seconds, seconds)
@@ -1087,6 +1121,18 @@ fun Context.openNotificationSettings() {
         // You can open the general notification settings instead.
         val intent = Intent(Settings.ACTION_SETTINGS)
         startActivity(intent)
+    }
+}
+
+fun Context.openDeviceSettings() {
+    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+        data = Uri.fromParts("package", packageName, null)
+    }
+
+    try {
+        startActivity(intent)
+    } catch (e: Exception) {
+        showErrorToast(e)
     }
 }
 
