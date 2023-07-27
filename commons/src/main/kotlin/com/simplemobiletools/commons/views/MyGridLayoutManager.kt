@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.recyclerview.widget.GridLayoutManager
 
-class MyGridLayoutManager : GridLayoutManager {
+open class MyGridLayoutManager : GridLayoutManager {
     constructor(context: Context, spanCount: Int) : super(context, spanCount)
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
