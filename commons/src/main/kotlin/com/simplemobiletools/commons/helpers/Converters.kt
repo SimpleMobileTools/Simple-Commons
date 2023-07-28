@@ -19,21 +19,21 @@ class Converters {
     private val imType = object : TypeToken<List<IM>>() {}.type
 
     @TypeConverter
-    fun jsonToStringList(value: String?): ArrayList<String>? = gson.fromJson(value, stringType)
+    fun jsonToStringList(value: String): ArrayList<String> = gson.fromJson(value, stringType)
 
     @TypeConverter
-    fun stringListToJson(list: ArrayList<String>?): String? = gson.toJson(list)
+    fun stringListToJson(list: ArrayList<String>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToLongList(value: String?): ArrayList<Long>? = gson.fromJson(value, longType)
+    fun jsonToLongList(value: String): ArrayList<Long> = gson.fromJson(value, longType)
 
     @TypeConverter
-    fun longListToJson(list: ArrayList<Long>?): String? = gson.toJson(list)
+    fun longListToJson(list: ArrayList<Long>): String = gson.toJson(list)
 
     // some hacky converting is needed since PhoneNumber model has been added to proguard rules, but obfuscated json was stored in database
     // convert [{"a":"678910","b":2,"c":"","d":"678910","e":false}] to PhoneNumber(value=678910, type=2, label=, normalizedNumber=678910, isPrimary=false)
     @TypeConverter
-    fun jsonToPhoneNumberList(value: String?): ArrayList<PhoneNumber>? {
+    fun jsonToPhoneNumberList(value: String): ArrayList<PhoneNumber> {
         val numbers = gson.fromJson<ArrayList<PhoneNumber>>(value, numberType)
         return if (numbers.any { it.value == null }) {
             val phoneNumbers = ArrayList<PhoneNumber>()
@@ -49,29 +49,29 @@ class Converters {
     }
 
     @TypeConverter
-    fun phoneNumberListToJson(list: ArrayList<PhoneNumber>?): String? = gson.toJson(list)
+    fun phoneNumberListToJson(list: ArrayList<PhoneNumber>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToEmailList(value: String?): ArrayList<Email>? = gson.fromJson(value, emailType)
+    fun jsonToEmailList(value: String): ArrayList<Email> = gson.fromJson(value, emailType)
 
     @TypeConverter
-    fun emailListToJson(list: ArrayList<Email>?): String? = gson.toJson(list)
+    fun emailListToJson(list: ArrayList<Email>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToAddressList(value: String?): ArrayList<Address>? = gson.fromJson(value, addressType)
+    fun jsonToAddressList(value: String): ArrayList<Address> = gson.fromJson(value, addressType)
 
     @TypeConverter
-    fun addressListToJson(list: ArrayList<Address>?): String? = gson.toJson(list)
+    fun addressListToJson(list: ArrayList<Address>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToEventList(value: String?): ArrayList<Event>? = gson.fromJson(value, eventType)
+    fun jsonToEventList(value: String): ArrayList<Event> = gson.fromJson(value, eventType)
 
     @TypeConverter
-    fun eventListToJson(list: ArrayList<Event>?): String? = gson.toJson(list)
+    fun eventListToJson(list: ArrayList<Event>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToIMsList(value: String?): ArrayList<IM>? = gson.fromJson(value, imType)
+    fun jsonToIMsList(value: String): ArrayList<IM> = gson.fromJson(value, imType)
 
     @TypeConverter
-    fun IMsListToJson(list: ArrayList<IM>?): String? = gson.toJson(list)
+    fun IMsListToJson(list: ArrayList<IM>): String = gson.toJson(list)
 }
