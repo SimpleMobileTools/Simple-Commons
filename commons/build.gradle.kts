@@ -13,7 +13,6 @@ android {
     defaultConfig {
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         vectorDrawables.useSupportLibrary = true
-
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
