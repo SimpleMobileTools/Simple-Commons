@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.library)
     alias(libs.plugins.kotlinAndroid)
-    alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.parcelize)
     `maven-publish`
@@ -13,6 +13,10 @@ android {
     defaultConfig {
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         vectorDrawables.useSupportLibrary = true
+
+        ksp {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
     }
 
     buildTypes {
@@ -92,8 +96,8 @@ dependencies {
     api(libs.gson)
 
     api(libs.glide)
-    kapt(libs.glide.compiler)
+    ksp(libs.glide.compiler)
 
     api(libs.bundles.room)
-    kapt(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 }

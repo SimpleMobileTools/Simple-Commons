@@ -34,7 +34,7 @@ accompanist = "0.31.5-beta"
 #Glide
 glide = "4.15.1"
 #Room
-room = "2.5.2"
+room = "2.6.0-alpha02"
 #ezVcard
 ezVcard = "0.11.3"
 #gson
@@ -139,5 +139,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 library = { id = "com.android.library", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
