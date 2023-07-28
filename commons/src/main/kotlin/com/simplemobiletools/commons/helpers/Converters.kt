@@ -73,5 +73,5 @@ class Converters {
     fun jsonToIMsList(value: String): ArrayList<IM> = gson.fromJson(value, imType)
 
     @TypeConverter
-    fun IMsListToJson(list: ArrayList<IM>): String = gson.toJson(list)
+    fun iMsListToJson(list: ArrayList<IM>): String = gson.toJson(list)
 }
