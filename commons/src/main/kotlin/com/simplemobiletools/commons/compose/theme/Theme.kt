@@ -58,9 +58,7 @@ internal fun Theme(
 
             else -> darkColorScheme
         }
-
         colorScheme
-
     } else {
         darkColorScheme
     }
