@@ -28,7 +28,7 @@ internal fun Theme(
     val baseConfig = remember { context.config }
 
     val colorScheme = if (!view.isInEditMode) {
-        val colorScheme = when {
+        when {
             theme is Theme.SystemDefaultMaterialYou && isSPlus() -> {
                 if (isSystemInDarkTheme()) {
                     dynamicDarkColorScheme(context)
@@ -58,7 +58,6 @@ internal fun Theme(
 
             else -> darkColorScheme
         }
-        colorScheme
     } else {
         darkColorScheme
     }
