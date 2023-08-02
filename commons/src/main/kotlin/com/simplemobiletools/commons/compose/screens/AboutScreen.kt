@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 private val startingTitlePadding = Modifier.padding(horizontal = 4.dp)
 
 @Composable
-fun AboutScreen(
+internal fun AboutScreen(
     goBack: () -> Unit,
     helpUsSection: @Composable () -> Unit,
     aboutSection: @Composable () -> Unit,
