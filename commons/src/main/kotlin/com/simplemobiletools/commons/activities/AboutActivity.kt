@@ -7,7 +7,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.remember
@@ -17,13 +16,7 @@ import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.screens.*
-import com.simplemobiletools.commons.compose.screens.AboutSection
-import com.simplemobiletools.commons.compose.screens.HelpUsSection
-import com.simplemobiletools.commons.compose.screens.OtherSection
-import com.simplemobiletools.commons.compose.screens.SocialSection
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.databinding.ActivityAboutBinding
-import com.simplemobiletools.commons.databinding.ItemAboutBinding
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.RateStarsDialog
 import com.simplemobiletools.commons.extensions.*
