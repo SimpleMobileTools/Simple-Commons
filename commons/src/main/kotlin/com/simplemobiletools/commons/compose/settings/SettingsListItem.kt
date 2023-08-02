@@ -4,12 +4,15 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
@@ -25,6 +28,7 @@ fun SettingsListItem(
     @DrawableRes icon: Int,
     isImage: Boolean = false,
     click: (() -> Unit)? = null,
+    tint: Color? = null
 ) {
     ListItem(
         headlineContent = {
@@ -36,17 +40,38 @@ fun SettingsListItem(
             )
         },
         leadingContent = {
+            val imageSize = Modifier.size(48.dp)
+                .padding(8.dp)
             if (isImage) {
-                Image(
-                    modifier = Modifier.size(24.dp),
-                    painter = painterResource(id = icon),
-                    contentDescription = text,
-                )
+                if (tint != null) {
+                    Image(
+                        modifier = imageSize,
+                        painter = painterResource(id = icon),
+                        contentDescription = text,
+                        colorFilter = ColorFilter.tint(tint)
+                    )
+                } else {
+                    Image(
+                        modifier = imageSize,
+                        painter = painterResource(id = icon),
+                        contentDescription = text,
+                    )
+                }
             } else {
-                Icon(
-                    painter = painterResource(id = icon),
-                    contentDescription = text,
-                )
+                if (tint != null) {
+                    Icon(
+                        modifier = imageSize,
+                        painter = painterResource(id = icon),
+                        contentDescription = text,
+                        tint = tint
+                    )
+                } else {
+                    Icon(
+                        modifier = imageSize,
+                        painter = painterResource(id = icon),
+                        contentDescription = text,
+                    )
+                }
             }
         },
         modifier = Modifier

@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.compose.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -136,7 +137,7 @@ internal fun SocialSection(
         SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding)
     }) {
         SettingsListItem(click = onFacebookClick, text = stringResource(id = R.string.facebook), icon = R.drawable.ic_facebook_vector, isImage = true)
-        SettingsListItem(click = onGithubClick, text = stringResource(id = R.string.github), icon = R.drawable.ic_github_vector, isImage = true)
+        SettingsListItem(click = onGithubClick, text = stringResource(id = R.string.github), icon = R.drawable.ic_github_vector, isImage = true, tint = MaterialTheme.colorScheme.onSurface)
         SettingsListItem(click = onRedditClick, text = stringResource(id = R.string.reddit), icon = R.drawable.ic_reddit_vector, isImage = true)
         SettingsListItem(click = onTelegramClick, text = stringResource(id = R.string.telegram), icon = R.drawable.ic_telegram_vector, isImage = true)
         SettingsHorizontalDivider()
