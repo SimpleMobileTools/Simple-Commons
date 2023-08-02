@@ -28,7 +28,7 @@ internal fun AboutScreen(
         socialSection()
         otherSection()
         MadeWithLove()
-        Spacer(modifier = Modifier.padding(bottom = 24.dp))
+        Spacer(modifier = Modifier.padding(bottom = 8.dp))
     }
 }
 
