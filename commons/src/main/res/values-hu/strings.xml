@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Mégse</string>
-    <string name="close">Close</string>
+    <string name="close">Bezárás</string>
     <string name="back">Vissza</string>
     <string name="nothing">Semmi</string>
     <string name="later">Később</string>
@@ -77,7 +77,7 @@
     <string name="phone_storage">Telefon tárhelye</string>
     <string name="phone_storage_hidden">Telefon tárhelye (többi alkalmazás számára nem látható)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Szkennelés…</string>
     <!-- Events -->
     <string name="birthday">Születésnap</string>
     <string name="anniversary">Évforduló</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Oszlopszám növelése</string>
     <string name="reduce_column_count">Oszlopszám csökkentése</string>
     <string name="column_count">Oszlopszám</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Sorok száma</string>
     <string name="portrait_column_count">Oszlopszám álló módban</string>
     <string name="landscape_column_count">Oszlopszám fekvő módban</string>
     <string name="change_cover_image">Borítókép módosítása</string>
@@ -110,8 +110,8 @@
         <item quantity="other">%d oszlop</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d sor</item>
+        <item quantity="other">%d sorok</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Letiltott telefonszámok kezelése</string>
@@ -126,9 +126,9 @@
     <string name="set_as_default">Beállítás alapértelmezettként</string>
     <string name="block_confirmation">Biztos, hogy letiltja a következőt: „%s”\?</string>
     <string name="block_not_stored_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Rejtett számokról érkező hívások blokkolása</string>
     <string name="block_not_stored_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Rejtett számok üzeneteinek blokkolása</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
     <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
     <!-- Favorites -->
@@ -140,7 +140,7 @@
     <string name="search">Keresés</string>
     <string name="search_in_placeholder">Keresés itt: %s</string>
     <string name="type_2_characters">Legalább 2 karaktert írjon be a keresés indításához.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Keresősáv megjelenítése</string>
     <string name="search_contacts">Névjegyek keresése</string>
     <string name="search_favorites">Kedvencek keresése</string>
     <string name="search_apps">Alkalmazások keresése</string>
@@ -169,16 +169,16 @@
     <string name="no_camera_permissions">Kamera engedély szükséges</string>
     <string name="no_audio_permissions">Hang engedély szükséges</string>
     <string name="no_permission">Nem szükséges engedély</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Engedélyeznie kell, hogy az alkalmazás értesítéseket jelenítsen meg, különben nem tud emlékeztetőket megjeleníteni.</string>
+    <string name="allow_notifications_files">Engedélyeznie kell, hogy az alkalmazás értesítéseket jelenítsen meg, különben nem tudja megjeleníteni a folyamatjelző sávot.</string>
+    <string name="allow_notifications_music_player">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja lejátszani a zenéket.</string>
+    <string name="allow_notifications_voice_recorder">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tud hangfelvételt készíteni.</string>
+    <string name="allow_notifications_incoming_calls">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja megjeleníteni a bejövő hívásokat.</string>
+    <string name="allow_notifications_incoming_messages">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja megjeleníteni a bejövő üzeneteket.</string>
+    <string name="allow_alarm_scheduled_messages">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a belső riasztásokhoz, különben nem tud ütemezett üzeneteket küldeni.</string>
+    <string name="allow_location_permission">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a tartózkodási helyéhez, különben nem fogja tudni azt.</string>
+    <string name="grant_permission">Engedély megadása</string>
+    <string name="permission_required">Engedély szükséges</string>
     <!-- Renaming -->
     <string name="rename_file">Fájl átnevezése</string>
     <string name="rename_folder">Mappa átnevezése</string>
@@ -390,9 +390,9 @@
     <string name="redo">Mégis</string>
     <string name="print">Nyomtatás</string>
     <string name="print_pro">Nyomtatás (Pro)</string>
-    <string name="shortcut">Indító</string>
-    <string name="create_shortcut">Indító létrehozása</string>
-    <string name="create_shortcut_pro">Indító létrehozása (Pro)</string>
+    <string name="shortcut">Parancsikon</string>
+    <string name="create_shortcut">Parancsikon létrehozása</string>
+    <string name="create_shortcut_pro">Parancsikon létrehozása (Pro)</string>
     <string name="add_number_to_contact">Szám hozzáadása névjegyhez</string>
     <string name="view_contact_details">Névjegy részleteinek megtekintése</string>
     <string name="call_from_sim_1">Hívás az 1. SIM-ről</string>
@@ -415,7 +415,7 @@
     <string name="last_modified">Utolsó módosítás</string>
     <string name="date_created">Létrehozás dátuma</string>
     <string name="date_taken">Készítés dátuma</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Hozzáadás dátuma</string>
     <string name="title">Cím</string>
     <string name="filename">Fájlnév</string>
     <string name="extension">Kiterjesztés</string>
@@ -478,9 +478,9 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="empty_password_new">Adjon meg egy jelszót</string>
+    <string name="empty_password">Adja meg a jelszót</string>
+    <string name="invalid_password">Helytelen jelszó</string>
     <!-- Times -->
     <string name="yesterday">Tegnap</string>
     <string name="today">Ma</string>
@@ -661,7 +661,7 @@
     <string name="use_24_hour_time_format">24 órás idő formátum használata</string>
     <string name="change_date_and_time_format">Dátum- és időformátum módosítása</string>
     <string name="sunday_first">A hét kezdete a vasárnap</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Kezdje a hetet</string>
     <string name="widgets">Modulok</string>
     <string name="use_same_snooze">Mindig ugyanazt a szundi időt használja</string>
     <string name="snooze_time">Szundi ideje</string>
@@ -723,7 +723,7 @@
     <string name="show_the_recycle_bin">Lomtár megjelenítése</string>
     <string name="hide_the_recycle_bin">Lomtár elrejtése</string>
     <string name="open_the_recycle_bin">Lomtár megnyitása</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Hagyja ki a Lomtárat, törölje közvetlenül a fájlokat</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d elem áthelyezése a Lomtárba</item>
         <item quantity="other">%d elem áthelyezése a Lomtárba</item>
@@ -740,10 +740,17 @@
     <string name="no_entries_for_importing">Az importáláshoz nem találhatók bejegyzések</string>
     <string name="no_new_entries_for_importing">Az importáláshoz nem találhatók bejegyzések</string>
     <string name="no_entries_for_exporting">Az exportáláshoz nem találhatók bejegyzések</string>
-    <string name="backups">Backups</string>
-    <string name="enable_automatic_backups">Enable automatic backups</string>
-    <string name="manage_automatic_backups">Manage automatic backups</string>
-    <string name="date_time_pattern_info">You can use the following patterns to name your file automatically:\n\n%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="backups">Biztonsági mentések</string>
+    <string name="enable_automatic_backups">Automatikus biztonsági mentések engedélyezése</string>
+    <string name="manage_automatic_backups">Automatikus biztonsági mentések kezelése</string>
+    <string name="date_time_pattern_info">A következő mintákat használhatja a fájl automatikus elnevezéséhez:
+\n
+\n%Y - év
+\n%M - hónap
+\n%D - nap
+\n%h - óra
+\n%m - perc
+\n%s - másodperc</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Úgy tűnik, hogy az eszközéhez egy USB-s eszköz van csatlakoztatva. További engedélyeket kell megadnia, hogy a fájlok megfelelően jelenjenek meg.</string>
@@ -816,11 +823,19 @@
     <string name="more_info">További információk</string>
     <string name="upgrade">Frissítés</string>
     <string name="upgrade_calendar">A helyben tárolt eseményeket kézzel kell átköltöztetni egy .ics fájl exportálásával, majd importálással. Az exportálás/importálás gomb a főképernyő menüjében található.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Üdv,
+    <string name="upgraded_from_free_gallery">Helló,
 \n
-\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha elégedett ezzel, és átköltöztette az adatait, akkor eltávolíthatja a régi, ingyenes verziót, hogy nehogy azt indítsa el véletlenül, ha már nincs rá szüksége.
+\núgy tűnik, hogy most frissítettél az ingyenes verzióról. Ha elégedett vagy ezzel, és esetleg átvitted a beállításaidat és a kedvenceidet, akkor a régi ingyenes verziót eltávolíthatod, hogy elkerüld a véletlen elindítását, mivel már nem lesz rá szükséged, ez megakadályozza azt is, hogy ez a párbeszédpanel megjelenjen.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_to_pro_gallery">Helló,
+\n
+\núgy tűnik, hogy már rendelkezel az alkalmazás Pro verziójával. Ha elégedett vagy ezzel, és esetleg átvitted a beállításaidat és a kedvenceidet, akkor a régi ingyenes verziót eltávolíthatod, hogy elkerüld a véletlen elindítását, mivel már nem lesz rá szükséged.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_from_free">Helló,
+\n
+\núgy tűnik, hogy most frissítettél az ingyenes verzióról. Ha elégedett vagy ezzel, és esetleg átmigráltad az adataidat, eltávolíthatod a régi ingyenes verziót, hogy elkerüld a véletlen elindítását, mivel már nem lesz rá szükséged, ez megakadályozza, hogy ez a párbeszédpanel megjelenjen.
 \n
 \nKöszönöm!</string>
     <string name="upgraded_to_pro">Üdv,
@@ -828,25 +843,25 @@
 \nÚgy néz ki, hogy már rendelkezik a Pro verzióval. Ha elégedett vele, és átköltöztette az adatait, akkor eltávolíthatja a régi, ingyenes verziót, hogy nehogy azt indítsa el véletlenül, ha már nincs rá szüksége.
 \n
 \nKöszönöm!</string>
-    <string name="upgraded_from_free_calendar">Üdv,
+    <string name="upgraded_from_free_calendar">Helló,
 \n
-\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a helyileg tárolt eseményeit, akkor ezt kézzel kell megtennie, exportálja egy .ics fájlba az ingyenes verzióból, majd importálja a felső menüből.
+\núgy tűnik, hogy most frissítettél az ingyenes verzióról. Ha át akarod vinni a helyben tárolt eseményeidet, akkor azt manuálisan kell megtenned úgy, hogy az ingyenes alkalmazás verzióban .ics fájlba exportálod őket, és a felső menüben importálod ide.
 \n
-\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
-\n
-\nKöszönöm!</string>
-    <string name="upgraded_from_free_contacts">Üdv,
-\n
-\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha voltak névjegyei a(z) „%s” alatt, akkor az átköltöztetéshez kézzel kell exportálnia egy .vcf fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
-\n
-\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
+\nHa elégedett a Pro verzió beállításaival, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
 \n
 \nKöszönöm!</string>
-    <string name="upgraded_from_free_notes">Üdv,
+    <string name="upgraded_from_free_contacts">Helló,
 \n
-\nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a jegyzeteit, akkor kézzel kell exportálnia egy fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
+\núgy tűnik, hogy most frissítettél az ingyenes verzióról. Ha voltak névjegyeid a(z) „%s” alatt, akkor azokat manuálisan kell átköltöztetned az ingyenes verzióból .vcf fájlba történő exportálással és a felső menüben történő importálással.
 \n
-\nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
+\nHa elégedett vagy a Pro verzió beállításaival, eltávolíthatod a régi ingyenes verziót, mivel arra már nem lesz szükséged, ez megakadályozza ezt a párbeszédpanel megjelenését is.
+\n
+\nKöszönöm!</string>
+    <string name="upgraded_from_free_notes">Helló,
+\n
+\núgy tűnik, hogy most frissítettél az ingyenes verzióról. Ha át akarod vinni a jegyzeteidet, akkor azt manuálisan kell megtenned, úgy, hogy az ingyenes verzióban egy fájlba exportálod őket, és a felső menüben importálod ide.
+\n
+\nHa elégedett vagy a Pro verzió beállításaival, eltávolíthatod a régi ingyenes verziót, mivel arra már nem lesz szükséged, ez megakadályozza ezt a párbeszédpanel megjelenését is.
 \n
 \nKöszönöm!</string>
     <!-- About -->
@@ -1024,7 +1039,7 @@
     <string name="why_upgrade_footer">100% pénzvisszatérítési garancia</string>
     <string name="why_upgrade_footer_one_time_payment">Egyszeri fizetés</string>
     <string name="why_upgrade_improved_design">Továbbfejlesztett megjelenés</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Sok más fejlesztés</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fejlett képszerkesztő</string>
     <string name="why_upgrade_advanced_photo_video_editor">Fejlett fénykép- és videószerkesztő</string>
@@ -1093,12 +1108,12 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF megjelenítő)</string>
     <string name="m3u_parser_title">M3U Parser (m3u lejátszási listák kezelése)</string>
     <string name="android_lame_title">AndroidLame (mp3 kódoló)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (ZIP tömörítés és dekompresszió)</string>
     <!-- Trial -->
     <string name="trial_expired">A próbaidőszak lejárt</string>
     <string name="start_free_trial">Ingyenes próbaidőszak elkezdése</string>
     <string name="trial_expires_soon">A próbaverziója hamarosan lejár.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Az alkalmazás feloldása egy utolsó napra</string>
     <string name="welcome_to_app_name">Üdvözli a(z) %s!</string>
     <string name="trial_start_description">Köszönjük, hogy az alkalmazásunkat használja. Ezt a feloldott verziót <font color="#FFFFFF">%d napig</font> használhatja. Amint a próbaverzió véget ér, fontolja meg a Pro verzióra történő frissítést. Számos új funkcióval és modern dizájnnal rendelkezik, nincsenek benne reklámok, és sok más fejlesztést tartalmaz.
 \n
