@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
-val startingTitlePadding = Modifier.padding(horizontal = 4.dp)
+private val startingTitlePadding = Modifier.padding(horizontal = 4.dp)
 
 @Composable
 fun AboutScreen(
