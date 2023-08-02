@@ -1,11 +1,18 @@
 package com.simplemobiletools.commons.samples.activities
 
+import android.content.Intent
 import android.os.Bundle
+import com.simplemobiletools.commons.activities.AboutActivity
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
+import com.simplemobiletools.commons.helpers.APP_ICON_IDS
+import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
+import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.SimpleListItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
@@ -33,6 +40,26 @@ class MainActivity : BaseSimpleActivity() {
         binding.mainColorCustomization.setOnClickListener {
             startCustomizationActivity()
         }
+        binding.bottomSheetChooser.setOnClickListener {
+            launchAbout()
+        }
+    }
+
+    private fun launchAbout() {
+        val licenses = LICENSE_AUTOFITTEXTVIEW
+
+        val faqItems = arrayListOf(
+            FAQItem(com.simplemobiletools.commons.R.string.faq_1_title_commons, com.simplemobiletools.commons.R.string.faq_1_text_commons),
+            FAQItem(com.simplemobiletools.commons.R.string.faq_1_title_commons, com.simplemobiletools.commons.R.string.faq_1_text_commons),
+            FAQItem(com.simplemobiletools.commons.R.string.faq_4_title_commons, com.simplemobiletools.commons.R.string.faq_4_text_commons)
+        )
+
+        if (!resources.getBoolean(com.simplemobiletools.commons.R.bool.hide_google_relations)) {
+            faqItems.add(FAQItem(com.simplemobiletools.commons.R.string.faq_2_title_commons, com.simplemobiletools.commons.R.string.faq_2_text_commons))
+            faqItems.add(FAQItem(com.simplemobiletools.commons.R.string.faq_6_title_commons, com.simplemobiletools.commons.R.string.faq_6_text_commons))
+        }
+
+        startAboutActivity(R.string.smtco_app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
     }
 
     private fun launchBottomSheetDemo() {

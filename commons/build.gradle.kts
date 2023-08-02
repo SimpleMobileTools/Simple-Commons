@@ -48,6 +48,9 @@ android {
         kotlinOptions.jvmTarget = project.libs.versions.app.build.kotlinJVMTarget.get()
         kotlinOptions.freeCompilerArgs = listOf(
             "-opt-in=kotlin.RequiresOptIn",
+            "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+            "-opt-in=androidx.compose.material.ExperimentalMaterialApi",
+            "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
             "-Xcontext-receivers"
         )
     }
