@@ -5,10 +5,8 @@ import android.text.Html
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -22,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.extensions.removeUnderlines
@@ -39,30 +38,35 @@ internal fun FAQScreen(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
         contentPadding = PaddingValues(bottom = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        items(faqItems) { faqItem ->
-            ListItem(headlineContent = {
-                val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
-                Text(
-                    text = text,
-                    modifier = Modifier.fillMaxWidth(),
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }, supportingContent = {
-                if (faqItem.text is Int) {
-                    val text = fromHtml(stringResource(id = faqItem.text))
-                    LinkifyText(
-                        text = { text },
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                } else {
+        itemsIndexed(faqItems) { index, faqItem ->
+            Column {
+                ListItem(headlineContent = {
+                    val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
                     Text(
-                        text = faqItem.text as String,
+                        text = text,
                         modifier = Modifier.fillMaxWidth(),
+                        color = MaterialTheme.colorScheme.primary
                     )
+                }, supportingContent = {
+                    if (faqItem.text is Int) {
+                        val text = fromHtml(stringResource(id = faqItem.text))
+                        LinkifyText(
+                            text = { text },
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    } else {
+                        Text(
+                            text = faqItem.text as String,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                })
+                Spacer(modifier = Modifier.padding(bottom = 2.dp))
+                if (index != faqItems.lastIndex) {
+                    SettingsHorizontalDivider()
                 }
-            })
+            }
         }
     }
 }
@@ -109,4 +113,3 @@ private fun FAQScreenPreview() {
         )
     }
 }
-
