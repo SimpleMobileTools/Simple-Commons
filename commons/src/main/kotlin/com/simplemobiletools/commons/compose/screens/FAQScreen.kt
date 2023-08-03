@@ -83,8 +83,10 @@ private fun LinkifyText(modifier: Modifier = Modifier, text: () -> Spanned) {
         TextView(context)
     }
     val textColor = MaterialTheme.colorScheme.onSurface
+    val linkTextColor = MaterialTheme.colorScheme.primary
     AndroidView(modifier = modifier, factory = { customLinkifyTextView }) { textView ->
         textView.setTextColor(textColor.toArgb())
+        textView.setLinkTextColor(linkTextColor.toArgb())
         textView.text = text()
         textView.movementMethod = LinkMovementMethod.getInstance()
         customLinkifyTextView.removeUnderlines()
