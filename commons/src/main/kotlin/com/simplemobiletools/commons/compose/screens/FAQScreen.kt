@@ -43,32 +43,38 @@ internal fun FAQScreen(
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
             Column {
-                ListItem(headlineContent = {
-                    val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
-                    Text(
-                        text = text,
-                        modifier = Modifier.fillMaxWidth(),
-                        color = MaterialTheme.colorScheme.primary,
-                        lineHeight = 16.sp,
-                        fontSize = 14.sp
-                    )
-                }, supportingContent = {
-                    if (faqItem.text is Int) {
-                        val text = fromHtml(stringResource(id = faqItem.text))
-                        LinkifyText(
-                            text = { text },
-                            modifier = Modifier.fillMaxWidth(),
-                            fontSize = 14.sp
-                        )
-                    } else {
+                ListItem(
+                    headlineContent = {
+                        val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
                         Text(
-                            text = faqItem.text as String,
-                            modifier = Modifier.fillMaxWidth(),
-                            fontSize = 14.sp
+                            text = text,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 4.dp),
+                            color = MaterialTheme.colorScheme.primary,
+                            lineHeight = 16.sp,
+                            fontSize = 14.sp,
                         )
-                    }
-                })
-                Spacer(modifier = Modifier.padding(bottom = 2.dp))
+                    },
+                    supportingContent = {
+                        if (faqItem.text is Int) {
+                            val text = fromHtml(stringResource(id = faqItem.text))
+                            LinkifyText(
+                                text = { text },
+                                modifier = Modifier.fillMaxWidth(),
+                                fontSize = 14.sp
+                            )
+                        } else {
+                            Text(
+                                text = faqItem.text as String,
+                                modifier = Modifier.fillMaxWidth(),
+                                fontSize = 14.sp
+                            )
+                        }
+                    },
+                    modifier = Modifier.padding(horizontal = 4.dp)
+                )
+                Spacer(modifier = Modifier.padding(bottom = 4.dp))
                 if (index != faqItems.lastIndex) {
                     SettingsHorizontalDivider()
                 }
