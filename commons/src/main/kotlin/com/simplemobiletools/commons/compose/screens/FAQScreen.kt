@@ -16,7 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -46,7 +48,9 @@ internal fun FAQScreen(
                     Text(
                         text = text,
                         modifier = Modifier.fillMaxWidth(),
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.colorScheme.primary,
+                        lineHeight = 16.sp,
+                        fontSize = 14.sp
                     )
                 }, supportingContent = {
                     if (faqItem.text is Int) {
@@ -54,11 +58,13 @@ internal fun FAQScreen(
                         LinkifyText(
                             text = { text },
                             modifier = Modifier.fillMaxWidth(),
+                            fontSize = 14.sp
                         )
                     } else {
                         Text(
                             text = faqItem.text as String,
                             modifier = Modifier.fillMaxWidth(),
+                            fontSize = 14.sp
                         )
                     }
                 })
@@ -81,7 +87,7 @@ private fun fromHtml(source: String): Spanned {
 }
 
 @Composable
-private fun LinkifyText(modifier: Modifier = Modifier, text: () -> Spanned) {
+private fun LinkifyText(modifier: Modifier = Modifier, text: () -> Spanned, fontSize: TextUnit) {
     val context = LocalContext.current
     val customLinkifyTextView = remember {
         TextView(context)
@@ -92,6 +98,7 @@ private fun LinkifyText(modifier: Modifier = Modifier, text: () -> Spanned) {
         textView.setTextColor(textColor.toArgb())
         textView.setLinkTextColor(linkTextColor.toArgb())
         textView.text = text()
+        textView.textSize = fontSize.value
         textView.movementMethod = LinkMovementMethod.getInstance()
         customLinkifyTextView.removeUnderlines()
     }
