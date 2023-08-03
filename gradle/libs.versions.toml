@@ -30,7 +30,7 @@ composeActivity = "1.8.0-alpha06"
 compose = "1.6.0-alpha02"
 composeCompiler = "1.5.1"
 composeMaterial3 = "1.2.0-alpha04"
-accompanist = "0.31.5-beta"
+accompanist = "0.31.6-rc"
 #Glide
 glide = "4.15.1"
 #Room
@@ -40,7 +40,7 @@ ezVcard = "0.11.3"
 #gson
 gson = "2.10.1"
 #jodaTime
-jodaTime = "2.12.4"
+jodaTime = "2.12.5"
 #Gradle
 gradlePlugins-agp = "8.1.0"
 #build
