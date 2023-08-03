@@ -71,7 +71,6 @@ internal fun SettingsScaffoldTopBar(
     )
 }
 
-
 @Composable
 @MyDevices
 private fun SettingsScaffoldTopBarPreview() {

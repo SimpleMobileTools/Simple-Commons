@@ -61,8 +61,6 @@ fun SettingsScaffold(
     }
 }
 
-
-
 @MyDevices
 @Composable
 private fun SettingsScaffoldPreview() {

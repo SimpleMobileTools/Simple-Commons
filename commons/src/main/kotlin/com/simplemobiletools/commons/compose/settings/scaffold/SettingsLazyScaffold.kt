@@ -81,7 +81,6 @@ fun SettingsLazyScaffold(
     }
 }
 
-
 @MyDevices
 @Composable
 private fun SettingsLazyScaffoldPreview() {
