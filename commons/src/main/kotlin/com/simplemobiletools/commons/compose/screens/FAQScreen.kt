@@ -87,7 +87,7 @@ private fun fromHtml(source: String): Spanned {
 }
 
 @Composable
-private fun LinkifyText(modifier: Modifier = Modifier, text: () -> Spanned, fontSize: TextUnit) {
+private fun LinkifyText(modifier: Modifier = Modifier, fontSize: TextUnit, text: () -> Spanned) {
     val context = LocalContext.current
     val customLinkifyTextView = remember {
         TextView(context)
