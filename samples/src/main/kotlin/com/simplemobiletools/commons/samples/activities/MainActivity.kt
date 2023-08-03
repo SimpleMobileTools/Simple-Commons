@@ -1,16 +1,11 @@
 package com.simplemobiletools.commons.samples.activities
 
-import android.content.Intent
 import android.os.Bundle
-import com.simplemobiletools.commons.activities.AboutActivity
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
-import com.simplemobiletools.commons.helpers.APP_ICON_IDS
-import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.SimpleListItem

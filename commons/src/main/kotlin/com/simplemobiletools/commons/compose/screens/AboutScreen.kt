@@ -10,7 +10,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.settings.*
+import com.simplemobiletools.commons.compose.settings.SettingsGroup
+import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
+import com.simplemobiletools.commons.compose.settings.SettingsListItem
+import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
+import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 private val startingTitlePadding = Modifier.padding(start = 64.dp)

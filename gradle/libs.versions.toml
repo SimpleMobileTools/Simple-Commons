@@ -1,6 +1,7 @@
 [versions]
 #jetbrains
 kotlin = "1.9.0"
+kotlin-immutable-collections = "0.3.5"
 #KSP
 kotlinxSerializationJson = "1.5.1"
 ksp = "1.9.0-1.0.12"
@@ -103,6 +104,7 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 joda-time = { module = "joda-time:joda-time", version.ref = "jodaTime" }
 #Kotlin
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlin-immutable-collections = {module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-immutable-collections"}
 [bundles]
 compose = [
     "compose-activity",

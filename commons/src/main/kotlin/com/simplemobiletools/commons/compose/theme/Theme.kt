@@ -59,7 +59,7 @@ internal fun Theme(
             else -> darkColorScheme
         }
     } else {
-        darkColorScheme
+        previewColorScheme()
     }
 
     SideEffect {
@@ -75,5 +75,12 @@ internal fun Theme(
         colorScheme = colorScheme,
         content = content,
     )
+}
+
+@Composable
+private fun previewColorScheme() = if (isSystemInDarkTheme()) {
+    darkColorScheme
+} else {
+    lightColorScheme
 }
 
