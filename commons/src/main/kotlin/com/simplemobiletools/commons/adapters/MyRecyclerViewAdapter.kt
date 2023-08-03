@@ -300,6 +300,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         return ViewHolder(view)
     }
 
+    protected fun createViewHolder(view: View): ViewHolder {
+        return ViewHolder(view)
+    }
+
     protected fun bindViewHolder(holder: ViewHolder) {
         holder.itemView.tag = holder
     }
