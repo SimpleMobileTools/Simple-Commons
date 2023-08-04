@@ -172,12 +172,12 @@
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
     <string name="no_permission">Без дозволу</string>
     <string name="allow_notifications_reminders">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати нагадування.</string>
-    <string name="allow_full_screen_notifications_reminders">You should allow the app to display full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You should allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати індикатор виконання.</string>
     <string name="allow_notifications_music_player">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе відтворювати пісні.</string>
     <string name="allow_notifications_voice_recorder">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе записувати аудіо.</string>
     <string name="allow_notifications_incoming_calls">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app to display full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні повідомлення.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
