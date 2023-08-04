@@ -5,7 +5,6 @@ import android.content.Context
 import android.provider.MediaStore
 import android.text.format.DateFormat
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.R
@@ -18,8 +17,8 @@ import com.simplemobiletools.commons.models.Android30RenameFormat
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Calendar
+import java.util.Locale
 
 class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
@@ -29,10 +28,11 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
-    private val binding = DialogRenameItemsPatternBinding.inflate(LayoutInflater.from(context), this, false)
+    private lateinit var binding: DialogRenameItemsPatternBinding
 
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = DialogRenameItemsPatternBinding.bind(this)
         context.updateTextColors(binding.renameItemsHolder)
     }
 
@@ -214,12 +214,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                                     activity.scanPathsRecursively(arrayListOf(newPath))
                                 }
                             }
+
                             Android30RenameFormat.CONTENT_RESOLVER -> {
                                 val values = ContentValues().apply {
                                     put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)
                                 }
                                 context.contentResolver.update(uri, values, null, null)
                             }
+
                             Android30RenameFormat.NONE -> {
                                 activity.runOnUiThread {
                                     callback(true)

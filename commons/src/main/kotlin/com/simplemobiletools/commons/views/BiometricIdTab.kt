@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import androidx.biometric.auth.AuthPromptHost
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.simplemobiletools.commons.databinding.TabBiometricIdBinding
@@ -14,9 +13,10 @@ import com.simplemobiletools.commons.interfaces.SecurityTab
 class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs), SecurityTab {
     private lateinit var hashListener: HashListener
     private lateinit var biometricPromptHost: AuthPromptHost
-    val binding = TabBiometricIdBinding.inflate(LayoutInflater.from(context), this, true)
+    private lateinit var binding: TabBiometricIdBinding
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabBiometricIdBinding.bind(this)
         context.updateTextColors(binding.biometricLockHolder)
         val textColor = if (context.isWhiteTheme()) {
             DARK_GREY

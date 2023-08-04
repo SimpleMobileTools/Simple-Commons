@@ -21,10 +21,12 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
     private var pin = ""
     lateinit var hashListener: HashListener
 
-    private val binding = TabPinBinding.inflate(LayoutInflater.from(context), this, false)
+    private lateinit var binding: TabPinBinding
 
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabPinBinding.bind(this)
+
         context.updateTextColors(binding.pinLockHolder)
 
         binding.pin0.setOnClickListener { addNumber("0") }
