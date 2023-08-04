@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Handler
 import android.provider.Settings
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import androidx.biometric.auth.AuthPromptHost
 import com.github.ajalt.reprint.core.AuthenticationFailureReason
@@ -24,10 +23,11 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
     lateinit var hashListener: HashListener
 
-    private val binding = TabFingerprintBinding.inflate(LayoutInflater.from(context), this, true)
+    private lateinit var binding: TabFingerprintBinding
 
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabFingerprintBinding.bind(this)
         val textColor = context.getProperTextColor()
         context.updateTextColors(binding.fingerprintLockHolder)
         binding.fingerprintImage.applyColorFilter(textColor)

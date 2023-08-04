@@ -15,13 +15,11 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/dialog_tab_simple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/simple_renaming" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/dialog_tab_pattern"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/pattern_renaming" />
