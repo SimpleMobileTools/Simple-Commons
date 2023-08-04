@@ -174,10 +174,12 @@
     <string name="no_audio_permissions">Требуется разрешение для доступа аудиосистеме</string>
     <string name="no_permission">Отсутствует разрешение</string>
     <string name="allow_notifications_reminders">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать напоминания.</string>
+    <string name="allow_full_screen_notifications_reminders">You should allow the app to display full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Необходимо разрешить приложению отображать уведомления, иначе оно не может показывать индикатор выполнения.</string>
     <string name="allow_notifications_music_player">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет воспроизводить композиции.</string>
     <string name="allow_notifications_voice_recorder">Необходимо разрешить приложению отображать уведомления, иначе оно не может записывать звук.</string>
     <string name="allow_notifications_incoming_calls">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие вызовы.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app to display full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
     <string name="allow_alarm_scheduled_messages">Необходимо разрешить приложению доступ к внутренним будильникам, иначе оно не сможет отправлять запланированные сообщения.</string>
     <string name="allow_location_permission">Необходимо разрешить приложению доступ к вашему местоположению, иначе оно не будет его знать.</string>

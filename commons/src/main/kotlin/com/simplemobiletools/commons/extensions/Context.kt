@@ -1145,3 +1145,17 @@ fun Context.openRequestExactAlarmSettings(appId: String) {
         startActivity(intent)
     }
 }
+
+fun Context.canUseFullScreenIntent(): Boolean {
+    return !isUpsideDownCakePlus() || notificationManager.canUseFullScreenIntent()
+}
+
+@RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+fun Context.openFullScreenIntentSettings(appId: String) {
+    if (isUpsideDownCakePlus()) {
+        val uri = Uri.fromParts("package", appId, null)
+        val intent = Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT)
+        intent.data = uri
+        startActivity(intent)
+    }
+}

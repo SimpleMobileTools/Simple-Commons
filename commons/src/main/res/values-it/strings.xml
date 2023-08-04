@@ -171,10 +171,12 @@
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
     <string name="no_permission">Nessun permesso</string>
     <string name="allow_notifications_reminders">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i promemoria.</string>
+    <string name="allow_full_screen_notifications_reminders">You should allow the app to display full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">È necessario consentire all\'applicazione di visualizzare le notifiche, altrimenti non potrà mostrare la barra di avanzamento.</string>
     <string name="allow_notifications_music_player">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà riprodurre i brani.</string>
     <string name="allow_notifications_voice_recorder">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà registrare l\'audio.</string>
     <string name="allow_notifications_incoming_calls">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare le chiamate in arrivo.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app to display full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i messaggi in arrivo.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>

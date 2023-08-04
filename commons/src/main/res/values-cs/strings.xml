@@ -172,10 +172,12 @@
     <string name="no_audio_permissions">Je vyžadováno oprávnění pro přístup ke zvuku</string>
     <string name="no_permission">Žádné oprávnění</string>
     <string name="allow_notifications_reminders">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat upomínky.</string>
+    <string name="allow_full_screen_notifications_reminders">You should allow the app to display full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat stav postupu.</string>
     <string name="allow_notifications_music_player">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct přehrávat hudbu.</string>
     <string name="allow_notifications_voice_recorder">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct nahrávat zvuk.</string>
     <string name="allow_notifications_incoming_calls">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí hovory.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app to display full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí zprávy.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
