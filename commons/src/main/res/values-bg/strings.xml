@@ -171,12 +171,12 @@
     <string name="no_audio_permissions">Необходимо е разрешение за аудио</string>
     <string name="no_permission">Няма разрешение</string>
     <string name="allow_notifications_reminders">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва напомняния.</string>
-    <string name="allow_full_screen_notifications_reminders">You should allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва лентата за напредъка.</string>
     <string name="allow_notifications_music_player">Трябва да разрешите на приложението да показва известия, в противен случай то не може да възпроизвежда песни.</string>
     <string name="allow_notifications_voice_recorder">Трябва да разрешите на приложението да показва известия, в противен случай то не може да записва аудио.</string>
     <string name="allow_notifications_incoming_calls">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи повиквания.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи съобщения.</string>
     <string name="allow_alarm_scheduled_messages">Трябва да разрешите на приложението достъп до вътрешни аларми, в противен случай то не може да изпраща планирани съобщения.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>

@@ -168,12 +168,12 @@
     <string name="no_audio_permissions">请授予音频权限</string>
     <string name="no_permission">无权限</string>
     <string name="allow_notifications_reminders">你必须允许应用展示通知，否则它无法显示提醒。</string>
-    <string name="allow_full_screen_notifications_reminders">You should allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">你必须允许应用展示通知，否则它无法显示进度条。</string>
     <string name="allow_notifications_music_player">你必须允许应用展示通知，否则它无法播放歌曲。</string>
     <string name="allow_notifications_voice_recorder">你必须允许应用展示通知，否则它无法录音。</string>
     <string name="allow_notifications_incoming_calls">你必须允许应用展示通知，否则它无法显示来电。</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
     <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
     <string name="allow_location_permission">你必须允许应用访问你的位置，否则它不知道位置。</string>

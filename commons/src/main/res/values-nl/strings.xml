@@ -170,12 +170,12 @@
     <string name="no_audio_permissions">Recht voor audio is vereist</string>
     <string name="no_permission">Geen toegang</string>
     <string name="allow_notifications_reminders">Deze app heeft het recht om meldingen te tonen nodig om herinneringen te kunnen laten zien.</string>
-    <string name="allow_full_screen_notifications_reminders">You should allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Deze app heeft het recht om meldingen te tonen nodig om een voortgangsindicator te kunnen weergeven.</string>
     <string name="allow_notifications_music_player">Deze app heeft het recht om meldingen te tonen nodig om nummers te kunnen afspelen.</string>
     <string name="allow_notifications_voice_recorder">Deze app heeft het recht om meldingen te tonen nodig om geluid te kunnen opnemen.</string>
     <string name="allow_notifications_incoming_calls">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij inkomende gesprekken.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
     <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
     <string name="allow_location_permission">Geef de app toegang tot de huidige locatie om gebruik te kunnen maken van de desbetreffende functie(s).</string>

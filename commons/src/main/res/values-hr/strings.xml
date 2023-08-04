@@ -172,12 +172,12 @@
     <string name="no_audio_permissions">Potrebno je dopuštenje za zvuk</string>
     <string name="no_permission">Bez dozvole</string>
     <string name="allow_notifications_reminders">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati podsjetnike.</string>
-    <string name="allow_full_screen_notifications_reminders">You should allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati traku napretka.</string>
     <string name="allow_notifications_music_player">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može reproducirati pjesme.</string>
     <string name="allow_notifications_voice_recorder">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može snimati zvuk.</string>
     <string name="allow_notifications_incoming_calls">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne pozive.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You should allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne poruke.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
