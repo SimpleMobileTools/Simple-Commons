@@ -72,6 +72,51 @@ internal fun SettingsScaffoldTopBar(
 }
 
 @Composable
+internal fun SettingsScaffoldTopBar(
+    title: @Composable (scrolledColor : Color) -> Unit,
+    scrolledColor: Color,
+    navigationIconInteractionSource: MutableInteractionSource,
+    scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
+    statusBarColor: Int,
+    colorTransitionFraction: Float,
+    contrastColor: Color,
+    goBack: () -> Unit,
+) {
+    TopAppBar(
+        title = {
+            title(scrolledColor)
+        },
+        navigationIcon = {
+            Box(
+                Modifier
+                    .padding(start = 8.dp)
+                    .clip(RoundedCornerShape(50))
+                    .clickable(
+                        navigationIconInteractionSource, rememberRipple(
+                            color = MaterialTheme.colorScheme.onSurface,
+                            bounded = true
+                        )
+                    ) { goBack() }
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+                    tint = scrolledColor,
+                    modifier = Modifier.padding(4.dp)
+                )
+            }
+        },
+        scrollBehavior = scrollBehavior,
+        colors = TopAppBarDefaults.largeTopAppBarColors(
+            scrolledContainerColor = Color(statusBarColor),
+            containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
+            navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
+        ),
+    )
+}
+
+
+
+@Composable
 @MyDevices
 private fun SettingsScaffoldTopBarPreview() {
     AppThemeSurface {

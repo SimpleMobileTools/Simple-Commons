@@ -32,29 +32,9 @@ internal fun AboutScreen(
         helpUsSection()
         socialSection()
         otherSection()
-        MadeWithLove()
+        SettingsListItem(text = stringResource(id = R.string.about_footer))
         Spacer(modifier = Modifier.padding(bottom = 8.dp))
     }
-}
-
-@Composable
-private fun MadeWithLove() {
-    ListItem(
-        headlineContent = {
-            Text(
-                text = stringResource(id = R.string.about_footer),
-                modifier = Modifier
-                    .fillMaxWidth()
-            )
-        },
-        leadingContent = {
-            Box(
-                modifier = Modifier
-                    .size(48.dp)
-                    .padding(8.dp),
-            )
-        }
-    )
 }
 
 @Composable

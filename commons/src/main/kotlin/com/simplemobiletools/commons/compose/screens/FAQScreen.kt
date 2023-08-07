@@ -53,14 +53,14 @@ internal fun FAQScreen(
                                 .fillMaxWidth()
                                 .padding(bottom = 6.dp),
                             color = MaterialTheme.colorScheme.primary,
-                            lineHeight = 18.sp,
-                            fontSize = 18.sp,
+                            lineHeight = 16.sp,
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.Bold
                         )
                     },
                     supportingContent = {
                         if (faqItem.text is Int) {
-                            val text = fromHtml(stringResource(id = faqItem.text))
+                            val text = stringFromHTML(stringResource(id = faqItem.text))
                             LinkifyText(
                                 text = { text },
                                 modifier = Modifier.fillMaxWidth(),
@@ -86,7 +86,7 @@ internal fun FAQScreen(
 }
 
 @Suppress("deprecation")
-private fun fromHtml(source: String): Spanned {
+fun stringFromHTML(source: String): Spanned {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
         Html.fromHtml(source, Html.FROM_HTML_MODE_LEGACY)
     } else {
@@ -95,7 +95,7 @@ private fun fromHtml(source: String): Spanned {
 }
 
 @Composable
-private fun LinkifyText(modifier: Modifier = Modifier, fontSize: TextUnit, text: () -> Spanned) {
+fun LinkifyText(modifier: Modifier = Modifier, fontSize: TextUnit = 14.sp, text: () -> Spanned) {
     val context = LocalContext.current
     val customLinkifyTextView = remember {
         TextView(context)

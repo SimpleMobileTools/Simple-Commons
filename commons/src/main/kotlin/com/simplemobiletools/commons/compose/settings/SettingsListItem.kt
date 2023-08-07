@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.compose.settings
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -25,7 +26,7 @@ import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 fun SettingsListItem(
     modifier: Modifier = Modifier,
     text: String,
-    @DrawableRes icon: Int,
+    @DrawableRes icon: Int? = null,
     isImage: Boolean = false,
     click: (() -> Unit)? = null,
     tint: Color? = null
@@ -40,38 +41,39 @@ fun SettingsListItem(
             )
         },
         leadingContent = {
-            val imageSize = Modifier.size(48.dp)
+            val imageSize = Modifier
+                .size(48.dp)
                 .padding(8.dp)
-            if (isImage) {
-                if (tint != null) {
-                    Image(
-                        modifier = imageSize,
-                        painter = painterResource(id = icon),
-                        contentDescription = text,
-                        colorFilter = ColorFilter.tint(tint)
-                    )
-                } else {
-                    Image(
-                        modifier = imageSize,
-                        painter = painterResource(id = icon),
-                        contentDescription = text,
-                    )
-                }
-            } else {
-                if (tint != null) {
-                    Icon(
-                        modifier = imageSize,
-                        painter = painterResource(id = icon),
-                        contentDescription = text,
-                        tint = tint
-                    )
-                } else {
-                    Icon(
-                        modifier = imageSize,
-                        painter = painterResource(id = icon),
-                        contentDescription = text,
-                    )
-                }
+            when {
+                icon != null && isImage && tint != null -> Image(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = text,
+                    colorFilter = ColorFilter.tint(tint)
+                )
+
+                icon != null && isImage && tint == null -> Image(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = text,
+                )
+
+                icon != null && !isImage && tint == null -> Icon(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = text,
+                )
+
+                icon != null && !isImage && tint != null -> Icon(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = text,
+                    tint = tint
+                )
+
+                else -> Box(
+                    modifier = imageSize,
+                )
             }
         },
         modifier = Modifier
@@ -79,6 +81,63 @@ fun SettingsListItem(
             .clickable(enabled = click != null) { click?.invoke() }
     )
 }
+
+
+@Composable
+fun SettingsListItem(
+    modifier: Modifier = Modifier,
+    text: @Composable () -> Unit,
+    @DrawableRes icon: Int? = null,
+    isImage: Boolean = false,
+    click: (() -> Unit)? = null,
+    tint: Color? = null
+) {
+    ListItem(
+        headlineContent = {
+            text()
+        },
+        leadingContent = {
+            val imageSize = Modifier
+                .size(48.dp)
+                .padding(8.dp)
+            when {
+                icon != null && isImage && tint != null -> Image(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = null,
+                    colorFilter = ColorFilter.tint(tint)
+                )
+
+                icon != null && isImage && tint == null -> Image(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = null,
+                )
+
+                icon != null && !isImage && tint == null -> Icon(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = null,
+                )
+
+                icon != null && !isImage && tint != null -> Icon(
+                    modifier = imageSize,
+                    painter = painterResource(id = icon),
+                    contentDescription = null,
+                    tint = tint
+                )
+
+                else -> Box(
+                    modifier = imageSize,
+                )
+            }
+        },
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(enabled = click != null) { click?.invoke() }
+    )
+}
+
 
 @MyDevices
 @Composable
