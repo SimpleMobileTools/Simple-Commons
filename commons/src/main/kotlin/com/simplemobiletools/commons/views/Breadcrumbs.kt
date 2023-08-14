@@ -197,7 +197,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                     }
                 }
 
-                tag = item
+                root.tag = item
             }
         } else {
             ItemBreadcrumbBinding.inflate(inflater, itemsLayout, false).apply {
@@ -224,7 +224,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                     }
                 }
 
-                tag = item
+                root.tag = item
             }
         }
     }
