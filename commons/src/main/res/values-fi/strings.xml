@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Peruuta</string>
-    <string name="close">Close</string>
+    <string name="close">Sulje</string>
     <string name="back">Takaisin</string>
     <string name="nothing">Ei mitään</string>
     <string name="later">Myöhemmin</string>
@@ -77,7 +77,7 @@
     <string name="phone_storage">Puhelimen muisti</string>
     <string name="phone_storage_hidden">Puhelimen muisti (piilotettu muilta sovelluksilta)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Haetaan…</string>
     <!-- Events -->
     <string name="birthday">Syntymäpäivä</string>
     <string name="anniversary">Vuosipäivä</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Lisää sarakkeita</string>
     <string name="reduce_column_count">Vähennä sarakkeita</string>
     <string name="column_count">Sarakkeiden lukumäärä</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Rivimäärä</string>
     <string name="portrait_column_count">Muotokuvasarakkeiden määrä</string>
     <string name="landscape_column_count">Maiseman sarakkeiden määrä</string>
     <string name="change_cover_image">Vaihda kansikuva</string>
@@ -110,8 +110,8 @@
         <item quantity="other">%d saraketta</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d rivi</item>
+        <item quantity="other">%d riviä</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hallitse estettyjä numeroita</string>
@@ -126,9 +126,9 @@
     <string name="set_as_default">Aseta oletukseksi</string>
     <string name="block_confirmation">Haluatko varmasti estää numeron \"%s\"?</string>
     <string name="block_not_stored_calls">Estä puhelut tallentamattomista yhteystiedoista</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Estä puhelut piilotetuista numeroista</string>
     <string name="block_not_stored_messages">Estä viestit tallentamattomista yhteystiedoista</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Estä viestit piilotetuista numeroista</string>
     <string name="add_blocked_number_helper_text">Anna numero tai kuvio (esim. *12345*, +1*8888) estääksesi kaikki puhelut ja viestit kuvion mukaisista numeroista.</string>
     <string name="must_make_default_caller_id_app">Tuntemattomia numeroita ei voida estää ilman soittajan tunnistusoikeutta.</string>
     <!-- Favorites -->
@@ -140,7 +140,7 @@
     <string name="search">Haku</string>
     <string name="search_in_placeholder">Etsi kohteesta %s</string>
     <string name="type_2_characters">Syötä vähintään 2 merkkiä hakeaksesi.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Näytä hakupalkki</string>
     <string name="search_contacts">Etsi yhteystietoja</string>
     <string name="search_favorites">Etsi suosikkeja</string>
     <string name="search_apps">Etsi sovelluksia</string>
@@ -169,16 +169,18 @@
     <string name="no_camera_permissions">Lupa kameraan vaaditaan</string>
     <string name="no_audio_permissions">Lupa ääneen vaaditaan</string>
     <string name="no_permission">Käyttöoikeutta ei ole</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Muistutusten näyttäminen vaatii, että sallit sovelluksen ilmoitusten näyttämisen.</string>
+    <string name="allow_full_screen_notifications_reminders">Salli sovelluksen koko näytön ilmoitusten näyttäminen; muuten osa ilmoituksista saattaa jäädä näyttämättä.</string>
+    <string name="allow_notifications_files">Salli sovelluksen ilmoitusten näyttäminen, jotta voit nähdä edistymispalkin.</string>
+    <string name="allow_notifications_music_player">Salli sovelluksen ilmoitusten näyttäminen, jotta kappaleita voidaan toistaa.</string>
+    <string name="allow_notifications_voice_recorder">Salli sovelluksen ilmoitusten näyttäminen, jotta ääntä voidaan nauhoittaa.</string>
+    <string name="allow_notifications_incoming_calls">Salli sovelluksen ilmoitusten näyttäminen, jotta tulevat puhelut voidaan näyttää.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Salli sovelluksen koko näytön ilmoitusten näyttäminen; muuten osa tulevista puheluista saattaa jäädä näyttämättä.</string>
+    <string name="allow_notifications_incoming_messages">Salli sovelluksen ilmoitusten näyttäminen, jotta viestit voidaan näyttää.</string>
+    <string name="allow_alarm_scheduled_messages">Salli sovelluksen käyttöoikeus sisäisiin hälytyksiin, jotta ajastettuja viestejä voidaan lähettää.</string>
+    <string name="allow_location_permission">Salli sovelluksen sijainnin käyttö.</string>
+    <string name="grant_permission">Anna käyttöoikeus</string>
+    <string name="permission_required">Käyttöoikeus vaaditaan</string>
     <!-- Renaming -->
     <string name="rename_file">Uudelleennimeä tiedosto</string>
     <string name="rename_folder">Uudelleennimeä kansio</string>
@@ -415,7 +417,7 @@
     <string name="last_modified">Viimeksi muokattu</string>
     <string name="date_created">Luontipäivämäärä</string>
     <string name="date_taken">Viimeksi kuvattu</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Lisäyspäivä</string>
     <string name="title">Nimi</string>
     <string name="filename">Tiedostonimi</string>
     <string name="extension">Tiedostopääte</string>
@@ -478,9 +480,9 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="empty_password_new">Syötä salasana</string>
+    <string name="empty_password">Syötä salasana</string>
+    <string name="invalid_password">Virheellinen salasana</string>
     <!-- Times -->
     <string name="yesterday">Eilen</string>
     <string name="today">Tänään</string>
@@ -621,7 +623,7 @@
     <!-- Alarms -->
     <string name="alarm">Herätys</string>
     <string name="snooze">Torkuta</string>
-    <string name="dismiss">Ohita</string>
+    <string name="dismiss">Hylkää</string>
     <string name="no_reminder">Ei muistutusta</string>
     <string name="at_start">Alussa</string>
     <string name="system_sounds">Järjestelmän äänet</string>
@@ -661,7 +663,7 @@
     <string name="use_24_hour_time_format">Käytä 24:n tunnin kelloa</string>
     <string name="change_date_and_time_format">Vaihda päivämäärän ja kellonajan muotoa</string>
     <string name="sunday_first">Aloita viikko sunnuntaista</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Aloita viikko viikonpäivästä</string>
     <string name="widgets">Pienoissovellukset</string>
     <string name="use_same_snooze">Käytä aina samaa torkkuaikaa</string>
     <string name="snooze_time">Torkkuaika</string>
@@ -723,7 +725,7 @@
     <string name="show_the_recycle_bin">Näytä roskakori</string>
     <string name="hide_the_recycle_bin">Piilota roskakori</string>
     <string name="open_the_recycle_bin">Avaa roskakori</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Ohita roskakori, poista tiedostot suoraan</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Siirretään %d kohde roskakoriin</item>
         <item quantity="other">Siirretään %d kohdetta roskakoriin</item>
@@ -823,8 +825,16 @@
     <string name="more_info">Lisää tietoa</string>
     <string name="upgrade">Päivitä</string>
     <string name="upgrade_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ne .ics-tiedostoon ja sen jälkeen tuomalla tiedostosta. Löydät vienti- ja tuontipainikkeet päävalikosta.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hei,
+\n
+\nnäyttää siltä, että päivitit juuri ilmaisversiosta. Kun olet tähän versioon tyytyväinen ja kenties tuonut asetuksesi ja merkannut suosikkisi, voit poistaa ilmaisversion sekaannusten välttämiseksi.
+\n
+\nKiitos!</string>
+    <string name="upgraded_to_pro_gallery">Hei,
+\n
+\nnäyttää siltä että sinulla on myös sovelluksen Pro-versio asennettuna. Kun olet siihen tyytyväinen ja kenties vienyt asetuksesi ja merkannut suosikkisi, voit poistaa tämän ilmaisversion sekaannusten välttämiseksi.
+\n
+\nKiitos!</string>
     <string name="upgraded_from_free">Hei,
 \n
 \nnäytät juuri päivittäneen ilmaisversiosta. Kun olet tyytyväinen tähän ja mahdollisesti siirtänyt tietosi, voit poistaa vanhan ilmaisversion asennuksen, ettet vahingossa turhaan avaa sitä, koska et tarvitse sitä enää.
@@ -1044,7 +1054,7 @@
     <string name="why_upgrade_footer">100% rahat takaisin-takuu</string>
     <string name="why_upgrade_footer_one_time_payment">Kertamaksu</string>
     <string name="why_upgrade_improved_design">Kehittyneempi ulkoasu</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Paljon muita parannuksia</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
     <string name="why_upgrade_advanced_photo_video_editor">Edistynyt valokuva- ja videoeditori</string>
@@ -1113,12 +1123,12 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF-katseluohjelma)</string>
     <string name="m3u_parser_title">M3U Parser (m3u-soittolistan tiedostojen käsittely)</string>
     <string name="android_lame_title">AndroidLame (mp3-kooderi)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (ZIP-pakkaus ja purku)</string>
     <!-- Trial -->
     <string name="trial_expired">Kokeilujakso on päättynyt</string>
     <string name="start_free_trial">Aloita ilmainen kokeilujakso</string>
     <string name="trial_expires_soon">Ilmainen kokeilusi päättyy pian.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Avaa sovelluksen lukitus yhdelle viimeiselle päivälle</string>
     <string name="welcome_to_app_name">Tervetuloa sovellukseen %s!</string>
     <string name="trial_start_description">Kiitos sovelluksemme käytöstä. Voit käyttää tätä avattua versiota <font color="#FFFFFF">%d päivän ajan</font>. Harkitse kokeilujakson päättyessä päivitystä Pro-versioon. Se tarjoaa merkittävästi enemmän ominaisuuksoa, modernin ulkoasun ja monia muita parannuksia, eikä siinä ole mainoksia.
 \n

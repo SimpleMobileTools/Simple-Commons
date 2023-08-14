@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Handler
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.RelativeLayout
 import androidx.biometric.auth.AuthPromptHost
@@ -24,11 +23,13 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
     private var scrollView: MyScrollView? = null
     lateinit var hashListener: HashListener
 
-    private val binding = TabPatternBinding.inflate(LayoutInflater.from(context), this, false)
+    private lateinit var binding: TabPatternBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabPatternBinding.bind(this)
+
         val textColor = context.getProperTextColor()
         context.updateTextColors(binding.patternLockHolder)
 
@@ -75,12 +76,14 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
                 binding.patternLockView.clearPattern()
                 binding.patternLockTitle.setText(R.string.repeat_pattern)
             }
+
             hash == newHash -> {
                 binding.patternLockView.setViewMode(PatternLockView.PatternViewMode.CORRECT)
                 Handler().postDelayed({
                     hashListener.receivedHash(hash, PROTECTION_PATTERN)
                 }, 300)
             }
+
             else -> {
                 binding.patternLockView.setViewMode(PatternLockView.PatternViewMode.WRONG)
                 context.toast(R.string.wrong_pattern)

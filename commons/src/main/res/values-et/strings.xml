@@ -170,10 +170,12 @@
     <string name="no_audio_permissions">Vajalik on õigus kasutada helisüsteemi</string>
     <string name="no_permission">Õigused puuduvad</string>
     <string name="allow_notifications_reminders">Selleks et rakendus saaks näidata meeldetuletusi, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Selleks et rakendus saaks näidata edenemisriba, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_music_player">Selleks et rakendus saaks esitada muusikat, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_voice_recorder">Selleks et rakendus saaks salvestada heli, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_notifications_incoming_calls">Selleks et rakendus saaks näidata kõnesid, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_alarm_scheduled_messages">Selleks et rakendus saaks plaanitud ajal sõnumeid saata, pead lubama tal kasutada süsteemseid äratusi.</string>
     <string name="allow_location_permission">Selleks et rakendus saaks asukohateavet kasutada, palun luba tal sinu asukohta tuvastada.</string>

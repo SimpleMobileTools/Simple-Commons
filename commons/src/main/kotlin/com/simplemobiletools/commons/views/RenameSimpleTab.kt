@@ -4,7 +4,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.MediaStore
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
@@ -21,10 +20,11 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
-    private val binding = TabRenameSimpleBinding.inflate(LayoutInflater.from(context), this, true)
+    private lateinit var binding: TabRenameSimpleBinding
 
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabRenameSimpleBinding.bind(this)
         context.updateTextColors(binding.renameSimpleHolder)
     }
 
@@ -168,12 +168,14 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                                     activity.scanPathsRecursively(arrayListOf(newPath))
                                 }
                             }
+
                             Android30RenameFormat.CONTENT_RESOLVER -> {
                                 val values = ContentValues().apply {
                                     put(MediaStore.Images.Media.DISPLAY_NAME, newName)
                                 }
                                 context.contentResolver.update(uri, values, null, null)
                             }
+
                             Android30RenameFormat.NONE -> {
                                 activity.runOnUiThread {
                                     callback(true)

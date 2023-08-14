@@ -20,7 +20,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
     var onNavigateBackClickListener: (() -> Unit)? = null
 
-    private val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
+    val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
 
     fun getToolbar() = binding.topToolbar
 
