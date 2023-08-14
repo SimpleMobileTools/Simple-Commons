@@ -28,14 +28,14 @@ recyclerviewFastscroller = "5a95285b1f"
 rtlViewpager = "940f12724f"
 #Compose
 composeActivity = "1.8.0-alpha06"
-compose = "1.6.0-alpha02"
+compose = "1.6.0-alpha03"
 composeCompiler = "1.5.1"
-composeMaterial3 = "1.2.0-alpha04"
-accompanist = "0.31.6-rc"
+composeMaterial3 = "1.2.0-alpha05"
+accompanist = "0.33.0-alpha"
 #Glide
 glide = "4.15.1"
 #Room
-room = "2.6.0-alpha02"
+room = "2.6.0-alpha03"
 #ezVcard
 ezVcard = "0.11.3"
 #gson
