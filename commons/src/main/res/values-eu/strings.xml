@@ -344,7 +344,7 @@
     <string name="discard">Baztertu</string>
     <string name="undo_changes">Desegin aldaketak</string>
     <string name="undo_changes_confirmation">Ziur zaude aldaketak desegin nahi dituzula?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Ekintza hau ezin da desegin.</string>
     <string name="save_before_closing">Gorde gabeko aldaketak dituzu. Gorde atera baino lehen?</string>
     <string name="apply_to_all_apps">Aplikatu koloreak Simple aplikazio guztiei</string>
     <string name="app_icon_color_warning">ABISUA: Abiarazle batzuek aplikazio-ikonoaren pertsonalizazioa ez dute ondo kudeatu. Ikonoa desagertuz gero, saiatu aplikazioa Google Play bidez edo widgeten baten bidez abiarazten, eskuragarri badago.
@@ -817,16 +817,50 @@
     <string name="more_info">Informazio gehiago</string>
     <string name="upgrade">Bertsio-berritu</string>
     <string name="upgrade_calendar">Eskuz biltegiratutako gertaerak migratu behar dituzu .ics fitxategi batean esportatuz, eta gero inportatuz. Esportazio- eta inportazio-botoiak pantaila nagusiaren menuan aurki ditzakezu.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Kaixo,
+\n
+\nbadirudi doako bertsiotik berritu duzula. Honekin pozik ba zaude eta agian zure ezarpenak eta gogokoak migratu ondoren, doako zaharra desinstalatu dezakezu ez duzulako gehiago beharko, elkarrizketa-koadro hau agertzea eragotziko du.
+\n
+\nEskerrik asko!</string>
+    <string name="upgraded_to_pro_gallery">Kaixo,
+\n
+\nbadirudi dagoeneko baduzula Pro aplikazioaren bertsioa ere. Pozik bazaude eta agian zure ezarpenak eta gogokoak migratu ondoren, hau desinstalatu dezakezu ez duzulako gehiago beharko.
+\n
+\nEskerrik asko!</string>
+    <string name="upgraded_from_free">Kaixo,
+\n
+\nbadirudi doako bertsiotik berritu duzula. Honekin pozik bazaude eta agian zure ezarpenak eta gogokoak migratu ondoren, doako zaharra desinstalatu dezakezu ez duzulako gehiago beharko, elkarrizketa-koadro hau agertzea eragotziko du.
+\n
+\nEskerrik asko!</string>
+    <string name="upgraded_to_pro">"Kaixo,
+\n
+\nbadirudi dagoeneko baduzula Pro aplikazioaren bertsioa ere. Pozik bazaude eta agian zure datuak migratu ondoren, hau desinstalatu dezakezu  ez duzulako gehiago beharko.
+\n
+\nEskerrik asko!"</string>
+    <string name="upgraded_from_free_calendar">Kaixo,
+\n
+\nbadirudi doako bertsiotik berritu duzula. Lokalean gordetako gertaerak migratu nahi badituzu, eskuz egin behar dituzu .ics fitxategi batera esportatu doako aplikazioaren bertsioan eta hemen inportatu goiko menutik.
+\n
+\nPro bertsioan zure konfigurazioarekin pozik zaudenean, doako zaharra desinstalatu dezakezu, ez baituzu gehiago beharko.
+\n
+\nEskerrik asko!</string>
+    <string name="upgraded_from_free_contacts">Kaixo,
+\n
+\nbadirudi doako bertsiotik berritu duzula. Kontakturen bat \"%s\"-n gordeta bazenuen, eskuz migratu behar dituzu doako aplikazioaren bertsiotik .vcf fitxategi batean esportatuz eta hemen inportatuz goiko menutik.
+\n
+\nPro bertsioan zure konfigurazioarekin pozik zaudenean, doako zaharra desinstalatu dezakezu, ez baituzu gehiago beharko.
+\n
+\nEskerrik asko!</string>
+    <string name="upgraded_from_free_notes">Kaixo,
+\n
+\nbadirudi doako bertsiotik berritu duzula. Zure oharrak migratu nahi badituzu, eskuz egin behar dituzu doako aplikazioaren bertsioko fitxategi batera esportatu eta goiko menutik hemen inportatuz.
+\n
+\nPro bertsioan zure konfigurazioarekin pozik zaudenean, doako zaharra desinstalatu dezakezu, ez baituzu gehiago beharko.
+\n
+\nEskerrik asko!</string>
     <!-- About -->
     <string name="about">Honi buruz</string>
-    <string name="website">Website</string>
+    <string name="website">Webgunea</string>
     <string name="website_label">Iturburu-kodeak ikusteko joan hona:</string>
     <string name="email_label">Bidali zure iritziak edo iradokizunak hona:</string>
     <string name="upgrade_to_pro">Pro-ra aldatu</string>
@@ -1115,5 +1149,4 @@
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
-
 </resources>
