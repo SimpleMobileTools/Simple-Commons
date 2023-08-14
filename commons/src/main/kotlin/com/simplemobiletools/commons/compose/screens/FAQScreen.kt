@@ -16,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -40,10 +39,10 @@ internal fun FAQScreen(
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = 8.dp, start = 38.dp, end = 16.dp),
+        contentPadding = PaddingValues(bottom = 8.dp),
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
-            Column {
+            Column(modifier = Modifier.fillMaxWidth()) {
                 ListItem(
                     headlineContent = {
                         val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
@@ -54,8 +53,6 @@ internal fun FAQScreen(
                                 .padding(bottom = 6.dp),
                             color = MaterialTheme.colorScheme.primary,
                             lineHeight = 16.sp,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Bold
                         )
                     },
                     supportingContent = {
@@ -74,11 +71,12 @@ internal fun FAQScreen(
                             )
                         }
                     },
-                    modifier = Modifier.padding(horizontal = 4.dp)
                 )
                 Spacer(modifier = Modifier.padding(bottom = 8.dp))
                 if (index != faqItems.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = 4.dp))
+                    SettingsHorizontalDivider(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 4.dp))
                 }
             }
         }

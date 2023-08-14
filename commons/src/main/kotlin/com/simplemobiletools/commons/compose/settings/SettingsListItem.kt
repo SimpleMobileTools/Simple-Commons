@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
@@ -26,6 +27,7 @@ import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 fun SettingsListItem(
     modifier: Modifier = Modifier,
     text: String,
+    fontSize: TextUnit = TextUnit.Unspecified,
     @DrawableRes icon: Int? = null,
     isImage: Boolean = false,
     click: (() -> Unit)? = null,
@@ -37,7 +39,8 @@ fun SettingsListItem(
                 text = text,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .then(modifier)
+                    .then(modifier),
+                fontSize = fontSize
             )
         },
         leadingContent = {
