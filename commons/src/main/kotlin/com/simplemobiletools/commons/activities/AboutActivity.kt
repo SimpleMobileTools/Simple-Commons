@@ -7,8 +7,8 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
@@ -23,7 +23,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
 
-class AboutActivity : AppCompatActivity() {
+class AboutActivity : ComponentActivity() {
     private val appName get() = intent.getStringExtra(APP_NAME) ?: ""
 
     private var firstVersionClickTS = 0L

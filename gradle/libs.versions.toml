@@ -1,6 +1,7 @@
 [versions]
 #jetbrains
 kotlin = "1.9.0"
+kotlin-immutable-collections = "0.3.5"
 #KSP
 kotlinxSerializationJson = "1.5.1"
 ksp = "1.9.0-1.0.12"
@@ -27,14 +28,14 @@ recyclerviewFastscroller = "5a95285b1f"
 rtlViewpager = "940f12724f"
 #Compose
 composeActivity = "1.8.0-alpha06"
-compose = "1.6.0-alpha02"
+compose = "1.6.0-alpha03"
 composeCompiler = "1.5.1"
-composeMaterial3 = "1.2.0-alpha04"
-accompanist = "0.31.6-rc"
+composeMaterial3 = "1.2.0-alpha05"
+accompanist = "0.33.0-alpha"
 #Glide
 glide = "4.15.1"
 #Room
-room = "2.6.0-alpha02"
+room = "2.6.0-alpha03"
 #ezVcard
 ezVcard = "0.11.3"
 #gson
@@ -103,6 +104,7 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 joda-time = { module = "joda-time:joda-time", version.ref = "jodaTime" }
 #Kotlin
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlin-immutable-collections = {module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-immutable-collections"}
 [bundles]
 compose = [
     "compose-activity",

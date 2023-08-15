@@ -1,64 +1,27 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
-import android.text.Html
-import android.text.method.LinkMovementMethod
-import android.view.LayoutInflater
-import com.simplemobiletools.commons.databinding.ActivityFaqBinding
-import com.simplemobiletools.commons.databinding.ItemFaqBinding
-import com.simplemobiletools.commons.extensions.*
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.remember
+import androidx.core.view.WindowCompat
+import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.screens.FAQScreen
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.helpers.APP_FAQ
-import com.simplemobiletools.commons.helpers.APP_ICON_IDS
-import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
-import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.models.FAQItem
+import kotlinx.collections.immutable.toImmutableList
 
-class FAQActivity : BaseSimpleActivity() {
-    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
-
-    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
-
-    private val binding by viewBinding(ActivityFaqBinding::inflate)
+class FAQActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
-        updateMaterialActivityViews(binding.faqCoordinator, binding.faqHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.faqNestedScrollview, binding.faqToolbar)
-
-        val textColor = getProperTextColor()
-        val backgroundColor = getProperBackgroundColor()
-        val primaryColor = getProperPrimaryColor()
-
-        val inflater = LayoutInflater.from(this)
-        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
-        faqItems.forEach {
-            val faqItem = it
-
-            ItemFaqBinding.inflate(inflater, null, false).apply {
-                faqCard.setCardBackgroundColor(backgroundColor)
-                faqTitle.apply {
-                    text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
-                    setTextColor(primaryColor)
-                }
-
-                faqText.apply {
-                    text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
-                    setTextColor(textColor)
-                    setLinkTextColor(primaryColor)
-
-                    movementMethod = LinkMovementMethod.getInstance()
-                    removeUnderlines()
-                }
-
-                binding.faqHolder.addView(root)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        setContent {
+            TransparentSystemBars()
+            AppThemeSurface {
+                val faqItems = remember { intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem> }
+                FAQScreen(goBack = ::finish, faqItems = faqItems.toImmutableList())
             }
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        setupToolbar(binding.faqToolbar, NavigationIcon.Arrow)
     }
 }

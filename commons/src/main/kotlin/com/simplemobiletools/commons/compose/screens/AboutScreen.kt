@@ -1,16 +1,19 @@
 package com.simplemobiletools.commons.compose.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.ListItem
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.settings.*
+import com.simplemobiletools.commons.compose.settings.SettingsGroup
+import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
+import com.simplemobiletools.commons.compose.settings.SettingsListItem
+import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
+import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 private val startingTitlePadding = Modifier.padding(start = 64.dp)
@@ -23,34 +26,14 @@ internal fun AboutScreen(
     socialSection: @Composable () -> Unit,
     otherSection: @Composable () -> Unit
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) {
+    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) { paddingValues ->
         aboutSection()
         helpUsSection()
         socialSection()
         otherSection()
-        MadeWithLove()
-        Spacer(modifier = Modifier.padding(bottom = 8.dp))
+        SettingsListItem(text = stringResource(id = R.string.about_footer))
+        Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
     }
-}
-
-@Composable
-private fun MadeWithLove() {
-    ListItem(
-        headlineContent = {
-            Text(
-                text = stringResource(id = R.string.about_footer),
-                modifier = Modifier
-                    .fillMaxWidth()
-            )
-        },
-        leadingContent = {
-            Box(
-                modifier = Modifier
-                    .size(48.dp)
-                    .padding(8.dp),
-            )
-        }
-    )
 }
 
 @Composable

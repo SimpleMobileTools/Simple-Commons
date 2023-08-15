@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.compose.theme
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import com.simplemobiletools.commons.compose.theme.isDarkMode
 import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme

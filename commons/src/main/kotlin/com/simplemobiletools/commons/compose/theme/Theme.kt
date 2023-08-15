@@ -26,11 +26,12 @@ internal fun Theme(
     val context = LocalContext.current
     val systemUiController = rememberSystemUiController()
     val baseConfig = remember { context.config }
+    val isSystemInDarkTheme = isSystemInDarkTheme()
 
     val colorScheme = if (!view.isInEditMode) {
         when {
             theme is Theme.SystemDefaultMaterialYou && isSPlus() -> {
-                if (isSystemInDarkTheme()) {
+                if (isSystemInDarkTheme) {
                     dynamicDarkColorScheme(context)
                 } else {
                     dynamicLightColorScheme(context)
@@ -59,21 +60,27 @@ internal fun Theme(
             else -> darkColorScheme
         }
     } else {
-        darkColorScheme
+        previewColorScheme()
     }
 
     SideEffect {
-        systemUiController.setNavigationBarColor(colorScheme.surface, navigationBarContrastEnforced = false)
+        systemUiController.setNavigationBarColor(Color.Transparent.copy(alpha = 0.25f), darkIcons = !isSystemInDarkTheme)    // https://github.com/google/accompanist/issues/1699
     }
 
     SideEffect {
         updateRecentsAppIcon(baseConfig, context)
     }
 
-
     MaterialTheme(
         colorScheme = colorScheme,
         content = content,
     )
+}
+
+@Composable
+private fun previewColorScheme() = if (isSystemInDarkTheme()) {
+    darkColorScheme
+} else {
+    lightColorScheme
 }
 

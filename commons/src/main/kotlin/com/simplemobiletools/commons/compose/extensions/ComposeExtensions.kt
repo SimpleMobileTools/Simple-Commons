@@ -22,8 +22,14 @@ fun Context.getActivity(): Activity {
 fun TransparentSystemBars() {
     val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
-    SideEffect {
-        systemUiController.setSystemBarsColor(Color.Transparent, darkIcons = !isSystemInDarkTheme)
+
+    DisposableEffect(systemUiController, !isSystemInDarkTheme) {
+        systemUiController.setSystemBarsColor(
+            color = Color.Transparent,
+            darkIcons = !isSystemInDarkTheme
+        )
+
+        onDispose {}
     }
 }
 

@@ -1,66 +1,34 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.remember
+import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.databinding.ActivityLicenseBinding
-import com.simplemobiletools.commons.databinding.ItemLicenseBinding
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.screens.LicenseScreen
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
+import kotlinx.collections.immutable.toImmutableList
 
-class LicenseActivity : BaseSimpleActivity() {
-    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
-
-    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
-
-    private val binding by viewBinding(ActivityLicenseBinding::inflate)
-
+class LicenseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-        updateTextColors(binding.licensesHolder)
-
-        updateMaterialActivityViews(binding.licensesCoordinator, binding.licensesHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.licensesNestedScrollview, binding.licensesToolbar)
-
-        val textColor = getProperTextColor()
-        val backgroundColor = getProperBackgroundColor()
-        val primaryColor = getProperPrimaryColor()
-
-        val inflater = LayoutInflater.from(this)
-        val licenses = initLicenses()
-        val licenseMask = intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
-        licenses.filter { licenseMask and it.id != 0L }.forEach {
-            val license = it
-
-            ItemLicenseBinding.inflate(inflater, null, false).apply {
-                licenseCard.setCardBackgroundColor(backgroundColor)
-                licenseTitle.apply {
-                    text = getString(license.titleId)
-                    setTextColor(primaryColor)
-                    setOnClickListener {
-                        launchViewIntent(license.urlId)
-                    }
-                }
-
-                licenseText.apply {
-                    text = getString(license.textId)
-                    setTextColor(textColor)
-                }
-
-                binding.licensesHolder.addView(root)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        setContent {
+            val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
+            val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
+            TransparentSystemBars()
+            AppThemeSurface {
+                LicenseScreen(goBack = ::finish, thirdPartyLicenses = thirdPartyLicenses, onLicenseClick = ::launchViewIntent)
             }
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        setupToolbar(binding.licensesToolbar, NavigationIcon.Arrow)
-    }
-
-    private fun initLicenses() = arrayOf(
+    private fun initLicenses() = listOf(
         License(LICENSE_KOTLIN, R.string.kotlin_title, R.string.kotlin_text, R.string.kotlin_url),
         License(LICENSE_SUBSAMPLING, R.string.subsampling_title, R.string.subsampling_text, R.string.subsampling_url),
         License(LICENSE_GLIDE, R.string.glide_title, R.string.glide_text, R.string.glide_url),

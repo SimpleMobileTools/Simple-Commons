@@ -5,8 +5,8 @@ import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import com.simplemobiletools.commons.compose.theme.isInDarkThemeAndSurfaceIsNotLitWell
 import com.simplemobiletools.commons.compose.extensions.config
+import com.simplemobiletools.commons.compose.theme.isInDarkThemeAndSurfaceIsNotLitWell
 
 @Stable
 sealed class Theme : CommonTheme {
