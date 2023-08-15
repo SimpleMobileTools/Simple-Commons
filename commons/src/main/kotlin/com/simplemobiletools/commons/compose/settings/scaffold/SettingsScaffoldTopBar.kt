@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.compose.settings.scaffold
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -44,23 +45,7 @@ internal fun SettingsScaffoldTopBar(
             )
         },
         navigationIcon = {
-            Box(
-                Modifier
-                    .padding(start = 8.dp)
-                    .clip(RoundedCornerShape(50))
-                    .clickable(
-                        navigationIconInteractionSource, rememberRipple(
-                            color = MaterialTheme.colorScheme.onSurface,
-                            bounded = true
-                        )
-                    ) { goBack() }
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-                    tint = scrolledColor,
-                    modifier = Modifier.padding(4.dp)
-                )
-            }
+            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
         },
         scrollBehavior = scrollBehavior,
         colors = TopAppBarDefaults.largeTopAppBarColors(
@@ -73,7 +58,7 @@ internal fun SettingsScaffoldTopBar(
 
 @Composable
 internal fun SettingsScaffoldTopBar(
-    title: @Composable (scrolledColor : Color) -> Unit,
+    title: @Composable (scrolledColor: Color) -> Unit,
     scrolledColor: Color,
     navigationIconInteractionSource: MutableInteractionSource,
     scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
@@ -87,23 +72,7 @@ internal fun SettingsScaffoldTopBar(
             title(scrolledColor)
         },
         navigationIcon = {
-            Box(
-                Modifier
-                    .padding(start = 8.dp)
-                    .clip(RoundedCornerShape(50))
-                    .clickable(
-                        navigationIconInteractionSource, rememberRipple(
-                            color = MaterialTheme.colorScheme.onSurface,
-                            bounded = true
-                        )
-                    ) { goBack() }
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-                    tint = scrolledColor,
-                    modifier = Modifier.padding(4.dp)
-                )
-            }
+            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
         },
         scrollBehavior = scrollBehavior,
         colors = TopAppBarDefaults.largeTopAppBarColors(
@@ -114,6 +83,67 @@ internal fun SettingsScaffoldTopBar(
     )
 }
 
+@Composable
+internal fun SettingsScaffoldTopBar(
+    title: @Composable (scrolledColor: Color) -> Unit,
+    actions: @Composable RowScope.() -> Unit,
+    scrolledColor: Color,
+    navigationIconInteractionSource: MutableInteractionSource,
+    scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
+    statusBarColor: Int,
+    colorTransitionFraction: Float,
+    contrastColor: Color,
+    goBack: () -> Unit,
+) {
+    TopAppBar(
+        title = {
+            title(scrolledColor)
+        },
+        navigationIcon = {
+            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
+        },
+        actions = actions,
+        scrollBehavior = scrollBehavior,
+        colors = TopAppBarDefaults.largeTopAppBarColors(
+            scrolledContainerColor = Color(statusBarColor),
+            containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
+            navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
+        ),
+    )
+}
+
+@Composable
+internal fun SettingsNavigationIcon(
+    modifier: Modifier = Modifier,
+    navigationIconInteractionSource: MutableInteractionSource,
+    goBack: () -> Unit,
+    iconColor: Color? = null
+) {
+    Box(
+        modifier
+            .padding(start = 8.dp)
+            .clip(RoundedCornerShape(50))
+            .clickable(
+                navigationIconInteractionSource, rememberRipple(
+                    color = MaterialTheme.colorScheme.onSurface,
+                    bounded = true
+                )
+            ) { goBack() }
+    ) {
+        if (iconColor == null) {
+            Icon(
+                imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+                modifier = Modifier.padding(4.dp)
+            )
+        } else {
+            Icon(
+                imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+                tint = iconColor,
+                modifier = Modifier.padding(4.dp)
+            )
+        }
+    }
+}
 
 
 @Composable
