@@ -64,7 +64,7 @@ internal fun Theme(
     }
 
     SideEffect {
-        systemUiController.setNavigationBarColor(Color.Transparent, darkIcons = !isSystemInDarkTheme) //https://github.com/google/accompanist/issues/1699
+        systemUiController.setNavigationBarColor(Color.Transparent, darkIcons = !isSystemInDarkTheme, navigationBarContrastEnforced = false) //https://github.com/google/accompanist/issues/1699
     }
 
     SideEffect {
