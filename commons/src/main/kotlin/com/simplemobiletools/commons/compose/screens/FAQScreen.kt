@@ -40,7 +40,7 @@ internal fun FAQScreen(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
         contentPadding = PaddingValues(bottom = 8.dp),
-    ) {
+    ) { paddingValues ->
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {
                 ListItem(
@@ -79,6 +79,9 @@ internal fun FAQScreen(
                         .padding(bottom = 4.dp))
                 }
             }
+        }
+        item {
+            Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
         }
     }
 }

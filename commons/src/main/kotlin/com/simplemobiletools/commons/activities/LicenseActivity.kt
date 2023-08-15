@@ -1,8 +1,8 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.remember
 import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
@@ -14,7 +14,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.collections.immutable.toImmutableList
 
-class LicenseActivity : AppCompatActivity() {
+class LicenseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)

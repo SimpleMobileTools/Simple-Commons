@@ -1,8 +1,8 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.remember
 import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.collections.immutable.toImmutableList
 
-class FAQActivity : AppCompatActivity() {
+class FAQActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)

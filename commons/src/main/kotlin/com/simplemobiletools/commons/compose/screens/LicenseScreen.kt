@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.compose.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
@@ -27,7 +28,7 @@ internal fun LicenseScreen(
     thirdPartyLicenses: ImmutableList<License>,
     onLicenseClick: (urlId: Int) -> Unit
 ) {
-    SettingsLazyScaffold(title = stringResource(id = R.string.third_party_licences), goBack = goBack) {
+    SettingsLazyScaffold(title = stringResource(id = R.string.third_party_licences), goBack = goBack) { paddingValues ->
         itemsIndexed(thirdPartyLicenses) { index, license ->
             Column {
                 LicenseItem(license, onLicenseClick)
@@ -35,6 +36,9 @@ internal fun LicenseScreen(
                     SettingsHorizontalDivider(modifier = Modifier.padding(bottom = 4.dp))
                 }
             }
+        }
+        item {
+            Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
         }
     }
 }
