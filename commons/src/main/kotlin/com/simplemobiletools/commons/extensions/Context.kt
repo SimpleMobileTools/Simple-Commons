@@ -222,6 +222,8 @@ private fun isExternalStorageDocument(uri: Uri) = uri.authority == "com.android.
 
 fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
 
+fun Context.hasAllPermissions(permIds: Collection<Int>) = permIds.all(this::hasPermission)
+
 fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
     PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -243,8 +245,10 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_MEDIA_IMAGES -> Manifest.permission.READ_MEDIA_IMAGES
     PERMISSION_READ_MEDIA_VIDEO -> Manifest.permission.READ_MEDIA_VIDEO
     PERMISSION_READ_MEDIA_AUDIO -> Manifest.permission.READ_MEDIA_AUDIO
+    PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED -> Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
     PERMISSION_ACCESS_COARSE_LOCATION -> Manifest.permission.ACCESS_COARSE_LOCATION
     PERMISSION_ACCESS_FINE_LOCATION -> Manifest.permission.ACCESS_FINE_LOCATION
+    PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED -> Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
     else -> ""
 }
 
@@ -1141,6 +1145,20 @@ fun Context.openRequestExactAlarmSettings(appId: String) {
     if (isSPlus()) {
         val uri = Uri.fromParts("package", appId, null)
         val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+        intent.data = uri
+        startActivity(intent)
+    }
+}
+
+fun Context.canUseFullScreenIntent(): Boolean {
+    return !isUpsideDownCakePlus() || notificationManager.canUseFullScreenIntent()
+}
+
+@RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+fun Context.openFullScreenIntentSettings(appId: String) {
+    if (isUpsideDownCakePlus()) {
+        val uri = Uri.fromParts("package", appId, null)
+        val intent = Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT)
         intent.data = uri
         startActivity(intent)
     }

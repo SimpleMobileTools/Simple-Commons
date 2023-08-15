@@ -178,10 +178,12 @@
     <string name="no_audio_permissions">مطلوب إذن الصوت</string>
     <string name="no_permission">لاتوجد صلاحيات</string>
     <string name="allow_notifications_reminders">يجب أن تسمح للتطبيقات لعرض الإخطارات ، أو أنها لن تكون قادرة على عرض تذكير .</string>
+    <string name="allow_full_screen_notifications_reminders">يجب أن تسمح للتطبيق بأن يظهر اشعارات الشاشة كاملة، وإلا قد تفوتك بعض التذكيرات.</string>
     <string name="allow_notifications_files">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار شريط التقدم.</string>
     <string name="allow_notifications_music_player">يجب أن تسمح للتطبيق بعرض الإخطارات ، أو أنه لن يكون قادرا على تشغيل الموسيقى.</string>
     <string name="allow_notifications_voice_recorder">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من تسجيل الصوت.</string>
     <string name="allow_notifications_incoming_calls">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار المكالمات الواردة.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">يجب أن تسمح للتطبيق بأن يظهر إخطارات الشاشة كاملة وإلا قد تفوتك بعض المكالمات الواردة.</string>
     <string name="allow_notifications_incoming_messages">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار الرسائل الواردة.</string>
     <string name="allow_alarm_scheduled_messages">يجب أن تسمح للتطبيق بالوصول إلى التنبيهات الداخلية ، وإلا فلن يتمكن من إرسال رسائل مجدولة.</string>
     <string name="allow_location_permission">يجب أن تسمح للتطبيق بالوصول إلى موقعك ، وإلا فلن يعرفه.</string>

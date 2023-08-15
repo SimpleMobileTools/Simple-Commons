@@ -174,10 +174,12 @@
     <string name="no_audio_permissions">Wymagane jest uprawnienie „Mikrofon”</string>
     <string name="no_permission">Brak uprawnienia</string>
     <string name="allow_notifications_reminders">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać przypomnień.</string>
+    <string name="allow_full_screen_notifications_reminders">Musisz zezwolić aplikacji na wyświetlanie powiadomień na pełnym ekranie, w przeciwnym razie możesz przegapić niektóre przypomnienia.</string>
     <string name="allow_notifications_files">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać paska postępu.</string>
     <string name="allow_notifications_music_player">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła odtwarzać utworów.</string>
     <string name="allow_notifications_voice_recorder">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła nagrywać dźwięku.</string>
     <string name="allow_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać połączeń przychodzących.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień na pełnym ekranie, w przeciwnym razie możesz przegapić niektóre połączenia przychodzące.</string>
     <string name="allow_notifications_incoming_messages">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać wiadomości przychodzących.</string>
     <string name="allow_alarm_scheduled_messages">Musisz zezwolić aplikacji na dostęp do alarmów, w przeciwnym razie nie będzie mogła wysyłać zaplanowanych wiadomości.</string>
     <string name="allow_location_permission">Musisz zezwolić aplikacji na dostęp do Twojej lokalizacji, w przeciwnym razie nie będzie jej znać.</string>

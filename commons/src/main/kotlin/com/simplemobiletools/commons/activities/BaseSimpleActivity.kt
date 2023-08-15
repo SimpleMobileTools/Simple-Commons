@@ -1045,6 +1045,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun handlePartialMediaPermissions(permissionIds: Collection<Int>, force: Boolean = false, callback: (granted: Boolean) -> Unit) {
+        actionOnPermission = null
+        if (isUpsideDownCakePlus()) {
+            if (hasPermission(PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED) && !force) {
+                callback(true)
+            } else {
+                isAskingPermissions = true
+                actionOnPermission = callback
+                ActivityCompat.requestPermissions(this, permissionIds.map { getPermissionString(it) }.toTypedArray(), GENERIC_PERM_HANDLER)
+            }
+        } else {
+            if (hasAllPermissions(permissionIds)) {
+                callback(true)
+            } else {
+                isAskingPermissions = true
+                actionOnPermission = callback
+                ActivityCompat.requestPermissions(this, permissionIds.map { getPermissionString(it) }.toTypedArray(), GENERIC_PERM_HANDLER)
+            }
+        }
+    }
+
     fun handleNotificationPermission(callback: (granted: Boolean) -> Unit) {
         if (!isTiramisuPlus()) {
             callback(true)

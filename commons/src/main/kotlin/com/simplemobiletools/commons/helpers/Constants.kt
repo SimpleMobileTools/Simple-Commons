@@ -324,6 +324,7 @@ const val PERMISSION_READ_MEDIA_VIDEO = 19
 const val PERMISSION_READ_MEDIA_AUDIO = 20
 const val PERMISSION_ACCESS_COARSE_LOCATION = 21
 const val PERMISSION_ACCESS_FINE_LOCATION = 22
+const val PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED = 23
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -474,6 +475,9 @@ fun isSPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
 fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+fun isUpsideDownCakePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 
 fun getDateFormats() = arrayListOf(
     "--MM-dd",

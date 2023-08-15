@@ -172,10 +172,12 @@
     <string name="no_audio_permissions">Патрабуецца дазвол на доступ да мікрафону</string>
     <string name="no_permission">Няма дазволу</string>
     <string name="allow_notifications_reminders">Вы павінны дазволіць праграме паказваць апавяшчэнні, інакш яна не можа паказваць напаміны.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Вы павінны дазволіць праграме паказваць апавяшчэнні, у адваротным выпадку яна не можа паказваць панэль прагрэсу.</string>
     <string name="allow_notifications_music_player">Вы павінны дазволіць праграме паказ апавяшчэнняў, інакш яна не можа прайграваць песні.</string>
     <string name="allow_notifications_voice_recorder">Вы павінны дазволіць праграме паказ апавяшчэнняў, у адваротным выпадку яна не можа запісваць аўдыя.</string>
     <string name="allow_notifications_incoming_calls">Вы павінны дазволіць праграме паказваць апавяшчэнні, інакш яна не зможа паказваць ўваходныя выклікі.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Вы павінны дазволіць праграме паказваць апавяшчэнні, у адваротным выпадку яна не можа паказваць ўваходныя паведамленні.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
