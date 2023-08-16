@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -51,7 +52,6 @@ private fun LicenseItem(
     ListItem(headlineContent = {
         Text(
             text = stringResource(id = license.titleId),
-            color = MaterialTheme.colorScheme.primary,
             modifier = Modifier
                 .clickable {
                     onLicenseClick(license.urlId)
@@ -60,9 +60,9 @@ private fun LicenseItem(
     }, supportingContent = {
         Text(
             text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = 2.dp)
+            modifier = Modifier.padding(top = 2.dp),
         )
-    })
+    }, colors = ListItemDefaults.colors(headlineColor = MaterialTheme.colorScheme.primary, supportingColor = MaterialTheme.colorScheme.onSurface))
 }
 
 @Composable

@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.model.Theme
+import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme
 import com.simplemobiletools.commons.extensions.isWhiteTheme
 
@@ -23,7 +24,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
 
     val backgroundColor = backgroundColorTheme.toArgb()
     val appIconColor = baseConfig.appIconColor
-    val textColor = baseConfig.textColor
+    val textColor = context.getProperTextColor()
 
     val theme = when {
         baseConfig.isUsingSystemTheme -> materialYouTheme

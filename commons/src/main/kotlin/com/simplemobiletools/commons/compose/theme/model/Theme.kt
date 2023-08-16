@@ -2,11 +2,12 @@ package com.simplemobiletools.commons.compose.theme.model
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
-import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.config
-import com.simplemobiletools.commons.compose.theme.isInDarkThemeAndSurfaceIsNotLitWell
 
 @Stable
 sealed class Theme : CommonTheme {
@@ -56,11 +57,15 @@ sealed class Theme : CommonTheme {
 
     companion object {
         @Composable
-        fun systemDefaultMaterialYou() = SystemDefaultMaterialYou(
-            appIconColorInt = LocalContext.current.config.appIconColor,
-            primaryColorInt = LocalContext.current.config.primaryColor,
-            backgroundColorInt = LocalContext.current.config.backgroundColor,
-            textColorInt = (if (isInDarkThemeAndSurfaceIsNotLitWell()) Color.White else Color.Black).toArgb()
-        )
+        fun systemDefaultMaterialYou(): SystemDefaultMaterialYou {
+            val context = LocalContext.current
+            val config = remember { context.config }
+            return SystemDefaultMaterialYou(
+                appIconColorInt = config.appIconColor,
+                primaryColorInt = config.primaryColor,
+                backgroundColorInt = config.backgroundColor,
+                textColorInt = colorResource(R.color.you_neutral_text_color).toArgb()
+            )
+        }
     }
 }
