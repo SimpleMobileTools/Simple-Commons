@@ -129,7 +129,8 @@ private fun ContributorItem(
             Text(
                 text = stringResource(id = languageContributor.contributorsId),
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxWidth(),
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
     )
