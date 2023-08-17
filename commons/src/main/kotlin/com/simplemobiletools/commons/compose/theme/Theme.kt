@@ -68,7 +68,8 @@ internal fun Theme(
         Color.Transparent.copy(alpha = 0.25f)
     }
     SideEffect {
-        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)    // https://github.com/google/accompanist/issues/1699
+        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
+        systemUiController.navigationBarDarkContentEnabled = colorScheme.surface.isLitWell()
     }
 
     SideEffect {
