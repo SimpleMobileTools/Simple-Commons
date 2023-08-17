@@ -2,10 +2,7 @@ package com.simplemobiletools.commons.compose.settings.scaffold
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -17,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
@@ -34,6 +32,8 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
+    val layoutDirection = LocalLayoutDirection.current
+    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             Text(
@@ -53,6 +53,12 @@ internal fun SettingsScaffoldTopBar(
             containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
             navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
         ),
+        modifier = Modifier.padding(
+            top = paddingValues.calculateTopPadding(),
+            start = paddingValues.calculateStartPadding(layoutDirection),
+            end = paddingValues.calculateEndPadding(layoutDirection)
+        ),
+        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
     )
 }
 
@@ -67,6 +73,8 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
+    val layoutDirection = LocalLayoutDirection.current
+    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             title(scrolledColor)
@@ -80,6 +88,12 @@ internal fun SettingsScaffoldTopBar(
             containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
             navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
         ),
+        modifier = Modifier.padding(
+            top = paddingValues.calculateTopPadding(),
+            start = paddingValues.calculateStartPadding(layoutDirection),
+            end = paddingValues.calculateEndPadding(layoutDirection)
+        ),
+        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
     )
 }
 
@@ -95,6 +109,8 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
+    val layoutDirection = LocalLayoutDirection.current
+    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             title(scrolledColor)
@@ -109,6 +125,12 @@ internal fun SettingsScaffoldTopBar(
             containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
             navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
         ),
+        modifier = Modifier.padding(
+            top = paddingValues.calculateTopPadding(),
+            start = paddingValues.calculateStartPadding(layoutDirection),
+            end = paddingValues.calculateEndPadding(layoutDirection)
+        ),
+        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
     )
 }
 
