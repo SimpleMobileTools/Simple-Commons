@@ -62,14 +62,15 @@ internal fun Theme(
     } else {
         previewColorScheme()
     }
-    val navigationBarColor = if (colorScheme.surface.isLitWell()) {
+    val isSurfaceLitWell = colorScheme.surface.isLitWell()
+    val navigationBarColor = if (isSurfaceLitWell) {
         Color.White.copy(alpha = 0.55f)
     } else {
         Color.Transparent.copy(alpha = 0.25f)
     }
     SideEffect {
         systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
-        systemUiController.navigationBarDarkContentEnabled = colorScheme.surface.isLitWell()
+        systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
     }
 
     SideEffect {
