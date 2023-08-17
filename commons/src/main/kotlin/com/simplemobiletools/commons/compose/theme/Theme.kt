@@ -62,9 +62,13 @@ internal fun Theme(
     } else {
         previewColorScheme()
     }
-
+    val navigationBarColor = if (colorScheme.surface.isLitWell()) {
+        Color.White.copy(alpha = 0.55f)
+    } else {
+        Color.Transparent.copy(alpha = 0.25f)
+    }
     SideEffect {
-        systemUiController.setNavigationBarColor(Color.Transparent.copy(alpha = 0.25f), darkIcons = !isSystemInDarkTheme)    // https://github.com/google/accompanist/issues/1699
+        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)    // https://github.com/google/accompanist/issues/1699
     }
 
     SideEffect {
