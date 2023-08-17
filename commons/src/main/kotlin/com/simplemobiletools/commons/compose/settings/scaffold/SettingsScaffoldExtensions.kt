@@ -9,6 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.platform.LocalLayoutDirection
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.theme.isNotLitWell
@@ -26,10 +27,15 @@ internal fun SystemUISettingsScaffoldStatusBarColor(scrolledColor: Color) {
 
 @Composable
 internal fun ScreenBoxSettingsScaffold(paddingValues: PaddingValues, modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
+    val layoutDirection = LocalLayoutDirection.current
     Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = paddingValues.calculateTopPadding())
+            .padding(
+                top = paddingValues.calculateTopPadding(),
+                start = paddingValues.calculateStartPadding(layoutDirection),
+                end = paddingValues.calculateEndPadding(layoutDirection)
+            )
             .background(MaterialTheme.colorScheme.surface)
     ) {
         content()
