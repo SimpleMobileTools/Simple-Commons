@@ -72,6 +72,11 @@ class ManageBlockedNumbersAdapter(
                 setTextColor(textColor)
             }
 
+            manageBlockedNumberContactName.apply {
+                text = blockedNumber.contactName
+                setTextColor(textColor)
+            }
+
             overflowMenuIcon.drawable.apply {
                 mutate()
                 setTint(activity.getProperTextColor())
@@ -98,6 +103,7 @@ class ManageBlockedNumbersAdapter(
                             copyNumberToClipboard()
                         }
                     }
+
                     R.id.cab_delete -> {
                         executeItemMenuOperation(blockedNumberId) {
                             deleteSelection()

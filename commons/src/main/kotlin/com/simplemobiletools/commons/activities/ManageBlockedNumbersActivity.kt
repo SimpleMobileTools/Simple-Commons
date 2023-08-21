@@ -162,19 +162,20 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     private fun updateBlockedNumbers() {
         ensureBackgroundThread {
-            val blockedNumbers = getBlockedNumbers()
-            runOnUiThread {
-                ManageBlockedNumbersAdapter(this, blockedNumbers, this, binding.manageBlockedNumbersList) {
-                    addOrEditBlockedNumber(it as BlockedNumber)
-                }.apply {
-                    binding.manageBlockedNumbersList.adapter = this
-                }
+            getBlockedNumbersWithContact { blockedNumbers ->
+                runOnUiThread {
+                    ManageBlockedNumbersAdapter(this, blockedNumbers, this, binding.manageBlockedNumbersList) {
+                        addOrEditBlockedNumber(it as BlockedNumber)
+                    }.apply {
+                        binding.manageBlockedNumbersList.adapter = this
+                    }
 
-                binding.manageBlockedNumbersPlaceholder.beVisibleIf(blockedNumbers.isEmpty())
-                binding.manageBlockedNumbersPlaceholder2.beVisibleIf(blockedNumbers.isEmpty())
+                    binding.manageBlockedNumbersPlaceholder.beVisibleIf(blockedNumbers.isEmpty())
+                    binding.manageBlockedNumbersPlaceholder2.beVisibleIf(blockedNumbers.isEmpty())
 
-                if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
-                    maybeSetDefaultCallerIdApp()
+                    if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
+                        maybeSetDefaultCallerIdApp()
+                    }
                 }
             }
         }
@@ -284,17 +285,18 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     private fun exportBlockedNumbersTo(outputStream: OutputStream?) {
         ensureBackgroundThread {
-            val blockedNumbers = getBlockedNumbers()
-            if (blockedNumbers.isEmpty()) {
-                toast(R.string.no_entries_for_exporting)
-            } else {
-                BlockedNumbersExporter().exportBlockedNumbers(blockedNumbers, outputStream) {
-                    toast(
-                        when (it) {
-                            ExportResult.EXPORT_OK -> R.string.exporting_successful
-                            else -> R.string.exporting_failed
-                        }
-                    )
+            getBlockedNumbersWithContact { blockedNumbers ->
+                if (blockedNumbers.isEmpty()) {
+                    toast(R.string.no_entries_for_exporting)
+                } else {
+                    BlockedNumbersExporter().exportBlockedNumbers(blockedNumbers, outputStream) {
+                        toast(
+                            when (it) {
+                                ExportResult.EXPORT_OK -> R.string.exporting_successful
+                                else -> R.string.exporting_failed
+                            }
+                        )
+                    }
                 }
             }
         }
