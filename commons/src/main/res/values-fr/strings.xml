@@ -77,7 +77,7 @@
     <string name="phone_storage">Mémoire du téléphone</string>
     <string name="phone_storage_hidden">Mémoire du téléphone (invisible pour les autres applis)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Scan en cours…</string>
     <!-- Events -->
     <string name="birthday">Date de naissance</string>
     <string name="anniversary">Autre anniversaire</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Ajouter une colonne</string>
     <string name="reduce_column_count">Supprimer une colonne</string>
     <string name="column_count">Nombre de colonnes</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Nombre de rangées</string>
     <string name="portrait_column_count">Nombre de colonnes Portrait</string>
     <string name="landscape_column_count">Nombre de colonnes Paysage</string>
     <string name="change_cover_image">Modifier l\'image du dossier</string>
@@ -111,8 +111,9 @@
         <item quantity="other">%d colonnes</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d rangée</item>
+        <item quantity="many">%d rangées</item>
+        <item quantity="other">%d rangées</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
@@ -141,7 +142,7 @@
     <string name="search">Rechercher</string>
     <string name="search_in_placeholder">Rechercher dans %s</string>
     <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Afficher une barre de recherche</string>
     <string name="search_contacts">Rechercher des contacts</string>
     <string name="search_favorites">Rechercher des favoris</string>
     <string name="search_apps">Rechercher des applications</string>
@@ -171,15 +172,15 @@
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est nécessaire</string>
     <string name="no_permission">Pas d\'autorisation</string>
     <string name="allow_notifications_reminders">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher de rappels.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Vous devez autoriser l\'application à afficher des notifications en plein écran, sinon vous risquez de manquer certains rappels.</string>
     <string name="allow_notifications_files">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher la barre de progression.</string>
     <string name="allow_notifications_music_player">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne peut pas jouer de chansons.</string>
     <string name="allow_notifications_voice_recorder">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne peut pas enregistrer de données audio.</string>
     <string name="allow_notifications_incoming_calls">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les appels entrants.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Vous devez autoriser l\'application à afficher des notifications en plein écran, sinon vous risquez de manquer certains appels entrants.</string>
     <string name="allow_notifications_incoming_messages">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les messages entrants.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_alarm_scheduled_messages">Vous devez autoriser l\'application à accéder aux alarmes internes, sinon elle ne pourra pas envoyer de messages programmés.</string>
+    <string name="allow_location_permission">Vous devez autoriser l\'application à accéder à votre position, sinon elle ne la saura pas.</string>
     <string name="grant_permission">Accorder l\'autorisation</string>
     <string name="permission_required">Autorisation requise</string>
     <!-- Renaming -->
@@ -485,8 +486,8 @@
     <string name="lock_folder_notice">Le verrouillage ne fonctionne que dans cette application. Cette protection ne remplace pas un chiffrage système.</string>
     <string name="enter_password">Entrer un mot de passe</string>
     <string name="password">Mot de passe</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="add_password">Ajouter un mot de passe</string>
+    <string name="empty_password_new">Veuillez saisir un mot de passe</string>
     <string name="empty_password">Veuillez entrer le mot de passe</string>
     <string name="invalid_password">Mot de passe incorrect</string>
     <!-- Times -->
@@ -697,7 +698,7 @@
     <string name="use_24_hour_time_format">Utiliser le format horaire 24 heures</string>
     <string name="change_date_and_time_format">Modifier le format de date et heure</string>
     <string name="sunday_first">Démarrer la semaine le dimanche</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Début de la semaine le</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Toujours utiliser le même intervalle de répétition</string>
     <string name="snooze_time">Intervalle de répétition</string>
