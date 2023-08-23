@@ -47,7 +47,7 @@ fun SettingsCheckBoxComponent(
                 interactionSource = interactionSource,
                 indication = indication
             )
-            .padding(horizontal = 16.dp, vertical = 6.dp),
+            .padding(horizontal = 20.dp, vertical = 6.dp),
     ) {
         Column(
             modifier = Modifier.weight(1f),
