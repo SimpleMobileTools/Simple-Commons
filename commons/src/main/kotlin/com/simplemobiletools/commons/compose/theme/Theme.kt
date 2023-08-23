@@ -11,7 +11,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
@@ -24,7 +23,6 @@ internal fun Theme(
 ) {
     val view = LocalView.current
     val context = LocalContext.current
-    val systemUiController = rememberSystemUiController()
     val baseConfig = remember { context.config }
     val isSystemInDarkTheme = isSystemInDarkTheme()
 
@@ -61,16 +59,6 @@ internal fun Theme(
         }
     } else {
         previewColorScheme()
-    }
-    val isSurfaceLitWell = colorScheme.surface.isLitWell()
-    val navigationBarColor = if (isSurfaceLitWell) {
-        Color.White.copy(alpha = 0.55f)
-    } else {
-        Color.Transparent.copy(alpha = 0.25f)
-    }
-    SideEffect {
-        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
-        systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
     }
 
     SideEffect {

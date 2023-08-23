@@ -4,11 +4,13 @@ import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.simplemobiletools.commons.compose.theme.isLitWell
 
 fun Context.getActivity(): Activity {
     return when (this) {
@@ -32,6 +34,23 @@ fun TransparentSystemBars() {
         onDispose {}
     }
 }
+
+@Composable
+fun AdjustNavigationBarColors(canScroll: Boolean?) {
+    val systemUiController = rememberSystemUiController()
+    val isSystemInDarkTheme = isSystemInDarkTheme()
+    val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
+    val navigationBarColor = when (canScroll) {
+        true -> MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)
+        else -> Color.Transparent
+    }
+    DisposableEffect(systemUiController, !isSystemInDarkTheme, navigationBarColor) {
+        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
+        systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
+        onDispose {}
+    }
+}
+
 
 @Composable
 fun <T : Any> onEventValue(event: Lifecycle.Event = Lifecycle.Event.ON_START, value: () -> T): T {

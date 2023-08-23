@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,10 +27,10 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: (canPerformScroll: Boolean) -> Unit = {},
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
-
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
@@ -54,10 +55,14 @@ fun SettingsScaffold(
         },
     ) { paddingValues ->
         ScreenBoxSettingsScaffold(paddingValues) {
+            val scrollState = rememberScrollState()
+            LaunchedEffect(Unit) {
+                canScroll(scrollState.canScrollForward || scrollState.canScrollBackward)
+            }
             Column(
                 Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 horizontalAlignment = horizontalAlignment,
                 verticalArrangement = verticalArrangement
             ) {
