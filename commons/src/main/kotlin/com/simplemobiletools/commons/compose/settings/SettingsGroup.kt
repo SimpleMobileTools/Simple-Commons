@@ -17,7 +17,8 @@ fun SettingsGroup(
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Column(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth()
+            .padding(horizontal = 4.dp),
     ) {
         if (title != null) {
             SettingsGroupTitle(title = title)
