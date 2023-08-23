@@ -22,7 +22,8 @@ fun SettingsTitleTextComponent(
     Box(modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)) {
         Text(
             text = text.uppercase(),
-            modifier = modifier,
+            modifier = modifier
+                .padding(horizontal = 4.dp),
             color = color,
             fontSize = with(LocalDensity.current) {
                 dimensionResource(id = com.simplemobiletools.commons.R.dimen.normal_text_size).toSp()

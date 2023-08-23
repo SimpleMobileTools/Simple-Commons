@@ -12,12 +12,12 @@ import com.simplemobiletools.commons.helpers.FIRST_CONTACT_ID
 import com.simplemobiletools.commons.helpers.FIRST_GROUP_ID
 import com.simplemobiletools.commons.helpers.getEmptyLocalContact
 import com.simplemobiletools.commons.interfaces.ContactsDao
+import com.simplemobiletools.commons.interfaces.GroupsDao
 import com.simplemobiletools.commons.models.contacts.Group
 import com.simplemobiletools.commons.models.contacts.LocalContact
-import com.simplemobiletools.commons.interfaces.GroupsDao
 import java.util.concurrent.Executors
 
-@Database(entities = [LocalContact::class, Group::class], version = 3)
+@Database(entities = [LocalContact::class, Group::class], version = 3, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class ContactsDatabase : RoomDatabase() {
 
