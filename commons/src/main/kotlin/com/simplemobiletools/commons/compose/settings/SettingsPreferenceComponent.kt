@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.compose.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -39,6 +40,7 @@ fun SettingsPreferenceComponent(
             )
             .padding(horizontal = 16.dp, vertical = 8.dp)
             .then(modifier),
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = preferenceTitle,
