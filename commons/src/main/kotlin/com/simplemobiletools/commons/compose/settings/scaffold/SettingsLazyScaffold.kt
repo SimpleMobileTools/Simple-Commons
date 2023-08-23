@@ -3,10 +3,7 @@ package com.simplemobiletools.commons.compose.settings.scaffold
 import androidx.compose.foundation.gestures.FlingBehavior
 import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyListState
@@ -253,6 +250,34 @@ fun SettingsLazyScaffold(
             ) {
                 lazyContent(paddingValues)
             }
+        }
+    }
+}
+
+@Composable
+fun SettingsLazyScaffold(
+    modifier: Modifier = Modifier,
+    customTopBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
+    customContent: @Composable (BoxScope.(PaddingValues) -> Unit)
+) {
+    val context = LocalContext.current
+
+    val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
+    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
+    val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
+    SystemUISettingsScaffoldStatusBarColor(scrolledColor)
+    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+
+    Scaffold(
+        modifier = modifier
+            .fillMaxSize()
+            .nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            customTopBar(scrolledColor, navigationIconInteractionSource, scrollBehavior, statusBarColor, colorTransitionFraction, contrastColor)
+        }
+    ) { paddingValues ->
+        ScreenBoxSettingsScaffold(paddingValues) {
+            customContent(paddingValues)
         }
     }
 }

@@ -39,7 +39,12 @@
                 android:id="@+id/bottom_sheet_chooser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bottom sheet chooser" />
+                android:text="About" />
+            <Button
+                android:id="@+id/manage_blocked_numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage blocked numbers" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

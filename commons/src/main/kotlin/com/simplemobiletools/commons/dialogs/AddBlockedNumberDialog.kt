@@ -1,13 +1,13 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.databinding.DialogAddBlockedNumberBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.BlockedNumber
 
-class AddBlockedNumberDialog(val activity: BaseSimpleActivity, val originalNumber: BlockedNumber? = null, val callback: () -> Unit) {
+class AddBlockedNumberDialog(val activity: Activity, val originalNumber: BlockedNumber? = null, val callback: () -> Unit) {
     init {
         val view = DialogAddBlockedNumberBinding.inflate(activity.layoutInflater, null, false).apply {
             if (originalNumber != null) {

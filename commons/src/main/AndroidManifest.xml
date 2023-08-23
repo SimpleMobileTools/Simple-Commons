@@ -50,6 +50,7 @@
             android:exported="false"
             android:label="@string/third_party_licences"
             android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity" />
+        <activity android:name=".activities.TestManageBlockedNumbers" />
 
         <receiver
             android:name=".receivers.SharedThemeReceiver"

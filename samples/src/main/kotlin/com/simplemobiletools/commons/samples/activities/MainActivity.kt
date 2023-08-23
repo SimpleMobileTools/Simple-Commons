@@ -1,7 +1,9 @@
 package com.simplemobiletools.commons.samples.activities
 
+import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.activities.TestManageBlockedNumbers
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
@@ -37,6 +39,9 @@ class MainActivity : BaseSimpleActivity() {
         }
         binding.bottomSheetChooser.setOnClickListener {
             launchAbout()
+        }
+        binding.manageBlockedNumbers.setOnClickListener {
+            startActivity(Intent(this, TestManageBlockedNumbers::class.java))
         }
     }
 

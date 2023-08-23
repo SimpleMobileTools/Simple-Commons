@@ -134,20 +134,25 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer()) {
-            updatePlaceholderTexts()
-            updateBlockedNumbers()
-        } else if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            tryImportBlockedNumbersFromFile(resultData.data!!)
-        } else if (requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val outputStream = contentResolver.openOutputStream(resultData.data!!)
-            exportBlockedNumbersTo(outputStream)
-        } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
-            toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
-            baseConfig.blockUnknownNumbers = false
-            baseConfig.blockHiddenNumbers = false
-            binding.blockUnknown.isChecked = false
-            binding.blockHidden.isChecked = false
+        when {
+            requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer() -> {
+                updatePlaceholderTexts()
+                updateBlockedNumbers()
+            }
+            requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
+                tryImportBlockedNumbersFromFile(resultData.data!!)
+            }
+            requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
+                val outputStream = contentResolver.openOutputStream(resultData.data!!)
+                exportBlockedNumbersTo(outputStream)
+            }
+            requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK -> {
+                toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
+                baseConfig.blockUnknownNumbers = false
+                baseConfig.blockHiddenNumbers = false
+                binding.blockUnknown.isChecked = false
+                binding.blockHidden.isChecked = false
+            }
         }
     }
 
@@ -289,7 +294,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                 if (blockedNumbers.isEmpty()) {
                     toast(R.string.no_entries_for_exporting)
                 } else {
-                    BlockedNumbersExporter().exportBlockedNumbers(blockedNumbers, outputStream) {
+                    BlockedNumbersExporter.exportBlockedNumbers(blockedNumbers, outputStream) {
                         toast(
                             when (it) {
                                 ExportResult.EXPORT_OK -> R.string.exporting_successful

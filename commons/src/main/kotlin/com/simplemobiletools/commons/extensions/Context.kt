@@ -1169,6 +1169,18 @@ fun Context.openNotificationSettings() {
     }
 }
 
+fun Context.getTempFile(folderName: String, filename: String): File? {
+    val folder = File(cacheDir, folderName)
+    if (!folder.exists()) {
+        if (!folder.mkdir()) {
+            toast(R.string.unknown_error_occurred)
+            return null
+        }
+    }
+
+    return File(folder, filename)
+}
+
 fun Context.openDeviceSettings() {
     val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
         data = Uri.fromParts("package", packageName, null)

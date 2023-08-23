@@ -79,6 +79,7 @@ internal fun Theme(
 
     MaterialTheme(
         colorScheme = colorScheme,
+        shapes = Shapes,
         content = content,
     )
 }

@@ -8,8 +8,13 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
+import com.simplemobiletools.commons.extensions.sharedPreferencesCallback
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.LinkedList
+import java.util.Locale
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filterNotNull
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -446,9 +451,13 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
+    val isBlockingUnknownNumbers: Flow<Boolean> = prefs.run { sharedPreferencesCallback { blockUnknownNumbers } .filterNotNull()}
+
     var blockHiddenNumbers: Boolean
         get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
         set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
+
+    val isBlockingHiddenNumbers: Flow<Boolean> = prefs.run { sharedPreferencesCallback { blockHiddenNumbers } .filterNotNull()}
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
