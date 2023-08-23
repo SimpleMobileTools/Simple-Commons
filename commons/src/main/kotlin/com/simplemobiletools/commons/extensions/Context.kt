@@ -996,6 +996,47 @@ fun Context.isDefaultDialer(): Boolean {
     }
 }
 
+fun Context.getContactsHasMap(callback: (HashMap<String, String>) -> Unit) {
+    ContactsHelper(this).getContacts(showOnlyContactsWithNumbers = true) { contactList ->
+        val privateContacts: HashMap<String, String> = HashMap()
+        for (contact in contactList) {
+            for (phoneNumber in contact.phoneNumbers) {
+                privateContacts[phoneNumber.value] = contact.name
+            }
+        }
+        callback(privateContacts)
+    }
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) -> Unit) {
+    getContactsHasMap { contacts ->
+        val blockedNumbers = ArrayList<BlockedNumber>()
+        if (!isNougatPlus() || !isDefaultDialer()) {
+            callback(blockedNumbers)
+        }
+
+        val uri = BlockedNumbers.CONTENT_URI
+        val projection = arrayOf(
+            BlockedNumbers.COLUMN_ID,
+            BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
+            BlockedNumbers.COLUMN_E164_NUMBER,
+        )
+
+        queryCursor(uri, projection) { cursor ->
+            val id = cursor.getLongValue(BlockedNumbers.COLUMN_ID)
+            val number = cursor.getStringValue(BlockedNumbers.COLUMN_ORIGINAL_NUMBER) ?: ""
+            val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: number
+            val comparableNumber = normalizedNumber.trimToComparableNumber()
+
+            val contactName = contacts[number] ?: getString(R.string.unknown)
+            val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber, contactName)
+            blockedNumbers.add(blockedNumber)
+        }
+        callback(blockedNumbers)
+    }
+}
+
 @TargetApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     val blockedNumbers = ArrayList<BlockedNumber>()
