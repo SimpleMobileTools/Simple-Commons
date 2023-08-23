@@ -38,7 +38,7 @@ fun SettingsPreferenceComponent(
                 onClick = { doOnPreferenceClick?.invoke() },
                 onLongClick = { doOnPreferenceLongClick?.invoke() },
             )
-            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .padding(20.dp)
             .then(modifier),
         verticalArrangement = Arrangement.Center
     ) {
