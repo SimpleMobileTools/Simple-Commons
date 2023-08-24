@@ -43,7 +43,7 @@ fun AdjustNavigationBarColors(canScroll: Boolean?) {
     val isSystemInDarkTheme = isSystemInDarkTheme()
     val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
     val navigationBarColor = when (canScroll) {
-        true -> Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor(factor = 1)).copy(alpha = 0.5f)
+        true -> Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
         else -> Color.Transparent
     }
     DisposableEffect(systemUiController, !isSystemInDarkTheme, navigationBarColor) {

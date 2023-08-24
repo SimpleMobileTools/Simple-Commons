@@ -27,9 +27,14 @@ import kotlinx.collections.immutable.toImmutableList
 internal fun LicenseScreen(
     goBack: () -> Unit,
     thirdPartyLicenses: ImmutableList<License>,
-    onLicenseClick: (urlId: Int) -> Unit
+    onLicenseClick: (urlId: Int) -> Unit,
+    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
-    SettingsLazyScaffold(title = stringResource(id = R.string.third_party_licences), goBack = goBack) { paddingValues ->
+    SettingsLazyScaffold(
+        title = stringResource(id = R.string.third_party_licences),
+        goBack = goBack,
+        canScroll = canScroll
+    ) { paddingValues ->
         itemsIndexed(thirdPartyLicenses) { index, license ->
             Column {
                 LicenseItem(license, onLicenseClick)
@@ -114,7 +119,8 @@ private fun LicenseScreenPreview() {
             ).toImmutableList(),
             onLicenseClick = {
 
-            }
+            },
+            canScroll = {}
         )
     }
 }

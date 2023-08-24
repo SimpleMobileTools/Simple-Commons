@@ -19,9 +19,7 @@ import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
-import com.simplemobiletools.commons.compose.screens.AboutScreen
-import com.simplemobiletools.commons.compose.screens.AboutSection
-import com.simplemobiletools.commons.compose.screens.HelpUsSection
+import com.simplemobiletools.commons.compose.screens.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.RateStarsDialog
@@ -74,17 +72,17 @@ class AboutActivity : ComponentActivity() {
                         }
                     },
                     socialSection = {
-                        /*if (showExternalLinks) {
+                        if (showExternalLinks) {
                             SocialSection(
                                 onFacebookClick = ::onFacebookClick,
                                 onGithubClick = ::onGithubClick,
                                 onRedditClick = ::onRedditClick,
                                 onTelegramClick = ::onTelegramClick
                             )
-                        }*/
+                        }
                     },
                     otherSection = {
-                       /* val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
+                        val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
                         var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
                         if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
                             version += " ${getString(R.string.pro)}"
@@ -101,7 +99,7 @@ class AboutActivity : ComponentActivity() {
                             onLicenseClick = ::onLicenseClick,
                             version = fullVersion,
                             onVersionClick = ::onVersionClick
-                        )*/
+                        )
                     },
                     canScroll = { isContentScrollable ->
                         canScroll = isContentScrollable

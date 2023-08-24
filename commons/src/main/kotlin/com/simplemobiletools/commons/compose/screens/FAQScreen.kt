@@ -34,12 +34,14 @@ import kotlinx.collections.immutable.toImmutableList
 @Composable
 internal fun FAQScreen(
     goBack: () -> Unit,
-    faqItems: ImmutableList<FAQItem>
+    faqItems: ImmutableList<FAQItem>,
+    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
         contentPadding = PaddingValues(bottom = 8.dp),
+        canScroll = canScroll
     ) { paddingValues ->
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -74,9 +76,11 @@ internal fun FAQScreen(
                 )
                 Spacer(modifier = Modifier.padding(bottom = 8.dp))
                 if (index != faqItems.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 4.dp))
+                    SettingsHorizontalDivider(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 4.dp)
+                    )
                 }
             }
         }
@@ -125,7 +129,8 @@ private fun FAQScreenPreview() {
                 FAQItem(R.string.faq_4_title_commons, R.string.faq_4_text_commons),
                 FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
                 FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons)
-            ).toImmutableList()
+            ).toImmutableList(),
+            canScroll = {}
         )
     }
 }

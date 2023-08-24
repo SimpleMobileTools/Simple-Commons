@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.compose.settings.scaffold
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -27,7 +28,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    canScroll: (canPerformScroll: Boolean) -> Unit = {},
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -55,10 +57,6 @@ fun SettingsScaffold(
         },
     ) { paddingValues ->
         ScreenBoxSettingsScaffold(paddingValues) {
-            val scrollState = rememberScrollState()
-            LaunchedEffect(Unit) {
-                canScroll(scrollState.canScrollForward || scrollState.canScrollBackward)
-            }
             Column(
                 Modifier
                     .matchParentSize()
@@ -81,6 +79,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -112,7 +112,7 @@ fun SettingsScaffold(
             Column(
                 modifier = Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
             ) {
@@ -132,6 +132,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -164,7 +166,7 @@ fun SettingsScaffold(
             Column(
                 modifier = Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
             ) {
@@ -174,15 +176,24 @@ fun SettingsScaffold(
     }
 }
 
+@Composable
+private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): ScrollState {
+    val scrollState = rememberScrollState()
+    LaunchedEffect(Unit) {
+        canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)
+    }
+    return scrollState
+}
+
 @MyDevices
 @Composable
 private fun SettingsScaffoldPreview() {
     AppThemeSurface {
-        SettingsScaffold(title = "About", goBack = {}, content = {
+        SettingsScaffold(title = "About", goBack = {}) {
             ListItem(headlineContent = { Text(text = "Some text") },
                 leadingContent = {
                     Icon(imageVector = Icons.Filled.AccessTime, contentDescription = null)
                 })
-        })
+        }
     }
 }
