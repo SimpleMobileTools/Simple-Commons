@@ -36,7 +36,7 @@ fun SettingsLazyScaffold(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    state: LazyListState = verticalScrollState(canScroll),
+    state: LazyListState = canPerformVerticalScrollLazyListState(canScroll),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -96,7 +96,7 @@ fun SettingsLazyScaffold(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    state: LazyListState = verticalScrollState(canScroll),
+    state: LazyListState = canPerformVerticalScrollLazyListState(canScroll),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -156,7 +156,7 @@ fun SettingsLazyScaffold(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    state: LazyListState = verticalScrollState(canScroll),
+    state: LazyListState = canPerformVerticalScrollLazyListState(canScroll),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -222,7 +222,7 @@ fun SettingsLazyScaffold(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    state: LazyListState = verticalScrollState(canScroll),
+    state: LazyListState = canPerformVerticalScrollLazyListState(canScroll),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -288,7 +288,7 @@ fun SettingsLazyScaffold(
 }
 
 @Composable
-private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): LazyListState {
+internal fun canPerformVerticalScrollLazyListState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): LazyListState {
     val scrollState = rememberLazyListState()
     LaunchedEffect(Unit) {
         canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)

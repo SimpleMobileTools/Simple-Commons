@@ -29,7 +29,7 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
+    scrollState: ScrollState = canPerformVerticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -80,7 +80,7 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
+    scrollState: ScrollState = canPerformVerticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -133,7 +133,7 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
+    scrollState: ScrollState = canPerformVerticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -177,7 +177,7 @@ fun SettingsScaffold(
 }
 
 @Composable
-private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): ScrollState {
+internal fun canPerformVerticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): ScrollState {
     val scrollState = rememberScrollState()
     LaunchedEffect(Unit) {
         canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)

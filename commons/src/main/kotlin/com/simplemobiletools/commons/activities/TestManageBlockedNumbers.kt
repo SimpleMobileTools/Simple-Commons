@@ -9,14 +9,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.screens.ManageBlockedNumbersScreen
@@ -55,6 +54,8 @@ class TestManageBlockedNumbers : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
+            var canScroll by remember { mutableStateOf<Boolean?>(null) }
+            AdjustNavigationBarColors(canScroll)
             val context = LocalContext.current
             val blockedNumbers by manageBlockedNumbersViewModel.blockedNumbers.collectAsStateWithLifecycle()
             LaunchedEffect(blockedNumbers) {
@@ -105,6 +106,9 @@ class TestManageBlockedNumbers : BaseSimpleActivity() {
                     },
                     onCopy = { blockedNumber ->
                         copyToClipboard(blockedNumber.number)
+                    },
+                    canScroll = { canPerformScroll ->
+                        canScroll = canPerformScroll
                     })
             }
         }

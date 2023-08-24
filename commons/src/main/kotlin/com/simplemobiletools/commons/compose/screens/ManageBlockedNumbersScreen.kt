@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -50,6 +49,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsNavigationIcon
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffoldTopBar
+import com.simplemobiletools.commons.compose.settings.scaffold.canPerformVerticalScrollLazyListState
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.ripple_dark
 import com.simplemobiletools.commons.compose.theme.ripple_light
@@ -77,7 +77,8 @@ internal fun ManageBlockedNumbersScreen(
     blockedNumbers: ImmutableList<BlockedNumber>,
     onDelete: (Set<Long>) -> Unit,
     onEdit: (BlockedNumber) -> Unit,
-    onCopy: (BlockedNumber) -> Unit
+    onCopy: (BlockedNumber) -> Unit,
+    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
     val startingPadding = Modifier.padding(horizontal = 4.dp)
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
@@ -122,7 +123,7 @@ internal fun ManageBlockedNumbersScreen(
         },
     ) {
 
-        val state = rememberLazyListState()
+        val state = canPerformVerticalScrollLazyListState(canScroll)
         val autoScrollSpeed = remember { mutableFloatStateOf(0f) }
         LaunchedEffect(autoScrollSpeed.floatValue) {
             if (autoScrollSpeed.floatValue != 0f) {
@@ -526,7 +527,9 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
                 BlockedNumber(id = 8, number = "5552221111", normalizedNumber = "5552221111", numberToCompare = "5552221111")
             ).toImmutableList(),
             onDelete = {},
-            onEdit = {}
-        ) {}
+            onEdit = {},
+            canScroll = {},
+            onCopy = {}
+        )
     }
 }
