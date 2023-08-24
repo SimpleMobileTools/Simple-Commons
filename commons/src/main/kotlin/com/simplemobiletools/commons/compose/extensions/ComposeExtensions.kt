@@ -53,7 +53,6 @@ fun AdjustNavigationBarColors(canScroll: Boolean?) {
     }
 }
 
-
 @Composable
 fun <T : Any> onEventValue(event: Lifecycle.Event = Lifecycle.Event.ON_START, value: () -> T): T {
     val rememberLatestUpdateState by rememberUpdatedState(newValue = value)
