@@ -3,9 +3,13 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.screens.ContributorsScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -19,6 +23,8 @@ class ContributorsActivity : AppCompatActivity() {
         setContent {
             TransparentSystemBars()
             AppThemeSurface {
+                var canScroll by remember { mutableStateOf<Boolean?>(null) }
+                AdjustNavigationBarColors(canScroll)
                 val contributors = remember {
                     languageContributors()
                 }
@@ -28,7 +34,8 @@ class ContributorsActivity : AppCompatActivity() {
                 ContributorsScreen(
                     goBack = ::finish,
                     showContributorsLabel = showContributorsLabel,
-                    contributors = contributors
+                    contributors = contributors,
+                    canScroll = { canPerformScroll -> canScroll = canPerformScroll }
                 )
             }
         }

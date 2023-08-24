@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
-private val startingTitlePadding = Modifier.padding(start = 64.dp)
+private val startingTitlePadding = Modifier.padding(start = 58.dp)
 
 @Composable
 internal fun AboutScreen(
@@ -24,9 +24,10 @@ internal fun AboutScreen(
     helpUsSection: @Composable () -> Unit,
     aboutSection: @Composable () -> Unit,
     socialSection: @Composable () -> Unit,
-    otherSection: @Composable () -> Unit
+    otherSection: @Composable () -> Unit,
+    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) { paddingValues ->
+    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack, canScroll = canScroll) { paddingValues ->
         aboutSection()
         helpUsSection()
         socialSection()
@@ -240,7 +241,7 @@ private fun AboutScreenPreview() {
                     version = "5.0.4",
                     onVersionClick = {}
                 )
-            }
+            }, canScroll = {}
         )
     }
 }

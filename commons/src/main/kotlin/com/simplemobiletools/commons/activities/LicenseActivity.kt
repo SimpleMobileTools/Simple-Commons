@@ -3,9 +3,13 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.screens.LicenseScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -23,7 +27,14 @@ class LicenseActivity : ComponentActivity() {
             val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
             TransparentSystemBars()
             AppThemeSurface {
-                LicenseScreen(goBack = ::finish, thirdPartyLicenses = thirdPartyLicenses, onLicenseClick = ::launchViewIntent)
+                var canScroll by remember { mutableStateOf<Boolean?>(null) }
+                AdjustNavigationBarColors(canScroll)
+                LicenseScreen(
+                    goBack = ::finish,
+                    thirdPartyLicenses = thirdPartyLicenses,
+                    onLicenseClick = ::launchViewIntent,
+                    canScroll = { canPerformScroll -> canScroll = canPerformScroll }
+                )
             }
         }
     }
