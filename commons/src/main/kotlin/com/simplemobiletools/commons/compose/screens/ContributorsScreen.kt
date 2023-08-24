@@ -27,15 +27,17 @@ import com.simplemobiletools.commons.models.LanguageContributor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
-private val startingPadding = Modifier.padding(start = 62.dp)
+private val startingPadding = Modifier.padding(start = 58.dp)
 
 @Composable
 internal fun ContributorsScreen(
     goBack: () -> Unit,
     showContributorsLabel: Boolean,
-    contributors: ImmutableList<LanguageContributor>
+    contributors: ImmutableList<LanguageContributor>,
+    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
     SettingsLazyScaffold(
+        canScroll = canScroll,
         title = { scrolledColor ->
             Text(
                 text = stringResource(id = R.string.contributors),
@@ -148,7 +150,8 @@ private fun ContributorsScreenPreview() {
                 LanguageContributor(R.drawable.ic_flag_bengali_vector, R.string.translation_bengali, R.string.translators_bengali),
                 LanguageContributor(R.drawable.ic_flag_catalan_vector, R.string.translation_catalan, R.string.translators_catalan),
             ).toImmutableList(),
-            showContributorsLabel = true
+            showContributorsLabel = true,
+            canScroll = {}
         )
     }
 }

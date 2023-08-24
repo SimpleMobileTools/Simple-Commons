@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.compose.settings.scaffold
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -8,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,10 +28,11 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
-
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
@@ -57,7 +60,7 @@ fun SettingsScaffold(
             Column(
                 Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 horizontalAlignment = horizontalAlignment,
                 verticalArrangement = verticalArrangement
             ) {
@@ -76,6 +79,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -107,7 +112,7 @@ fun SettingsScaffold(
             Column(
                 modifier = Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
             ) {
@@ -127,6 +132,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
+    scrollState: ScrollState = verticalScrollState(canScroll),
     content: @Composable ColumnScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -159,7 +166,7 @@ fun SettingsScaffold(
             Column(
                 modifier = Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(scrollState),
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
             ) {
@@ -169,15 +176,24 @@ fun SettingsScaffold(
     }
 }
 
+@Composable
+private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): ScrollState {
+    val scrollState = rememberScrollState()
+    LaunchedEffect(Unit) {
+        canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)
+    }
+    return scrollState
+}
+
 @MyDevices
 @Composable
 private fun SettingsScaffoldPreview() {
     AppThemeSurface {
-        SettingsScaffold(title = "About", goBack = {}, content = {
+        SettingsScaffold(title = "About", goBack = {}) {
             ListItem(headlineContent = { Text(text = "Some text") },
                 leadingContent = {
                     Icon(imageVector = Icons.Filled.AccessTime, contentDescription = null)
                 })
-        })
+        }
     }
 }

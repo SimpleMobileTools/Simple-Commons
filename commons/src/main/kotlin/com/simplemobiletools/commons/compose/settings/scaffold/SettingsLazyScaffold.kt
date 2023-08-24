@@ -282,6 +282,15 @@ fun SettingsLazyScaffold(
     }
 }
 
+@Composable
+private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): LazyListState {
+    val scrollState = rememberLazyListState()
+    LaunchedEffect(Unit) {
+        canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)
+    }
+    return scrollState
+}
+
 @MyDevices
 @Composable
 private fun SettingsLazyScaffoldPreview() {

@@ -9,11 +9,15 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.screens.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -42,6 +46,8 @@ class AboutActivity : ComponentActivity() {
             val resources = context.resources
             TransparentSystemBars()
             AppThemeSurface {
+                var canScroll by remember { mutableStateOf<Boolean?>(null) }
+                AdjustNavigationBarColors(canScroll)
                 val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
                 val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
                 AboutScreen(
@@ -94,6 +100,9 @@ class AboutActivity : ComponentActivity() {
                             version = fullVersion,
                             onVersionClick = ::onVersionClick
                         )
+                    },
+                    canScroll = { isContentScrollable ->
+                        canScroll = isContentScrollable
                     }
                 )
             }
