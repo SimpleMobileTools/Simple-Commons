@@ -7,10 +7,12 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.isLitWell
+import com.simplemobiletools.commons.extensions.darkenColor
 
 fun Context.getActivity(): Activity {
     return when (this) {
@@ -41,7 +43,7 @@ fun AdjustNavigationBarColors(canScroll: Boolean?) {
     val isSystemInDarkTheme = isSystemInDarkTheme()
     val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
     val navigationBarColor = when (canScroll) {
-        true -> MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)
+        true -> Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor(factor = 1))
         else -> Color.Transparent
     }
     DisposableEffect(systemUiController, !isSystemInDarkTheme, navigationBarColor) {
