@@ -40,8 +40,7 @@ internal fun FAQScreen(
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = 8.dp),
-        canScroll = canScroll
+        contentPadding = PaddingValues(bottom = 8.dp)
     ) { paddingValues ->
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {

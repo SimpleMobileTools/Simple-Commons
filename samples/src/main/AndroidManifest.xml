@@ -36,6 +36,6 @@
 
         <activity
             android:name="com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity"
-            android:label="@string/blocked_numbers" />
+            android:label="@string/manage_blocked_numbers" />
     </application>
 </manifest>

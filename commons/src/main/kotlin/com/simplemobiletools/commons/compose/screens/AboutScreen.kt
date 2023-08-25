@@ -25,9 +25,8 @@ internal fun AboutScreen(
     aboutSection: @Composable () -> Unit,
     socialSection: @Composable () -> Unit,
     otherSection: @Composable () -> Unit,
-    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack, canScroll = canScroll) { paddingValues ->
+    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) { paddingValues ->
         aboutSection()
         helpUsSection()
         socialSection()
@@ -207,9 +206,6 @@ private fun AboutScreenPreview() {
     AppThemeSurface {
         AboutScreen(
             goBack = {},
-            aboutSection = {
-                AboutSection(setupFAQ = true, onFAQClick = {}, onEmailClick = {})
-            },
             helpUsSection = {
                 HelpUsSection(
                     onRateUsClick = {},
@@ -221,6 +217,9 @@ private fun AboutScreenPreview() {
                     onDonateClick = {}
                 )
             },
+            aboutSection = {
+                AboutSection(setupFAQ = true, onFAQClick = {}, onEmailClick = {})
+            },
             socialSection = {
                 SocialSection(
                     onFacebookClick = {},
@@ -228,20 +227,19 @@ private fun AboutScreenPreview() {
                     onRedditClick = {},
                     onTelegramClick = {}
                 )
-            },
-            otherSection = {
-                OtherSection(
-                    showMoreApps = true,
-                    onMoreAppsClick = {},
-                    onWebsiteClick = {},
-                    showWebsite = true,
-                    showPrivacyPolicy = true,
-                    onPrivacyPolicyClick = {},
-                    onLicenseClick = {},
-                    version = "5.0.4",
-                    onVersionClick = {}
-                )
-            }, canScroll = {}
-        )
+            }
+        ) {
+            OtherSection(
+                showMoreApps = true,
+                onMoreAppsClick = {},
+                onWebsiteClick = {},
+                showWebsite = true,
+                showPrivacyPolicy = true,
+                onPrivacyPolicyClick = {},
+                onLicenseClick = {},
+                version = "5.0.4",
+                onVersionClick = {}
+            )
+        }
     }
 }

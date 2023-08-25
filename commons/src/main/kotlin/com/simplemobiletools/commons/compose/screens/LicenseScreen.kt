@@ -32,8 +32,7 @@ internal fun LicenseScreen(
 ) {
     SettingsLazyScaffold(
         title = stringResource(id = R.string.third_party_licences),
-        goBack = goBack,
-        canScroll = canScroll
+        goBack = goBack
     ) { paddingValues ->
         itemsIndexed(thirdPartyLicenses) { index, license ->
             Column {

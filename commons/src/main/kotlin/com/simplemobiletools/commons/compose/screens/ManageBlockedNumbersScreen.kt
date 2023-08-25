@@ -78,7 +78,6 @@ internal fun ManageBlockedNumbersScreen(
     onDelete: (Set<Long>) -> Unit,
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
-    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
     val startingPadding = Modifier.padding(horizontal = 4.dp)
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
@@ -121,9 +120,8 @@ internal fun ManageBlockedNumbersScreen(
                 )
             }
         },
-    ) {
-
-        val state = canPerformVerticalScrollLazyListState(canScroll)
+    ) { paddingValues ->
+        val state = canPerformVerticalScrollLazyListState()
         val autoScrollSpeed = remember { mutableFloatStateOf(0f) }
         LaunchedEffect(autoScrollSpeed.floatValue) {
             if (autoScrollSpeed.floatValue != 0f) {
@@ -177,9 +175,10 @@ internal fun ManageBlockedNumbersScreen(
                         val isSelected = selectedIds.value.contains(blockedNumber.id)
                         BlockedNumber(
                             modifier = Modifier
+                                .animateItemPlacement()
                                 .semantics {
                                     if (!isInActionMode) {
-                                        onLongClick("Select") {
+                                        onLongClick("select") {
                                             selectedIds.value += blockedNumber.id
                                             true
                                         }
@@ -209,6 +208,9 @@ internal fun ManageBlockedNumbersScreen(
                             onCopy = onCopy,
                             isSelected = isSelected
                         )
+                    }
+                    item {
+                        Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
                     }
                 }
             }
@@ -329,7 +331,7 @@ private fun ActionModeToolbar(
     }
     TopAppBar(
         title = {
-            Text(text = "$selectedIdsCount/$blockedNumbersCount", letterSpacing = 8.sp, color = textColor)
+            Text(text = "$selectedIdsCount/$blockedNumbersCount", color = textColor, modifier = Modifier.padding(start = 8.dp))
         },
         navigationIcon = {
             SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
@@ -527,9 +529,7 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
                 BlockedNumber(id = 8, number = "5552221111", normalizedNumber = "5552221111", numberToCompare = "5552221111")
             ).toImmutableList(),
             onDelete = {},
-            onEdit = {},
-            canScroll = {},
-            onCopy = {}
-        )
+            onEdit = {}
+        ) {}
     }
 }

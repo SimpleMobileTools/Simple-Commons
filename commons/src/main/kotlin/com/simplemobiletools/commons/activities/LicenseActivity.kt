@@ -3,14 +3,13 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
-import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.commons.compose.screens.LicenseScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.extensions.launchViewIntent
@@ -21,11 +20,10 @@ import kotlinx.collections.immutable.toImmutableList
 class LicenseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
         setContent {
             val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
             val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
-            TransparentSystemBars()
             AppThemeSurface {
                 var canScroll by remember { mutableStateOf<Boolean?>(null) }
                 AdjustNavigationBarColors(canScroll)
