@@ -78,7 +78,7 @@
     <string name="phone_storage">Памет на устройството</string>
     <string name="phone_storage_hidden">Памет на устройството (без достъп от други приложения)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Сканиране…</string>
     <!-- Events -->
     <string name="birthday">Рожден ден</string>
     <string name="anniversary">Годишнина</string>
@@ -101,9 +101,9 @@
     <string name="increase_column_count">Увеличаване на броя на колоните</string>
     <string name="reduce_column_count">Намаляване на броя на колоните</string>
     <string name="column_count">Брой колони</string>
-    <string name="row_count">Row count</string>
-    <string name="portrait_column_count">Portrait column count</string>
-    <string name="landscape_column_count">Landscape column count</string>
+    <string name="row_count">Брой редове</string>
+    <string name="portrait_column_count">Брой колони в портретна ориентация</string>
+    <string name="landscape_column_count">Брой колони в пейзажна ориентация</string>
     <string name="change_cover_image">Промяна на корицата</string>
     <string name="select_photo">Избор на снимка</string>
     <plurals name="column_counts">
@@ -111,8 +111,8 @@
         <item quantity="other">%d колони</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d ред</item>
+        <item quantity="other">%d реда</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление на блокирани номера</string>
@@ -141,7 +141,7 @@
     <string name="search">Търсене</string>
     <string name="search_in_placeholder">Търси в %s</string>
     <string name="type_2_characters">Въведете поне 2 символа, за да започнете търсенето.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Показване на лента за търсене</string>
     <string name="search_contacts">Търсене на контакти</string>
     <string name="search_favorites">Търсене на любими</string>
     <string name="search_apps">Търсене на приложения</string>
@@ -171,15 +171,15 @@
     <string name="no_audio_permissions">Необходимо е разрешение за аудио</string>
     <string name="no_permission">Няма разрешение</string>
     <string name="allow_notifications_reminders">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва напомняния.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Трябва да разрешите на приложението да показва известия на цял екран, в противен случай може да пропуснете някои напомняния.</string>
     <string name="allow_notifications_files">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва лентата за напредъка.</string>
     <string name="allow_notifications_music_player">Трябва да разрешите на приложението да показва известия, в противен случай то не може да възпроизвежда песни.</string>
     <string name="allow_notifications_voice_recorder">Трябва да разрешите на приложението да показва известия, в противен случай то не може да записва аудио.</string>
     <string name="allow_notifications_incoming_calls">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи повиквания.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Трябва да разрешите на приложението да показва известия на цял екран, в противен случай може да пропуснете някои входящи повиквания.</string>
     <string name="allow_notifications_incoming_messages">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи съобщения.</string>
     <string name="allow_alarm_scheduled_messages">Трябва да разрешите на приложението достъп до вътрешни аларми, в противен случай то не може да изпраща планирани съобщения.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_location_permission">Трябва да разрешите на приложението достъп до вашето местоположение, в противен случай то няма да го знае.</string>
     <string name="grant_permission">Предоставяне на разрешение</string>
     <string name="permission_required">Изисква се разрешение</string>
     <!-- Renaming -->
@@ -412,7 +412,7 @@
     <string name="call">Повикване</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
-    <string name="wallpapers">Wallpapers</string>
+    <string name="wallpapers">Тапети</string>
     <!-- Sorting -->
     <string name="sort_by">Сортиране по</string>
     <string name="name">Име</string>
@@ -483,7 +483,7 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password_new">Моля, въведете парола</string>
     <string name="empty_password">Моля, въведете паролата</string>
     <string name="invalid_password">Грешна парола</string>
     <!-- Times -->
