@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Zrušit</string>
-    <string name="close">Close</string>
+    <string name="close">Zavřít</string>
     <string name="back">Zpět</string>
     <string name="nothing">Nic</string>
     <string name="later">Později</string>
@@ -78,7 +78,7 @@
     <string name="phone_storage">Úložiště telefonu</string>
     <string name="phone_storage_hidden">Úložiště telefonu (neviditelné pro ostatní aplikace)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Skenování…</string>
     <!-- Events -->
     <string name="birthday">Narozeniny</string>
     <string name="anniversary">Výročí</string>
@@ -101,7 +101,7 @@
     <string name="increase_column_count">Zvýšit počet sloupců</string>
     <string name="reduce_column_count">Snížit počet sloupců</string>
     <string name="column_count">Počet sloupců</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Počet řádků</string>
     <string name="portrait_column_count">Počet sloupců na výšku</string>
     <string name="landscape_column_count">Počet sloupců na šířku</string>
     <string name="change_cover_image">Změnit obrázek složky</string>
@@ -112,8 +112,9 @@
         <item quantity="other">%d sloupců</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d řádek</item>
+        <item quantity="few">%d řádky</item>
+        <item quantity="other">%d řádků</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
@@ -128,9 +129,9 @@
     <string name="set_as_default">Nastavit jako výchozí</string>
     <string name="block_confirmation">Jste si jistí, že chcete zablokovat „%s“\?</string>
     <string name="block_not_stored_calls">Blokovat volání z neznámých čísel</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Blokovat volání ze skrytých čísel</string>
     <string name="block_not_stored_messages">Blokovat zprávy z neznámých čísel</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Blokovat zprávy ze skrytých čísel</string>
     <string name="add_blocked_number_helper_text">Zadáním čísla nebo vzoru (např. *12345*, +1*8888) zablokujete všechny hovory a zprávy z čísel odpovídajících vzoru.</string>
     <string name="must_make_default_caller_id_app">Nelze blokovat neznámá čísla bez povolení ID volajícího.</string>
     <!-- Favorites -->
@@ -142,7 +143,7 @@
     <string name="search">Hledat</string>
     <string name="search_in_placeholder">Hledat ve složce %s</string>
     <string name="type_2_characters">Zadejte alespoň 2 znaky pro zahájení hledání.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Zobrazit panel vyhledávání</string>
     <string name="search_contacts">Hledat kontakty</string>
     <string name="search_favorites">Hledat oblíbené</string>
     <string name="search_apps">Hledat aplikace</string>
@@ -171,16 +172,16 @@
     <string name="no_camera_permissions">Je vyžadováno oprávnění pro přístup k fotoaparátu</string>
     <string name="no_audio_permissions">Je vyžadováno oprávnění pro přístup ke zvuku</string>
     <string name="no_permission">Žádné oprávnění</string>
-    <string name="allow_notifications_reminders">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat upomínky.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
-    <string name="allow_notifications_files">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat stav postupu.</string>
-    <string name="allow_notifications_music_player">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct přehrávat hudbu.</string>
-    <string name="allow_notifications_voice_recorder">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct nahrávat zvuk.</string>
-    <string name="allow_notifications_incoming_calls">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí hovory.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">Musíte aplikaci povolit zobrazování upozornění, jinak nebude moct zobrazovat příchozí zprávy.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_notifications_reminders">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže zobrazovat připomenutí.</string>
+    <string name="allow_full_screen_notifications_reminders">Musíte aplikaci povolit zobrazování oznámení na celou obrazovku, jinak vám mohou uniknout některá připomenutí.</string>
+    <string name="allow_notifications_files">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže zobrazovat ukazatel průběhu.</string>
+    <string name="allow_notifications_music_player">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže přehrávat hudbu.</string>
+    <string name="allow_notifications_voice_recorder">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže nahrávat zvuk.</string>
+    <string name="allow_notifications_incoming_calls">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže zobrazovat příchozí hovory.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Musíte aplikaci povolit zobrazování oznámení na celou obrazovku, jinak můžete zmeškat některé příchozí hovory.</string>
+    <string name="allow_notifications_incoming_messages">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže zobrazovat příchozí zprávy.</string>
+    <string name="allow_alarm_scheduled_messages">Musíte aplikaci povolit přístup k interním upozorněním, jinak nemůže odesílat naplánované zprávy.</string>
+    <string name="allow_location_permission">Musíte aplikaci povolit přístup k vaší poloze, jinak ji nemůže zjistit.</string>
     <string name="grant_permission">Povolit oprávnění</string>
     <string name="permission_required">Vyžadováno oprávnění</string>
     <!-- Renaming -->
@@ -393,7 +394,7 @@
     <string name="unhide_folder">Odkrýt složku</string>
     <string name="temporarily_show_hidden">Dočasně zobrazit skryté</string>
     <string name="stop_showing_hidden">Přestat zobrazovat skryté</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Povolit přístup k dalším médiím</string>
     <string name="maximum_share_reached">Nemůžete sdílet tolik obsahu najednou</string>
     <string name="empty_and_disable_recycle_bin">Vyprázdnit a deaktivovat koš</string>
     <string name="undo">Zpět</string>
@@ -425,7 +426,7 @@
     <string name="last_modified">Datum poslední úpravy</string>
     <string name="date_created">Datum vytvoření</string>
     <string name="date_taken">Datum pořízení</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Datum přidání</string>
     <string name="title">Název</string>
     <string name="filename">Název souboru</string>
     <string name="extension">Přípona</string>
@@ -489,9 +490,9 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="empty_password_new">Zadejte prosím heslo</string>
+    <string name="empty_password">Zadejte prosím heslo</string>
+    <string name="invalid_password">Nesprávné heslo</string>
     <!-- Times -->
     <string name="yesterday">Včera</string>
     <string name="today">Dnes</string>
@@ -700,7 +701,7 @@
     <string name="use_24_hour_time_format">Použít 24-hodinový formát času</string>
     <string name="change_date_and_time_format">Změnit formát data a času</string>
     <string name="sunday_first">Začátek týdne v neděli</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Začátek týdne</string>
     <string name="widgets">Widgety</string>
     <string name="use_same_snooze">Vždy použít stejný čas odložení</string>
     <string name="snooze_time">Čas odložení</string>
@@ -865,7 +866,7 @@
     <string name="upgrade_calendar">Lokálně uložené události musíte přenést ručně, exportováním do .ics souboru a následně je naimportovat. Tlačítka pro export/import najdete v nabídce na hlavní obrazovce.</string>
     <string name="upgraded_from_free_gallery">Zdravím,
 \n
-\nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění.
+\nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění. Také se již nebude zobrazovat tento dialog.
 \n
 \nDěkuji!</string>
     <string name="upgraded_to_pro_gallery">Zdravím,
@@ -875,7 +876,7 @@
 \nDěkuji!</string>
     <string name="upgraded_from_free">Zdravím,
 \n
-\nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění.
+\nzdá se, že jste právě upgradovali z bezplatné verze. Jakmile budete s touto verzí spokojeni a případně přenesete svá data, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat a vyhnete se jejímu náhodnému spuštění. Také se již nebude zobrazovat tento dialog.
 \n
 \nDěkuji!</string>
     <string name="upgraded_to_pro">Zdravím,
@@ -887,21 +888,21 @@
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Pokud chcete přenést své lokálně uložené události, musíte to udělat ručně tak, že je exportujete do souboru .ics v bezplatné verzi aplikace a importujete je sem přes horní nabídku.
 \n
-\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat.
+\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat. Také se již nebude zobrazovat tento dialog.
 \n
 \nDěkuji!</string>
     <string name="upgraded_from_free_contacts">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Pokud jste měli nějaké kontakty uložené pod „%s“, musíte je přenést ručně tak, že je exportujete do souboru .vcf v bezplatné verzi aplikace a imporujete je sem přes horní nabídku.
 \n
-\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat.
+\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat. Také se již nebude zobrazovat tento dialog.
 \n
 \nDěkuji!</string>
     <string name="upgraded_from_free_notes">Zdravím,
 \n
 \nzdá se, že jste právě upgradovali z bezplatné verze. Chcete-li přenést své poznámky, musíte to udělat ručně tak, že je exportujete do souboru v bezplatné verzi aplikace a importujete je sem přes horní nabídku.
 \n
-\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat.
+\nJakmile budete spokojeni se svým nastavením ve verzi Pro, můžete starou bezplatnou verzi odinstalovat, protože ji již nebudete potřebovat. Také se již nebude zobrazovat tento dialog.
 \n
 \nDěkuji!</string>
     <!-- About -->
@@ -1089,7 +1090,7 @@
     <string name="why_upgrade_footer">100% záruka vrácení peněz</string>
     <string name="why_upgrade_footer_one_time_payment">Jednorázová platba</string>
     <string name="why_upgrade_improved_design">Vylepšený vzhled</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Mnoho dalších vylepšení</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Pokročilý editor fotografií</string>
     <string name="why_upgrade_advanced_photo_video_editor">Pokročilý editor fotografií a videa</string>
@@ -1152,13 +1153,13 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (písmena na posuvníku)</string>
     <string name="event_bus_title">Event Bus (komunikace v rámci aplikace)</string>
     <string name="audio_record_view_title">Audio Record View (vizualizace zvuku)</string>
-    <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
+    <string name="sms_mms_title">SMS MMS (správa SMS a MMS)</string>
     <string name="apng_title">APNG Android (podpora animovaného WebP)</string>
     <string name="pdf_view_pager_title">PDFViewPager (prohlížeč PDF)</string>
     <string name="pdf_viewer_title">Android PdfViewer (prohlížeč PDF)</string>
     <string name="m3u_parser_title">M3U Parser (zpracování souborů playlistů m3u)</string>
     <string name="android_lame_title">AndroidLame (mp3 kodér)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (komprese a dekomprese ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Zkušební doba vypršela</string>
     <string name="start_free_trial">Zahájit bezplatnou zkušební dobu</string>
