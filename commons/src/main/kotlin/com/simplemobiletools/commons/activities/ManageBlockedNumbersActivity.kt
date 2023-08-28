@@ -62,7 +62,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     maybeSetDefaultCallerIdApp()
                 }
             }
-
             val isBlockingHiddenNumbers by config.isBlockingHiddenNumbers.collectAsStateWithLifecycle(initialValue = config.blockHiddenNumbers)
             val isBlockingUnknownNumbers by config.isBlockingUnknownNumbers.collectAsStateWithLifecycle(initialValue = config.blockUnknownNumbers)
             val isDialer = remember {
