@@ -30,8 +30,7 @@ class LicenseActivity : ComponentActivity() {
                 LicenseScreen(
                     goBack = ::finish,
                     thirdPartyLicenses = thirdPartyLicenses,
-                    onLicenseClick = ::launchViewIntent,
-                    canScroll = { canPerformScroll -> canScroll = canPerformScroll }
+                    onLicenseClick = ::launchViewIntent
                 )
             }
         }

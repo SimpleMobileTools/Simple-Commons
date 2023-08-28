@@ -5,10 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TopAppBarScrollBehavior
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -23,7 +20,10 @@ import com.simplemobiletools.commons.extensions.getContrastColor
 @Composable
 internal fun SystemUISettingsScaffoldStatusBarColor(scrolledColor: Color) {
     val insetController = rememberWindowInsetsController()
-    insetController.isAppearanceLightStatusBars = scrolledColor.isNotLitWell()
+    DisposableEffect(rememberWindowInsetsController()) {
+        insetController.isAppearanceLightStatusBars = scrolledColor.isNotLitWell()
+        onDispose { }
+    }
 }
 
 @Composable

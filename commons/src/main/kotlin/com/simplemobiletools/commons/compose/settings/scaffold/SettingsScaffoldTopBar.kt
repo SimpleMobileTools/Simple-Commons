@@ -23,6 +23,7 @@ import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
 internal fun SettingsScaffoldTopBar(
+    modifier: Modifier = Modifier,
     title: String,
     scrolledColor: Color,
     navigationIconInteractionSource: MutableInteractionSource,
@@ -32,8 +33,6 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
-    val layoutDirection = LocalLayoutDirection.current
-    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             Text(
@@ -44,26 +43,17 @@ internal fun SettingsScaffoldTopBar(
                 color = scrolledColor
             )
         },
-        navigationIcon = {
-            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
-        },
+        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
         scrollBehavior = scrollBehavior,
-        colors = TopAppBarDefaults.largeTopAppBarColors(
-            scrolledContainerColor = Color(statusBarColor),
-            containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
-            navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
-        ),
-        modifier = Modifier.padding(
-            top = paddingValues.calculateTopPadding(),
-            start = paddingValues.calculateStartPadding(layoutDirection),
-            end = paddingValues.calculateEndPadding(layoutDirection)
-        ),
-        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+        colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
+        modifier = modifier.topAppBarPaddings(),
+        windowInsets = topAppBarInsets()
     )
 }
 
 @Composable
 internal fun SettingsScaffoldTopBar(
+    modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     scrolledColor: Color,
     navigationIconInteractionSource: MutableInteractionSource,
@@ -73,32 +63,21 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
-    val layoutDirection = LocalLayoutDirection.current
-    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             title(scrolledColor)
         },
-        navigationIcon = {
-            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
-        },
+        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
         scrollBehavior = scrollBehavior,
-        colors = TopAppBarDefaults.largeTopAppBarColors(
-            scrolledContainerColor = Color(statusBarColor),
-            containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
-            navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
-        ),
-        modifier = Modifier.padding(
-            top = paddingValues.calculateTopPadding(),
-            start = paddingValues.calculateStartPadding(layoutDirection),
-            end = paddingValues.calculateEndPadding(layoutDirection)
-        ),
-        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+        colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
+        modifier = modifier.topAppBarPaddings(),
+        windowInsets = topAppBarInsets()
     )
 }
 
 @Composable
 internal fun SettingsScaffoldTopBar(
+    modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     actions: @Composable RowScope.() -> Unit,
     scrolledColor: Color,
@@ -109,28 +88,42 @@ internal fun SettingsScaffoldTopBar(
     contrastColor: Color,
     goBack: () -> Unit,
 ) {
-    val layoutDirection = LocalLayoutDirection.current
-    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
     TopAppBar(
         title = {
             title(scrolledColor)
         },
-        navigationIcon = {
-            SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor)
-        },
+        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
         actions = actions,
         scrollBehavior = scrollBehavior,
-        colors = TopAppBarDefaults.largeTopAppBarColors(
-            scrolledContainerColor = Color(statusBarColor),
-            containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
-            navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
-        ),
-        modifier = Modifier.padding(
-            top = paddingValues.calculateTopPadding(),
-            start = paddingValues.calculateStartPadding(layoutDirection),
-            end = paddingValues.calculateEndPadding(layoutDirection)
-        ),
-        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+        colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
+        modifier = modifier.topAppBarPaddings(),
+        windowInsets = topAppBarInsets()
+    )
+}
+
+@Composable
+private fun topAppBarColors(
+    statusBarColor: Int,
+    colorTransitionFraction: Float,
+    contrastColor: Color
+) = TopAppBarDefaults.topAppBarColors(
+    scrolledContainerColor = Color(statusBarColor),
+    containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
+    navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
+)
+
+@Composable
+internal fun topAppBarInsets() = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+
+@Composable
+internal fun Modifier.topAppBarPaddings(
+    paddingValues: PaddingValues = WindowInsets.navigationBars.asPaddingValues()
+): Modifier {
+    val layoutDirection = LocalLayoutDirection.current
+    return padding(
+        top = paddingValues.calculateTopPadding(),
+        start = paddingValues.calculateStartPadding(layoutDirection),
+        end = paddingValues.calculateEndPadding(layoutDirection)
     )
 }
 
@@ -152,18 +145,23 @@ internal fun SettingsNavigationIcon(
                 )
             ) { goBack() }
     ) {
-        if (iconColor == null) {
-            Icon(
-                imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-                modifier = Modifier.padding(4.dp)
-            )
-        } else {
-            Icon(
-                imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-                tint = iconColor,
-                modifier = Modifier.padding(4.dp)
-            )
-        }
+        BackIcon(iconColor)
+    }
+}
+
+@Composable
+private fun BackIcon(iconColor: Color?) {
+    if (iconColor == null) {
+        Icon(
+            imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+            modifier = Modifier.padding(4.dp)
+        )
+    } else {
+        Icon(
+            imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+            tint = iconColor,
+            modifier = Modifier.padding(4.dp)
+        )
     }
 }
 

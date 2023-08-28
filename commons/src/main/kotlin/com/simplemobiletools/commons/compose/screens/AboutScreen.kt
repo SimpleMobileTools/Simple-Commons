@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.compose.screens
 
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -26,13 +25,12 @@ internal fun AboutScreen(
     socialSection: @Composable () -> Unit,
     otherSection: @Composable () -> Unit,
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) { paddingValues ->
+    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) {
         aboutSection()
         helpUsSection()
         socialSection()
         otherSection()
         SettingsListItem(text = stringResource(id = R.string.about_footer))
-        Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
     }
 }
 

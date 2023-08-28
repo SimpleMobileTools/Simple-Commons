@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.plus
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
@@ -34,7 +35,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = canPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -67,7 +68,7 @@ fun SettingsLazyScaffold(
                 modifier = Modifier
                     .matchParentSize(),
                 state = state,
-                contentPadding = contentPadding,
+                contentPadding = contentPadding.plus(PaddingValues(bottom = paddingValues.calculateBottomPadding())),
                 reverseLayout = reverseLayout,
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
@@ -93,7 +94,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = canPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -126,12 +127,12 @@ fun SettingsLazyScaffold(
                 modifier = Modifier
                     .matchParentSize(),
                 state = state,
-                contentPadding = contentPadding,
+                contentPadding = contentPadding.plus(PaddingValues(bottom = paddingValues.calculateBottomPadding())),
                 reverseLayout = reverseLayout,
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
                 flingBehavior = flingBehavior,
-                userScrollEnabled = userScrollEnabled
+                userScrollEnabled = userScrollEnabled,
             ) {
                 lazyContent(paddingValues)
             }
@@ -152,7 +153,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = canPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -186,7 +187,7 @@ fun SettingsLazyScaffold(
                 modifier = Modifier
                     .matchParentSize(),
                 state = state,
-                contentPadding = contentPadding,
+                contentPadding = contentPadding.plus(PaddingValues(bottom = paddingValues.calculateBottomPadding())),
                 reverseLayout = reverseLayout,
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
@@ -210,7 +211,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = canPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -234,7 +235,7 @@ fun SettingsLazyScaffold(
                 modifier = Modifier
                     .matchParentSize(),
                 state = state,
-                contentPadding = contentPadding,
+                contentPadding = contentPadding.plus(PaddingValues(bottom = paddingValues.calculateBottomPadding())),
                 reverseLayout = reverseLayout,
                 verticalArrangement = verticalArrangement,
                 horizontalAlignment = horizontalAlignment,
@@ -276,7 +277,7 @@ fun SettingsLazyScaffold(
 }
 
 @Composable
-internal fun canPerformVerticalScrollLazyListState(): LazyListState {
+internal fun rememberCanPerformVerticalScrollLazyListState(): LazyListState {
     val scrollState = rememberLazyListState()
     var canScroll by remember { mutableStateOf<Boolean?>(null) }
     AdjustNavigationBarColors(canScroll)

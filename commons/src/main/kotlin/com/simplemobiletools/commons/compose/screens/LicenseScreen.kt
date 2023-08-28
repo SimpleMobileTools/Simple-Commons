@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.compose.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
@@ -28,12 +27,11 @@ internal fun LicenseScreen(
     goBack: () -> Unit,
     thirdPartyLicenses: ImmutableList<License>,
     onLicenseClick: (urlId: Int) -> Unit,
-    canScroll: (canPerformScroll: Boolean) -> Unit,
 ) {
     SettingsLazyScaffold(
         title = stringResource(id = R.string.third_party_licences),
         goBack = goBack
-    ) { paddingValues ->
+    ) {
         itemsIndexed(thirdPartyLicenses) { index, license ->
             Column {
                 LicenseItem(license, onLicenseClick)
@@ -41,9 +39,6 @@ internal fun LicenseScreen(
                     SettingsHorizontalDivider(modifier = Modifier.padding(bottom = 4.dp))
                 }
             }
-        }
-        item {
-            Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
         }
     }
 }
@@ -115,12 +110,10 @@ private fun LicenseScreenPreview() {
                 License(LICENSE_ANDROID_LAME, R.string.android_lame_title, R.string.android_lame_text, R.string.android_lame_url),
                 License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
                 License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url)
-            ).toImmutableList(),
-            onLicenseClick = {
+            ).toImmutableList()
+        ) {
 
-            },
-            canScroll = {}
-        )
+        }
     }
 }
 

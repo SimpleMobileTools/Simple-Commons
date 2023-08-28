@@ -63,6 +63,7 @@ fun SettingsScaffold(
                 verticalArrangement = verticalArrangement
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }
@@ -114,6 +115,7 @@ fun SettingsScaffold(
                 horizontalAlignment = horizontalAlignment,
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }
@@ -167,6 +169,7 @@ fun SettingsScaffold(
                 horizontalAlignment = horizontalAlignment,
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }

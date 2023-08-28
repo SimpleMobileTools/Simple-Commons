@@ -23,7 +23,6 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.onLongClick
@@ -46,10 +45,7 @@ import com.simplemobiletools.commons.compose.menus.ActionMenu
 import com.simplemobiletools.commons.compose.menus.OverflowMode
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsNavigationIcon
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffoldTopBar
-import com.simplemobiletools.commons.compose.settings.scaffold.canPerformVerticalScrollLazyListState
+import com.simplemobiletools.commons.compose.settings.scaffold.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.ripple_dark
 import com.simplemobiletools.commons.compose.theme.ripple_light
@@ -120,8 +116,8 @@ internal fun ManageBlockedNumbersScreen(
                 )
             }
         },
-    ) { paddingValues ->
-        val state = canPerformVerticalScrollLazyListState()
+    ) {
+        val state = rememberCanPerformVerticalScrollLazyListState()
         val autoScrollSpeed = remember { mutableFloatStateOf(0f) }
         LaunchedEffect(autoScrollSpeed.floatValue) {
             if (autoScrollSpeed.floatValue != 0f) {
@@ -171,7 +167,7 @@ internal fun ManageBlockedNumbersScreen(
                 }
 
                 hasGivenPermissionToBlock && blockedNumbers.isNotEmpty() -> {
-                    items(blockedNumbers, key = { it.id }) { blockedNumber ->
+                    items(blockedNumbers, key = { blockedNumber -> blockedNumber.id }) { blockedNumber ->
                         val isSelected = selectedIds.value.contains(blockedNumber.id)
                         BlockedNumber(
                             modifier = Modifier
@@ -189,8 +185,8 @@ internal fun ManageBlockedNumbersScreen(
                                         value = isSelected,
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null,
-                                        onValueChange = {
-                                            if (it) {
+                                        onValueChange = { selected ->
+                                            if (selected) {
                                                 selectedIds.value += blockedNumber.id
                                             } else {
                                                 selectedIds.value -= blockedNumber.id
@@ -208,9 +204,6 @@ internal fun ManageBlockedNumbersScreen(
                             onCopy = onCopy,
                             isSelected = isSelected
                         )
-                    }
-                    item {
-                        Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
                     }
                 }
             }
@@ -308,24 +301,15 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
 
 @Composable
 private fun ActionModeToolbar(
+    modifier: Modifier = Modifier,
     selectedIdsCount: Int,
     blockedNumbersCount: Int,
     onBackClick: () -> Unit,
     onCopy: () -> Unit,
     onDelete: () -> Unit
 ) {
-    val layoutDirection = LocalLayoutDirection.current
-    val paddingValues = WindowInsets.navigationBars.asPaddingValues()
-    val context = LocalContext.current
     val navigationIconInteractionSource = remember { MutableInteractionSource() }
-    val baseConfig = remember {
-        context.baseConfig
-    }
-    val bgColor = if (baseConfig.isUsingSystemTheme) {
-        colorResource(R.color.you_contextual_status_bar_color)
-    } else {
-        Color.Black
-    }
+    val bgColor = actionModeBgColor()
     val textColor by remember {
         derivedStateOf { Color(bgColor.toArgb().getContrastColor()) }
     }
@@ -342,13 +326,22 @@ private fun ActionModeToolbar(
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.primary
         ),
-        modifier = Modifier.padding(
-            top = paddingValues.calculateTopPadding(),
-            start = paddingValues.calculateStartPadding(layoutDirection),
-            end = paddingValues.calculateEndPadding(layoutDirection)
-        ),
-        windowInsets = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+        modifier = modifier.topAppBarPaddings(),
+        windowInsets = topAppBarInsets()
     )
+}
+
+@Composable
+private fun actionModeBgColor(): Color {
+    val context = LocalContext.current
+    val baseConfig = remember {
+        context.baseConfig
+    }
+    return if (baseConfig.isUsingSystemTheme) {
+        colorResource(R.color.you_contextual_status_bar_color)
+    } else {
+        Color.Black
+    }
 }
 
 @Composable

@@ -46,7 +46,7 @@ internal fun ContributorsScreen(
             )
         },
         goBack = goBack
-    ) { paddingValues ->
+    ) {
         item {
             SettingsGroupTitle {
                 SettingsTitleTextComponent(text = stringResource(id = R.string.development), modifier = startingPadding)
@@ -93,9 +93,7 @@ internal fun ContributorsScreen(
                 Spacer(modifier = Modifier.padding(bottom = 8.dp))
             }
         }
-        item {
-            Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
-        }
+       
     }
 }
 
