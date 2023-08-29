@@ -267,7 +267,7 @@
     <string name="confirm_folder_access_title">Toegang tot map bevestigen</string>
     <string name="confirm_storage_access_text">Op het volgende scherm schrijfrecht verlenen op de hoofdmap van de SD-kaart</string>
     <string name="confirm_storage_access_text_sd">Probeer het volgende als de SD-kaart niet wordt getoond</string>
-    <string name="confirm_storage_access_android_text">Verleen de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
+    <string name="confirm_storage_access_android_text">Geef de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
     <string name="confirm_storage_access_android_text_specific">Geef toegang tot \'&lt;b&gt;%s&lt;/b&gt;\' door onderaan in het volgende scherm op \'&lt;b&gt;Deze map gebruiken&lt;/b&gt;\' te drukken.</string>
     <string name="confirm_create_doc_for_new_folder_text">Druk in het volgende scherm onderaan op \'&lt;b&gt;Opslaan&lt;/b&gt;\' om de nieuwe map aan te maken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
@@ -380,7 +380,7 @@
     <string name="unhide_folder">Map zichtbaar maken</string>
     <string name="temporarily_show_hidden">Verborgen items tijdelijk tonen</string>
     <string name="stop_showing_hidden">Stop met tonen van verborgen media</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Toegang tot meer media geven</string>
     <string name="maximum_share_reached">Zoveel inhoud tegelijk delen kan niet</string>
     <string name="empty_and_disable_recycle_bin">Prullenbak legen en uitschakelen</string>
     <string name="undo">Ongedaan maken</string>
