@@ -30,7 +30,6 @@ import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
-
 @Composable
 internal fun FAQScreen(
     goBack: () -> Unit,
