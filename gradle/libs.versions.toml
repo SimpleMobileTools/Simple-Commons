@@ -1,10 +1,10 @@
 [versions]
 #jetbrains
-kotlin = "1.9.0"
+kotlin = "1.9.10"
 kotlin-immutable-collections = "0.3.5"
 #KSP
 kotlinxSerializationJson = "1.5.1"
-ksp = "1.9.0-1.0.12"
+ksp = "1.9.10-1.0.13"
 #Androidx
 androidx-customView = "1.2.0-alpha02"
 androidx-customViewPooling = "1.0.0"
@@ -29,7 +29,7 @@ rtlViewpager = "940f12724f"
 #Compose
 composeActivity = "1.8.0-alpha07"
 compose = "1.6.0-alpha04"
-composeCompiler = "1.5.2"
+composeCompiler = "1.5.3"
 composeMaterial3 = "1.2.0-alpha06"
 accompanist = "0.33.1-alpha"
 #Glide
