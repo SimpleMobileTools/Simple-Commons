@@ -3,9 +3,9 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.remember
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeFix
 import com.simplemobiletools.commons.compose.screens.LicenseScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.extensions.launchViewIntent
@@ -16,7 +16,7 @@ import kotlinx.collections.immutable.toImmutableList
 class LicenseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdgeFix()
         setContent {
             val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
             val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }

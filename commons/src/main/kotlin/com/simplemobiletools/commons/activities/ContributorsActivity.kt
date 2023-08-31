@@ -2,10 +2,10 @@ package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.remember
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeFix
 import com.simplemobiletools.commons.compose.screens.ContributorsScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.models.LanguageContributor
@@ -14,7 +14,7 @@ import kotlinx.collections.immutable.toImmutableList
 class ContributorsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdgeFix()
         setContent {
             AppThemeSurface {
                 val contributors = remember {

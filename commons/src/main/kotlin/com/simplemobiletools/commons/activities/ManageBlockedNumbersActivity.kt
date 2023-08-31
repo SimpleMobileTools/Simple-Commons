@@ -8,7 +8,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -17,6 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeFix
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.screens.ManageBlockedNumbersScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -53,7 +53,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdgeFix()
         setContent {
             val context = LocalContext.current
             val blockedNumbers by manageBlockedNumbersViewModel.blockedNumbers.collectAsStateWithLifecycle()
@@ -276,7 +276,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         }
     }
 
-    class ManageBlockedNumbersViewModel(private val application: Application) : AndroidViewModel(application) {
+    internal class ManageBlockedNumbersViewModel(private val application: Application) : AndroidViewModel(application) {
         private val _blockedNumbers = MutableStateFlow(application.getBlockedNumbers().toImmutableList())
         val blockedNumbers = _blockedNumbers.asStateFlow()
         fun updateBlockedNumbers() {

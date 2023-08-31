@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.compose.extensions
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
@@ -129,3 +130,9 @@ private fun Sequence<Dp>.sumOfDps(): Dp {
 }
 
 
+fun ComponentActivity.enableEdgeToEdgeFix(){
+    enableEdgeToEdge()
+    // Fix for three-button nav not properly going edge-to-edge.
+    //  TODO https://issuetracker.google.com/issues/298296168
+    window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+}
