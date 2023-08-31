@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.toggleable
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ContentCopy
@@ -17,7 +18,9 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
@@ -475,21 +478,24 @@ private fun LazyListScope.noPermissionToBlock(
         )
     }
     item {
-        Box(modifier = Modifier
-            .fillMaxWidth()
-            .clickable { setAsDefault() }) {
-            Text(
-                text = stringResource(id = R.string.set_as_default),
-                style = TextStyle(
-                    textAlign = TextAlign.Center,
-                    textDecoration = TextDecoration.Underline,
-                    color = MaterialTheme.colorScheme.primary,
-                    fontSize = 18.sp
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp)
-            )
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(), contentAlignment = Alignment.Center
+        ) {
+            Box(modifier = Modifier
+                .clip(RoundedCornerShape(16.dp))
+                .clickable { setAsDefault() }) {
+                Text(
+                    text = stringResource(id = R.string.set_as_default),
+                    style = TextStyle(
+                        textAlign = TextAlign.Center,
+                        textDecoration = TextDecoration.Underline,
+                        color = MaterialTheme.colorScheme.primary,
+                        fontSize = 18.sp
+                    ),
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
         }
     }
 }
