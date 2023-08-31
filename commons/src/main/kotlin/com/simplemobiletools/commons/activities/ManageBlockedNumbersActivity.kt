@@ -16,7 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeFix
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.screens.ManageBlockedNumbersScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -53,7 +53,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdgeFix()
+        enableEdgeToEdgeSimple()
         setContent {
             val context = LocalContext.current
             val blockedNumbers by manageBlockedNumbersViewModel.blockedNumbers.collectAsStateWithLifecycle()

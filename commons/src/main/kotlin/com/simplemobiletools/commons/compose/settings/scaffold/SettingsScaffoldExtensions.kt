@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.LocalLayoutDirection
 import com.simplemobiletools.commons.compose.extensions.onEventValue
-import com.simplemobiletools.commons.compose.extensions.rememberWindowInsetsController
+import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.isNotLitWell
 import com.simplemobiletools.commons.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.extensions.getColoredMaterialStatusBarColor
@@ -19,9 +19,9 @@ import com.simplemobiletools.commons.extensions.getContrastColor
 
 @Composable
 internal fun SystemUISettingsScaffoldStatusBarColor(scrolledColor: Color) {
-    val insetController = rememberWindowInsetsController()
-    DisposableEffect(rememberWindowInsetsController()) {
-        insetController.isAppearanceLightStatusBars = scrolledColor.isNotLitWell()
+    val systemUiController = rememberSystemUiController()
+    DisposableEffect(systemUiController) {
+        systemUiController.statusBarDarkContentEnabled = scrolledColor.isNotLitWell()
         onDispose { }
     }
 }

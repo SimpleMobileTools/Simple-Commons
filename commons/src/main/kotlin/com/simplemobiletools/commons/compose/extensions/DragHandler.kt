@@ -27,7 +27,7 @@ fun Modifier.dragHandler(
     detectDragGesturesAfterLongPress(
         onDragStart = { offset ->
             lazyListState.gridItemKeyAtPosition(offset)?.let { key ->
-                if (!selectedIds.value.contains(key.toLong())) {
+                if (!selectedIds.value.contains(key)) {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     initialKey = key
                     currentKey = key

@@ -13,7 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeFix
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.screens.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
@@ -35,7 +35,7 @@ class AboutActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdgeFix()
+        enableEdgeToEdgeSimple()
         setContent {
             val context = LocalContext.current
             val resources = context.resources

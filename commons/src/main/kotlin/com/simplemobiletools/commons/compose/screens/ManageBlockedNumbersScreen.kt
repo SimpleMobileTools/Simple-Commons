@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.compose.screens
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
@@ -32,6 +31,7 @@ import androidx.compose.ui.semantics.onLongClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
@@ -39,6 +39,7 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.dragHandler
@@ -50,8 +51,6 @@ import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.ripple_dark
-import com.simplemobiletools.commons.compose.theme.ripple_light
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.models.BlockedNumber
@@ -78,7 +77,7 @@ internal fun ManageBlockedNumbersScreen(
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
 ) {
-    val startingPadding = Modifier.padding(horizontal = 4.dp)
+    val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
     val clearSelection = remember {
@@ -99,11 +98,15 @@ internal fun ManageBlockedNumbersScreen(
                     onCopy = {
                         onCopy(blockedNumbers.first { it.id == selectedIds.value.first() })
                         clearSelection()
+                    },
+                    onDelete = {
+                        onDelete(selectedIds.value)
+                        clearSelection()
+                    },
+                    onSelectAll = {
+                        selectedIds.value = blockedNumbers.map { it.id }.toSet()
                     }
-                ) {
-                    onDelete(selectedIds.value)
-                    clearSelection()
-                }
+                )
             } else {
                 NonActionModeToolbar(
                     scrolledColor,
@@ -119,7 +122,7 @@ internal fun ManageBlockedNumbersScreen(
                 )
             }
         },
-    ) {
+    ) { paddingValues ->
         val state = rememberCanPerformVerticalScrollLazyListState()
         val autoScrollSpeed = remember { mutableFloatStateOf(0f) }
         LaunchedEffect(autoScrollSpeed.floatValue) {
@@ -139,7 +142,8 @@ internal fun ManageBlockedNumbersScreen(
                 selectedIds = selectedIds,
                 autoScrollSpeed = autoScrollSpeed,
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() }
-            )) {
+            ),
+            contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())) {
             item(key = "unknown") {
                 SettingsCheckBoxComponent(
                     title = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
@@ -222,7 +226,7 @@ private fun BlockedNumber(
     onCopy: (BlockedNumber) -> Unit,
     isSelected: Boolean
 ) {
-    val rippleColor = if (isSystemInDarkTheme()) ripple_dark else ripple_light
+    val rippleColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.35f)
     ListItem(
         modifier = modifier,
         headlineContent = {
@@ -272,34 +276,36 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
         //https://github.com/JetBrains/compose-multiplatform/issues/1878 same in M3
         expanded = isMenuVisible,
         onDismissRequest = dismissMenu,
+        modifier = modifier
     ) {
-        DropdownMenuItem(text = {
-            Text(
-                text = stringResource(id = R.string.copy_number_to_clipboard),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 2.dp)
-            )
-        }, onClick = {
+        SimpleDropDownMenuItem(onClick = {
             onCopy()
             dismissMenu()
-        })
-        DropdownMenuItem(text = {
+        }, text = {
             Text(
-                text = stringResource(id = R.string.delete),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 2.dp)
+                text = stringResource(id = R.string.copy_number_to_clipboard),
+                modifier = Modifier.fillMaxWidth(),
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Normal
             )
-        }, onClick = {
+        })
+        SimpleDropDownMenuItem(onClick = {
             onDelete()
             dismissMenu()
+        }, text = {
+            Text(
+                text = stringResource(id = R.string.delete),
+                modifier = Modifier.fillMaxWidth(),
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Normal
+            )
         })
     }
-    Icon(Icons.Default.MoreVert, contentDescription = null,
-        modifier = modifier.clickable {
-            isMenuVisible = true
-        })
+    IconButton(onClick = {
+        isMenuVisible = true
+    }) {
+        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_info))
+    }
 }
 
 @Composable
@@ -309,7 +315,8 @@ private fun ActionModeToolbar(
     blockedNumbersCount: Int,
     onBackClick: () -> Unit,
     onCopy: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: () -> Unit,
+    onSelectAll: () -> Unit,
 ) {
     val navigationIconInteractionSource = remember { MutableInteractionSource() }
     val bgColor = actionModeBgColor()
@@ -318,13 +325,21 @@ private fun ActionModeToolbar(
     }
     TopAppBar(
         title = {
-            Text(text = "$selectedIdsCount/$blockedNumbersCount", color = textColor, modifier = Modifier.padding(start = 8.dp))
+            Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor, modifier = Modifier
+                .padding(start = 8.dp)
+                .clickable {
+                    if (selectedIdsCount == blockedNumbersCount) {
+                        onBackClick()
+                    } else {
+                        onSelectAll()
+                    }
+                })
         },
         navigationIcon = {
             SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
         },
         actions = {
-            ActionMenu(selectedIdsCount, onDelete, onCopy, textColor)
+            BlockedNumberActionMenu(selectedIdsCount, onDelete, onCopy, textColor)
         },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.primary
@@ -348,7 +363,7 @@ private fun actionModeBgColor(): Color {
 }
 
 @Composable
-private fun ActionMenu(
+private fun BlockedNumberActionMenu(
     selectedIdsCount: Int,
     onDelete: () -> Unit,
     onCopy: () -> Unit,
@@ -427,7 +442,6 @@ private fun NonActionModeToolbar(
     )
 }
 
-
 private fun LazyListScope.emptyBlockedNumbers(
     addABlockedNumber: () -> Unit
 ) {
@@ -442,25 +456,25 @@ private fun LazyListScope.emptyBlockedNumbers(
         )
     }
     item {
-        Box(modifier = Modifier
-            .fillMaxWidth()
-            .clickable {
-                addABlockedNumber()
-            }) {
-            Text(
-                text = stringResource(id = R.string.add_a_blocked_number),
-                style = TextStyle(
-                    textAlign = TextAlign.Center,
-                    textDecoration = TextDecoration.Underline,
-                    color = MaterialTheme.colorScheme.primary,
-                    fontSize = 18.sp
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp)
-            )
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(), contentAlignment = Alignment.Center
+        ) {
+            Box(modifier = Modifier
+                .clip(RoundedCornerShape(16.dp))
+                .clickable { addABlockedNumber() }) {
+                Text(
+                    text = stringResource(id = R.string.add_a_blocked_number),
+                    style = TextStyle(
+                        textAlign = TextAlign.Center,
+                        textDecoration = TextDecoration.Underline,
+                        color = MaterialTheme.colorScheme.primary,
+                        fontSize = 18.sp
+                    ),
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
         }
-
     }
 }
 
@@ -499,7 +513,6 @@ private fun LazyListScope.noPermissionToBlock(
         }
     }
 }
-
 
 @MyDevices
 @Composable

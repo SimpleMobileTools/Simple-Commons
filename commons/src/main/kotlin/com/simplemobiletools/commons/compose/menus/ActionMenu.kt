@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material3.*
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.key
@@ -14,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import kotlinx.collections.immutable.ImmutableList
 
 /**
@@ -74,12 +77,7 @@ fun ActionMenu(
                     }
                 }
             } else {
-                TextButton(onClick = item.doAction) {
-                    Text(
-                        text = name,
-                        color = MaterialTheme.colorScheme.onSurface,
-                    )
-                }
+                SimpleDropDownMenuItem(onClick = item.doAction, text = name)
             }
         }
     }
@@ -94,7 +92,7 @@ fun ActionMenu(
         ) {
             for (item in overflowActions) {
                 key(item.hashCode()) {
-                    DropdownMenuItem(text = { Text(stringResource(item.nameRes)) }, onClick = {
+                    SimpleDropDownMenuItem(text = item.nameRes, onClick = {
                         onMenuToggle(false)
                         item.doAction()
                     })

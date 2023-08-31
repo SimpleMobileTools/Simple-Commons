@@ -3,10 +3,8 @@ package com.simplemobiletools.commons.compose.extensions
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
-import android.view.WindowManager
+import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding
@@ -15,16 +13,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
+import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.isLitWell
 import com.simplemobiletools.commons.extensions.darkenColor
 
@@ -40,32 +36,20 @@ fun Context.getComponentActivity(): ComponentActivity = getActivity() as Compone
 
 @Composable
 fun AdjustNavigationBarColors(canScroll: Boolean?) {
-    val componentActivity = (LocalContext.current.getComponentActivity())
+    val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
     val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
     val navigationBarColor = when (canScroll) {
         true -> Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
         else -> Color.Transparent
     }
-    val insetController = rememberWindowInsetsController()
-    DisposableEffect(!isSystemInDarkTheme, navigationBarColor) {
-        componentActivity.enableEdgeToEdge(
-            navigationBarStyle = if (isSystemInDarkTheme) SystemBarStyle.dark(navigationBarColor.toArgb()) else SystemBarStyle.light(
-                navigationBarColor.toArgb(),
-                navigationBarColor.toArgb()
-            )
-        )
-        insetController.isAppearanceLightNavigationBars = isSurfaceLitWell
+    DisposableEffect(systemUiController, isSystemInDarkTheme, navigationBarColor) {
+        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
+        systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
         onDispose {}
     }
 }
 
-@Composable
-fun rememberWindowInsetsController(): WindowInsetsControllerCompat {
-    val componentActivity = LocalContext.current.getComponentActivity()
-    val view = LocalView.current
-    return remember { WindowCompat.getInsetsController(componentActivity.window, view) }
-}
 
 @Composable
 fun <T : Any> onEventValue(event: Lifecycle.Event = Lifecycle.Event.ON_START, value: () -> T): T {
@@ -129,10 +113,23 @@ private fun Sequence<Dp>.sumOfDps(): Dp {
     return sum
 }
 
-
-fun ComponentActivity.enableEdgeToEdgeFix(){
-    enableEdgeToEdge()
+fun ComponentActivity.enableEdgeToEdgeSimple() {
+    WindowCompat.setDecorFitsSystemWindows(window, false)
     // Fix for three-button nav not properly going edge-to-edge.
     //  TODO https://issuetracker.google.com/issues/298296168
-    window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+    window.setFlags(FLAG_LAYOUT_NO_LIMITS, FLAG_LAYOUT_NO_LIMITS)
+}
+
+@Composable
+internal fun TransparentSystemBars() {
+    val systemUiController = rememberSystemUiController()
+    val isSystemInDarkTheme = isSystemInDarkTheme()
+
+    DisposableEffect(systemUiController, isSystemInDarkTheme) {
+        systemUiController.setSystemBarsColor(
+            color = Color.Transparent,
+            darkIcons = !isSystemInDarkTheme
+        )
+        onDispose { }
+    }
 }
