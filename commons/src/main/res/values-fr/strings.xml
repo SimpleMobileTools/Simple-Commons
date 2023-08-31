@@ -392,6 +392,7 @@
     <string name="unhide_folder">Ne plus cacher le dossier</string>
     <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
     <string name="stop_showing_hidden">Cacher les fichiers cachés</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
     <string name="empty_and_disable_recycle_bin">Vider et désactiver la corbeille</string>
     <string name="undo">Annuler</string>
@@ -416,6 +417,8 @@
     <string name="contact_details">Détails du contact</string>
     <string name="add_contact">Ajouter un contact</string>
     <string name="wallpapers">Fonds d\'écran</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
     <string name="name">Nom</string>

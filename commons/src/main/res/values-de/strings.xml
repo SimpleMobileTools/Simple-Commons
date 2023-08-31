@@ -392,6 +392,7 @@
     <string name="unhide_folder">Ordner nicht verstecken</string>
     <string name="temporarily_show_hidden">Verstecktes temporär anzeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
+    <string name="allow_access_more_media">Zugriff auf mehr Medien erlauben</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
     <string name="undo">Rückgängig</string>
@@ -416,6 +417,8 @@
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
     <string name="wallpapers">Bildschirmhintergründe</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
@@ -665,7 +668,7 @@
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
     <string name="prevent_phone_from_sleeping">Verhindern, dass das Gerät in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
     <string name="skip_delete_confirmation">Keinen Löschen-bestätigen-Dialog anzeigen</string>
-    <string name="enable_pull_to_refresh">„Auffrischen“ durch Ziehen von der oberen Kante ermöglichen</string>
+    <string name="enable_pull_to_refresh">„Auffrischen“ durch Ziehen von der oberen Kante aktivieren</string>
     <string name="use_24_hour_time_format">24-Stunden-Zählung verwenden</string>
     <string name="change_date_and_time_format">Datums- und Zeitformat ändern</string>
     <string name="sunday_first">Wochenanfang am Sonntag</string>

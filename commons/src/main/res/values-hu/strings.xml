@@ -386,6 +386,7 @@
     <string name="unhide_folder">Mappa elrejtésének megszüntetése</string>
     <string name="temporarily_show_hidden">Rejtettek ideiglenes megjelenítése</string>
     <string name="stop_showing_hidden">Rejtett média ideiglenes megjelenítésének leállítása</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Ilyen sok tartalmat nem oszthat meg egyszerre</string>
     <string name="empty_and_disable_recycle_bin">Lomtár ürítése és letiltása</string>
     <string name="undo">Visszavonás</string>
@@ -410,6 +411,8 @@
     <string name="contact_details">Névjegy részletei</string>
     <string name="add_contact">Névjegy hozzáadása</string>
     <string name="wallpapers">Háttérképek</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
     <string name="name">Név</string>

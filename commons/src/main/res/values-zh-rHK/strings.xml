@@ -379,6 +379,7 @@
     <string name="unhide_folder">取消隐藏文件夹</string>
     <string name="temporarily_show_hidden">暂时显示隐藏内容</string>
     <string name="stop_showing_hidden">停止显示隐藏的媒体文件</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">您不能一次分享太多的内容</string>
     <string name="empty_and_disable_recycle_bin">清空并禁用回收站</string>
     <string name="undo">撤销</string>
@@ -403,6 +404,8 @@
     <string name="contact_details">联系人详情</string>
     <string name="add_contact">添加联系人</string>
     <string name="wallpapers">壁纸</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>

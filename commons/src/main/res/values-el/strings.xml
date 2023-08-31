@@ -387,6 +387,7 @@
     <string name="unhide_folder">Επανεμφάνιση φακέλου</string>
     <string name="temporarily_show_hidden">Προσωρινή εμφάνιση κρυφών</string>
     <string name="stop_showing_hidden">Απόκρυψη κρυφών πολυμέσων</string>
+    <string name="allow_access_more_media">Αποδοχή πρόσβασης σε περισσότερα πολυμέσα</string>
     <string name="maximum_share_reached">Δεν μπορείτε να κοινοποιήσετε τόσο μεγάλο περιεχόμενο ταυτόχρονα</string>
     <string name="empty_and_disable_recycle_bin">Άδειασμα και απενεργοποίηση του Κάδου Ανακύκλωσης</string>
     <string name="undo">Αναίρεση</string>
@@ -411,6 +412,8 @@
     <string name="contact_details">Στοιχεία επαφής</string>
     <string name="add_contact">Προσθήκη επαφής</string>
     <string name="wallpapers">Ταπετσαρίες</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>

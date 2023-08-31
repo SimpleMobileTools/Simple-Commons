@@ -386,6 +386,7 @@
     <string name="unhide_folder">בטל הסתרת תיקייה</string>
     <string name="temporarily_show_hidden">הצג הכל באופן זמני</string>
     <string name="stop_showing_hidden">הספק הצגה של מדיה</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">לא ניתן לשתף כמות זו בבת אחת</string>
     <string name="empty_and_disable_recycle_bin">רוקן והשבת את סל המחזור</string>
     <string name="undo">שחזר</string>
@@ -410,6 +411,8 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Wallpapers</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">מיין לפי</string>
     <string name="name">שם</string>

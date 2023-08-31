@@ -381,6 +381,7 @@
     <string name="unhide_folder">フォルダを再表示</string>
     <string name="temporarily_show_hidden">非表示項目を一時的に表示</string>
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">一度に複数のコンテンツを共有することはできません</string>
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
     <string name="undo">元に戻す</string>
@@ -405,6 +406,8 @@
     <string name="contact_details">連絡先の詳細</string>
     <string name="add_contact">連絡先を追加</string>
     <string name="wallpapers">壁紙</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
     <string name="name">名前</string>
