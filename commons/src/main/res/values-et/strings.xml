@@ -178,6 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Selleks, et mitte ükski saabuv kõne ei jääks märkamata, palun luba rakendusel kuvada täisekraanivaates teavitusi.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_alarm_scheduled_messages">Selleks et rakendus saaks plaanitud ajal sõnumeid saata, pead lubama tal kasutada süsteemseid äratusi.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Selleks et rakendus saaks asukohateavet kasutada, palun luba tal sinu asukohta tuvastada.</string>
     <string name="grant_permission">Anna vastavad õigused</string>
     <string name="permission_required">Luba on nõutav</string>

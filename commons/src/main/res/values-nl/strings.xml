@@ -178,6 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Geef deze app het recht om meldingen over het hele scherm te tonen om geen inkomende gesprekken te missen.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
     <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Geef de app toegang tot de huidige locatie om gebruik te kunnen maken van de desbetreffende functie(s).</string>
     <string name="grant_permission">Toestemming geven</string>
     <string name="permission_required">Toestemming vereist</string>
@@ -405,8 +406,8 @@
     <string name="contact_details">Contactgegevens</string>
     <string name="add_contact">Contact toevoegen</string>
     <string name="wallpapers">Achtergronden</string>
-    <string name="show_line_numbers">Regelnummers tonen</string>
-    <string name="hide_line_numbers">Regelnummers verbergen</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>

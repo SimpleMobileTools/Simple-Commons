@@ -178,6 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Salli sovelluksen koko näytön ilmoitusten näyttäminen; muuten osa tulevista puheluista saattaa jäädä näyttämättä.</string>
     <string name="allow_notifications_incoming_messages">Salli sovelluksen ilmoitusten näyttäminen, jotta viestit voidaan näyttää.</string>
     <string name="allow_alarm_scheduled_messages">Salli sovelluksen käyttöoikeus sisäisiin hälytyksiin, jotta ajastettuja viestejä voidaan lähettää.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Salli sovelluksen sijainnin käyttö.</string>
     <string name="grant_permission">Anna käyttöoikeus</string>
     <string name="permission_required">Käyttöoikeus vaaditaan</string>
