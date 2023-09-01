@@ -108,9 +108,9 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         blockedNumbers: ImmutableList<BlockedNumber>,
         selectedKeys: Set<Long>
     ) {
-        blockedNumbers.filter { selectedKeys.contains(it.id) }
-            .forEach {
-                deleteBlockedNumber(it.number)
+        blockedNumbers.filter { blockedNumber -> selectedKeys.contains(blockedNumber.id) }
+            .forEach { blockedNumber ->
+                deleteBlockedNumber(blockedNumber.number)
             }
         manageBlockedNumbersViewModel.updateBlockedNumbers()
     }
@@ -130,8 +130,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 }
             }
         } else {
-            handlePermission(PERMISSION_READ_STORAGE) {
-                if (it) {
+            handlePermission(PERMISSION_READ_STORAGE) { isAllowed ->
+                if (isAllowed) {
                     pickFileToImportBlockedNumbers()
                 }
             }
@@ -264,8 +264,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 }
             }
         } else {
-            handlePermission(PERMISSION_WRITE_STORAGE) {
-                if (it) {
+            handlePermission(PERMISSION_WRITE_STORAGE) { isAllowed ->
+                if (isAllowed) {
                     ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, false) { file ->
                         getFileOutputStream(file.toFileDirItem(this), true) { out ->
                             exportBlockedNumbersTo(out)
