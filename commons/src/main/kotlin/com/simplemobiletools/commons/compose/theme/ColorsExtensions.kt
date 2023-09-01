@@ -19,6 +19,14 @@ val textSubTitleColor
         )
     }
 
+@get:ReadOnlyComposable
+val iconsColor
+    @Composable get() = if (isSurfaceNotLitWell()) {
+        Color.White
+    } else {
+        Color.Black
+    }
+
 
 @Composable
 @ReadOnlyComposable

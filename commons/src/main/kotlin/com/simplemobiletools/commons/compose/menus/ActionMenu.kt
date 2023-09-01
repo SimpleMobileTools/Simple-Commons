@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.key
@@ -55,6 +56,7 @@ fun ActionMenu(
     items: ImmutableList<ActionItem>,
     numIcons: Int = 2, // includes overflow menu icon; may be overridden by NEVER_OVERFLOW
     isMenuVisible: Boolean,
+    iconsColor: Color? = null,
     onMenuToggle: (isVisible: Boolean) -> Unit
 ) {
     if (items.isEmpty()) {
@@ -69,12 +71,21 @@ fun ActionMenu(
         key(item.hashCode()) {
             val name = stringResource(item.nameRes)
             if (item.icon != null) {
-                IconButton(onClick = item.doAction) {
-                    if (item.iconColor != null) {
-                        Icon(item.icon, name, tint = item.iconColor)
-                    } else {
-                        Icon(item.icon, name)
-                    }
+                val iconButtonColor = when {
+                    iconsColor != null -> iconsColor
+                    item.iconColor != null -> item.iconColor
+                    else -> null
+                }
+                val iconButtonColors = if (iconButtonColor == null) {
+                    IconButtonDefaults.iconButtonColors()
+                } else {
+                    IconButtonDefaults.iconButtonColors(contentColor = iconButtonColor)
+                }
+                IconButton(onClick = item.doAction, colors = iconButtonColors) {
+                    Icon(
+                        imageVector = item.icon,
+                        contentDescription = name
+                    )
                 }
             } else {
                 SimpleDropDownMenuItem(onClick = item.doAction, text = name)
@@ -83,8 +94,13 @@ fun ActionMenu(
     }
 
     if (overflowActions.isNotEmpty()) {
-        IconButton(onClick = { onMenuToggle(true) }) {
-            Icon(Icons.Default.MoreVert, stringResource(id = com.simplemobiletools.commons.R.string.more_info))
+        val iconButtonColors = if (iconsColor == null) {
+            IconButtonDefaults.iconButtonColors()
+        } else {
+            IconButtonDefaults.iconButtonColors(contentColor = iconsColor)
+        }
+        IconButton(onClick = { onMenuToggle(true) }, colors = iconButtonColors) {
+            Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
         }
         DropdownMenu(
             expanded = isMenuVisible,

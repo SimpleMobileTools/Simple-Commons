@@ -51,6 +51,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.iconsColor
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.models.BlockedNumber
@@ -90,36 +91,51 @@ internal fun ManageBlockedNumbersScreen(
                          statusBarColor: Int,
                          colorTransitionFraction: Float,
                          contrastColor: Color ->
-            if (isInActionMode) {
-                ActionModeToolbar(
-                    selectedIdsCount = selectedIds.value.count(),
-                    blockedNumbersCount = blockedNumbers.count(),
-                    onBackClick = clearSelection,
-                    onCopy = {
-                        onCopy(blockedNumbers.first { it.id == selectedIds.value.first() })
-                        clearSelection()
-                    },
-                    onDelete = {
-                        onDelete(selectedIds.value)
-                        clearSelection()
-                    },
-                    onSelectAll = {
-                        selectedIds.value = blockedNumbers.map { it.id }.toSet()
-                    }
+            Column {
+                if (isInActionMode) {
+                    ActionModeToolbar(
+                        selectedIdsCount = selectedIds.value.count(),
+                        blockedNumbersCount = blockedNumbers.count(),
+                        onBackClick = clearSelection,
+                        onCopy = {
+                            onCopy(blockedNumbers.first { it.id == selectedIds.value.first() })
+                            clearSelection()
+                        },
+                        onDelete = {
+                            onDelete(selectedIds.value)
+                            clearSelection()
+                        },
+                        onSelectAll = {
+                            selectedIds.value = blockedNumbers.map { it.id }.toSet()
+                        }
+                    )
+                } else {
+                    NonActionModeToolbar(
+                        scrolledColor = scrolledColor,
+                        navigationInteractionSource = navigationInteractionSource,
+                        goBack = goBack,
+                        scrollBehavior = scrollBehavior,
+                        statusBarColor = statusBarColor,
+                        colorTransitionFraction = colorTransitionFraction,
+                        contrastColor = contrastColor,
+                        onAdd = onAdd,
+                        onImportBlockedNumbers = onImportBlockedNumbers,
+                        onExportBlockedNumbers = onExportBlockedNumbers
+                    )
+                }
+                SettingsCheckBoxComponent(
+                    title = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
+                    initialValue = isBlockUnknownSelected,
+                    onChange = onBlockUnknownSelectedChange,
+                    modifier = startingPadding,
                 )
-            } else {
-                NonActionModeToolbar(
-                    scrolledColor,
-                    navigationInteractionSource,
-                    goBack,
-                    scrollBehavior,
-                    statusBarColor,
-                    colorTransitionFraction,
-                    contrastColor,
-                    onAdd,
-                    onImportBlockedNumbers,
-                    onExportBlockedNumbers
+                SettingsCheckBoxComponent(
+                    title = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
+                    initialValue = isHiddenSelected,
+                    onChange = onHiddenSelectedChange,
+                    modifier = startingPadding,
                 )
+                SettingsHorizontalDivider()
             }
         },
     ) { paddingValues ->
@@ -144,26 +160,6 @@ internal fun ManageBlockedNumbersScreen(
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() }
             ),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())) {
-            item(key = "unknown") {
-                SettingsCheckBoxComponent(
-                    title = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
-                    initialValue = isBlockUnknownSelected,
-                    onChange = onBlockUnknownSelectedChange,
-                    modifier = startingPadding,
-                )
-            }
-
-            item(key = "hidden") {
-                SettingsCheckBoxComponent(
-                    title = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
-                    initialValue = isHiddenSelected,
-                    onChange = onHiddenSelectedChange,
-                    modifier = startingPadding,
-                )
-            }
-            item(key = "divider") {
-                SettingsHorizontalDivider()
-            }
             when {
                 !hasGivenPermissionToBlock -> {
                     noPermissionToBlock(setAsDefault = setAsDefault)
@@ -253,7 +249,8 @@ private fun blockedNumberListItemColors(
         rippleColor
     } else {
         MaterialTheme.colorScheme.surface
-    }
+    },
+    trailingIconColor = iconsColor
 )
 
 @Composable
@@ -339,7 +336,7 @@ private fun ActionModeToolbar(
             SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
         },
         actions = {
-            BlockedNumberActionMenu(selectedIdsCount, onDelete, onCopy, textColor)
+            BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
         },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.primary
@@ -395,7 +392,7 @@ private fun BlockedNumberActionMenu(
         }
         list.toImmutableList()
     }
-    ActionMenu(items = actionMenus, numIcons = if (selectedIdsCount == 1) 2 else 1, isMenuVisible = true, onMenuToggle = { })
+    ActionMenu(items = actionMenus, numIcons = if (selectedIdsCount == 1) 2 else 1, isMenuVisible = true, onMenuToggle = { }, iconsColor = iconColor)
 }
 
 @Composable
@@ -437,7 +434,7 @@ private fun NonActionModeToolbar(
                 ).toImmutableList()
             }
             var isMenuVisible by remember { mutableStateOf(false) }
-            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it })
+            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it }, iconsColor = scrolledColor)
         }
     )
 }

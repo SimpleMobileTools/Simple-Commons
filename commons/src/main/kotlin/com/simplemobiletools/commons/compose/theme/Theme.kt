@@ -1,11 +1,13 @@
 package com.simplemobiletools.commons.compose.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
@@ -37,7 +39,8 @@ internal fun Theme(
             }
 
             theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
-                primary = theme.primaryColor, surface = theme.backgroundColor,
+                primary = theme.primaryColor,
+                surface = theme.backgroundColor,
                 onSurface = theme.textColor
             )
 
@@ -45,7 +48,7 @@ internal fun Theme(
                 primary = Color(theme.accentColor),
                 surface = theme.backgroundColor,
                 tertiary = theme.primaryColor,
-                onSurface = theme.textColor
+                onSurface = theme.textColor,
             )
 
             theme is Theme.BlackAndWhite -> darkColorScheme(
@@ -68,7 +71,11 @@ internal fun Theme(
     MaterialTheme(
         colorScheme = colorScheme,
         shapes = Shapes,
-        content = content,
+        content = {
+            CompositionLocalProvider(LocalRippleTheme provides DynamicThemeRipple) {
+                content()
+            }
+        },
     )
 }
 
