@@ -11,7 +11,7 @@
     <string name="invalid_file_format">Недопустимий формат файлу</string>
     <string name="out_of_memory_error">Недостатньо пам\'яті</string>
     <string name="an_error_occurred">Сталася помилка: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Помилка: %s</string>
     <string name="open_with">Відкрити за допомогою</string>
     <string name="edit_with">Редагувати за допомогою</string>
     <string name="edit">Редагувати</string>
@@ -37,7 +37,7 @@
     <string name="select_a_different_color">Обрати інший колір</string>
     <string name="download">Завантажити</string>
     <string name="notification">Повідомлення</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Повідомлення</string>
     <string name="email">E-mail</string>
     <string name="previous">Попередній</string>
     <string name="playpause">Відтворення / Пауза</string>
@@ -174,15 +174,15 @@
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
     <string name="no_permission">Без дозволу</string>
     <string name="allow_notifications_reminders">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати нагадування.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Ви повинні дозволити застосунку відображати повноекранні сповіщення, інакше вона не зможе показувати нагадування.</string>
     <string name="allow_notifications_files">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати індикатор виконання.</string>
     <string name="allow_notifications_music_player">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе відтворювати пісні.</string>
     <string name="allow_notifications_voice_recorder">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе записувати аудіо.</string>
     <string name="allow_notifications_incoming_calls">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Ви повинні дозволити застосунку відображати повноекранні сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
     <string name="allow_notifications_incoming_messages">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні повідомлення.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_alarm_scheduled_messages">Ви повинні надати доступ застосунку до внутрішніх будильниів, інакше вона не зможе показувати вхідні повідомлення.</string>
+    <string name="allow_location_permission">>Ви повинні надати доступ застосунку до вашого місцезнаходження, інакше вона не зможе показувати вхідні повідомлення.</string>
     <string name="grant_permission">Надати дозвіл</string>
     <string name="permission_required">Потрібен дозвіл</string>
     <!-- Renaming -->
@@ -394,7 +394,7 @@
     <string name="unhide_folder">Показати теку</string>
     <string name="temporarily_show_hidden">Тимчасово показати приховане</string>
     <string name="stop_showing_hidden">Припинити показ прихованих медіа</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Надати доступ до додаткового медіа</string>
     <string name="maximum_share_reached">Не можна поширити так багато контенту за раз</string>
     <string name="empty_and_disable_recycle_bin">Спорожнити та вимкнути Кошик</string>
     <string name="undo">Повернути</string>
@@ -490,10 +490,10 @@
     <string name="lock_folder_pro">Заблокувати теку (Pro)</string>
     <string name="unlock_folder">Розблокувати теку</string>
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="enter_password">Введіть пароль</string>
+    <string name="password">Пароль</string>
+    <string name="add_password">Додати пароль</string>
+    <string name="empty_password_new">Будь ласка, введіть пароль</string>
     <string name="empty_password">Будь ласка, введіть пароль</string>
     <string name="invalid_password">Неправильний пароль</string>
     <!-- Times -->
@@ -704,7 +704,7 @@
     <!-- Settings -->
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати \"Просту Подяку\"</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Загальні</string>
     <string name="color_customization">Налаштування кольору</string>
     <string name="improved_color_customization">Покращено налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
