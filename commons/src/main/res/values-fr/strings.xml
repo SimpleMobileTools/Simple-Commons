@@ -180,6 +180,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Vous devez autoriser l\'application à afficher des notifications en plein écran, sinon vous risquez de manquer certains appels entrants.</string>
     <string name="allow_notifications_incoming_messages">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les messages entrants.</string>
     <string name="allow_alarm_scheduled_messages">Vous devez autoriser l\'application à accéder aux alarmes internes, sinon elle ne pourra pas envoyer de messages programmés.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Vous devez autoriser l\'application à accéder à votre position, sinon elle ne la saura pas.</string>
     <string name="grant_permission">Accorder l\'autorisation</string>
     <string name="permission_required">Autorisation requise</string>

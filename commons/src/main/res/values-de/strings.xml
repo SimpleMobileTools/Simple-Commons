@@ -178,6 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen im Vollbild erlauben, sonst könntest du einige eingehende Anrufe verpassen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
     <string name="allow_alarm_scheduled_messages">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie keine geplanten Nachrichten senden.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Der App den Zugriff auf deinen Standort erlauben, sonst kennt sie ihn nicht.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
