@@ -11,7 +11,7 @@
     <string name="invalid_file_format">Недопустимий формат файлу</string>
     <string name="out_of_memory_error">Недостатньо пам\'яті</string>
     <string name="an_error_occurred">Сталася помилка: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Помилка: %s</string>
     <string name="open_with">Відкрити за допомогою</string>
     <string name="edit_with">Редагувати за допомогою</string>
     <string name="edit">Редагувати</string>
@@ -37,7 +37,7 @@
     <string name="select_a_different_color">Обрати інший колір</string>
     <string name="download">Завантажити</string>
     <string name="notification">Повідомлення</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Повідомлення</string>
     <string name="email">E-mail</string>
     <string name="previous">Попередній</string>
     <string name="playpause">Відтворення / Пауза</string>
@@ -50,8 +50,8 @@
     <string name="insert_text_here">Вставте текст сюди</string>
     <string name="call_person">Телефонувати %s</string>
     <string name="confirm_calling_person">Підтвердити виклик %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="zero">Нуль</string>
+    <string name="one">Один</string>
     <string name="two">Два</string>
     <string name="three">Три</string>
     <string name="four">Чотири</string>
@@ -76,8 +76,8 @@
     <string name="updating">Триває оновлення…</string>
     <string name="phone_storage">Пам\'ять пристрою</string>
     <string name="phone_storage_hidden">Пам\'ять пристрою (прихована від інших застосунків)</string>
-    <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="audio">Аудіо</string>
+    <string name="scanning">Сканування…</string>
     <!-- Events -->
     <string name="birthday">День народження</string>
     <string name="anniversary">Річниця</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Збільшити кількість колонок</string>
     <string name="reduce_column_count">Зменшити кількість колонок</string>
     <string name="column_count">Кількість стовпців</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Кількість рядків</string>
     <string name="portrait_column_count">Кількість портретних стовпців</string>
     <string name="landscape_column_count">Альбомна кількість стовпців</string>
     <string name="change_cover_image">Змінити обкладинку</string>
@@ -112,8 +112,10 @@
         <item quantity="other">%d стовпців</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d рядок</item>
+        <item quantity="few">%d рядки</item>
+        <item quantity="many">%d рядків</item>
+        <item quantity="other">%d рядків</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
@@ -172,16 +174,16 @@
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
     <string name="no_permission">Без дозволу</string>
     <string name="allow_notifications_reminders">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати нагадування.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Ви повинні дозволити застосунку відображати повноекранні сповіщення, інакше вона не зможе показувати нагадування.</string>
     <string name="allow_notifications_files">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати індикатор виконання.</string>
     <string name="allow_notifications_music_player">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе відтворювати пісні.</string>
     <string name="allow_notifications_voice_recorder">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе записувати аудіо.</string>
     <string name="allow_notifications_incoming_calls">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Ви повинні дозволити застосунку відображати повноекранні сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
     <string name="allow_notifications_incoming_messages">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні повідомлення.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Ви повинні надати доступ застосунку до внутрішніх будильниів, інакше вона не зможе показувати вхідні повідомлення.</string>
     <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_location_permission">>Ви повинні надати доступ застосунку до вашого місцезнаходження, інакше вона не зможе показувати вхідні повідомлення.</string>
     <string name="grant_permission">Надати дозвіл</string>
     <string name="permission_required">Потрібен дозвіл</string>
     <!-- Renaming -->
@@ -323,7 +325,7 @@
     <string name="duration">Тривалість</string>
     <string name="artist">Виконавець</string>
     <string name="album">Альбом</string>
-    <string name="genre">Genre</string>
+    <string name="genre">Жанр</string>
     <string name="focal_length">Фокальна відстань</string>
     <string name="exposure_time">Час експозиції</string>
     <string name="iso_speed">Світлочутливість за ISO</string>
@@ -366,15 +368,15 @@
     <!-- Themes -->
     <string name="light_theme">Світла</string>
     <string name="dark_theme">Темна</string>
-    <string name="auto_theme">Auto</string>
+    <string name="auto_theme">Автоматично</string>
     <string name="auto_light_dark_theme">Автоматично світла/темна</string>
     <string name="solarized">Солярис</string>
-    <string name="dark_red">Темно-червоний</string>
-    <string name="white">White</string>
-    <string name="black_white">Чорний &amp; Білий</string>
+    <string name="dark_red">Темно-червона</string>
+    <string name="white">Біла</string>
+    <string name="black_white">Чорна &amp; Біла</string>
     <string name="custom">Користувацька</string>
     <string name="shared">Загальна</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Системна</string>
     <!-- What's new -->
     <string name="whats_new">Що нового</string>
     <string name="whats_new_disclaimer">* тут перераховані тільки великі оновлення, але завжди є менші покращення</string>
@@ -393,14 +395,14 @@
     <string name="unhide_folder">Показати теку</string>
     <string name="temporarily_show_hidden">Тимчасово показати приховане</string>
     <string name="stop_showing_hidden">Припинити показ прихованих медіа</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Надати доступ до додаткового медіа</string>
     <string name="maximum_share_reached">Не можна поширити так багато контенту за раз</string>
     <string name="empty_and_disable_recycle_bin">Спорожнити та вимкнути Кошик</string>
     <string name="undo">Повернути</string>
     <string name="redo">Повторити</string>
     <string name="print">Друкувати</string>
     <string name="print_pro">Друкувати (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">Посилання</string>
     <string name="create_shortcut">Створити посилання</string>
     <string name="create_shortcut_pro">Створити посилання (Pro)</string>
     <string name="add_number_to_contact">Додати номер до контактів</string>
@@ -410,16 +412,16 @@
     <string name="toggle_filename">Перемкнути відображення імені файлу</string>
     <string name="move_to_top">Перемістити наверх</string>
     <string name="move_to_bottom">Перемістити вниз</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">Закріпити елемент</string>
     <string name="unpin_item">Відкріпити елемент</string>
     <string name="send_sms">Надіслати SMS</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">Надіслати листа</string>
     <string name="call">Виклик</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Деталі контакту</string>
+    <string name="add_contact">Додати контакт</string>
     <string name="wallpapers">Шпалери</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Показати номер рядка</string>
+    <string name="hide_line_numbers">Приховати номер рядка</string>
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
     <string name="name">Ім\'я</string>
@@ -446,7 +448,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ви впевнені, що хочете продовжити видалення?</string>
     <string name="deletion_confirmation">Ви впевнені, що хочете видалити %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation_short">Видалити %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Ви впевнені, що хочете перемістити %s у Кошик?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -489,10 +491,10 @@
     <string name="lock_folder_pro">Заблокувати теку (Pro)</string>
     <string name="unlock_folder">Розблокувати теку</string>
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
-    <string name="enter_password">Enter password</string>
-    <string name="password">Password</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
+    <string name="enter_password">Введіть пароль</string>
+    <string name="password">Пароль</string>
+    <string name="add_password">Додати пароль</string>
+    <string name="empty_password_new">Будь ласка, введіть пароль</string>
     <string name="empty_password">Будь ласка, введіть пароль</string>
     <string name="invalid_password">Неправильний пароль</string>
     <!-- Times -->
@@ -703,7 +705,7 @@
     <!-- Settings -->
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати \"Просту Подяку\"</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Загальні</string>
     <string name="color_customization">Налаштування кольору</string>
     <string name="improved_color_customization">Покращено налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
@@ -711,7 +713,7 @@
     <string name="feature_locked">Заблоковано</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
     <string name="customize_notifications">Налаштувати повідомлення</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Звук повідомлення</string>
     <string name="use_english_language">Використовувати англійську (Use English language)</string>
     <string name="language">Мова</string>
     <string name="show_hidden_items">Показати приховані елементи</string>
@@ -760,7 +762,7 @@
     <string name="quality">Якість</string>
     <string name="main_screen">Головний екран</string>
     <string name="thumbnails">Мініатюри</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Перегляд списка</string>
     <!-- Excluding -->
     <string name="exclude">Виключити</string>
     <string name="exclude_folder">Виключити папку</string>
@@ -842,18 +844,18 @@
     <string name="november">Листопад</string>
     <string name="december">Грудень</string>
     <!-- Short months -->
-    <string name="january_short">Jan</string>
-    <string name="february_short">Feb</string>
-    <string name="march_short">Mar</string>
-    <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
-    <string name="august_short">Aug</string>
-    <string name="september_short">Вересень</string>
-    <string name="october_short">Oct</string>
-    <string name="november_short">Nov</string>
-    <string name="december_short">Dec</string>
+    <string name="january_short">січ.</string>
+    <string name="february_short">лют.</string>
+    <string name="march_short">бер.</string>
+    <string name="april_short">квіт.</string>
+    <string name="may_short">трав.</string>
+    <string name="june_short">черв.</string>
+    <string name="july_short">лип.</string>
+    <string name="august_short">серп.</string>
+    <string name="september_short">вер.</string>
+    <string name="october_short">жовт.</string>
+    <string name="november_short">лист.</string>
+    <string name="december_short">груд.</string>
     <!-- in January -->
     <string name="in_january">у Січні</string>
     <string name="in_february">у Лютому</string>
@@ -952,10 +954,10 @@
     <string name="donate">Підтримати розробника</string>
     <string name="follow_us">Підписатися на нас</string>
     <string name="copyright">v %1$s\nАвторські права © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="support">Підтримка</string>
+    <string name="help_us">Допоможіть нам</string>
+    <string name="social">Соціальні мережі</string>
+    <string name="other">Інше</string>
     <string name="privacy_policy">Політика конфіденційності</string>
     <string name="version_placeholder">Версія %s</string>
     <string name="hello">Привіт :)</string>
@@ -1005,7 +1007,7 @@
     <string name="simple_flashlight">Простий Ліхтарик</string>
     <string name="simple_gallery">Проста Галерея</string>
     <string name="simple_keyboard">Проста Клавіатура</string>
-    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_launcher">Простий Лаунчер</string>
     <string name="simple_music_player">Простий Музичний Програвач</string>
     <string name="simple_notes">Прості Нотатки</string>
     <string name="simple_sms_messenger">Прості SMS Повідомлення</string>
@@ -1023,7 +1025,7 @@
     <string name="flashlight_short">Ліхтарик</string>
     <string name="gallery_short">Галерея</string>
     <string name="keyboard_short">Клавіатура</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="launcher_short">Лаунчер</string>
     <string name="music_player_short">Музичний Програвач</string>
     <string name="notes_short">Нотатник</string>
     <string name="sms_messenger_short">SMS Повідомлення</string>
@@ -1067,53 +1069,53 @@
     <string name="contributors">Помічники</string>
     <string name="translation">Переклад</string>
     <string name="development">Розробка</string>
-    <string name="other_help">Other help</string>
+    <string name="other_help">Інша допомога</string>
     <string name="contributors_label">У цьому списку є всі, хто помітно допоміг будь-якому додатку в наборі Simple Mobile Tools, не тільки цьому. Перекладами займаються волонтери. Якщо ви також хочете допомогти, то повідомте нас. Посібник з перекладу знаходиться на вебсайті &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;за цією адресою&lt;/a&gt; або просто зв\'яжіться з нами через електронну пошту &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;, якщо у вас виникли запитання. Дякуємо всім помічникам та всім, хто підтримує!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_bulgarian">Bulgarian</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
-    <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_arabic">Арабська</string>
+    <string name="translation_azerbaijani">Азербайджанська</string>
+    <string name="translation_bengali">Бенгальська</string>
+    <string name="translation_breton">Бретонська</string>
+    <string name="translation_bulgarian">Болгарська</string>
+    <string name="translation_catalan">Каталонська</string>
+    <string name="translation_czech">Чеська</string>
+    <string name="translation_welsh">Валлійська</string>
+    <string name="translation_danish">Данська</string>
+    <string name="translation_english">Англійська</string>
+    <string name="translation_german">Німецька</string>
+    <string name="translation_greek">Грецька</string>
+    <string name="translation_spanish">Іспанська</string>
+    <string name="translation_basque">Баскська</string>
+    <string name="translation_persian">Перська</string>
+    <string name="translation_finnish">Фінська</string>
+    <string name="translation_french">Французька</string>
+    <string name="translation_galician">Галісійська</string>
+    <string name="translation_hindi">Гінді</string>
+    <string name="translation_croatian">Хорватська</string>
+    <string name="translation_hungarian">Угорська</string>
+    <string name="translation_indonesian">Індонезійська</string>
+    <string name="translation_italian">Італійська</string>
+    <string name="translation_hebrew">Іврит</string>
+    <string name="translation_japanese">Японська</string>
+    <string name="translation_korean">Корейська</string>
+    <string name="translation_lithuanian">Литовська</string>
+    <string name="translation_nepali">Непальська</string>
+    <string name="translation_norwegian">Норвезька</string>
+    <string name="translation_dutch">Нідерландська</string>
+    <string name="translation_polish">Польська</string>
+    <string name="translation_portuguese">Португальська</string>
+    <string name="translation_romanian">Румунська</string>
+    <string name="translation_russian">Російська</string>
+    <string name="translation_slovak">Словацька</string>
+    <string name="translation_slovenian">Словенська</string>
+    <string name="translation_serbian">Сербська</string>
+    <string name="translation_swedish">Шведська</string>
+    <string name="translation_tamil">Тамільська</string>
+    <string name="translation_turkish">Турецька</string>
+    <string name="translation_ukrainian">Українська</string>
+    <string name="translation_vietnamese">В\'єтнамська</string>
+    <string name="translation_chinese_hk">Китайська (Гонконг)</string>
+    <string name="translation_chinese_cn">Китайська (Спрощена)</string>
+    <string name="translation_chinese_tw">Китайська (Традиційна)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Отримайте Pro-версію просто зараз!</string>
     <string name="why_upgrade_basic_version">Базова</string>
