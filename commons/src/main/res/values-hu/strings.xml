@@ -178,6 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja megjeleníteni a bejövő üzeneteket.</string>
     <string name="allow_alarm_scheduled_messages">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a belső riasztásokhoz, különben nem tud ütemezett üzeneteket küldeni.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a tartózkodási helyéhez, különben nem fogja tudni azt.</string>
     <string name="grant_permission">Engedély megadása</string>
     <string name="permission_required">Engedély szükséges</string>

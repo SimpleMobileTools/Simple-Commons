@@ -182,6 +182,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Необходимо разрешить приложению показывать полноэкранные уведомления, иначе вы можете пропустить входящий вызов.</string>
     <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
     <string name="allow_alarm_scheduled_messages">Необходимо разрешить приложению доступ к внутренним будильникам, иначе оно не сможет отправлять запланированные сообщения.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Необходимо разрешить приложению доступ к вашему местоположению, иначе оно не будет его знать.</string>
     <string name="grant_permission">Разрешить</string>
     <string name="permission_required">Требуется разрешение</string>
