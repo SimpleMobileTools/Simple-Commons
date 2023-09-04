@@ -552,6 +552,8 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("ogg", R.drawable.ic_file_ogg)
         put("pdf", R.drawable.ic_file_pdf)
         put("plproj", R.drawable.ic_file_plproj)
+        put("ppt", R.drawable.ic_file_ppt)
+        put("pptx", R.drawable.ic_file_ppt)
         put("prproj", R.drawable.ic_file_prproj)
         put("psd", R.drawable.ic_file_psd)
         put("rtf", R.drawable.ic_file_rtf)
@@ -563,6 +565,7 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("wav", R.drawable.ic_file_wav)
         put("wmv", R.drawable.ic_file_wmv)
         put("xls", R.drawable.ic_file_xls)
+        put("xlsx", R.drawable.ic_file_xls)
         put("xml", R.drawable.ic_file_xml)
         put("zip", R.drawable.ic_file_zip)
     }.forEach { (key, value) ->
