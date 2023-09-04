@@ -20,7 +20,7 @@ import kotlin.math.max
 import kotlin.math.min
 
 abstract class MyRecyclerViewListAdapter<T>(
-    open val activity: BaseSimpleActivity,
+    val activity: BaseSimpleActivity,
     val recyclerView: MyRecyclerView,
     diffUtil: DiffUtil.ItemCallback<T>,
     val itemClick: (T) -> Unit,
