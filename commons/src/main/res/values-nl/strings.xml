@@ -178,7 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Geef deze app het recht om meldingen over het hele scherm te tonen om geen inkomende gesprekken te missen.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
     <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Geef de app toegang tot interne alarmen om de app te kunnen afsluiten nadat de slaaptimer is verlopen.</string>
     <string name="allow_location_permission">Geef de app toegang tot de huidige locatie om gebruik te kunnen maken van de desbetreffende functie(s).</string>
     <string name="grant_permission">Toestemming geven</string>
     <string name="permission_required">Toestemming vereist</string>

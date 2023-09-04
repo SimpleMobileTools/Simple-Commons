@@ -178,7 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen im Vollbild erlauben, sonst könntest du einige eingehende Anrufe verpassen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
     <string name="allow_alarm_scheduled_messages">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie keine geplanten Nachrichten senden.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie die Anwendung nach dem Sleeptimer nicht ausschalten.</string>
     <string name="allow_location_permission">Der App den Zugriff auf deinen Standort erlauben, sonst kennt sie ihn nicht.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
@@ -418,8 +418,8 @@
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
     <string name="wallpapers">Bildschirmhintergründe</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Zeilennummern anzeigen</string>
+    <string name="hide_line_numbers">Zeilennummern ausblenden</string>
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
