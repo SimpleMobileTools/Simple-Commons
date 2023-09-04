@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlin.math.max
 import kotlin.math.min
 
-abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
+abstract class MyRecyclerViewAdapter(open val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
     RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
