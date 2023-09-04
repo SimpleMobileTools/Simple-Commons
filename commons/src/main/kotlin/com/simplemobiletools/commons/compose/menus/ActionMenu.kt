@@ -6,18 +6,19 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.onLongClick
+import androidx.compose.ui.semantics.semantics
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
+import com.simplemobiletools.commons.compose.theme.Shapes
 import kotlinx.collections.immutable.ImmutableList
 
 /**
@@ -81,11 +82,23 @@ fun ActionMenu(
                 } else {
                     IconButtonDefaults.iconButtonColors(contentColor = iconButtonColor)
                 }
-                IconButton(onClick = item.doAction, colors = iconButtonColors) {
-                    Icon(
-                        imageVector = item.icon,
-                        contentDescription = name
-                    )
+                PlainTooltipBox(tooltip = { Text(name) }, shape = Shapes.extraLarge,
+                    modifier = Modifier.semantics {
+                        onLongClick {
+
+                            true
+                        }
+                    }) {
+                    IconButton(
+                        onClick = item.doAction,
+                        colors = iconButtonColors,
+                        modifier = Modifier.tooltipTrigger()
+                    ) {
+                        Icon(
+                            imageVector = item.icon,
+                            contentDescription = name
+                        )
+                    }
                 }
             } else {
                 SimpleDropDownMenuItem(onClick = item.doAction, text = name)
@@ -99,8 +112,14 @@ fun ActionMenu(
         } else {
             IconButtonDefaults.iconButtonColors(contentColor = iconsColor)
         }
-        IconButton(onClick = { onMenuToggle(true) }, colors = iconButtonColors) {
-            Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
+        PlainTooltipBox(tooltip = { Text(text = stringResource(id = com.simplemobiletools.commons.R.string.more_info)) }, shape = Shapes.extraLarge) {
+            IconButton(
+                onClick = { onMenuToggle(true) },
+                colors = iconButtonColors,
+                modifier = Modifier.tooltipTrigger()
+            ) {
+                Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
+            }
         }
         DropdownMenu(
             expanded = isMenuVisible,

@@ -19,7 +19,7 @@ fun SettingsTitleTextComponent(
     text: String,
     color: Color = MaterialTheme.colorScheme.primary,
 ) {
-    Box(modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)) {
+    Box(modifier = Modifier.padding(top = 16.dp)) {
         Text(
             text = text.uppercase(),
             modifier = modifier
