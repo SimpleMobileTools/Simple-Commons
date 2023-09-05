@@ -414,6 +414,7 @@
     <string name="wallpapers">Wallpapers</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Sleep timer</string>
     <!-- Sorting -->
     <string name="sort_by">இதன்படி வரிசைபடுத்து</string>
     <string name="name">பெயர்</string>
@@ -439,11 +440,11 @@
     <string name="change_order">Change order</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <!-- Are you sure you want to delete 5 items? -->
     <string name="deletion_confirmation">%s-ஐ அழிக்க நீங்கள் உறுதியா?</string>
     <string name="deletion_confirmation_short">Delete %s?</string>
-    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>
     <string name="are_you_sure_delete">இவ்வுருப்படியை அழிக்க நீங்கள் உறுதியா?</string>
     <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">இவ்வமர்வில் மீண்டும் கேட்காதே</string>
@@ -1119,5 +1120,4 @@
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
-    <string name="sleep_timer">Sleep timer</string>
 </resources>
