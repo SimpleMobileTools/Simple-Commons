@@ -26,7 +26,7 @@
     <string name="dial_number">Dial number</string>
     <string name="unknown">Unknown</string>
     <string name="always">Always</string>
-    <string name="never">Norse</string>
+    <string name="never">Never</string>
     <string name="details">Details</string>
     <string name="notes">Notes</string>
     <string name="deleting_folder">Deleting folder \'%s\'</string>
@@ -366,7 +366,7 @@
     <string name="dark_red">Dark red</string>
     <string name="white">White</string>
     <string name="black_white">Black &amp; White</string>
-    <string name="custom">Personelaet</string>
+    <string name="custom">Custom</string>
     <string name="shared">Shared</string>
     <string name="system_default">System default</string>
     <!-- What's new -->
@@ -494,9 +494,9 @@
     <string name="every_day">Every day</string>
     <string name="hide_year">Hide year</string>
     <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">a vunutennoù</string>
-    <string name="hours_raw">eur</string>
-    <string name="days_raw">a zevezhioù</string>
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
@@ -514,20 +514,20 @@
         <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%ddevezh</item>
-        <item quantity="other">%da zevezhioù</item>
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%dsizhun</item>
-        <item quantity="other">%dsizhun</item>
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%dmiz</item>
-        <item quantity="other">%da vizioù</item>
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%da vloavezhioù</item>
-        <item quantity="other">%da vloavezhioù</item>
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
@@ -564,16 +564,16 @@
         <item quantity="other">%d seconds before</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%dvunutenn a-raok</item>
-        <item quantity="other">%da vunutennoù a-raok</item>
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d minutes before</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%deur a-raok</item>
-        <item quantity="other">%deur a-raok</item>
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d hours before</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%da zevezhioù a-raok</item>
-        <item quantity="other">%da zevezhioù a-raok</item>
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d week before</item>
@@ -593,12 +593,12 @@
         <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%dvunutenn</item>
-        <item quantity="other">%da vunutennoù</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%deur</item>
-        <item quantity="other">%da eurioù</item>
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d day</item>
@@ -621,14 +621,14 @@
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
     <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
-    <string name="snooze">Daleañ</string>
+    <string name="snooze">Snooze</string>
     <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">Adc\'halv ebet</string>
-    <string name="at_start">D\'an deroù</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">At start</string>
     <string name="system_sounds">System sounds</string>
     <string name="your_sounds">Your sounds</string>
     <string name="add_new_sound">Add a new sound</string>
@@ -697,13 +697,13 @@
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
     <!-- Excluding -->
-    <string name="exclude">Exclude</string>
+    <string name="exclude">বাদ দিন</string>
     <string name="exclude_folder">Exclude folder</string>
-    <string name="excluded_folders">Excluded folders</string>
-    <string name="excluded">(excluded)</string>
-    <string name="manage_excluded_folders">Manage excluded folders</string>
-    <string name="remove_all">Remove all</string>
-    <string name="remove_all_description">Remove all folders from the list of excluded? This will not delete the folders.</string>
+    <string name="excluded_folders">বাদ দেওয়া ফোল্ডারসমূহ</string>
+    <string name="excluded">(বাদ)</string>
+    <string name="manage_excluded_folders">বাদ দেওয়া ফোল্ডারগুলোর ব্যবস্থাপনা</string>
+    <string name="remove_all">সবগুলো সরান</string>
+    <string name="remove_all_description">বাদ দেওয়া তালিকা থেকে সমস্ত ফোল্ডার সরাবেন\? এটি ফোল্ডারগুলি মুছবে না।</string>
     <string name="temporarily_show_excluded">Temporarily show excluded</string>
     <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
@@ -755,18 +755,18 @@
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
     <!-- Dates -->
-    <string name="january">Genver</string>
-    <string name="february">C\'hwevrer</string>
-    <string name="march">Meurzh</string>
-    <string name="april">Ebrel</string>
-    <string name="may">Mae</string>
-    <string name="june">Mezheven</string>
-    <string name="july">Gouere</string>
-    <string name="august">Eost</string>
-    <string name="september">Gwengolo</string>
-    <string name="october">Here</string>
-    <string name="november">Du</string>
-    <string name="december">Kerzu</string>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
     <!-- Short months -->
     <string name="january_short">Jan</string>
     <string name="february_short">Feb</string>
@@ -793,27 +793,27 @@
     <string name="in_october">in October</string>
     <string name="in_november">in November</string>
     <string name="in_december">in December</string>
-    <string name="monday">Lun</string>
-    <string name="tuesday">Meurzh</string>
-    <string name="wednesday">Merc\'her</string>
-    <string name="thursday">Yaou</string>
-    <string name="friday">Gwener</string>
-    <string name="saturday">Sadorn</string>
-    <string name="sunday">Sul</string>
-    <string name="monday_letter">L</string>
-    <string name="tuesday_letter">M</string>
-    <string name="wednesday_letter">M</string>
-    <string name="thursday_letter">Y</string>
-    <string name="friday_letter">G</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">S</string>
-    <string name="monday_short">Lun</string>
-    <string name="tuesday_short">Meu</string>
-    <string name="wednesday_short">Mer</string>
-    <string name="thursday_short">Yao</string>
-    <string name="friday_short">Gwe</string>
-    <string name="saturday_short">Sad</string>
-    <string name="sunday_short">Sul</string>
+    <string name="monday_short">Mon</string>
+    <string name="tuesday_short">Tue</string>
+    <string name="wednesday_short">Wed</string>
+    <string name="thursday_short">Thu</string>
+    <string name="friday_short">Fri</string>
+    <string name="saturday_short">Sat</string>
+    <string name="sunday_short">Sun</string>
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
