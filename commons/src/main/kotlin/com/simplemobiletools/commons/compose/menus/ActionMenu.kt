@@ -1,22 +1,27 @@
 package com.simplemobiletools.commons.compose.menus
 
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Immutable
-import androidx.compose.runtime.key
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.onLongClick
-import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.theme.Shapes
 import kotlinx.collections.immutable.ImmutableList
@@ -67,7 +72,6 @@ fun ActionMenu(
     val (appbarActions, overflowActions) = remember(items, numIcons) {
         separateIntoIconAndOverflow(items, numIcons)
     }
-
     for (item in appbarActions) {
         key(item.hashCode()) {
             val name = stringResource(item.nameRes)
@@ -75,23 +79,23 @@ fun ActionMenu(
                 val iconButtonColor = when {
                     iconsColor != null -> iconsColor
                     item.iconColor != null -> item.iconColor
-                    else -> null
+                    else -> LocalContentColor.current
                 }
-                val iconButtonColors = if (iconButtonColor == null) {
-                    IconButtonDefaults.iconButtonColors()
-                } else {
-                    IconButtonDefaults.iconButtonColors(contentColor = iconButtonColor)
-                }
-                PlainTooltipBox(tooltip = { Text(name) }, shape = Shapes.extraLarge,
-                    modifier = Modifier.semantics {
-                        onLongClick {
-
-                            true
-                        }
-                    }) {
-                    IconButton(
+                PlainTooltipBox(
+                    tooltip = {
+                        Text(
+                            text = name,
+                            fontSize = 14.sp,
+                            modifier = Modifier.padding(8.dp),
+                        )
+                    },
+                    shape = Shapes.extraLarge,
+                    modifier = Modifier
+                        .padding(WindowInsets.statusBars.asPaddingValues())
+                ) {
+                    ActionIconButton(
                         onClick = item.doAction,
-                        colors = iconButtonColors,
+                        contentColor = iconButtonColor,
                         modifier = Modifier.tooltipTrigger()
                     ) {
                         Icon(
@@ -107,15 +111,20 @@ fun ActionMenu(
     }
 
     if (overflowActions.isNotEmpty()) {
-        val iconButtonColors = if (iconsColor == null) {
-            IconButtonDefaults.iconButtonColors()
-        } else {
-            IconButtonDefaults.iconButtonColors(contentColor = iconsColor)
-        }
-        PlainTooltipBox(tooltip = { Text(text = stringResource(id = com.simplemobiletools.commons.R.string.more_info)) }, shape = Shapes.extraLarge) {
-            IconButton(
+        PlainTooltipBox(
+            tooltip = {
+                Text(
+                    text = stringResource(id = com.simplemobiletools.commons.R.string.more_info),
+                    fontSize = 14.sp,
+                    modifier = Modifier.padding(8.dp),
+                )
+            },
+            shape = Shapes.extraLarge,
+            modifier = Modifier.padding(WindowInsets.statusBars.asPaddingValues())
+        ) {
+            ActionIconButton(
                 onClick = { onMenuToggle(true) },
-                colors = iconButtonColors,
+                contentColor = iconsColor ?: LocalContentColor.current,
                 modifier = Modifier.tooltipTrigger()
             ) {
                 Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
@@ -134,6 +143,38 @@ fun ActionMenu(
                 }
             }
         }
+    }
+}
+
+@Composable
+internal fun ActionIconButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    contentColor: Color,
+    content: @Composable () -> Unit,
+) {
+    val hapticFeedback = LocalHapticFeedback.current
+    Box(
+        modifier = modifier
+            .minimumInteractiveComponentSize()
+            .size(40.dp)
+            .clip(RoundedCornerShape(50))
+            .combinedClickable(
+                onClick = onClick,
+                role = Role.Button,
+                interactionSource = interactionSource,
+                indication = rememberRipple(
+                    bounded = false,
+                    radius = 40.dp / 2
+                ),
+                onLongClick = {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                }
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        CompositionLocalProvider(LocalContentColor provides contentColor, content = content)
     }
 }
 
