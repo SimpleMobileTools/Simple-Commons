@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
@@ -22,9 +23,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 /**
  * Essentially a wrapper around a lambda function to give it a name and icon
@@ -224,4 +229,19 @@ private fun separateIntoIconAndOverflow(
         }
     }
     return Pair(iconActions, overflowActions)
+}
+
+@MyDevices
+@Composable
+private fun ActionMenuPreview() {
+    AppThemeSurface {
+        val actionMenus = remember {
+            listOf(
+                ActionItem(R.string.add_a_blocked_number, icon = Icons.Filled.Add, doAction = { }),
+                ActionItem(R.string.import_blocked_numbers, doAction = {}, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
+                ActionItem(R.string.export_blocked_numbers, doAction = { }, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
+            ).toImmutableList()
+        }
+        ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = true, onMenuToggle = {  }, iconsColor = Color.Black)
+    }
 }

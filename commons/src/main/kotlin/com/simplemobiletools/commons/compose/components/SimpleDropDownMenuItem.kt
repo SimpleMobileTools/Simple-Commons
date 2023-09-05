@@ -14,6 +14,8 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
+private val dropDownPaddings = Modifier.padding(horizontal = 14.dp, vertical = 16.dp)
+
 @Composable
 fun SimpleDropDownMenuItem(
     modifier: Modifier = Modifier,
@@ -32,7 +34,7 @@ fun SimpleDropDownMenuItem(
         .clickable(onClickLabel = text) {
             onClick()
         }
-        .padding(horizontal = 14.dp, vertical = 10.dp)) {
+        .then(dropDownPaddings)) {
         Text(
             text = text,
             modifier = Modifier
@@ -51,7 +53,7 @@ fun SimpleDropDownMenuItem(
         .clickable {
             onClick()
         }
-        .padding(horizontal = 14.dp, vertical = 10.dp)) {
+        .then(dropDownPaddings)) {
         text()
     }
 
