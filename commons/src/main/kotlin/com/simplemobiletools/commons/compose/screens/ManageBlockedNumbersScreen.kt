@@ -131,15 +131,15 @@ internal fun ManageBlockedNumbersScreen(
                     title = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
                     initialValue = isBlockUnknownSelected,
                     onChange = onBlockUnknownSelectedChange,
-                    modifier = startingPadding,
+                    modifier = startingPadding.then(Modifier.topAppBarPaddings()),
                 )
                 SettingsCheckBoxComponent(
                     title = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
                     initialValue = isHiddenSelected,
                     onChange = onHiddenSelectedChange,
-                    modifier = startingPadding,
+                    modifier = startingPadding.then(Modifier.topAppBarPaddings()),
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(modifier = Modifier.topAppBarPaddings())
             }
         },
     ) { paddingValues ->
