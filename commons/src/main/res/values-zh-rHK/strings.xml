@@ -407,6 +407,7 @@
     <string name="wallpapers">壁纸</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Sleep timer</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>
@@ -432,11 +433,11 @@
     <string name="change_order">更改排序</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
+    <!-- Are you sure you want to delete 5 items? -->
     <string name="deletion_confirmation">您确定要删除 %s？</string>
     <string name="deletion_confirmation_short">Delete %s?</string>
-    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">您确定要移动 %s到回收站？</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">您确定要移动 %s到回收站？</string>
     <string name="are_you_sure_delete">您确定要删除此项目吗？</string>
     <string name="are_you_sure_recycle_bin">您确定要移动此项目到回收站吗？</string>
     <string name="do_not_ask_again">重启前不再提醒</string>
