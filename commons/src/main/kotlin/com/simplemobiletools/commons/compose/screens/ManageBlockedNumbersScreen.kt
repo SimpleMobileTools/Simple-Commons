@@ -41,18 +41,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
-import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
-import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.extensions.dragHandler
-import com.simplemobiletools.commons.compose.extensions.ifTrue
+import com.simplemobiletools.commons.compose.extensions.*
 import com.simplemobiletools.commons.compose.menus.ActionItem
 import com.simplemobiletools.commons.compose.menus.ActionMenu
 import com.simplemobiletools.commons.compose.menus.OverflowMode
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.*
-import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.iconsColor
+import com.simplemobiletools.commons.compose.theme.*
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.models.BlockedNumber
@@ -88,6 +84,7 @@ internal fun ManageBlockedNumbersScreen(
     BackHandler(isInActionMode) {
         clearSelection()
     }
+    TransparentSystemBars(darkIcons = MaterialTheme.colorScheme.inversePrimary.isLitWell())
     SettingsLazyScaffold(
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
@@ -226,7 +223,6 @@ private fun BlockedNumber(
     onCopy: (BlockedNumber) -> Unit,
     isSelected: Boolean
 ) {
-    val rippleColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.35f)
     ListItem(
         modifier = modifier,
         headlineContent = {
@@ -239,7 +235,9 @@ private fun BlockedNumber(
                 onCopy(blockedNumber)
             })
         },
-        colors = blockedNumberListItemColors(isSelected, rippleColor)
+        colors = blockedNumberListItemColors(
+            isSelected = isSelected, selectedColor = MaterialTheme.colorScheme.inversePrimary
+        )
     )
 
 }
@@ -247,10 +245,10 @@ private fun BlockedNumber(
 @Composable
 private fun blockedNumberListItemColors(
     isSelected: Boolean,
-    rippleColor: Color
+    selectedColor: Color
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
-        rippleColor
+        selectedColor
     } else {
         MaterialTheme.colorScheme.surface
     },
@@ -343,7 +341,7 @@ private fun ActionModeToolbar(
             BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primary
+            containerColor = MaterialTheme.colorScheme.inversePrimary
         ),
         modifier = modifier.topAppBarPaddings(),
         windowInsets = topAppBarInsets()
