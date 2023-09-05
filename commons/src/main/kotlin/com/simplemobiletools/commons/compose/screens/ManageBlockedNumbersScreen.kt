@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.compose.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -83,6 +84,9 @@ internal fun ManageBlockedNumbersScreen(
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
     val clearSelection = remember {
         { selectedIds.value = emptySet() }
+    }
+    BackHandler(isInActionMode) {
+        clearSelection()
     }
     SettingsLazyScaffold(
         customTopBar = { scrolledColor: Color,
