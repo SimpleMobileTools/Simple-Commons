@@ -178,7 +178,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Selleks, et mitte ükski saabuv kõne ei jääks märkamata, palun luba rakendusel kuvada täisekraanivaates teavitusi.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_alarm_scheduled_messages">Selleks et rakendus saaks plaanitud ajal sõnumeid saata, pead lubama tal kasutada süsteemseid äratusi.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Sa pead lubama rakendusel tuvastada ja kasutada süsteemiseid äratusi. Vastasel juhul ta ei saa peale äratuse kõlamist rakendust välja lülitada.</string>
     <string name="allow_location_permission">Selleks et rakendus saaks asukohateavet kasutada, palun luba tal sinu asukohta tuvastada.</string>
     <string name="grant_permission">Anna vastavad õigused</string>
     <string name="permission_required">Luba on nõutav</string>
@@ -387,7 +387,7 @@
     <string name="unhide_folder">Näita peidetud kausta</string>
     <string name="temporarily_show_hidden">Näita peidetuid ajutiselt</string>
     <string name="stop_showing_hidden">Lõpeta peidetud meedia näitamine</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Luba ligipääs täiendavale meediale</string>
     <string name="maximum_share_reached">Nii palju sisu korraga jagada ei saa</string>
     <string name="empty_and_disable_recycle_bin">Tühjenda prügikast ja eemalda ta kasutusest</string>
     <string name="undo">Pööra tegevus tagasi</string>
@@ -412,8 +412,8 @@
     <string name="contact_details">Kontakti üksikasjad</string>
     <string name="add_contact">Lisa kontakt</string>
     <string name="wallpapers">Taustapildid</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Näita reanumbreid</string>
+    <string name="hide_line_numbers">Peida reanumbrid</string>
     <string name="sleep_timer">Unetaimer</string>
     <!-- Sorting -->
     <string name="sort_by">Sordi</string>
