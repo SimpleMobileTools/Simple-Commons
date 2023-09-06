@@ -19,7 +19,8 @@ fun Modifier.dragHandler(
     fun LazyListState.gridItemKeyAtPosition(hitPoint: Offset): Long? =
         layoutInfo.visibleItemsInfo
             .firstOrNull { lazyListItemInfo ->
-                hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size }
+                hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size
+            }
             ?.key as? Long
 
     var initialKey: Long? = null
@@ -38,10 +39,8 @@ fun Modifier.dragHandler(
         onDragCancel = { initialKey = null; autoScrollSpeed.value = 0f },
         onDragEnd = { initialKey = null; autoScrollSpeed.value = 0f },
         onDrag = { change, _ ->
-            val initialKeyNotNull = initialKey
-            if (initialKeyNotNull != null) {
-                val distFromBottom =
-                    lazyListState.layoutInfo.viewportSize.height - change.position.y
+            if (initialKey != null) {
+                val distFromBottom = lazyListState.layoutInfo.viewportSize.height - change.position.y
                 val distFromTop = change.position.y
                 autoScrollSpeed.value = when {
                     distFromBottom < autoScrollThreshold -> autoScrollThreshold - distFromBottom
@@ -52,10 +51,10 @@ fun Modifier.dragHandler(
                 lazyListState.gridItemKeyAtPosition(change.position)?.let { key ->
                     if (currentKey != key) {
                         selectedIds.value = selectedIds.value
-                            .minus(initialKeyNotNull..currentKey!!)
-                            .minus(currentKey!!..initialKeyNotNull)
-                            .plus(initialKeyNotNull..key)
-                            .plus(key..initialKeyNotNull)
+                            .minus(initialKey!!..currentKey!!)
+                            .minus(currentKey!!..initialKey!!)
+                            .plus(initialKey!!..key)
+                            .plus(key..initialKey!!)
                         currentKey = key
                     }
                 }
