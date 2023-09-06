@@ -84,7 +84,7 @@ internal fun ManageBlockedNumbersScreen(
     BackHandler(isInActionMode) {
         clearSelection()
     }
-    TransparentSystemBars(darkIcons = MaterialTheme.colorScheme.inversePrimary.isLitWell())
+    TransparentSystemBars(darkIcons = MaterialTheme.colorScheme.primaryContainer.isLitWell())
     SettingsLazyScaffold(
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
@@ -236,7 +236,7 @@ private fun BlockedNumber(
             })
         },
         colors = blockedNumberListItemColors(
-            isSelected = isSelected, selectedColor = MaterialTheme.colorScheme.inversePrimary
+            isSelected = isSelected, selectedColor = MaterialTheme.colorScheme.primaryContainer
         )
     )
 
@@ -341,7 +341,7 @@ private fun ActionModeToolbar(
             BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.inversePrimary
+            containerColor = MaterialTheme.colorScheme.primaryContainer
         ),
         modifier = modifier.topAppBarPaddings(),
         windowInsets = topAppBarInsets()
