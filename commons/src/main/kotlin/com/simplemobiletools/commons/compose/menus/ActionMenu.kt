@@ -37,6 +37,7 @@ import kotlinx.collections.immutable.toImmutableList
  * As an item on the action bar, the action will be displayed with an IconButton
  * with the given icon, if not null. Otherwise, the string from the name resource is used.
  * In overflow menu, item will always be displayed as text.
+ * Original idea: https://gist.github.com/MachFour/369ebb56a66e2f583ebfb988dda2decf
  */
 @Immutable
 data class ActionItem(
