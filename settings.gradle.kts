@@ -13,5 +13,6 @@ dependencyResolutionManagement {
         maven { setUrl("https://jitpack.io") }
     }
 }
+rootProject.name = "Simple-Commons"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":samples", "commons")
