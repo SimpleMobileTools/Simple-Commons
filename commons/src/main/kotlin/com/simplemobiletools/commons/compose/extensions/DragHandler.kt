@@ -29,8 +29,8 @@ fun Modifier.dragHandler(
     var initialKey: Long? = null
     var currentKey: Long? = null
     val onDragCancelAndEnd = {
-        //initialKey = null
-        //autoScrollSpeed.value = 0f
+        initialKey = null
+        autoScrollSpeed.value = 0f
     }
     detectDragGesturesAfterLongPress(
         onDragStart = { offset ->
@@ -52,6 +52,7 @@ fun Modifier.dragHandler(
             Log.d("detectDragGesturesAfterLongPress", "onDragCancel")
         },
         onDragEnd = {
+            onDragCancelAndEnd()
             Log.d("detectDragGesturesAfterLongPress", "onDragEnd")
         },
         onDrag = { change, _ ->
