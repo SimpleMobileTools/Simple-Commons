@@ -6,10 +6,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -72,12 +69,18 @@ internal fun Theme(
         colorScheme = colorScheme,
         shapes = Shapes,
         content = {
-            CompositionLocalProvider(LocalRippleTheme provides DynamicThemeRipple) {
+            CompositionLocalProvider(
+                LocalRippleTheme provides DynamicThemeRipple,
+                LocalTheme provides theme
+            ) {
                 content()
             }
         },
     )
 }
+
+val LocalTheme: ProvidableCompositionLocal<Theme> =
+    staticCompositionLocalOf { Theme.Custom(1, 1, 1, 1) }
 
 @Composable
 private fun previewColorScheme() = if (isSystemInDarkTheme()) {

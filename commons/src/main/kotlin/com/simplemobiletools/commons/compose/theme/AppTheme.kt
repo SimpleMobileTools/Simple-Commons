@@ -9,6 +9,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 
 @Composable
@@ -20,7 +21,7 @@ fun AppThemeSurface(
 
     val context = LocalContext.current
     val materialYouTheme = systemDefaultMaterialYou()
-    var currentTheme by remember {
+    var currentTheme: Theme by remember {
         mutableStateOf(
             if (view.isInEditMode) materialYouTheme else getTheme(
                 context = context,

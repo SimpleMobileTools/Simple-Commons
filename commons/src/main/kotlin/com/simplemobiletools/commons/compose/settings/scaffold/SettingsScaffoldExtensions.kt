@@ -12,8 +12,10 @@ import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.LocalLayoutDirection
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
+import com.simplemobiletools.commons.compose.theme.LocalTheme
 import com.simplemobiletools.commons.compose.theme.isNotLitWell
 import com.simplemobiletools.commons.compose.theme.isSurfaceLitWell
+import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.extensions.getColoredMaterialStatusBarColor
 import com.simplemobiletools.commons.extensions.getContrastColor
 
@@ -57,11 +59,13 @@ internal fun transitionFractionAndScrolledColor(
     scrollBehavior: TopAppBarScrollBehavior,
     contrastColor: Color
 ): Pair<Float, Color> {
+    val systemUiController = rememberSystemUiController()
     val colorTransitionFraction = scrollBehavior.state.overlappedFraction
     val scrolledColor = lerp(
         start = if (isSurfaceLitWell()) Color.Black else Color.White,
         stop = contrastColor,
         fraction = if (colorTransitionFraction > 0.01f) 1f else 0f
     )
+    systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = scrolledColor == Color.Black || LocalTheme.current is Theme.SystemDefaultMaterialYou)
     return Pair(colorTransitionFraction, scrolledColor)
 }
