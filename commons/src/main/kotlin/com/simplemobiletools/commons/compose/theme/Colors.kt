@@ -442,3 +442,5 @@ val default_widget_text_color = color_primary
 
 val ripple_light = Color(0x1f000000)
 val ripple_dark = Color(0x33ffffff)
+
+val actionModeColor = Color(0xFF2D231D)

@@ -23,10 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.onLongClick
 import androidx.compose.ui.semantics.semantics
@@ -48,8 +46,9 @@ import com.simplemobiletools.commons.compose.menus.OverflowMode
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.*
+import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.*
-import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.models.BlockedNumber
 import kotlinx.collections.immutable.ImmutableList
@@ -158,7 +157,10 @@ internal fun ManageBlockedNumbersScreen(
                 haptics = LocalHapticFeedback.current,
                 selectedIds = selectedIds,
                 autoScrollSpeed = autoScrollSpeed,
-                autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() }
+                autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
+                /*enableActionMode = {
+                    isInActionMode = true
+                }*/
             ),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())) {
             when {
@@ -236,24 +238,27 @@ private fun BlockedNumber(
             })
         },
         colors = blockedNumberListItemColors(
-            isSelected = isSelected, selectedColor = MaterialTheme.colorScheme.primaryContainer
+            isSelected = isSelected
         )
     )
-
 }
 
 @Composable
 private fun blockedNumberListItemColors(
-    isSelected: Boolean,
-    selectedColor: Color
+    isSelected: Boolean
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
-        selectedColor
+        if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
+            MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+        } else {
+            MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
+        }
     } else {
         MaterialTheme.colorScheme.surface
     },
     trailingIconColor = iconsColor
 )
+
 
 @Composable
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber) {
@@ -303,7 +308,7 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
     IconButton(onClick = {
         isMenuVisible = true
     }) {
-        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_info))
+        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_info), tint = iconsColor)
     }
 }
 
@@ -317,22 +322,36 @@ private fun ActionModeToolbar(
     onDelete: () -> Unit,
     onSelectAll: () -> Unit,
 ) {
+    val systemUiController = rememberSystemUiController()
+    val wasDarkIcons = rememberSaveable { systemUiController.statusBarDarkContentEnabled }
     val navigationIconInteractionSource = remember { MutableInteractionSource() }
     val bgColor = actionModeBgColor()
     val textColor by remember {
         derivedStateOf { Color(bgColor.toArgb().getContrastColor()) }
     }
+    DisposableEffect(systemUiController, bgColor) {
+        systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = bgColor.isLitWell())
+        onDispose {
+            systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = wasDarkIcons)
+        }
+    }
     TopAppBar(
         title = {
-            Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor, modifier = Modifier
-                .padding(start = 8.dp)
-                .clickable {
-                    if (selectedIdsCount == blockedNumbersCount) {
-                        onBackClick()
-                    } else {
-                        onSelectAll()
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .clickable {
+                        if (selectedIdsCount == blockedNumbersCount) {
+                            onBackClick()
+                        } else {
+                            onSelectAll()
+                        }
                     }
-                })
+                    .padding(horizontal = 18.dp), contentAlignment = Alignment.Center
+            ) {
+                Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor)
+            }
+
         },
         navigationIcon = {
             SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
@@ -341,7 +360,7 @@ private fun ActionModeToolbar(
             BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
+            containerColor = bgColor
         ),
         modifier = modifier.topAppBarPaddings(),
         windowInsets = topAppBarInsets()
@@ -349,17 +368,14 @@ private fun ActionModeToolbar(
 }
 
 @Composable
-private fun actionModeBgColor(): Color {
-    val context = LocalContext.current
-    val baseConfig = remember {
-        context.baseConfig
-    }
-    return if (baseConfig.isUsingSystemTheme) {
-        colorResource(R.color.you_contextual_status_bar_color)
+@ReadOnlyComposable
+private fun actionModeBgColor(): Color =
+    if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
+        MaterialTheme.colorScheme.primaryContainer
     } else {
-        Color.Black
+        actionModeColor
     }
-}
+
 
 @Composable
 private fun BlockedNumberActionMenu(

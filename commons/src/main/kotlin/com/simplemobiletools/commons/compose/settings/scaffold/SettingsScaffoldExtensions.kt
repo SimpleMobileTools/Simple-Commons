@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.LocalTheme
+import com.simplemobiletools.commons.compose.theme.isInDarkThemeOrSurfaceIsNotLitWell
 import com.simplemobiletools.commons.compose.theme.isNotLitWell
 import com.simplemobiletools.commons.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.compose.theme.model.Theme
@@ -66,6 +67,6 @@ internal fun transitionFractionAndScrolledColor(
         stop = contrastColor,
         fraction = if (colorTransitionFraction > 0.01f) 1f else 0f
     )
-    systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = scrolledColor == Color.Black || LocalTheme.current is Theme.SystemDefaultMaterialYou)
+    systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = scrolledColor == Color.Black || (LocalTheme.current is Theme.SystemDefaultMaterialYou && !isInDarkThemeOrSurfaceIsNotLitWell()))
     return Pair(colorTransitionFraction, scrolledColor)
 }

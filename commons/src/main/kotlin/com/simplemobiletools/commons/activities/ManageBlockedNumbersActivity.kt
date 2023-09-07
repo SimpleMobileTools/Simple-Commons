@@ -96,10 +96,11 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     onEdit = { blockedNumber ->
                         addOrEditBlockedNumber(currentNumber = blockedNumber)
                         manageBlockedNumbersViewModel.updateBlockedNumbers()
+                    },
+                    onCopy = { blockedNumber ->
+                        copyToClipboard(blockedNumber.number)
                     }
-                ) { blockedNumber ->
-                    copyToClipboard(blockedNumber.number)
-                }
+                )
             }
         }
     }
@@ -276,7 +277,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         }
     }
 
-    internal class ManageBlockedNumbersViewModel(private val application: Application) : AndroidViewModel(application) {
+    internal class ManageBlockedNumbersViewModel(
+        private val application: Application
+    ) : AndroidViewModel(application) {
+
         private val _blockedNumbers = MutableStateFlow(application.getBlockedNumbers().toImmutableList())
         val blockedNumbers = _blockedNumbers.asStateFlow()
         fun updateBlockedNumbers() {
@@ -284,6 +288,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         }
 
         init {
+
             application.getBlockedNumbers()
         }
     }
