@@ -311,7 +311,7 @@
     <string name="select_storage">Выбрать хранилище</string>
     <string name="storage">Хранилище</string>
     <string name="internal">Внутренняя память</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Внутреннее хранилище</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
     <string name="wrong_root_selected">Папка выбрана неверно, выберите SD-карту</string>
@@ -450,7 +450,7 @@
     <string name="full_name">Полное имя</string>
     <string name="use_custom_sorting">Произвольная сортировка</string>
     <string name="change_order">Изменить порядок</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Ещё</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Вы точно хотите удалить это\?</string>
     <string name="deletion_confirmation">Удалить %s?</string>
