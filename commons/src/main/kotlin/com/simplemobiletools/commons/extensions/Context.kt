@@ -1033,7 +1033,12 @@ fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) ->
             val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber, contactName)
             blockedNumbers.add(blockedNumber)
         }
-        callback(blockedNumbers)
+
+        val blockedNumbersPair = blockedNumbers.partition { it.contactName != null }
+        val blockedNumbersWithNameSorted = blockedNumbersPair.first.sortedBy { it.contactName }
+        val blockedNumbersNoNameSorted = blockedNumbersPair.second.sortedBy { it.number }
+
+        callback(ArrayList(blockedNumbersWithNameSorted + blockedNumbersNoNameSorted))
     }
 }
 
