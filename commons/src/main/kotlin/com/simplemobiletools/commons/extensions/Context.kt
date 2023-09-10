@@ -1001,7 +1001,7 @@ fun Context.getContactsHasMap(callback: (HashMap<String, String>) -> Unit) {
         val privateContacts: HashMap<String, String> = HashMap()
         for (contact in contactList) {
             for (phoneNumber in contact.phoneNumbers) {
-                privateContacts[phoneNumber.value] = contact.name
+                privateContacts[PhoneNumberUtils.stripSeparators(phoneNumber.value)] = contact.name
             }
         }
         callback(privateContacts)
