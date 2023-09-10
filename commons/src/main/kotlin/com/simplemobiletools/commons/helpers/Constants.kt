@@ -197,6 +197,7 @@ const val PASSWORD_COUNTDOWN_START_MS = "password_count_down_start_ms"
 
 const val MAX_PASSWORD_RETRY_COUNT = 3
 const val DEFAULT_PASSWORD_COUNTDOWN = 5
+const val MINIMUM_PIN_LENGTH = 4
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10

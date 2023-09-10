@@ -7,6 +7,7 @@ import androidx.biometric.auth.AuthPromptHost
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.databinding.TabPinBinding
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.MINIMUM_PIN_LENGTH
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
 import com.simplemobiletools.commons.interfaces.BaseSecurityTab
 import com.simplemobiletools.commons.interfaces.HashListener
@@ -86,6 +87,11 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
             when {
                 pin.isEmpty() -> {
                     context.toast(R.string.please_enter_pin)
+                }
+
+                computedHash.isEmpty() && pin.length < MINIMUM_PIN_LENGTH -> {
+                    resetPin()
+                    context.toast(R.string.pin_must_be_4_digits_long)
                 }
 
                 computedHash.isEmpty() -> {

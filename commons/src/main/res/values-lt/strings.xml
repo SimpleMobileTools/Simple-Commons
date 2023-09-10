@@ -469,6 +469,7 @@
     <string name="enter_pin">Įvesti PIN kodą</string>
     <string name="please_enter_pin">Įveskite PIN kodą</string>
     <string name="wrong_pin">Neteisingas PIN kodas</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
     <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Pakartokite PIN kodą</string>
     <string name="pattern">Šablonas</string>
