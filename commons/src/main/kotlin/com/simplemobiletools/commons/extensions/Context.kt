@@ -1029,7 +1029,7 @@ fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) ->
             val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: number
             val comparableNumber = normalizedNumber.trimToComparableNumber()
 
-            val contactName = contacts[number] ?: getString(R.string.unknown)
+            val contactName = contacts[number]
             val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber, contactName)
             blockedNumbers.add(blockedNumber)
         }
