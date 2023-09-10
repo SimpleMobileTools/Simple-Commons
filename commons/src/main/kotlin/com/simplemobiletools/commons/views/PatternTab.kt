@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.widget.TextView
 import androidx.biometric.auth.AuthPromptHost
+import androidx.core.os.postDelayed
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
@@ -96,12 +97,12 @@ class PatternTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(contex
             else -> {
                 onIncorrectPassword()
                 binding.patternLockView.setViewMode(PatternLockView.PatternViewMode.WRONG)
-                Handler().postDelayed({
+                Handler().postDelayed(delayInMillis = 1000) {
                     binding.patternLockView.clearPattern()
                     if (requiredHash.isEmpty()) {
                         computedHash = ""
                     }
-                }, 1000)
+                }
             }
         }
     }

@@ -46,7 +46,7 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
         } else {
             updateTitle(context.getString(wrongTextRes), context.getColor(R.color.md_red))
             titleTextView.blink()
-            handler.postDelayed(1000) {
+            handler.postDelayed(delayInMillis = 1000) {
                 updateTitle(context.getString(defaultTextRes), context.getProperTextColor())
             }
         }
