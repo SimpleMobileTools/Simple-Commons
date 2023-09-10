@@ -158,11 +158,9 @@ internal fun ManageBlockedNumbersScreen(
                 selectedIds = selectedIds,
                 autoScrollSpeed = autoScrollSpeed,
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
-                /*enableActionMode = {
-                    isInActionMode = true
-                }*/
             ),
-            contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())) {
+            contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
+        ) {
             when {
                 !hasGivenPermissionToBlock -> {
                     noPermissionToBlock(setAsDefault = setAsDefault)
@@ -186,24 +184,24 @@ internal fun ManageBlockedNumbersScreen(
                                         }
                                     }
                                 }
+                                .ifTrue(!isInActionMode) {
+                                    Modifier.clickable {
+                                        onEdit(blockedNumber)
+                                    }
+                                }
                                 .ifTrue(isInActionMode) {
                                     Modifier.toggleable(
                                         value = isSelected,
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null,
-                                        onValueChange = { selected ->
-                                            if (selected) {
+                                        onValueChange = {
+                                            if (isSelected) {
                                                 selectedIds.value += blockedNumber.id
                                             } else {
                                                 selectedIds.value -= blockedNumber.id
                                             }
                                         }
                                     )
-                                }
-                                .ifTrue(!isInActionMode) {
-                                    Modifier.clickable {
-                                        onEdit(blockedNumber)
-                                    }
                                 },
                             blockedNumber = blockedNumber,
                             onDelete = onDelete,

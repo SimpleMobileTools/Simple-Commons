@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.compose.extensions
 
-import android.util.Log
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.MutableState
@@ -16,13 +15,11 @@ fun Modifier.dragHandler(
     selectedIds: MutableState<Set<Long>>,
     autoScrollSpeed: MutableState<Float>,
     autoScrollThreshold: Float,
-    //enableActionMode: () -> Unit
 ) = pointerInput(Unit) {
     fun LazyListState.gridItemKeyAtPosition(hitPoint: Offset): Long? =
         layoutInfo.visibleItemsInfo
             .firstOrNull { lazyListItemInfo ->
-                hitPoint.y.toInt() >= lazyListItemInfo.offset && hitPoint.y.toInt() < lazyListItemInfo.offset + lazyListItemInfo.size
-                //hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size
+                hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size
             }
             ?.key as? Long
 
@@ -34,27 +31,17 @@ fun Modifier.dragHandler(
     }
     detectDragGesturesAfterLongPress(
         onDragStart = { offset ->
-            Log.d("detectDragGesturesAfterLongPress", "onDragStart $offset")
             lazyListState.gridItemKeyAtPosition(offset)?.let { key ->
-                Log.d("detectDragGesturesAfterLongPress", "gridItemKeyAtPosition $key")
                 if (!selectedIds.value.contains(key)) {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     initialKey = key
                     currentKey = key
                     selectedIds.value += key
-                    //enableActionMode()
-                    Log.d("detectDragGesturesAfterLongPress", "check key=$key initial=$initialKey and current=$currentKey and ${selectedIds.value.toList()}")
                 }
             }
         },
-        onDragCancel = {
-            onDragCancelAndEnd()
-            Log.d("detectDragGesturesAfterLongPress", "onDragCancel")
-        },
-        onDragEnd = {
-            onDragCancelAndEnd()
-            Log.d("detectDragGesturesAfterLongPress", "onDragEnd")
-        },
+        onDragCancel = onDragCancelAndEnd,
+        onDragEnd = onDragCancelAndEnd,
         onDrag = { change, _ ->
             if (initialKey != null) {
                 val distFromBottom = lazyListState.layoutInfo.viewportSize.height - change.position.y
@@ -66,8 +53,6 @@ fun Modifier.dragHandler(
                 }
 
                 lazyListState.gridItemKeyAtPosition(change.position)?.let { key ->
-                    Log.d("detectDragGesturesAfterLongPress", "onDrag $key and $currentKey")
-
                     if (currentKey != key) {
                         selectedIds.value = selectedIds.value
                             .minus(initialKey!!..currentKey!!)

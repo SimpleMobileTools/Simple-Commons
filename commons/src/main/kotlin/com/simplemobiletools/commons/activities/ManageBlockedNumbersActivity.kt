@@ -286,10 +286,5 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         fun updateBlockedNumbers() {
             _blockedNumbers.update { application.getBlockedNumbers().toImmutableList() }
         }
-
-        init {
-
-            application.getBlockedNumbers()
-        }
     }
 }
