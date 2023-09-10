@@ -455,6 +455,7 @@
     <string name="enter_pin">输入密码</string>
     <string name="please_enter_pin">请输入密码</string>
     <string name="wrong_pin">密码错误</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">重复密码</string>
     <string name="pattern">图案</string>
     <string name="insert_pattern">绘制图案</string>

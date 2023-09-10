@@ -4,12 +4,17 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.media.ExifInterface
+import android.os.Handler
+import android.os.Looper
 import android.text.format.DateFormat
 import android.text.format.DateUtils
 import android.text.format.Time
+import androidx.core.os.postDelayed
 import com.simplemobiletools.commons.helpers.DARK_GREY
 import java.text.DecimalFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
+import java.util.Random
 
 fun Int.getContrastColor(): Int {
     val y = (299 * Color.red(this) + 587 * Color.green(this) + 114 * Color.blue(this)) / 1000
@@ -185,11 +190,23 @@ fun Int.ensureTwoDigits(): String {
 }
 
 fun Int.getColorStateList(): ColorStateList {
-    val states = arrayOf(intArrayOf(android.R.attr.state_enabled),
+    val states = arrayOf(
+        intArrayOf(android.R.attr.state_enabled),
         intArrayOf(-android.R.attr.state_enabled),
         intArrayOf(-android.R.attr.state_checked),
         intArrayOf(android.R.attr.state_pressed)
     )
     val colors = intArrayOf(this, this, this, this)
     return ColorStateList(states, colors)
+}
+
+fun Int.countdown(intervalMillis: Long, callback: (count: Int) -> Unit) {
+    callback(this)
+    if (this == 0) {
+        return
+    }
+
+    Handler(Looper.getMainLooper()).postDelayed(intervalMillis) {
+        (this - 1).countdown(intervalMillis, callback)
+    }
 }

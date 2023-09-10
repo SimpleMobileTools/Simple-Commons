@@ -463,6 +463,7 @@
     <string name="enter_pin">Syötä PIN</string>
     <string name="please_enter_pin">Syötä PIN</string>
     <string name="wrong_pin">Väärä PIN</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Toista PIN</string>
     <string name="pattern">Kuvio</string>
     <string name="insert_pattern">Syötä kuvio</string>

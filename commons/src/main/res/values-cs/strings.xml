@@ -472,6 +472,7 @@
     <string name="enter_pin">Zadejte PIN</string>
     <string name="please_enter_pin">Prosím, zadejte PIN</string>
     <string name="wrong_pin">Nesprávný PIN</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Opakujte PIN</string>
     <string name="pattern">Vzor</string>
     <string name="insert_pattern">Zadejte vzor</string>

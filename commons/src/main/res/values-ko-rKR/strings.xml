@@ -457,6 +457,7 @@
     <string name="enter_pin">PIN 번호 입력</string>
     <string name="please_enter_pin">PIN 번호를 입력하세요.</string>
     <string name="wrong_pin">PIN 번호가 일치하지 않습니다.</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">PIN 번호 확인</string>
     <string name="pattern">패턴</string>
     <string name="insert_pattern">패턴 입력</string>

@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.simplemobiletools.commons.views.PatternTab
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.simplemobiletools.commons.views.PatternTab xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/pattern_lock_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pattern_lock_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:src="@drawable/ic_lock_outlined_vector" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/pattern_lock_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/pattern_lock_icon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:padding="@dimen/activity_margin"
-        android:text="@string/insert_pattern"/>
+        android:text="@string/insert_pattern"
+        android:textAlignment="center" />
 
     <com.andrognito.patternlockview.PatternLockView
         android:id="@+id/pattern_lock_view"
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_below="@+id/pattern_lock_title"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </com.simplemobiletools.commons.views.PatternTab>

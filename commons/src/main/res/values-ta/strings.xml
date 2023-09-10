@@ -463,6 +463,7 @@
     <string name="enter_pin">குறியீட்டெண்ணை உள்ளிடு</string>
     <string name="please_enter_pin">ஒரு குறியீட்டெண்ணை உள்ளிடவும்</string>
     <string name="wrong_pin">தவறான குறியீட்டெண்</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repeat PIN</string>
     <string name="pattern">Pattern</string>
     <string name="insert_pattern">Insert pattern</string>

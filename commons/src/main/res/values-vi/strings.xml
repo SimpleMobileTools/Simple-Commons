@@ -463,6 +463,7 @@
     <string name="enter_pin">Nhập PIN</string>
     <string name="please_enter_pin">Vui lòng nhập mã PIN</string>
     <string name="wrong_pin">PIN sai</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Lặp lại mã PIN</string>
     <string name="pattern">Mẫu hình</string>
     <string name="insert_pattern">Chèn mẫu hình</string>

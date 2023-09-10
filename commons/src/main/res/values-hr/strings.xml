@@ -477,6 +477,7 @@
     <string name="enter_pin">Unesite PIN</string>
     <string name="please_enter_pin">Molimo unesite PIN</string>
     <string name="wrong_pin">Pogrešan PIN</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Ponovite PIN</string>
     <string name="pattern">Uzorak</string>
     <string name="insert_pattern">Unesite uzorak</string>

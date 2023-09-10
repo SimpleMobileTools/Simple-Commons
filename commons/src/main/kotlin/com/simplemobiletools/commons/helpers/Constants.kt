@@ -192,6 +192,11 @@ const val AUTO_BACKUP = "auto_backup"
 const val AUTO_BACKUP_FOLDER = "auto_backup_folder"
 const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
 const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
+const val PASSWORD_RETRY_COUNT = "password_retry_count"
+const val PASSWORD_COUNTDOWN_START_MS = "password_count_down_start_ms"
+
+const val MAX_PASSWORD_RETRY_COUNT = 3
+const val DEFAULT_PASSWORD_COUNTDOWN = 5
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10

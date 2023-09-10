@@ -473,6 +473,7 @@
     <string name="enter_pin">Введіть PIN</string>
     <string name="please_enter_pin">Будь ласка, введіть PIN</string>
     <string name="wrong_pin">Невірний PIN</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Повторіть PIN</string>
     <string name="pattern">Шаблон</string>
     <string name="insert_pattern">Вставити шаблон</string>

@@ -464,6 +464,7 @@
     <string name="enter_pin">Εισαγωγή PIN</string>
     <string name="please_enter_pin">Παρακαλώ εισάγετε ένα PIN</string>
     <string name="wrong_pin">Λάθος PIN</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Επανάληψη PIN</string>
     <string name="pattern">Μοτίβο</string>
     <string name="insert_pattern">Εισαγωγή μοτίβου</string>

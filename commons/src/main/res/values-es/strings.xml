@@ -469,6 +469,7 @@
     <string name="enter_pin">Introduzca PIN</string>
     <string name="please_enter_pin">Por favor introduzca PIN</string>
     <string name="wrong_pin">PIN erróneo</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
     <string name="insert_pattern">Inserte Patrón</string>
