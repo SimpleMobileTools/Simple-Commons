@@ -87,22 +87,22 @@ fun ActionMenu(
                     item.iconColor != null -> item.iconColor
                     else -> LocalContentColor.current
                 }
-                PlainTooltipBox(
+                TooltipBox(
+                    positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(spacingBetweenTooltipAndAnchor = 18.dp),
                     tooltip = {
-                        Text(
-                            text = name,
-                            fontSize = 14.sp,
-                            modifier = Modifier.padding(8.dp),
-                        )
+                        PlainTooltip(shape = Shapes.extraLarge) {
+                            Text(
+                                text = name,
+                                fontSize = 14.sp,
+                                modifier = Modifier.padding(8.dp),
+                            )
+                        }
                     },
-                    shape = Shapes.extraLarge,
-                    modifier = Modifier
-                        .padding(WindowInsets.statusBars.asPaddingValues())
+                    state = rememberTooltipState(),
                 ) {
                     ActionIconButton(
                         onClick = item.doAction,
                         contentColor = iconButtonColor,
-                        modifier = Modifier.tooltipTrigger()
                     ) {
                         Icon(
                             imageVector = item.icon,
@@ -117,21 +117,22 @@ fun ActionMenu(
     }
 
     if (overflowActions.isNotEmpty()) {
-        PlainTooltipBox(
+        TooltipBox(
             tooltip = {
-                Text(
-                    text = stringResource(id = com.simplemobiletools.commons.R.string.more_info),
-                    fontSize = 14.sp,
-                    modifier = Modifier.padding(8.dp),
-                )
+                PlainTooltip(shape = Shapes.extraLarge) {
+                    Text(
+                        text = stringResource(id = com.simplemobiletools.commons.R.string.more_info),
+                        fontSize = 14.sp,
+                        modifier = Modifier.padding(8.dp),
+                    )
+                }
             },
-            shape = Shapes.extraLarge,
-            modifier = Modifier.padding(WindowInsets.statusBars.asPaddingValues())
+            state = rememberTooltipState(),
+            positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(spacingBetweenTooltipAndAnchor = 18.dp),
         ) {
             ActionIconButton(
                 onClick = { onMenuToggle(true) },
                 contentColor = iconsColor ?: LocalContentColor.current,
-                modifier = Modifier.tooltipTrigger()
             ) {
                 Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
             }
@@ -243,6 +244,6 @@ private fun ActionMenuPreview() {
                 ActionItem(R.string.export_blocked_numbers, doAction = { }, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
             ).toImmutableList()
         }
-        ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = true, onMenuToggle = {  }, iconsColor = Color.Black)
+        ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = true, onMenuToggle = { }, iconsColor = Color.Black)
     }
 }
