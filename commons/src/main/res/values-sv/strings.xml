@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Blockera meddelanden från dolda nummer</string>
     <string name="add_blocked_number_helper_text">Ange ett nummer eller en nummerserie (exempel *12345*, +1*8888) för att blockera alla samtal och meddelanden som matchar nummret eller nummerserien.</string>
     <string name="must_make_default_caller_id_app">Det går inte att blockera okända nummer utan nummerpresentatörsbehörighet.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>

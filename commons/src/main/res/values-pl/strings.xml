@@ -135,6 +135,12 @@
     <string name="block_hidden_messages">Blokuj wiadomości od ukrytych numerów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>

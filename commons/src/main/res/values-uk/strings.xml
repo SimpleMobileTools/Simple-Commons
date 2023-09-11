@@ -135,6 +135,12 @@
     <string name="block_hidden_messages">Блокувати повідомлення з прихованих номерів</string>
     <string name="add_blocked_number_helper_text">Введіть номер або шаблон (наприклад, *12345*, +1*8888), щоб заблокувати всі дзвінки та повідомлення з номерів, що відповідають шаблону.</string>
     <string name="must_make_default_caller_id_app">Неможливо заблокувати невідомі номери без дозволу ідентифікатора абонента.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
     <string name="add_favorites">Додати улюблене</string>

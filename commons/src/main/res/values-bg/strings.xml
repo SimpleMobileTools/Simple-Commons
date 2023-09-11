@@ -132,6 +132,12 @@
     <string name="block_hidden_messages">Блокиране на съобщения от скрити номера</string>
     <string name="add_blocked_number_helper_text">Въведете номер или шаблон (напр. *12345*, +1*8888), за да блокирате всички обаждания и съобщения от номера, съответстващи на шаблона.</string>
     <string name="must_make_default_caller_id_app">Не можете да блокирате непознати номера без разрешение за идентификация на обаждащия се.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Любими</string>
     <string name="add_favorites">Добави любими</string>

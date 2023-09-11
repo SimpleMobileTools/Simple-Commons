@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Nachrichten von unterdrückten Nummern blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>

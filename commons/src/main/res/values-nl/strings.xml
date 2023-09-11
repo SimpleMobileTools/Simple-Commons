@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Berichten van verborgen nummers blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
     <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>

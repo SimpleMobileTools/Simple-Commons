@@ -6,35 +6,37 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/tiny_margin"
     android:clickable="true"
-    android:focusable="true">
-
-    <com.simplemobiletools.commons.views.MyTextView
-        android:id="@+id/manage_blocked_number_contact_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_margin"
-        android:layout_marginTop="@dimen/activity_margin"
-        android:layout_marginEnd="@dimen/activity_margin"
-        android:textSize="@dimen/big_text_size"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/overflow_menu_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:focusable="true"
+    android:paddingTop="@dimen/small_margin"
+    android:paddingBottom="@dimen/small_margin">
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_number_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_margin"
-        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/bigger_margin"
+        android:layout_marginTop="@dimen/small_margin"
         android:layout_marginEnd="@dimen/activity_margin"
-        android:layout_marginBottom="16dp"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/manage_blocked_number_subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/overflow_menu_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.simplemobiletools.commons.views.MyTextView
+        android:id="@+id/manage_blocked_number_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bigger_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/small_margin"
         android:alpha="0.6"
         android:textSize="@dimen/normal_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/overflow_menu_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/manage_blocked_number_contact_name" />
+        app:layout_constraintTop_toBottomOf="@+id/manage_blocked_number_title" />
 
     <ImageView
         android:id="@+id/overflow_menu_icon"
@@ -44,7 +46,7 @@
         android:layout_marginEnd="@dimen/activity_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/manage_blocked_number_contact_name"
+        app:layout_constraintStart_toEndOf="@+id/manage_blocked_number_title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -53,7 +55,7 @@
         android:layout_marginEnd="@dimen/activity_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/manage_blocked_number_contact_name"
+        app:layout_constraintStart_toEndOf="@+id/manage_blocked_number_title"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
