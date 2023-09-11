@@ -370,19 +370,27 @@ fun Context.isContactBlocked(contact: Contact, callback: (Boolean) -> Unit) {
 }
 
 @TargetApi(Build.VERSION_CODES.N)
-fun Context.blockContact(contact: Contact) {
+fun Context.blockContact(contact: Contact): Boolean {
+    var contactBlocked = true
     ensureBackgroundThread {
         contact.phoneNumbers.forEach {
-            addBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            val numberBlocked = addBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            contactBlocked = contactBlocked && numberBlocked
         }
     }
+
+    return contactBlocked
 }
 
 @TargetApi(Build.VERSION_CODES.N)
-fun Context.unblockContact(contact: Contact) {
+fun Context.unblockContact(contact: Contact): Boolean {
+    var contactUnblocked = true
     ensureBackgroundThread {
         contact.phoneNumbers.forEach {
-            deleteBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            val numberUnblocked = deleteBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            contactUnblocked = contactUnblocked && numberUnblocked
         }
     }
+
+    return contactUnblocked
 }

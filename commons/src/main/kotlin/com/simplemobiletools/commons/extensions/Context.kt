@@ -1069,7 +1069,7 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 }
 
 @TargetApi(Build.VERSION_CODES.N)
-fun Context.addBlockedNumber(number: String) {
+fun Context.addBlockedNumber(number: String): Boolean {
     ContentValues().apply {
         put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
         if (number.isPhoneNumber()) {
@@ -1079,15 +1079,24 @@ fun Context.addBlockedNumber(number: String) {
             contentResolver.insert(BlockedNumbers.CONTENT_URI, this)
         } catch (e: Exception) {
             showErrorToast(e)
+            return false
         }
     }
+    return true
 }
 
 @TargetApi(Build.VERSION_CODES.N)
-fun Context.deleteBlockedNumber(number: String) {
+fun Context.deleteBlockedNumber(number: String): Boolean {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
-    contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
+
+    return if (isNumberBlocked(number)) {
+        val deletedRowCount = contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
+
+        deletedRowCount > 0
+    } else {
+        true
+    }
 }
 
 fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
@@ -1096,7 +1105,12 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     }
 
     val numberToCompare = number.trimToComparableNumber()
-    return blockedNumbers.any { numberToCompare == it.numberToCompare || numberToCompare == it.number } || isNumberBlockedByPattern(number, blockedNumbers)
+
+    return blockedNumbers.any {
+        numberToCompare == it.numberToCompare ||
+            numberToCompare == it.number ||
+            PhoneNumberUtils.stripSeparators(number) == it.number
+    } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
