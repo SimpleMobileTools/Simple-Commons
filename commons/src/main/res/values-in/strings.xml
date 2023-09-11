@@ -455,6 +455,8 @@
     <string name="enter_pin">Masukkan PIN</string>
     <string name="please_enter_pin">Silakan masukkan PIN</string>
     <string name="wrong_pin">PIN salah</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Ulangi PIN</string>
     <string name="pattern">Pola</string>
     <string name="insert_pattern">Masukkan pola</string>

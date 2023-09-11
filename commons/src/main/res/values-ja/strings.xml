@@ -457,6 +457,8 @@
     <string name="enter_pin">PINを入力</string>
     <string name="please_enter_pin">PINを入力してください</string>
     <string name="wrong_pin">PINに誤りがあります</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">PINを再入力</string>
     <string name="pattern">パターン</string>
     <string name="insert_pattern">パターンを入力</string>

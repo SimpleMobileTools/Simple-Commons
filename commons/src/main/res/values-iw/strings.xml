@@ -463,6 +463,8 @@
     <string name="enter_pin">הכנס PIN</string>
     <string name="please_enter_pin">נא להכניס PIN</string>
     <string name="wrong_pin">שגיאה ב PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">חזור על PIN</string>
     <string name="pattern">דפוס</string>
     <string name="insert_pattern">הכנס דפוס</string>

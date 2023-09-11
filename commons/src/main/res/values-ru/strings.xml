@@ -475,6 +475,8 @@
     <string name="enter_pin">Ввод PIN-кода</string>
     <string name="please_enter_pin">Введите PIN-код</string>
     <string name="wrong_pin">Неправильный PIN-код</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Повторите PIN-код</string>
     <string name="pattern">Графический ключ</string>
     <string name="insert_pattern">Установить ключ</string>

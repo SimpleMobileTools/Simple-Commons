@@ -489,6 +489,8 @@
     <string name="enter_pin">Enter PIN</string>
     <string name="please_enter_pin">Please enter a PIN</string>
     <string name="wrong_pin">Wrong PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repeat PIN</string>
     <string name="pattern">Pattern</string>
     <string name="insert_pattern">Insert pattern</string>
