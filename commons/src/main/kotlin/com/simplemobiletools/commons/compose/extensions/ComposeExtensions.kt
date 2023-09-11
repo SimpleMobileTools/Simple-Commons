@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.compose.extensions
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
-import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
@@ -114,9 +113,6 @@ private fun Sequence<Dp>.sumOfDps(): Dp {
 
 fun ComponentActivity.enableEdgeToEdgeSimple() {
     WindowCompat.setDecorFitsSystemWindows(window, false)
-    // Fix for three-button nav not properly going edge-to-edge.
-    //  TODO https://issuetracker.google.com/issues/298296168
-    window.setFlags(FLAG_LAYOUT_NO_LIMITS, FLAG_LAYOUT_NO_LIMITS)
 }
 
 @Composable
