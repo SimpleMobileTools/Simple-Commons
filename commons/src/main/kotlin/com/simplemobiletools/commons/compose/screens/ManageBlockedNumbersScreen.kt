@@ -82,7 +82,7 @@ internal fun ManageBlockedNumbersScreen(
     BackHandler(isInActionMode) {
         clearSelection()
     }
-    TransparentSystemBars(darkIcons = MaterialTheme.colorScheme.primaryContainer.isLitWell())
+
     SettingsLazyScaffold(
         transitionFractionAndScrolledColorStartColor = if (isInActionMode) Color.White else if (isSurfaceLitWell()) Color.Black else Color.White,
         customTopBar = { scrolledColor: Color,
@@ -98,7 +98,7 @@ internal fun ManageBlockedNumbersScreen(
                         blockedNumbersCount = blockedNumbers.count(),
                         onBackClick = clearSelection,
                         onCopy = {
-                            onCopy(blockedNumbers.first { it.id == selectedIds.value.first() })
+                            onCopy(blockedNumbers.first { blockedNumber -> blockedNumber.id == selectedIds.value.first() })
                             clearSelection()
                         },
                         onDelete = {
@@ -159,6 +159,7 @@ internal fun ManageBlockedNumbersScreen(
                 autoScrollSpeed = autoScrollSpeed,
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
             ),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -319,7 +320,6 @@ private fun ActionModeToolbar(
     onSelectAll: () -> Unit,
 ) {
     val systemUiController = rememberSystemUiController()
-    val wasDarkIcons = rememberSaveable { systemUiController.statusBarDarkContentEnabled }
     val navigationIconInteractionSource = remember { MutableInteractionSource() }
     val bgColor = actionModeBgColor()
     val textColor by remember {
@@ -327,9 +327,7 @@ private fun ActionModeToolbar(
     }
     DisposableEffect(systemUiController, bgColor) {
         systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = bgColor.isLitWell())
-        onDispose {
-            systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = wasDarkIcons)
-        }
+        onDispose {}
     }
     TopAppBar(
         title = {
@@ -471,9 +469,11 @@ private fun LazyListScope.emptyBlockedNumbers(
             modifier = Modifier
                 .fillMaxWidth(), contentAlignment = Alignment.Center
         ) {
-            Box(modifier = Modifier
-                .clip(RoundedCornerShape(16.dp))
-                .clickable(onClick = addABlockedNumber)) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable(onClick = addABlockedNumber)
+            ) {
                 Text(
                     text = stringResource(id = R.string.add_a_blocked_number),
                     style = TextStyle(
@@ -507,9 +507,11 @@ private fun LazyListScope.noPermissionToBlock(
             modifier = Modifier
                 .fillMaxWidth(), contentAlignment = Alignment.Center
         ) {
-            Box(modifier = Modifier
-                .clip(RoundedCornerShape(16.dp))
-                .clickable(onClick = setAsDefault)) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable(onClick = setAsDefault)
+            ) {
                 Text(
                     text = stringResource(id = R.string.set_as_default),
                     style = TextStyle(

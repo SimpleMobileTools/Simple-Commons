@@ -44,7 +44,7 @@ fun AdjustNavigationBarColors(canScroll: Boolean?) {
         else -> Color.Transparent
     }
     DisposableEffect(systemUiController, isSystemInDarkTheme, navigationBarColor) {
-        systemUiController.setNavigationBarColor(navigationBarColor, darkIcons = !isSystemInDarkTheme)
+        systemUiController.setNavigationBarColor(color = navigationBarColor, darkIcons = !isSystemInDarkTheme)
         systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
         onDispose {}
     }
