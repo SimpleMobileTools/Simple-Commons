@@ -149,7 +149,7 @@ internal fun ManageBlockedNumbersScreen(
                 }
             }
         }
-
+        var hasDraggingStarted by remember { mutableStateOf(false) }
         LazyColumn(
             state = state,
             modifier = Modifier.dragHandler(
@@ -158,6 +158,7 @@ internal fun ManageBlockedNumbersScreen(
                 selectedIds = selectedIds,
                 autoScrollSpeed = autoScrollSpeed,
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
+                dragUpdate = { isDraggingStarted -> hasDraggingStarted = isDraggingStarted }
             ),
             verticalArrangement = Arrangement.spacedBy(2.dp),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
@@ -194,6 +195,7 @@ internal fun ManageBlockedNumbersScreen(
                                     Modifier.clickable(
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null,
+                                        enabled = !hasDraggingStarted
                                     ) {
                                         if (isSelected) {
                                             selectedIds.value -= blockedNumber.id

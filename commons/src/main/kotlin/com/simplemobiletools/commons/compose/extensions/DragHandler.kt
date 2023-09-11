@@ -15,6 +15,7 @@ fun Modifier.dragHandler(
     selectedIds: MutableState<Set<Long>>,
     autoScrollSpeed: MutableState<Float>,
     autoScrollThreshold: Float,
+    dragUpdate: (Boolean) -> Unit
 ) = pointerInput(Unit) {
     fun LazyListState.gridItemKeyAtPosition(hitPoint: Offset): Long? =
         layoutInfo.visibleItemsInfo
@@ -28,9 +29,11 @@ fun Modifier.dragHandler(
     val onDragCancelAndEnd = {
         initialKey = null
         autoScrollSpeed.value = 0f
+        dragUpdate(false)
     }
     detectDragGesturesAfterLongPress(
         onDragStart = { offset ->
+            dragUpdate(true)
             lazyListState.gridItemKeyAtPosition(offset)?.let { key ->
                 if (!selectedIds.value.contains(key)) {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
