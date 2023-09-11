@@ -84,7 +84,7 @@ internal fun ManageBlockedNumbersScreen(
     }
 
     SettingsLazyScaffold(
-        transitionFractionAndScrolledColorStartColor = if (isInActionMode) Color.White else if (isSurfaceLitWell()) Color.Black else Color.White,
+        darkStatusBarIcons = !isInActionMode,
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
                          scrollBehavior: TopAppBarScrollBehavior,
