@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.rememberTooltipStateFix
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import kotlinx.collections.immutable.ImmutableList
@@ -98,7 +99,7 @@ fun ActionMenu(
                             )
                         }
                     },
-                    state = rememberTooltipState(),
+                    state = rememberTooltipStateFix(),
                 ) {
                     ActionIconButton(
                         onClick = item.doAction,
@@ -121,20 +122,20 @@ fun ActionMenu(
             tooltip = {
                 PlainTooltip(shape = Shapes.extraLarge) {
                     Text(
-                        text = stringResource(id = com.simplemobiletools.commons.R.string.more_info),
+                        text = stringResource(id = R.string.more_options),
                         fontSize = 14.sp,
                         modifier = Modifier.padding(8.dp),
                     )
                 }
             },
-            state = rememberTooltipState(),
+            state = rememberTooltipStateFix(),
             positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(spacingBetweenTooltipAndAnchor = 18.dp),
         ) {
             ActionIconButton(
                 onClick = { onMenuToggle(true) },
                 contentColor = iconsColor ?: LocalContentColor.current,
             ) {
-                Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = com.simplemobiletools.commons.R.string.more_info))
+                Icon(imageVector = Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_options))
             }
         }
         DropdownMenu(

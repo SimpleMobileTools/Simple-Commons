@@ -22,6 +22,7 @@ import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColor
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.plus
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.isSurfaceLitWell
 
 @Composable
 fun SettingsLazyScaffold(
@@ -251,6 +252,7 @@ fun SettingsLazyScaffold(
 @Composable
 fun SettingsLazyScaffold(
     modifier: Modifier = Modifier,
+    transitionFractionAndScrolledColorStartColor: Color = if (isSurfaceLitWell()) Color.Black else Color.White,
     customTopBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
     customContent: @Composable (BoxScope.(PaddingValues) -> Unit)
 ) {
@@ -258,7 +260,7 @@ fun SettingsLazyScaffold(
 
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
-    val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
+    val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor, transitionFractionAndScrolledColorStartColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
     val navigationIconInteractionSource = remember { MutableInteractionSource() }
 

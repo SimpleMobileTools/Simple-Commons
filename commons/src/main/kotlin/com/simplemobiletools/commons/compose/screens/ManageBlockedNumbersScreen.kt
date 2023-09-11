@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -85,6 +84,7 @@ internal fun ManageBlockedNumbersScreen(
     }
     TransparentSystemBars(darkIcons = MaterialTheme.colorScheme.primaryContainer.isLitWell())
     SettingsLazyScaffold(
+        transitionFractionAndScrolledColorStartColor = if (isInActionMode) Color.White else if (isSurfaceLitWell()) Color.Black else Color.White,
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
                          scrollBehavior: TopAppBarScrollBehavior,
@@ -190,18 +190,16 @@ internal fun ManageBlockedNumbersScreen(
                                     }
                                 }
                                 .ifTrue(isInActionMode) {
-                                    Modifier.toggleable(
-                                        value = isSelected,
+                                    Modifier.clickable(
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null,
-                                        onValueChange = {
-                                            if (isSelected) {
-                                                selectedIds.value += blockedNumber.id
-                                            } else {
-                                                selectedIds.value -= blockedNumber.id
-                                            }
+                                    ) {
+                                        if (isSelected) {
+                                            selectedIds.value -= blockedNumber.id
+                                        } else {
+                                            selectedIds.value += blockedNumber.id
                                         }
-                                    )
+                                    }
                                 },
                             blockedNumber = blockedNumber,
                             onDelete = onDelete,
@@ -306,7 +304,7 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
     IconButton(onClick = {
         isMenuVisible = true
     }) {
-        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_info), tint = iconsColor)
+        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_options), tint = iconsColor)
     }
 }
 
@@ -461,10 +459,10 @@ private fun LazyListScope.emptyBlockedNumbers(
     item {
         Text(
             text = stringResource(id = R.string.not_blocking_anyone),
-            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
+            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp)
+                .padding(top = 16.dp, bottom = 4.dp)
                 .padding(horizontal = 16.dp)
         )
     }
@@ -475,7 +473,7 @@ private fun LazyListScope.emptyBlockedNumbers(
         ) {
             Box(modifier = Modifier
                 .clip(RoundedCornerShape(16.dp))
-                .clickable { addABlockedNumber() }) {
+                .clickable(onClick = addABlockedNumber)) {
                 Text(
                     text = stringResource(id = R.string.add_a_blocked_number),
                     style = TextStyle(
@@ -511,7 +509,7 @@ private fun LazyListScope.noPermissionToBlock(
         ) {
             Box(modifier = Modifier
                 .clip(RoundedCornerShape(16.dp))
-                .clickable { setAsDefault() }) {
+                .clickable(onClick = setAsDefault)) {
                 Text(
                     text = stringResource(id = R.string.set_as_default),
                     style = TextStyle(

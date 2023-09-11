@@ -58,15 +58,20 @@ internal fun statusBarAndContrastColor(context: Context): Pair<Int, Color> {
 @Composable
 internal fun transitionFractionAndScrolledColor(
     scrollBehavior: TopAppBarScrollBehavior,
-    contrastColor: Color
+    contrastColor: Color,
+    startColor: Color = if (isSurfaceLitWell()) Color.Black else Color.White
 ): Pair<Float, Color> {
     val systemUiController = rememberSystemUiController()
     val colorTransitionFraction = scrollBehavior.state.overlappedFraction
     val scrolledColor = lerp(
-        start = if (isSurfaceLitWell()) Color.Black else Color.White,
+        start = startColor,
         stop = contrastColor,
         fraction = if (colorTransitionFraction > 0.01f) 1f else 0f
     )
-    systemUiController.setStatusBarColor(color = Color.Transparent, darkIcons = scrolledColor == Color.Black || (LocalTheme.current is Theme.SystemDefaultMaterialYou && !isInDarkThemeOrSurfaceIsNotLitWell()))
+
+    systemUiController.setStatusBarColor(
+        color = Color.Transparent,
+        darkIcons = scrolledColor == Color.Black || (LocalTheme.current is Theme.SystemDefaultMaterialYou && !isInDarkThemeOrSurfaceIsNotLitWell())
+    )
     return Pair(colorTransitionFraction, scrolledColor)
 }
