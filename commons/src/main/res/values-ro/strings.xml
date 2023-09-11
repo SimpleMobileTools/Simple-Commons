@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Introduceți un număr sau un model (de exemplu, *12345*, +1*8888) pentru a bloca toate apelurile și mesajele de la numere care corespund modelului.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favorite</string>
     <string name="add_favorites">Adaugă favorite</string>

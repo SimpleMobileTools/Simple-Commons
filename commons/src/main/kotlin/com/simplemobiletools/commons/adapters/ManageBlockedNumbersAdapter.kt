@@ -67,14 +67,17 @@ class ManageBlockedNumbersAdapter(
         view.apply {
             root.setupViewBackground(activity)
             manageBlockedNumberHolder.isSelected = selectedKeys.contains(blockedNumber.id.toInt())
-            manageBlockedNumberTitle.apply {
-                text = blockedNumber.number
-                setTextColor(textColor)
-            }
 
-            manageBlockedNumberContactName.apply {
-                text = blockedNumber.contactName
-                setTextColor(textColor)
+            val hasContactName = blockedNumber.contactName != null
+            manageBlockedNumberSubtitle.beVisibleIf(hasContactName)
+            manageBlockedNumberSubtitle.setTextColor(textColor)
+            manageBlockedNumberTitle.setTextColor(textColor)
+
+            if (hasContactName) {
+                manageBlockedNumberTitle.text = blockedNumber.contactName
+                manageBlockedNumberSubtitle.text = blockedNumber.number
+            } else {
+                manageBlockedNumberTitle.text = blockedNumber.number
             }
 
             overflowMenuIcon.drawable.apply {

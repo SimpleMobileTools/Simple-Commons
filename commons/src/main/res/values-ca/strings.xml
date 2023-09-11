@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Bloqueja els missatges des de números ocults</string>
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
     <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>

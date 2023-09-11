@@ -130,6 +130,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
     <string name="must_make_default_caller_id_app">不明な番号をブロックするには、発信者番号へのアクセス許可が必要です。</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>

@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Rejtett számok üzeneteinek blokkolása</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
     <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>

@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Masukkan nomor atau pola (mis. *12345*, +62*8888) untuk memblokir semua panggilan dan pesan dari nomor yang sesuai dengan pola.</string>
     <string name="must_make_default_caller_id_app">Tidak dapat memblokir nomor yang tidak diketahui tanpa izin ID pemanggil.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>

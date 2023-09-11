@@ -118,7 +118,7 @@
         <item quantity="other">%d rows</item>
     </plurals>
 
-    <!-- Blocked numbers -->
+    <!-- Blocked numbers & contacts -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
     <string name="add_a_blocked_number">Add a blocked number</string>
@@ -136,6 +136,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorites</string>
