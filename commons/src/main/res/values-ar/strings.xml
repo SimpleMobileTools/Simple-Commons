@@ -140,11 +140,11 @@
     <string name="add_blocked_number_helper_text">أدخل رقما أو نمطا (على سبيل المثال، *12345*، +1*8888) لحظر جميع المكالمات والرسائل من الأرقام المطابقة للنمط.</string>
     <string name="must_make_default_caller_id_app">لا يمكن حظر الأرقام غير المعروفة دون إذن معرف المتصل.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">تم حظر جهة الاتصال</string>
+    <string name="block_contact_fail">لا يمكن حظر جهة الاتصال</string>
+    <string name="unblock_contact">إلغاء حظر جهة الاتصال</string>
+    <string name="unblock_contact_success">تم إلغاء حظر جهة الاتصال</string>
+    <string name="unblock_contact_fail">لا يمكن إلغاء حظر جهة الاتصال</string>
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
     <string name="add_favorites">إضافة مفضلة</string>
@@ -444,7 +444,7 @@
     <string name="show_line_numbers">إظهار خطوط الأرقام</string>
     <string name="hide_line_numbers">إظهار خطوط الأرقام</string>
     <string name="sleep_timer">مؤقت النوم</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">إلغاء الحظر</string>
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
     <string name="name">الإسم</string>
@@ -496,8 +496,9 @@
     <string name="enter_pin">ادخل رمز الـ PIN</string>
     <string name="please_enter_pin">يرجى إدخال رمز الـ PIN</string>
     <string name="wrong_pin">رمز الـ PIN غير صحيح</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN يجب أن يكون على الأقل 4 أرقام طويلة</string>
+    <string name="too_many_incorrect_attempts">عدد كبير جدًا من محاولات إلغاء القفل غير الصحيحة.
+\nحاول مرة أخرى خلال %d ثانية.</string>
     <string name="repeat_pin">تكرار رمز الـ PIN</string>
     <string name="pattern">النمط</string>
     <string name="insert_pattern">إدراج النمط</string>
