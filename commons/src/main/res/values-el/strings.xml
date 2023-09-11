@@ -179,7 +179,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις σε πλήρη οθόνη, διαφορετικά μπορεί να χάσετε κάποιες εισερχόμενες κλήσεις.</string>
     <string name="allow_notifications_incoming_messages">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τα εισερχόμενα μηνύματα.</string>
     <string name="allow_alarm_scheduled_messages">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να στείλει προγραμματισμένα μηνύματα.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να απενεργοποιήσει την εφαρμογή μετά τον χρονοδιακόπτη ύπνου..</string>
     <string name="allow_location_permission">Πρέπει να επιτρέψετε στην εφαρμογή να έχει πρόσβαση στην τοποθεσία σας, διαφορετικά δεν θα την γνωρίζει.</string>
     <string name="grant_permission">Χορήγηση άδειας</string>
     <string name="permission_required">Απαιτείται άδεια</string>
@@ -297,7 +297,7 @@
     <string name="select_storage">Επιλέξτε αποθήκευση</string>
     <string name="storage">Αποθήκευση</string>
     <string name="internal">Εσωτερική</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Εσωτερική Αποθήκευση</string>
     <string name="sd_card">Κάρτα SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
@@ -440,7 +440,7 @@
     <string name="full_name">Πλήρες όνομα</string>
     <string name="use_custom_sorting">Προσαρ/μένη ταξ/μηση</string>
     <string name="change_order">Αλλαγή σειράς</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Περισσότερες επιλογές</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
     <string name="deletion_confirmation">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s?</string>
