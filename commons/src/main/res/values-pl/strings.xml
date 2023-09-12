@@ -135,12 +135,12 @@
     <string name="block_hidden_messages">Blokuj wiadomości od ukrytych numerów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
-    <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact">Zablokuj kontakt</string>
+    <string name="block_contact_success">Kontakt został zablokowany</string>
+    <string name="block_contact_fail">Nie udało się zablokować kontaktu</string>
+    <string name="unblock_contact">Odblokuj kontakt</string>
+    <string name="unblock_contact_success">Kontakt został odblokowany</string>
+    <string name="unblock_contact_fail">Nie udało się odblokować kontaktu</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -429,7 +429,7 @@
     <string name="show_line_numbers">Pokaż numery linii</string>
     <string name="hide_line_numbers">Ukryj numery linii</string>
     <string name="sleep_timer">Wyłącznik czasowy</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Odblokuj</string>
     <!-- Sorting -->
     <string name="sort_by">Sortuj według</string>
     <string name="name">Nazwa</string>
@@ -479,8 +479,9 @@
     <string name="enter_pin">Wprowadź PIN</string>
     <string name="please_enter_pin">Wprowadź PIN</string>
     <string name="wrong_pin">Nieprawidłowy PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN musi mieć co najmniej 4 cyfry</string>
+    <string name="too_many_incorrect_attempts">Zbyt wiele błędnych prób odblokowania.
+\nSpróbuj ponownie za %d sek.</string>
     <string name="repeat_pin">Wprowadź PIN ponownie</string>
     <string name="pattern">Wzór</string>
     <string name="insert_pattern">Wprowadź wzór</string>
