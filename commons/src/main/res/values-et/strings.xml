@@ -132,11 +132,11 @@
     <string name="add_blocked_number_helper_text">Sisesta number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">Kontakt on blokeeritud</string>
+    <string name="block_contact_fail">Kontakti blokeerimine ei õnnestunud</string>
+    <string name="unblock_contact">Eemalda kontakti blokeering</string>
+    <string name="unblock_contact_success">Kontakti blokeeringu eemaldamine õnnestus</string>
+    <string name="unblock_contact_fail">Kontakti blokeeringu eemaldamine ei õnnestunud</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
     <string name="add_favorites">Lisa lemmikuks</string>
@@ -308,7 +308,7 @@
     <string name="select_storage">Vali salvestusruum</string>
     <string name="storage">Andmehoidla</string>
     <string name="internal">Sisemine</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Sisemine andmehoidla</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Juurkaust</string>
     <string name="wrong_root_selected">Valisid vale kausta, palun vali SD-kaardi juurkaust, mis on kõige esimene kaust</string>
@@ -422,7 +422,7 @@
     <string name="show_line_numbers">Näita reanumbreid</string>
     <string name="hide_line_numbers">Peida reanumbrid</string>
     <string name="sleep_timer">Unetaimer</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Eemalda blokeering</string>
     <!-- Sorting -->
     <string name="sort_by">Sordi</string>
     <string name="name">Nimi</string>
@@ -446,7 +446,7 @@
     <string name="full_name">Täisnimi</string>
     <string name="use_custom_sorting">Kasuta kohandatud sortimist</string>
     <string name="change_order">Muuda järjekorda</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Lisavalikud</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Kas oled kindel, et soovid kustutamist jätkata\?</string>
     <string name="deletion_confirmation">Kas sa oled kindel, et soovid %s kustutada\?</string>
@@ -470,8 +470,9 @@
     <string name="enter_pin">Sisesta PIN</string>
     <string name="please_enter_pin">Palun sisesta PIN-kood</string>
     <string name="wrong_pin">Vale PIN-kood</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN-kood peab olema vähemalt 4 numbri pikkune</string>
+    <string name="too_many_incorrect_attempts">Liiga palju ebaõnnestunud lukust lahtivõtmise katseid.
+\nPalun proovi uuesti %d sekundi pärast.</string>
     <string name="repeat_pin">Korda PIN-koodi</string>
     <string name="pattern">Muster</string>
     <string name="insert_pattern">Joonista muster</string>
