@@ -420,7 +420,7 @@
     <string name="show_line_numbers">Satır numaralarını göster</string>
     <string name="hide_line_numbers">Satır numaralarını gizle</string>
     <string name="sleep_timer">Uyku zamanlayıcısı</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Engellemeyi kaldır</string>
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
     <string name="name">Ad</string>
@@ -468,8 +468,9 @@
     <string name="enter_pin">PIN\'i gir</string>
     <string name="please_enter_pin">Lütfen PIN\'i girin</string>
     <string name="wrong_pin">Yanlış PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN en az 4 basamaklı olmalıdır</string>
+    <string name="too_many_incorrect_attempts">Çok fazla hatalı kilit açma denemesi.
+\n%d saniye içinde tekrar deneyin.</string>
     <string name="repeat_pin">PIN\'i tekrar gir</string>
     <string name="pattern">Desen</string>
     <string name="insert_pattern">Deseni çiz</string>
