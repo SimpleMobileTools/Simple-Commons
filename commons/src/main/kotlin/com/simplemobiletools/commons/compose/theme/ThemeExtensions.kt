@@ -18,6 +18,10 @@ fun getCurrentTheme() = getTheme(LocalContext.current, systemDefaultMaterialYou(
 @ReadOnlyComposable
 fun isInDarkThemeOrSurfaceIsNotLitWell() = isSystemInDarkTheme() || isSurfaceNotLitWell()
 
+@Composable
+@ReadOnlyComposable
+fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() && isSurfaceNotLitWell()
+
 internal const val LUMINANCE_THRESHOLD = 0.5f
 
 @Composable

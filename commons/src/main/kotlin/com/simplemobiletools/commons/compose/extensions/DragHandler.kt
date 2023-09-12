@@ -9,7 +9,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
 
-fun Modifier.dragHandler(
+fun Modifier.listDragHandlerLongKey(
     lazyListState: LazyListState,
     haptics: HapticFeedback,
     selectedIds: MutableState<Set<Long>>,

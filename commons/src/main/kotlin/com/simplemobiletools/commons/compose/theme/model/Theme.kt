@@ -56,8 +56,7 @@ sealed class Theme : CommonTheme {
         override val appIconColorInt: Int,
         override val textColorInt: Int
     ) : Theme()
-
-
+    
     companion object {
         @Composable
         fun systemDefaultMaterialYou(): SystemDefaultMaterialYou {

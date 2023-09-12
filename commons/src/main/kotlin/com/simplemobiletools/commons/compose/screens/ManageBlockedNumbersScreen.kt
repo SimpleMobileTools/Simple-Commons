@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.compose.screens
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -68,7 +69,7 @@ internal fun ManageBlockedNumbersScreen(
     onBlockUnknownSelectedChange: (Boolean) -> Unit,
     isHiddenSelected: Boolean,
     onHiddenSelectedChange: (Boolean) -> Unit,
-    blockedNumbers: ImmutableList<BlockedNumber>,
+    blockedNumbers: ImmutableList<BlockedNumber>?,
     onDelete: (Set<Long>) -> Unit,
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
@@ -91,38 +92,42 @@ internal fun ManageBlockedNumbersScreen(
                          statusBarColor: Int,
                          colorTransitionFraction: Float,
                          contrastColor: Color ->
+
             Column {
-                if (isInActionMode) {
-                    ActionModeToolbar(
-                        selectedIdsCount = selectedIds.value.count(),
-                        blockedNumbersCount = blockedNumbers.count(),
-                        onBackClick = clearSelection,
-                        onCopy = {
-                            onCopy(blockedNumbers.first { blockedNumber -> blockedNumber.id == selectedIds.value.first() })
-                            clearSelection()
-                        },
-                        onDelete = {
-                            onDelete(selectedIds.value)
-                            clearSelection()
-                        },
-                        onSelectAll = {
-                            selectedIds.value = blockedNumbers.map { it.id }.toSet()
-                        }
-                    )
-                } else {
-                    NonActionModeToolbar(
-                        scrolledColor = scrolledColor,
-                        navigationInteractionSource = navigationInteractionSource,
-                        goBack = goBack,
-                        scrollBehavior = scrollBehavior,
-                        statusBarColor = statusBarColor,
-                        colorTransitionFraction = colorTransitionFraction,
-                        contrastColor = contrastColor,
-                        onAdd = onAdd,
-                        onImportBlockedNumbers = onImportBlockedNumbers,
-                        onExportBlockedNumbers = onExportBlockedNumbers
-                    )
+                Crossfade(targetState = isInActionMode, label = "toolbar-anim") { actionMode ->
+                    if (actionMode && blockedNumbers != null) {
+                        ActionModeToolbar(
+                            selectedIdsCount = selectedIds.value.count(),
+                            blockedNumbersCount = blockedNumbers.count(),
+                            onBackClick = clearSelection,
+                            onCopy = {
+                                onCopy(blockedNumbers.first { blockedNumber -> blockedNumber.id == selectedIds.value.first() })
+                                clearSelection()
+                            },
+                            onDelete = {
+                                onDelete(selectedIds.value)
+                                clearSelection()
+                            },
+                            onSelectAll = {
+                                selectedIds.value = blockedNumbers.map { it.id }.toSet()
+                            }
+                        )
+                    } else {
+                        NonActionModeToolbar(
+                            scrolledColor = scrolledColor,
+                            navigationInteractionSource = navigationInteractionSource,
+                            goBack = goBack,
+                            scrollBehavior = scrollBehavior,
+                            statusBarColor = statusBarColor,
+                            colorTransitionFraction = colorTransitionFraction,
+                            contrastColor = contrastColor,
+                            onAdd = onAdd,
+                            onImportBlockedNumbers = onImportBlockedNumbers,
+                            onExportBlockedNumbers = onExportBlockedNumbers
+                        )
+                    }
                 }
+
                 SettingsCheckBoxComponent(
                     title = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
                     initialValue = isBlockUnknownSelected,
@@ -152,7 +157,7 @@ internal fun ManageBlockedNumbersScreen(
         var hasDraggingStarted by remember { mutableStateOf(false) }
         LazyColumn(
             state = state,
-            modifier = Modifier.dragHandler(
+            modifier = Modifier.listDragHandlerLongKey(
                 lazyListState = state,
                 haptics = LocalHapticFeedback.current,
                 selectedIds = selectedIds,
@@ -167,6 +172,8 @@ internal fun ManageBlockedNumbersScreen(
                 !hasGivenPermissionToBlock -> {
                     noPermissionToBlock(setAsDefault = setAsDefault)
                 }
+
+                blockedNumbers == null -> {}
 
                 blockedNumbers.isEmpty() -> {
                     emptyBlockedNumbers(addABlockedNumber = onAdd)
@@ -263,7 +270,8 @@ private fun blockedNumberListItemColors(
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber) {
     Text(
         text = blockedNumber.number,
-        modifier = modifier.padding(horizontal = 8.dp)
+        modifier = modifier.padding(horizontal = 8.dp),
+        //color = LocalContentColor.current.copy(alpha = if (hasContactName) 0.8f else 1f)
     )
 }
 
@@ -546,11 +554,11 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             isHiddenSelected = false,
             onHiddenSelectedChange = {},
             blockedNumbers = listOf(
-                BlockedNumber(id = 1, number = "000000000", normalizedNumber = "000000000", numberToCompare = "000000000"),
+                BlockedNumber(id = 1, number = "000000000", normalizedNumber = "000000000", numberToCompare = "000000000", contactName = "Test"),
                 BlockedNumber(id = 2, number = "111111111", normalizedNumber = "111111111", numberToCompare = "111111111"),
                 BlockedNumber(id = 3, number = "5555555555", normalizedNumber = "5555555555", numberToCompare = "5555555555"),
                 BlockedNumber(id = 4, number = "1234567890", normalizedNumber = "1234567890", numberToCompare = "1234567890"),
-                BlockedNumber(id = 5, number = "9876543210", normalizedNumber = "9876543210", numberToCompare = "9876543210"),
+                BlockedNumber(id = 5, number = "9876543210", normalizedNumber = "9876543210", numberToCompare = "9876543210", contactName = "Test"),
                 BlockedNumber(id = 6, number = "9998887777", normalizedNumber = "9998887777", numberToCompare = "9998887777"),
                 BlockedNumber(id = 7, number = "2223334444", normalizedNumber = "2223334444", numberToCompare = "2223334444"),
                 BlockedNumber(id = 8, number = "5552221111", normalizedNumber = "5552221111", numberToCompare = "5552221111")
