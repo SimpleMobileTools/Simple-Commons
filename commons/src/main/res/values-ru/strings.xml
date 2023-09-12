@@ -135,6 +135,12 @@
     <string name="block_hidden_messages">Блокировать сообщения со скрытых номеров</string>
     <string name="add_blocked_number_helper_text">Введите номер или шаблон (например: *12345*, +1*8888), чтобы блокировать все вызовы и сообщения с номеров, соответствующих шаблону.</string>
     <string name="must_make_default_caller_id_app">Невозможно блокировать неизвестные номера без разрешения идентификации вызывающего абонента.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Избранное</string>
     <string name="add_favorites">Добавить избранное</string>
@@ -182,6 +188,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Необходимо разрешить приложению показывать полноэкранные уведомления, иначе вы можете пропустить входящий вызов.</string>
     <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
     <string name="allow_alarm_scheduled_messages">Необходимо разрешить приложению доступ к внутренним будильникам, иначе оно не сможет отправлять запланированные сообщения.</string>
+    <string name="allow_alarm_sleep_timer">Необходимо разрешить приложению доступ к системным будильникам, иначе оно не сможет отключить приложение после таймера сна.</string>
     <string name="allow_location_permission">Необходимо разрешить приложению доступ к вашему местоположению, иначе оно не будет его знать.</string>
     <string name="grant_permission">Разрешить</string>
     <string name="permission_required">Требуется разрешение</string>
@@ -310,6 +317,7 @@
     <string name="select_storage">Выбрать хранилище</string>
     <string name="storage">Хранилище</string>
     <string name="internal">Внутренняя память</string>
+    <string name="internal_storage">Внутреннее хранилище</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
     <string name="wrong_root_selected">Папка выбрана неверно, выберите SD-карту</string>
@@ -422,8 +430,10 @@
     <string name="contact_details">Данные контакта</string>
     <string name="add_contact">Добавить контакт</string>
     <string name="wallpapers">Обои</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Показывать номера строк</string>
+    <string name="hide_line_numbers">Не показывать номера строк</string>
+    <string name="sleep_timer">Таймер сна</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
@@ -447,6 +457,7 @@
     <string name="full_name">Полное имя</string>
     <string name="use_custom_sorting">Произвольная сортировка</string>
     <string name="change_order">Изменить порядок</string>
+    <string name="more_options">Ещё</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Вы точно хотите удалить это\?</string>
     <string name="deletion_confirmation">Удалить %s?</string>
@@ -471,6 +482,8 @@
     <string name="enter_pin">Ввод PIN-кода</string>
     <string name="please_enter_pin">Введите PIN-код</string>
     <string name="wrong_pin">Неправильный PIN-код</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Повторите PIN-код</string>
     <string name="pattern">Графический ключ</string>
     <string name="insert_pattern">Установить ключ</string>

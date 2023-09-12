@@ -133,6 +133,12 @@
     <string name="block_hidden_messages">Blokovať správy od skrytých čísel</string>
     <string name="add_blocked_number_helper_text">Zadajte číslo, alebo vzor (napr. *12345*, +421*8888) pre blokovanie hovorov a správ z čísel, ktoré spadajú pod daný vzor.</string>
     <string name="must_make_default_caller_id_app">Nedá sa blokovať neznáme čísla bez prístupu ku správe ID.</string>
+    <string name="block_contact">Blokovať kontakt</string>
+    <string name="block_contact_success">Kontakt zablokovaný</string>
+    <string name="block_contact_fail">Kontakt sa nepodarilo zablokovať</string>
+    <string name="unblock_contact">Odblokovať kontakt</string>
+    <string name="unblock_contact_success">Kontakt odblokovaný</string>
+    <string name="unblock_contact_fail">Kontakt sa nepodarilo odblokovať</string>
     <!-- Favorites -->
     <string name="favorites">Obľúbené</string>
     <string name="add_favorites">Pridať obľúbené</string>
@@ -180,6 +186,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Musíte apke povoliť zobrazovaníe upozornení na celú obrazovku, ináč zmeškáte niektoré hovory.</string>
     <string name="allow_notifications_incoming_messages">Musíte apke povoliť zobrazovanie upozornení, ináč nevie zobraziť prichádzajúce správy.</string>
     <string name="allow_alarm_scheduled_messages">Musíte apke povoliť prístup ku interným budíkom, ináč nevie odosielať naplánované správy.</string>
+    <string name="allow_alarm_sleep_timer">Musíte apke povoliť prístup ku interým budíkom, ináč nevie vypnúť apku po časovači vypnutia.</string>
     <string name="allow_location_permission">Musíte apke povoliť prístup k vašej polohe, ináč ju nebude poznať.</string>
     <string name="grant_permission">Udeliť povolenie</string>
     <string name="permission_required">Chýba povolenie</string>
@@ -301,6 +308,7 @@
     <string name="select_storage">Zvoľte úložisko</string>
     <string name="storage">Úložisko</string>
     <string name="internal">Interné</string>
+    <string name="internal_storage">Interná pamäť</string>
     <string name="sd_card">SD karta</string>
     <string name="root">Koreňový priečinok</string>
     <string name="wrong_root_selected">Bol zvolený nesprávny priečinok, prosím zvoľte hlavný priečinok SD karty</string>
@@ -419,6 +427,8 @@
     <string name="wallpapers">Tapety</string>
     <string name="show_line_numbers">Zobraziť čísla riadkov</string>
     <string name="hide_line_numbers">Skryť čísla riadkov</string>
+    <string name="sleep_timer">Časovač vypnutia</string>
+    <string name="unblock">Odblokovať</string>
     <!-- Sorting -->
     <string name="sort_by">Na zoradenie použiť</string>
     <string name="name">Názov</string>
@@ -442,6 +452,7 @@
     <string name="full_name">Celé meno</string>
     <string name="use_custom_sorting">Použiť vlastné zoradenie</string>
     <string name="change_order">Zmeniť poradie</string>
+    <string name="more_options">Viac možností</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ste si istý, že chcete pokračovať s vymazaním?</string>
     <!-- Are you sure you want to delete 5 items? -->
@@ -466,6 +477,8 @@
     <string name="enter_pin">Zadajte PIN</string>
     <string name="please_enter_pin">Prosím zadajte PIN</string>
     <string name="wrong_pin">Nesprávny PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Zopakujte PIN</string>
     <string name="pattern">Vzor</string>
     <string name="insert_pattern">Zadajte vzor</string>

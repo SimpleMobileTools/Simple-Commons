@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">즐겨찾기</string>
     <string name="add_favorites">즐겨찾기 추가</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Grant Permission</string>
     <string name="permission_required">Permission Required</string>
@@ -292,6 +299,7 @@
     <string name="select_storage">저장공간 선택</string>
     <string name="storage">Storage</string>
     <string name="internal">내장 메모리</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">외장 메모리</string>
     <string name="root">루트</string>
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
@@ -408,6 +416,8 @@
     <string name="wallpapers">Wallpapers</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">취침 타이머</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
     <string name="name">이름</string>
@@ -431,6 +441,7 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">정말로 삭제 하시겠습니까?</string>
     <string name="deletion_confirmation">%s을 정말 삭제 하시겠습니까?</string>
@@ -453,6 +464,8 @@
     <string name="enter_pin">PIN 번호 입력</string>
     <string name="please_enter_pin">PIN 번호를 입력하세요.</string>
     <string name="wrong_pin">PIN 번호가 일치하지 않습니다.</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">PIN 번호 확인</string>
     <string name="pattern">패턴</string>
     <string name="insert_pattern">패턴 입력</string>

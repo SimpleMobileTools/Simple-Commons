@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Introduce un número ou un patrón (por exemplo, *12345*, +1*8888) para bloquear todalas chamadas e mensaxes dos números que coincidan co patrón.</string>
     <string name="must_make_default_caller_id_app">Non se poden bloquealos números descoñecidos sen o permiso do identificador das chamadas.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Engadir a favoritos</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Grant Permission</string>
     <string name="permission_required">Permission Required</string>
@@ -301,6 +308,7 @@
     <string name="select_storage">Escolle o almacenamento</string>
     <string name="storage">Almacenamento</string>
     <string name="internal">Almacenamento interno</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">Tarxeta SD</string>
     <string name="root">Raíz (Root)</string>
     <string name="wrong_root_selected">Seleccionouse o cartafol incorrecto; por favor, escolle o cartafol raíz da túa tarxeta SD</string>
@@ -415,6 +423,8 @@
     <string name="wallpapers">Fondos da pantalla</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Temporizador</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -438,6 +448,7 @@
     <string name="full_name">Nome completo</string>
     <string name="use_custom_sorting">Usala clasificación personalizada</string>
     <string name="change_order">Cambialo orde</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Seguro que queres continuar coa eliminación?</string>
     <string name="deletion_confirmation">Seguro que queres eliminar %s?</string>
@@ -461,6 +472,8 @@
     <string name="enter_pin">Introduce PIN</string>
     <string name="please_enter_pin">Por favor, introduce un PIN</string>
     <string name="wrong_pin">PIN erróneo</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
     <string name="insert_pattern">Insire patrón</string>

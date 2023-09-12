@@ -133,6 +133,12 @@
     <string name="block_hidden_messages">Bloquer les messages provenant de numéros masqués</string>
     <string name="add_blocked_number_helper_text">Saisissez un numéro ou un modèle (par exemple, *12345*, +1*8888) pour bloquer tous les appels et messages provenant de numéros correspondant au modèle.</string>
     <string name="must_make_default_caller_id_app">Impossible de bloquer les numéros inconnus sans l\'autorisation de l\'appelant.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>
@@ -180,6 +186,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Vous devez autoriser l\'application à afficher des notifications en plein écran, sinon vous risquez de manquer certains appels entrants.</string>
     <string name="allow_notifications_incoming_messages">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les messages entrants.</string>
     <string name="allow_alarm_scheduled_messages">Vous devez autoriser l\'application à accéder aux alarmes internes, sinon elle ne pourra pas envoyer de messages programmés.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Vous devez autoriser l\'application à accéder à votre position, sinon elle ne la saura pas.</string>
     <string name="grant_permission">Accorder l\'autorisation</string>
     <string name="permission_required">Autorisation requise</string>
@@ -301,6 +308,7 @@
     <string name="select_storage">Sélectionner le stockage</string>
     <string name="storage">Stockage</string>
     <string name="internal">Interne</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Dossier sélectionné incorrect, veuillez sélectionner le dossier racine de votre carte SD</string>
@@ -419,6 +427,8 @@
     <string name="wallpapers">Fonds d\'écran</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Minuterie de veille</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
     <string name="name">Nom</string>
@@ -442,6 +452,7 @@
     <string name="full_name">Nom complet</string>
     <string name="use_custom_sorting">Utiliser le tri personnalisé</string>
     <string name="change_order">Modifier l\'ordre</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Confirmez-vous vraiment la suppression ?</string>
     <string name="deletion_confirmation">Voulez-vous vraiment supprimer %s ?</string>
@@ -466,6 +477,8 @@
     <string name="enter_pin">Saisir un code PIN</string>
     <string name="please_enter_pin">Veuillez saisir un code PIN</string>
     <string name="wrong_pin">Code PIN incorrect</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Saisissez à nouveau le code PIN</string>
     <string name="pattern">Schéma</string>
     <string name="insert_pattern">Dessiner un schéma</string>

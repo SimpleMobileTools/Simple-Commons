@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Berichten van verborgen nummers blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
     <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Geef deze app het recht om meldingen over het hele scherm te tonen om geen inkomende gesprekken te missen.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
     <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
+    <string name="allow_alarm_sleep_timer">Geef de app toegang tot interne alarmen om de app te kunnen afsluiten nadat de slaaptimer is verlopen.</string>
     <string name="allow_location_permission">Geef de app toegang tot de huidige locatie om gebruik te kunnen maken van de desbetreffende functie(s).</string>
     <string name="grant_permission">Toestemming geven</string>
     <string name="permission_required">Toestemming vereist</string>
@@ -295,6 +302,7 @@
     <string name="select_storage">Opslag kiezen</string>
     <string name="storage">Opslag</string>
     <string name="internal">Interne opslag</string>
+    <string name="internal_storage">Interne Opslag</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
@@ -407,6 +415,8 @@
     <string name="wallpapers">Achtergronden</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Slaaptimer</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>
@@ -430,6 +440,7 @@
     <string name="full_name">Volledige naam</string>
     <string name="use_custom_sorting">Aangepast sorteren</string>
     <string name="change_order">Volgorde aanpassen</string>
+    <string name="more_options">Meer opties</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deze items verwijderen\?</string>
     <string name="deletion_confirmation">%s verwijderen\?</string>
@@ -453,6 +464,8 @@
     <string name="enter_pin">Pincode invoeren</string>
     <string name="please_enter_pin">Graag pincode invoeren</string>
     <string name="wrong_pin">Verkeerde pincode</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Pincode herhalen</string>
     <string name="pattern">Patroon</string>
     <string name="insert_pattern">Patroon invoeren</string>

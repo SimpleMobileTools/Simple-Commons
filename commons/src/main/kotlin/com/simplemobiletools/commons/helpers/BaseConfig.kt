@@ -593,4 +593,12 @@ open class BaseConfig(val context: Context) {
     var lastAutoBackupTime: Long
         get() = prefs.getLong(LAST_AUTO_BACKUP_TIME, 0L)
         set(lastAutoBackupTime) = prefs.edit().putLong(LAST_AUTO_BACKUP_TIME, lastAutoBackupTime).apply()
+
+    var passwordRetryCount: Int
+        get() = prefs.getInt(PASSWORD_RETRY_COUNT, 0)
+        set(passwordRetryCount) = prefs.edit().putInt(PASSWORD_RETRY_COUNT, passwordRetryCount).apply()
+
+    var passwordCountdownStartMs: Long
+        get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
+        set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
 }

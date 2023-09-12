@@ -129,6 +129,12 @@
     <string name="block_hidden_messages">拦截来自隐藏号码的短信</string>
     <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
     <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>
@@ -176,6 +182,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">你必须允许应用展示全屏通知，否则你可能错失某些来电。</string>
     <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
     <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
+    <string name="allow_alarm_sleep_timer">你必须允许应用访问内部闹铃，否则它无法在睡眠定时器后关闭应用。</string>
     <string name="allow_location_permission">你必须允许应用访问你的位置，否则它不知道位置。</string>
     <string name="grant_permission">授予权限</string>
     <string name="permission_required">权限是必需的</string>
@@ -290,6 +297,7 @@
     <string name="select_storage">选择存储器</string>
     <string name="storage">存储</string>
     <string name="internal">内部存储器</string>
+    <string name="internal_storage">内部存储</string>
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
@@ -402,8 +410,10 @@
     <string name="contact_details">联系人详情</string>
     <string name="add_contact">添加联系人</string>
     <string name="wallpapers">壁纸</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">显示行编号</string>
+    <string name="hide_line_numbers">隐藏行编号</string>
+    <string name="sleep_timer">睡眠定时器</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>
@@ -427,6 +437,7 @@
     <string name="full_name">全名</string>
     <string name="use_custom_sorting">使用自定义排序</string>
     <string name="change_order">更改排序</string>
+    <string name="more_options">更多选项</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
     <string name="deletion_confirmation">您确定要删除 %s？</string>
@@ -449,6 +460,8 @@
     <string name="enter_pin">输入密码</string>
     <string name="please_enter_pin">请输入密码</string>
     <string name="wrong_pin">密码错误</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">重复密码</string>
     <string name="pattern">图案</string>
     <string name="insert_pattern">绘制图案</string>

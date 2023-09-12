@@ -132,6 +132,12 @@
     <string name="block_hidden_messages">Αποκλεισμός μηνυμάτων από κρυφούς αριθμούς</string>
     <string name="add_blocked_number_helper_text">Εισάγετε έναν αριθμό ή ένα μοτίβο (π.χ. *12345*, +1*8888) για να μπλοκάρετε όλες τις κλήσεις και τα μηνύματα από αριθμούς που αντιστοιχούν στο μοτίβο.</string>
     <string name="must_make_default_caller_id_app">Αδύνατη η φραγή αγνώστων αριθμών χωρίς άδεια ID κλήσεων.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
     <string name="add_favorites">Προσθήκη αγαπημένων</string>
@@ -179,6 +185,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις σε πλήρη οθόνη, διαφορετικά μπορεί να χάσετε κάποιες εισερχόμενες κλήσεις.</string>
     <string name="allow_notifications_incoming_messages">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τα εισερχόμενα μηνύματα.</string>
     <string name="allow_alarm_scheduled_messages">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να στείλει προγραμματισμένα μηνύματα.</string>
+    <string name="allow_alarm_sleep_timer">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να απενεργοποιήσει την εφαρμογή μετά τον χρονοδιακόπτη ύπνου..</string>
     <string name="allow_location_permission">Πρέπει να επιτρέψετε στην εφαρμογή να έχει πρόσβαση στην τοποθεσία σας, διαφορετικά δεν θα την γνωρίζει.</string>
     <string name="grant_permission">Χορήγηση άδειας</string>
     <string name="permission_required">Απαιτείται άδεια</string>
@@ -296,6 +303,7 @@
     <string name="select_storage">Επιλέξτε αποθήκευση</string>
     <string name="storage">Αποθήκευση</string>
     <string name="internal">Εσωτερική</string>
+    <string name="internal_storage">Εσωτερική Αποθήκευση</string>
     <string name="sd_card">Κάρτα SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
@@ -412,8 +420,10 @@
     <string name="contact_details">Στοιχεία επαφής</string>
     <string name="add_contact">Προσθήκη επαφής</string>
     <string name="wallpapers">Ταπετσαρίες</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Εμφάνιση γραμμής αριθμών</string>
+    <string name="hide_line_numbers">Απόκρυψη γραμμής αριθμών</string>
+    <string name="sleep_timer">Χρονοδιακόπτης</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>
@@ -437,6 +447,7 @@
     <string name="full_name">Πλήρες όνομα</string>
     <string name="use_custom_sorting">Προσαρ/μένη ταξ/μηση</string>
     <string name="change_order">Αλλαγή σειράς</string>
+    <string name="more_options">Περισσότερες επιλογές</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
     <string name="deletion_confirmation">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s?</string>
@@ -460,6 +471,8 @@
     <string name="enter_pin">Εισαγωγή PIN</string>
     <string name="please_enter_pin">Παρακαλώ εισάγετε ένα PIN</string>
     <string name="wrong_pin">Λάθος PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Επανάληψη PIN</string>
     <string name="pattern">Μοτίβο</string>
     <string name="insert_pattern">Εισαγωγή μοτίβου</string>
@@ -493,7 +506,7 @@
     <string name="tomorrow">Αύριο</string>
     <string name="every_day">Καθημερινά</string>
     <string name="hide_year">Απόκρυψη χρόνου</string>
-    <string name="seconds_raw">δευτερόλεπτα</string>
+    <string name="seconds_raw">δευτ/πτα</string>
     <string name="minutes_raw">λεπτά</string>
     <string name="hours_raw">ώρες</string>
     <string name="days_raw">ημερ.</string>

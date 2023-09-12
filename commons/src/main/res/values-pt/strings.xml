@@ -132,6 +132,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Introduza um número ou padrão (ex: *12345*, +1*8888) para bloquear todas as chamadas e mensagens de números que coincidam com o padrão.</string>
     <string name="must_make_default_caller_id_app">Não é possível bloquear números desconhecidos sem não conceder a permissão \"Caller ID\".</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
@@ -179,6 +185,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Conceder permissão</string>
     <string name="permission_required">Permissão necessária</string>
@@ -300,6 +307,7 @@
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="storage">Armazenamento</string>
     <string name="internal">Interno</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a pasta raíz do cartão SD</string>
@@ -417,6 +425,8 @@
     <string name="wallpapers">Papel de parede</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Temporizador</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -440,6 +450,7 @@
     <string name="full_name">Nome completo</string>
     <string name="use_custom_sorting">Ordenação personalizada</string>
     <string name="change_order">Alterar ordem</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que pretende continuar\?</string>
     <string name="deletion_confirmation">Tem a certeza de que pretende apagar %s\?</string>
@@ -464,6 +475,8 @@
     <string name="enter_pin">Digite o PIN</string>
     <string name="please_enter_pin">Por favor digite o PIN</string>
     <string name="wrong_pin">PIN inválido</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repita o PIN</string>
     <string name="pattern">Padrão</string>
     <string name="insert_pattern">Introduza o padrão</string>
@@ -861,7 +874,11 @@
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar versão</string>
     <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã principal.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Olá,
+\n
+\nParece que fez a atualização a partir da versão gratuita. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
+\n
+\nObrigado!</string>
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Olá,
 \n
@@ -877,17 +894,23 @@
 \n
 \nParece que fez a atualização a partir da versão gratuita. Se quiser migrar os eventos guardados localmente, tem que os exportar para um ficheiro .ics através da aplicação gratuita e importá-los através do menu.
 \n
-\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer
+\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
 \n
 \nObrigado!</string>
     <string name="upgraded_from_free_contacts">Olá,
 \n
 \nParece que fez a atualização a partir da versão gratuita. Se tiver contactos guardados em \"%s\" e os quiser migrar para a versão Pro, tem que os exportar para um ficheiro .vcf através da aplicação gratuita e importá-los através do menu.
 \n
-\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer
+\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
 \n
 \nObrigado!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Olá,
+\n
+\nParece que fez a atualização a partir da versão gratuita. Se tiver notas guardadas e as quiser migrar para a versão Pro, tem que as exportar para um ficheiro através da aplicação gratuita e importá-los através do menu.
+\n
+\nSe a versão Pro for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
+\n
+\nObrigado!</string>
     <!-- About -->
     <string name="about">Acerca</string>
     <string name="website">Site</string>

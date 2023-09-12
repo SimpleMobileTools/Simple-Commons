@@ -133,6 +133,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Upiši broj ili uzorak (npr. *12345*, +1*8888) za blokiranje svih poziva i poruka od brojeva koji odgovaraju uzorku.</string>
     <string name="must_make_default_caller_id_app">Blokiranje nepoznatih brojeva nije moguće bez dozvole ID-a pozivatelja.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoriti</string>
     <string name="add_favorites">Dodaj favorite</string>
@@ -180,6 +186,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Aplikaciji moraš dozvoliti prikazivanje obavijesti, inače ne može prikazivati dolazne poruke.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Odobri dozvolu</string>
     <string name="permission_required">Zahtijeva dozvolu</string>
@@ -308,6 +315,7 @@
     <string name="select_storage">Odaberite prostor za pohranu</string>
     <string name="storage">Skladištenje</string>
     <string name="internal">Unutranji prostor za pohranu</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD kartica</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Odabrana je pogrešana mapa, molimo odaberite root mapu Vaše SD kartice</string>
@@ -426,6 +434,8 @@
     <string name="wallpapers">Slike pozadine</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Mjerač vremena za isključivanje</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sortiraj po</string>
     <string name="name">Naziv</string>
@@ -449,6 +459,7 @@
     <string name="full_name">Puno ime i prezime</string>
     <string name="use_custom_sorting">Koristi prilagođeno sortiranje</string>
     <string name="change_order">Promijeni redoslijed</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Jeste li sigurni da želite nastaviti s brisanjem?</string>
     <string name="deletion_confirmation">Jeste li sigurni da želite izbrisati %s?</string>
@@ -473,6 +484,8 @@
     <string name="enter_pin">Unesite PIN</string>
     <string name="please_enter_pin">Molimo unesite PIN</string>
     <string name="wrong_pin">Pogrešan PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Ponovite PIN</string>
     <string name="pattern">Uzorak</string>
     <string name="insert_pattern">Unesite uzorak</string>

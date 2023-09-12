@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Bloqueja els missatges des de números ocults</string>
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
     <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>
@@ -178,7 +184,8 @@
     <string name="allow_full_screen_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions a pantalla completa, en cas contrari podeu perdre trucades entrants.</string>
     <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
     <string name="allow_alarm_scheduled_messages">Heu de permetre que l\'aplicació accedeixi a alarmes internes, en cas contrari no pot enviar missatges programats.</string>
-    <string name="allow_location_permission">Cal permetre que l\'aplicació accedeixi a la vostra ubicació, sinó no la sabrà.</string>
+    <string name="allow_alarm_sleep_timer">Heu de permetre que l\'aplicació accedeixi a les alarmes internes, en cas contrari no podrà desactivar l\'aplicació després del temporitzador de son.</string>
+    <string name="allow_location_permission">Cal permetre que l\'aplicació accedeixi a la vostra ubicació, en cas contrari no la sabrà.</string>
     <string name="grant_permission">Atorga el permís</string>
     <string name="permission_required">Es requereix permís</string>
     <!-- Renaming -->
@@ -301,6 +308,7 @@
     <string name="select_storage">Seleccioneu l\'emmagatzematge</string>
     <string name="storage">Emmagatzematge</string>
     <string name="internal">Intern</string>
+    <string name="internal_storage">Emmagatzematge intern</string>
     <string name="sd_card">Targeta SD</string>
     <string name="root">Arrel</string>
     <string name="wrong_root_selected">S\'ha seleccionat una carpeta incorrecta, seleccioneu la carpeta principal de la targeta SD</string>
@@ -411,8 +419,10 @@
     <string name="contact_details">Detalls del contacte</string>
     <string name="add_contact">Afegeix un contacte</string>
     <string name="wallpapers">Fons de pantalla</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Mostra els números de línia</string>
+    <string name="hide_line_numbers">Oculta els números de línia</string>
+    <string name="sleep_timer">Temporitzador per adormir-se</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ordena per</string>
     <string name="name">Nom</string>
@@ -436,6 +446,7 @@
     <string name="full_name">Nom complet</string>
     <string name="use_custom_sorting">Utilitza l\'ordenació personalitzada</string>
     <string name="change_order">Canvia l\'ordre</string>
+    <string name="more_options">Més opcions</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Segur que voleu continuar amb la supressió\?</string>
     <string name="deletion_confirmation">Segur que voleu suprimir %s\?</string>
@@ -459,6 +470,8 @@
     <string name="enter_pin">Introduïu el PIN</string>
     <string name="please_enter_pin">Introduïu un PIN</string>
     <string name="wrong_pin">PIN incorrecte</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Repetiu el PIN</string>
     <string name="pattern">Patró</string>
     <string name="insert_pattern">Introduïu el patró</string>
@@ -829,22 +842,22 @@
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
     <string name="upgraded_from_free_gallery">Hola,
 \n
-\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar l\'antiga gratuïta per evitar que l\'inicieu accidentalment, ja que no la necessitareu. També evitarà que es mostri aquest diàleg.
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser haureu migrat la vostra configuració i els favorits, podeu desinstal·lar l\'antiga gratuïta per evitar que l\'inicieu accidentalment, ja que no la necessitareu. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
     <string name="upgraded_to_pro_gallery">Hola,
 \n
-\nsembla que ja teniu la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar-la per evitar que la inicieu accidentalment, ja que no la necessitareu.
+\nsembla que ja teniu la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser haureu migrat la vostra configuració i els favorits, podeu desinstal·lar-la per evitar que la inicieu accidentalment, ja que no la necessitareu.
 \n
 \nGràcies!</string>
     <string name="upgraded_from_free">Hola
 \n
-\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més. També evitarà que es mostri aquest diàleg.
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser haureu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
     <string name="upgraded_to_pro">Hola,
 \n
-\nsembla que ja teniu també la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser hàgiu migrat les dades, podeu desinstal·lar-la per evitar que l\'inicieu accidentalment, ja que ja no la necessitareu.
+\nsembla que ja teniu també la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser haureu migrat les dades, podeu desinstal·lar-la per evitar que l\'inicieu accidentalment, ja que ja no la necessitareu.
 \n
 \nGràcies!</string>
     <string name="upgraded_from_free_calendar">Hola,
@@ -965,7 +978,7 @@
     <string name="before_asking_question">Abans de fer una pregunta, primer llegiu les</string>
     <string name="faq_1_title_commons">Com és que no veig aquest giny a la llista de ginys\?</string>
     <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació a una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els ginys de l\'aplicació en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
-    <string name="faq_2_title_commons">Vull ajudar-vos, però no puc donar diners. Hi ha quelcom més que pugui fer\?</string>
+    <string name="faq_2_title_commons">Vull ajudar-vos, però no puc donar diners. Hi ha res més que pugui fer\?</string>
     <string name="faq_2_text_commons">Sí, és clar. Podeu difondre les aplicacions o fer bones valoracions i comentaris. També podeu ajudar traduint les aplicacions a un idioma nou o simplement actualitzant algunes traduccions existents. La guia per traduir es troba en &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;aquest lloc web&lt;/a&gt;, o senzillament poseu-vos en contacte amb nosaltres a &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si teniu cap pregunta.</string>
     <string name="faq_3_title_commons">He suprimit alguns fitxers per error, com els puc recuperar\?</string>
     <string name="faq_3_text_commons">Malauradament, no podeu fer-ho. Els fitxers se suprimeixen a l\'instant després del diàleg de confirmació, no hi ha cap paperera disponible.</string>

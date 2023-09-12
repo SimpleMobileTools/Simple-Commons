@@ -192,6 +192,12 @@ const val AUTO_BACKUP = "auto_backup"
 const val AUTO_BACKUP_FOLDER = "auto_backup_folder"
 const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
 const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
+const val PASSWORD_RETRY_COUNT = "password_retry_count"
+const val PASSWORD_COUNTDOWN_START_MS = "password_count_down_start_ms"
+
+const val MAX_PASSWORD_RETRY_COUNT = 3
+const val DEFAULT_PASSWORD_COUNTDOWN = 5
+const val MINIMUM_PIN_LENGTH = 4
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
@@ -552,6 +558,8 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("ogg", R.drawable.ic_file_ogg)
         put("pdf", R.drawable.ic_file_pdf)
         put("plproj", R.drawable.ic_file_plproj)
+        put("ppt", R.drawable.ic_file_ppt)
+        put("pptx", R.drawable.ic_file_ppt)
         put("prproj", R.drawable.ic_file_prproj)
         put("psd", R.drawable.ic_file_psd)
         put("rtf", R.drawable.ic_file_rtf)
@@ -563,6 +571,7 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("wav", R.drawable.ic_file_wav)
         put("wmv", R.drawable.ic_file_wmv)
         put("xls", R.drawable.ic_file_xls)
+        put("xlsx", R.drawable.ic_file_xls)
         put("xml", R.drawable.ic_file_xml)
         put("zip", R.drawable.ic_file_zip)
     }.forEach { (key, value) ->

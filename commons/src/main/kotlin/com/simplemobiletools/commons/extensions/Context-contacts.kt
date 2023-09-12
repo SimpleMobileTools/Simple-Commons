@@ -1,12 +1,15 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.TargetApi
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
+import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.provider.ContactsContract
+import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.databases.ContactsDatabase
@@ -355,4 +358,39 @@ fun BaseSimpleActivity.tryInitiateCall(contact: Contact, onStartCallIntent: (pho
     } else {
         initiateCall(contact, onStartCallIntent)
     }
+}
+
+fun Context.isContactBlocked(contact: Contact, callback: (Boolean) -> Unit) {
+    val phoneNumbers = contact.phoneNumbers.map { PhoneNumberUtils.stripSeparators(it.value) }
+    getBlockedNumbersWithContact { blockedNumbersWithContact ->
+        val blockedNumbers = blockedNumbersWithContact.map { it.number }
+        val allNumbersBlocked = phoneNumbers.all { it in blockedNumbers }
+        callback(allNumbersBlocked)
+    }
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.blockContact(contact: Contact): Boolean {
+    var contactBlocked = true
+    ensureBackgroundThread {
+        contact.phoneNumbers.forEach {
+            val numberBlocked = addBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            contactBlocked = contactBlocked && numberBlocked
+        }
+    }
+
+    return contactBlocked
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.unblockContact(contact: Contact): Boolean {
+    var contactUnblocked = true
+    ensureBackgroundThread {
+        contact.phoneNumbers.forEach {
+            val numberUnblocked = deleteBlockedNumber(PhoneNumberUtils.stripSeparators(it.value))
+            contactUnblocked = contactUnblocked && numberUnblocked
+        }
+    }
+
+    return contactUnblocked
 }

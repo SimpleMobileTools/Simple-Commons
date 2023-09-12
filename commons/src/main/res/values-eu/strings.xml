@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Gogokoak</string>
     <string name="add_favorites">Gehitu gogokoak</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Grant Permission</string>
     <string name="permission_required">Permission Required</string>
@@ -295,6 +302,7 @@
     <string name="select_storage">Hautatu biltegiratzea</string>
     <string name="storage">Storage</string>
     <string name="internal">Bernekoa</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD txartela</string>
     <string name="root">Erroa</string>
     <string name="wrong_root_selected">Okerreko karpeta hautatu da, hautatu SD txartelaren erro-karpeta</string>
@@ -413,6 +421,8 @@
     <string name="wallpapers">Wallpapers</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Temporizadorea</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenatze-irizpidea</string>
     <string name="name">Izena</string>
@@ -436,13 +446,14 @@
     <string name="full_name">Izen-abizenak</string>
     <string name="use_custom_sorting">Erabili pertsonalizatutako ordenatzea</string>
     <string name="change_order">Aldatu ordena</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ziur zaude ezabatzearekin jarraitu nahi duzula?</string>
-    <string name="deletion_confirmation">Ziur zaude %s ezabatu nahi d(it)uzula?</string>
     <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">Ziur zaude %s ezabatu nahi d(it)uzula?</string>
     <string name="deletion_confirmation_short">Delete %s?</string>
-    <string name="move_to_recycle_bin_confirmation">Ziur zaude %s zakarrontzira mugitu nahi d(it)uzula?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Ziur zaude %s zakarrontzira mugitu nahi d(it)uzula?</string>
     <string name="are_you_sure_delete">Ziur zaude elementu hau ezabatu nahi duzula?</string>
     <string name="are_you_sure_recycle_bin">Ziur zaude elementu hau zakarrontzira mugitu nahi duzula?</string>
     <string name="do_not_ask_again">Ez galdetu berriro saio honetan</string>
@@ -459,6 +470,8 @@
     <string name="enter_pin">Sartu PINa</string>
     <string name="please_enter_pin">Sartu PINa</string>
     <string name="wrong_pin">Okerreko PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Errpeikatu PIN</string>
     <string name="pattern">Eredua</string>
     <string name="insert_pattern">Sartu eredua</string>

@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Nachrichten von unterdrückten Nummern blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen im Vollbild erlauben, sonst könntest du einige eingehende Anrufe verpassen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
     <string name="allow_alarm_scheduled_messages">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie keine geplanten Nachrichten senden.</string>
+    <string name="allow_alarm_sleep_timer">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie die Anwendung nach dem Sleeptimer nicht ausschalten.</string>
     <string name="allow_location_permission">Der App den Zugriff auf deinen Standort erlauben, sonst kennt sie ihn nicht.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
@@ -301,6 +308,7 @@
     <string name="select_storage">Speicher auswählen</string>
     <string name="storage">Speicherplatz</string>
     <string name="internal">Intern</string>
+    <string name="internal_storage">Interner Speicher</string>
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
@@ -417,8 +425,10 @@
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
     <string name="wallpapers">Bildschirmhintergründe</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Zeilennummern anzeigen</string>
+    <string name="hide_line_numbers">Zeilennummern ausblenden</string>
+    <string name="sleep_timer">Sleeptimer</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
@@ -442,6 +452,7 @@
     <string name="full_name">Vollständiger Name</string>
     <string name="use_custom_sorting">Benutzerdefiniertes Sortieren anwenden</string>
     <string name="change_order">Reihenfolge ändern</string>
+    <string name="more_options">Weitere Optionen</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
     <string name="deletion_confirmation">%s wirklich löschen\?</string>
@@ -465,6 +476,8 @@
     <string name="enter_pin">PIN eingeben</string>
     <string name="please_enter_pin">Bitte eine PIN eingeben</string>
     <string name="wrong_pin">Falsche PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">PIN wiederholen</string>
     <string name="pattern">Muster</string>
     <string name="insert_pattern">Muster zeichnen</string>

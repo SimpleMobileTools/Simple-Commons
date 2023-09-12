@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Gizli numaralardan gelen mesajları engelle</string>
     <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
     <string name="must_make_default_caller_id_app">Arayan kimliği izni olmadan bilinmeyen numaralar engellenemiyor.</string>
+    <string name="block_contact">Kişiyi engelle</string>
+    <string name="block_contact_success">Kişi engellendi</string>
+    <string name="block_contact_fail">Kişi engellenemedi</string>
+    <string name="unblock_contact">Kişinin engelini kaldır</string>
+    <string name="unblock_contact_success">Kişinin engeli kaldırıldı</string>
+    <string name="unblock_contact_fail">Kişinin engeli kaldırılamadı</string>
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
     <string name="add_favorites">Favori ekle</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Uygulamanın tam ekran bildirimleri görüntülemesine izin vermelisiniz, aksi takdirde bazı gelen aramaları kaçırabilirsiniz.</string>
     <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
     <string name="allow_alarm_scheduled_messages">Uygulamanın dahili alarmlara erişmesine izin vermelisiniz, aksi takdirde zamanlanan mesajlar gönderemez.</string>
+    <string name="allow_alarm_sleep_timer">Uygulamanın dahili alarmlara erişmesine izin vermelisiniz, yoksa uyku zamanlayıcısından sonra uygulamayı kapatamaz.</string>
     <string name="allow_location_permission">Uygulamanın konumunuza erişmesine izin vermelisiniz, aksi takdirde bunu bilmeyecektir.</string>
     <string name="grant_permission">İzin Ver</string>
     <string name="permission_required">İzin Gerekli</string>
@@ -295,6 +302,7 @@
     <string name="select_storage">Depolama seç</string>
     <string name="storage">Depolama</string>
     <string name="internal">Dahili</string>
+    <string name="internal_storage">Dahili Depolama</string>
     <string name="sd_card">SD Kart</string>
     <string name="root">Kök</string>
     <string name="wrong_root_selected">Yanlış klasör seçildi, lütfen SD kartınızın kök klasörünü seçin</string>
@@ -409,8 +417,10 @@
     <string name="contact_details">Kişi bilgileri</string>
     <string name="add_contact">Kişi ekle</string>
     <string name="wallpapers">Duvar kağıtları</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Satır numaralarını göster</string>
+    <string name="hide_line_numbers">Satır numaralarını gizle</string>
+    <string name="sleep_timer">Uyku zamanlayıcısı</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
     <string name="name">Ad</string>
@@ -434,6 +444,7 @@
     <string name="full_name">Tam adı</string>
     <string name="use_custom_sorting">Özel sıralama kullan</string>
     <string name="change_order">Düzeni değiştir</string>
+    <string name="more_options">Daha fazla seçenek</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
     <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>
@@ -457,6 +468,8 @@
     <string name="enter_pin">PIN\'i gir</string>
     <string name="please_enter_pin">Lütfen PIN\'i girin</string>
     <string name="wrong_pin">Yanlış PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">PIN\'i tekrar gir</string>
     <string name="pattern">Desen</string>
     <string name="insert_pattern">Deseni çiz</string>

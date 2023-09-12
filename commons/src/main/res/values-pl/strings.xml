@@ -135,6 +135,12 @@
     <string name="block_hidden_messages">Blokuj wiadomości od ukrytych numerów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -182,6 +188,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień na pełnym ekranie, w przeciwnym razie możesz przegapić niektóre połączenia przychodzące.</string>
     <string name="allow_notifications_incoming_messages">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać wiadomości przychodzących.</string>
     <string name="allow_alarm_scheduled_messages">Musisz zezwolić aplikacji na dostęp do alarmów, w przeciwnym razie nie będzie mogła wysyłać zaplanowanych wiadomości.</string>
+    <string name="allow_alarm_sleep_timer">Musisz zezwolić aplikacji na dostęp do alarmów, w przeciwnym razie nie będzie mogła się wyłączyć po upływie czasu uśpienia.</string>
     <string name="allow_location_permission">Musisz zezwolić aplikacji na dostęp do Twojej lokalizacji, w przeciwnym razie nie będzie jej znać.</string>
     <string name="grant_permission">Nadaj uprawnienie</string>
     <string name="permission_required">Wymagane uprawnienie</string>
@@ -307,6 +314,7 @@
     <string name="select_storage">Wybierz pamięć</string>
     <string name="storage">Pamięć</string>
     <string name="internal">Wewnętrzna</string>
+    <string name="internal_storage">Pamięć wewnętrzna</string>
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz folder główny karty pamięci.</string>
@@ -418,8 +426,10 @@
     <string name="contact_details">Szczegóły kontaktu</string>
     <string name="add_contact">Dodaj kontakt</string>
     <string name="wallpapers">Tapety</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Pokaż numery linii</string>
+    <string name="hide_line_numbers">Ukryj numery linii</string>
+    <string name="sleep_timer">Wyłącznik czasowy</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sortuj według</string>
     <string name="name">Nazwa</string>
@@ -443,6 +453,7 @@
     <string name="full_name">Pełna nazwa</string>
     <string name="use_custom_sorting">Użyj własnego sortowania</string>
     <string name="change_order">Zmień kolejność</string>
+    <string name="more_options">Więcej opcji</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy kontynuować usuwanie\?</string>
     <string name="deletion_confirmation">Czy usunąć %s\?</string>
@@ -468,6 +479,8 @@
     <string name="enter_pin">Wprowadź PIN</string>
     <string name="please_enter_pin">Wprowadź PIN</string>
     <string name="wrong_pin">Nieprawidłowy PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Wprowadź PIN ponownie</string>
     <string name="pattern">Wzór</string>
     <string name="insert_pattern">Wprowadź wzór</string>

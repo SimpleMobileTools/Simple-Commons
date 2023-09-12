@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Blokeeri sõnumid varjatud numbritelt</string>
     <string name="add_blocked_number_helper_text">Sisesta number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
     <string name="add_favorites">Lisa lemmikuks</string>
@@ -178,6 +184,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Selleks, et mitte ükski saabuv kõne ei jääks märkamata, palun luba rakendusel kuvada täisekraanivaates teavitusi.</string>
     <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
     <string name="allow_alarm_scheduled_messages">Selleks et rakendus saaks plaanitud ajal sõnumeid saata, pead lubama tal kasutada süsteemseid äratusi.</string>
+    <string name="allow_alarm_sleep_timer">Sa pead lubama rakendusel tuvastada ja kasutada süsteemiseid äratusi. Vastasel juhul ta ei saa peale äratuse kõlamist rakendust välja lülitada.</string>
     <string name="allow_location_permission">Selleks et rakendus saaks asukohateavet kasutada, palun luba tal sinu asukohta tuvastada.</string>
     <string name="grant_permission">Anna vastavad õigused</string>
     <string name="permission_required">Luba on nõutav</string>
@@ -301,6 +308,7 @@
     <string name="select_storage">Vali salvestusruum</string>
     <string name="storage">Andmehoidla</string>
     <string name="internal">Sisemine</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Juurkaust</string>
     <string name="wrong_root_selected">Valisid vale kausta, palun vali SD-kaardi juurkaust, mis on kõige esimene kaust</string>
@@ -386,7 +394,7 @@
     <string name="unhide_folder">Näita peidetud kausta</string>
     <string name="temporarily_show_hidden">Näita peidetuid ajutiselt</string>
     <string name="stop_showing_hidden">Lõpeta peidetud meedia näitamine</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Luba ligipääs täiendavale meediale</string>
     <string name="maximum_share_reached">Nii palju sisu korraga jagada ei saa</string>
     <string name="empty_and_disable_recycle_bin">Tühjenda prügikast ja eemalda ta kasutusest</string>
     <string name="undo">Pööra tegevus tagasi</string>
@@ -411,8 +419,10 @@
     <string name="contact_details">Kontakti üksikasjad</string>
     <string name="add_contact">Lisa kontakt</string>
     <string name="wallpapers">Taustapildid</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Näita reanumbreid</string>
+    <string name="hide_line_numbers">Peida reanumbrid</string>
+    <string name="sleep_timer">Unetaimer</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Sordi</string>
     <string name="name">Nimi</string>
@@ -436,6 +446,7 @@
     <string name="full_name">Täisnimi</string>
     <string name="use_custom_sorting">Kasuta kohandatud sortimist</string>
     <string name="change_order">Muuda järjekorda</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Kas oled kindel, et soovid kustutamist jätkata\?</string>
     <string name="deletion_confirmation">Kas sa oled kindel, et soovid %s kustutada\?</string>
@@ -459,6 +470,8 @@
     <string name="enter_pin">Sisesta PIN</string>
     <string name="please_enter_pin">Palun sisesta PIN-kood</string>
     <string name="wrong_pin">Vale PIN-kood</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Korda PIN-koodi</string>
     <string name="pattern">Muster</string>
     <string name="insert_pattern">Joonista muster</string>

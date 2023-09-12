@@ -132,6 +132,12 @@
     <string name="block_hidden_messages">Блокиране на съобщения от скрити номера</string>
     <string name="add_blocked_number_helper_text">Въведете номер или шаблон (напр. *12345*, +1*8888), за да блокирате всички обаждания и съобщения от номера, съответстващи на шаблона.</string>
     <string name="must_make_default_caller_id_app">Не можете да блокирате непознати номера без разрешение за идентификация на обаждащия се.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Любими</string>
     <string name="add_favorites">Добави любими</string>
@@ -179,6 +185,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Трябва да разрешите на приложението да показва известия на цял екран, в противен случай може да пропуснете някои входящи повиквания.</string>
     <string name="allow_notifications_incoming_messages">Трябва да разрешите на приложението да показва известия, в противен случай то не може да показва входящи съобщения.</string>
     <string name="allow_alarm_scheduled_messages">Трябва да разрешите на приложението достъп до вътрешни аларми, в противен случай то не може да изпраща планирани съобщения.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">Трябва да разрешите на приложението достъп до вашето местоположение, в противен случай то няма да го знае.</string>
     <string name="grant_permission">Предоставяне на разрешение</string>
     <string name="permission_required">Изисква се разрешение</string>
@@ -303,6 +310,7 @@
     <string name="select_storage">Изберете хранилище</string>
     <string name="storage">Хранилище</string>
     <string name="internal">Вътрешно</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD Карта</string>
     <string name="root">Ядро</string>
     <string name="wrong_root_selected">Избрана грешна папка, моля, изберете началната папка на вашата SD карта</string>
@@ -415,6 +423,8 @@
     <string name="wallpapers">Тапети</string>
     <string name="show_line_numbers">Show line numbers</string>
     <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Таймер за заспиване</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Сортиране по</string>
     <string name="name">Име</string>
@@ -438,6 +448,7 @@
     <string name="full_name">Цяло име</string>
     <string name="use_custom_sorting">Използвай персонализирано сортиране</string>
     <string name="change_order">Промяна на подредбата</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Сигурни ли си, че искаш да продължиш с изтриването\?</string>
     <string name="deletion_confirmation">Сигурен ли си, че искаш да изтриеш %s\?</string>
@@ -461,6 +472,8 @@
     <string name="enter_pin">Въведи ПИН</string>
     <string name="please_enter_pin">Моля, въведете ПИН</string>
     <string name="wrong_pin">Грешен ПИН</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Повтори ПИН</string>
     <string name="pattern">Шаблон</string>
     <string name="insert_pattern">Въведи шаблон</string>
