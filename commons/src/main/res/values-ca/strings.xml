@@ -132,11 +132,11 @@
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
     <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">Contacte bloquejat</string>
+    <string name="block_contact_fail">No s\'ha pogut bloquejar el contacte</string>
+    <string name="unblock_contact">Desbloqueja el contacte</string>
+    <string name="unblock_contact_success">Contacte desbloquejat</string>
+    <string name="unblock_contact_fail">No s\'ha pogut desbloquejar el contacte</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>
@@ -422,7 +422,7 @@
     <string name="show_line_numbers">Mostra els números de línia</string>
     <string name="hide_line_numbers">Oculta els números de línia</string>
     <string name="sleep_timer">Temporitzador per adormir-se</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Desbloqueja</string>
     <!-- Sorting -->
     <string name="sort_by">Ordena per</string>
     <string name="name">Nom</string>
@@ -470,8 +470,9 @@
     <string name="enter_pin">Introduïu el PIN</string>
     <string name="please_enter_pin">Introduïu un PIN</string>
     <string name="wrong_pin">PIN incorrecte</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">El PIN ha de tenir al menys 4 dígits</string>
+    <string name="too_many_incorrect_attempts">Massa intents incorrectes de desbloqueig.
+\nProveu de nou dintre de %d segons.</string>
     <string name="repeat_pin">Repetiu el PIN</string>
     <string name="pattern">Patró</string>
     <string name="insert_pattern">Introduïu el patró</string>
