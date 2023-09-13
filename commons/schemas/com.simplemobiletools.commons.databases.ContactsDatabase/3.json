@@ -1,0 +1,206 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "a37ad6b27306d974626c808d21c72186",
+    "entities": [
+      {
+        "tableName": "contacts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `prefix` TEXT NOT NULL, `first_name` TEXT NOT NULL, `middle_name` TEXT NOT NULL, `surname` TEXT NOT NULL, `suffix` TEXT NOT NULL, `nickname` TEXT NOT NULL, `photo` BLOB, `photo_uri` TEXT NOT NULL, `phone_numbers` TEXT NOT NULL, `emails` TEXT NOT NULL, `events` TEXT NOT NULL, `starred` INTEGER NOT NULL, `addresses` TEXT NOT NULL, `notes` TEXT NOT NULL, `groups` TEXT NOT NULL, `company` TEXT NOT NULL, `job_position` TEXT NOT NULL, `websites` TEXT NOT NULL, `ims` TEXT NOT NULL, `ringtone` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "prefix",
+            "columnName": "prefix",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "first_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "middleName",
+            "columnName": "middle_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "surname",
+            "columnName": "surname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "suffix",
+            "columnName": "suffix",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nickname",
+            "columnName": "nickname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "photo",
+            "columnName": "photo",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photoUri",
+            "columnName": "photo_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneNumbers",
+            "columnName": "phone_numbers",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emails",
+            "columnName": "emails",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "events",
+            "columnName": "events",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "starred",
+            "columnName": "starred",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addresses",
+            "columnName": "addresses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groups",
+            "columnName": "groups",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "company",
+            "columnName": "company",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jobPosition",
+            "columnName": "job_position",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "websites",
+            "columnName": "websites",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "IMs",
+            "columnName": "ims",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ringtone",
+            "columnName": "ringtone",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_contacts_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_contacts_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "groups",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT NOT NULL, `contacts_count` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contactsCount",
+            "columnName": "contacts_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_groups_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_groups_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a37ad6b27306d974626c808d21c72186')"
+    ]
+  }
+}
