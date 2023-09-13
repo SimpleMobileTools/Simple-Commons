@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -28,6 +29,8 @@ fun SettingsListItem(
     modifier: Modifier = Modifier,
     text: String,
     fontSize: TextUnit = TextUnit.Unspecified,
+    maxLines: Int = Int.MAX_VALUE,
+    overflow: TextOverflow = TextOverflow.Clip,
     @DrawableRes icon: Int? = null,
     isImage: Boolean = false,
     click: (() -> Unit)? = null,
@@ -40,7 +43,9 @@ fun SettingsListItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .then(modifier),
-                fontSize = fontSize
+                fontSize = fontSize,
+                maxLines = maxLines,
+                overflow = overflow
             )
         },
         leadingContent = {

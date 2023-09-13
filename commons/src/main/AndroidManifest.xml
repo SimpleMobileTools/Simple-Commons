@@ -54,6 +54,7 @@
         <activity
             android:name=".activities.ManageBlockedNumbersActivity"
             android:configChanges="orientation"
+            android:enableOnBackInvokedCallback="true"
             android:exported="false"
             android:label="@string/manage_blocked_numbers" />
 

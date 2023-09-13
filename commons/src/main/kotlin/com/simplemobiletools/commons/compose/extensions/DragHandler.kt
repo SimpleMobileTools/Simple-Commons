@@ -9,7 +9,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
 
-fun Modifier.listDragHandlerLongKey(
+internal fun Modifier.listDragHandlerLongKey(
     lazyListState: LazyListState,
     haptics: HapticFeedback,
     selectedIds: MutableState<Set<Long>>,
@@ -17,12 +17,7 @@ fun Modifier.listDragHandlerLongKey(
     autoScrollThreshold: Float,
     dragUpdate: (Boolean) -> Unit
 ) = pointerInput(Unit) {
-    fun LazyListState.gridItemKeyAtPosition(hitPoint: Offset): Long? =
-        layoutInfo.visibleItemsInfo
-            .firstOrNull { lazyListItemInfo ->
-                hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size
-            }
-            ?.key as? Long
+
 
     var initialKey: Long? = null
     var currentKey: Long? = null
@@ -34,7 +29,7 @@ fun Modifier.listDragHandlerLongKey(
     detectDragGesturesAfterLongPress(
         onDragStart = { offset ->
             dragUpdate(true)
-            lazyListState.gridItemKeyAtPosition(offset)?.let { key ->
+            lazyListState.itemKeyAtPosition(offset)?.let { key ->
                 if (!selectedIds.value.contains(key)) {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     initialKey = key
@@ -55,7 +50,7 @@ fun Modifier.listDragHandlerLongKey(
                     else -> 0f
                 }
 
-                lazyListState.gridItemKeyAtPosition(change.position)?.let { key ->
+                lazyListState.itemKeyAtPosition(change.position)?.let { key ->
                     if (currentKey != key) {
                         selectedIds.value = selectedIds.value
                             .minus(initialKey!!..currentKey!!)
@@ -69,3 +64,10 @@ fun Modifier.listDragHandlerLongKey(
         }
     )
 }
+
+internal fun LazyListState.itemKeyAtPosition(hitPoint: Offset): Long? =
+    layoutInfo.visibleItemsInfo
+        .firstOrNull { lazyListItemInfo ->
+            hitPoint.y.toInt() in lazyListItemInfo.offset..lazyListItemInfo.offset + lazyListItemInfo.size
+        }
+        ?.key as? Long

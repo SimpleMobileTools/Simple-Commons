@@ -4,7 +4,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -48,30 +50,18 @@ internal fun HelpUsSection(
         SettingsTitleTextComponent(text = stringResource(id = R.string.help_us), modifier = startingTitlePadding)
     }) {
         if (showRateUs) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
-                click = onRateUsClick,
-                text = stringResource(id = R.string.rate_us),
-                icon = R.drawable.ic_star_vector
-            )
+            OneLinerTextItem(text = stringResource(id = R.string.rate_us), icon = R.drawable.ic_star_vector, click = onRateUsClick)
         }
         if (showInvite) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
-                click = onInviteClick,
-                text = stringResource(id = R.string.invite_friends),
-                icon = R.drawable.ic_add_person_vector
-            )
+            OneLinerTextItem(text = stringResource(id = R.string.invite_friends), icon = R.drawable.ic_add_person_vector, click = onInviteClick)
         }
-        SettingsListItem(
-            tint = MaterialTheme.colorScheme.onSurface,
+        OneLinerTextItem(
             click = onContributorsClick,
             text = stringResource(id = R.string.contributors),
             icon = R.drawable.ic_face_vector
         )
         if (showDonate) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
+            OneLinerTextItem(
                 click = onDonateClick,
                 text = stringResource(id = R.string.donate),
                 icon = R.drawable.ic_dollar_vector
@@ -97,36 +87,36 @@ internal fun OtherSection(
         SettingsTitleTextComponent(text = stringResource(id = R.string.other), modifier = startingTitlePadding)
     }) {
         if (showMoreApps) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
+            OneLinerTextItem(
                 click = onMoreAppsClick,
                 text = stringResource(id = R.string.more_apps_from_us),
                 icon = R.drawable.ic_heart_vector
             )
         }
         if (showWebsite) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
+            OneLinerTextItem(
                 click = onWebsiteClick,
                 text = stringResource(id = R.string.website),
                 icon = R.drawable.ic_link_vector
             )
         }
         if (showPrivacyPolicy) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
+            OneLinerTextItem(
                 click = onPrivacyPolicyClick,
                 text = stringResource(id = R.string.privacy_policy),
                 icon = R.drawable.ic_unhide_vector
             )
         }
-        SettingsListItem(
-            tint = MaterialTheme.colorScheme.onSurface,
+        OneLinerTextItem(
             click = onLicenseClick,
             text = stringResource(id = R.string.third_party_licences),
             icon = R.drawable.ic_article_vector
         )
-        SettingsListItem(tint = MaterialTheme.colorScheme.onSurface, click = onVersionClick, text = version, icon = R.drawable.ic_info_vector)
+        OneLinerTextItem(
+            click = onVersionClick,
+            text = version,
+            icon = R.drawable.ic_info_vector
+        )
         SettingsHorizontalDivider()
     }
 }
@@ -142,15 +132,13 @@ internal fun AboutSection(
         SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding)
     }) {
         if (setupFAQ) {
-            SettingsListItem(
-                tint = MaterialTheme.colorScheme.onSurface,
+            OneLinerTextItem(
                 click = onFAQClick,
                 text = stringResource(id = R.string.frequently_asked_questions),
                 icon = R.drawable.ic_question_mark_vector
             )
         }
-        SettingsListItem(
-            tint = MaterialTheme.colorScheme.onSurface,
+        OneLinerTextItem(
             click = onEmailClick,
             text = stringResource(id = R.string.my_email),
             icon = R.drawable.ic_mail_vector
@@ -169,33 +157,59 @@ internal fun SocialSection(
     SettingsGroup(title = {
         SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding)
     }) {
-        SettingsListItem(
+        SocialText(
             click = onFacebookClick,
             text = stringResource(id = R.string.facebook),
             icon = R.drawable.ic_facebook_vector,
-            isImage = true
         )
-        SettingsListItem(
+        SocialText(
             click = onGithubClick,
             text = stringResource(id = R.string.github),
             icon = R.drawable.ic_github_vector,
-            isImage = true,
             tint = MaterialTheme.colorScheme.onSurface
         )
-        SettingsListItem(
+        SocialText(
             click = onRedditClick,
             text = stringResource(id = R.string.reddit),
             icon = R.drawable.ic_reddit_vector,
-            isImage = true
         )
-        SettingsListItem(
+        SocialText(
             click = onTelegramClick,
             text = stringResource(id = R.string.telegram),
             icon = R.drawable.ic_telegram_vector,
-            isImage = true
         )
         SettingsHorizontalDivider()
     }
+}
+
+@Composable
+internal fun SocialText(
+    text: String,
+    icon: Int,
+    tint: Color? = null,
+    click: () -> Unit
+) {
+    SettingsListItem(
+        click = click,
+        text = text,
+        icon = icon,
+        isImage = true,
+        tint = tint,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis
+    )
+}
+
+@Composable
+internal fun OneLinerTextItem(text: String, icon: Int, click: () -> Unit) {
+    SettingsListItem(
+        tint = MaterialTheme.colorScheme.onSurface,
+        click = click,
+        text = text,
+        icon = icon,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis
+    )
 }
 
 @MyDevices

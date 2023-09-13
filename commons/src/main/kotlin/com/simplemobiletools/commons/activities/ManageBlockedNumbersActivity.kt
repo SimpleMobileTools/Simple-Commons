@@ -58,7 +58,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val context = LocalContext.current
             val blockedNumbers by manageBlockedNumbersViewModel.blockedNumbers.collectAsStateWithLifecycle()
             LaunchedEffect(blockedNumbers) {
-                if (blockedNumbers.any { blockedNumber -> blockedNumber.number.isBlockedNumberPattern() }) {
+                if (blockedNumbers?.any { blockedNumber -> blockedNumber.number.isBlockedNumberPattern() } == true) {
                     maybeSetDefaultCallerIdApp()
                 }
             }
@@ -106,9 +106,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
     }
 
     private fun deleteBlockedNumbers(
-        blockedNumbers: ImmutableList<BlockedNumber>,
+        blockedNumbers: ImmutableList<BlockedNumber>?,
         selectedKeys: Set<Long>
     ) {
+        if (blockedNumbers.isNullOrEmpty()) return
         blockedNumbers.filter { blockedNumber -> selectedKeys.contains(blockedNumber.id) }
             .forEach { blockedNumber ->
                 deleteBlockedNumber(blockedNumber.number)
@@ -283,6 +284,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
         private val _blockedNumbers = MutableStateFlow(application.getBlockedNumbers().toImmutableList())
         val blockedNumbers = _blockedNumbers.asStateFlow()
+
         fun updateBlockedNumbers() {
             _blockedNumbers.update { application.getBlockedNumbers().toImmutableList() }
         }

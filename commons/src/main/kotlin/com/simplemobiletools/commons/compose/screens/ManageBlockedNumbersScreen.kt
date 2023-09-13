@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.compose.screens
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -55,6 +56,11 @@ import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+
+private const val CLICK_RESET_TIME = 250L
+private const val RESET_IMMEDIATELY = 1L
+private const val RESET_IDLE = -1L
+private const val BETWEEN_CLICKS_TIME = 200 //time between a click which is slightly lower than the reset time
 
 @Composable
 internal fun ManageBlockedNumbersScreen(
@@ -155,6 +161,15 @@ internal fun ManageBlockedNumbersScreen(
             }
         }
         var hasDraggingStarted by remember { mutableStateOf(false) }
+        var lastClickedValue by remember { mutableStateOf<Pair<Long, BlockedNumber?>>(Pair(RESET_IDLE, null)) }
+        var triggerReset by remember { mutableLongStateOf(RESET_IDLE) }
+        LaunchedEffect(triggerReset) {
+            if (triggerReset != RESET_IDLE) {
+                delay(triggerReset)
+                lastClickedValue = Pair(RESET_IDLE, null)
+                triggerReset = RESET_IDLE
+            }
+        }
         LazyColumn(
             state = state,
             modifier = Modifier.listDragHandlerLongKey(
@@ -163,7 +178,10 @@ internal fun ManageBlockedNumbersScreen(
                 selectedIds = selectedIds,
                 autoScrollSpeed = autoScrollSpeed,
                 autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
-                dragUpdate = { isDraggingStarted -> hasDraggingStarted = isDraggingStarted }
+                dragUpdate = { isDraggingStarted ->
+                    hasDraggingStarted = isDraggingStarted
+                    triggerReset = RESET_IMMEDIATELY
+                }
             ),
             verticalArrangement = Arrangement.spacedBy(2.dp),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
@@ -194,9 +212,15 @@ internal fun ManageBlockedNumbersScreen(
                                     }
                                 }
                                 .ifTrue(!isInActionMode) {
-                                    Modifier.clickable {
+                                    Modifier.combinedClickable(onLongClick = {
+                                        val selectable = longPressSelectableValue(lastClickedValue, blockedNumber, triggerReset) { bNumber1, bNumber2 ->
+                                            updateSelectedIndices(blockedNumbers, bNumber1, bNumber2, selectedIds)
+                                        }
+                                        lastClickedValue = selectable.first
+                                        triggerReset = selectable.second
+                                    }, onClick = {
                                         onEdit(blockedNumber)
-                                    }
+                                    })
                                 }
                                 .ifTrue(isInActionMode) {
                                     Modifier.clickable(
@@ -204,11 +228,12 @@ internal fun ManageBlockedNumbersScreen(
                                         indication = null,
                                         enabled = !hasDraggingStarted
                                     ) {
-                                        if (isSelected) {
-                                            selectedIds.value -= blockedNumber.id
-                                        } else {
-                                            selectedIds.value += blockedNumber.id
-                                        }
+                                        val selectable =
+                                            clickSelectableValue(lastClickedValue, blockedNumber, isSelected, selectedIds, triggerReset) { bNumber1, bNumber2 ->
+                                                updateSelectedIndices(blockedNumbers, bNumber1, bNumber2, selectedIds)
+                                            }
+                                        lastClickedValue = selectable.first
+                                        triggerReset = selectable.second
                                     }
                                 },
                             blockedNumber = blockedNumber,
@@ -221,6 +246,67 @@ internal fun ManageBlockedNumbersScreen(
             }
         }
     }
+}
+
+private fun updateSelectedIndices(
+    blockedNumbers: ImmutableList<BlockedNumber>,
+    bNumber1: BlockedNumber,
+    bNumber2: BlockedNumber,
+    selectedIds: MutableState<Set<Long>>
+) {
+    val indices = listOf(blockedNumbers.indexOf(bNumber1), blockedNumbers.indexOf(bNumber2))
+    selectedIds.value += blockedNumbers
+        .subList(indices.minOrNull()!!, indices.maxOrNull()!! + 1)
+        .map { number -> number.id }
+}
+
+private fun clickSelectableValue(
+    lastClickedValue: Pair<Long, BlockedNumber?>,
+    blockedNumber: BlockedNumber,
+    isSelected: Boolean,
+    selectedIds: MutableState<Set<Long>>,
+    triggerReset: Long,
+    select: (BlockedNumber, BlockedNumber) -> Unit
+): Pair<Pair<Long, BlockedNumber?>, Long> {
+    var lastClickedValueTemp = lastClickedValue
+    var triggerResetTemp = triggerReset
+    if (lastClickedValueTemp.first == RESET_IDLE) {
+        lastClickedValueTemp = Pair(System.currentTimeMillis(), blockedNumber)
+        if (isSelected) {
+            selectedIds.value -= blockedNumber.id
+        } else {
+            selectedIds.value += blockedNumber.id
+        }
+        triggerResetTemp = CLICK_RESET_TIME
+    } else {
+        if (lastClickedValueTemp.first + BETWEEN_CLICKS_TIME > System.currentTimeMillis()) {
+            val firstValue = lastClickedValueTemp
+            select(blockedNumber, firstValue.second!!)
+            lastClickedValueTemp = Pair(RESET_IDLE, null)
+        }
+    }
+    return lastClickedValueTemp to triggerResetTemp
+}
+
+private fun longPressSelectableValue(
+    lastClickedValue: Pair<Long, BlockedNumber?>,
+    blockedNumber: BlockedNumber,
+    triggerReset: Long,
+    select: (BlockedNumber, BlockedNumber) -> Unit
+): Pair<Pair<Long, BlockedNumber?>, Long> {
+    var lastClickedValueTemp = lastClickedValue
+    var triggerResetTemp = triggerReset
+    if (lastClickedValueTemp.first == RESET_IDLE) {
+        lastClickedValueTemp = Pair(System.currentTimeMillis(), blockedNumber)
+        triggerResetTemp = CLICK_RESET_TIME
+    } else {
+        if (lastClickedValueTemp.first + BETWEEN_CLICKS_TIME > System.currentTimeMillis()) {
+            val firstValue = lastClickedValueTemp
+            select(blockedNumber, firstValue.second!!)
+            lastClickedValueTemp = Pair(RESET_IDLE, null)
+        }
+    }
+    return lastClickedValueTemp to triggerResetTemp
 }
 
 @Composable
@@ -271,7 +357,6 @@ private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedN
     Text(
         text = blockedNumber.number,
         modifier = modifier.padding(horizontal = 8.dp),
-        //color = LocalContentColor.current.copy(alpha = if (hasContactName) 0.8f else 1f)
     )
 }
 
@@ -284,7 +369,7 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
         }
     }
     DropdownMenu(
-        //https://github.com/JetBrains/compose-multiplatform/issues/1878 same in M3
+        //https://github.com/JetBrains/compose-multiplatform/issues/1878 same in M3, remove the top and bottom margin blocker
         expanded = isMenuVisible,
         onDismissRequest = dismissMenu,
         modifier = modifier
