@@ -317,10 +317,33 @@ private fun BlockedNumber(
     onCopy: (BlockedNumber) -> Unit,
     isSelected: Boolean
 ) {
+    val hasContactName = blockedNumber.contactName != null
+    val contactNameContent = remember {
+        movableContentOf {
+            Text(
+                text = blockedNumber.contactName.toString(),
+                modifier = modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+            )
+        }
+    }
+    val blockedNumberContent = remember {
+        movableContentOf {
+            BlockedNumberHeadlineContent(blockedNumber = blockedNumber, hasContactName = hasContactName)
+        }
+    }
     ListItem(
         modifier = modifier,
         headlineContent = {
-            BlockedNumberHeadlineContent(blockedNumber = blockedNumber)
+            if (hasContactName) {
+                contactNameContent()
+            } else {
+                blockedNumberContent()
+            }
+        },
+        supportingContent = {
+            if (hasContactName) {
+                blockedNumberContent()
+            }
         },
         trailingContent = {
             BlockedNumberTrailingContent(onDelete = {
@@ -353,10 +376,11 @@ private fun blockedNumberListItemColors(
 
 
 @Composable
-private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber) {
+private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber, hasContactName: Boolean) {
     Text(
         text = blockedNumber.number,
         modifier = modifier.padding(horizontal = 8.dp),
+        color = if (hasContactName) LocalContentColor.current.copy(alpha = 0.7f) else LocalContentColor.current
     )
 }
 
