@@ -1630,18 +1630,6 @@ fun Activity.showSideloadingDialog() {
     }
 }
 
-fun BaseSimpleActivity.getTempFile(folderName: String, filename: String): File? {
-    val folder = File(cacheDir, folderName)
-    if (!folder.exists()) {
-        if (!folder.mkdir()) {
-            toast(R.string.unknown_error_occurred)
-            return null
-        }
-    }
-
-    return File(folder, filename)
-}
-
 fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
     window.decorView.setOnApplyWindowInsetsListener { view, insets ->
         callback(WindowInsetsCompat.toWindowInsetsCompat(insets))

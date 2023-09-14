@@ -8,14 +8,13 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
@@ -28,9 +27,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
-    content: @Composable ColumnScope.(PaddingValues) -> Unit
+    scrollState: ScrollState = canPerformVerticalScrollState(),
+    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
@@ -65,10 +63,12 @@ fun SettingsScaffold(
                 verticalArrangement = verticalArrangement
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }
 }
+
 
 @Composable
 fun SettingsScaffold(
@@ -79,9 +79,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
-    content: @Composable ColumnScope.(PaddingValues) -> Unit
+    scrollState: ScrollState = canPerformVerticalScrollState(),
+    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
 
@@ -117,6 +116,7 @@ fun SettingsScaffold(
                 horizontalAlignment = horizontalAlignment,
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }
@@ -126,15 +126,14 @@ fun SettingsScaffold(
 fun SettingsScaffold(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
-    actions: @Composable RowScope.() -> Unit,
+    actions: @Composable() (RowScope.() -> Unit),
     goBack: () -> Unit,
     reverseLayout: Boolean = false,
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    canScroll: ((canPerformScroll: Boolean) -> Unit)? = null,
-    scrollState: ScrollState = verticalScrollState(canScroll),
-    content: @Composable ColumnScope.(PaddingValues) -> Unit
+    scrollState: ScrollState = canPerformVerticalScrollState(),
+    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
 
@@ -171,16 +170,19 @@ fun SettingsScaffold(
                 horizontalAlignment = horizontalAlignment,
             ) {
                 content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
             }
         }
     }
 }
 
 @Composable
-private fun verticalScrollState(canScroll: ((canPerformScroll: Boolean) -> Unit)?): ScrollState {
+internal fun canPerformVerticalScrollState(): ScrollState {
     val scrollState = rememberScrollState()
+    var canScroll by remember { mutableStateOf<Boolean?>(null) }
+    AdjustNavigationBarColors(canScroll)
     LaunchedEffect(Unit) {
-        canScroll?.invoke(scrollState.canScrollForward || scrollState.canScrollBackward)
+        canScroll = (scrollState.canScrollForward || scrollState.canScrollBackward)
     }
     return scrollState
 }

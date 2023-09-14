@@ -32,7 +32,7 @@ fun SettingsCheckBoxComponent(
     onChange: ((Boolean) -> Unit)? = null,
     checkboxColors: CheckboxColors = CheckboxDefaults.colors(
         checkedColor = MaterialTheme.colorScheme.primary,
-        checkmarkColor = MaterialTheme.colorScheme.surface
+        checkmarkColor = MaterialTheme.colorScheme.surface,
     )
 ) {
     val interactionSource = remember { MutableInteractionSource() }

@@ -85,7 +85,6 @@ dependencies {
 
     implementation(libs.bundles.lifecycle)
     implementation(libs.bundles.compose)
-    implementation(libs.bundles.accompanist)
     debugImplementation(libs.bundles.compose.preview)
 
     api(libs.joda.time)

@@ -16,7 +16,7 @@ fun SettingsHorizontalDivider(
     color: Color = divider_grey,
     thickness: Dp = DividerDefaults.Thickness,
 ) {
-    HorizontalDivider(modifier, color = color, thickness = thickness)
+    HorizontalDivider(modifier = modifier, color = color, thickness = thickness)
 }
 
 

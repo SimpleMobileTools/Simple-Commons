@@ -3,14 +3,9 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
-import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.screens.ContributorsScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.models.LanguageContributor
@@ -19,12 +14,9 @@ import kotlinx.collections.immutable.toImmutableList
 class ContributorsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdgeSimple()
         setContent {
-            TransparentSystemBars()
             AppThemeSurface {
-                var canScroll by remember { mutableStateOf<Boolean?>(null) }
-                AdjustNavigationBarColors(canScroll)
                 val contributors = remember {
                     languageContributors()
                 }
@@ -35,7 +27,6 @@ class ContributorsActivity : AppCompatActivity() {
                     goBack = ::finish,
                     showContributorsLabel = showContributorsLabel,
                     contributors = contributors,
-                    canScroll = { canPerformScroll -> canScroll = canPerformScroll }
                 )
             }
         }

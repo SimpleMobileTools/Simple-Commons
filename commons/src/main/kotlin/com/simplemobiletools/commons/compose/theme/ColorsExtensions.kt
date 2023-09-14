@@ -7,16 +7,24 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 
 @get:ReadOnlyComposable
-val disabledTextColor @Composable get() = if (isInDarkThemeAndSurfaceIsNotLitWell()) Color.DarkGray else Color.LightGray
+val disabledTextColor @Composable get() = if (isInDarkThemeOrSurfaceIsNotLitWell()) Color.DarkGray else Color.LightGray
 
 @get:ReadOnlyComposable
 val textSubTitleColor
-    @Composable get() = if (isInDarkThemeAndSurfaceIsNotLitWell()) {
+    @Composable get() = if (isInDarkThemeOrSurfaceIsNotLitWell()) {
         Color.White.copy(0.5f)
     } else {
         Color.Black.copy(
             0.5f,
         )
+    }
+
+@get:ReadOnlyComposable
+val iconsColor
+    @Composable get() = if (isSurfaceNotLitWell()) {
+        Color.White
+    } else {
+        Color.Black
     }
 
 

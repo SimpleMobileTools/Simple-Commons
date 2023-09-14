@@ -1,13 +1,12 @@
 package com.simplemobiletools.commons.compose.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -37,7 +36,8 @@ internal fun Theme(
             }
 
             theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
-                primary = theme.primaryColor, surface = theme.backgroundColor,
+                primary = theme.primaryColor,
+                surface = theme.backgroundColor,
                 onSurface = theme.textColor
             )
 
@@ -45,7 +45,7 @@ internal fun Theme(
                 primary = Color(theme.accentColor),
                 surface = theme.backgroundColor,
                 tertiary = theme.primaryColor,
-                onSurface = theme.textColor
+                onSurface = theme.textColor,
             )
 
             theme is Theme.BlackAndWhite -> darkColorScheme(
@@ -67,9 +67,20 @@ internal fun Theme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        content = content,
+        shapes = Shapes,
+        content = {
+            CompositionLocalProvider(
+                LocalRippleTheme provides DynamicThemeRipple,
+                LocalTheme provides theme
+            ) {
+                content()
+            }
+        },
     )
 }
+
+val LocalTheme: ProvidableCompositionLocal<Theme> =
+    staticCompositionLocalOf { Theme.Custom(1, 1, 1, 1) }
 
 @Composable
 private fun previewColorScheme() = if (isSystemInDarkTheme()) {

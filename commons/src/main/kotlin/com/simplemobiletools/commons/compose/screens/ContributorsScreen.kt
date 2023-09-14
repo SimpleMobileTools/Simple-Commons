@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
@@ -33,72 +34,70 @@ private val startingPadding = Modifier.padding(start = 58.dp)
 internal fun ContributorsScreen(
     goBack: () -> Unit,
     showContributorsLabel: Boolean,
-    contributors: ImmutableList<LanguageContributor>,
-    canScroll: (canPerformScroll: Boolean) -> Unit,
+    contributors: ImmutableList<LanguageContributor>
 ) {
     SettingsLazyScaffold(
-        canScroll = canScroll,
         title = { scrolledColor ->
             Text(
                 text = stringResource(id = R.string.contributors),
                 modifier = Modifier
                     .padding(start = 28.dp)
                     .fillMaxWidth(),
-                color = scrolledColor
+                color = scrolledColor,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1
             )
         },
-        goBack = goBack,
-        lazyContent = { paddingValues ->
-            item {
-                SettingsGroupTitle {
-                    SettingsTitleTextComponent(text = stringResource(id = R.string.development), modifier = startingPadding)
-                }
+        goBack = goBack
+    ) {
+        item {
+            SettingsGroupTitle {
+                SettingsTitleTextComponent(text = stringResource(id = R.string.development), modifier = startingPadding)
             }
+        }
+        item {
+            SettingsListItem(
+                text = stringResource(id = R.string.contributors_developers),
+                icon = R.drawable.ic_code_vector,
+                tint = MaterialTheme.colorScheme.onSurface,
+                fontSize = 14.sp
+            )
+        }
+        item {
+            Spacer(modifier = Modifier.padding(vertical = 8.dp))
+        }
+        item {
+            SettingsHorizontalDivider()
+        }
+        item {
+            SettingsGroupTitle {
+                SettingsTitleTextComponent(text = stringResource(id = R.string.translation), modifier = startingPadding)
+            }
+        }
+        items(contributors, key = { it.contributorsId.plus(it.iconId).plus(it.labelId) }) {
+            ContributorItem(
+                languageContributor = it
+            )
+        }
+        if (showContributorsLabel) {
             item {
                 SettingsListItem(
-                    text = stringResource(id = R.string.contributors_developers),
-                    icon = R.drawable.ic_code_vector,
-                    tint = MaterialTheme.colorScheme.onSurface,
-                    fontSize = 14.sp
+                    icon = R.drawable.ic_heart_vector,
+                    text = {
+                        val source = stringResource(id = R.string.contributors_label)
+                        LinkifyText {
+                            stringFromHTML(source)
+                        }
+                    },
+                    tint = MaterialTheme.colorScheme.onSurface
                 )
             }
             item {
-                Spacer(modifier = Modifier.padding(vertical = 8.dp))
+                Spacer(modifier = Modifier.padding(bottom = 8.dp))
             }
-            item {
-                SettingsHorizontalDivider()
-            }
-            item {
-                SettingsGroupTitle {
-                    SettingsTitleTextComponent(text = stringResource(id = R.string.translation), modifier = startingPadding)
-                }
-            }
-            items(contributors, key = { it.contributorsId.plus(it.iconId).plus(it.labelId) }) {
-                ContributorItem(
-                    languageContributor = it
-                )
-            }
-            if (showContributorsLabel) {
-                item {
-                    SettingsListItem(
-                        icon = R.drawable.ic_heart_vector,
-                        text = {
-                            val source = stringResource(id = R.string.contributors_label)
-                            LinkifyText {
-                                stringFromHTML(source)
-                            }
-                        },
-                        tint = MaterialTheme.colorScheme.onSurface
-                    )
-                }
-                item {
-                    Spacer(modifier = Modifier.padding(bottom = 8.dp))
-                }
-            }
-            item {
-                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
-            }
-        })
+        }
+       
+    }
 }
 
 @Composable
@@ -151,7 +150,6 @@ private fun ContributorsScreenPreview() {
                 LanguageContributor(R.drawable.ic_flag_catalan_vector, R.string.translation_catalan, R.string.translators_catalan),
             ).toImmutableList(),
             showContributorsLabel = true,
-            canScroll = {}
         )
     }
 }

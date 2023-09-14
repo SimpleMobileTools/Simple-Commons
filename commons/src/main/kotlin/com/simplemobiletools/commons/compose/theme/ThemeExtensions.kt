@@ -16,7 +16,11 @@ fun getCurrentTheme() = getTheme(LocalContext.current, systemDefaultMaterialYou(
 
 @Composable
 @ReadOnlyComposable
-fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() || isSurfaceNotLitWell()
+fun isInDarkThemeOrSurfaceIsNotLitWell() = isSystemInDarkTheme() || isSurfaceNotLitWell()
+
+@Composable
+@ReadOnlyComposable
+fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() && isSurfaceNotLitWell()
 
 internal const val LUMINANCE_THRESHOLD = 0.5f
 
@@ -28,7 +32,7 @@ fun isSurfaceNotLitWell(threshold: Float = LUMINANCE_THRESHOLD) = MaterialTheme.
 @ReadOnlyComposable
 fun isSurfaceLitWell(threshold: Float = LUMINANCE_THRESHOLD) = MaterialTheme.colorScheme.surface.luminance() > threshold
 
-fun Context.isDarkMode(): Boolean {
+internal fun Context.isDarkMode(): Boolean {
     val darkModeFlag = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
     return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
 }

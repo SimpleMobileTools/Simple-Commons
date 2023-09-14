@@ -1,190 +1,120 @@
 package com.simplemobiletools.commons.activities
 
 import android.app.Activity
+import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.compose.setContent
+import androidx.activity.viewModels
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.adapters.ManageBlockedNumbersAdapter
-import com.simplemobiletools.commons.databinding.ActivityManageBlockedNumbersBinding
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
+import com.simplemobiletools.commons.compose.extensions.onEventValue
+import com.simplemobiletools.commons.compose.screens.ManageBlockedNumbersScreen
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.AddBlockedNumberDialog
 import com.simplemobiletools.commons.dialogs.ExportBlockedNumbersDialog
 import com.simplemobiletools.commons.dialogs.FilePickerDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import java.io.FileOutputStream
 import java.io.OutputStream
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
-class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewListener {
-    private val PICK_IMPORT_SOURCE_INTENT = 11
-    private val PICK_EXPORT_FILE_INTENT = 21
+class ManageBlockedNumbersActivity : BaseSimpleActivity() {
+
+    private val config by lazy {
+        baseConfig
+    }
+
+    private companion object {
+        private const val PICK_IMPORT_SOURCE_INTENT = 11
+        private const val PICK_EXPORT_FILE_INTENT = 21
+    }
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
-    private val binding by viewBinding(ActivityManageBlockedNumbersBinding::inflate)
+    private val manageBlockedNumbersViewModel by viewModels<ManageBlockedNumbersViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-        updateBlockedNumbers()
-        setupOptionsMenu()
-
-        updateMaterialActivityViews(
-            binding.blockNumbersCoordinator,
-            binding.manageBlockedNumbersList,
-            useTransparentNavigation = true,
-            useTopSearchMenu = false
-        )
-        setupMaterialScrollListener(binding.manageBlockedNumbersList, binding.blockNumbersToolbar)
-        updateTextColors(binding.manageBlockedNumbersWrapper)
-        updatePlaceholderTexts()
-
-        setupBlockUnknown()
-        setupBlockHidden()
-
-        binding.manageBlockedNumbersPlaceholder2.apply {
-            underlineText()
-            setTextColor(getProperPrimaryColor())
-            setOnClickListener {
-                if (isDefaultDialer()) {
-                    addOrEditBlockedNumber()
-                } else {
-                    launchSetDefaultDialerIntent()
+        enableEdgeToEdgeSimple()
+        setContent {
+            val context = LocalContext.current
+            val blockedNumbers by manageBlockedNumbersViewModel.blockedNumbers.collectAsStateWithLifecycle()
+            LaunchedEffect(blockedNumbers) {
+                if (blockedNumbers?.any { blockedNumber -> blockedNumber.number.isBlockedNumberPattern() } == true) {
+                    maybeSetDefaultCallerIdApp()
                 }
             }
-        }
-    }
-
-    private fun setupBlockHidden() {
-        val blockHiddenTitleRes =
-            if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_hidden_calls else R.string.block_hidden_messages
-
-        binding.blockHidden.apply {
-            setText(blockHiddenTitleRes)
-            isChecked = baseConfig.blockHiddenNumbers
-            if (isChecked) {
-                maybeSetDefaultCallerIdApp()
+            val isBlockingHiddenNumbers by config.isBlockingHiddenNumbers.collectAsStateWithLifecycle(initialValue = config.blockHiddenNumbers)
+            val isBlockingUnknownNumbers by config.isBlockingUnknownNumbers.collectAsStateWithLifecycle(initialValue = config.blockUnknownNumbers)
+            val isDialer = remember {
+                config.appId.startsWith("com.simplemobiletools.dialer")
             }
-        }
-
-        binding.blockHiddenHolder.setOnClickListener {
-            binding.blockHidden.toggle()
-            baseConfig.blockHiddenNumbers = binding.blockHidden.isChecked
-            if (binding.blockHidden.isChecked) {
-                maybeSetDefaultCallerIdApp()
+            val isDefaultDialer: Boolean = onEventValue {
+                context.isDefaultDialer()
             }
-        }
-    }
-
-    private fun setupBlockUnknown() {
-        val blockUnknownTitleRes =
-            if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_not_stored_calls else R.string.block_not_stored_messages
-
-        binding.blockUnknown.apply {
-            setText(blockUnknownTitleRes)
-            isChecked = baseConfig.blockUnknownNumbers
-            if (isChecked) {
-                maybeSetDefaultCallerIdApp()
-            }
-        }
-
-        binding.blockUnknownHolder.setOnClickListener {
-            binding.blockUnknown.toggle()
-            baseConfig.blockUnknownNumbers = binding.blockUnknown.isChecked
-            if (binding.blockUnknown.isChecked) {
-                maybeSetDefaultCallerIdApp()
-            }
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        setupToolbar(binding.blockNumbersToolbar, NavigationIcon.Arrow)
-    }
-
-    private fun setupOptionsMenu() {
-        binding.blockNumbersToolbar.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.add_blocked_number -> {
-                    addOrEditBlockedNumber()
-                    true
-                }
-
-                R.id.import_blocked_numbers -> {
-                    tryImportBlockedNumbers()
-                    true
-                }
-
-                R.id.export_blocked_numbers -> {
-                    tryExportBlockedNumbers()
-                    true
-                }
-
-                else -> false
-            }
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
-        super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer()) {
-            updatePlaceholderTexts()
-            updateBlockedNumbers()
-        } else if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            tryImportBlockedNumbersFromFile(resultData.data!!)
-        } else if (requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val outputStream = contentResolver.openOutputStream(resultData.data!!)
-            exportBlockedNumbersTo(outputStream)
-        } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
-            toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
-            baseConfig.blockUnknownNumbers = false
-            baseConfig.blockHiddenNumbers = false
-            binding.blockUnknown.isChecked = false
-            binding.blockHidden.isChecked = false
-        }
-    }
-
-    override fun refreshItems() {
-        updateBlockedNumbers()
-    }
-
-    private fun updatePlaceholderTexts() {
-        binding.manageBlockedNumbersPlaceholder.text = getString(if (isDefaultDialer()) R.string.not_blocking_anyone else R.string.must_make_default_dialer)
-        binding.manageBlockedNumbersPlaceholder2.text = getString(if (isDefaultDialer()) R.string.add_a_blocked_number else R.string.set_as_default)
-    }
-
-    private fun updateBlockedNumbers() {
-        ensureBackgroundThread {
-            getBlockedNumbersWithContact { blockedNumbers ->
-                runOnUiThread {
-                    ManageBlockedNumbersAdapter(this, blockedNumbers, this, binding.manageBlockedNumbersList) {
-                        addOrEditBlockedNumber(it as BlockedNumber)
-                    }.apply {
-                        binding.manageBlockedNumbersList.adapter = this
+            AppThemeSurface {
+                ManageBlockedNumbersScreen(
+                    goBack = ::finish,
+                    onAdd = ::addOrEditBlockedNumber,
+                    onImportBlockedNumbers = ::tryImportBlockedNumbers,
+                    onExportBlockedNumbers = ::tryExportBlockedNumbers,
+                    setAsDefault = ::maybeSetDefaultCallerIdApp,
+                    isDialer = isDialer,
+                    hasGivenPermissionToBlock = isDefaultDialer,
+                    isBlockUnknownSelected = isBlockingUnknownNumbers,
+                    onBlockUnknownSelectedChange = { isChecked ->
+                        config.blockUnknownNumbers = isChecked
+                        onCheckedSetCallerIdAsDefault(isChecked)
+                    },
+                    isHiddenSelected = isBlockingHiddenNumbers,
+                    onHiddenSelectedChange = { isChecked ->
+                        config.blockHiddenNumbers = isChecked
+                        onCheckedSetCallerIdAsDefault(isChecked)
+                    },
+                    blockedNumbers = blockedNumbers,
+                    onDelete = { selectedKeys ->
+                        deleteBlockedNumbers(blockedNumbers, selectedKeys)
+                    },
+                    onEdit = { blockedNumber ->
+                        addOrEditBlockedNumber(currentNumber = blockedNumber)
+                        manageBlockedNumbersViewModel.updateBlockedNumbers()
+                    },
+                    onCopy = { blockedNumber ->
+                        copyToClipboard(blockedNumber.number)
                     }
-
-                    binding.manageBlockedNumbersPlaceholder.beVisibleIf(blockedNumbers.isEmpty())
-                    binding.manageBlockedNumbersPlaceholder2.beVisibleIf(blockedNumbers.isEmpty())
-
-                    if (blockedNumbers.any { it.number.isBlockedNumberPattern() }) {
-                        maybeSetDefaultCallerIdApp()
-                    }
-                }
+                )
             }
         }
     }
 
-    private fun addOrEditBlockedNumber(currentNumber: BlockedNumber? = null) {
-        AddBlockedNumberDialog(this, currentNumber) {
-            updateBlockedNumbers()
-        }
+    private fun deleteBlockedNumbers(
+        blockedNumbers: ImmutableList<BlockedNumber>?,
+        selectedKeys: Set<Long>
+    ) {
+        if (blockedNumbers.isNullOrEmpty()) return
+        blockedNumbers.filter { blockedNumber -> selectedKeys.contains(blockedNumber.id) }
+            .forEach { blockedNumber ->
+                deleteBlockedNumber(blockedNumber.number)
+            }
+        manageBlockedNumbersViewModel.updateBlockedNumbers()
     }
 
     private fun tryImportBlockedNumbers() {
@@ -202,11 +132,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                 }
             }
         } else {
-            handlePermission(PERMISSION_READ_STORAGE) {
-                if (it) {
+            handlePermission(PERMISSION_READ_STORAGE) { isAllowed ->
+                if (isAllowed) {
                     pickFileToImportBlockedNumbers()
                 }
             }
+        }
+    }
+
+    private fun pickFileToImportBlockedNumbers() {
+        FilePickerDialog(this) {
+            importBlockedNumbers(it)
         }
     }
 
@@ -234,12 +170,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
-    private fun pickFileToImportBlockedNumbers() {
-        FilePickerDialog(this) {
-            importBlockedNumbers(it)
-        }
-    }
-
     private fun importBlockedNumbers(path: String) {
         ensureBackgroundThread {
             val result = BlockedNumbersImporter(this).importBlockedNumbers(path)
@@ -250,6 +180,71 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                 }
             )
             updateBlockedNumbers()
+        }
+    }
+
+    private fun addOrEditBlockedNumber(currentNumber: BlockedNumber? = null) {
+        AddBlockedNumberDialog(this, currentNumber) {
+            updateBlockedNumbers()
+        }
+    }
+
+    private fun updateBlockedNumbers() {
+        manageBlockedNumbersViewModel.updateBlockedNumbers()
+    }
+
+    private fun onCheckedSetCallerIdAsDefault(isChecked: Boolean) {
+        if (isChecked) {
+            maybeSetDefaultCallerIdApp()
+        }
+    }
+
+    private fun maybeSetDefaultCallerIdApp() {
+        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
+            setDefaultCallerIdApp()
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
+        super.onActivityResult(requestCode, resultCode, resultData)
+        when {
+            requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer() -> {
+                updateBlockedNumbers()
+            }
+
+            requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
+                tryImportBlockedNumbersFromFile(resultData.data!!)
+            }
+
+            requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
+                val outputStream = contentResolver.openOutputStream(resultData.data!!)
+                exportBlockedNumbersTo(outputStream)
+            }
+
+            requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK -> {
+                toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
+                baseConfig.blockUnknownNumbers = false
+                baseConfig.blockHiddenNumbers = false
+
+            }
+        }
+    }
+
+    private fun exportBlockedNumbersTo(outputStream: OutputStream?) {
+        ensureBackgroundThread {
+            val blockedNumbers = getBlockedNumbers()
+            if (blockedNumbers.isEmpty()) {
+                toast(R.string.no_entries_for_exporting)
+            } else {
+                BlockedNumbersExporter.exportBlockedNumbers(blockedNumbers, outputStream) {
+                    toast(
+                        when (it) {
+                            ExportResult.EXPORT_OK -> R.string.exporting_successful
+                            else -> R.string.exporting_failed
+                        }
+                    )
+                }
+            }
         }
     }
 
@@ -271,8 +266,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                 }
             }
         } else {
-            handlePermission(PERMISSION_WRITE_STORAGE) {
-                if (it) {
+            handlePermission(PERMISSION_WRITE_STORAGE) { isAllowed ->
+                if (isAllowed) {
                     ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, false) { file ->
                         getFileOutputStream(file.toFileDirItem(this), true) { out ->
                             exportBlockedNumbersTo(out)
@@ -283,28 +278,15 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
-    private fun exportBlockedNumbersTo(outputStream: OutputStream?) {
-        ensureBackgroundThread {
-            getBlockedNumbersWithContact { blockedNumbers ->
-                if (blockedNumbers.isEmpty()) {
-                    toast(R.string.no_entries_for_exporting)
-                } else {
-                    BlockedNumbersExporter().exportBlockedNumbers(blockedNumbers, outputStream) {
-                        toast(
-                            when (it) {
-                                ExportResult.EXPORT_OK -> R.string.exporting_successful
-                                else -> R.string.exporting_failed
-                            }
-                        )
-                    }
-                }
-            }
-        }
-    }
+    internal class ManageBlockedNumbersViewModel(
+        private val application: Application
+    ) : AndroidViewModel(application) {
 
-    private fun maybeSetDefaultCallerIdApp() {
-        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
-            setDefaultCallerIdApp()
+        private val _blockedNumbers = MutableStateFlow(application.getBlockedNumbers().toImmutableList())
+        val blockedNumbers = _blockedNumbers.asStateFlow()
+
+        fun updateBlockedNumbers() {
+            _blockedNumbers.update { application.getBlockedNumbers().toImmutableList() }
         }
     }
 }

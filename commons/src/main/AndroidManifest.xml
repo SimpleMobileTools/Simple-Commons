@@ -50,6 +50,13 @@
             android:label="@string/third_party_licences"
             android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity" />
 
+        <activity
+            android:name=".activities.ManageBlockedNumbersActivity"
+            android:configChanges="orientation"
+            android:enableOnBackInvokedCallback="true"
+            android:exported="false"
+            android:label="@string/manage_blocked_numbers" />
+
         <receiver
             android:name=".receivers.SharedThemeReceiver"
             android:enabled="true"

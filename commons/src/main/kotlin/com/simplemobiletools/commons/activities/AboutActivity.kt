@@ -9,16 +9,11 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
-import androidx.core.view.WindowCompat
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
-import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.screens.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
@@ -40,14 +35,11 @@ class AboutActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdgeSimple()
         setContent {
             val context = LocalContext.current
             val resources = context.resources
-            TransparentSystemBars()
             AppThemeSurface {
-                var canScroll by remember { mutableStateOf<Boolean?>(null) }
-                AdjustNavigationBarColors(canScroll)
                 val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
                 val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
                 AboutScreen(
@@ -80,31 +72,27 @@ class AboutActivity : ComponentActivity() {
                                 onTelegramClick = ::onTelegramClick
                             )
                         }
-                    },
-                    otherSection = {
-                        val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
-                        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
-                        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
-                            version += " ${getString(R.string.pro)}"
-                        }
-                        val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
-
-                        OtherSection(
-                            showMoreApps = showGoogleRelations,
-                            onMoreAppsClick = ::launchMoreAppsFromUsIntent,
-                            showWebsite = showWebsite,
-                            onWebsiteClick = ::onWebsiteClick,
-                            showPrivacyPolicy = showExternalLinks,
-                            onPrivacyPolicyClick = ::onPrivacyPolicyClick,
-                            onLicenseClick = ::onLicenseClick,
-                            version = fullVersion,
-                            onVersionClick = ::onVersionClick
-                        )
-                    },
-                    canScroll = { isContentScrollable ->
-                        canScroll = isContentScrollable
                     }
-                )
+                ) {
+                    val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
+                    var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+                    if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+                        version += " ${getString(R.string.pro)}"
+                    }
+                    val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
+
+                    OtherSection(
+                        showMoreApps = showGoogleRelations,
+                        onMoreAppsClick = ::launchMoreAppsFromUsIntent,
+                        showWebsite = showWebsite,
+                        onWebsiteClick = ::onWebsiteClick,
+                        showPrivacyPolicy = showExternalLinks,
+                        onPrivacyPolicyClick = ::onPrivacyPolicyClick,
+                        onLicenseClick = ::onLicenseClick,
+                        version = fullVersion,
+                        onVersionClick = ::onVersionClick
+                    )
+                }
             }
         }
     }

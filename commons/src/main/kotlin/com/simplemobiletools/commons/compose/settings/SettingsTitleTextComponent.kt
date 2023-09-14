@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -18,8 +19,10 @@ fun SettingsTitleTextComponent(
     modifier: Modifier = Modifier,
     text: String,
     color: Color = MaterialTheme.colorScheme.primary,
+    maxLines: Int = 1,
+    overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
-    Box(modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)) {
+    Box(modifier = Modifier.padding(top = 16.dp)) {
         Text(
             text = text.uppercase(),
             modifier = modifier
@@ -28,6 +31,8 @@ fun SettingsTitleTextComponent(
             fontSize = with(LocalDensity.current) {
                 dimensionResource(id = com.simplemobiletools.commons.R.dimen.normal_text_size).toSp()
             },
+            maxLines = maxLines,
+            overflow = overflow
         )
     }
 }

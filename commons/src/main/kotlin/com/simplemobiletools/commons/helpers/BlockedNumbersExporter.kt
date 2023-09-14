@@ -2,9 +2,8 @@ package com.simplemobiletools.commons.helpers
 
 import com.simplemobiletools.commons.models.BlockedNumber
 import java.io.OutputStream
-import java.util.ArrayList
 
-class BlockedNumbersExporter {
+object BlockedNumbersExporter {
 
     fun exportBlockedNumbers(
         blockedNumbers: ArrayList<BlockedNumber>,
