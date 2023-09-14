@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
@@ -85,6 +86,7 @@ internal fun ManageBlockedNumbersScreen(
 ) {
     val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
+    val hapticFeedback = LocalHapticFeedback.current
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
     val clearSelection = remember {
         { selectedIds.value = emptySet() }
@@ -235,12 +237,14 @@ internal fun ManageBlockedNumbersScreen(
                                             when {
                                                 indexOfLastValueInSelection == index -> {}
                                                 indexOfLastValueInSelection < index -> {
+                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
                                                     selectedIds.value += blockedNumbers
                                                         .subList(indexOfLastValueInSelection, index)
                                                         .map { number -> number.id }
                                                 }
 
                                                 else -> {
+                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
                                                     selectedIds.value += blockedNumbers
                                                         .subList(index, indexOfLastValueInSelection)
                                                         .map { number -> number.id }
