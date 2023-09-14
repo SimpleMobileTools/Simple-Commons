@@ -462,7 +462,7 @@ private fun ActionModeToolbar(
                     }
                     .padding(horizontal = 18.dp), contentAlignment = Alignment.Center
             ) {
-                Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor)
+                Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor, maxLines = 1, overflow = TextOverflow.Ellipsis)
             }
 
         },
