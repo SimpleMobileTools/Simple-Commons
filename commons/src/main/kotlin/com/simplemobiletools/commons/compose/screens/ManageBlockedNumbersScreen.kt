@@ -50,6 +50,7 @@ import com.simplemobiletools.commons.compose.settings.scaffold.*
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.*
 import com.simplemobiletools.commons.compose.theme.model.Theme
+import com.simplemobiletools.commons.extensions.darkenColor
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.models.BlockedNumber
 import kotlinx.collections.immutable.ImmutableList
@@ -364,7 +365,7 @@ private fun blockedNumberListItemColors(
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
         if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-            MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+            Color(MaterialTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
         } else {
             MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
         }
