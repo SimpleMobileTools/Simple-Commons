@@ -47,21 +47,21 @@ internal fun HelpUsSection(
     onDonateClick: () -> Unit,
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.help_us), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.help_us), modifier = startingTitlePadding)
     }) {
         if (showRateUs) {
-            OneLinerTextItem(text = stringResource(id = R.string.rate_us), icon = R.drawable.ic_star_vector, click = onRateUsClick)
+            TwoLinerTextItem(text = stringResource(id = R.string.rate_us), icon = R.drawable.ic_star_vector, click = onRateUsClick)
         }
         if (showInvite) {
-            OneLinerTextItem(text = stringResource(id = R.string.invite_friends), icon = R.drawable.ic_add_person_vector, click = onInviteClick)
+            TwoLinerTextItem(text = stringResource(id = R.string.invite_friends), icon = R.drawable.ic_add_person_vector, click = onInviteClick)
         }
-        OneLinerTextItem(
+        TwoLinerTextItem(
             click = onContributorsClick,
             text = stringResource(id = R.string.contributors),
             icon = R.drawable.ic_face_vector
         )
         if (showDonate) {
-            OneLinerTextItem(
+            TwoLinerTextItem(
                 click = onDonateClick,
                 text = stringResource(id = R.string.donate),
                 icon = R.drawable.ic_dollar_vector
@@ -84,35 +84,35 @@ internal fun OtherSection(
     onVersionClick: () -> Unit,
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.other), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.other), modifier = startingTitlePadding)
     }) {
         if (showMoreApps) {
-            OneLinerTextItem(
+            TwoLinerTextItem(
                 click = onMoreAppsClick,
                 text = stringResource(id = R.string.more_apps_from_us),
                 icon = R.drawable.ic_heart_vector
             )
         }
         if (showWebsite) {
-            OneLinerTextItem(
+            TwoLinerTextItem(
                 click = onWebsiteClick,
                 text = stringResource(id = R.string.website),
                 icon = R.drawable.ic_link_vector
             )
         }
         if (showPrivacyPolicy) {
-            OneLinerTextItem(
+            TwoLinerTextItem(
                 click = onPrivacyPolicyClick,
                 text = stringResource(id = R.string.privacy_policy),
                 icon = R.drawable.ic_unhide_vector
             )
         }
-        OneLinerTextItem(
+        TwoLinerTextItem(
             click = onLicenseClick,
             text = stringResource(id = R.string.third_party_licences),
             icon = R.drawable.ic_article_vector
         )
-        OneLinerTextItem(
+        TwoLinerTextItem(
             click = onVersionClick,
             text = version,
             icon = R.drawable.ic_info_vector
@@ -129,16 +129,16 @@ internal fun AboutSection(
     onEmailClick: () -> Unit
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding)
     }) {
         if (setupFAQ) {
-            OneLinerTextItem(
+            TwoLinerTextItem(
                 click = onFAQClick,
                 text = stringResource(id = R.string.frequently_asked_questions),
                 icon = R.drawable.ic_question_mark_vector
             )
         }
-        OneLinerTextItem(
+        TwoLinerTextItem(
             click = onEmailClick,
             text = stringResource(id = R.string.my_email),
             icon = R.drawable.ic_mail_vector
@@ -155,7 +155,7 @@ internal fun SocialSection(
     onTelegramClick: () -> Unit
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding)
     }) {
         SocialText(
             click = onFacebookClick,
@@ -195,19 +195,19 @@ internal fun SocialText(
         icon = icon,
         isImage = true,
         tint = tint,
-        maxLines = 1,
+        maxLines = 2,
         overflow = TextOverflow.Ellipsis
     )
 }
 
 @Composable
-internal fun OneLinerTextItem(text: String, icon: Int, click: () -> Unit) {
+internal fun TwoLinerTextItem(text: String, icon: Int, click: () -> Unit) {
     SettingsListItem(
         tint = MaterialTheme.colorScheme.onSurface,
         click = click,
         text = text,
         icon = icon,
-        maxLines = 1,
+        maxLines = 2,
         overflow = TextOverflow.Ellipsis
     )
 }
