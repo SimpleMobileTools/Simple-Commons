@@ -239,6 +239,7 @@ internal fun ManageBlockedNumbersScreen(
                                                         .subList(indexOfLastValueInSelection, index)
                                                         .map { number -> number.id }
                                                 }
+
                                                 else -> {
                                                     selectedIds.value += blockedNumbers
                                                         .subList(index, indexOfLastValueInSelection)
@@ -453,7 +454,9 @@ private fun ActionModeToolbar(
                     }
                     .padding(horizontal = 18.dp), contentAlignment = Alignment.Center
             ) {
-                Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                if (selectedIdsCount != 0) {
+                    Text(text = "$selectedIdsCount / $blockedNumbersCount", color = textColor, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                }
             }
 
         },

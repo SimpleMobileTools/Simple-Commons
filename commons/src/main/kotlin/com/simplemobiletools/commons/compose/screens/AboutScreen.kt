@@ -47,7 +47,7 @@ internal fun HelpUsSection(
     onDonateClick: () -> Unit,
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.help_us), modifier = startingTitlePadding)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.help_us), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
     }) {
         if (showRateUs) {
             OneLinerTextItem(text = stringResource(id = R.string.rate_us), icon = R.drawable.ic_star_vector, click = onRateUsClick)
@@ -84,7 +84,7 @@ internal fun OtherSection(
     onVersionClick: () -> Unit,
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.other), modifier = startingTitlePadding)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.other), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
     }) {
         if (showMoreApps) {
             OneLinerTextItem(
@@ -129,7 +129,7 @@ internal fun AboutSection(
     onEmailClick: () -> Unit
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
     }) {
         if (setupFAQ) {
             OneLinerTextItem(
@@ -155,7 +155,7 @@ internal fun SocialSection(
     onTelegramClick: () -> Unit
 ) {
     SettingsGroup(title = {
-        SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding)
+        SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding, maxLines = Int.MAX_VALUE)
     }) {
         SocialText(
             click = onFacebookClick,
