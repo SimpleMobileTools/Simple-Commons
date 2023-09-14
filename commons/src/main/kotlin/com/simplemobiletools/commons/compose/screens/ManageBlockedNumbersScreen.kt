@@ -11,7 +11,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -201,7 +201,7 @@ internal fun ManageBlockedNumbersScreen(
                 }
 
                 hasGivenPermissionToBlock && blockedNumbers.isNotEmpty() -> {
-                    items(blockedNumbers, key = { blockedNumber -> blockedNumber.id }) { blockedNumber ->
+                    itemsIndexed(blockedNumbers, key = { _, blockedNumber -> blockedNumber.id }) { index, blockedNumber ->
                         val isSelected = selectedIds.value.contains(blockedNumber.id)
                         BlockedNumber(
                             modifier = Modifier
@@ -226,18 +226,34 @@ internal fun ManageBlockedNumbersScreen(
                                     })
                                 }
                                 .ifTrue(isInActionMode) {
-                                    Modifier.clickable(
+                                    Modifier.combinedClickable(
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null,
-                                        enabled = !hasDraggingStarted
-                                    ) {
-                                        val selectable =
-                                            clickSelectableValue(lastClickedValue, blockedNumber, isSelected, selectedIds, triggerReset) { bNumber1, bNumber2 ->
-                                                updateSelectedIndices(blockedNumbers, bNumber1, bNumber2, selectedIds)
+                                        enabled = !hasDraggingStarted,
+                                        onLongClick = {
+                                            val indexOfLastValueInSelection = blockedNumbers.indexOfFirst { selectedIds.value.last() == it.id }
+                                            when {
+                                                indexOfLastValueInSelection == index -> {}
+                                                indexOfLastValueInSelection < index -> {
+                                                    selectedIds.value += blockedNumbers
+                                                        .subList(indexOfLastValueInSelection, index)
+                                                        .map { number -> number.id }
+                                                }
+                                                else -> {
+                                                    selectedIds.value += blockedNumbers
+                                                        .subList(index, indexOfLastValueInSelection)
+                                                        .map { number -> number.id }
+                                                }
                                             }
-                                        lastClickedValue = selectable.first
-                                        triggerReset = selectable.second
-                                    }
+                                        },
+                                        onClick = {
+                                            if (isSelected) {
+                                                selectedIds.value -= blockedNumber.id
+                                            } else {
+                                                selectedIds.value += blockedNumber.id
+                                            }
+                                        }
+                                    )
                                 },
                             blockedNumber = blockedNumber,
                             onDelete = onDelete,
@@ -261,34 +277,6 @@ private fun updateSelectedIndices(
     selectedIds.value += blockedNumbers
         .subList(indices.minOrNull()!!, indices.maxOrNull()!! + 1)
         .map { number -> number.id }
-}
-
-private fun clickSelectableValue(
-    lastClickedValue: Pair<Long, BlockedNumber?>,
-    blockedNumber: BlockedNumber,
-    isSelected: Boolean,
-    selectedIds: MutableState<Set<Long>>,
-    triggerReset: Long,
-    select: (BlockedNumber, BlockedNumber) -> Unit
-): Pair<Pair<Long, BlockedNumber?>, Long> {
-    var lastClickedValueTemp = lastClickedValue
-    var triggerResetTemp = triggerReset
-    if (lastClickedValueTemp.first == RESET_IDLE) {
-        lastClickedValueTemp = Pair(System.currentTimeMillis(), blockedNumber)
-        if (isSelected) {
-            selectedIds.value -= blockedNumber.id
-        } else {
-            selectedIds.value += blockedNumber.id
-        }
-        triggerResetTemp = CLICK_RESET_TIME
-    } else {
-        if (lastClickedValueTemp.first + BETWEEN_CLICKS_TIME > System.currentTimeMillis()) {
-            val firstValue = lastClickedValueTemp
-            select(blockedNumber, firstValue.second!!)
-            lastClickedValueTemp = Pair(RESET_IDLE, null)
-        }
-    }
-    return lastClickedValueTemp to triggerResetTemp
 }
 
 private fun longPressSelectableValue(
