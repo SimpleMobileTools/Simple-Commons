@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.compose.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.FastOutLinearInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.scrollBy
@@ -101,7 +103,7 @@ internal fun ManageBlockedNumbersScreen(
                          contrastColor: Color ->
 
             Column {
-                Crossfade(targetState = isInActionMode, label = "toolbar-anim") { actionMode ->
+                Crossfade(targetState = isInActionMode, label = "toolbar-anim", animationSpec = tween(easing = FastOutLinearInEasing)) { actionMode ->
                     if (actionMode && blockedNumbers != null) {
                         ActionModeToolbar(
                             selectedIdsCount = selectedIds.value.count(),
