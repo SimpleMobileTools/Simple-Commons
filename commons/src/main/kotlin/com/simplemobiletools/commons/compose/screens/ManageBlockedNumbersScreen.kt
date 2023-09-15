@@ -177,17 +177,21 @@ internal fun ManageBlockedNumbersScreen(
         }
         LazyColumn(
             state = state,
-            modifier = Modifier.listDragHandlerLongKey(
-                lazyListState = state,
-                haptics = LocalHapticFeedback.current,
-                selectedIds = selectedIds,
-                autoScrollSpeed = autoScrollSpeed,
-                autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
-                dragUpdate = { isDraggingStarted ->
-                    hasDraggingStarted = isDraggingStarted
-                    triggerReset = RESET_IMMEDIATELY
-                }
-            ),
+            modifier = Modifier.ifTrue(!blockedNumbers.isNullOrEmpty()) {
+                Modifier.listDragHandlerLongKey(
+                    isScrollingUp = state.isScrollingUp(),
+                    lazyListState = state,
+                    haptics = hapticFeedback,
+                    selectedIds = selectedIds,
+                    autoScrollSpeed = autoScrollSpeed,
+                    autoScrollThreshold = with(LocalDensity.current) { 40.dp.toPx() },
+                    dragUpdate = { isDraggingStarted ->
+                        hasDraggingStarted = isDraggingStarted
+                        triggerReset = RESET_IMMEDIATELY
+                    },
+                    ids = blockedNumbers?.map { it.id }.orEmpty()
+                )
+            },
             verticalArrangement = Arrangement.spacedBy(2.dp),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {

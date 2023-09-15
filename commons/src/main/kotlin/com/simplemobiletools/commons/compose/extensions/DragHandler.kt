@@ -2,7 +2,7 @@ package com.simplemobiletools.commons.compose.extensions
 
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.hapticfeedback.HapticFeedback
@@ -15,9 +15,10 @@ internal fun Modifier.listDragHandlerLongKey(
     selectedIds: MutableState<Set<Long>>,
     autoScrollSpeed: MutableState<Float>,
     autoScrollThreshold: Float,
-    dragUpdate: (Boolean) -> Unit
+    dragUpdate: (Boolean) -> Unit,
+    ids: List<Long>,
+    isScrollingUp: Boolean
 ) = pointerInput(Unit) {
-
 
     var initialKey: Long? = null
     var currentKey: Long? = null
@@ -52,17 +53,42 @@ internal fun Modifier.listDragHandlerLongKey(
 
                 lazyListState.itemKeyAtPosition(change.position)?.let { key ->
                     if (currentKey != key) {
-                        selectedIds.value = selectedIds.value
-                            .minus(initialKey!!..currentKey!!)
-                            .minus(currentKey!!..initialKey!!)
-                            .plus(initialKey!!..key)
-                            .plus(key..initialKey!!)
+                        val toSelect = if (selectedIds.value.contains(key) && ids.isNotEmpty()) {
+                            val successor = ids.indexOf(key) + if (isScrollingUp) +1 else -1
+                            selectedIds.value
+                                .minus(ids[successor])
+                        } else {
+                            selectedIds.value + setOf(currentKey!!, key)
+                        }
+
+                        selectedIds.value = toSelect
                         currentKey = key
                     }
                 }
             }
         }
     )
+}
+
+/**
+ * Returns whether the lazy list is currently scrolling up.
+ */
+@Composable
+internal fun LazyListState.isScrollingUp(): Boolean {
+    var previousIndex by remember(this) { mutableStateOf(firstVisibleItemIndex) }
+    var previousScrollOffset by remember(this) { mutableStateOf(firstVisibleItemScrollOffset) }
+    return remember(this) {
+        derivedStateOf {
+            if (previousIndex != firstVisibleItemIndex) {
+                previousIndex > firstVisibleItemIndex
+            } else {
+                previousScrollOffset >= firstVisibleItemScrollOffset
+            }.also {
+                previousIndex = firstVisibleItemIndex
+                previousScrollOffset = firstVisibleItemScrollOffset
+            }
+        }
+    }.value
 }
 
 internal fun LazyListState.itemKeyAtPosition(hitPoint: Offset): Long? =

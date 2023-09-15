@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewModelScope
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.extensions.onEventValue
@@ -30,9 +31,12 @@ import java.io.FileOutputStream
 import java.io.OutputStream
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
@@ -282,11 +286,22 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         private val application: Application
     ) : AndroidViewModel(application) {
 
-        private val _blockedNumbers = MutableStateFlow(application.getBlockedNumbers().toImmutableList())
+
+        private val _blockedNumbers: MutableStateFlow<ImmutableList<BlockedNumber>?> = MutableStateFlow(null)
         val blockedNumbers = _blockedNumbers.asStateFlow()
 
+        init {
+            updateBlockedNumbers()
+        }
+
         fun updateBlockedNumbers() {
-            _blockedNumbers.update { application.getBlockedNumbers().toImmutableList() }
+            viewModelScope.launch {
+                withContext(Dispatchers.IO) {
+                    application.getBlockedNumbersWithContact { list ->
+                        _blockedNumbers.update { list.toImmutableList() }
+                    }
+                }
+            }
         }
     }
 }
