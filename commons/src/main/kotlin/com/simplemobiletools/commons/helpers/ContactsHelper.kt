@@ -129,7 +129,7 @@ class ContactsHelper(val context: Context) {
     }
 
     private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean) {
-        if (!context.hasContactPermissions()) {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return
         }
 
@@ -513,7 +513,7 @@ class ContactsHelper(val context: Context) {
 
     private fun getContactGroups(storedGroups: ArrayList<Group>, contactId: Int? = null): SparseArray<ArrayList<Group>> {
         val groups = SparseArray<ArrayList<Group>>()
-        if (!context.hasContactPermissions()) {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return groups
         }
 
@@ -600,7 +600,7 @@ class ContactsHelper(val context: Context) {
 
     private fun getDeviceStoredGroups(): ArrayList<Group> {
         val groups = ArrayList<Group>()
-        if (!context.hasContactPermissions()) {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return groups
         }
 
@@ -808,7 +808,7 @@ class ContactsHelper(val context: Context) {
 
     fun getDeviceContactSources(): LinkedHashSet<ContactSource> {
         val sources = LinkedHashSet<ContactSource>()
-        if (!context.hasContactPermissions()) {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return sources
         }
 
