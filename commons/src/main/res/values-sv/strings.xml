@@ -131,12 +131,12 @@
     <string name="block_hidden_messages">Blockera meddelanden från dolda nummer</string>
     <string name="add_blocked_number_helper_text">Ange ett nummer eller en nummerserie (exempel *12345*, +1*8888) för att blockera alla samtal och meddelanden som matchar nummret eller nummerserien.</string>
     <string name="must_make_default_caller_id_app">Det går inte att blockera okända nummer utan nummerpresentatörsbehörighet.</string>
-    <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact">Blockera kontakt</string>
+    <string name="block_contact_success">Kontakten har blockerats</string>
+    <string name="block_contact_fail">Det gick inte att blockera kontakten</string>
+    <string name="unblock_contact">Avblockera kontakt</string>
+    <string name="unblock_contact_success">Kontakten har avblockerats</string>
+    <string name="unblock_contact_fail">Det gick inte att avblockera kontakten</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
@@ -420,10 +420,10 @@
     <string name="contact_details">Kontaktuppgifter</string>
     <string name="add_contact">Lägg till kontakt</string>
     <string name="wallpapers">Bakgrunder</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Visa radnummer</string>
+    <string name="hide_line_numbers">Dölj radnummer</string>
     <string name="sleep_timer">Insomningstimer</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Avblockera</string>
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -684,9 +684,9 @@
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
     <string name="snooze_time">Snooze-intervall</string>
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
-    <string name="move_items_into_recycle_bin">Flytta objekt till Papperskorgen istället för att ta bort dem</string>
-    <string name="recycle_bin_cleaning_interval">Rensningsintervall för Papperskorgen</string>
-    <string name="empty_recycle_bin">Töm Papperskorgen</string>
+    <string name="move_items_into_recycle_bin">Flytta objekt till papperskorgen istället för att ta bort dem</string>
+    <string name="recycle_bin_cleaning_interval">Rensningsintervall för papperskorgen</string>
+    <string name="empty_recycle_bin">Töm papperskorgen</string>
     <string name="force_portrait_mode">Lås skärmen i stående läge</string>
     <string name="export_settings">Exportera inställningar</string>
     <string name="import_settings">Importera inställningar</string>
