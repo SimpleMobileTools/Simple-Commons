@@ -214,7 +214,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
                 itemsLayout.addView(root)
 
-                setOnClickListener { v ->
+                breadcrumbText.setOnClickListener { v ->
                     if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
                         if ((v.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
                             scrollToSelectedItem()
