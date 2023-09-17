@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
-    <string name="close">Close</string>
+    <string name="close">Pechar</string>
     <string name="back">De volta</string>
     <string name="nothing">Nada</string>
     <string name="later">Despois</string>
@@ -77,7 +77,7 @@
     <string name="phone_storage">Almacenaxe do móbil</string>
     <string name="phone_storage_hidden">Almacenaxe do móbil (non visible por outras apps)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Escaneando…</string>
     <!-- Events -->
     <string name="birthday">Aniversario</string>
     <string name="anniversary">Aniversario</string>
@@ -836,11 +836,19 @@
     <string name="more_info">Máis información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tes que migrar os eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Ola, 
+    <string name="upgraded_from_free_gallery">Ola,
 \n
-\nParece que acabas de actualizar dende a versión gratuíta. Unha vez que estea satisfeito e quizais migrou os seus datos, pode desinstalalo antigo gratuíto para evitar que o lance accidentalmente xa que xa non o necesitará. 
+\nsemella que actualizaches desde a versión gratuíta. Xa que desfrutas con esta versión e quizás migraches os axustes e favoritos desde a anterior, agora podes desinstalar a versión gratuíta para evitar iniciala sen querer xa que non a vas necesitar máis, tamén evitarás ver este aviso outra vez.
+\n
+\nGrazas!</string>
+    <string name="upgraded_to_pro_gallery">Ola,
+\n
+\nsemella que xa tes tamén a versión Pro. Xa que desfrutas con ela e pode que migrases os teus axustes e favoritos a ela, agora podes desinstalar esta para evitar iniciala sen querer xa que non a precisas mais.
+\n
+\nGrazas!</string>
+    <string name="upgraded_from_free">Ola,
+\n
+\nSemella que acabas de actualizar dende a versión gratuíta. Cando migres os teus datos e esteas conforme, podes desinstalar a antiga gratuíta para evitar que a inicies accidentalmente xa que xa non a vas necesitar, tamén evitarás ver esta mensaxe de novo.
 \n
 \nGrazas!</string>
     <string name="upgraded_to_pro">Ola,
@@ -852,21 +860,21 @@
 \n
 \nParece que actualizaches a versión gratuíta á versión profesional. Se queres migralos teus eventos almacenados localmente dende a versión gratuíta, debes exportalos manualmente como ficheiros .ics na versión gratuíta e importalos á versión profesional a través do menú superior.
 \n
-\nSe estás satisfeito coa configuración profesional, podes desinstalala versión gratuíta anterior xa que xa non a necesitas.
+\nSe estás satisfeito coa configuración profesional, podes desinstalala versión gratuíta anterior xa que xa non a necesitas, tamén evitarás volver a ver esta mensaxe.
 \n
 \nGrazas!</string>
     <string name="upgraded_from_free_contacts">Ola,
 \n
 \nParece que acabas de actualizar dende a versión gratuíta. Se tes contactos gardados en \"%s\", terás que migralos manualmente exportándoos a un ficheiro .vcf na versión gratuíta da aplicación e importándoos aquí desde o menú superior.
 \n
-\nUnha vez que estea satisfeito coa súa configuración na versión Pro, pode desinstalala versión gratuíta anterior porque xa non a necesita.
+\nUnha vez que estea satisfeito coa súa configuración na versión Pro, pode desinstalala versión gratuíta anterior porque xa non a necesita, tamén evitarás ver esta mensaxe.
 \n
 \nMoitas grazas!</string>
     <string name="upgraded_from_free_notes">Ola,
 \n
 \nParece que acabas de actualizar desde a versión gratuíta. Se queres migralas notas, debes facelo manualmente exportándoas a un ficheiro na versión gratuíta da aplicación e importándoas aquí a través do menú superior.
 \n
-\nCando esteas satisfeito coa configuración da túa versión Pro, podes desinstalala antiga gratuíta porque xa non a necesitarás.
+\nCando esteas satisfeito coa configuración da túa versión Pro, podes desinstalala antiga gratuíta porque xa non a necesitarás, tamén evitarás ver esta mensaxe.
 \n
 \nGrazas!</string>
     <!-- About -->
