@@ -10,7 +10,6 @@ import androidx.annotation.ColorInt
 import androidx.core.os.postDelayed
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.blink
 import com.simplemobiletools.commons.extensions.countdown
 import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.helpers.DEFAULT_PASSWORD_COUNTDOWN
@@ -45,7 +44,6 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
             startCountdown()
         } else {
             updateTitle(context.getString(wrongTextRes), context.getColor(R.color.md_red))
-            titleTextView.blink()
             handler.postDelayed(delayInMillis = 1000) {
                 updateTitle(context.getString(defaultTextRes), context.getProperTextColor())
             }
