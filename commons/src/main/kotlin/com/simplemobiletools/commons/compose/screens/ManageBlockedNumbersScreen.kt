@@ -177,7 +177,7 @@ internal fun ManageBlockedNumbersScreen(
         }
         LazyColumn(
             state = state,
-            modifier = Modifier.ifTrue(!blockedNumbers.isNullOrEmpty()) {
+            modifier = Modifier.ifFalse(blockedNumbers.isNullOrEmpty()) {
                 Modifier.listDragHandlerLongKey(
                     isScrollingUp = state.isScrollingUp(),
                     lazyListState = state,
@@ -189,7 +189,7 @@ internal fun ManageBlockedNumbersScreen(
                         hasDraggingStarted = isDraggingStarted
                         triggerReset = RESET_IMMEDIATELY
                     },
-                    ids = blockedNumbers?.map { it.id }.orEmpty()
+                    ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
             verticalArrangement = Arrangement.spacedBy(2.dp),
