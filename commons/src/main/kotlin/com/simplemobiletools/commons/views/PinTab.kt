@@ -124,9 +124,6 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
 
     private fun updatePinCode() {
         binding.pinLockCurrentPin.text = "*".repeat(pin.length)
-        if (computedHash.isNotEmpty() && computedHash == getHashedPin()) {
-            onCorrectPassword()
-        }
     }
 
     private fun getHashedPin(): String {
