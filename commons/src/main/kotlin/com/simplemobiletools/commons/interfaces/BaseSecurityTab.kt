@@ -10,7 +10,6 @@ import androidx.annotation.ColorInt
 import androidx.core.os.postDelayed
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.blink
 import com.simplemobiletools.commons.extensions.countdown
 import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.helpers.DEFAULT_PASSWORD_COUNTDOWN
@@ -30,6 +29,8 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
     private val config = context.baseConfig
     private val handler = Handler(Looper.getMainLooper())
 
+    open fun onLockedOutChange(lockedOut: Boolean) {}
+
     fun isLockedOut() = requiredHash.isNotEmpty() && getCountdown() > 0
 
     fun onCorrectPassword() {
@@ -42,10 +43,10 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
     fun onIncorrectPassword() {
         config.passwordRetryCount += 1
         if (requiredHash.isNotEmpty() && shouldStartCountdown()) {
+            onLockedOutChange(lockedOut = true)
             startCountdown()
         } else {
             updateTitle(context.getString(wrongTextRes), context.getColor(R.color.md_red))
-            titleTextView.blink()
             handler.postDelayed(delayInMillis = 1000) {
                 updateTitle(context.getString(defaultTextRes), context.getProperTextColor())
             }
@@ -56,7 +57,7 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
         if (shouldStartCountdown()) {
             startCountdown()
         } else {
-            updateCountdown(0)
+            updateCountdownText(0)
         }
     }
 
@@ -95,14 +96,15 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
 
     private fun startCountdown() {
         getCountdown().countdown(intervalMillis = 1000L) { count ->
-            updateCountdown(count)
+            updateCountdownText(count)
             if (count == 0) {
                 resetCountdown()
+                onLockedOutChange(lockedOut = false)
             }
         }
     }
 
-    private fun updateCountdown(count: Int) {
+    private fun updateCountdownText(count: Int) {
         removeCallbacks()
         if (count > 0) {
             updateTitle(context.getString(R.string.too_many_incorrect_attempts, count), context.getColor(R.color.md_red))

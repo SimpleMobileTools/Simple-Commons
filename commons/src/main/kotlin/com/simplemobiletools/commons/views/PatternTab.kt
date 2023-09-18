@@ -76,6 +76,10 @@ class PatternTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(contex
         hashListener = listener
     }
 
+    override fun onLockedOutChange(lockedOut: Boolean) {
+        binding.patternLockView.isInputEnabled = !lockedOut
+    }
+
     private fun receivedHash(newHash: String) {
         if (isLockedOut()) {
             performHapticFeedback()

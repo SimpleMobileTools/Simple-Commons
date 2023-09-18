@@ -7,8 +7,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/pin_lock_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/medium_icon_size"
+        android:layout_height="@dimen/medium_icon_size"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_margin"
         android:src="@drawable/ic_lock_outlined_vector" />
@@ -26,7 +26,8 @@
         android:paddingRight="@dimen/activity_margin"
         android:paddingBottom="@dimen/small_margin"
         android:text="@string/enter_pin"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="@dimen/bigger_text_size" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/pin_lock_current_pin"

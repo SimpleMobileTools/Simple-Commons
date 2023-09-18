@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.TextView
+import android.widget.Toast
 import androidx.biometric.auth.AuthPromptHost
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.databinding.TabPinBinding
@@ -86,12 +87,12 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
             val newHash = getHashedPin()
             when {
                 pin.isEmpty() -> {
-                    context.toast(R.string.please_enter_pin)
+                    context.toast(id = R.string.please_enter_pin, length = Toast.LENGTH_LONG)
                 }
 
                 computedHash.isEmpty() && pin.length < MINIMUM_PIN_LENGTH -> {
                     resetPin()
-                    context.toast(R.string.pin_must_be_4_digits_long)
+                    context.toast(id = R.string.pin_must_be_4_digits_long, length = Toast.LENGTH_LONG)
                 }
 
                 computedHash.isEmpty() -> {
@@ -124,9 +125,6 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
 
     private fun updatePinCode() {
         binding.pinLockCurrentPin.text = "*".repeat(pin.length)
-        if (computedHash.isNotEmpty() && computedHash == getHashedPin()) {
-            onCorrectPassword()
-        }
     }
 
     private fun getHashedPin(): String {
