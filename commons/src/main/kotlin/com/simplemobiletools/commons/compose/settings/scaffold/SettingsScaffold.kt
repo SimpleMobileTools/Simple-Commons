@@ -8,7 +8,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -177,13 +180,15 @@ fun SettingsScaffold(
 }
 
 @Composable
-internal fun canPerformVerticalScrollState(): ScrollState {
-    val scrollState = rememberScrollState()
-    var canScroll by remember { mutableStateOf<Boolean?>(null) }
-    AdjustNavigationBarColors(canScroll)
-    LaunchedEffect(Unit) {
-        canScroll = (scrollState.canScrollForward || scrollState.canScrollBackward)
+internal fun canPerformVerticalScrollState(
+    scrollState: ScrollState = rememberScrollState()
+): ScrollState {
+    val canScrollForward = remember { scrollState.canScrollForward }
+    val canScrollBackward = remember { scrollState.canScrollBackward }
+    val canScroll by remember(canScrollBackward, canScrollBackward){
+        derivedStateOf { (canScrollForward || canScrollBackward) }
     }
+    AdjustNavigationBarColors(canScroll)
     return scrollState
 }
 
