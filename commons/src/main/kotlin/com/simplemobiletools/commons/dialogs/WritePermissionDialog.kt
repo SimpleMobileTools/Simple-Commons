@@ -76,7 +76,7 @@ class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: ()
                 BaseSimpleActivity.funAfterSAFPermission = null
             }
             .apply {
-                activity.setupDialogStuff(if (mode == Mode.Otg) otgView.root else sdCardView.root, this, dialogTitle) { alertDialog ->
+                activity.setupDialogStuff(if (mode == Mode.SdCard) sdCardView.root else otgView.root, this, dialogTitle) { alertDialog ->
                     dialog = alertDialog
                 }
             }
