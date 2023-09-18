@@ -996,12 +996,17 @@ fun Context.isDefaultDialer(): Boolean {
     }
 }
 
-fun Context.getContactsHasMap(callback: (HashMap<String, String>) -> Unit) {
+fun Context.getContactsHasMap(withComparableNumbers: Boolean = false, callback: (HashMap<String, String>) -> Unit) {
     ContactsHelper(this).getContacts(showOnlyContactsWithNumbers = true) { contactList ->
         val privateContacts: HashMap<String, String> = HashMap()
         for (contact in contactList) {
             for (phoneNumber in contact.phoneNumbers) {
-                privateContacts[PhoneNumberUtils.stripSeparators(phoneNumber.value)] = contact.name
+                var number = PhoneNumberUtils.stripSeparators(phoneNumber.value)
+                if (withComparableNumbers) {
+                    number = number.trimToComparableNumber()
+                }
+
+                privateContacts[number] = contact.name
             }
         }
         callback(privateContacts)
@@ -1010,7 +1015,7 @@ fun Context.getContactsHasMap(callback: (HashMap<String, String>) -> Unit) {
 
 @TargetApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) -> Unit) {
-    getContactsHasMap { contacts ->
+    getContactsHasMap(true) { contacts ->
         val blockedNumbers = ArrayList<BlockedNumber>()
         if (!isNougatPlus() || !isDefaultDialer()) {
             callback(blockedNumbers)
@@ -1029,7 +1034,7 @@ fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) ->
             val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: number
             val comparableNumber = normalizedNumber.trimToComparableNumber()
 
-            val contactName = contacts[number]
+            val contactName = contacts[comparableNumber]
             val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber, contactName)
             blockedNumbers.add(blockedNumber)
         }
