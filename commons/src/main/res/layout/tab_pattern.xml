@@ -19,7 +19,11 @@
         android:layout_below="@id/pattern_lock_icon"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:padding="@dimen/activity_margin"
+        android:minLines="2"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:paddingBottom="@dimen/small_margin"
         android:text="@string/insert_pattern"
         android:textAlignment="center"
         android:textSize="@dimen/bigger_text_size" />
