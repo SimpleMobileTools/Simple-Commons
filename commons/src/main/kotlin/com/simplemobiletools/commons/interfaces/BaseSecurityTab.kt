@@ -29,6 +29,8 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
     private val config = context.baseConfig
     private val handler = Handler(Looper.getMainLooper())
 
+    open fun onLockedOutChange(lockedOut: Boolean) {}
+
     fun isLockedOut() = requiredHash.isNotEmpty() && getCountdown() > 0
 
     fun onCorrectPassword() {
@@ -41,6 +43,7 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
     fun onIncorrectPassword() {
         config.passwordRetryCount += 1
         if (requiredHash.isNotEmpty() && shouldStartCountdown()) {
+            onLockedOutChange(lockedOut = true)
             startCountdown()
         } else {
             updateTitle(context.getString(wrongTextRes), context.getColor(R.color.md_red))
@@ -54,7 +57,7 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
         if (shouldStartCountdown()) {
             startCountdown()
         } else {
-            updateCountdown(0)
+            updateCountdownText(0)
         }
     }
 
@@ -93,14 +96,15 @@ abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : Relative
 
     private fun startCountdown() {
         getCountdown().countdown(intervalMillis = 1000L) { count ->
-            updateCountdown(count)
+            updateCountdownText(count)
             if (count == 0) {
                 resetCountdown()
+                onLockedOutChange(lockedOut = false)
             }
         }
     }
 
-    private fun updateCountdown(count: Int) {
+    private fun updateCountdownText(count: Int) {
         removeCallbacks()
         if (count > 0) {
             updateTitle(context.getString(R.string.too_many_incorrect_attempts, count), context.getColor(R.color.md_red))
