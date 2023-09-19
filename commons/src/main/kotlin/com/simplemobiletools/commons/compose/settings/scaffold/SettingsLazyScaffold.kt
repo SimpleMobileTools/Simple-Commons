@@ -12,8 +12,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -284,12 +282,9 @@ fun SettingsLazyScaffold(
 internal fun rememberCanPerformVerticalScrollLazyListState(
     scrollState: LazyListState = rememberLazyListState()
 ): LazyListState {
-    val canScrollForward = remember { scrollState.canScrollForward }
-    val canScrollBackward = remember { scrollState.canScrollBackward }
-    val canScroll by remember(canScrollBackward, canScrollBackward) {
-        derivedStateOf { (canScrollForward || canScrollBackward) }
-    }
-    AdjustNavigationBarColors(canScroll)
+    val canScrollForward = scrollState.canScrollForward
+    val canScrollBackward = scrollState.canScrollBackward
+    AdjustNavigationBarColors(canScrollForward || canScrollBackward)
     return scrollState
 }
 
