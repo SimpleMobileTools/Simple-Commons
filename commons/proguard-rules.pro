@@ -67,5 +67,3 @@
 -keepclassmembers,allowobfuscation,allowoptimization class <1> {
   <init>();
 }
-
--keep class androidx.compose.runtime.** { *; }
