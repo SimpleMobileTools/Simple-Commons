@@ -17,7 +17,7 @@
     <string name="edit">Επεξεργασία</string>
     <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
     <string name="no_browser_found">Δεν βρέθηκε φυλλομετρητής</string>
-    <string name="no_email_client_found">Δεν βρέθηκε client email</string>
+    <string name="no_email_client_found">Δεν βρέθηκε πελάτης email</string>
     <string name="set_as">Ορισμός ως</string>
     <string name="copy_to_clipboard">Αντιγραφή στο Πρόχειρο</string>
     <string name="copy_number_to_clipboard">Αντιγραφή αριθμού στο Πρόχειρο</string>
@@ -132,12 +132,12 @@
     <string name="block_hidden_messages">Αποκλεισμός μηνυμάτων από κρυφούς αριθμούς</string>
     <string name="add_blocked_number_helper_text">Εισάγετε έναν αριθμό ή ένα μοτίβο (π.χ. *12345*, +1*8888) για να μπλοκάρετε όλες τις κλήσεις και τα μηνύματα από αριθμούς που αντιστοιχούν στο μοτίβο.</string>
     <string name="must_make_default_caller_id_app">Αδύνατη η φραγή αγνώστων αριθμών χωρίς άδεια ID κλήσεων.</string>
-    <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact">Αποκλεισμός επαφής</string>
+    <string name="block_contact_success">Επαφή αποκλεισμένη</string>
+    <string name="block_contact_fail">Η επαφή δεν μπόρεσε να αποκλειστεί</string>
+    <string name="unblock_contact">Άρση αποκλεισμού επαφής</string>
+    <string name="unblock_contact_success">Επαφή μη αποκλεισμένη</string>
+    <string name="unblock_contact_fail">Αδύνατος ο μη αποκλεισμός επαφής</string>
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
     <string name="add_favorites">Προσθήκη αγαπημένων</string>
@@ -423,7 +423,7 @@
     <string name="show_line_numbers">Εμφάνιση γραμμής αριθμών</string>
     <string name="hide_line_numbers">Απόκρυψη γραμμής αριθμών</string>
     <string name="sleep_timer">Χρονοδιακόπτης</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Μη Αποκλεισμός</string>
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>
@@ -471,8 +471,8 @@
     <string name="enter_pin">Εισαγωγή PIN</string>
     <string name="please_enter_pin">Παρακαλώ εισάγετε ένα PIN</string>
     <string name="wrong_pin">Λάθος PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN πρέπει να έχει μήκος τουλάχιστον 4 ψηφίων</string>
+    <string name="too_many_incorrect_attempts">Πάρα πολλές λανθασμένες προσπάθειες ξεκλειδώματος.\nΠροσπαθήστε ξανά σε %d δευτ.</string>
     <string name="repeat_pin">Επανάληψη PIN</string>
     <string name="pattern">Μοτίβο</string>
     <string name="insert_pattern">Εισαγωγή μοτίβου</string>
@@ -573,32 +573,32 @@
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">πρίν %d δευτ.</item>
-        <item quantity="other">πρίν %d δευτ.</item>
+        <item quantity="one">%d δευτ. πρίν</item>
+        <item quantity="other">%d δευτ. πρίν</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">πρίν %d λεπτό</item>
-        <item quantity="other">πρίν %d λεπτά</item>
+        <item quantity="one">%d λεπτό πρίν</item>
+        <item quantity="other">%d λεπτά πρίν</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">πρίν %d ώρα</item>
-        <item quantity="other">πρίν %d ώρες</item>
+        <item quantity="one">%d ώρα πρίν</item>
+        <item quantity="other">%d ώρες πρίν</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">πρίν %d ημέρα</item>
-        <item quantity="other">πρίν %d ημέρες</item>
+        <item quantity="one">%d ημέρα πρίν</item>
+        <item quantity="other">%d ημέρες πρίν</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">πρίν %d εβδομάδα</item>
         <item quantity="other">πρίν %d εβδομάδες</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">πρίν %d μήνα</item>
-        <item quantity="other">πρίν %d μήνες</item>
+        <item quantity="one">%d μήνα πρίν</item>
+        <item quantity="other">%d μήνες πρίν</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">πρίν %d έτος</item>
-        <item quantity="other">πρίν %d έτη</item>
+        <item quantity="one">%d έτος πρίν</item>
+        <item quantity="other">%d έτη πρίν</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -761,7 +761,7 @@
     <string name="backups">Αντίγραφα ασφαλείας</string>
     <string name="enable_automatic_backups">Ενεργοποίηση αυτόματων αντιγράφων</string>
     <string name="manage_automatic_backups">Διαχείριση αυτόματων αντιγράφων</string>
-    <string name="date_time_pattern_info">Μπορείτε να χρησιμοποιήσετε τα ακόλουθα μοτίβα για να ονομάσετε αυτόματα το αρχείο σας:\n\n%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δεθτ.</string>
+    <string name="date_time_pattern_info">Μπορείτε να χρησιμοποιήσετε τα ακόλουθα μοτίβα για να ονομάσετε αυτόματα το αρχείο σας:\n\n%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ.</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετες Άδειες.</string>
