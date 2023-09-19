@@ -74,7 +74,7 @@ publishing.publications {
 
 dependencies {
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.kotlin.immutable.collections)
+    api(libs.kotlin.immutable.collections)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.documentfile)
     implementation(libs.androidx.swiperefreshlayout)
