@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.extensions.rememberTooltipStateFix
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
@@ -158,7 +159,7 @@ fun ActionMenu(
 internal fun ActionIconButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    interactionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     contentColor: Color,
     content: @Composable () -> Unit,
 ) {

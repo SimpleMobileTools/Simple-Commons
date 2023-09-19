@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding
@@ -34,14 +35,14 @@ fun Context.getActivity(): Activity {
 fun Context.getComponentActivity(): ComponentActivity = getActivity() as ComponentActivity
 
 @Composable
-fun AdjustNavigationBarColors(canScroll: Boolean?) {
+fun rememberMutableInteractionSource() = remember { MutableInteractionSource() }
+
+@Composable
+fun AdjustNavigationBarColors() {
     val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
     val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
-    val navigationBarColor = when (canScroll) {
-        true -> Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
-        else -> Color.Transparent
-    }
+    val navigationBarColor = Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
     DisposableEffect(systemUiController, isSystemInDarkTheme, navigationBarColor) {
         systemUiController.setNavigationBarColor(color = navigationBarColor, darkIcons = !isSystemInDarkTheme)
         systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
