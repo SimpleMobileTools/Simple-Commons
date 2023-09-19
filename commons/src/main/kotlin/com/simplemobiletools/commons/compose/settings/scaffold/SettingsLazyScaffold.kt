@@ -12,7 +12,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.plus
+import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
@@ -36,7 +36,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -45,7 +45,8 @@ fun SettingsLazyScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -95,7 +96,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -104,7 +105,8 @@ fun SettingsLazyScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -154,7 +156,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -163,7 +165,8 @@ fun SettingsLazyScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -212,7 +215,7 @@ fun SettingsLazyScaffold(
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
-    state: LazyListState = rememberCanPerformVerticalScrollLazyListState(),
+    state: LazyListState = rememberLazyListState(),
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
     val context = LocalContext.current
@@ -221,7 +224,8 @@ fun SettingsLazyScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -262,7 +266,8 @@ fun SettingsLazyScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor, darkStatusBarIcons)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -278,15 +283,6 @@ fun SettingsLazyScaffold(
     }
 }
 
-@Composable
-internal fun rememberCanPerformVerticalScrollLazyListState(
-    scrollState: LazyListState = rememberLazyListState()
-): LazyListState {
-    val canScrollForward = scrollState.canScrollForward
-    val canScrollBackward = scrollState.canScrollBackward
-    AdjustNavigationBarColors(canScrollForward || canScrollBackward)
-    return scrollState
-}
 
 @MyDevices
 @Composable

@@ -11,11 +11,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 private val dropDownPaddings = Modifier.padding(horizontal = 14.dp, vertical = 16.dp)
@@ -23,7 +23,7 @@ private val dropDownPaddings = Modifier.padding(horizontal = 14.dp, vertical = 1
 @Composable
 fun SimpleDropDownMenuItem(
     modifier: Modifier = Modifier,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    interactionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     indication: Indication? = LocalIndication.current,
     @StringRes text: Int,
     onClick: () -> Unit
@@ -33,7 +33,7 @@ fun SimpleDropDownMenuItem(
 fun SimpleDropDownMenuItem(
     modifier: Modifier = Modifier,
     text: String,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    interactionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     indication: Indication? = LocalIndication.current,
     onClick: () -> Unit
 ) =
@@ -51,7 +51,7 @@ fun SimpleDropDownMenuItem(
 @Composable
 fun SimpleDropDownMenuItem(
     modifier: Modifier = Modifier,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    interactionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     indication: Indication? = LocalIndication.current,
     text: @Composable BoxScope.() -> Unit,
     onClick: () -> Unit

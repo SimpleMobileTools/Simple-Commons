@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.compose.settings.scaffold
 
 import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -9,9 +8,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,6 +15,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import com.simplemobiletools.commons.compose.extensions.AdjustNavigationBarColors
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
@@ -30,7 +27,7 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    scrollState: ScrollState = canPerformVerticalScrollState(),
+    scrollState: ScrollState = rememberScrollState(),
     content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
@@ -38,7 +35,8 @@ fun SettingsScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -82,8 +80,8 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    scrollState: ScrollState = canPerformVerticalScrollState(),
-    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
+    scrollState: ScrollState = rememberScrollState(),
+    content: @Composable (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
 
@@ -91,7 +89,8 @@ fun SettingsScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -135,7 +134,7 @@ fun SettingsScaffold(
     verticalArrangement: Arrangement.Vertical =
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
-    scrollState: ScrollState = canPerformVerticalScrollState(),
+    scrollState: ScrollState = rememberScrollState(),
     content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
@@ -144,7 +143,8 @@ fun SettingsScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
     SystemUISettingsScaffoldStatusBarColor(scrolledColor)
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
 
     Scaffold(
         modifier = modifier
@@ -179,18 +179,7 @@ fun SettingsScaffold(
     }
 }
 
-@Composable
-internal fun canPerformVerticalScrollState(
-    scrollState: ScrollState = rememberScrollState()
-): ScrollState {
-    val canScrollForward = remember { scrollState.canScrollForward }
-    val canScrollBackward = remember { scrollState.canScrollBackward }
-    val canScroll by remember(canScrollBackward, canScrollBackward){
-        derivedStateOf { (canScrollForward || canScrollBackward) }
-    }
-    AdjustNavigationBarColors(canScroll)
-    return scrollState
-}
+
 
 @MyDevices
 @Composable

@@ -5,11 +5,10 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
@@ -156,12 +156,12 @@ internal fun SettingsNavigationIcon(
 private fun BackIcon(iconColor: Color?) {
     if (iconColor == null) {
         Icon(
-            imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
             modifier = Modifier.padding(4.dp)
         )
     } else {
         Icon(
-            imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
             tint = iconColor,
             modifier = Modifier.padding(4.dp)
         )
@@ -173,11 +173,10 @@ private fun BackIcon(iconColor: Color?) {
 @MyDevices
 private fun SettingsScaffoldTopBarPreview() {
     AppThemeSurface {
-        val interactionSource = remember { MutableInteractionSource() }
         SettingsScaffoldTopBar(
             title = "SettingsScaffoldTopBar",
             scrolledColor = Color.Black,
-            navigationIconInteractionSource = interactionSource,
+            navigationIconInteractionSource = rememberMutableInteractionSource(),
             goBack = {},
             statusBarColor = Color.Magenta.toArgb(),
             colorTransitionFraction = 1.0f,

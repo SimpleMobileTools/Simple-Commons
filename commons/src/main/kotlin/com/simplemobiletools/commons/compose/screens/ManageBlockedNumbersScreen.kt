@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -65,7 +66,7 @@ private const val CLICK_RESET_TIME = 250L
 private const val RESET_IMMEDIATELY = 1L
 private const val RESET_IDLE = -1L
 private const val BETWEEN_CLICKS_TIME = 200 //time between a click which is slightly lower than the reset time
-
+private const val ON_LONG_CLICK_LABEL = "select"
 @Composable
 internal fun ManageBlockedNumbersScreen(
     goBack: () -> Unit,
@@ -155,7 +156,7 @@ internal fun ManageBlockedNumbersScreen(
             }
         },
     ) { paddingValues ->
-        val state = rememberCanPerformVerticalScrollLazyListState()
+        val state = rememberLazyListState()
         val autoScrollSpeed = remember { mutableFloatStateOf(0f) }
         LaunchedEffect(autoScrollSpeed.floatValue) {
             if (autoScrollSpeed.floatValue != 0f) {
@@ -214,7 +215,7 @@ internal fun ManageBlockedNumbersScreen(
                                 .animateItemPlacement()
                                 .semantics {
                                     if (!isInActionMode) {
-                                        onLongClick("select") {
+                                        onLongClick(ON_LONG_CLICK_LABEL) {
                                             selectedIds.value += blockedNumber.id
                                             true
                                         }
@@ -233,7 +234,7 @@ internal fun ManageBlockedNumbersScreen(
                                 }
                                 .ifTrue(isInActionMode) {
                                     Modifier.combinedClickable(
-                                        interactionSource = remember { MutableInteractionSource() },
+                                        interactionSource = rememberMutableInteractionSource(),
                                         indication = null,
                                         enabled = !hasDraggingStarted,
                                         onLongClick = {
@@ -439,7 +440,7 @@ private fun ActionModeToolbar(
     onSelectAll: () -> Unit,
 ) {
     val systemUiController = rememberSystemUiController()
-    val navigationIconInteractionSource = remember { MutableInteractionSource() }
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
     val bgColor = actionModeBgColor()
     val textColor by remember {
         derivedStateOf { Color(bgColor.toArgb().getContrastColor()) }
@@ -481,6 +482,7 @@ private fun ActionModeToolbar(
         windowInsets = topAppBarInsets()
     )
 }
+
 
 @Composable
 @ReadOnlyComposable
