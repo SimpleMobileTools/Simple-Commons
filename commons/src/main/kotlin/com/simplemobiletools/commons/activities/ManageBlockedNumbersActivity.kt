@@ -9,19 +9,18 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.screens.ManageBlockedNumbersScreen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.dialogs.AddBlockedNumberDialog
+import com.simplemobiletools.commons.dialogs.AddOrEditBlockedNumberAlertDialog
 import com.simplemobiletools.commons.dialogs.ExportBlockedNumbersDialog
 import com.simplemobiletools.commons.dialogs.FilePickerDialog
 import com.simplemobiletools.commons.extensions.*
@@ -74,10 +73,33 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isDefaultDialer: Boolean = onEventValue {
                 context.isDefaultDialer()
             }
+
             AppThemeSurface {
+                var clickedBlockedNumber by remember { mutableStateOf<BlockedNumber?>(null) }
+                val addBlockedNumberDialogState = rememberAlertDialogState()
+
+                addBlockedNumberDialogState.DialogMember {
+                    AddOrEditBlockedNumberAlertDialog(
+                        blockedNumber = clickedBlockedNumber,
+                        alertDialogState = addBlockedNumberDialogState,
+                        deleteBlockedNumber = {
+                            deleteBlockedNumber(it)
+                            updateBlockedNumbers()
+                        },
+                        addBlockedNumber = {
+                            addBlockedNumber(it)
+                            clickedBlockedNumber = null
+                            updateBlockedNumbers()
+                        }
+                    )
+                }
+
                 ManageBlockedNumbersScreen(
                     goBack = ::finish,
-                    onAdd = ::addOrEditBlockedNumber,
+                    onAdd = {
+                        clickedBlockedNumber = null
+                        addBlockedNumberDialogState.show()
+                    },
                     onImportBlockedNumbers = ::tryImportBlockedNumbers,
                     onExportBlockedNumbers = ::tryExportBlockedNumbers,
                     setAsDefault = ::maybeSetDefaultCallerIdApp,
@@ -98,8 +120,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                         deleteBlockedNumbers(blockedNumbers, selectedKeys)
                     },
                     onEdit = { blockedNumber ->
-                        addOrEditBlockedNumber(currentNumber = blockedNumber)
-                        manageBlockedNumbersViewModel.updateBlockedNumbers()
+                        clickedBlockedNumber = blockedNumber
+                        addBlockedNumberDialogState.show()
                     },
                     onCopy = { blockedNumber ->
                         copyToClipboard(blockedNumber.number)
@@ -183,12 +205,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     BlockedNumbersImporter.ImportResult.IMPORT_FAIL -> R.string.no_items_found
                 }
             )
-            updateBlockedNumbers()
-        }
-    }
-
-    private fun addOrEditBlockedNumber(currentNumber: BlockedNumber? = null) {
-        AddBlockedNumberDialog(this, currentNumber) {
             updateBlockedNumbers()
         }
     }
