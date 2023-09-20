@@ -123,7 +123,7 @@ fun SettingsScaffoldTopBar(
 }
 
 @Composable
-private fun topAppBarColors(
+fun topAppBarColors(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color
