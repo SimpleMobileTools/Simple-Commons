@@ -77,7 +77,7 @@
     <string name="phone_storage">Almacenamiento del teléfono</string>
     <string name="phone_storage_hidden">Almacenamiento del teléfono (No visible para otras aplicaciones)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Escaneando…</string>
     <!-- Events -->
     <string name="birthday">Cumpleaños</string>
     <string name="anniversary">Aniversario</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Aumentar el número de columnas</string>
     <string name="reduce_column_count">Reducir el número de columnas</string>
     <string name="column_count">Recuento de columnas</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Número de filas</string>
     <string name="portrait_column_count">Recuento de columnas de retratos</string>
     <string name="landscape_column_count">Recuento de columnas apaisadas</string>
     <string name="change_cover_image">Cambiar la imagen de la portada</string>
@@ -111,8 +111,9 @@
         <item quantity="other">Columnas %d</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d fila</item>
+        <item quantity="many">%d filas</item>
+        <item quantity="other">%d filas</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
@@ -127,17 +128,17 @@
     <string name="set_as_default">Establecer por defecto</string>
     <string name="block_confirmation">¿Estás seguro de que quieres bloquear a \"%s\"?</string>
     <string name="block_not_stored_calls">Bloquear llamadas de contactos no guardados</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Bloquear las llamadas de números ocultos</string>
     <string name="block_not_stored_messages">Bloquear los mensajes de los contactos no guardados</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Bloquear los mensajes de números ocultos</string>
     <string name="add_blocked_number_helper_text">Ingrese un número o un patrón (por ejemplo, *12345*, +1*8888) para bloquear todas las llamadas y mensajes de números que coincidan con el patrón.</string>
     <string name="must_make_default_caller_id_app">No se pueden bloquear los números desconocidos sin el permiso del identificador de llamadas.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">Contacto bloqueado</string>
+    <string name="block_contact_fail">No se ha podido bloquear el contacto</string>
+    <string name="unblock_contact">Desbloquear el contacto</string>
+    <string name="unblock_contact_success">Contacto desbloqueado</string>
+    <string name="unblock_contact_fail">No se ha podido desbloquear el contacto</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Añadir a favoritos</string>
@@ -147,7 +148,7 @@
     <string name="search">Buscar</string>
     <string name="search_in_placeholder">Buscar en %s</string>
     <string name="type_2_characters">Escribe por lo menos dos caracteres para iniciar la búsqueda.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Mostrar una barra de búsqueda</string>
     <string name="search_contacts">Buscar los contactos</string>
     <string name="search_favorites">Buscar los favoritos</string>
     <string name="search_apps">Buscar las aplicaciones</string>
@@ -177,16 +178,16 @@
     <string name="no_audio_permissions">Se requiere permiso de Audio</string>
     <string name="no_permission">Sin autorización</string>
     <string name="allow_notifications_reminders">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar recordatorios.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Debes permitir que la aplicación muestre las notificaciones a pantalla completa, de lo contrario podrías perderte algunos recordatorios.</string>
     <string name="allow_notifications_files">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar la barra de progreso.</string>
     <string name="allow_notifications_music_player">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá reproducir las canciones.</string>
     <string name="allow_notifications_voice_recorder">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá grabar audio.</string>
     <string name="allow_notifications_incoming_calls">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar las llamadas entrantes.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Debes permitir que la aplicación muestre notificaciones a pantalla completa, de lo contrario podrías perderte algunas llamadas entrantes.</string>
     <string name="allow_notifications_incoming_messages">Debes permitir que la aplicación muestre notificaciones, de lo contrario no podrá mostrar los mensajes entrantes.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_alarm_scheduled_messages">Debes permitir que la aplicación acceda a las alarmas internas, de lo contrario no podrás enviar los mensajes programados.</string>
+    <string name="allow_alarm_sleep_timer">Debes permitir que la aplicación acceda a las alarmas, de lo contrario no podrás apagar la aplicación después de que el temporizador se haya detenido.</string>
+    <string name="allow_location_permission">Debes permitir que la aplicación acceda a tu ubicación, de lo contrario no la conocerá.</string>
     <string name="grant_permission">Conceder el permiso</string>
     <string name="permission_required">Permiso necesario</string>
     <!-- Renaming -->
@@ -307,7 +308,7 @@
     <string name="select_storage">Seleccione almacenamiento</string>
     <string name="storage">Almacenamiento</string>
     <string name="internal">Almacenamiento interno</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Memoria interna</string>
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz ( Root)</string>
     <string name="wrong_root_selected">Carpeta incorrecta seleccionada, seleccione la carpeta principal de su tarjeta SD</string>
@@ -399,7 +400,7 @@
     <string name="unhide_folder">Mostrar carpeta</string>
     <string name="temporarily_show_hidden">Mostrar ocultos temporalmente</string>
     <string name="stop_showing_hidden">No mostrar ocultos</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Permitir el acceso a más medios</string>
     <string name="maximum_share_reached">No puedes compartir todo este contenido a la vez</string>
     <string name="empty_and_disable_recycle_bin">Vaciar y desactivar la papelera de reciclaje</string>
     <string name="undo">Deshacer</string>
@@ -424,10 +425,10 @@
     <string name="contact_details">Datos de contacto</string>
     <string name="add_contact">Añadir contacto</string>
     <string name="wallpapers">Fondos de pantalla</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Mostrar los números de la línea</string>
+    <string name="hide_line_numbers">Ocultar los números de la línea</string>
     <string name="sleep_timer">Temporizador</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Desbloquear</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nombre</string>
@@ -435,7 +436,7 @@
     <string name="last_modified">Modificación</string>
     <string name="date_created">Fecha de creación</string>
     <string name="date_taken">Creación</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Fecha añadida</string>
     <string name="title">Título</string>
     <string name="filename">Nombre del archivo</string>
     <string name="extension">Extensión</string>
@@ -451,7 +452,7 @@
     <string name="full_name">Nombre completo</string>
     <string name="use_custom_sorting">Utilizar la ordenación personalizada</string>
     <string name="change_order">Cambiar el orden</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Más opciones</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Estás seguro de que quieres proceder a la eliminación\?</string>
     <string name="deletion_confirmation">¿Estas seguro que quieres borrar %s?</string>
@@ -476,8 +477,9 @@
     <string name="enter_pin">Introduzca PIN</string>
     <string name="please_enter_pin">Por favor introduzca PIN</string>
     <string name="wrong_pin">PIN erróneo</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">El código PIN debe tener al menos 4 dígitos</string>
+    <string name="too_many_incorrect_attempts">Demasiados intentos de desbloqueo incorrectos.
+\nInténtelo de nuevo en %d segundos.</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
     <string name="insert_pattern">Inserte Patrón</string>
@@ -502,9 +504,9 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="empty_password_new">Por favor, escribe una contraseña</string>
+    <string name="empty_password">Por favor, introduce la contraseña</string>
+    <string name="invalid_password">Contraseña incorrecta</string>
     <!-- Times -->
     <string name="yesterday">Ayer</string>
     <string name="today">Hoy</string>
@@ -713,7 +715,7 @@
     <string name="use_24_hour_time_format">Usar el formato 24 horas</string>
     <string name="change_date_and_time_format">Cambiar formato de fecha y hora</string>
     <string name="sunday_first">Comenzar la semana en Domingo</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Inicio de la semana</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Siempre use el mismo tiempo de repetición</string>
     <string name="snooze_time">Tiempo de repetición</string>
@@ -1190,7 +1192,7 @@
     <string name="pdf_viewer_title">Android PdfViewer (visor de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (manejo de archivos de listas de reproducción m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (compresión y descompresión de los ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">La prueba ha caducado</string>
     <string name="start_free_trial">Comienza tu prueba gratuita</string>
