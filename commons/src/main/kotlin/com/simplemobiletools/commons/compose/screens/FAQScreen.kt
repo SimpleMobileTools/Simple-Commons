@@ -94,7 +94,12 @@ fun stringFromHTML(source: String): Spanned {
 }
 
 @Composable
-fun LinkifyText(modifier: Modifier = Modifier, fontSize: TextUnit = 14.sp, text: () -> Spanned) {
+fun LinkifyText(
+    modifier: Modifier = Modifier,
+    fontSize: TextUnit = 14.sp,
+    removeUnderlines: Boolean = true,
+    text: () -> Spanned
+) {
     val context = LocalContext.current
     val customLinkifyTextView = remember {
         TextView(context)
@@ -107,7 +112,9 @@ fun LinkifyText(modifier: Modifier = Modifier, fontSize: TextUnit = 14.sp, text:
         textView.text = text()
         textView.textSize = fontSize.value
         textView.movementMethod = LinkMovementMethod.getInstance()
-        customLinkifyTextView.removeUnderlines()
+        if (removeUnderlines) {
+            customLinkifyTextView.removeUnderlines()
+        }
     }
 }
 

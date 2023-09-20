@@ -36,10 +36,17 @@
                 android:text="@string/color_customization" />
 
             <Button
+                android:id="@+id/compose_dialogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compose dialogs" />
+
+            <Button
                 android:id="@+id/bottom_sheet_chooser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="About" />
+
             <Button
                 android:id="@+id/manage_blocked_numbers"
                 android:layout_width="wrap_content"

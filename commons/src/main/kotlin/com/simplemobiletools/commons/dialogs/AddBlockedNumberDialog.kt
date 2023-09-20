@@ -26,7 +26,7 @@ import kotlinx.coroutines.android.awaitFrame
 @Composable
 fun AddOrEditBlockedNumberAlertDialog(
     blockedNumber: BlockedNumber?,
-    alertDialogState: AlertDialogState = rememberAlertDialogState(),
+    alertDialogState: AlertDialogState,
     deleteBlockedNumber: (String) -> Unit,
     addBlockedNumber: (String) -> Unit
 ) {
@@ -99,7 +99,8 @@ private fun AddOrEditBlockedNumberAlertDialogPreview() {
         AddOrEditBlockedNumberAlertDialog(
             blockedNumber = null,
             deleteBlockedNumber = {},
-            addBlockedNumber = {}
+            addBlockedNumber = {},
+            alertDialogState = rememberAlertDialogState()
         )
     }
 }

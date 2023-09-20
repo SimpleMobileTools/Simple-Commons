@@ -4,7 +4,27 @@ import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.screens.LinkifyText
+import com.simplemobiletools.commons.compose.screens.stringFromHTML
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.databinding.DialogTextviewBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.getStringsPackageName
@@ -43,5 +63,64 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
     private fun negativePressed() {
         dialog?.dismiss()
         callback()
+    }
+}
+
+@Composable
+fun AppSideLoadedAlertDialog(
+    alertDialogState: AlertDialogState = rememberAlertDialogState(),
+    onDownloadClick: (url: String) -> Unit,
+    onCancelClick: () -> Unit
+) {
+    val context = LocalContext.current
+    val url = remember { "https://play.google.com/store/apps/details?id=${context.getStringsPackageName()}" }
+    AlertDialog(
+        modifier = Modifier.fillMaxWidth(0.9f),
+        properties = DialogProperties(usePlatformDefaultWidth = false),
+        onDismissRequest = alertDialogState::hide,
+        confirmButton = {
+            TextButton(onClick = {
+                alertDialogState.hide()
+                onDownloadClick(url)
+            }) {
+                Text(text = stringResource(id = R.string.download))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                alertDialogState.hide()
+                onCancelClick()
+            }) {
+                Text(text = stringResource(id = R.string.cancel))
+            }
+        },
+        shape = Shapes.medium,
+        text = {
+            val source = stringResource(id = R.string.sideloaded_app, url)
+            LinkifyText(fontSize = 16.sp, removeUnderlines = false) {
+                stringFromHTML(source)
+            }
+        },
+        title = {
+            Text(
+                stringResource(id = R.string.app_corrupt),
+                color = MaterialTheme.colorScheme.primary,
+                fontSize = 21.sp,
+                fontWeight = FontWeight.Bold,
+            )
+        },
+    )
+}
+
+@Composable
+@MyDevices
+private fun AppSideLoadedAlertDialogPreview() {
+    AppThemeSurface {
+        AddOrEditBlockedNumberAlertDialog(
+            blockedNumber = null,
+            deleteBlockedNumber = {},
+            addBlockedNumber = {},
+            alertDialogState = rememberAlertDialogState()
+        )
     }
 }
