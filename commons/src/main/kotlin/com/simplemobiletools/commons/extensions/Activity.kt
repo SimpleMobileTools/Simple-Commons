@@ -831,10 +831,10 @@ fun BaseSimpleActivity.deleteFileBg(
                             }
                         }
                     }
-                } else if (isRPlus() && !isDeletingMultipleFiles) {
-                    deleteSdk30(fileDirItem, callback)
                 } else if (isPathOnOTG(path)) {
                     callback?.invoke(getDocumentFile(path)?.delete() ?: false)
+                } else if (isRPlus() && !isDeletingMultipleFiles) {
+                    deleteSdk30(fileDirItem, callback)
                 } else {
                     callback?.invoke(false)
                 }
