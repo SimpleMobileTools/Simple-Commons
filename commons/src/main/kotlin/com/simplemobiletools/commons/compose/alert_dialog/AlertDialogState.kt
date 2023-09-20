@@ -37,11 +37,11 @@ class AlertDialogState(isShownInitially: Boolean = false) {
         isShown = false
     }
 
-    fun toggle() {
+    fun toggleVisibility() {
         isShown = !isShown
     }
 
-    fun changeValue(predicate: Boolean) {
+    fun changeVisibility(predicate: Boolean) {
         isShown = predicate
     }
 
