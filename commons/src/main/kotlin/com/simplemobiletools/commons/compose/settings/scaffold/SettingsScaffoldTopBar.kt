@@ -27,7 +27,7 @@ fun SettingsScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: String,
     scrolledColor: Color,
-    navigationIconInteractionSource: MutableInteractionSource,
+    navigationIconInteractionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
     statusBarColor: Int,
     colorTransitionFraction: Float,
@@ -65,7 +65,7 @@ fun SettingsScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     scrolledColor: Color,
-    navigationIconInteractionSource: MutableInteractionSource,
+    navigationIconInteractionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
     statusBarColor: Int,
     colorTransitionFraction: Float,
@@ -96,7 +96,7 @@ fun SettingsScaffoldTopBar(
     title: @Composable (scrolledColor: Color) -> Unit,
     actions: @Composable RowScope.() -> Unit,
     scrolledColor: Color,
-    navigationIconInteractionSource: MutableInteractionSource,
+    navigationIconInteractionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
     statusBarColor: Int,
     colorTransitionFraction: Float,
@@ -151,7 +151,7 @@ fun Modifier.topAppBarPaddings(
 @Composable
 fun SettingsNavigationIcon(
     modifier: Modifier = Modifier,
-    navigationIconInteractionSource: MutableInteractionSource,
+    navigationIconInteractionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     goBack: () -> Unit,
     iconColor: Color? = null
 ) {
