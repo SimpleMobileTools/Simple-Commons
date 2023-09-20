@@ -815,7 +815,7 @@ fun BaseSimpleActivity.deleteFileBg(
             }
 
             if (!fileDeleted) {
-                if (needsStupidWritePermissions(path)) {
+                if (needsStupidWritePermissions(path) || isPathOnOTG(path)) {
                     handleSAFDialog(path) {
                         if (it) {
                             trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
@@ -831,8 +831,6 @@ fun BaseSimpleActivity.deleteFileBg(
                             }
                         }
                     }
-                } else if (isPathOnOTG(path)) {
-                    callback?.invoke(getDocumentFile(path)?.delete() ?: false)
                 } else if (isRPlus() && !isDeletingMultipleFiles) {
                     deleteSdk30(fileDirItem, callback)
                 } else {
