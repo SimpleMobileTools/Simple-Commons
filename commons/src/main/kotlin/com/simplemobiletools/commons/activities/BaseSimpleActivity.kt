@@ -975,16 +975,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return newFile
     }
 
-    fun getAlternativeFileName(nameWithoutExtension: String, extension: String, parent: String?): String {
-        var fileIndex = 1
-        var newName: String
-        do {
-            newName = String.format("%s(%d).%s", nameWithoutExtension, fileIndex, extension)
-            fileIndex++
-        } while (getDoesFilePathExist("$parent/$newName"))
-        return newName
-    }
-
     private fun startCopyMove(
         files: ArrayList<FileDirItem>,
         destinationPath: String,
