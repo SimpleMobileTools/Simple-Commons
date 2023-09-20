@@ -1,0 +1,56 @@
+package com.simplemobiletools.commons.compose.alert_dialog
+
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.SaverScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState.Companion.SAVER
+
+@Composable
+fun rememberAlertDialogState(
+    isShownInitially: Boolean = false
+) = remember { AlertDialogState(isShownInitially) }
+
+@Composable
+fun rememberAlertDialogStateSaveable(
+    isShownInitially: Boolean = false
+) = rememberSaveable(saver = SAVER) { AlertDialogState(isShownInitially) }
+
+@Stable
+class AlertDialogState(isShownInitially: Boolean = false) {
+
+    companion object {
+        val SAVER = object : Saver<AlertDialogState, Boolean> {
+            override fun restore(value: Boolean): AlertDialogState = AlertDialogState(value)
+            override fun SaverScope.save(value: AlertDialogState): Boolean = value.isShown
+        }
+    }
+
+    var isShown by mutableStateOf(isShownInitially)
+        private set
+
+    fun show() {
+        isShown = true
+    }
+
+    fun hide() {
+        isShown = false
+    }
+
+    fun toggle() {
+        isShown = !isShown
+    }
+
+    fun changeValue(predicate: Boolean) {
+        isShown = predicate
+    }
+
+    @Composable
+    fun DialogMember(
+        content: @Composable () -> Unit
+    ) {
+        if (isShown) {
+            content()
+        }
+    }
+}
