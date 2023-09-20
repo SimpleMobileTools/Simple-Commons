@@ -38,6 +38,7 @@ import androidx.core.util.Pair
 import androidx.core.view.ScrollingView
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.NestedScrollView
+import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
@@ -972,6 +973,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             fileIndex++
         } while (getDoesFilePathExist(newFile!!.absolutePath))
         return newFile
+    }
+
+    fun getAlternativeFileName(nameWithoutExtension: String, extension: String, parent: String?): String {
+        var fileIndex = 1
+        var newName: String
+        do {
+            newName = String.format("%s(%d).%s", nameWithoutExtension, fileIndex, extension)
+            fileIndex++
+        } while (getDoesFilePathExist("$parent/$newName"))
+        return newName
     }
 
     private fun startCopyMove(

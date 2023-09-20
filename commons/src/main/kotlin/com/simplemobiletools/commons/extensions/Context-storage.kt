@@ -1039,7 +1039,7 @@ fun Context.getFileOutputStreamSync(path: String, mimeType: String, parentDocume
             }
             applicationContext.contentResolver.openOutputStream(uri, "wt")
         }
-        needsStupidWritePermissions(path) -> {
+        needsStupidWritePermissions(path) || isPathOnOTG(path) -> {
             var documentFile = parentDocumentFile
             if (documentFile == null) {
                 if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {

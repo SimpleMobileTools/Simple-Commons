@@ -90,8 +90,9 @@ class CopyMoveTask(
                         mFileCountToCopy--
                         continue
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
-                        val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
-                        newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
+                        val newFile = File(newFileDirItem.path)
+                        val newFileName = activity.getAlternativeFileName(newFile.nameWithoutExtension, newFile.extension, newFile.parent)
+                        newFileDirItem = FileDirItem("${newFile.parent}/$newFileName", newFileName)
                     }
                 }
 
