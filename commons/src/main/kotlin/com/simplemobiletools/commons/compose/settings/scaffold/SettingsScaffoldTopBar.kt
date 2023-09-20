@@ -23,7 +23,7 @@ import com.simplemobiletools.commons.compose.extensions.rememberMutableInteracti
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
-internal fun SettingsScaffoldTopBar(
+fun SettingsScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: String,
     scrolledColor: Color,
@@ -46,7 +46,13 @@ internal fun SettingsScaffoldTopBar(
                 overflow = TextOverflow.Ellipsis
             )
         },
-        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
+        navigationIcon = {
+            SettingsNavigationIcon(
+                goBack = goBack,
+                navigationIconInteractionSource = navigationIconInteractionSource,
+                iconColor = scrolledColor
+            )
+        },
         scrollBehavior = scrollBehavior,
         colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
         modifier = modifier.topAppBarPaddings(),
@@ -55,7 +61,7 @@ internal fun SettingsScaffoldTopBar(
 }
 
 @Composable
-internal fun SettingsScaffoldTopBar(
+fun SettingsScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     scrolledColor: Color,
@@ -70,7 +76,13 @@ internal fun SettingsScaffoldTopBar(
         title = {
             title(scrolledColor)
         },
-        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
+        navigationIcon = {
+            SettingsNavigationIcon(
+                goBack = goBack,
+                navigationIconInteractionSource = navigationIconInteractionSource,
+                iconColor = scrolledColor
+            )
+        },
         scrollBehavior = scrollBehavior,
         colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
         modifier = modifier.topAppBarPaddings(),
@@ -79,7 +91,7 @@ internal fun SettingsScaffoldTopBar(
 }
 
 @Composable
-internal fun SettingsScaffoldTopBar(
+fun SettingsScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     actions: @Composable RowScope.() -> Unit,
@@ -95,7 +107,13 @@ internal fun SettingsScaffoldTopBar(
         title = {
             title(scrolledColor)
         },
-        navigationIcon = { SettingsNavigationIcon(goBack = goBack, navigationIconInteractionSource = navigationIconInteractionSource, iconColor = scrolledColor) },
+        navigationIcon = {
+            SettingsNavigationIcon(
+                goBack = goBack,
+                navigationIconInteractionSource = navigationIconInteractionSource,
+                iconColor = scrolledColor
+            )
+        },
         actions = actions,
         scrollBehavior = scrollBehavior,
         colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
@@ -105,7 +123,7 @@ internal fun SettingsScaffoldTopBar(
 }
 
 @Composable
-private fun topAppBarColors(
+fun topAppBarColors(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color
@@ -116,10 +134,10 @@ private fun topAppBarColors(
 )
 
 @Composable
-internal fun topAppBarInsets() = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
+fun topAppBarInsets() = TopAppBarDefaults.windowInsets.exclude(WindowInsets.navigationBars)
 
 @Composable
-internal fun Modifier.topAppBarPaddings(
+fun Modifier.topAppBarPaddings(
     paddingValues: PaddingValues = WindowInsets.navigationBars.asPaddingValues()
 ): Modifier {
     val layoutDirection = LocalLayoutDirection.current
@@ -131,7 +149,7 @@ internal fun Modifier.topAppBarPaddings(
 }
 
 @Composable
-internal fun SettingsNavigationIcon(
+fun SettingsNavigationIcon(
     modifier: Modifier = Modifier,
     navigationIconInteractionSource: MutableInteractionSource,
     goBack: () -> Unit,
@@ -153,7 +171,7 @@ internal fun SettingsNavigationIcon(
 }
 
 @Composable
-private fun BackIcon(iconColor: Color?) {
+fun BackIcon(iconColor: Color?) {
     if (iconColor == null) {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
