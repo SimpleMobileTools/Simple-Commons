@@ -162,7 +162,7 @@ fun Context.isRestrictedSAFOnlyRoot(path: String): Boolean {
 }
 
 // no need to use DocumentFile if an SD card is set as the default storage
-fun Context.needsStupidWritePermissions(path: String) = !isRPlus() && (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
+fun Context.needsStupidWritePermissions(path: String) = (!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage()) || isPathOnOTG(path)
 
 fun Context.isSDCardSetAsDefaultStorage() = sdCardPath.isNotEmpty() && Environment.getExternalStorageDirectory().absolutePath.equals(sdCardPath, true)
 
