@@ -132,11 +132,11 @@
     <string name="add_blocked_number_helper_text">Anna numero tai kuvio (esim. *12345*, +1*8888) estääksesi kaikki puhelut ja viestit kuvion mukaisista numeroista.</string>
     <string name="must_make_default_caller_id_app">Tuntemattomia numeroita ei voida estää ilman soittajan tunnistusoikeutta.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">Yhteystieto estetty</string>
+    <string name="block_contact_fail">Yhteystietoa ei voitu estää</string>
+    <string name="unblock_contact">Poista yhteystiedon esto</string>
+    <string name="unblock_contact_success">Yhteystiedon esto poistettu</string>
+    <string name="unblock_contact_fail">Yhteystiedon estoa ei voitu poistaa</string>
     <!-- Favorites -->
     <string name="favorites">Suosikit</string>
     <string name="add_favorites">Lisää suosikkeja</string>
@@ -302,7 +302,7 @@
     <string name="select_storage">Valitse tallennustila</string>
     <string name="storage">Varastointi</string>
     <string name="internal">Sisäinen</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Sisäinen tallennustila</string>
     <string name="sd_card">Muistikortti</string>
     <string name="root">Juurihakemisto</string>
     <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin juurihakemisto</string>
@@ -394,7 +394,7 @@
     <string name="unhide_folder">Näytä piilotettu kansio</string>
     <string name="temporarily_show_hidden">Näytä piilotetut väliaikaisesti</string>
     <string name="stop_showing_hidden">Lopeta piilotettujen näyttäminen</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Salli median käyttö</string>
     <string name="maximum_share_reached">Et voi jakaa näin paljoa kerralla</string>
     <string name="empty_and_disable_recycle_bin">Tyhjennä ja poista roskakori käytöstä</string>
     <string name="undo">Kumoa</string>
@@ -419,10 +419,10 @@
     <string name="contact_details">Yhteystiedot</string>
     <string name="add_contact">Lisää yhteystieto</string>
     <string name="wallpapers">Taustat</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Näytä rivinumerot</string>
+    <string name="hide_line_numbers">Piilota rivinumerot</string>
     <string name="sleep_timer">Uniajastin</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Poista esto</string>
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
     <string name="name">Nimen perusteella</string>
@@ -446,7 +446,7 @@
     <string name="full_name">Koko nimi</string>
     <string name="use_custom_sorting">Käytä mukautettua lajittelua</string>
     <string name="change_order">Vaihda järjestystä</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Lisää asetuksia</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Haluatko varmasti jatkaa poistotoimintoon?</string>
     <string name="deletion_confirmation">Haluatko varmasti poistaa %s?</string>
@@ -470,8 +470,9 @@
     <string name="enter_pin">Syötä PIN</string>
     <string name="please_enter_pin">Syötä PIN</string>
     <string name="wrong_pin">Väärä PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN-koodissa tulee olla vähintään 4 numeroa</string>
+    <string name="too_many_incorrect_attempts">Liian monta virheellistä lukituksen avausyritystä.
+\nYritä uudelleen %d sekunnin kuluttua.</string>
     <string name="repeat_pin">Toista PIN</string>
     <string name="pattern">Kuvio</string>
     <string name="insert_pattern">Syötä kuvio</string>
