@@ -89,6 +89,7 @@ class MainActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         setupToolbar(binding.mainToolbar)
+
         AppSideloadedDialog(this) {
 
         }

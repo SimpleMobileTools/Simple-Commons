@@ -4,7 +4,6 @@ import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -24,7 +23,6 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.screens.LinkifyText
 import com.simplemobiletools.commons.compose.screens.stringFromHTML
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.databinding.DialogTextviewBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.getStringsPackageName
@@ -75,7 +73,10 @@ fun AppSideLoadedAlertDialog(
     val context = LocalContext.current
     val url = remember { "https://play.google.com/store/apps/details?id=${context.getStringsPackageName()}" }
     AlertDialog(
-        modifier = Modifier.fillMaxWidth(0.9f),
+        containerColor = dialogContainerColor,
+        modifier = Modifier
+            .dialogWidth
+            .dialogBorder,
         properties = DialogProperties(usePlatformDefaultWidth = false),
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
@@ -94,7 +95,7 @@ fun AppSideLoadedAlertDialog(
                 Text(text = stringResource(id = R.string.cancel))
             }
         },
-        shape = Shapes.medium,
+        shape = dialogShape,
         text = {
             val source = stringResource(id = R.string.sideloaded_app, url)
             LinkifyText(fontSize = 16.sp, removeUnderlines = false) {
@@ -109,6 +110,7 @@ fun AppSideLoadedAlertDialog(
                 fontWeight = FontWeight.Bold,
             )
         },
+        tonalElevation = dialogElevation
     )
 }
 
@@ -116,11 +118,6 @@ fun AppSideLoadedAlertDialog(
 @MyDevices
 private fun AppSideLoadedAlertDialogPreview() {
     AppThemeSurface {
-        AddOrEditBlockedNumberAlertDialog(
-            blockedNumber = null,
-            deleteBlockedNumber = {},
-            addBlockedNumber = {},
-            alertDialogState = rememberAlertDialogState()
-        )
+        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}, onCancelClick = {})
     }
 }
