@@ -15,8 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.dialogs.AddOrEditBlockedNumberAlertDialog
-import com.simplemobiletools.commons.dialogs.AppSideLoadedAlertDialog
+import com.simplemobiletools.commons.dialogs.*
 
 class TestDialogActivity : ComponentActivity() {
 
@@ -24,16 +23,11 @@ class TestDialogActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppThemeSurface {
-                val appSideLoadedDialogState = rememberAlertDialogState().apply {
-                    DialogMember {
-                        AppSideLoadedAlertDialog(onDownloadClick = {}, onCancelClick = {}, alertDialogState = this)
-                    }
-                }
-                val addBlockedNumberDialogState = rememberAlertDialogState().apply {
-                    DialogMember {
-                        AddOrEditBlockedNumberAlertDialog(blockedNumber = null, deleteBlockedNumber = {}, addBlockedNumber = {}, alertDialogState = this)
-                    }
-                }
+                val appSideLoadedDialogState = getAppSideLoadedDialogState()
+                val addBlockedNumberDialogState = getAddBlockedNumberDialogState()
+                val confirmationAdvancedAlertDialogState = getConfirmationAdvancedAlertDialogState()
+                val confirmationAlertDialogState = getConfirmationAlertDialogState()
+                val donateAlertDialogState = getDonateAlertDialogState()
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -44,11 +38,57 @@ class TestDialogActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.padding(top = 16.dp))
                     ShowButton(appSideLoadedDialogState, text = "App side loaded dialog")
                     ShowButton(addBlockedNumberDialogState, text = "Add blocked number")
+                    ShowButton(confirmationAlertDialogState, text = "Confirmation normal")
+                    ShowButton(confirmationAdvancedAlertDialogState, text = "Confirmation advanced")
+                    ShowButton(donateAlertDialogState, text = "Donate")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
         }
     }
+
+    @Composable
+    private fun getDonateAlertDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                DonateAlertDialog(alertDialogState = this)
+            }
+        }
+
+
+    @Composable
+    private fun getConfirmationAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            ConfirmationAlertDialog(alertDialogState = this, callback = {}, dialogTitle = "Some fancy title")
+        }
+    }
+
+    @Composable
+    private fun getAppSideLoadedDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                AppSideLoadedAlertDialog(onDownloadClick = {}, onCancelClick = {}, alertDialogState = this)
+            }
+        }
+
+
+    @Composable
+    private fun getAddBlockedNumberDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                AddOrEditBlockedNumberAlertDialog(blockedNumber = null, deleteBlockedNumber = {}, addBlockedNumber = {}, alertDialogState = this)
+            }
+        }
+
+
+    @Composable
+    private fun getConfirmationAdvancedAlertDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                ConfirmationAdvancedAlertDialog(alertDialogState = this, callback = {})
+            }
+        }
+
 
     @Composable
     private fun ShowButton(appSideLoadedDialogState: AlertDialogState, text: String) {

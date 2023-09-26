@@ -15,7 +15,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
@@ -77,7 +76,7 @@ fun AppSideLoadedAlertDialog(
         modifier = Modifier
             .dialogWidth
             .dialogBorder,
-        properties = DialogProperties(usePlatformDefaultWidth = false),
+        properties = dialogProperties,
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
             TextButton(onClick = {

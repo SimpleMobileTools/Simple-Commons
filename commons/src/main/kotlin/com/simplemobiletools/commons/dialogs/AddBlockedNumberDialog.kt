@@ -2,14 +2,16 @@ package com.simplemobiletools.commons.dialogs
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.*
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
@@ -32,7 +34,7 @@ fun AddOrEditBlockedNumberAlertDialog(
         modifier = Modifier
             .dialogWidth
             .dialogBorder,
-        properties = DialogProperties(usePlatformDefaultWidth = false),
+        properties = dialogProperties,
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
             TextButton(onClick = {
@@ -73,7 +75,7 @@ fun AddOrEditBlockedNumberAlertDialog(
                 supportingText = {
                     Text(
                         text = stringResource(id = R.string.add_blocked_number_helper_text),
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = dialogTextColor
                     )
                 },
                 label = {

@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.compose.theme.LocalTheme
 import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.compose.theme.light_grey_stroke
@@ -30,6 +31,10 @@ val dialogShape get() = Shapes.medium
 val dialogElevation = 0.dp
 val Modifier.dialogWidth: Modifier
     get() = then(Modifier.fillMaxWidth(0.9f))
+
+val dialogProperties get() = DialogProperties(usePlatformDefaultWidth = false)
+
+val dialogTextColor @Composable @ReadOnlyComposable get() = MaterialTheme.colorScheme.onSurface
 
 val Modifier.dialogBorder: Modifier
     @ReadOnlyComposable
