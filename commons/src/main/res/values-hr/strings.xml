@@ -886,7 +886,7 @@
     <string name="upgrade_calendar">Lokalno pohranjene događaje morate migrirati ručno putem izvoza u .ics datoteku, a zatim uvoza. Možete pronaći oba gumba za izvoz/uvoz na izborniku glavnog zaslona.</string>
     <string name="upgraded_from_free_gallery">Zdravo,
 \n
-\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš svoje postavke i favorite, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš svoje postavke i favorite, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati. Time će se spriječiti prikazivanje ovog dijaloga.
 \n
 \nHvala!</string>
     <string name="upgraded_to_pro_gallery">Zdravo,
@@ -896,7 +896,7 @@
 \nHvala!</string>
     <string name="upgraded_from_free">Zdravo,
 \n
-\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš tvoje podatke, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati.
+\nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako ti nadograđena verzija odgovara i ako preuzmeš tvoje podatke, staru besplatnu aplikaciju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare verzije jer ti više neće trebati. Time će se spriječiti prikazivanje ovog dijaloga.
 \n
 \nHvala!</string>
     <string name="upgraded_to_pro">Zdravo,
@@ -908,21 +908,21 @@
 \n
 \nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako želiš preuzeti tvoje lokalno spremljene događaje, to moraš učiniti ručno izvozom u .ics datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare besplatne verzije jer ti više neće trebati.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati kako bi se izbjeglo slučajno pokretanje stare besplatne verzije jer ti više neće trebati. Time će se spriječiti prikazivanje ovog dijaloga.
 \n
 \nHvala!</string>
     <string name="upgraded_from_free_contacts">Zdravo,
 \n
 \nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Tvoje spremljene kontakte u „%s” moraš preuzeti ručno izvozom u .vcf datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati. Time će se spriječiti prikazivanje ovog dijaloga.
 \n
 \nHvala!</string>
     <string name="upgraded_from_free_notes">Zdravo,
 \n
 \nčini se da si upravo nadogradio/la besplatnu verziju aplikacije. Ako želiš preuzeti tvoje lokalno spremljene bilješke, to moraš učiniti ručno izvozom u datoteku u besplatnoj verziji aplikacije i uvozom ovdje putem gornjeg izbornika.
 \n
-\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati.
+\nAko ti postava Pro verzije odgovara, staru besplatnu verziju možeš deinstalirati jer ti više neće trebati. Time će se spriječiti prikazivanje ovog dijaloga.
 \n
 \nHvala!</string>
     <!-- About -->
