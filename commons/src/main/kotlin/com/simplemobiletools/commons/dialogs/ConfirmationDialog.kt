@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -66,6 +67,7 @@ class ConfirmationDialog(
 
 @Composable
 fun ConfirmationAlertDialog(
+    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
     message: String = "",
     messageId: Int = R.string.proceed_with_deletion,
@@ -78,10 +80,9 @@ fun ConfirmationAlertDialog(
 
     androidx.compose.material3.AlertDialog(
         containerColor = dialogContainerColor,
-        modifier = Modifier
-            .dialogWidth
+        modifier = modifier
             .dialogBorder,
-        properties = DialogProperties(usePlatformDefaultWidth = false, dismissOnClickOutside = cancelOnTouchOutside),
+        properties = DialogProperties(dismissOnClickOutside = cancelOnTouchOutside),
         onDismissRequest = {
             alertDialogState.hide()
             callback()
@@ -116,6 +117,7 @@ fun ConfirmationAlertDialog(
         },
         text = {
             Text(
+                modifier = Modifier.fillMaxWidth(),
                 text = message.ifEmpty { stringResource(id = messageId) },
                 fontSize = 16.sp,
                 color = dialogTextColor,

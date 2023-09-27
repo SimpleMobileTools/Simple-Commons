@@ -4,8 +4,8 @@ import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -65,6 +65,7 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
 
 @Composable
 fun AppSideLoadedAlertDialog(
+    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState = rememberAlertDialogState(),
     onDownloadClick: (url: String) -> Unit,
     onCancelClick: () -> Unit
@@ -73,10 +74,8 @@ fun AppSideLoadedAlertDialog(
     val url = remember { "https://play.google.com/store/apps/details?id=${context.getStringsPackageName()}" }
     AlertDialog(
         containerColor = dialogContainerColor,
-        modifier = Modifier
-            .dialogWidth
+        modifier = modifier
             .dialogBorder,
-        properties = dialogProperties,
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
             TextButton(onClick = {
@@ -103,8 +102,9 @@ fun AppSideLoadedAlertDialog(
         },
         title = {
             Text(
-                stringResource(id = R.string.app_corrupt),
-                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.fillMaxWidth(),
+                text = stringResource(id = R.string.app_corrupt),
+                color = dialogTextColor,
                 fontSize = 21.sp,
                 fontWeight = FontWeight.Bold,
             )

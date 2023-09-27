@@ -28,6 +28,8 @@ class TestDialogActivity : ComponentActivity() {
                 val confirmationAdvancedAlertDialogState = getConfirmationAdvancedAlertDialogState()
                 val confirmationAlertDialogState = getConfirmationAlertDialogState()
                 val donateAlertDialogState = getDonateAlertDialogState()
+                val featureLockedAlertDialogState = getFeatureLockedAlertDialogState()
+                val purchaseThankYouAlertDialogState = getPurchaseThankYouAlertDialogState()
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -41,9 +43,24 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(confirmationAlertDialogState, text = "Confirmation normal")
                     ShowButton(confirmationAdvancedAlertDialogState, text = "Confirmation advanced")
                     ShowButton(donateAlertDialogState, text = "Donate")
+                    ShowButton(featureLockedAlertDialogState, text = "Feature Locked")
+                    ShowButton(purchaseThankYouAlertDialogState, text = "Purchase thank you")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
+        }
+    }
+
+    @Composable
+    private fun getPurchaseThankYouAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            PurchaseThankYouAlertDialog(alertDialogState = this)
+        }
+    }
+    @Composable
+    private fun getFeatureLockedAlertDialogState()= rememberAlertDialogState().apply {
+        DialogMember {
+            FeatureLockedAlertDialog(alertDialogState = this, callback = {})
         }
     }
 

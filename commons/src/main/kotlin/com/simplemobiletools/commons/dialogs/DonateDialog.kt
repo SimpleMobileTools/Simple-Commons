@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import android.widget.TextView
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -54,17 +55,19 @@ class DonateDialog(val activity: Activity) {
 }
 
 @Composable
-fun DonateAlertDialog(alertDialogState: AlertDialogState) {
+fun DonateAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier
+) {
     val localContext = LocalContext.current.getActivity()
     val donateIntent = {
         localContext.launchViewIntent(R.string.thank_you_url)
     }
     androidx.compose.material3.AlertDialog(
         containerColor = dialogContainerColor,
-        modifier = Modifier
-            .dialogWidth
+        modifier = modifier
             .dialogBorder,
-        properties = DialogProperties(usePlatformDefaultWidth = false, dismissOnClickOutside = false, dismissOnBackPress = false),
+        properties = DialogProperties(dismissOnClickOutside = false, dismissOnBackPress = false),
         onDismissRequest = {},
         shape = dialogShape,
         tonalElevation = dialogElevation,
@@ -107,7 +110,12 @@ fun DonateAlertDialog(alertDialogState: AlertDialogState) {
         },
         text = {
             val source = stringResource(id = R.string.donate_short)
-            LinkifyText(fontSize = 16.sp, removeUnderlines = false) {
+            LinkifyText(
+                fontSize = 16.sp,
+                removeUnderlines = false,
+                textAlignment = TextView.TEXT_ALIGNMENT_CENTER,
+                modifier = Modifier.fillMaxWidth()
+            ) {
                 stringFromHTML(source)
             }
         }

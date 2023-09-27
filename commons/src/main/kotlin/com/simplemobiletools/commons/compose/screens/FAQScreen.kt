@@ -98,6 +98,7 @@ fun LinkifyText(
     modifier: Modifier = Modifier,
     fontSize: TextUnit = 14.sp,
     removeUnderlines: Boolean = true,
+    textAlignment : Int = TextView.TEXT_ALIGNMENT_TEXT_START,
     text: () -> Spanned
 ) {
     val context = LocalContext.current
@@ -110,6 +111,7 @@ fun LinkifyText(
         textView.setTextColor(textColor.toArgb())
         textView.setLinkTextColor(linkTextColor.toArgb())
         textView.text = text()
+        textView.textAlignment = textAlignment
         textView.textSize = fontSize.value
         textView.movementMethod = LinkMovementMethod.getInstance()
         if (removeUnderlines) {

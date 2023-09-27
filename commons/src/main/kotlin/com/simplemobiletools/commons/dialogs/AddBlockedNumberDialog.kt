@@ -21,6 +21,7 @@ import com.simplemobiletools.commons.models.BlockedNumber
 
 @Composable
 fun AddOrEditBlockedNumberAlertDialog(
+    modifier: Modifier = Modifier,
     blockedNumber: BlockedNumber?,
     alertDialogState: AlertDialogState,
     deleteBlockedNumber: (String) -> Unit,
@@ -31,10 +32,8 @@ fun AddOrEditBlockedNumberAlertDialog(
 
     AlertDialog(
         containerColor = dialogContainerColor,
-        modifier = Modifier
-            .dialogWidth
+        modifier = modifier
             .dialogBorder,
-        properties = dialogProperties,
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
             TextButton(onClick = {
