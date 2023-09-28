@@ -89,7 +89,7 @@ fun PurchaseThankYouAlertDialog(
             }
             LinkifyText(
                 fontSize = 16.sp,
-                removeUnderlines = true,
+                removeUnderlines = false,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 stringFromHTML(text)
