@@ -9,9 +9,12 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.isRTLLayout
 import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
-import java.util.*
 
-class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+class LineColorPicker @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0
+) : LinearLayout(context, attrs, defStyle) {
     private var colorsCount = 0
     private var pickerWidth = 0
     private var stripeWidth = 0

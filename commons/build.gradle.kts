@@ -85,6 +85,7 @@ dependencies {
 
     implementation(libs.bundles.lifecycle)
     implementation(libs.bundles.compose)
+    implementation(libs.compose.view.binding)
     debugImplementation(libs.bundles.compose.preview)
 
     api(libs.joda.time)
