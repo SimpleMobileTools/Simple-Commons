@@ -1,6 +1,7 @@
-package com.simplemobiletools.commons.activities
+package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -16,6 +17,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
+import com.simplemobiletools.commons.extensions.baseConfig
 
 class TestDialogActivity : ComponentActivity() {
 
@@ -30,6 +32,7 @@ class TestDialogActivity : ComponentActivity() {
                 val donateAlertDialogState = getDonateAlertDialogState()
                 val featureLockedAlertDialogState = getFeatureLockedAlertDialogState()
                 val purchaseThankYouAlertDialogState = getPurchaseThankYouAlertDialogState()
+                val lineColorPickerAlertDialogState = getLineColorPickerAlertDialogState()
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -45,9 +48,25 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(donateAlertDialogState, text = "Donate")
                     ShowButton(featureLockedAlertDialogState, text = "Feature Locked")
                     ShowButton(purchaseThankYouAlertDialogState, text = "Purchase thank you")
+                    ShowButton(lineColorPickerAlertDialogState, text = "Line color picker")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
+        }
+    }
+
+    @Composable
+    private fun getLineColorPickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            LineColorPickerAlertDialog(
+                alertDialogState = this,
+                color = baseConfig.customPrimaryColor,
+                isPrimaryColorPicker = true,
+                onButtonPressed = { wasPositivePressed, color ->
+                    Log.d("LineColorPickerAlertDialog", "wasPositivePressed $wasPositivePressed color $color")
+                }, onActiveColorChange = {
+                    Log.d("LineColorPickerAlertDialog", "onActiveColorChange $it")
+                })
         }
     }
 
@@ -57,8 +76,9 @@ class TestDialogActivity : ComponentActivity() {
             PurchaseThankYouAlertDialog(alertDialogState = this)
         }
     }
+
     @Composable
-    private fun getFeatureLockedAlertDialogState()= rememberAlertDialogState().apply {
+    private fun getFeatureLockedAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             FeatureLockedAlertDialog(alertDialogState = this, callback = {})
         }
