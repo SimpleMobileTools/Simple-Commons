@@ -30,12 +30,12 @@ val iconsColor
 
 @Composable
 @ReadOnlyComposable
-fun preferenceSummaryColor(isEnabled: Boolean) =
+fun preferenceValueColor(isEnabled: Boolean) =
     if (isEnabled) textSubTitleColor else disabledTextColor
 
 @Composable
 @ReadOnlyComposable
-fun preferenceTitleColor(isEnabled: Boolean) = if (isEnabled) MaterialTheme.colorScheme.onSurface else disabledTextColor
+fun preferenceLabelColor(isEnabled: Boolean) = if (isEnabled) MaterialTheme.colorScheme.onSurface else disabledTextColor
 
 fun Color.isLitWell(threshold: Float = LUMINANCE_THRESHOLD) = luminance() > threshold
 

@@ -18,8 +18,8 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.preferenceSummaryColor
-import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
+import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
+import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
 @Composable
 fun SettingsCheckBoxComponent(
@@ -57,7 +57,7 @@ fun SettingsCheckBoxComponent(
                     .fillMaxWidth()
                     .padding(end = 16.dp),
                 text = title,
-                color = preferenceTitleColor(isEnabled = isPreferenceEnabled),
+                color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
@@ -68,7 +68,7 @@ fun SettingsCheckBoxComponent(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(end = 16.dp),
-                    color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
+                    color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }
         }

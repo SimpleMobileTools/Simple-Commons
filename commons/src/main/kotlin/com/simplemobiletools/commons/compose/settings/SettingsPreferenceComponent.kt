@@ -17,8 +17,8 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.preferenceSummaryColor
-import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
+import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
+import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
 @Composable
 fun SettingsPreferenceComponent(
@@ -28,8 +28,8 @@ fun SettingsPreferenceComponent(
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
-    preferenceSummaryColor: Color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
-    preferenceTitleColor: Color = preferenceTitleColor(isEnabled = isPreferenceEnabled)
+    preferenceSummaryColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
+    preferenceTitleColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
 ) {
     Column(
         modifier = Modifier
