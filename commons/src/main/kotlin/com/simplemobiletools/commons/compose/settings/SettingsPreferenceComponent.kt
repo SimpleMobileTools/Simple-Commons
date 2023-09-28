@@ -23,8 +23,8 @@ import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
 @Composable
 fun SettingsPreferenceComponent(
     modifier: Modifier = Modifier,
-    preferenceTitle: String,
-    preferenceSummary: String? = null,
+    label: String,
+    value: String? = null,
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
@@ -44,16 +44,16 @@ fun SettingsPreferenceComponent(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = preferenceTitle,
+            text = label,
             modifier = Modifier.fillMaxWidth(),
             color = preferenceTitleColor,
             fontSize = with(LocalDensity.current) {
                 dimensionResource(id = R.dimen.normal_text_size).toSp()
             }
         )
-        AnimatedVisibility(visible = !preferenceSummary.isNullOrBlank()) {
+        AnimatedVisibility(visible = !value.isNullOrBlank()) {
             Text(
-                text = preferenceSummary.toString(),
+                text = value.toString(),
                 modifier = Modifier
                     .fillMaxWidth(),
                 color = preferenceSummaryColor,
@@ -70,8 +70,8 @@ fun SettingsPreferenceComponent(
 private fun SettingsPreferencePreview() {
     AppThemeSurface {
         SettingsPreferenceComponent(
-            preferenceTitle = stringResource(id = R.string.language),
-            preferenceSummary = stringResource(id = R.string.translation_english),
+            label = stringResource(id = R.string.language),
+            value = stringResource(id = R.string.translation_english),
             isPreferenceEnabled = true,
         )
     }

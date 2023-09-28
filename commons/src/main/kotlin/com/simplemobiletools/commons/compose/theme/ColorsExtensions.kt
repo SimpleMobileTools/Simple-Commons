@@ -35,12 +35,6 @@ fun preferenceSummaryColor(isEnabled: Boolean) =
 
 @Composable
 @ReadOnlyComposable
-fun preferenceSummaryColorWithAlpha(isEnabled: Boolean, enabledAlpha: Float = 0.6f, disabledAlpha : Float = 1f) =
-    if (isEnabled) textSubTitleColor.copy(alpha = enabledAlpha) else disabledTextColor.copy(alpha = disabledAlpha)
-
-
-@Composable
-@ReadOnlyComposable
 fun preferenceTitleColor(isEnabled: Boolean) = if (isEnabled) MaterialTheme.colorScheme.onSurface else disabledTextColor
 
 fun Color.isLitWell(threshold: Float = LUMINANCE_THRESHOLD) = luminance() > threshold
