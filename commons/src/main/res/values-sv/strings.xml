@@ -175,19 +175,19 @@
     <string name="no_camera_permissions">Kamerabehörighet krävs</string>
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
     <string name="no_permission">Ingen behörighet</string>
-    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
-    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
-    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
-    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
-    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="permission_required">Permission Required</string>
+    <string name="allow_notifications_reminders">Du måste tillåta att appen visar aviseringar, annars kan den inte visa påminnelser.</string>
+    <string name="allow_full_screen_notifications_reminders">Du måste tillåta att appen visar helskärmsaviseringar, annars kan du missa några påminnelser.</string>
+    <string name="allow_notifications_files">Du måste tillåta att appen visar aviseringar, annars kan den inte visa förloppsindikatorn.</string>
+    <string name="allow_notifications_music_player">Du måste tillåta att appen visar aviseringar, annars kan den inte spela upp låtar.</string>
+    <string name="allow_notifications_voice_recorder">Du måste tillåta att appen visar aviseringar, annars kan den inte spela in ljud.</string>
+    <string name="allow_notifications_incoming_calls">Du måste tillåta att appen visar aviseringar, annars kan den inte visa inkommande samtal.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Du måste tillåta att appen visar helskärmsaviseringar, annars kan du missa några inkommande samtal.</string>
+    <string name="allow_notifications_incoming_messages">Du måste tillåta att appen visar aviseringar, annars kan den inte visa inkommande meddelanden.</string>
+    <string name="allow_alarm_scheduled_messages">Du måste ge appen åtkomst till interna larm, annars kan den inte skicka schemalagda meddelanden.</string>
+    <string name="allow_alarm_sleep_timer">Du måste tillåta att appen kommer åt interna larm, annars kan den inte stänga av applikationen efter insomningstimern.</string>
+    <string name="allow_location_permission">Du måste tillåta att appen kommer åt din plats, annars känner den inte till det.</string>
+    <string name="grant_permission">Tillåt Behörighet</string>
+    <string name="permission_required">Behörighet Krävs</string>
     <!-- Renaming -->
     <string name="rename_file">Byt namn på fil</string>
     <string name="rename_folder">Byt namn på mapp</string>
@@ -243,7 +243,7 @@
     <string name="no_new_items">Inga nya objekt hittades</string>
     <string name="no_space">Otillräckligt med utrymme.
 \nBehövs %1$s, tillgängligt %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Systemtjänst för att välja filer och mappar är inte tillgänglig</string>
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>
     <string name="folder">Mapp</string>
@@ -263,7 +263,7 @@
     <string name="skip">Hoppa över</string>
     <string name="append">Lägg till \'_1\'</string>
     <string name="apply_to_all">Använd på alla konflikter</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Systemet tillåter inte handlingen i den här mappen, vänligen välj en annan</string>
     <string name="system_folder_copy_restriction">Systemet tillåter inte kopiering till denna mapp, välj någon annan</string>
     <string name="rename_in_sd_card_system_restriction">Systemet tillåter inte namnändring i denna mapp</string>
     <string name="rename_internal_system_restriction">Kan inte ändra namn på mappar direkt på det interna lagringsutrymmet, endast undermappar</string>
@@ -275,9 +275,9 @@
     <string name="confirm_folder_access_title">Bekräfta mappåtkomst</string>
     <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärm, för att bevilja skrivrättigheter</string>
     <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text">Vänligen tillåt appen att komma åt den valda lagringen på nästa skärm genom att trycka på \"Använd den här mappen\" längst ned.</string>
+    <string name="confirm_storage_access_android_text_specific">Vänligen tillåt åtkomst till \'<b>%s</b>\' på nästa skärm genom att trycka på \'<b>Använd den här mappen</b>\' längst ned.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Vänligen tryck på \'<b>Spara</b>\' längst ned på nästa skärm för att skapa den nya mappen.</string>
     <string name="confirm_selection">Bekräfta val</string>
     <string name="loading">Läser in…</string>
     <string name="access_storage_prompt">Vänligen ge oss tillgänglighet till dina filer, den kanske inte fungerar väl utan det.</string>
@@ -303,14 +303,13 @@
     <string name="select_storage">Välj lagringsplats</string>
     <string name="storage">Lagringsutrymme</string>
     <string name="internal">Internt</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Intern Lagring</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
     <string name="wrong_root_selected">Du har valt fel mapp, välj rotmappen på ditt SD-kort</string>
     <string name="sd_card_usb_same">SD-kortets och USB-enhetens sökvägar kan inte vara samma</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="app_on_sd_card">Du verkar ha appen installerad på ett SD-kort, vilket gör appwidgetarna otillgängliga. Du kommer inte ens se dem på listan över tillgängliga widgets. Det är en systembegränsning, så om du vill använda widgetarna måste du flytta tillbaka appen till internminnet.</string>
+    <string name="wrong_folder_selected">Fel mapp vald, vänligen välj sökväg \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
     <string name="path">Sökväg</string>
@@ -356,10 +355,9 @@
     <string name="cannot_be_undone">Denna åtgärd kan inte ångras.</string>
     <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
     <string name="apply_to_all_apps">Använd färgerna i alla Simple-appar</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">VARNING: Vissa launchers hanterar inte anpassning av appikoner korrekt. Om ikonen försvinner, försök att starta appen via Google Play eller någon widget, om tillgänglig. När den väl har lanserats, ställ bara tillbaka den orange standardikonen #F57C00. Du kanske måste installera om appen i värsta fall.</string>
     <string name="share_colors_success">Färgerna har uppdaterats. Ett nytt Tema som heter \'Delat\' har lagts till, använd det för att uppdatera alla apparnas färger i framtiden.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Observera att även om du använder Pro-appversionen behöver du fortfarande Simple Thank You av tekniska skäl. Den tar hand om färgsynkroniseringen.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Köp <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> för att låsa upp denna funktion och stödja utvecklingen. Tack!
@@ -395,7 +393,7 @@
     <string name="unhide_folder">Visa mapp</string>
     <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
     <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Tillåt åtkomst till mer media</string>
     <string name="maximum_share_reached">Du kan inte dela så här mycket innehåll på en gång</string>
     <string name="empty_and_disable_recycle_bin">Töm och inaktivera papperskorgen</string>
     <string name="undo">Ångra</string>
@@ -447,7 +445,7 @@
     <string name="full_name">Fullständigt namn</string>
     <string name="use_custom_sorting">Använd anpassad sortering</string>
     <string name="change_order">Ändra ordning</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Fler alternativ</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
     <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>
@@ -471,8 +469,9 @@
     <string name="enter_pin">Ange PIN-kod</string>
     <string name="please_enter_pin">Ange en PIN-kod</string>
     <string name="wrong_pin">Du har angett fel PIN-kod</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN-koden måste vara minst fyra siffror lång</string>
+    <string name="too_many_incorrect_attempts">För många felaktiga upplåsningsförsök.
+\nFörsök igen om %d sekunder.</string>
     <string name="repeat_pin">Upprepa PIN-kod</string>
     <string name="pattern">Mönster</string>
     <string name="insert_pattern">Rita mönster</string>
@@ -482,7 +481,7 @@
     <string name="fingerprint">Fingeravtryck</string>
     <string name="add_fingerprint">Lägg till fingeravtryck</string>
     <string name="place_finger">Placera fingret på fingeravtrycksläsaren</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="open_biometric_dialog">Öppna dialogrutan för verifiering av biometriskt ID</string>
     <string name="authenticate">Autentisera</string>
     <string name="authentication_failed">Autentiseringen misslyckades</string>
     <string name="authentication_blocked">Autentisering blockeras, försök igen om en stund</string>
@@ -493,7 +492,7 @@
     <string name="lock_folder">Lås mapp</string>
     <string name="lock_folder_pro">Lås mapp (Pro)</string>
     <string name="unlock_folder">Lås upp mapp</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder_notice">Detta skydd fungerar bara i den här appen, det är inte tänkt att ersätta en riktig systemomfattande mappkryptering.</string>
     <string name="enter_password">Ange lösenord</string>
     <string name="password">Lösenord</string>
     <string name="add_password">Lägg till lösenord</string>
@@ -635,7 +634,7 @@
     <string name="time_remaining">Återstående tid:\n%s</string>
     <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">Aviseringar för denna applikation är inaktiverade. Gå till dina enhetsinställningar för att aktivera dem.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooza</string>
@@ -679,7 +678,7 @@
     <string name="use_24_hour_time_format">Använd 24-timmarsformat</string>
     <string name="change_date_and_time_format">Ändra datum- och tidsformat</string>
     <string name="sunday_first">Börja veckan på söndag</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Börja veckan på</string>
     <string name="widgets">Widgetar</string>
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
     <string name="snooze_time">Snooze-intervall</string>
@@ -741,7 +740,7 @@
     <string name="show_the_recycle_bin">Visa papperskorgen</string>
     <string name="hide_the_recycle_bin">Dölj papperskorgen</string>
     <string name="open_the_recycle_bin">Öppna papperskorgen</string>
-    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
+    <string name="skip_the_recycle_bin">Hoppa över papperskorgen, radera filer direkt</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flyttar %d objekt till papperskorgen</item>
         <item quantity="other">Flyttar %d objekt till papperskorgen</item>
@@ -771,7 +770,7 @@
 \n%s - sekund</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Du verkar ha en USB-enhet ansluten till din enhet. För att se till att dess filer visas korrekt måste du ge ytterligare behörigheter.</string>
     <string name="confirm_usb_storage_access_text">Välj rotmappen på USB-enheten på nästa skärm, för att ge åtkomst</string>
     <string name="wrong_root_selected_usb">Du har valt fel mapp, välj rotmappen på din USB-enhet</string>
     <!-- Dates -->
@@ -846,13 +845,21 @@
 \nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina inställningar och favoriter över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hejsan,
+\n
+\nDet verkar som att du redan har Pro-appversionen också. När du är nöjd med det och kanske migrerat dina inställningar och favoriter över, kan du avinstallera den här för att undvika att starta den av misstag eftersom du inte behöver den längre.
+\n
+\nTack!</string>
     <string name="upgraded_from_free">Hallå,
 \n
 \nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina data över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro">Hejsan,
+\n
+\nDet verkar som att du redan har Pro-appversionen också. När du är nöjd med det och kanske migrerat dina data över, kan du avinstallera den här för att undvika att starta den av misstag eftersom du inte behöver den längre.
+\n
+\nTack!</string>
     <string name="upgraded_from_free_calendar">Hallå,
 \n
 \nDet verkar som att du precis har uppgraderat från gratisversionen. Om du vill migrera dina lokalt lagrade händelser över måste du göra det manuellt genom att exportera dem till en .ics-fil i gratisappversionen och importera hit via toppmenyn.
@@ -919,11 +926,19 @@
     <string name="make_sure_upgrade">Notera att denna appversionen inte utvecklas längre, skaffa Pro-versionen för förbättringar istället.</string>
     <string name="read_it">Läs</string>
     <string name="read_faq">Läs FAQ</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Hejsan,
+\n
+\ndet ser ut som att du har använt den här appen ett bra tag redan, och vi uppskattar det verkligen.
+\n
+\nOm vi kan be dig om en tjänst, vänligen betygsätt oss på Google Play. Det skulle verkligen hjälpa oss mycket.
+\n
+\nOavsett hur du bestämmer dig kommer du inte att se det här meddelandet igen.
+\n
+\nTack!</string>
     <string name="rate_our_app">Betygsätt vår app :)</string>
     <string name="thank_you">Tack</string>
     <string name="widget_locked_pro">Widgeten är låst.\nUppgradera till Pro-versionen för att låsa upp den.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Den här funktionen är låst, köp &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Enkelt Tack&lt;/a&gt; för att du låser upp hela appen.&lt;br &gt;&lt;br&gt;Det är endast en engångsbetalning och om du inte blir nöjd kan vi återbetala dig.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -937,31 +952,31 @@
         ]]>
     </string>
     <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simpel kalkylator</string>
-    <string name="simple_calendar">Simpel kalender</string>
-    <string name="simple_camera">Simpel kamera</string>
-    <string name="simple_clock">Simpel klocka</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calendar">Simple Calendar</string>
+    <string name="simple_camera">Simple Camera</string>
+    <string name="simple_clock">Simple Clock</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simpel telefon</string>
+    <string name="simple_dialer">Simple Dialer</string>
     <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simpel filhanterare</string>
-    <string name="simple_flashlight">Simpel ficklampa</string>
-    <string name="simple_gallery">Simpelt galleri</string>
-    <string name="simple_keyboard">Simpelt tangentbord</string>
-    <string name="simple_launcher">Simpelt startprogram</string>
-    <string name="simple_music_player">Simpel musikspelare</string>
+    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_flashlight">Simple Flashlight</string>
+    <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
+    <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simpelt tack</string>
-    <string name="simple_voice_recorder">Simpel röstinspelare</string>
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="app_launcher_short">Programstartare</string>
     <string name="calculator_short">Kalkylator</string>
     <string name="calendar_short">Kalender</string>
     <string name="camera_short">Kamera</string>
     <string name="clock_short">Klocka</string>
     <string name="contacts_short">Kontakter</string>
     <string name="dialer_short">Telefon</string>
-    <string name="draw_short">Rita</string>
+    <string name="draw_short">Teckna</string>
     <string name="file_manager_short">Filhanterare</string>
     <string name="flashlight_short">Ficklampa</string>
     <string name="gallery_short">Galleri</string>
@@ -969,60 +984,39 @@
     <string name="launcher_short">Startprogram</string>
     <string name="music_player_short">Musikspelare</string>
     <string name="notes_short">Anteckningar</string>
-    <string name="sms_messenger_short">Sms</string>
+    <string name="sms_messenger_short">Meddelanden</string>
     <string name="thank_you_short">Tack</string>
     <string name="voice_recorder_short">Röstinspelare</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
-        ]]>
-    </string>
+    <string name="sideloaded_app">Det verkar som om din appversion är korrupt. Ladda ner originalversionen &lt;a href=%s&gt;här&lt;/a&gt;.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frågor och svar</string>
     <string name="before_asking_question">Innan du ställer en fråga, läs först</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_1_title_commons">Hur kommer det sig att jag inte ser den här appwidgeten på listan över widgets\?</string>
+    <string name="faq_1_text_commons">Det beror mest troligt på att du flyttade appen på ett SD-kort. Det finns en Android-systembegränsning som döljer de givna appwidgetarna i så fall. Den enda lösningen är att flytta appen tillbaka till den interna lagringen via dina enhetsinställningar.</string>
+    <string name="faq_2_title_commons">Jag vill stödja dig, men jag kan inte donera pengar. Finns det något annat jag kan göra\?</string>
+    <string name="faq_2_text_commons">Ja självklart. Du kan sprida ordet om apparna eller ge bra feedback och betyg. Du kan också hjälpa till genom att översätta apparna till ett nytt språk, eller bara uppdatera några befintliga översättningar. Guiden för att översätta finns på &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;denna webbplats&lt;/a&gt;, eller kontakta oss bara på &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; om du har några frågor.</string>
+    <string name="faq_3_title_commons">Jag raderade några filer av misstag, hur kan jag återställa dem\?</string>
+    <string name="faq_3_text_commons">Tyvärr kan du inte. Filer raderas direkt efter bekräftelsedialogrutan, det finns ingen papperskorg tillgänglig.</string>
+    <string name="faq_4_title_commons">Jag gillar inte widgetfärgerna, kan jag ändra dem\?</string>
+    <string name="faq_4_text_commons">Jadå, när du drar en widget på din startskärm visas en widgetkonfigurationsskärm. Du kommer att se färgade rutor i det nedre vänstra hörnet, tryck bara på dem för att välja en ny färg. Du kan också använda skjutreglaget för att justera alfa.</string>
+    <string name="faq_5_title_commons">Kan jag på något sätt återställa raderade filer\?</string>
+    <string name="faq_5_text_commons">Om de verkligen raderades kan du inte. Men det finns en papperskorg aktiverad som standard, det kommer att göra att filerna bara flyttas till papperskorgen istället för att radera dem.</string>
+    <string name="faq_6_title_commons">Appstartikonen försvann. Vad kan jag göra\?</string>
+    <string name="faq_6_text_commons">Det orsakas av att din launcher inte stöder ikonanpassning på rätt sätt. Testa att starta appen via Google Play eller någon widget, om tillgänglig. När den väl har lanserats, ställ bara tillbaka den orange standardikonen #F57C00. Du kanske måste installera om appen i värsta fall.</string>
+    <string name="faq_7_title_commons">Pengarna har dragits från mitt bankkonto, men jag kan inte ladda ner appen. Vad kan jag göra\?</string>
+    <string name="faq_7_text_commons">Betalningar hanteras till fullo av Google, deras system har fel då och då. Rensa bara Google Play-appens cache och starta om enheten och försök sedan ladda ner den igen.</string>
+    <string name="faq_8_title_commons">Varför ska jag uppgradera till Pro-versionen\?</string>
+    <string name="faq_8_text_commons">Eftersom din appversion inte längre är uppdaterad kommer de buggar du kanske har upptäckt aldrig att fixas. Det kommer inte heller att läggas till några nya funktioner. Du kan köpa Pro-versionen på Google Play för en liten summa pengar. Det är en engångsbetalning, vilket innebär att när du väl köpt den behöver du aldrig betala igen. Inte ens efter att ha skaffat en ny enhet. Om du inte gillar Pro-versionen kan du bara avinstallera den inom några timmar så får du automatiskt tillbaka dina pengar. Om du vill ha en återbetalning när som helst senare, kontakta oss bara på hello@simplemobiletools.com så får du det.</string>
+    <string name="faq_9_title_commons">Hur kan jag välja flera objekt samtidigt\?</string>
+    <string name="faq_9_text_commons">Det finns flera sätt att göra det på. Den första är att starta valläget genom att trycka länge på ett objekt, sedan kortklicka på andra för att välja dem. Det andra sättet liknar att välja objekt på datorer med en mus, starta bara valläget genom att trycka länge på ett objekt, och sedan med fingret nedåt och dra det över andra objekt för att välja. Det tredje sättet att välja flera objekt är att länge trycka på ett objekt, sedan länge på ett annat och allt däremellan väljs. Om du vill markera alla objekt, tryck bara länge på ett objekt och klicka sedan på den valda objekträknaren i det övre vänstra hörnet. Det kommer att välja eller avmarkera allt.</string>
+    <string name="faq_10_title_commons">Jag har köpt appen, men jag kan inte ladda ner den på en annan enhet.</string>
+    <string name="faq_10_text_commons">Testa att rensa Google Play-appens cacheminne och starta om enheten. Det är något Google Play-fel, inte riktigt relaterat till själva appen.</string>
     <!-- Contributors -->
     <string name="contributors">Bidragsgivare</string>
     <string name="translation">Översättning</string>
     <string name="development">Utveckling</string>
     <string name="other_help">Annan hjälp</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label">Den här listan innehåller alla som märkbart hjälpt någon app i Simple Mobile Tools-sviten, inte bara den här. Översättningar hanteras av volontärer, låt oss veta om du också vill hjälpa till. Guiden för att översätta finns på &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;denna webbplats&lt;/a&gt;, eller kontakta oss bara på &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; om du har några frågor. Tack till alla bidragsgivare och andra supportrar!</string>
     <string name="translation_arabic">Arabiska</string>
     <string name="translation_azerbaijani">Azerbajdzjanska</string>
     <string name="translation_bengali">Bengali</string>
@@ -1069,47 +1063,47 @@
     <string name="translation_chinese_cn">Kinesiska (förenklad)</string>
     <string name="translation_chinese_tw">Kinesiska (traditionell)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">Skaffa Pro-versionen nu!</string>
+    <string name="why_upgrade_basic_version">Enkel</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_no_ads">Ingen reklam</string>
+    <string name="why_upgrade_no_internet_access">Ingen internetuppkoppling</string>
+    <string name="why_upgrade_footer">100 % pengarna tillbaka-garanti</string>
+    <string name="why_upgrade_footer_one_time_payment">Engångsbetalning</string>
+    <string name="why_upgrade_improved_design">Förbättrad design</string>
+    <string name="why_upgrade_many_other_improvements">Många andra förbättringar</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor">Avancerad fotoredigerare</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Avancerad foto- och videoredigerare</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF filstöd</string>
+    <string name="why_upgrade_batch_renaming">Avancerat mass-namnbyte</string>
+    <string name="why_upgrade_folder_locking">Individuell mapplåsning</string>
+    <string name="why_upgrade_printing_support">Utskriftsstöd</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Stöd för tidszon</string>
+    <string name="why_upgrade_attendees_emails">Deltagare och e-postpåminnelser</string>
+    <string name="why_upgrade_easy_event_importing">Enkel händelseimport</string>
+    <string name="why_upgrade_new_widgets">Nya widgetar</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_duplicate_contact_merging">Förbättrad sammanslagning av dubbletter av kontakter</string>
+    <string name="why_upgrade_font_size_customization">Anpassning av teckenstorlek</string>
+    <string name="why_upgrade_private_contact_sharing">Valfri privat kontaktdelning i våra appar</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Anpassningsbara kontaktringsignaler</string>
+    <string name="why_upgrade_contact_filtering">Kontaktfiltrering</string>
+    <string name="why_upgrade_contact_private_contacts">Privat lagrade kontakter</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Checklistor</string>
+    <string name="why_upgrade_different_note_per_widget">Olika anteckningar och färger per widget</string>
+    <string name="why_upgrade_note_locking">Anteckningslås</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
+    <string name="why_upgrade_date_and_time_format">Anpassning av datum- och tidsformat</string>
+    <string name="why_upgrade_shortcuts">Genvägar på startskärmen</string>
+    <string name="why_upgrade_file_compression">Stöd för filkomprimering</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_background_color_customization">Anpassning av bakgrundsfärg</string>
+    <string name="why_upgrade_file_importing">Stöd för filimport</string>
+    <string name="why_upgrade_zooming">Zoomning</string>
     <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
@@ -1132,37 +1126,44 @@
     <string name="gson_title">Gson (JSON-parser)</string>
     <string name="leak_canary_title">Leak Canary (minnesläckagedetektor)</string>
     <string name="number_picker_title">Number Picker (anpassningsbar talväljare)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="exoplayer_title">ExoPlayer (video spelare)</string>
+    <string name="panorama_view_title">VR Panorama View (visar panoramabilder)</string>
+    <string name="sanselan_title">Apache Sanselan (läser bildmetadata)</string>
+    <string name="filters_title">Android Photo Filter (bildfilter)</string>
+    <string name="gesture_views_title">Gestvyer (zoombara bilder)</string>
+    <string name="indicator_fast_scroll_title">Indikator Fast Scroll (bokstäver på rullningslisten)</string>
+    <string name="event_bus_title">Event Bus (kommunikation i appen)</string>
+    <string name="audio_record_view_title">Audio Record View (ljudvisualisering)</string>
+    <string name="sms_mms_title">SMS MMS (SMS och MMS hantering)</string>
+    <string name="apng_title">APNG Android (animerat WebP-stöd)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF-visare)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF-visare)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u spellista filhantering)</string>
+    <string name="android_lame_title">Android Lame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP-komprimering och dekompression)</string>
     <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_expired">Prövotiden har löpt ut</string>
+    <string name="start_free_trial">Starta gratis prövotid</string>
+    <string name="trial_expires_soon">Din prövotid tar snart slut.</string>
+    <string name="unlock_for_one_final_day">Lås upp appen för en sista dag</string>
+    <string name="welcome_to_app_name">Välkommen till %s!</string>
+    <string name="trial_start_description">Tack för att du använder vår app. Du kan använda den här olåsta versionen i <font color="#FFFFFF">%d dagar</font>. När testperioden är slut, överväg att uppgradera till Pro-versionen. Den har en enorm mängd nya funktioner, modern design, inga annonser och många andra förbättringar.
+\n
+\nDu behöver bara betala för det en gång i livet och om du inte blir nöjd kan du avinstallera det och få en återbetalning.
+\n
+\nHoppas du kommer att gilla det :)</string>
+    <string name="trial_end_description">Uppgradera till Pro-versionen för att njuta av appen till fullo.
+\n
+\nDu behöver bara betala för det en gång i livet och om du inte blir nöjd kan du avinstallera det och få en återbetalning.
+\n
+\nVi ses där :)</string>
     <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+        <item quantity="one">Din prövotid tar slut om %d dag.</item>
+        <item quantity="other">Din prövotid tar slut om %d dagar.</item>
     </plurals>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">UTGÅNGEN: Denna version av appen underhålls inte längre, hämta Pro-versionen på https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Glöm inte att om du avinstallerar någon betalapp inom 2 timmar kommer du automatiskt att få en återbetalning. Om du vill ha en återbetalning när som helst senare, kontakta oss bara på hello@simplemobiletools.com så får du det. Det gör det enkelt att testa :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">En mängd enkla, öppen källkod Android appar med anpassningsbara widgets, inga annonser eller onödiga behörigheter.</string>
 </resources>

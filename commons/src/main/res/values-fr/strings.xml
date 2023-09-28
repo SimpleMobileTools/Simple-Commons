@@ -175,7 +175,7 @@
     <!-- Permissions -->
     <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est nécessaire</string>
     <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est nécessaire</string>
-    <string name="no_camera_permissions">L\'autorisation d\'accès à la caméra est nécessaire</string>
+    <string name="no_camera_permissions">L\'autorisation d\'accès à l\'objectif photo-vidéo est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audio est nécessaire</string>
     <string name="no_permission">Aucune autorisation</string>
     <string name="allow_notifications_reminders">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher de rappels.</string>
@@ -367,7 +367,7 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos modifications \?</string>
     <string name="cannot_be_undone">Cette action ne peut pas être annulée.</string>
     <string name="save_before_closing">Certaines modifications ne sont pas enregistrées. Voulez-vous les enregistrer avant de quitter \?</string>
-    <string name="apply_to_all_apps">Appliquer les couleurs à l\'ensemble de la suite d\'applications « Simple »</string>
+    <string name="apply_to_all_apps">Appliquer les couleurs à l\'ensemble de la suite d\'applications « simple »</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes des applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou d\'un quelconque widget, si disponible. Une fois lancée, paramétrez simplement l\'icône orange par défaut avec la valeur RGB suivante : #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
     <string name="share_colors_success">Actualisation des couleurs réussie. Un nouveau thème nommé « Partagé » a été ajouté. Veuillez utiliser dorénavant ce thème pour actualiser les couleurs de toutes les applications.</string>
     <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version « Pro » de l\'application, pour des raisons techniques, vous aurez toujours besoin de l\'application « Merci simple », puisqu\'elle gère la synchronisation des couleurs.</string>
@@ -939,7 +939,7 @@
     <string name="donate">Faire un don</string>
     <string name="follow_us">Suivez-nous</string>
     <string name="copyright">v. %1$s
-\nDroits d\'auteur © Simple Mobile Tools %2$d</string>
+\nDroits d\'auteur © Outils mobiles simples %2$d</string>
     <string name="support">Assistance</string>
     <string name="help_us">Aidez-nous</string>
     <string name="social">Réseaux sociaux</string>
@@ -951,42 +951,41 @@
     <string name="additional_info">Informations supplémentaires</string>
     <string name="app_version">Version de l\'application : %s</string>
     <string name="device_os">Système d\'exploitation de l\'appareil : %s</string>
-    <string name="donate_please">Bonjour,&lt;br&gt;&lt;br&gt; Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Cela nous permettra également de ne plus vous afficher cette fenêtre.&lt;br&gt;&lt;br&gt; Merci !</string>
-    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;J\'espère que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas non plus vos données, soutenez son développement en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. Vous aurez également toutes les fonctionnalités de l\'appli y compris la personnalisation des couleurs débloquées.&lt;br&gt;&lt;br&gt;Merci !</string>
-    <string name="donate_short">Soutenez-nous en achetant &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; s\'il vous plaît, cela débloquera également toutes les fonctionnalités de l\'application y compris la personnalisation des couleurs.</string>
+    <string name="donate_please">Bonjour,&lt;br&gt;&lt;br&gt; Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.&lt;br&gt;&lt;br&gt; Merci !</string>
+    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas vos données personnelles. Vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.&lt;br&gt;&lt;br&gt;Merci !</string>
+    <string name="donate_short">Soutenez-nous s\'il vous plaît en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.</string>
     <string name="purchase">Acheter</string>
-    <string name="get_simple_phone">Commander un Simple Phone</string>
-    <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
-    <string name="before_asking_question_read_faq">Avant de poser une question, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
-    <string name="before_rate_read_faq">Avant de nous évaluer, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez des problèmes, il est possible que la solution s\'y trouve.</string>
-    <string name="make_sure_latest">Assurez-vous également que vous utilisez la version la plus récente de l\'application.</string>
-    <string name="make_sure_upgrade">Notez également que cette version de l\'application n\'est plus développée. Procurez-vous la version Pro pour bénéficier de nombreuses améliorations.</string>
-    <string name="read_it">Consulter</string>
-    <string name="read_faq">Lire la FAQ</string>
-    <string name="rate_us_prompt">Bonjour,\n\nil semblerait que vous utilisez cette application depuis un certain temps et nous vous en remercions.\n\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur Google Play. Cela nous aiderait beaucoup.\n\nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.\n\nMerci d\'avance !</string>
+    <string name="get_simple_phone">Commander un « Smartphone simple »</string>
+    <string name="update_thank_you">Veuillez mettre à jour l\'application « Merci simple »</string>
+    <string name="before_asking_question_read_faq">Avant de poser une question, veuillez tout d\'abord vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
+    <string name="before_rate_read_faq">Avant de nous évaluer, veuillez tout d\'abord vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez un problème, il est possible que la solution s\'y trouve.</string>
+    <string name="make_sure_latest">Assurez-vous également d\'utiliser la version la plus récente de l\'application.</string>
+    <string name="make_sure_upgrade">Notez également que cette version de l\'application n\'est plus développée. Procurez-vous la version « Pro » pour bénéficier de nombreuses améliorations.</string>
+    <string name="read_it">Consultez-la</string>
+    <string name="read_faq">Consulter la FAQ</string>
+    <string name="rate_us_prompt">Bonjour,
+\n
+\nIl semble que vous utilisez cette application depuis un certain temps déjà et nous vous en remercions.
+\n
+\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur « Google Play ». Cela nous aiderait beaucoup.
+\n
+\nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.
+\n
+\nMerci d\'avance !</string>
     <string name="rate_our_app">Merci d\'évaluer notre application :)</string>
     <string name="thank_you">Merci</string>
-    <string name="widget_locked_pro">Le widget est verrouillé.\nVeuillez passer à la version Pro pour le déverrouiller.</string>
-    <string name="features_locked">Cette fonctionnalité est verrouillée, achetez &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; pour déverrouiller l\'application complète.&lt;br&gt;&lt;br&gt;C\'est un paiement unique et si vous n\'êtes pas satisfait·e, nous pouvons vous rembourser.</string>
+    <string name="widget_locked_pro">Le widget est verrouillé.
+\nVeuillez passer à la version « Pro » pour le déverrouiller.</string>
+    <string name="features_locked">Cette fonctionnalité est verrouillée. Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt; pour déverrouiller toutes les fonctionnalités.&lt;br&gt;&lt;br&gt;Il s\'agit d\'un paiement unique et nous vous rembourserons en cas d\'insatisfaction.</string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">
-        <![CDATA[
-            Bonjour,<br><br>
-            Une nouvelle application a été publiée récemment :<br><br>
-            <a href="%1$s">%2$s</a><br><br>
-            <a href="%3$s">%4$s</a><br><br>
-            <a href="%5$s">%6$s</a><br><br>
-            Vous pouvez la télécharger en appuyant sur son titre.<br><br>
-            Merci
-        ]]>
-    </string>
+    <string name="new_app">Bonjour,&lt;br&gt;&lt;br&gt; Nous vous informons que de nouvelles applications ont été publiées récemment :&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Vous pouvez les télécharger en appuyant sur leurs titres ou icônes.&lt;br&gt;&lt;br&gt; Merci</string>
     <string name="simple_app_launcher">Lanceur d\'applications simple</string>
     <string name="simple_calculator">Calculatrice simple</string>
-    <string name="simple_calendar">Calendrier simple</string>
+    <string name="simple_calendar">Agenda simple</string>
     <string name="simple_camera">Appareil photo simple</string>
     <string name="simple_clock">Horloge simple</string>
-    <string name="simple_contacts">Contacts simple</string>
-    <string name="simple_dialer">Clavier de téléphone simple</string>
+    <string name="simple_contacts">Contacts simples</string>
+    <string name="simple_dialer">Téléphone simple</string>
     <string name="simple_draw">Dessin simple</string>
     <string name="simple_file_manager">Gestionnaire de fichiers simple</string>
     <string name="simple_flashlight">Lampe de poche simple</string>
@@ -994,17 +993,17 @@
     <string name="simple_keyboard">Clavier simple</string>
     <string name="simple_launcher">Lanceur simple</string>
     <string name="simple_music_player">Lecteur de musique simple</string>
-    <string name="simple_notes">Notes simple</string>
+    <string name="simple_notes">Notes simples</string>
     <string name="simple_sms_messenger">Messagerie SMS simple</string>
     <string name="simple_thank_you">Merci simple</string>
     <string name="simple_voice_recorder">Enregistreur vocal simple</string>
     <string name="app_launcher_short">Lanceur d\'applications</string>
     <string name="calculator_short">Calculatrice</string>
-    <string name="calendar_short">Calendrier</string>
+    <string name="calendar_short">Agenda</string>
     <string name="camera_short">Appareil photo</string>
     <string name="clock_short">Horloge</string>
     <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Clavier de téléphone</string>
+    <string name="dialer_short">Téléphone</string>
     <string name="draw_short">Dessin</string>
     <string name="file_manager_short">Gestionnaire de fichiers</string>
     <string name="flashlight_short">Lampe de poche</string>
@@ -1016,17 +1015,13 @@
     <string name="sms_messenger_short">Messagerie SMS</string>
     <string name="thank_you_short">Merci</string>
     <string name="voice_recorder_short">Enregistreur vocal</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            La version de votre application semble corrompue. Merci de télécharger la version originale <a href="%s">ici</a>.
-        ]]>
-    </string>
+    <string name="sideloaded_app">La version de votre application semble corrompue. Merci de télécharger la version originale en suivant &lt;a href=%s&gt;ce lien&lt;/a&gt;.</string>
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Foire aux questions (FAQ)</string>
-    <string name="before_asking_question">Avant de poser une question, consultez d\'abord la</string>
-    <string name="faq_1_title_commons">Pourquoi ne vois-je pas les widgets de cette application dans la liste des widgets ?</string>
-    <string name="faq_1_text_commons">Probablement parce que l\'application a été déplacée sur la carte SD. Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette application dans ce cas. La seule solution consiste à déplacer l\'application vers le stockage interne depuis les paramètres système.</string>
-    <string name="faq_2_title_commons">Je voudrais vous apporter mon soutien, mais je ne peux pas vous donner de l\'argent. Y a-t-il autre chose que je puisse faire ?</string>
+    <string name="frequently_asked_questions">Foire aux questions</string>
+    <string name="before_asking_question">Avant de poser une question, veuillez tout d\'abord consulter la</string>
+    <string name="faq_1_title_commons">Comment se fait-il que je ne vois pas ce widget d\'applications dans la liste des widgets \?</string>
+    <string name="faq_1_text_commons">C\'est probablement parce que vous avez déplacé l\'application sur une carte SD. Dans ce cas, il existe une limitation du système Android qui masque les widgets des applications concernées. La seule solution consiste à déplacer l\'application vers le stockage interne via les paramètres de votre appareil.</string>
+    <string name="faq_2_title_commons">Je souhaiterais vous apporter mon soutien, mais je ne peux pas vous donner d\'argent. Y a-t-il autre chose que je puisse faire \?</string>
     <string name="faq_2_text_commons">Oui, bien sûr. Vous pouvez faire connaître les applications ou donner de bons commentaires et des évaluations. Vous pouvez également aider en traduisant les apps dans une nouvelle langue, ou simplement mettre à jour certaines traductions existantes. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si vous avez des questions.</string>
     <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreur. Comment les récupérer ?</string>
     <string name="faq_3_text_commons">C\'est malheureusement impossible, car les fichiers sont supprimés instantanément après l\'apparition de la fenêtre de confirmation et il n\'y a pas de corbeille.</string>
@@ -1054,7 +1049,7 @@
     <string name="translation">Traduction</string>
     <string name="development">Développement</string>
     <string name="other_help">Autre aide</string>
-    <string name="contributors_label">Cette liste contient toutes les personnes qui ont aidé de manière notable une application de la suite Simple Mobile Tools, et pas seulement celle-ci. Les traductions sont gérées par des bénévoles, faites-nous savoir si vous voulez aider aussi. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si vous avez des questions. Merci à tous les contributeurs et autres soutiens !</string>
+    <string name="contributors_label">Cette liste contient toutes les personnes qui ont aidé de manière notable une application de la suite bureautique « Outils mobiles simples », et pas seulement celle-ci. Les traductions sont gérées par des bénévoles, faites-nous savoir si vous voulez aider aussi. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si vous avez des questions. Merci à tous les contributeurs et autres soutiens !</string>
     <string name="translation_arabic">Arabe</string>
     <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>
