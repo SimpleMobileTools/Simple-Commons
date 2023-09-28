@@ -24,7 +24,7 @@ val dialogContainerColor
         else -> MaterialTheme.colorScheme.surface
     }
 
-val dialogShape get() = Shapes.medium
+val dialogShape get() = Shapes.large
 
 val dialogElevation = 0.dp
 
@@ -34,7 +34,7 @@ val Modifier.dialogBorder: Modifier
     @ReadOnlyComposable
     @Composable get() =
         when (LocalTheme.current) {
-            is Theme.BlackAndWhite -> then(Modifier.border(1.dp, light_grey_stroke, Shapes.medium))
+            is Theme.BlackAndWhite -> then(Modifier.border(1.dp, light_grey_stroke, dialogShape))
             else -> Modifier
         }
 
