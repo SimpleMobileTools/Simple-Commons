@@ -26,14 +26,6 @@ class TestDialogActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppThemeSurface {
-                val appSideLoadedDialogState = getAppSideLoadedDialogState()
-                val addBlockedNumberDialogState = getAddBlockedNumberDialogState()
-                val confirmationAdvancedAlertDialogState = getConfirmationAdvancedAlertDialogState()
-                val confirmationAlertDialogState = getConfirmationAlertDialogState()
-                val donateAlertDialogState = getDonateAlertDialogState()
-                val featureLockedAlertDialogState = getFeatureLockedAlertDialogState()
-                val purchaseThankYouAlertDialogState = getPurchaseThankYouAlertDialogState()
-                val lineColorPickerAlertDialogState = getLineColorPickerAlertDialogState()
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -42,14 +34,15 @@ class TestDialogActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Spacer(modifier = Modifier.padding(top = 16.dp))
-                    ShowButton(appSideLoadedDialogState, text = "App side loaded dialog")
-                    ShowButton(addBlockedNumberDialogState, text = "Add blocked number")
-                    ShowButton(confirmationAlertDialogState, text = "Confirmation normal")
-                    ShowButton(confirmationAdvancedAlertDialogState, text = "Confirmation advanced")
-                    ShowButton(donateAlertDialogState, text = "Donate")
-                    ShowButton(featureLockedAlertDialogState, text = "Feature Locked")
-                    ShowButton(purchaseThankYouAlertDialogState, text = "Purchase thank you")
-                    ShowButton(lineColorPickerAlertDialogState, text = "Line color picker")
+                    ShowButton(getAppSideLoadedDialogState(), text = "App side loaded dialog")
+                    ShowButton(getAddBlockedNumberDialogState(), text = "Add blocked number")
+                    ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
+                    ShowButton(getConfirmationAdvancedAlertDialogState(), text = "Confirmation advanced")
+                    ShowButton(getDonateAlertDialogState(), text = "Donate")
+                    ShowButton(getFeatureLockedAlertDialogState(), text = "Feature Locked")
+                    ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
+                    ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
+                    ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
@@ -75,6 +68,13 @@ class TestDialogActivity : ComponentActivity() {
     private fun getPurchaseThankYouAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             PurchaseThankYouAlertDialog(alertDialogState = this)
+        }
+    }
+
+    @Composable
+    private fun getCallConfirmationAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CallConfirmationAlertDialog(alertDialogState = this, callee = "Simple Mobile Tools", callback = {})
         }
     }
 

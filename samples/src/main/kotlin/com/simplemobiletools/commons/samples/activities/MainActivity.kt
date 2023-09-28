@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
+import com.simplemobiletools.commons.dialogs.CallConfirmationDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
@@ -87,5 +88,8 @@ class MainActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         setupToolbar(binding.mainToolbar)
+        CallConfirmationDialog(this, callee = "Simple Mobile Tools"){
+
+        }
     }
 }
