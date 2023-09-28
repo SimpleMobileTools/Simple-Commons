@@ -55,7 +55,7 @@ fun SettingsPreferenceComponent(
                 text = preferenceSummary.toString(),
                 modifier = Modifier
                     .fillMaxWidth(),
-                color = preferenceSummaryColor.copy(alpha = 0.6f),
+                color = preferenceSummaryColor,
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
