@@ -57,10 +57,6 @@
             android:exported="false"
             android:label="@string/manage_blocked_numbers" />
 
-        <activity
-            android:name="com.simplemobiletools.commons.samples.activities.TestDialogActivity"
-            android:enableOnBackInvokedCallback="true"
-            android:exported="false" />
 
         <receiver
             android:name=".receivers.SharedThemeReceiver"

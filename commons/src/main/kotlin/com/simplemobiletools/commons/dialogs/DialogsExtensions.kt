@@ -24,7 +24,7 @@ val dialogContainerColor
         else -> MaterialTheme.colorScheme.surface
     }
 
-val dialogShape = Shapes.large
+val dialogShape = Shapes.extraLarge
 
 val dialogElevation = 0.dp
 
