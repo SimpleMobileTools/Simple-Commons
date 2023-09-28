@@ -15,6 +15,7 @@ import java.util.LinkedList
 import java.util.Locale
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterNotNull
+import kotlin.reflect.KProperty0
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -451,13 +452,13 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
-    val isBlockingUnknownNumbers: Flow<Boolean> = prefs.run { sharedPreferencesCallback { blockUnknownNumbers } .filterNotNull()}
+    val isBlockingUnknownNumbers: Flow<Boolean> = ::blockUnknownNumbers.asFlow()
 
     var blockHiddenNumbers: Boolean
         get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
         set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
 
-    val isBlockingHiddenNumbers: Flow<Boolean> = prefs.run { sharedPreferencesCallback { blockHiddenNumbers } .filterNotNull()}
+    val isBlockingHiddenNumbers: Flow<Boolean> = ::blockHiddenNumbers.asFlow()
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
@@ -601,4 +602,6 @@ open class BaseConfig(val context: Context) {
     var passwordCountdownStartMs: Long
         get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
         set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
+
+    protected fun <T> KProperty0<T>.asFlow(): Flow<T> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }.filterNotNull()
 }
