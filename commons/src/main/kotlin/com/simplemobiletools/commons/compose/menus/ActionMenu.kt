@@ -27,7 +27,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
-import com.simplemobiletools.commons.compose.extensions.rememberTooltipStateFix
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import kotlinx.collections.immutable.ImmutableList
@@ -100,7 +99,7 @@ fun ActionMenu(
                             )
                         }
                     },
-                    state = rememberTooltipStateFix(),
+                    state = rememberTooltipState(),
                 ) {
                     ActionIconButton(
                         onClick = item.doAction,
@@ -129,7 +128,7 @@ fun ActionMenu(
                     )
                 }
             },
-            state = rememberTooltipStateFix(),
+            state = rememberTooltipState(),
             positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(spacingBetweenTooltipAndAnchor = 18.dp),
         ) {
             ActionIconButton(
