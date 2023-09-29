@@ -89,8 +89,8 @@ fun SettingsCheckBoxComponent(
 private fun SettingsCheckBoxComponentPreview() {
     AppThemeSurface {
         SettingsCheckBoxComponent(
-            label = "Some title",
-            value = "Some summary",
+            label = "Some label",
+            value = "Some value",
         )
     }
 }
