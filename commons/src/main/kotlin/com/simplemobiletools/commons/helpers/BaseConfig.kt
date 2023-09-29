@@ -452,13 +452,13 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
-    val isBlockingUnknownNumbers: Flow<Boolean> = ::blockUnknownNumbers.asFlow()
+    val isBlockingUnknownNumbers: Flow<Boolean> = ::blockUnknownNumbers.asFlowNonNull()
 
     var blockHiddenNumbers: Boolean
         get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
         set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
 
-    val isBlockingHiddenNumbers: Flow<Boolean> = ::blockHiddenNumbers.asFlow()
+    val isBlockingHiddenNumbers: Flow<Boolean> = ::blockHiddenNumbers.asFlowNonNull()
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
@@ -603,5 +603,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
         set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
 
-    protected fun <T> KProperty0<T>.asFlow(): Flow<T> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }.filterNotNull()
+    protected fun <T> KProperty0<T>.asFlow(): Flow<T?> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }
+
+    protected fun <T> KProperty0<T>.asFlowNonNull(): Flow<T> = asFlow().filterNotNull()
 }
