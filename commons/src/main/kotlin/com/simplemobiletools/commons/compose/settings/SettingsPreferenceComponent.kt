@@ -28,8 +28,8 @@ fun SettingsPreferenceComponent(
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
-    preferenceSummaryColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
-    preferenceTitleColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
+    preferenceValueColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
+    preferenceLabelColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
 ) {
     Column(
         modifier = Modifier
@@ -46,7 +46,7 @@ fun SettingsPreferenceComponent(
         Text(
             text = label,
             modifier = Modifier.fillMaxWidth(),
-            color = preferenceTitleColor,
+            color = preferenceLabelColor,
             fontSize = with(LocalDensity.current) {
                 dimensionResource(id = R.dimen.normal_text_size).toSp()
             }
@@ -56,7 +56,7 @@ fun SettingsPreferenceComponent(
                 text = value.toString(),
                 modifier = Modifier
                     .fillMaxWidth(),
-                color = preferenceSummaryColor,
+                color = preferenceValueColor,
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
