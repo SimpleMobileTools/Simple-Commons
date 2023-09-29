@@ -24,8 +24,8 @@ import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 @Composable
 fun SettingsCheckBoxComponent(
     modifier: Modifier = Modifier,
-    title: String,
-    summary: String? = null,
+    label: String,
+    value: String? = null,
     initialValue: Boolean = false,
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
@@ -56,15 +56,15 @@ fun SettingsCheckBoxComponent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(end = 16.dp),
-                text = title,
+                text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
             )
-            AnimatedVisibility(visible = !summary.isNullOrBlank()) {
+            AnimatedVisibility(visible = !value.isNullOrBlank()) {
                 Text(
-                    text = summary.toString(),
+                    text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(end = 16.dp),
@@ -89,8 +89,8 @@ fun SettingsCheckBoxComponent(
 private fun SettingsCheckBoxComponentPreview() {
     AppThemeSurface {
         SettingsCheckBoxComponent(
-            title = "Some title",
-            summary = "Some summary",
+            label = "Some title",
+            value = "Some summary",
         )
     }
 }
