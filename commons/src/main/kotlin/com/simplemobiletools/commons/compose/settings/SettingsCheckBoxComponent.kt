@@ -18,14 +18,14 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.preferenceSummaryColor
-import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
+import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
+import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
 @Composable
 fun SettingsCheckBoxComponent(
     modifier: Modifier = Modifier,
-    title: String,
-    summary: String? = null,
+    label: String,
+    value: String? = null,
     initialValue: Boolean = false,
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
@@ -56,19 +56,19 @@ fun SettingsCheckBoxComponent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(end = 16.dp),
-                text = title,
-                color = preferenceTitleColor(isEnabled = isPreferenceEnabled),
+                text = label,
+                color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
             )
-            AnimatedVisibility(visible = !summary.isNullOrBlank()) {
+            AnimatedVisibility(visible = !value.isNullOrBlank()) {
                 Text(
-                    text = summary.toString(),
+                    text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(end = 16.dp),
-                    color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
+                    color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }
         }
@@ -89,8 +89,8 @@ fun SettingsCheckBoxComponent(
 private fun SettingsCheckBoxComponentPreview() {
     AppThemeSurface {
         SettingsCheckBoxComponent(
-            title = "Some title",
-            summary = "Some summary",
+            label = "Some label",
+            value = "Some value",
         )
     }
 }

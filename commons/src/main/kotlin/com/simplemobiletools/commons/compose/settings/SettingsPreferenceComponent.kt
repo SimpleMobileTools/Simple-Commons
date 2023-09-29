@@ -17,18 +17,19 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.preferenceSummaryColor
-import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
+import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
+import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
 @Composable
 fun SettingsPreferenceComponent(
     modifier: Modifier = Modifier,
-    preferenceTitle: String,
-    preferenceSummary: String? = null,
+    label: String,
+    value: String? = null,
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
-    preferenceSummaryColor: Color = preferenceSummaryColor(isEnabled = isPreferenceEnabled)
+    preferenceValueColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
+    preferenceLabelColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
 ) {
     Column(
         modifier = Modifier
@@ -43,19 +44,19 @@ fun SettingsPreferenceComponent(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = preferenceTitle,
+            text = label,
             modifier = Modifier.fillMaxWidth(),
-            color = preferenceTitleColor(isEnabled = isPreferenceEnabled),
+            color = preferenceLabelColor,
             fontSize = with(LocalDensity.current) {
                 dimensionResource(id = R.dimen.normal_text_size).toSp()
             }
         )
-        AnimatedVisibility(visible = !preferenceSummary.isNullOrBlank()) {
+        AnimatedVisibility(visible = !value.isNullOrBlank()) {
             Text(
-                text = preferenceSummary.toString(),
+                text = value.toString(),
                 modifier = Modifier
                     .fillMaxWidth(),
-                color = preferenceSummaryColor.copy(alpha = 0.6f),
+                color = preferenceValueColor,
                 fontSize = with(LocalDensity.current) {
                     dimensionResource(id = R.dimen.normal_text_size).toSp()
                 }
@@ -69,8 +70,8 @@ fun SettingsPreferenceComponent(
 private fun SettingsPreferencePreview() {
     AppThemeSurface {
         SettingsPreferenceComponent(
-            preferenceTitle = stringResource(id = R.string.language),
-            preferenceSummary = stringResource(id = R.string.translation_english),
+            label = stringResource(id = R.string.language),
+            value = stringResource(id = R.string.translation_english),
             isPreferenceEnabled = true,
         )
     }
