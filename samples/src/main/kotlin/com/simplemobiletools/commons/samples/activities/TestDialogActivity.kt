@@ -43,8 +43,19 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
                     ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
                     ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
+                    ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun getChangeDateTimeFormatAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            ChangeDateTimeFormatAlertDialog(this, is24HourChecked = baseConfig.use24HourFormat) { selectedFormat, is24HourChecked ->
+                baseConfig.dateFormat = selectedFormat
+                baseConfig.use24HourFormat = is24HourChecked
             }
         }
     }
