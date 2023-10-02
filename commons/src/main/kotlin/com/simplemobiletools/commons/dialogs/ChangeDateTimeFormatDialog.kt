@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.RadioButtonDialogComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
@@ -37,7 +38,6 @@ import kotlinx.collections.immutable.toImmutableList
 
 class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
     private val view = DialogChangeDateTimeFormatBinding.inflate(activity.layoutInflater, null, false)
-    private val sampleTS = 1613422500000    // February 15, 2021
 
     init {
         view.apply {
@@ -91,7 +91,7 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
 
     private fun formatDateSample(format: String): String {
         val cal = Calendar.getInstance(Locale.ENGLISH)
-        cal.timeInMillis = sampleTS
+        cal.timeInMillis = timeSample
         return DateFormat.format(format, cal).toString()
     }
 }
@@ -121,7 +121,7 @@ fun ChangeDateTimeFormatAlertDialog(
         selections.values.toImmutableList()
     }
     val initiallySelected = remember {
-        requireNotNull(selections[context.baseConfig.dateFormat]){
+        requireNotNull(selections[context.baseConfig.dateFormat]) {
             "Incorrect format, please check selections"
         }
     }
@@ -133,7 +133,6 @@ fun ChangeDateTimeFormatAlertDialog(
                 .fillMaxWidth()
                 .background(dialogContainerColor, dialogShape)
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp)
         ) {
             var is24HoursSelected by remember { mutableStateOf(is24HourChecked) }
 
@@ -149,17 +148,20 @@ fun ChangeDateTimeFormatAlertDialog(
             SettingsHorizontalDivider()
 
             CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                SettingsCheckBoxChangeDateTimeFormat(
-                    label = stringResource(id = R.string.use_24_hour_time_format),
-                    initialValue = is24HoursSelected,
-                    onChange = { is24HoursSelected = it })
+                Box(Modifier.padding(horizontal = 8.dp)) {
+                    DialogCheckBoxChangeDateTimeFormatComponent(
+                        label = stringResource(id = R.string.use_24_hour_time_format),
+                        initialValue = is24HoursSelected,
+                        onChange = { is24HoursSelected = it },
+                    )
+                }
             }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.End,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp)
+                    .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
             ) {
                 TextButton(onClick = {
                     alertDialogState.hide()
@@ -188,41 +190,20 @@ private fun RadioGroup(
     Column(
         modifier = modifier
             .fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(24.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items.forEach { item ->
-            val interactionSource = rememberMutableInteractionSource()
-            val indication = LocalIndication.current
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(
-                        onClick = { setSelected(item) },
-                        interactionSource = interactionSource,
-                        indication = indication
-                    )
-            ) {
-                RadioButton(
-                    selected = selected == item,
-                    onClick = null,
-                    enabled = true,
-                    colors = RadioButtonDefaults.colors(
-                        selectedColor = MaterialTheme.colorScheme.primary
-                    ),
-                )
-                Text(
-                    text = item.uppercase(),
-                    modifier = Modifier.padding(start = 8.dp),
-                    color = dialogTextColor
-                )
-            }
+            RadioButtonDialogComponent(
+                setSelected = setSelected,
+                item = item,
+                selected = selected,
+                modifier = Modifier.padding(vertical = 12.dp, horizontal = 8.dp)
+            )
         }
     }
 }
 
-private const val timeSample = 1613422500000    // February 15, 2021
-
+private const val timeSample = 1676419200000    // February 15, 2023
 private fun formatDateSample(format: String): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = timeSample
@@ -230,7 +211,7 @@ private fun formatDateSample(format: String): String {
 }
 
 @Composable
-private fun SettingsCheckBoxChangeDateTimeFormat(
+private fun DialogCheckBoxChangeDateTimeFormatComponent(
     modifier: Modifier = Modifier,
     label: String,
     initialValue: Boolean = false,
