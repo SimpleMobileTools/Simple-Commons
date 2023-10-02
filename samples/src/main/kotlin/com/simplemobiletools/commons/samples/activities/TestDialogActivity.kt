@@ -13,12 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.redirectToRateUs
 import com.simplemobiletools.commons.extensions.toHex
+import com.simplemobiletools.commons.extensions.toast
 
 class TestDialogActivity : ComponentActivity() {
 
@@ -44,8 +47,22 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
                     ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
+                    ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun getRateStarsAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            RateStarsAlertDialog(alertDialogState = this) { stars ->
+                if (stars == 5) {
+                    redirectToRateUs()
+                }
+                toast(R.string.thank_you)
+                baseConfig.wasAppRated = true
             }
         }
     }

@@ -2,8 +2,11 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.text.format.DateFormat
-import androidx.compose.foundation.*
+import androidx.compose.foundation.LocalIndication
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -125,41 +128,48 @@ fun ChangeDateTimeFormatAlertDialog(
             "Incorrect format, please check selections"
         }
     }
+    val (selected, setSelected) = remember { mutableStateOf(initiallySelected) }
+
+    var is24HoursSelected by remember { mutableStateOf(is24HourChecked) }
+
     AlertDialog(
         onDismissRequest = alertDialogState::hide,
     ) {
-        Column(
-            modifier = modifier
-                .fillMaxWidth()
-                .background(dialogContainerColor, dialogShape)
-                .verticalScroll(rememberScrollState())
+        Box(
+            modifier = Modifier
+                .dialogBackgroundAndShape
         ) {
-            var is24HoursSelected by remember { mutableStateOf(is24HourChecked) }
-
-            val (selected, setSelected) = remember { mutableStateOf(initiallySelected) }
-            RadioGroup(
-                items = kinds, selected = selected,
-                setSelected = setSelected,
-                modifier = Modifier.padding(
-                    vertical = 16.dp,
+            Column(
+                modifier = modifier
+                    .padding(bottom = 64.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                RadioGroup(
+                    items = kinds, selected = selected,
+                    setSelected = setSelected,
+                    modifier = Modifier.padding(
+                        vertical = 16.dp,
+                    )
                 )
-            )
-            SettingsHorizontalDivider()
+                SettingsHorizontalDivider()
 
-            CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                DialogCheckBoxChangeDateTimeFormatComponent(
-                    label = stringResource(id = R.string.use_24_hour_time_format),
-                    initialValue = is24HoursSelected,
-                    onChange = { is24HoursSelected = it },
-                    modifier = Modifier.padding(horizontal = 8.dp)
-                )
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                    DialogCheckBoxChangeDateTimeFormatComponent(
+                        label = stringResource(id = R.string.use_24_hour_time_format),
+                        initialValue = is24HoursSelected,
+                        onChange = { is24HoursSelected = it },
+                        modifier = Modifier.padding(horizontal = 8.dp)
+                    )
+                }
             }
+
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.End,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
+                    .align(Alignment.BottomStart)
             ) {
                 TextButton(onClick = {
                     alertDialogState.hide()
@@ -194,7 +204,7 @@ private fun RadioGroup(
                 setSelected = setSelected,
                 item = item,
                 selected = selected,
-                modifier = Modifier.padding(vertical = 10.dp, horizontal = 16.dp)
+                modifier = Modifier.padding(vertical = 10.dp, horizontal = 20.dp)
             )
         }
     }
