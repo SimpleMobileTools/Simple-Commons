@@ -142,19 +142,17 @@ fun ChangeDateTimeFormatAlertDialog(
                 setSelected = setSelected,
                 modifier = Modifier.padding(
                     vertical = 16.dp,
-                    horizontal = 11.dp
                 )
             )
             SettingsHorizontalDivider()
 
             CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                Box(Modifier.padding(horizontal = 8.dp)) {
-                    DialogCheckBoxChangeDateTimeFormatComponent(
-                        label = stringResource(id = R.string.use_24_hour_time_format),
-                        initialValue = is24HoursSelected,
-                        onChange = { is24HoursSelected = it },
-                    )
-                }
+                DialogCheckBoxChangeDateTimeFormatComponent(
+                    label = stringResource(id = R.string.use_24_hour_time_format),
+                    initialValue = is24HoursSelected,
+                    onChange = { is24HoursSelected = it },
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                )
             }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -189,15 +187,14 @@ private fun RadioGroup(
 ) {
     Column(
         modifier = modifier
-            .fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+            .fillMaxWidth()
     ) {
         items.forEach { item ->
             RadioButtonDialogComponent(
                 setSelected = setSelected,
                 item = item,
                 selected = selected,
-                modifier = Modifier.padding(vertical = 12.dp, horizontal = 8.dp)
+                modifier = Modifier.padding(vertical = 10.dp, horizontal = 16.dp)
             )
         }
     }
@@ -227,13 +224,14 @@ private fun DialogCheckBoxChangeDateTimeFormatComponent(
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
+        modifier = Modifier
             .fillMaxWidth()
             .clickable(
                 onClick = { onChange?.invoke(!initialValue) },
                 interactionSource = interactionSource,
                 indication = indication
-            ),
+            )
+            .then(modifier),
     ) {
         Column(
             modifier = Modifier.weight(1f),
