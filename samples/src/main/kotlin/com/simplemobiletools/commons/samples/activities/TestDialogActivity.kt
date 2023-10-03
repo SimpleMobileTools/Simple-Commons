@@ -10,16 +10,19 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.RadioItem
+import com.simplemobiletools.commons.models.Release
 import kotlinx.collections.immutable.toImmutableList
 
 class TestDialogActivity : ComponentActivity() {
@@ -49,9 +52,37 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
                     ShowButton(getRadioGroupDialogAlertDialogState(), text = "Radio group")
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
+                    ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
+                    ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
+        }
+    }
+
+    @Composable
+    private fun getChangeViewTypeAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            val currentViewType = config.viewType
+            ChangeViewTypeAlertDialog(alertDialogState = this, selectedViewType = currentViewType) { type ->
+                Log.d("ChangeViewTypeAlertDialog", type.toString())
+                config.viewType = type
+            }
+        }
+    }
+
+    @Composable
+    private fun getWhatsNewAlertDialogState(): AlertDialogState = rememberAlertDialogState().apply {
+        DialogMember {
+            val releases = remember {
+                listOf(
+                    Release(14, R.string.temporarily_show_excluded),
+                    Release(3, R.string.temporarily_show_hidden)
+                ).toImmutableList()
+            }
+            WhatsNewAlertDialog(
+                alertDialogState = this, releases = releases
+            )
         }
     }
 

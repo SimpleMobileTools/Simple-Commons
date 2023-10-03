@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -14,6 +15,8 @@ fun RadioGroupDialogComponent(
     modifier: Modifier = Modifier,
     items: List<String>,
     selected: String?,
+    verticalPadding: Dp = 10.dp,
+    horizontalPadding: Dp = 20.dp,
     setSelected: (selected: String) -> Unit,
 ) {
     Column(
@@ -25,7 +28,7 @@ fun RadioGroupDialogComponent(
                 setSelected = setSelected,
                 item = item,
                 selected = selected,
-                modifier = Modifier.padding(vertical = 10.dp, horizontal = 20.dp)
+                modifier = Modifier.padding(vertical = verticalPadding, horizontal = horizontalPadding)
             )
         }
     }
