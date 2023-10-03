@@ -18,10 +18,9 @@ import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.redirectToRateUs
-import com.simplemobiletools.commons.extensions.toHex
-import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.models.RadioItem
+import kotlinx.collections.immutable.toImmutableList
 
 class TestDialogActivity : ComponentActivity() {
 
@@ -48,9 +47,47 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
+                    ShowButton(getRadioGroupDialogAlertDialogState(), text = "Radio group")
+                    ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
+        }
+    }
+
+    @Composable
+    private fun getUpgradeToProAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            UpgradeToProAlertDialog(alertDialogState = this, onMoreInfoClick = {
+                launchViewIntent("https://simplemobiletools.com/upgrade_to_pro")
+            }, onUpgradeClick = ::launchUpgradeToProIntent)
+        }
+    }
+
+    @Composable
+    private fun getRadioGroupDialogAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            RadioGroupDialogAlertDialog(
+                alertDialogState = this,
+                items = listOf(
+                    RadioItem(1, "Test"),
+                    RadioItem(2, "Test 2"),
+                    RadioItem(3, "Test 3"),
+                    RadioItem(4, "Test 4"),
+                    RadioItem(5, "Test 5"),
+                    RadioItem(6, "Test 6"),
+                    RadioItem(6, "Test 7"),
+                ).toImmutableList(),
+                showOKButton = true,
+                selectedItemId = 2,
+                cancelCallback = {
+                    Log.d("getRadioGroupDialogAlertDialogState", "cancelCallback")
+                },
+                callback = {
+                    Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
+                },
+                titleId = R.string.title
+            )
         }
     }
 
@@ -137,7 +174,6 @@ class TestDialogActivity : ComponentActivity() {
             }
         }
 
-
     @Composable
     private fun getAddBlockedNumberDialogState() =
         rememberAlertDialogState().apply {
@@ -146,7 +182,6 @@ class TestDialogActivity : ComponentActivity() {
             }
         }
 
-
     @Composable
     private fun getConfirmationAdvancedAlertDialogState() =
         rememberAlertDialogState().apply {
@@ -154,7 +189,6 @@ class TestDialogActivity : ComponentActivity() {
                 ConfirmationAdvancedAlertDialog(alertDialogState = this, callback = {})
             }
         }
-
 
     @Composable
     private fun ShowButton(appSideLoadedDialogState: AlertDialogState, text: String) {

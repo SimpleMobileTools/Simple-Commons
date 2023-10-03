@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
-import com.simplemobiletools.commons.compose.components.RadioButtonDialogComponent
+import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
@@ -144,7 +144,7 @@ fun ChangeDateTimeFormatAlertDialog(
                     .padding(bottom = 64.dp)
                     .verticalScroll(rememberScrollState())
             ) {
-                RadioGroup(
+                RadioGroupDialogComponent(
                     items = kinds, selected = selected,
                     setSelected = setSelected,
                     modifier = Modifier.padding(
@@ -188,27 +188,7 @@ fun ChangeDateTimeFormatAlertDialog(
     }
 }
 
-@Composable
-private fun RadioGroup(
-    modifier: Modifier = Modifier,
-    items: List<String>,
-    selected: String,
-    setSelected: (selected: String) -> Unit,
-) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-    ) {
-        items.forEach { item ->
-            RadioButtonDialogComponent(
-                setSelected = setSelected,
-                item = item,
-                selected = selected,
-                modifier = Modifier.padding(vertical = 10.dp, horizontal = 20.dp)
-            )
-        }
-    }
-}
+
 
 private const val timeSample = 1676419200000    // February 15, 2023
 private fun formatDateSample(format: String): String {
