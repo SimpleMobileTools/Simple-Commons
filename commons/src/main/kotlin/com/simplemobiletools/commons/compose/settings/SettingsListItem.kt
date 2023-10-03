@@ -18,11 +18,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.Dimens
 
 @Composable
 fun SettingsListItem(
@@ -50,8 +50,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(Dimens.icon.normal)
+                .padding(Dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,
@@ -106,8 +106,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(Dimens.icon.normal)
+                .padding(Dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,

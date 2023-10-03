@@ -15,7 +15,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsGroupTitle
@@ -24,6 +23,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.models.LanguageContributor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -60,11 +60,11 @@ internal fun ContributorsScreen(
                 text = stringResource(id = R.string.contributors_developers),
                 icon = R.drawable.ic_code_vector,
                 tint = MaterialTheme.colorScheme.onSurface,
-                fontSize = 14.sp
+                fontSize = Dimens.text.normal
             )
         }
         item {
-            Spacer(modifier = Modifier.padding(vertical = 8.dp))
+            Spacer(modifier = Modifier.padding(vertical = Dimens.margin.medium))
         }
         item {
             SettingsHorizontalDivider()
@@ -93,7 +93,7 @@ internal fun ContributorsScreen(
                 )
             }
             item {
-                Spacer(modifier = Modifier.padding(bottom = 8.dp))
+                Spacer(modifier = Modifier.padding(bottom = Dimens.margin.medium))
             }
         }
        
@@ -116,8 +116,8 @@ private fun ContributorItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(Dimens.icon.normal)
+                .padding(Dimens.margin.medium)
             Image(
                 modifier = imageSize,
                 painter = painterResource(id = languageContributor.iconId),

@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.Dimens
 
 @Composable
 fun SettingsGroup(
@@ -34,7 +35,7 @@ fun SettingsGroupTitle(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp),
+            .padding(horizontal = Dimens.margin.activity),
         contentAlignment = Alignment.CenterStart
     ) {
         val primary = MaterialTheme.colorScheme.primary

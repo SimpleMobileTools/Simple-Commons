@@ -13,7 +13,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ContentCopy
@@ -85,7 +84,8 @@ internal fun ManageBlockedNumbersScreen(
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
 ) {
-    val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
+    val dimens = Dimens
+    val startingPadding = remember { Modifier.padding(horizontal = dimens.margin.small) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
@@ -193,7 +193,7 @@ internal fun ManageBlockedNumbersScreen(
                     ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
-            verticalArrangement = Arrangement.spacedBy(2.dp),
+            verticalArrangement = Arrangement.spacedBy(Dimens.margin.tiny),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -323,7 +323,7 @@ private fun BlockedNumber(
         movableContentOf {
             Text(
                 text = blockedNumber.contactName.toString(),
-                modifier = modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                modifier = modifier.padding(horizontal = Dimens.margin.medium, vertical = Dimens.margin.tiny)
             )
         }
     }
@@ -380,7 +380,7 @@ private fun blockedNumberListItemColors(
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber, hasContactName: Boolean) {
     Text(
         text = blockedNumber.number,
-        modifier = modifier.padding(horizontal = 8.dp),
+        modifier = modifier.padding(horizontal = Dimens.margin.medium),
         color = if (hasContactName) LocalContentColor.current.copy(alpha = 0.7f) else LocalContentColor.current
     )
 }
@@ -547,7 +547,7 @@ private fun NonActionModeToolbar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
-                modifier = Modifier.padding(start = 16.dp),
+                modifier = Modifier.padding(start = Dimens.margin.activity),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -583,8 +583,8 @@ private fun LazyListScope.emptyBlockedNumbers(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp, bottom = 4.dp)
-                .padding(horizontal = 16.dp)
+                .padding(top = Dimens.margin.activity, bottom = Dimens.margin.small)
+                .padding(horizontal = Dimens.margin.activity)
         )
     }
     item {
@@ -594,7 +594,7 @@ private fun LazyListScope.emptyBlockedNumbers(
         ) {
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(Shapes.large)
                     .clickable(onClick = addABlockedNumber)
             ) {
                 Text(
@@ -603,9 +603,9 @@ private fun LazyListScope.emptyBlockedNumbers(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                         color = MaterialTheme.colorScheme.primary,
-                        fontSize = 18.sp
+                        fontSize = Dimens.text.big
                     ),
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(Dimens.margin.medium)
                 )
             }
         }
@@ -621,8 +621,8 @@ private fun LazyListScope.noPermissionToBlock(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp)
-                .padding(horizontal = 16.dp)
+                .padding(top = Dimens.margin.activity)
+                .padding(horizontal = Dimens.margin.activity)
         )
     }
     item {
@@ -632,7 +632,7 @@ private fun LazyListScope.noPermissionToBlock(
         ) {
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(Shapes.large)
                     .clickable(onClick = setAsDefault)
             ) {
                 Text(
@@ -641,9 +641,9 @@ private fun LazyListScope.noPermissionToBlock(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                         color = MaterialTheme.colorScheme.primary,
-                        fontSize = 18.sp
+                        fontSize = Dimens.text.big
                     ),
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(Dimens.margin.activity)
                 )
             }
         }

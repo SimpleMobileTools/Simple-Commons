@@ -17,14 +17,13 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.extensions.removeUnderlines
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.collections.immutable.ImmutableList
@@ -38,7 +37,7 @@ internal fun FAQScreen(
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = 8.dp)
+        contentPadding = PaddingValues(bottom = Dimens.margin.medium)
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -49,9 +48,9 @@ internal fun FAQScreen(
                             text = text,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(bottom = 6.dp),
+                                .padding(bottom = Dimens.margin.smaller),
                             color = MaterialTheme.colorScheme.primary,
-                            lineHeight = 16.sp,
+                            lineHeight = Dimens.text.bigger,
                         )
                     },
                     supportingContent = {
@@ -60,23 +59,23 @@ internal fun FAQScreen(
                             LinkifyText(
                                 text = { text },
                                 modifier = Modifier.fillMaxWidth(),
-                                fontSize = 14.sp
+                                fontSize = Dimens.text.normal
                             )
                         } else {
                             Text(
                                 text = faqItem.text as String,
                                 modifier = Modifier.fillMaxWidth(),
-                                fontSize = 14.sp
+                                fontSize = Dimens.text.normal
                             )
                         }
                     },
                 )
-                Spacer(modifier = Modifier.padding(bottom = 8.dp))
+                Spacer(modifier = Modifier.padding(bottom = Dimens.margin.medium))
                 if (index != faqItems.lastIndex) {
                     SettingsHorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(bottom = 4.dp)
+                            .padding(bottom = Dimens.margin.small)
                     )
                 }
             }
@@ -96,9 +95,9 @@ fun stringFromHTML(source: String): Spanned {
 @Composable
 fun LinkifyText(
     modifier: Modifier = Modifier,
-    fontSize: TextUnit = 14.sp,
+    fontSize: TextUnit = Dimens.text.normal,
     removeUnderlines: Boolean = true,
-    textAlignment : Int = TextView.TEXT_ALIGNMENT_TEXT_START,
+    textAlignment: Int = TextView.TEXT_ALIGNMENT_TEXT_START,
     text: () -> Spanned
 ) {
     val context = LocalContext.current

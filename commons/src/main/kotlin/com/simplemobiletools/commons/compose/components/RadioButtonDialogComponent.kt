@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.dialogs.dialogTextColor
 
 @Composable
@@ -46,7 +47,7 @@ fun RadioButtonDialogComponent(
         )
         Text(
             text = item,
-            modifier = Modifier.padding(start = 8.dp),
+            modifier = Modifier.padding(start = Dimens.margin.medium),
             color = dialogTextColor
         )
     }
