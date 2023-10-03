@@ -5,7 +5,6 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.theme.model.Dimensions
 
 val Dimens: Dimensions
@@ -26,18 +25,6 @@ internal val CommonDimensions = Dimensions(
         section = 32.dp,
         labelStart = 72.dp
     ),
-    text = Dimensions.TextSizes(
-        tiny = 8.sp,
-        small = 10.sp,
-        smaller = 12.sp,
-        normal = 14.sp,
-        medium = 15.sp,
-        bigger = 16.sp,
-        middle = 17.sp,
-        big = 18.sp,
-        extraBig = 22.sp,
-        actionBar = 21.sp
-    ),
     icon = Dimensions.IconSizes(
         normal = 48.dp,
         medium = 32.dp,
@@ -45,13 +32,7 @@ internal val CommonDimensions = Dimensions(
     )
 )
 
-internal val Sw600DpDimensions = CommonDimensions.copy(
-    text = CommonDimensions.text.copy(
-        normal = 18.sp,
-        big = 22.sp,
-        extraBig = 26.sp
-    )
-)
+internal val Sw600DpDimensions = CommonDimensions.copy()
 
 val LocalDimensions: ProvidableCompositionLocal<Dimensions> =
     staticCompositionLocalOf { CommonDimensions }

@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -45,7 +46,7 @@ fun SettingsPreferenceComponent(
             text = label,
             modifier = Modifier.fillMaxWidth(),
             color = preferenceLabelColor,
-            fontSize = Dimens.text.normal
+            fontSize = 14.sp
         )
         AnimatedVisibility(visible = !value.isNullOrBlank()) {
             Text(
@@ -53,7 +54,7 @@ fun SettingsPreferenceComponent(
                 modifier = Modifier
                     .fillMaxWidth(),
                 color = preferenceValueColor,
-                fontSize = Dimens.text.normal
+                fontSize = 14.sp
             )
         }
     }

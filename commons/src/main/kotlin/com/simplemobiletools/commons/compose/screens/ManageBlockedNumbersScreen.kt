@@ -603,7 +603,7 @@ private fun LazyListScope.emptyBlockedNumbers(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                         color = MaterialTheme.colorScheme.primary,
-                        fontSize = Dimens.text.big
+                        fontSize = 18.sp
                     ),
                     modifier = Modifier.padding(Dimens.margin.medium)
                 )
@@ -641,7 +641,7 @@ private fun LazyListScope.noPermissionToBlock(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                         color = MaterialTheme.colorScheme.primary,
-                        fontSize = Dimens.text.big
+                        fontSize = 18.sp
                     ),
                     modifier = Modifier.padding(Dimens.margin.activity)
                 )

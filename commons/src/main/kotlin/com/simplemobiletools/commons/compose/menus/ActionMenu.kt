@@ -22,6 +22,7 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -94,7 +95,7 @@ fun ActionMenu(
                         PlainTooltip(shape = Shapes.extraLarge) {
                             Text(
                                 text = name,
-                                fontSize = Dimens.text.normal,
+                                fontSize = 14.sp,
                                 modifier = Modifier.padding(Dimens.margin.medium),
                             )
                         }
@@ -123,7 +124,7 @@ fun ActionMenu(
                 PlainTooltip(shape = Shapes.extraLarge) {
                     Text(
                         text = stringResource(id = R.string.more_options),
-                        fontSize = Dimens.text.normal,
+                        fontSize = 14.sp,
                         modifier = Modifier.padding(Dimens.margin.medium),
                     )
                 }

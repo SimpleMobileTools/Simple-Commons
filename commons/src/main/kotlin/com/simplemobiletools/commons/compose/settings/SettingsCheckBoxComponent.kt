@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
@@ -55,7 +56,7 @@ fun SettingsCheckBoxComponent(
                     .padding(end = Dimens.margin.activity),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
-                fontSize = Dimens.text.normal
+                fontSize = 14.sp
             )
             AnimatedVisibility(visible = !value.isNullOrBlank()) {
                 Text(

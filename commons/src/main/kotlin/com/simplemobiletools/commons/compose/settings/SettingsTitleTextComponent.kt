@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Dimens
@@ -26,7 +27,7 @@ fun SettingsTitleTextComponent(
             modifier = modifier
                 .padding(horizontal = Dimens.margin.small),
             color = color,
-            fontSize = Dimens.text.normal,
+            fontSize = 14.sp,
             maxLines = maxLines,
             overflow = overflow
         )

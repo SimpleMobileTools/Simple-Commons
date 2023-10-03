@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -50,7 +51,7 @@ internal fun FAQScreen(
                                 .fillMaxWidth()
                                 .padding(bottom = Dimens.margin.smaller),
                             color = MaterialTheme.colorScheme.primary,
-                            lineHeight = Dimens.text.bigger,
+                            lineHeight = 16.sp,
                         )
                     },
                     supportingContent = {
@@ -59,13 +60,13 @@ internal fun FAQScreen(
                             LinkifyText(
                                 text = { text },
                                 modifier = Modifier.fillMaxWidth(),
-                                fontSize = Dimens.text.normal
+                                fontSize = 14.sp
                             )
                         } else {
                             Text(
                                 text = faqItem.text as String,
                                 modifier = Modifier.fillMaxWidth(),
-                                fontSize = Dimens.text.normal
+                                fontSize = 14.sp
                             )
                         }
                     },
@@ -95,7 +96,7 @@ fun stringFromHTML(source: String): Spanned {
 @Composable
 fun LinkifyText(
     modifier: Modifier = Modifier,
-    fontSize: TextUnit = Dimens.text.normal,
+    fontSize: TextUnit = 14.sp,
     removeUnderlines: Boolean = true,
     textAlignment: Int = TextView.TEXT_ALIGNMENT_TEXT_START,
     text: () -> Spanned
