@@ -21,7 +21,7 @@ fun RadioButtonDialogComponent(
     modifier: Modifier = Modifier,
     setSelected: (selected: String) -> Unit,
     item: String,
-    selected: String
+    selected: String?
 ) {
     val interactionSource = rememberMutableInteractionSource()
     val indication = LocalIndication.current
