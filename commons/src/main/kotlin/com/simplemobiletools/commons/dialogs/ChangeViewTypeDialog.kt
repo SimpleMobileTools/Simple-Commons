@@ -1,13 +1,13 @@
 package com.simplemobiletools.commons.dialogs
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -83,42 +83,46 @@ fun ChangeViewTypeAlertDialog(
         derivedStateOf { items.map { it.title } }
     }
     val (selected, setSelected) = remember { mutableStateOf(items.firstOrNull { it.type == selectedViewType }?.title) }
-
-    AlertDialog(
-        onDismissRequest = {},
-        confirmButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-                onTypeChosen(getSelectedValue(items, selected))
-            }) {
-                Text(text = stringResource(id = R.string.ok))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = alertDialogState::hide) {
-                Text(text = stringResource(id = R.string.cancel))
-            }
-        },
-        containerColor = dialogContainerColor,
-        shape = dialogShape,
-        modifier = modifier,
-        text = {
-            Column(
+    AlertDialog(onDismissRequest = alertDialogState::hide) {
+        Column(
+            modifier = modifier
+                .dialogBackgroundAndShape
+                .padding(bottom = 18.dp)
+                .verticalScroll(rememberScrollState())
+        ) {
+            RadioGroupDialogComponent(
+                items = groupTitles,
+                selected = selected,
+                setSelected = { selectedTitle ->
+                    setSelected(selectedTitle)
+                },
+                modifier = Modifier.padding(
+                    vertical = 16.dp,
+                ),
+                verticalPadding = 16.dp,
+            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .verticalScroll(rememberScrollState())
+                    .padding(end = 16.dp)
             ) {
-                RadioGroupDialogComponent(
-                    items = groupTitles,
-                    selected = selected,
-                    setSelected = { selectedTitle ->
-                        setSelected(selectedTitle)
-                    },
-                    horizontalPadding = 4.dp
-                )
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                }) {
+                    Text(text = stringResource(id = R.string.cancel))
+                }
+
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    onTypeChosen(getSelectedValue(items, selected))
+                }) {
+                    Text(text = stringResource(id = R.string.ok))
+                }
             }
         }
-    )
+    }
 }
 
 private fun getSelectedValue(
