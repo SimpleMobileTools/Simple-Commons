@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
@@ -90,6 +89,7 @@ fun ChangeViewTypeAlertDialog(
         confirmButton = {
             TextButton(onClick = {
                 alertDialogState.hide()
+                onTypeChosen(getSelectedValue(items, selected))
             }) {
                 Text(text = stringResource(id = R.string.ok))
             }
@@ -113,10 +113,7 @@ fun ChangeViewTypeAlertDialog(
                     selected = selected,
                     setSelected = { selectedTitle ->
                         setSelected(selectedTitle)
-                        onTypeChosen(getSelectedValue(items, selectedTitle))
-                        alertDialogState.hide()
                     },
-                    modifier = Modifier.padding(vertical = 16.dp),
                     horizontalPadding = 4.dp
                 )
             }
