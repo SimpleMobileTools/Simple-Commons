@@ -193,7 +193,7 @@ internal fun ManageBlockedNumbersScreen(
                     ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
-            verticalArrangement = Arrangement.spacedBy(Dimens.margin.tiny),
+            verticalArrangement = Arrangement.spacedBy(Dimens.margin.extraSmall),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -323,7 +323,7 @@ private fun BlockedNumber(
         movableContentOf {
             Text(
                 text = blockedNumber.contactName.toString(),
-                modifier = modifier.padding(horizontal = Dimens.margin.medium, vertical = Dimens.margin.tiny)
+                modifier = modifier.padding(horizontal = Dimens.margin.medium, vertical = Dimens.margin.extraSmall)
             )
         }
     }
@@ -547,7 +547,7 @@ private fun NonActionModeToolbar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
-                modifier = Modifier.padding(start = Dimens.margin.activity),
+                modifier = Modifier.padding(start = Dimens.margin.extraLarge),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -583,8 +583,8 @@ private fun LazyListScope.emptyBlockedNumbers(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = Dimens.margin.activity, bottom = Dimens.margin.small)
-                .padding(horizontal = Dimens.margin.activity)
+                .padding(top = Dimens.margin.extraLarge, bottom = Dimens.margin.small)
+                .padding(horizontal = Dimens.margin.extraLarge)
         )
     }
     item {
@@ -621,8 +621,8 @@ private fun LazyListScope.noPermissionToBlock(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = Dimens.margin.activity)
-                .padding(horizontal = Dimens.margin.activity)
+                .padding(top = Dimens.margin.extraLarge)
+                .padding(horizontal = Dimens.margin.extraLarge)
         )
     }
     item {
@@ -643,7 +643,7 @@ private fun LazyListScope.noPermissionToBlock(
                         color = MaterialTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(Dimens.margin.activity)
+                    modifier = Modifier.padding(Dimens.margin.extraLarge)
                 )
             }
         }

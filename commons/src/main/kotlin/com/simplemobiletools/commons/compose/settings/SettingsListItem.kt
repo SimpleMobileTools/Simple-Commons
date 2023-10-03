@@ -50,7 +50,7 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.normal)
+                .size(Dimens.icon.medium)
                 .padding(Dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
@@ -106,7 +106,7 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.normal)
+                .size(Dimens.icon.medium)
                 .padding(Dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(

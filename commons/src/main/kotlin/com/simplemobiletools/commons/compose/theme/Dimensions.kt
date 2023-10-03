@@ -14,21 +14,16 @@ val Dimens: Dimensions
 
 internal val CommonDimensions = Dimensions(
     margin = Dimensions.Margins(
-        tiny = 2.dp,
+        extraSmall = 2.dp,
         small = 4.dp,
-        smaller = 6.dp,
         medium = 8.dp,
-        normal = 12.dp,
-        activity = 16.dp,
-        bigger = 20.dp,
-        big = 24.dp,
-        section = 32.dp,
-        labelStart = 72.dp
+        large = 12.dp,
+        extraLarge = 16.dp,
     ),
     icon = Dimensions.IconSizes(
-        normal = 48.dp,
-        medium = 32.dp,
-        shortcut = 64.dp
+        small = 32.dp,
+        medium = 48.dp,
+        large = 64.dp,
     )
 )
 

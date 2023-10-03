@@ -21,7 +21,7 @@ fun SettingsTitleTextComponent(
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
-    Box(modifier = Modifier.padding(top = Dimens.margin.activity)) {
+    Box(modifier = Modifier.padding(top = Dimens.margin.extraLarge)) {
         Text(
             text = text.uppercase(),
             modifier = modifier

@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
@@ -44,7 +45,7 @@ fun SettingsCheckBoxComponent(
                 interactionSource = interactionSource,
                 indication = indication
             )
-            .padding(horizontal = Dimens.margin.bigger, vertical = Dimens.margin.smaller),
+            .padding(horizontal = 20.dp, vertical = 6.dp),
     ) {
         Column(
             modifier = Modifier.weight(1f),
@@ -53,7 +54,7 @@ fun SettingsCheckBoxComponent(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = Dimens.margin.activity),
+                    .padding(end = Dimens.margin.extraLarge),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = 14.sp
@@ -63,7 +64,7 @@ fun SettingsCheckBoxComponent(
                     text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = Dimens.margin.activity),
+                        .padding(end = Dimens.margin.extraLarge),
                     color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }

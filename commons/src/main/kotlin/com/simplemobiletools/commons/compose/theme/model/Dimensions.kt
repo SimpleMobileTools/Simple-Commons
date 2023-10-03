@@ -10,22 +10,17 @@ data class Dimensions(
 ) {
     @Stable
     data class Margins(
-        val tiny: Dp,
+        val extraSmall: Dp,
         val small: Dp,
-        val smaller: Dp,
         val medium: Dp,
-        val normal: Dp,
-        val activity: Dp,
-        val bigger: Dp,
-        val big: Dp,
-        val section: Dp,
-        val labelStart: Dp
+        val large: Dp,
+        val extraLarge: Dp,
     )
 
     @Stable
     data class IconSizes(
-        val normal: Dp,
+        val small: Dp,
         val medium: Dp,
-        val shortcut: Dp,
+        val large: Dp,
     )
 }

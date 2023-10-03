@@ -35,7 +35,7 @@ fun SettingsGroupTitle(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = Dimens.margin.activity),
+            .padding(horizontal = Dimens.margin.extraLarge),
         contentAlignment = Alignment.CenterStart
     ) {
         val primary = MaterialTheme.colorScheme.primary

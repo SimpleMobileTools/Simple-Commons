@@ -117,7 +117,7 @@ private fun ContributorItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.normal)
+                .size(Dimens.icon.medium)
                 .padding(Dimens.margin.medium)
             Image(
                 modifier = imageSize,

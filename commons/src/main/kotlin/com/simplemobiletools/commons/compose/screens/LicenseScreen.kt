@@ -59,7 +59,7 @@ private fun LicenseItem(
     }, supportingContent = {
         Text(
             text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = Dimens.margin.tiny),
+            modifier = Modifier.padding(top = Dimens.margin.extraSmall),
         )
     }, colors = ListItemDefaults.colors(headlineColor = MaterialTheme.colorScheme.primary, supportingColor = MaterialTheme.colorScheme.onSurface))
 }

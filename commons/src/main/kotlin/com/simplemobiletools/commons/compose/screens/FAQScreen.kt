@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
@@ -49,7 +50,7 @@ internal fun FAQScreen(
                             text = text,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(bottom = Dimens.margin.smaller),
+                                .padding(bottom = 6.dp),
                             color = MaterialTheme.colorScheme.primary,
                             lineHeight = 16.sp,
                         )
