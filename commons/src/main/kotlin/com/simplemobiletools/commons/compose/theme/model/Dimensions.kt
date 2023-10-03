@@ -1,13 +1,16 @@
 package com.simplemobiletools.commons.compose.theme.model
 
+import androidx.compose.runtime.Stable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 
+@Stable
 data class Dimensions(
     val margin: Margins,
     val text: TextSizes,
     val icon: IconSizes
 ) {
+    @Stable
     data class Margins(
         val tiny: Dp,
         val small: Dp,
@@ -21,6 +24,7 @@ data class Dimensions(
         val labelStart: Dp
     )
 
+    @Stable
     data class TextSizes(
         val tiny: TextUnit,
         val small: TextUnit,
@@ -34,6 +38,7 @@ data class Dimensions(
         val actionBar: TextUnit
     )
 
+    @Stable
     data class IconSizes(
         val normal: Dp,
         val medium: Dp,
