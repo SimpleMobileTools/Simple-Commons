@@ -19,7 +19,7 @@ fun FakeVersionCheck() {
                 negative = null,
                 message = FAKE_VERSION_APP_LABEL
             ) {
-                context.getActivity().launchViewIntent(DEV_PS_URL)
+                context.getActivity().launchViewIntent(DEVELOPER_PLAY_STORE_URL)
             }
         }
     }

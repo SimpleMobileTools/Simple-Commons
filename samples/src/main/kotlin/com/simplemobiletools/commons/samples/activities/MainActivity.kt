@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
-import com.simplemobiletools.commons.compose.extensions.DEV_PS_URL
+import com.simplemobiletools.commons.compose.extensions.DEVELOPER_PLAY_STORE_URL
 import com.simplemobiletools.commons.compose.extensions.FAKE_VERSION_APP_LABEL
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
@@ -52,7 +52,7 @@ class MainActivity : BaseSimpleActivity() {
         }
         binding.testButton.setOnClickListener {
             ConfirmationDialog(this, FAKE_VERSION_APP_LABEL, positive = com.simplemobiletools.commons.R.string.ok, negative = 0) {
-               launchViewIntent(DEV_PS_URL)
+               launchViewIntent(DEVELOPER_PLAY_STORE_URL)
            }
         }
     }
