@@ -98,7 +98,7 @@ class RadioGroupDialog(
 
 
 @Composable
-fun RadioGroupDialogAlertDialog(
+fun RadioGroupAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
     items: ImmutableList<RadioItem>,
@@ -179,7 +179,7 @@ private fun getSelectedValue(
 @MyDevices
 private fun RadioGroupDialogAlertDialogPreview(@PreviewParameter(BooleanPreviewParameterProvider::class) showOKButton: Boolean) {
     AppThemeSurface {
-        RadioGroupDialogAlertDialog(
+        RadioGroupAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             items = listOf(
                 RadioItem(1, "Test"),
