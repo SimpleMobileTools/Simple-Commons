@@ -46,8 +46,9 @@ class AboutActivity : ComponentActivity() {
             AppThemeSurface {
                 val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
                 val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
-                val beforeAskingQuestionReadFAQAdvancedDialog = getBeforeAskingQuestionReadFAQAdvancedDialog()
+                val onEmailClickAlertDialogState = getOnEmailClickAlertDialogState()
                 val rateStarsAlertDialogState = getRateStarsAlertDialogState()
+                val onRateUsClickAlertDialogState = getOnRateUsClickAlertDialogState(rateStarsAlertDialogState::show)
                 AboutScreen(
                     goBack = ::finish,
                     helpUsSection = {
@@ -56,7 +57,7 @@ class AboutActivity : ComponentActivity() {
                         HelpUsSection(
                             onRateUsClick = {
                                 onRateUsClick(
-                                    showConfirmationAdvancedDialog = beforeAskingQuestionReadFAQAdvancedDialog::show,
+                                    showConfirmationAdvancedDialog = onRateUsClickAlertDialogState::show,
                                     showRateStarsDialog = rateStarsAlertDialogState::show
                                 )
                             },
@@ -72,7 +73,7 @@ class AboutActivity : ComponentActivity() {
                         val setupFAQ = rememberFAQ()
                         if (!showExternalLinks || setupFAQ) {
                             AboutSection(setupFAQ = setupFAQ, onFAQClick = ::launchFAQActivity, onEmailClick = {
-                                onEmailClick(beforeAskingQuestionReadFAQAdvancedDialog::show)
+                                onEmailClick(onEmailClickAlertDialogState::show)
                             })
                         }
                     },
@@ -130,7 +131,7 @@ class AboutActivity : ComponentActivity() {
         }
 
     @Composable
-    private fun getBeforeAskingQuestionReadFAQAdvancedDialog() =
+    private fun getOnEmailClickAlertDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
                 ConfirmationAdvancedAlertDialog(
@@ -140,6 +141,27 @@ class AboutActivity : ComponentActivity() {
                             launchFAQActivity()
                         } else {
                             launchEmailIntent()
+                        }
+                    },
+                    message = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}",
+                    messageId = null,
+                    positive = R.string.read_faq,
+                    negative = R.string.skip
+                )
+            }
+        }
+
+    @Composable
+    private fun getOnRateUsClickAlertDialogState(showRateStarsDialog: () -> Unit) =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                ConfirmationAdvancedAlertDialog(
+                    alertDialogState = this,
+                    callback = { success ->
+                        if (success) {
+                            launchFAQActivity()
+                        } else {
+                            launchRateUsPrompt(showRateStarsDialog)
                         }
                     },
                     message = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}",
@@ -206,7 +228,6 @@ class AboutActivity : ComponentActivity() {
             showErrorToast(e)
         }
     }
-
 
     private fun onRateUsClick(
         showConfirmationAdvancedDialog: () -> Unit,
