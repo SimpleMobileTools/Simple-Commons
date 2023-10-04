@@ -31,6 +31,8 @@ composeActivity = "1.8.0-rc01"
 compose = "1.6.0-alpha06"
 composeCompiler = "1.5.3"
 composeMaterial3 = "1.2.0-alpha08"
+#Compose ColorPicker
+colorPickerCompose = "7385c4cc8d"
 #Glide
 glide = "4.16.0"
 #Room
@@ -87,6 +89,8 @@ compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "
 compose-uiTooling-debug = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-uiTooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-view-binding = { module = "androidx.compose.ui:ui-viewbinding", version.ref = "compose" }
+#Compose ColorPicker
+colorPickerCompose = { module = "com.github.esensar:colorpicker-compose", version.ref = "colorPickerCompose" }
 #Glide
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }

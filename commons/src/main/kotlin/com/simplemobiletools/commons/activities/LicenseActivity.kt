@@ -64,6 +64,7 @@ class LicenseActivity : ComponentActivity() {
         License(LICENSE_M3U_PARSER, R.string.m3u_parser_title, R.string.m3u_parser_text, R.string.m3u_parser_url),
         License(LICENSE_ANDROID_LAME, R.string.android_lame_title, R.string.android_lame_text, R.string.android_lame_url),
         License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
-        License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url)
+        License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url),
+        License(LICENSE_COLOR_PICKER_COMPOSE, R.string.color_picker_compose_title, R.string.color_picker_compose_text, R.string.color_picker_compose_url)
     )
 }

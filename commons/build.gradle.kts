@@ -81,6 +81,7 @@ dependencies {
     implementation(libs.androidx.exifinterface)
     implementation(libs.androidx.biometric.ktx)
     implementation(libs.ez.vcard)
+    implementation(libs.colorPickerCompose)
 
 
     implementation(libs.bundles.lifecycle)
