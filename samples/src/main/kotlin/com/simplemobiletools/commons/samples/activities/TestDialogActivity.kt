@@ -98,7 +98,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getRadioGroupDialogAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            RadioGroupDialogAlertDialog(
+            RadioGroupAlertDialog(
                 alertDialogState = this,
                 items = listOf(
                     RadioItem(1, "Test"),
