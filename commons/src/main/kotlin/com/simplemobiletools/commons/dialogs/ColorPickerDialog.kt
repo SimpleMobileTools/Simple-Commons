@@ -405,7 +405,7 @@ private fun Context.addRecentColor(color: Int) {
 
 @Composable
 @MyDevices
-private fun LineColorPickerAlertDialogPreview() {
+private fun ColorPickerAlertDialogPreview() {
     AppThemeSurface {
         ColorPickerAlertDialog(
             alertDialogState = rememberAlertDialogState(),
