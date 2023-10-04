@@ -3,21 +3,25 @@ package com.simplemobiletools.commons.activities
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
+import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.screens.*
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
-import com.simplemobiletools.commons.dialogs.RateStarsDialog
+import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedAlertDialog
+import com.simplemobiletools.commons.dialogs.RateStarsAlertDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
@@ -42,13 +46,20 @@ class AboutActivity : ComponentActivity() {
             AppThemeSurface {
                 val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
                 val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
+                val beforeAskingQuestionReadFAQAdvancedDialog = getBeforeAskingQuestionReadFAQAdvancedDialog()
+                val rateStarsAlertDialogState = getRateStarsAlertDialogState()
                 AboutScreen(
                     goBack = ::finish,
                     helpUsSection = {
                         val showHelpUsSection =
                             remember { showGoogleRelations || !showExternalLinks }
                         HelpUsSection(
-                            onRateUsClick = ::onRateUsClick,
+                            onRateUsClick = {
+                                onRateUsClick(
+                                    showConfirmationAdvancedDialog = beforeAskingQuestionReadFAQAdvancedDialog::show,
+                                    showRateStarsDialog = rateStarsAlertDialogState::show
+                                )
+                            },
                             onInviteClick = ::onInviteClick,
                             onContributorsClick = ::onContributorsClick,
                             showDonate = resources.getBoolean(R.bool.show_donate_in_about) && showExternalLinks,
@@ -58,9 +69,11 @@ class AboutActivity : ComponentActivity() {
                         )
                     },
                     aboutSection = {
-                        val setupFAQ = remember { !(intent.getSerializableExtra(APP_FAQ) as? ArrayList<FAQItem>).isNullOrEmpty() }
+                        val setupFAQ = rememberFAQ()
                         if (!showExternalLinks || setupFAQ) {
-                            AboutSection(setupFAQ = setupFAQ, onFAQClick = ::launchFAQActivity, onEmailClick = ::onEmailClick)
+                            AboutSection(setupFAQ = setupFAQ, onFAQClick = ::launchFAQActivity, onEmailClick = {
+                                onEmailClick(beforeAskingQuestionReadFAQAdvancedDialog::show)
+                            })
                         }
                     },
                     socialSection = {
@@ -74,13 +87,7 @@ class AboutActivity : ComponentActivity() {
                         }
                     }
                 ) {
-                    val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
-                    var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
-                    if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
-                        version += " ${getString(R.string.pro)}"
-                    }
-                    val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
-
+                    val (showWebsite, fullVersion) = showWebsiteAndFullVersion(resources, showExternalLinks)
                     OtherSection(
                         showMoreApps = showGoogleRelations,
                         onMoreAppsClick = ::launchMoreAppsFromUsIntent,
@@ -97,17 +104,58 @@ class AboutActivity : ComponentActivity() {
         }
     }
 
-    private fun onEmailClick() {
-        val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+    @Composable
+    private fun rememberFAQ() = remember { !(intent.getSerializableExtra(APP_FAQ) as? ArrayList<FAQItem>).isNullOrEmpty() }
+
+    @Composable
+    private fun showWebsiteAndFullVersion(
+        resources: Resources,
+        showExternalLinks: Boolean
+    ): Pair<Boolean, String> {
+        val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
+        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+            version += " ${getString(R.string.pro)}"
+        }
+        val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
+        return Pair(showWebsite, fullVersion)
+    }
+
+    @Composable
+    private fun getRateStarsAlertDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                RateStarsAlertDialog(alertDialogState = this, onRating = ::rateStarsRedirectAndThankYou)
+            }
+        }
+
+    @Composable
+    private fun getBeforeAskingQuestionReadFAQAdvancedDialog() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                ConfirmationAdvancedAlertDialog(
+                    alertDialogState = this,
+                    callback = { success ->
+                        if (success) {
+                            launchFAQActivity()
+                        } else {
+                            launchEmailIntent()
+                        }
+                    },
+                    message = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}",
+                    messageId = null,
+                    positive = R.string.read_faq,
+                    negative = R.string.skip
+                )
+            }
+        }
+
+    private fun onEmailClick(
+        showConfirmationAdvancedDialog: () -> Unit
+    ) {
         if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
             baseConfig.wasBeforeAskingShown = true
-            ConfirmationAdvancedDialog(this@AboutActivity, msg, 0, R.string.read_faq, R.string.skip) { success ->
-                if (success) {
-                    launchFAQActivity()
-                } else {
-                    launchEmailIntent()
-                }
-            }
+            showConfirmationAdvancedDialog()
         } else {
             launchEmailIntent()
         }
@@ -160,27 +208,25 @@ class AboutActivity : ComponentActivity() {
     }
 
 
-    private fun onRateUsClick() {
+    private fun onRateUsClick(
+        showConfirmationAdvancedDialog: () -> Unit,
+        showRateStarsDialog: () -> Unit
+    ) {
         if (baseConfig.wasBeforeRateShown) {
-            launchRateUsPrompt()
+            launchRateUsPrompt(showRateStarsDialog)
         } else {
             baseConfig.wasBeforeRateShown = true
-            val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-            ConfirmationAdvancedDialog(this@AboutActivity, msg, 0, R.string.read_faq, R.string.skip) { success ->
-                if (success) {
-                    launchFAQActivity()
-                } else {
-                    launchRateUsPrompt()
-                }
-            }
+            showConfirmationAdvancedDialog()
         }
     }
 
-    private fun launchRateUsPrompt() {
+    private fun launchRateUsPrompt(
+        showRateStarsDialog: () -> Unit
+    ) {
         if (baseConfig.wasAppRated) {
             redirectToRateUs()
         } else {
-            RateStarsDialog(this@AboutActivity)
+            showRateStarsDialog()
         }
     }
 

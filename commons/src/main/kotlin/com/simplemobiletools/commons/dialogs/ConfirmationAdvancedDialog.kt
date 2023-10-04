@@ -64,9 +64,9 @@ fun ConfirmationAdvancedAlertDialog(
     modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
     message: String = "",
-    messageId: Int = R.string.proceed_with_deletion,
-    positive: Int = R.string.yes,
-    negative: Int = R.string.no,
+    messageId: Int? = R.string.proceed_with_deletion,
+    positive: Int? = R.string.yes,
+    negative: Int? = R.string.no,
     cancelOnTouchOutside: Boolean = true,
     callback: (result: Boolean) -> Unit
 ) {
@@ -83,25 +83,29 @@ fun ConfirmationAdvancedAlertDialog(
         shape = dialogShape,
         tonalElevation = dialogElevation,
         dismissButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-                callback(false)
-            }) {
-                Text(text = stringResource(id = negative))
+            if (negative != null) {
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    callback(false)
+                }) {
+                    Text(text = stringResource(id = negative))
+                }
             }
         },
         confirmButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-                callback(true)
-            }) {
-                Text(text = stringResource(id = positive))
+            if (positive != null) {
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    callback(true)
+                }) {
+                    Text(text = stringResource(id = positive))
+                }
             }
         },
         text = {
             Text(
                 modifier = Modifier.fillMaxWidth(),
-                text = message.ifEmpty { stringResource(id = messageId) },
+                text = message.ifEmpty { messageId?.let { stringResource(id = it) }.orEmpty() },
                 fontSize = 16.sp,
                 color = dialogTextColor,
             )

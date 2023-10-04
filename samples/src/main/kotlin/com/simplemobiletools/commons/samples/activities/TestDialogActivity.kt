@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -18,9 +19,13 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.config
+import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
+import com.simplemobiletools.commons.extensions.launchViewIntent
+import com.simplemobiletools.commons.extensions.toHex
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.collections.immutable.toImmutableList
@@ -31,6 +36,7 @@ class TestDialogActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppThemeSurface {
+                MaterialTheme
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -125,15 +131,10 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getRateStarsAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            RateStarsAlertDialog(alertDialogState = this) { stars ->
-                if (stars == 5) {
-                    redirectToRateUs()
-                }
-                toast(R.string.thank_you)
-                baseConfig.wasAppRated = true
-            }
+            RateStarsAlertDialog(alertDialogState = this, onRating = ::rateStarsRedirectAndThankYou)
         }
     }
+
 
     @Composable
     private fun getChangeDateTimeFormatAlertDialogState() = rememberAlertDialogState().apply {
