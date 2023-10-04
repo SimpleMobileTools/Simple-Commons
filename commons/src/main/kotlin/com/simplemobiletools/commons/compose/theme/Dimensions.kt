@@ -27,7 +27,5 @@ internal val CommonDimensions = Dimensions(
     )
 )
 
-internal val Sw600DpDimensions = CommonDimensions.copy()
-
 val LocalDimensions: ProvidableCompositionLocal<Dimensions> =
     staticCompositionLocalOf { CommonDimensions }

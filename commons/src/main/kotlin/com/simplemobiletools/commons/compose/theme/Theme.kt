@@ -67,8 +67,7 @@ internal fun Theme(
         updateRecentsAppIcon(baseConfig, context)
     }
 
-    val dimensions = if (configuration.screenWidthDp <= 600) CommonDimensions else Sw600DpDimensions
-    MaterialTheme.typography
+    val dimensions = CommonDimensions
 
     MaterialTheme(
         colorScheme = colorScheme,
