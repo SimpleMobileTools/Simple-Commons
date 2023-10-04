@@ -7,7 +7,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.theme.model.Dimensions
 
-val dimens: Dimensions
+val Dimens: Dimensions
     @Composable
     @ReadOnlyComposable
     get() = LocalDimensions.current

@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.dimens
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.collections.immutable.ImmutableList
@@ -36,7 +36,7 @@ internal fun LicenseScreen(
             Column {
                 LicenseItem(license, onLicenseClick)
                 if (index != thirdPartyLicenses.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = dimens.margin.small))
+                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = Dimens.margin.small))
                 }
             }
         }
@@ -59,7 +59,7 @@ private fun LicenseItem(
     }, supportingContent = {
         Text(
             text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = dimens.margin.extraSmall),
+            modifier = Modifier.padding(top = Dimens.margin.extraSmall),
         )
     }, colors = ListItemDefaults.colors(headlineColor = MaterialTheme.colorScheme.primary, supportingColor = MaterialTheme.colorScheme.onSurface))
 }

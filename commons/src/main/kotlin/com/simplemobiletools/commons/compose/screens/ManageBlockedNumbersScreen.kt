@@ -84,7 +84,7 @@ internal fun ManageBlockedNumbersScreen(
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
 ) {
-    val dimens = dimens
+    val dimens = Dimens
     val startingPadding = remember { Modifier.padding(horizontal = dimens.margin.small) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
@@ -193,7 +193,7 @@ internal fun ManageBlockedNumbersScreen(
                     ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
-            verticalArrangement = Arrangement.spacedBy(com.simplemobiletools.commons.compose.theme.dimens.margin.extraSmall),
+            verticalArrangement = Arrangement.spacedBy(Dimens.margin.extraSmall),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -323,7 +323,7 @@ private fun BlockedNumber(
         movableContentOf {
             Text(
                 text = blockedNumber.contactName.toString(),
-                modifier = modifier.padding(horizontal = dimens.margin.medium, vertical = dimens.margin.extraSmall)
+                modifier = modifier.padding(horizontal = Dimens.margin.medium, vertical = Dimens.margin.extraSmall)
             )
         }
     }
@@ -380,7 +380,7 @@ private fun blockedNumberListItemColors(
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber, hasContactName: Boolean) {
     Text(
         text = blockedNumber.number,
-        modifier = modifier.padding(horizontal = dimens.margin.medium),
+        modifier = modifier.padding(horizontal = Dimens.margin.medium),
         color = if (hasContactName) LocalContentColor.current.copy(alpha = 0.7f) else LocalContentColor.current
     )
 }
@@ -547,7 +547,7 @@ private fun NonActionModeToolbar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
-                modifier = Modifier.padding(start = dimens.margin.extraLarge),
+                modifier = Modifier.padding(start = Dimens.margin.extraLarge),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -583,8 +583,8 @@ private fun LazyListScope.emptyBlockedNumbers(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = dimens.margin.extraLarge, bottom = dimens.margin.small)
-                .padding(horizontal = dimens.margin.extraLarge)
+                .padding(top = Dimens.margin.extraLarge, bottom = Dimens.margin.small)
+                .padding(horizontal = Dimens.margin.extraLarge)
         )
     }
     item {
@@ -605,7 +605,7 @@ private fun LazyListScope.emptyBlockedNumbers(
                         color = MaterialTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(dimens.margin.medium)
+                    modifier = Modifier.padding(Dimens.margin.medium)
                 )
             }
         }
@@ -621,8 +621,8 @@ private fun LazyListScope.noPermissionToBlock(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = dimens.margin.extraLarge)
-                .padding(horizontal = dimens.margin.extraLarge)
+                .padding(top = Dimens.margin.extraLarge)
+                .padding(horizontal = Dimens.margin.extraLarge)
         )
     }
     item {
@@ -643,7 +643,7 @@ private fun LazyListScope.noPermissionToBlock(
                         color = MaterialTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(dimens.margin.extraLarge)
+                    modifier = Modifier.padding(Dimens.margin.extraLarge)
                 )
             }
         }

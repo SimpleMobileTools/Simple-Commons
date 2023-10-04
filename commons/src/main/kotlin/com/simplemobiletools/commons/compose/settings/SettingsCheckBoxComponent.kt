@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.dimens
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
 import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
@@ -54,7 +54,7 @@ fun SettingsCheckBoxComponent(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = dimens.margin.extraLarge),
+                    .padding(end = Dimens.margin.extraLarge),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = 14.sp
@@ -64,7 +64,7 @@ fun SettingsCheckBoxComponent(
                     text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = dimens.margin.extraLarge),
+                        .padding(end = Dimens.margin.extraLarge),
                     color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }

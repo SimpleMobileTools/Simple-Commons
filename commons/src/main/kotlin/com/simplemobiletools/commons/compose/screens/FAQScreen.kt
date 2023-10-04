@@ -25,7 +25,7 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.dimens
+import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.extensions.removeUnderlines
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.collections.immutable.ImmutableList
@@ -39,7 +39,7 @@ internal fun FAQScreen(
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = dimens.margin.medium)
+        contentPadding = PaddingValues(bottom = Dimens.margin.medium)
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -72,12 +72,12 @@ internal fun FAQScreen(
                         }
                     },
                 )
-                Spacer(modifier = Modifier.padding(bottom = dimens.margin.medium))
+                Spacer(modifier = Modifier.padding(bottom = Dimens.margin.medium))
                 if (index != faqItems.lastIndex) {
                     SettingsHorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(bottom = dimens.margin.small)
+                            .padding(bottom = Dimens.margin.small)
                     )
                 }
             }
