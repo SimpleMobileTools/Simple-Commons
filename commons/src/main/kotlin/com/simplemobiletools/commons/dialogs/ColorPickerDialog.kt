@@ -1,27 +1,70 @@
+@file:SuppressLint("ClickableViewAccessibility")
 package com.simplemobiletools.commons.dialogs
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.graphics.Color
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
+import androidx.annotation.ColorInt
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidViewBinding
+import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.window.DialogWindowProvider
+import androidx.core.view.updateLayoutParams
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.config
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogColorPickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isQPlus
-import com.simplemobiletools.commons.views.ColorPickerSquare
 import java.util.LinkedList
 
 private const val RECENT_COLORS_NUMBER = 5
 
+@JvmInline
+private value class Hsv(val value: FloatArray) {
+    fun getColor() = Color.HSVToColor(value)
+    fun getHue() = value[0]
+    fun setHue(hue: Float) {
+        value[0] = hue
+    }
+
+    fun getSat() = value[1]
+    fun setSat(sat: Float) {
+        value[1] = sat
+    }
+
+    fun getVal() = value[2]
+    fun setVal(v: Float) {
+        value[2] = v
+    }
+}
+
 // forked from https://github.com/yukuku/ambilwarna
-@SuppressLint("ClickableViewAccessibility")
 class ColorPickerDialog(
     val activity: Activity,
     color: Int,
@@ -30,117 +73,30 @@ class ColorPickerDialog(
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
 ) {
-    var viewHue: View
-    var viewSatVal: ColorPickerSquare
-    var viewCursor: ImageView
-    var viewNewColor: ImageView
-    var viewTarget: ImageView
-    var newHexField: EditText
-    var viewContainer: ViewGroup
     private val baseConfig = activity.baseConfig
-    private val currentColorHsv = FloatArray(3)
+    private val currentColorHsv = Hsv(FloatArray(3))
     private val backgroundColor = baseConfig.backgroundColor
-    private var isHueBeingDragged = false
     private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
+    private val binding = DialogColorPickerBinding.inflate(activity.layoutInflater, null, false)
 
     init {
-        Color.colorToHSV(color, currentColorHsv)
+        Color.colorToHSV(color, currentColorHsv.value)
 
-        val view = DialogColorPickerBinding.inflate(activity.layoutInflater, null, false).apply {
-            if (isQPlus()) {
-                root.isForceDarkAllowed = false
-            }
-
-            viewHue = colorPickerHue
-            viewSatVal = colorPickerSquare
-            viewCursor = colorPickerHueCursor
-
-            viewNewColor = colorPickerNewColor
-            viewTarget = colorPickerCursor
-            viewContainer = colorPickerHolder
-            newHexField = colorPickerNewHex
-
-            viewSatVal.setHue(getHue())
-
-            viewNewColor.setFillWithStroke(getColor(), backgroundColor)
-            colorPickerOldColor.setFillWithStroke(color, backgroundColor)
-
-            val hexCode = getHexCode(color)
-            colorPickerOldHex.text = "#$hexCode"
-            colorPickerOldHex.setOnLongClickListener {
-                activity.copyToClipboard(hexCode)
-                true
-            }
-            newHexField.setText(hexCode)
-            setupRecentColors()
-        }
-
-        viewHue.setOnTouchListener(OnTouchListener { v, event ->
-            if (event.action == MotionEvent.ACTION_DOWN) {
-                isHueBeingDragged = true
-            }
-
-            if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
-                var y = event.y
-                if (y < 0f)
-                    y = 0f
-
-                if (y > viewHue.measuredHeight) {
-                    y = viewHue.measuredHeight - 0.001f // to avoid jumping the cursor from bottom to top.
+        binding.init(
+            color = color,
+            backgroundColor = backgroundColor,
+            recentColors = baseConfig.colorPickerRecentColors,
+            hsv = currentColorHsv,
+            currentColorCallback = {
+                if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
+                    dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+                    wasDimmedBackgroundRemoved = true
                 }
-                var hue = 360f - 360f / viewHue.measuredHeight * y
-                if (hue == 360f)
-                    hue = 0f
 
-                currentColorHsv[0] = hue
-                updateHue()
-                newHexField.setText(getHexCode(getColor()))
-
-                if (event.action == MotionEvent.ACTION_UP) {
-                    isHueBeingDragged = false
-                }
-                return@OnTouchListener true
+                currentColorCallback?.invoke(it)
             }
-            false
-        })
-
-        viewSatVal.setOnTouchListener(OnTouchListener { v, event ->
-            if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
-                var x = event.x
-                var y = event.y
-
-                if (x < 0f)
-                    x = 0f
-                if (x > viewSatVal.measuredWidth)
-                    x = viewSatVal.measuredWidth.toFloat()
-                if (y < 0f)
-                    y = 0f
-                if (y > viewSatVal.measuredHeight)
-                    y = viewSatVal.measuredHeight.toFloat()
-
-                currentColorHsv[1] = 1f / viewSatVal.measuredWidth * x
-                currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
-
-                moveColorPicker()
-                viewNewColor.setFillWithStroke(getColor(), backgroundColor)
-                newHexField.setText(getHexCode(getColor()))
-                return@OnTouchListener true
-            }
-            false
-        })
-
-        newHexField.onTextChangeListener {
-            if (it.length == 6 && !isHueBeingDragged) {
-                try {
-                    val newColor = Color.parseColor("#$it")
-                    Color.colorToHSV(newColor, currentColorHsv)
-                    updateHue()
-                    moveColorPicker()
-                } catch (ignored: Exception) {
-                }
-            }
-        }
+        )
 
         val textColor = activity.getProperTextColor()
         val builder = activity.getAlertDialogBuilder()
@@ -154,33 +110,11 @@ class ColorPickerDialog(
             }
 
         builder.apply {
-            activity.setupDialogStuff(view.root, this) { alertDialog ->
+            activity.setupDialogStuff(binding.root, this) { alertDialog ->
                 dialog = alertDialog
-                view.colorPickerArrow.applyColorFilter(textColor)
-                view.colorPickerHexArrow.applyColorFilter(textColor)
-                viewCursor.applyColorFilter(textColor)
-            }
-        }
-
-        view.root.onGlobalLayout {
-            moveHuePicker()
-            moveColorPicker()
-        }
-    }
-
-    private fun DialogColorPickerBinding.setupRecentColors() {
-        val colorPickerRecentColors = baseConfig.colorPickerRecentColors
-        if (colorPickerRecentColors.isNotEmpty()) {
-            recentColors.beVisible()
-            val squareSize = root.context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
-            colorPickerRecentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
-                val recentColorView = ImageView(root.context)
-                recentColorView.id = View.generateViewId()
-                recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
-                recentColorView.setFillWithStroke(recentColor, backgroundColor)
-                recentColorView.setOnClickListener { newHexField.setText(getHexCode(recentColor)) }
-                recentColors.addView(recentColorView)
-                recentColorsFlow.addView(recentColorView)
+                binding.colorPickerArrow.applyColorFilter(textColor)
+                binding.colorPickerHexArrow.applyColorFilter(textColor)
+                binding.colorPickerHueCursor.applyColorFilter(textColor)
             }
         }
     }
@@ -194,62 +128,289 @@ class ColorPickerDialog(
     }
 
     private fun confirmNewColor() {
-        val hexValue = newHexField.value
+        val hexValue = binding.colorPickerNewHex.value
         val newColor = if (hexValue.length == 6) {
             Color.parseColor("#$hexValue")
         } else {
-            getColor()
+            currentColorHsv.getColor()
         }
 
-        addRecentColor(newColor)
+        activity.addRecentColor(newColor)
         callback(true, newColor)
     }
+}
 
-    private fun addRecentColor(color: Int) {
-        var recentColors = baseConfig.colorPickerRecentColors
+@Composable
+fun ColorPickerAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
+    @ColorInt
+    color: Int,
+    removeDimmedBackground: Boolean = false,
+    addDefaultColorButton: Boolean = false,
+    onActiveColorChange: (color: Int) -> Unit,
+    onButtonPressed: (wasPositivePressed: Boolean, color: Int) -> Unit
+) {
+    val view = LocalView.current
+    val context = LocalContext.current
+    var wasDimmedBackgroundRemoved by remember { mutableStateOf(false) }
 
-        recentColors.remove(color)
-        if (recentColors.size >= RECENT_COLORS_NUMBER) {
-            val numberOfColorsToDrop = recentColors.size - RECENT_COLORS_NUMBER + 1
-            recentColors = LinkedList(recentColors.dropLast(numberOfColorsToDrop))
+    AlertDialog(
+        modifier = modifier
+            .dialogBorder,
+        onDismissRequest = alertDialogState::hide,
+        properties = DialogProperties(usePlatformDefaultWidth = false)
+    ) {
+        Column(
+            Modifier
+                .fillMaxWidth(0.95f)
+                .background(dialogContainerColor, dialogShape)
+                .padding(16.dp)
+        ) {
+            var dialogColorPickerBinding by remember { mutableStateOf<DialogColorPickerBinding?>(null) }
+            val currentColorHsv by remember { derivedStateOf { Hsv(FloatArray(3)).apply { Color.colorToHSV(color, this.value) } } }
+            AndroidViewBinding(
+                DialogColorPickerBinding::inflate,
+                onRelease = {
+                    dialogColorPickerBinding = null
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+            ) {
+                root.updateLayoutParams<FrameLayout.LayoutParams> {
+                    height = FrameLayout.LayoutParams.WRAP_CONTENT
+                }
+                dialogColorPickerBinding = this
+
+                init(
+                    color = color,
+                    backgroundColor = context.config.backgroundColor,
+                    recentColors = context.config.colorPickerRecentColors,
+                    hsv = currentColorHsv,
+                    currentColorCallback = {
+                        if (removeDimmedBackground) {
+                            if (!wasDimmedBackgroundRemoved) {
+                                (view.parent as? DialogWindowProvider)?.window?.setDimAmount(0f)
+                                wasDimmedBackgroundRemoved = true
+                            }
+                        }
+
+                        onActiveColorChange(it)
+                    }
+                )
+
+                val textColor = context.getProperTextColor()
+                colorPickerArrow.applyColorFilter(textColor)
+                colorPickerHexArrow.applyColorFilter(textColor)
+                colorPickerHueCursor.applyColorFilter(textColor)
+                context.updateTextColors(root)
+            }
+
+            Row(
+                Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End
+            ) {
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    onButtonPressed(false, 0)
+                }) {
+                    Text(text = stringResource(id = R.string.cancel))
+                }
+                if (addDefaultColorButton) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        onButtonPressed(true, 0)
+                    }) {
+                        Text(text = stringResource(id = R.string.default_color))
+                    }
+                }
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    val hexValue = dialogColorPickerBinding?.colorPickerNewHex?.value
+                    val newColor = if (hexValue?.length == 6) {
+                        Color.parseColor("#$hexValue")
+                    } else {
+                        currentColorHsv.getColor()
+                    }
+
+                    context.addRecentColor(newColor)
+                    onButtonPressed(true, newColor)
+                }) {
+                    Text(text = stringResource(id = R.string.ok))
+                }
+            }
         }
-        recentColors.addFirst(color)
-
-        baseConfig.colorPickerRecentColors = recentColors
     }
 
-    private fun getHexCode(color: Int) = color.toHex().substring(1)
+}
 
-    private fun updateHue() {
-        viewSatVal.setHue(getHue())
-        moveHuePicker()
-        viewNewColor.setFillWithStroke(getColor(), backgroundColor)
-        if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
-            dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-            wasDimmedBackgroundRemoved = true
+private fun DialogColorPickerBinding.init(
+    color: Int,
+    backgroundColor: Int,
+    recentColors: List<Int>,
+    hsv: Hsv,
+    currentColorCallback: ((color: Int) -> Unit)
+) {
+    var isHueBeingDragged = false
+
+    if (isQPlus()) {
+        root.isForceDarkAllowed = false
+    }
+
+    colorPickerSquare.setHue(hsv.getHue())
+
+    colorPickerNewColor.setFillWithStroke(color, backgroundColor)
+    colorPickerOldColor.setFillWithStroke(color, backgroundColor)
+
+    val hexCode = getHexCode(color)
+    colorPickerOldHex.text = "#$hexCode"
+    colorPickerOldHex.setOnLongClickListener {
+        root.context.copyToClipboard(hexCode)
+        true
+    }
+    colorPickerNewHex.setText(hexCode)
+    setupRecentColors(backgroundColor, recentColors)
+
+    colorPickerHue.setOnTouchListener(OnTouchListener { v, event ->
+        if (event.action == MotionEvent.ACTION_DOWN) {
+            isHueBeingDragged = true
         }
 
-        currentColorCallback?.invoke(getColor())
+        if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
+            var y = event.y
+            if (y < 0f)
+                y = 0f
+
+            if (y > colorPickerHue.measuredHeight) {
+                y = colorPickerHue.measuredHeight - 0.001f // to avoid jumping the cursor from bottom to top.
+            }
+            var hue = 360f - 360f / colorPickerHue.measuredHeight * y
+            if (hue == 360f)
+                hue = 0f
+
+            hsv.setHue(hue)
+            updateHue(hsv, backgroundColor, currentColorCallback)
+            colorPickerNewHex.setText(getHexCode(hsv.getColor()))
+
+            if (event.action == MotionEvent.ACTION_UP) {
+                isHueBeingDragged = false
+            }
+            return@OnTouchListener true
+        }
+        false
+    })
+
+    colorPickerSquare.setOnTouchListener(OnTouchListener { v, event ->
+        if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
+            var x = event.x
+            var y = event.y
+
+            if (x < 0f)
+                x = 0f
+            if (x > colorPickerSquare.measuredWidth)
+                x = colorPickerSquare.measuredWidth.toFloat()
+            if (y < 0f)
+                y = 0f
+            if (y > colorPickerSquare.measuredHeight)
+                y = colorPickerSquare.measuredHeight.toFloat()
+
+            hsv.setSat(1f / colorPickerSquare.measuredWidth * x)
+            hsv.setVal(1f - 1f / colorPickerSquare.measuredHeight * y)
+
+            moveColorPicker(hsv)
+            colorPickerNewColor.setFillWithStroke(hsv.getColor(), backgroundColor)
+            colorPickerNewHex.setText(getHexCode(hsv.getColor()))
+            return@OnTouchListener true
+        }
+        false
+    })
+
+    colorPickerNewHex.onTextChangeListener {
+        if (it.length == 6 && !isHueBeingDragged) {
+            try {
+                val newColor = Color.parseColor("#$it")
+                Color.colorToHSV(newColor, hsv.value)
+                updateHue(hsv, backgroundColor, currentColorCallback)
+                moveColorPicker(hsv)
+            } catch (ignored: Exception) {
+            }
+        }
     }
 
-    private fun moveHuePicker() {
-        var y = viewHue.measuredHeight - getHue() * viewHue.measuredHeight / 360f
-        if (y == viewHue.measuredHeight.toFloat())
-            y = 0f
-
-        viewCursor.x = (viewHue.left - viewCursor.width).toFloat()
-        viewCursor.y = viewHue.top + y - viewCursor.height / 2
+    root.onGlobalLayout {
+        moveHuePicker(hsv)
+        moveColorPicker(hsv)
     }
+}
 
-    private fun moveColorPicker() {
-        val x = getSat() * viewSatVal.measuredWidth
-        val y = (1f - getVal()) * viewSatVal.measuredHeight
-        viewTarget.x = viewSatVal.left + x - viewTarget.width / 2
-        viewTarget.y = viewSatVal.top + y - viewTarget.height / 2
+private fun DialogColorPickerBinding.setupRecentColors(backgroundColor: Int, recentColors: List<Int>) {
+    if (recentColors.isNotEmpty()) {
+        this.recentColors.beVisible()
+        val squareSize = root.context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
+        recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
+            val recentColorView = ImageView(root.context)
+            recentColorView.id = View.generateViewId()
+            recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
+            recentColorView.setFillWithStroke(recentColor, backgroundColor)
+            recentColorView.setOnClickListener { colorPickerNewHex.setText(getHexCode(recentColor)) }
+            this.recentColors.addView(recentColorView)
+            recentColorsFlow.addView(recentColorView)
+        }
     }
+}
 
-    private fun getColor() = Color.HSVToColor(currentColorHsv)
-    private fun getHue() = currentColorHsv[0]
-    private fun getSat() = currentColorHsv[1]
-    private fun getVal() = currentColorHsv[2]
+private fun DialogColorPickerBinding.updateHue(
+    hsv: Hsv,
+    backgroundColor: Int,
+    currentColorCallback: ((color: Int) -> Unit)
+) {
+    colorPickerSquare.setHue(hsv.getHue())
+    moveHuePicker(hsv)
+    colorPickerNewColor.setFillWithStroke(hsv.getColor(), backgroundColor)
+
+    currentColorCallback.invoke(hsv.getColor())
+}
+
+private fun DialogColorPickerBinding.moveHuePicker(hsv: Hsv) {
+    var y = colorPickerHue.measuredHeight - hsv.getHue() * colorPickerHue.measuredHeight / 360f
+    if (y == colorPickerHue.measuredHeight.toFloat())
+        y = 0f
+
+    colorPickerHueCursor.x = (colorPickerHue.left - colorPickerHueCursor.width).toFloat()
+    colorPickerHueCursor.y = colorPickerHue.top + y - colorPickerHueCursor.height / 2
+}
+
+private fun DialogColorPickerBinding.moveColorPicker(hsv: Hsv) {
+    val x = hsv.getSat() * colorPickerSquare.measuredWidth
+    val y = (1f - hsv.getVal()) * colorPickerSquare.measuredHeight
+    colorPickerCursor.x = colorPickerSquare.left + x - colorPickerCursor.width / 2
+    colorPickerCursor.y = colorPickerSquare.top + y - colorPickerCursor.height / 2
+}
+
+private fun getHexCode(color: Int) = color.toHex().substring(1)
+
+private fun Context.addRecentColor(color: Int) {
+    var recentColors = baseConfig.colorPickerRecentColors
+
+    recentColors.remove(color)
+    if (recentColors.size >= RECENT_COLORS_NUMBER) {
+        val numberOfColorsToDrop = recentColors.size - RECENT_COLORS_NUMBER + 1
+        recentColors = LinkedList(recentColors.dropLast(numberOfColorsToDrop))
+    }
+    recentColors.addFirst(color)
+
+    baseConfig.colorPickerRecentColors = recentColors
+}
+
+@Composable
+@MyDevices
+private fun LineColorPickerAlertDialogPreview() {
+    AppThemeSurface {
+        ColorPickerAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
+            color = colorResource(id = R.color.color_primary).toArgb(),
+            onActiveColorChange = {},
+            onButtonPressed = { _, _ -> })
+    }
 }
