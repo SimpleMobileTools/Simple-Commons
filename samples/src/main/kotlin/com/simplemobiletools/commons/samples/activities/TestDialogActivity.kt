@@ -53,6 +53,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getFeatureLockedAlertDialogState(), text = "Feature Locked")
                     ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
                     ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
+                    ShowButton(getColorPickerAlertDialogState(), text = "Color picker")
                     ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
@@ -157,6 +158,21 @@ class TestDialogActivity : ComponentActivity() {
                     Log.d("getLineColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
                 }, onActiveColorChange = { color ->
                     Log.d("getLineColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
+                })
+        }
+    }
+
+    @Composable
+    private fun getColorPickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            ColorPickerAlertDialog(
+                alertDialogState = this,
+                color = config.customTextColor,
+                removeDimmedBackground = true,
+                onButtonPressed = { wasPositivePressed, color ->
+                    Log.d("getColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
+                }, onActiveColorChange = { color ->
+                    Log.d("getColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
                 })
         }
     }

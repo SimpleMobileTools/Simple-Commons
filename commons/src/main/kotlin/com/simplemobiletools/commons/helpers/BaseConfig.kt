@@ -9,12 +9,12 @@ import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 import com.simplemobiletools.commons.extensions.sharedPreferencesCallback
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filterNotNull
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.LinkedList
 import java.util.Locale
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filterNotNull
 import kotlin.reflect.KProperty0
 
 open class BaseConfig(val context: Context) {
@@ -498,6 +498,8 @@ open class BaseConfig(val context: Context) {
             return LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
         }
         set(recentColors) = prefs.edit().putString(COLOR_PICKER_RECENT_COLORS, recentColors.joinToString(separator = "\n")).apply()
+
+    val colorPickerRecentColorsFlow = ::colorPickerRecentColors.asFlowNonNull()
 
     var ignoredContactSources: HashSet<String>
         get() = prefs.getStringSet(IGNORED_CONTACT_SOURCES, hashSetOf(".")) as HashSet

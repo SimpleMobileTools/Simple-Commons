@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.content.Context
 import android.view.WindowManager
 import android.widget.FrameLayout
+import androidx.annotation.ColorInt
 import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -166,6 +167,7 @@ class LineColorPickerDialog(
 fun LineColorPickerAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
+    @ColorInt
     color: Int,
     isPrimaryColorPicker: Boolean,
     primaryColors: Int = R.array.md_primary_colors,
