@@ -11,6 +11,12 @@ fun rememberAlertDialogState(
     isShownInitially: Boolean = false
 ) = remember { AlertDialogState(isShownInitially) }
 
+/**
+ * Use this function to control the state whenever you want its visibility to be retained
+ * even after configuration and process death
+ * @param isShownInitially Boolean
+ * @return AlertDialogState
+ */
 @Composable
 fun rememberAlertDialogStateSaveable(
     isShownInitially: Boolean = false
@@ -30,6 +36,9 @@ class AlertDialogState(isShownInitially: Boolean = false) {
         private set
 
     fun show() {
+        if (isShown) {
+            isShown = false
+        }
         isShown = true
     }
 

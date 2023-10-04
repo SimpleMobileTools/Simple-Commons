@@ -115,9 +115,7 @@ fun RateStarsAlertDialog(
                 }
             )
             TextButton(
-                onClick = {
-                    alertDialogState.hide()
-                },
+                onClick = alertDialogState::hide,
                 modifier = Modifier
                     .align(End)
                     .padding(end = 16.dp, bottom = 8.dp)
