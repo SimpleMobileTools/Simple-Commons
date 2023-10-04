@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -25,6 +24,7 @@ import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.extensions.removeUnderlines
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.collections.immutable.ImmutableList
@@ -38,7 +38,7 @@ internal fun FAQScreen(
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = 8.dp)
+        contentPadding = PaddingValues(bottom = SimpleTheme.dimens.margin.medium)
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -50,7 +50,7 @@ internal fun FAQScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(bottom = 6.dp),
-                            color = MaterialTheme.colorScheme.primary,
+                            color = SimpleTheme.colorScheme.primary,
                             lineHeight = 16.sp,
                         )
                     },
@@ -71,12 +71,12 @@ internal fun FAQScreen(
                         }
                     },
                 )
-                Spacer(modifier = Modifier.padding(bottom = 8.dp))
+                Spacer(modifier = Modifier.padding(bottom = SimpleTheme.dimens.margin.medium))
                 if (index != faqItems.lastIndex) {
                     SettingsHorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(bottom = 4.dp)
+                            .padding(bottom = SimpleTheme.dimens.margin.small)
                     )
                 }
             }
@@ -98,15 +98,15 @@ fun LinkifyText(
     modifier: Modifier = Modifier,
     fontSize: TextUnit = 14.sp,
     removeUnderlines: Boolean = true,
-    textAlignment : Int = TextView.TEXT_ALIGNMENT_TEXT_START,
+    textAlignment: Int = TextView.TEXT_ALIGNMENT_TEXT_START,
     text: () -> Spanned
 ) {
     val context = LocalContext.current
     val customLinkifyTextView = remember {
         TextView(context)
     }
-    val textColor = MaterialTheme.colorScheme.onSurface
-    val linkTextColor = MaterialTheme.colorScheme.primary
+    val textColor = SimpleTheme.colorScheme.onSurface
+    val linkTextColor = SimpleTheme.colorScheme.primary
     AndroidView(modifier = modifier, factory = { customLinkifyTextView }) { textView ->
         textView.setTextColor(textColor.toArgb())
         textView.setLinkTextColor(linkTextColor.toArgb())
