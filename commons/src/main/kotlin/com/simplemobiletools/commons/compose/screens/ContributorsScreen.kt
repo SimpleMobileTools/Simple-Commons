@@ -24,7 +24,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.Dimens
+import com.simplemobiletools.commons.compose.theme.dimens
 import com.simplemobiletools.commons.models.LanguageContributor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -65,7 +65,7 @@ internal fun ContributorsScreen(
             )
         }
         item {
-            Spacer(modifier = Modifier.padding(vertical = Dimens.margin.medium))
+            Spacer(modifier = Modifier.padding(vertical = dimens.margin.medium))
         }
         item {
             SettingsHorizontalDivider()
@@ -94,7 +94,7 @@ internal fun ContributorsScreen(
                 )
             }
             item {
-                Spacer(modifier = Modifier.padding(bottom = Dimens.margin.medium))
+                Spacer(modifier = Modifier.padding(bottom = dimens.margin.medium))
             }
         }
        
@@ -117,8 +117,8 @@ private fun ContributorItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.medium)
-                .padding(Dimens.margin.medium)
+                .size(dimens.icon.medium)
+                .padding(dimens.margin.medium)
             Image(
                 modifier = imageSize,
                 painter = painterResource(id = languageContributor.iconId),

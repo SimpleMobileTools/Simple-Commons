@@ -20,7 +20,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.Dimens
+import com.simplemobiletools.commons.compose.theme.dimens
 
 @Composable
 fun SettingsScaffoldTopBar(
@@ -39,7 +39,7 @@ fun SettingsScaffoldTopBar(
             Text(
                 text = title,
                 modifier = Modifier
-                    .padding(start = Dimens.margin.medium)
+                    .padding(start = dimens.margin.medium)
                     .fillMaxWidth(),
                 color = scrolledColor,
                 maxLines = 1,
@@ -157,7 +157,7 @@ fun SettingsNavigationIcon(
 ) {
     Box(
         modifier
-            .padding(start = Dimens.margin.medium)
+            .padding(start = dimens.margin.medium)
             .clip(RoundedCornerShape(50))
             .clickable(
                 navigationIconInteractionSource, rememberRipple(
@@ -175,13 +175,13 @@ fun BackIcon(iconColor: Color?) {
     if (iconColor == null) {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-            modifier = Modifier.padding(Dimens.margin.small)
+            modifier = Modifier.padding(dimens.margin.small)
         )
     } else {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
             tint = iconColor,
-            modifier = Modifier.padding(Dimens.margin.small)
+            modifier = Modifier.padding(dimens.margin.small)
         )
     }
 }
