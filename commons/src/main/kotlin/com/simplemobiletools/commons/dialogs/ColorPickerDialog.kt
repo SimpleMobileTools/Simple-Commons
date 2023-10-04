@@ -303,7 +303,7 @@ fun ColorPickerAlertDialog(
         Column(
             modifier = Modifier
                 .fillMaxWidth(0.95f)
-                .background(dialogContainerColor, dialogShape)
+                .dialogBackgroundAndShape
                 .padding(16.dp)
         ) {
             val pickerController = rememberColorPickerController()
