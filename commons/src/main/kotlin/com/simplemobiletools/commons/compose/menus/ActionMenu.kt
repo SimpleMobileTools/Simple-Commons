@@ -28,8 +28,8 @@ import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.Dimens
 import com.simplemobiletools.commons.compose.theme.Shapes
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -96,7 +96,7 @@ fun ActionMenu(
                             Text(
                                 text = name,
                                 fontSize = 14.sp,
-                                modifier = Modifier.padding(Dimens.margin.medium),
+                                modifier = Modifier.padding(SimpleTheme.dimens.margin.medium),
                             )
                         }
                     },
@@ -125,7 +125,7 @@ fun ActionMenu(
                     Text(
                         text = stringResource(id = R.string.more_options),
                         fontSize = 14.sp,
-                        modifier = Modifier.padding(Dimens.margin.medium),
+                        modifier = Modifier.padding(SimpleTheme.dimens.margin.medium),
                     )
                 }
             },

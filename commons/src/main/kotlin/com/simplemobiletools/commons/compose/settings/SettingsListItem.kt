@@ -22,7 +22,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.Dimens
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 
 @Composable
 fun SettingsListItem(
@@ -50,8 +50,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.medium)
-                .padding(Dimens.margin.medium)
+                .size(SimpleTheme.dimens.icon.medium)
+                .padding(SimpleTheme.dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,
@@ -106,8 +106,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(Dimens.icon.medium)
-                .padding(Dimens.margin.medium)
+                .size(SimpleTheme.dimens.icon.medium)
+                .padding(SimpleTheme.dimens.margin.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,

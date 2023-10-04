@@ -1,16 +1,9 @@
 package com.simplemobiletools.commons.compose.theme
 
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ProvidableCompositionLocal
-import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.theme.model.Dimensions
-
-val Dimens: Dimensions
-    @Composable
-    @ReadOnlyComposable
-    get() = LocalDimensions.current
 
 internal val CommonDimensions = Dimensions(
     margin = Dimensions.Margins(
