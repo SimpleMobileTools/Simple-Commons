@@ -16,11 +16,11 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 
 @Composable
 fun SettingsScaffoldTopBar(
@@ -39,7 +39,7 @@ fun SettingsScaffoldTopBar(
             Text(
                 text = title,
                 modifier = Modifier
-                    .padding(start = 8.dp)
+                    .padding(start = SimpleTheme.dimens.margin.medium)
                     .fillMaxWidth(),
                 color = scrolledColor,
                 maxLines = 1,
@@ -157,7 +157,7 @@ fun SettingsNavigationIcon(
 ) {
     Box(
         modifier
-            .padding(start = 8.dp)
+            .padding(start = SimpleTheme.dimens.margin.medium)
             .clip(RoundedCornerShape(50))
             .clickable(
                 navigationIconInteractionSource, rememberRipple(
@@ -175,13 +175,13 @@ fun BackIcon(iconColor: Color?) {
     if (iconColor == null) {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-            modifier = Modifier.padding(4.dp)
+            modifier = Modifier.padding(SimpleTheme.dimens.margin.small)
         )
     } else {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
             tint = iconColor,
-            modifier = Modifier.padding(4.dp)
+            modifier = Modifier.padding(SimpleTheme.dimens.margin.small)
         )
     }
 }

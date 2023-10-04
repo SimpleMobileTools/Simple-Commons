@@ -24,6 +24,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.models.LanguageContributor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -59,12 +60,12 @@ internal fun ContributorsScreen(
             SettingsListItem(
                 text = stringResource(id = R.string.contributors_developers),
                 icon = R.drawable.ic_code_vector,
-                tint = MaterialTheme.colorScheme.onSurface,
+                tint = SimpleTheme.colorScheme.onSurface,
                 fontSize = 14.sp
             )
         }
         item {
-            Spacer(modifier = Modifier.padding(vertical = 8.dp))
+            Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.margin.medium))
         }
         item {
             SettingsHorizontalDivider()
@@ -89,11 +90,11 @@ internal fun ContributorsScreen(
                             stringFromHTML(source)
                         }
                     },
-                    tint = MaterialTheme.colorScheme.onSurface
+                    tint = SimpleTheme.colorScheme.onSurface
                 )
             }
             item {
-                Spacer(modifier = Modifier.padding(bottom = 8.dp))
+                Spacer(modifier = Modifier.padding(bottom = SimpleTheme.dimens.margin.medium))
             }
         }
        
@@ -116,8 +117,8 @@ private fun ContributorItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(SimpleTheme.dimens.icon.medium)
+                .padding(SimpleTheme.dimens.margin.medium)
             Image(
                 modifier = imageSize,
                 painter = painterResource(id = languageContributor.iconId),

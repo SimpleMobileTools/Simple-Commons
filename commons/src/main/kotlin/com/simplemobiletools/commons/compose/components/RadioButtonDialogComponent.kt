@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.compose.components
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Text
@@ -14,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.dialogs.dialogTextColor
 
 @Composable
@@ -41,12 +41,12 @@ fun RadioButtonDialogComponent(
             onClick = null,
             enabled = true,
             colors = RadioButtonDefaults.colors(
-                selectedColor = MaterialTheme.colorScheme.primary
+                selectedColor = SimpleTheme.colorScheme.primary
             ),
         )
         Text(
             text = item,
-            modifier = Modifier.padding(start = 8.dp),
+            modifier = Modifier.padding(start = SimpleTheme.dimens.margin.medium),
             color = dialogTextColor
         )
     }

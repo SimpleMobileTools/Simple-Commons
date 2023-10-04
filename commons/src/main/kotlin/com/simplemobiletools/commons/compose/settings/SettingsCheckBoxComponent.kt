@@ -10,16 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
-import com.simplemobiletools.commons.R
+import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
-import com.simplemobiletools.commons.compose.theme.AppThemeSurface
-import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
-import com.simplemobiletools.commons.compose.theme.preferenceValueColor
+import com.simplemobiletools.commons.compose.theme.*
 
 @Composable
 fun SettingsCheckBoxComponent(
@@ -55,19 +51,17 @@ fun SettingsCheckBoxComponent(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = 16.dp),
+                    .padding(end = SimpleTheme.dimens.margin.extraLarge),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
-                fontSize = with(LocalDensity.current) {
-                    dimensionResource(id = R.dimen.normal_text_size).toSp()
-                }
+                fontSize = 14.sp
             )
             AnimatedVisibility(visible = !value.isNullOrBlank()) {
                 Text(
                     text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = 16.dp),
+                        .padding(end = SimpleTheme.dimens.margin.extraLarge),
                     color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }
