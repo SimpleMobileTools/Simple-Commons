@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.compose.extensions
 
-import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
@@ -101,7 +100,7 @@ fun Context.fakeVersionCheck(
     }
 }
 
-fun Activity.appOnSdCardCheck(
+fun ComponentActivity.appOnSdCardCheckCompose(
     showConfirmationDialog: () -> Unit
 ) {
     if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
