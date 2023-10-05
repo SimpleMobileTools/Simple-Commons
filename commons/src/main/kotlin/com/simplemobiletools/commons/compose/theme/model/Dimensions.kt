@@ -1,14 +1,14 @@
 package com.simplemobiletools.commons.compose.theme.model
 
-import androidx.compose.runtime.Stable
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.unit.Dp
 
-@Stable
+@Immutable
 data class Dimensions(
     val margin: Margins,
     val icon: IconSizes
 ) {
-    @Stable
+    @Immutable
     data class Margins(
         val extraSmall: Dp,
         val small: Dp,
@@ -17,7 +17,7 @@ data class Dimensions(
         val extraLarge: Dp,
     )
 
-    @Stable
+    @Immutable
     data class IconSizes(
         val small: Dp,
         val medium: Dp,
