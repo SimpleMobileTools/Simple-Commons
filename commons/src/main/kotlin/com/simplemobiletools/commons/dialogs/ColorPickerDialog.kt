@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidViewBinding
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
+import androidx.core.view.children
 import androidx.core.view.updateLayoutParams
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
@@ -347,6 +348,11 @@ private fun DialogColorPickerBinding.init(
 private fun DialogColorPickerBinding.setupRecentColors(backgroundColor: Int, recentColors: List<Int>) {
     if (recentColors.isNotEmpty()) {
         this.recentColors.beVisible()
+        val childrenToRemove = this.recentColors.children.filter { it is ImageView }.toList()
+        childrenToRemove.forEach {
+            this.recentColors.removeView(it)
+            recentColorsFlow.removeView(it)
+        }
         val squareSize = root.context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
         recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
             val recentColorView = ImageView(root.context)
