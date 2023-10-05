@@ -27,3 +27,21 @@ fun FakeVersionCheck() {
         context.fakeVersionCheck(confirmationDialogAlertDialogState::show)
     }
 }
+
+@Composable
+fun CheckAppOnSdCard() {
+    val context = LocalContext.current.getComponentActivity()
+    val confirmationDialogAlertDialogState = rememberAlertDialogState().apply {
+        DialogMember {
+            ConfirmationAlertDialog(
+                alertDialogState = this,
+                positive = R.string.ok,
+                negative = null,
+                messageId = R.string.app_on_sd_card
+            ) {}
+        }
+    }
+    LaunchedEffect(Unit) {
+        context.appOnSdCardCheckCompose(confirmationDialogAlertDialogState::show)
+    }
+}
