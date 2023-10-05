@@ -27,6 +27,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogSta
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogRateStarsBinding
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.coroutines.delay
@@ -87,45 +88,42 @@ fun RateStarsAlertDialog(
     ) {
         var currentRating by remember { mutableIntStateOf(0) }
         val coroutineScope = rememberCoroutineScope()
-        Column(
-            modifier = Modifier
-                .dialogBackgroundAndShape
-        ) {
-            Text(
-                text = stringResource(id = R.string.rate_our_app),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 12.dp),
-                textAlign = TextAlign.Center,
-                color = dialogTextColor,
-                fontSize = 16.sp
-            )
-            StarRating(
-                modifier = Modifier
-                    .align(CenterHorizontally)
-                    .padding(16.dp),
-                currentRating = currentRating,
-                onRatingChanged = { stars ->
-                    currentRating = stars
-                    coroutineScope.launch {
-                        onRating(stars)
-                        delay(500L)
-                        alertDialogState.hide()
+        DialogSurface {
+            Column {
+                Text(
+                    text = stringResource(id = R.string.rate_our_app),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.large),
+                    textAlign = TextAlign.Center,
+                    color = dialogTextColor,
+                    fontSize = 16.sp
+                )
+                StarRating(
+                    modifier = Modifier
+                        .align(CenterHorizontally)
+                        .padding(SimpleTheme.dimens.margin.extraLarge),
+                    currentRating = currentRating,
+                    onRatingChanged = { stars ->
+                        currentRating = stars
+                        coroutineScope.launch {
+                            onRating(stars)
+                            delay(500L)
+                            alertDialogState.hide()
+                        }
                     }
+                )
+                TextButton(
+                    onClick = alertDialogState::hide,
+                    modifier = Modifier
+                        .align(End)
+                        .padding(end = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.medium)
+                ) {
+                    Text(text = stringResource(id = R.string.later))
                 }
-            )
-            TextButton(
-                onClick = alertDialogState::hide,
-                modifier = Modifier
-                    .align(End)
-                    .padding(end = 16.dp, bottom = 8.dp)
-            ) {
-                Text(text = stringResource(id = R.string.later))
             }
         }
-
     }
-
 }
 
 @Composable

@@ -29,6 +29,7 @@ import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
 import com.simplemobiletools.commons.databinding.DialogChangeDateTimeFormatBinding
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -135,59 +136,57 @@ fun ChangeDateTimeFormatAlertDialog(
     AlertDialog(
         onDismissRequest = alertDialogState::hide,
     ) {
-        Box(
-            modifier = Modifier
-                .dialogBackgroundAndShape
-        ) {
-            Column(
-                modifier = modifier
-                    .padding(bottom = 64.dp)
-                    .verticalScroll(rememberScrollState())
-            ) {
-                RadioGroupDialogComponent(
-                    items = kinds, selected = selected,
-                    setSelected = setSelected,
-                    modifier = Modifier.padding(
-                        vertical = 16.dp,
+        DialogSurface {
+            Box {
+                Column(
+                    modifier = modifier
+                        .padding(bottom = 64.dp)
+                        .verticalScroll(rememberScrollState())
+                ) {
+                    RadioGroupDialogComponent(
+                        items = kinds, selected = selected,
+                        setSelected = setSelected,
+                        modifier = Modifier.padding(
+                            vertical = SimpleTheme.dimens.margin.extraLarge,
+                        )
                     )
-                )
-                SettingsHorizontalDivider()
+                    SettingsHorizontalDivider()
 
-                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                    DialogCheckBoxChangeDateTimeFormatComponent(
-                        label = stringResource(id = R.string.use_24_hour_time_format),
-                        initialValue = is24HoursSelected,
-                        onChange = { is24HoursSelected = it },
-                        modifier = Modifier.padding(horizontal = 8.dp)
-                    )
-                }
-            }
-
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
-                    .align(Alignment.BottomStart)
-            ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
+                    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                        DialogCheckBoxChangeDateTimeFormatComponent(
+                            label = stringResource(id = R.string.use_24_hour_time_format),
+                            initialValue = is24HoursSelected,
+                            onChange = { is24HoursSelected = it },
+                            modifier = Modifier.padding(horizontal = SimpleTheme.dimens.margin.medium)
+                        )
+                    }
                 }
 
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    callback(selections.filterValues { it == selected }.keys.first(), is24HoursSelected)
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.extraLarge, end = SimpleTheme.dimens.margin.extraLarge)
+                        .align(Alignment.BottomStart)
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
+
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        callback(selections.filterValues { it == selected }.keys.first(), is24HoursSelected)
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }
     }
 }
-
 
 
 private const val timeSample = 1676419200000    // February 15, 2023

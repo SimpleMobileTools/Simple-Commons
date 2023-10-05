@@ -29,6 +29,7 @@ import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponen
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogRadioGroupBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.onGlobalLayout
@@ -119,50 +120,49 @@ fun RadioGroupAlertDialog(
             alertDialogState.hide()
         },
     ) {
-        Box(
-            modifier = Modifier
-                .dialogBackgroundAndShape
-        ) {
-            Column(
-                modifier = modifier
-                    .padding(bottom = if (shouldShowOkButton) 64.dp else 18.dp)
-                    .verticalScroll(rememberScrollState())
-            ) {
-                if (titleId != 0) {
-                    Text(
-                        text = stringResource(id = titleId),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 24.dp, bottom = 8.dp)
-                            .padding(horizontal = 24.dp),
-                        color = dialogTextColor,
-                        fontSize = 21.sp
+        DialogSurface {
+            Box {
+                Column(
+                    modifier = modifier
+                        .padding(bottom = if (shouldShowOkButton) 64.dp else 18.dp)
+                        .verticalScroll(rememberScrollState())
+                ) {
+                    if (titleId != 0) {
+                        Text(
+                            text = stringResource(id = titleId),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 24.dp, bottom = SimpleTheme.dimens.margin.medium)
+                                .padding(horizontal = 24.dp),
+                            color = dialogTextColor,
+                            fontSize = 21.sp
+                        )
+                    }
+                    RadioGroupDialogComponent(
+                        items = groupTitles,
+                        selected = selected,
+                        setSelected = { selectedTitle ->
+                            setSelected(selectedTitle)
+                            callback(getSelectedValue(items, selectedTitle))
+                            alertDialogState.hide()
+                        },
+                        modifier = Modifier.padding(
+                            vertical = SimpleTheme.dimens.margin.extraLarge,
+                        )
                     )
                 }
-                RadioGroupDialogComponent(
-                    items = groupTitles,
-                    selected = selected,
-                    setSelected = { selectedTitle ->
-                        setSelected(selectedTitle)
-                        callback(getSelectedValue(items, selectedTitle))
-                        alertDialogState.hide()
-                    },
-                    modifier = Modifier.padding(
-                        vertical = 16.dp,
-                    )
-                )
-            }
-            if (shouldShowOkButton) {
-                TextButton(
-                    onClick = {
-                        callback(getSelectedValue(items, selected))
-                        alertDialogState.hide()
-                    },
-                    modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                        .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
-                ) {
-                    Text(text = stringResource(id = R.string.ok))
+                if (shouldShowOkButton) {
+                    TextButton(
+                        onClick = {
+                            callback(getSelectedValue(items, selected))
+                            alertDialogState.hide()
+                        },
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.extraLarge, end = SimpleTheme.dimens.margin.extraLarge)
+                    ) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }

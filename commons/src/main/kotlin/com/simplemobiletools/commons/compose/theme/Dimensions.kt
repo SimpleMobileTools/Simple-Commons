@@ -16,7 +16,8 @@ internal val CommonDimensions = Dimensions(
     icon = Dimensions.IconSizes(
         small = 32.dp,
         medium = 48.dp,
-        large = 64.dp,
+        large = 56.dp,
+        extraLarge = 64.dp,
     )
 )
 

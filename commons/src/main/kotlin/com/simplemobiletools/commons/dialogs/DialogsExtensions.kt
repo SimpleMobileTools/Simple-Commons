@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.ReadOnlyComposable
@@ -35,12 +36,13 @@ val dialogContainerColor
         }
     }
 
-val Modifier.dialogBackgroundAndShape: Modifier
+val Modifier.dialogBackgroundShapeAndBorder: Modifier
     @ReadOnlyComposable
     @Composable get() = then(
         Modifier
             .fillMaxWidth()
             .background(dialogContainerColor, dialogShape)
+            .dialogBorder
     )
 
 val dialogShape = Shapes.extraLarge
@@ -56,6 +58,22 @@ val Modifier.dialogBorder: Modifier
             is Theme.BlackAndWhite -> then(Modifier.border(1.dp, light_grey_stroke, dialogShape))
             else -> Modifier
         }
+
+@Composable
+fun DialogSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit
+) {
+    Surface(
+        modifier = modifier
+            .dialogBorder,
+        shape = dialogShape,
+        color = dialogContainerColor,
+        tonalElevation = dialogElevation,
+    ) {
+        content()
+    }
+}
 
 @Composable
 fun ShowKeyboardWhenDialogIsOpenedAndRequestFocus(

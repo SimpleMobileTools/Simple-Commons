@@ -5,7 +5,6 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
@@ -17,7 +16,6 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidViewBinding
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
@@ -29,6 +27,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogLineColorPickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
@@ -188,91 +187,91 @@ fun LineColorPickerAlertDialog(
         onDismissRequest = alertDialogState::hide,
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
-        Column(
-            Modifier
-                .fillMaxWidth(0.95f)
-                .background(dialogContainerColor, dialogShape)
-                .padding(16.dp)
-        ) {
-            val dialogTextColor = dialogTextColor
-            var dialogLineColorPickerBinding by remember { mutableStateOf<DialogLineColorPickerBinding?>(null) }
-            AndroidViewBinding(
-                DialogLineColorPickerBinding::inflate, onRelease = {
-                    dialogLineColorPickerBinding = null
-                }, modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight()
+        DialogSurface {
+            Column(
+                Modifier
+                    .fillMaxWidth(0.95f)
+                    .padding(SimpleTheme.dimens.margin.extraLarge)
             ) {
-                root.updateLayoutParams<FrameLayout.LayoutParams> {
-                    height = FrameLayout.LayoutParams.WRAP_CONTENT
-                }
-                dialogLineColorPickerBinding = this
-                fun colorUpdated(color: Int) {
-                    hexCode.text = color.toHex()
-                    onActiveColorChange(color)
-                    if (isPrimaryColorPicker) {
-                        if (!wasDimmedBackgroundRemoved) {
-                            (view.parent as? DialogWindowProvider)?.window?.setDimAmount(0f)
-                            wasDimmedBackgroundRemoved = true
+                val dialogTextColor = dialogTextColor
+                var dialogLineColorPickerBinding by remember { mutableStateOf<DialogLineColorPickerBinding?>(null) }
+                AndroidViewBinding(
+                    DialogLineColorPickerBinding::inflate, onRelease = {
+                        dialogLineColorPickerBinding = null
+                    }, modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                ) {
+                    root.updateLayoutParams<FrameLayout.LayoutParams> {
+                        height = FrameLayout.LayoutParams.WRAP_CONTENT
+                    }
+                    dialogLineColorPickerBinding = this
+                    fun colorUpdated(color: Int) {
+                        hexCode.text = color.toHex()
+                        onActiveColorChange(color)
+                        if (isPrimaryColorPicker) {
+                            if (!wasDimmedBackgroundRemoved) {
+                                (view.parent as? DialogWindowProvider)?.window?.setDimAmount(0f)
+                                wasDimmedBackgroundRemoved = true
+                            }
                         }
                     }
-                }
 
-                hexCode.setTextColor(dialogTextColor.toArgb())
-                hexCode.text = color.toHex()
-                hexCode.setOnLongClickListener {
-                    context.copyToClipboard(hexCode.value.substring(1))
-                    true
-                }
-
-                lineColorPickerIcon.beGoneIf(isPrimaryColorPicker)
-                val indexes = context.getColorIndexes(color, defaultColor)
-
-                val primaryColorIndex = indexes.first
-                lineColorPickerIcon.setImageResource(appIconIDs?.getOrNull(primaryColorIndex) ?: 0)
-                primaryLineColorPicker.updateColors(context.getColors(primaryColors), primaryColorIndex)
-                primaryLineColorPicker.listener = LineColorPickerListener { index, color ->
-                    val secondaryColors = context.getColorsForIndex(index)
-                    secondaryLineColorPicker.updateColors(secondaryColors)
-
-                    val newColor = if (isPrimaryColorPicker) secondaryLineColorPicker.getCurrentColor() else color
-                    colorUpdated(newColor)
-
-                    if (!isPrimaryColorPicker) {
-                        lineColorPickerIcon.setImageResource(appIconIDs?.getOrNull(index) ?: 0)
+                    hexCode.setTextColor(dialogTextColor.toArgb())
+                    hexCode.text = color.toHex()
+                    hexCode.setOnLongClickListener {
+                        context.copyToClipboard(hexCode.value.substring(1))
+                        true
                     }
-                }
 
-                secondaryLineColorPicker.beVisibleIf(isPrimaryColorPicker)
-                secondaryLineColorPicker.updateColors(context.getColorsForIndex(primaryColorIndex), indexes.second)
-                secondaryLineColorPicker.listener = LineColorPickerListener { _, color -> colorUpdated(color) }
-            }
+                    lineColorPickerIcon.beGoneIf(isPrimaryColorPicker)
+                    val indexes = context.getColorIndexes(color, defaultColor)
 
-            Row(
-                Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End
-            ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    onButtonPressed(false, 0)
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
-                }
-                TextButton(onClick = {
-                    if (dialogLineColorPickerBinding != null) {
-                        val targetView =
-                            if (isPrimaryColorPicker) dialogLineColorPickerBinding!!.secondaryLineColorPicker else dialogLineColorPickerBinding!!.primaryLineColorPicker
-                        onButtonPressed(true, targetView.getCurrentColor())
+                    val primaryColorIndex = indexes.first
+                    lineColorPickerIcon.setImageResource(appIconIDs?.getOrNull(primaryColorIndex) ?: 0)
+                    primaryLineColorPicker.updateColors(context.getColors(primaryColors), primaryColorIndex)
+                    primaryLineColorPicker.listener = LineColorPickerListener { index, color ->
+                        val secondaryColors = context.getColorsForIndex(index)
+                        secondaryLineColorPicker.updateColors(secondaryColors)
+
+                        val newColor = if (isPrimaryColorPicker) secondaryLineColorPicker.getCurrentColor() else color
+                        colorUpdated(newColor)
+
+                        if (!isPrimaryColorPicker) {
+                            lineColorPickerIcon.setImageResource(appIconIDs?.getOrNull(index) ?: 0)
+                        }
                     }
-                    alertDialogState.hide()
 
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                    secondaryLineColorPicker.beVisibleIf(isPrimaryColorPicker)
+                    secondaryLineColorPicker.updateColors(context.getColorsForIndex(primaryColorIndex), indexes.second)
+                    secondaryLineColorPicker.listener = LineColorPickerListener { _, color -> colorUpdated(color) }
+                }
+
+                Row(
+                    Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        onButtonPressed(false, 0)
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
+                    TextButton(onClick = {
+                        if (dialogLineColorPickerBinding != null) {
+                            val targetView =
+                                if (isPrimaryColorPicker) dialogLineColorPickerBinding!!.secondaryLineColorPicker else dialogLineColorPickerBinding!!.primaryLineColorPicker
+                            onButtonPressed(true, targetView.getCurrentColor())
+                        }
+                        alertDialogState.hide()
+
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }
     }
-
 }
 
 private const val PRIMARY_COLORS_COUNT = 19

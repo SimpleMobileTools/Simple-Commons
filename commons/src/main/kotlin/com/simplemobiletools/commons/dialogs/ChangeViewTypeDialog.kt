@@ -19,6 +19,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogSta
 import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogChangeViewTypeBinding
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
@@ -84,41 +85,42 @@ fun ChangeViewTypeAlertDialog(
     }
     val (selected, setSelected) = remember { mutableStateOf(items.firstOrNull { it.type == selectedViewType }?.title) }
     AlertDialog(onDismissRequest = alertDialogState::hide) {
-        Column(
-            modifier = modifier
-                .dialogBackgroundAndShape
-                .padding(bottom = 18.dp)
-                .verticalScroll(rememberScrollState())
-        ) {
-            RadioGroupDialogComponent(
-                items = groupTitles,
-                selected = selected,
-                setSelected = { selectedTitle ->
-                    setSelected(selectedTitle)
-                },
-                modifier = Modifier.padding(
-                    vertical = 16.dp,
-                ),
-                verticalPadding = 16.dp,
-            )
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(end = 16.dp)
+        DialogSurface {
+            Column(
+                modifier = modifier
+                    .padding(bottom = 18.dp)
+                    .verticalScroll(rememberScrollState())
             ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
-                }
+                RadioGroupDialogComponent(
+                    items = groupTitles,
+                    selected = selected,
+                    setSelected = { selectedTitle ->
+                        setSelected(selectedTitle)
+                    },
+                    modifier = Modifier.padding(
+                        vertical = SimpleTheme.dimens.margin.extraLarge,
+                    ),
+                    verticalPadding = SimpleTheme.dimens.margin.extraLarge,
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(end = SimpleTheme.dimens.margin.extraLarge)
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
 
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    onTypeChosen(getSelectedValue(items, selected))
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        onTypeChosen(getSelectedValue(items, selected))
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }
