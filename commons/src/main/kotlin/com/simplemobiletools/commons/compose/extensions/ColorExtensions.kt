@@ -9,15 +9,16 @@ import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getProperPrimaryColor
 
 @Composable
-fun linkColor(
-    theme: Theme = LocalTheme.current,
-    accentColor: Int = LocalContext.current.baseConfig.accentColor,
-    getProperPrimaryColor: Int = LocalContext.current.getProperPrimaryColor()
-): Color = onEventValue {
-    Color(
-        when (theme) {
-            is Theme.BlackAndWhite, is Theme.White -> accentColor
-            else -> getProperPrimaryColor
-        }
-    )
+fun linkColor(): Color {
+    val theme: Theme = LocalTheme.current
+    val accentColor = LocalContext.current.baseConfig.accentColor
+    val primaryColor = LocalContext.current.getProperPrimaryColor()
+    return onStartEventValue(keys = arrayOf(accentColor, primaryColor)) {
+        Color(
+            when (theme) {
+                is Theme.BlackAndWhite, is Theme.White -> accentColor
+                else -> primaryColor
+            }
+        )
+    }
 }
