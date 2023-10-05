@@ -22,5 +22,6 @@ data class Dimensions(
         val small: Dp,
         val medium: Dp,
         val large: Dp,
+        val extraLarge: Dp,
     )
 }
