@@ -37,6 +37,7 @@ fun AppTheme(
     TransparentSystemBars()
     Theme(theme = currentTheme) {
         content()
+        OnContentDisplayed()
     }
 }
 
@@ -48,7 +49,6 @@ fun AppThemeSurface(
     AppTheme {
         Surface(modifier = modifier.fillMaxSize()) {
             content()
-            OnContentDisplayed()
         }
     }
 }
