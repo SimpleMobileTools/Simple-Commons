@@ -19,6 +19,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogSta
 import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogChangeViewTypeBinding
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
@@ -97,16 +98,16 @@ fun ChangeViewTypeAlertDialog(
                         setSelected(selectedTitle)
                     },
                     modifier = Modifier.padding(
-                        vertical = 16.dp,
+                        vertical = SimpleTheme.dimens.margin.extraLarge,
                     ),
-                    verticalPadding = 16.dp,
+                    verticalPadding = SimpleTheme.dimens.margin.extraLarge,
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.End,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = 16.dp)
+                        .padding(end = SimpleTheme.dimens.margin.extraLarge)
                 ) {
                     TextButton(onClick = {
                         alertDialogState.hide()

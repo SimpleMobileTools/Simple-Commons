@@ -29,6 +29,7 @@ import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
 import com.simplemobiletools.commons.databinding.DialogChangeDateTimeFormatBinding
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -146,7 +147,7 @@ fun ChangeDateTimeFormatAlertDialog(
                         items = kinds, selected = selected,
                         setSelected = setSelected,
                         modifier = Modifier.padding(
-                            vertical = 16.dp,
+                            vertical = SimpleTheme.dimens.margin.extraLarge,
                         )
                     )
                     SettingsHorizontalDivider()
@@ -156,7 +157,7 @@ fun ChangeDateTimeFormatAlertDialog(
                             label = stringResource(id = R.string.use_24_hour_time_format),
                             initialValue = is24HoursSelected,
                             onChange = { is24HoursSelected = it },
-                            modifier = Modifier.padding(horizontal = 8.dp)
+                            modifier = Modifier.padding(horizontal = SimpleTheme.dimens.margin.medium)
                         )
                     }
                 }
@@ -166,7 +167,7 @@ fun ChangeDateTimeFormatAlertDialog(
                     horizontalArrangement = Arrangement.End,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
+                        .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.extraLarge, end = SimpleTheme.dimens.margin.extraLarge)
                         .align(Alignment.BottomStart)
                 ) {
                     TextButton(onClick = {
