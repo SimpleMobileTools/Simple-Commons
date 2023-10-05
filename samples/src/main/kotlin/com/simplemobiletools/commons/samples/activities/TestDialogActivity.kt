@@ -49,6 +49,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getAddBlockedNumberDialogState(), text = "Add blocked number")
                     ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
                     ShowButton(getConfirmationAdvancedAlertDialogState(), text = "Confirmation advanced")
+                    ShowButton(getPermissionRequiredAlertDialogState(), text = "Permission required")
                     ShowButton(getDonateAlertDialogState(), text = "Donate")
                     ShowButton(getFeatureLockedAlertDialogState(), text = "Feature Locked")
                     ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
@@ -219,6 +220,18 @@ class TestDialogActivity : ComponentActivity() {
         rememberAlertDialogState().apply {
             DialogMember {
                 ConfirmationAdvancedAlertDialog(alertDialogState = this, callback = {})
+            }
+        }
+
+    @Composable
+    private fun getPermissionRequiredAlertDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                PermissionRequiredAlertDialog(
+                    alertDialogState = this,
+                    text = "Test permission",
+                    positiveActionCallback = {}
+                )
             }
         }
 
