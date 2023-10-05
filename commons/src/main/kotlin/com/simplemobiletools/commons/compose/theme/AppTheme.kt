@@ -14,8 +14,7 @@ import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 
 @Composable
-fun AppThemeSurface(
-    modifier: Modifier = Modifier,
+fun AppTheme(
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
@@ -37,9 +36,19 @@ fun AppThemeSurface(
     }
     TransparentSystemBars()
     Theme(theme = currentTheme) {
+        content()
+        OnContentDisplayed()
+    }
+}
+
+@Composable
+fun AppThemeSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
+) {
+    AppTheme {
         Surface(modifier = modifier.fillMaxSize()) {
             content()
-            OnContentDisplayed()
         }
     }
 }
