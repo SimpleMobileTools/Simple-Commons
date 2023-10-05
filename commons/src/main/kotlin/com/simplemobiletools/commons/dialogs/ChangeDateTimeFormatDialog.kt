@@ -135,59 +135,57 @@ fun ChangeDateTimeFormatAlertDialog(
     AlertDialog(
         onDismissRequest = alertDialogState::hide,
     ) {
-        Box(
-            modifier = Modifier
-                .dialogBackgroundAndShape
-        ) {
-            Column(
-                modifier = modifier
-                    .padding(bottom = 64.dp)
-                    .verticalScroll(rememberScrollState())
-            ) {
-                RadioGroupDialogComponent(
-                    items = kinds, selected = selected,
-                    setSelected = setSelected,
-                    modifier = Modifier.padding(
-                        vertical = 16.dp,
+        DialogSurface {
+            Box {
+                Column(
+                    modifier = modifier
+                        .padding(bottom = 64.dp)
+                        .verticalScroll(rememberScrollState())
+                ) {
+                    RadioGroupDialogComponent(
+                        items = kinds, selected = selected,
+                        setSelected = setSelected,
+                        modifier = Modifier.padding(
+                            vertical = 16.dp,
+                        )
                     )
-                )
-                SettingsHorizontalDivider()
+                    SettingsHorizontalDivider()
 
-                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                    DialogCheckBoxChangeDateTimeFormatComponent(
-                        label = stringResource(id = R.string.use_24_hour_time_format),
-                        initialValue = is24HoursSelected,
-                        onChange = { is24HoursSelected = it },
-                        modifier = Modifier.padding(horizontal = 8.dp)
-                    )
-                }
-            }
-
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
-                    .align(Alignment.BottomStart)
-            ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
+                    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                        DialogCheckBoxChangeDateTimeFormatComponent(
+                            label = stringResource(id = R.string.use_24_hour_time_format),
+                            initialValue = is24HoursSelected,
+                            onChange = { is24HoursSelected = it },
+                            modifier = Modifier.padding(horizontal = 8.dp)
+                        )
+                    }
                 }
 
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    callback(selections.filterValues { it == selected }.keys.first(), is24HoursSelected)
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp, bottom = 16.dp, end = 16.dp)
+                        .align(Alignment.BottomStart)
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
+
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        callback(selections.filterValues { it == selected }.keys.first(), is24HoursSelected)
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }
     }
 }
-
 
 
 private const val timeSample = 1676419200000    // February 15, 2023

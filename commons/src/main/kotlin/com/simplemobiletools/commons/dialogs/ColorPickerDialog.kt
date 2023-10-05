@@ -14,7 +14,6 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.annotation.ColorInt
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
@@ -162,83 +161,84 @@ fun ColorPickerAlertDialog(
         onDismissRequest = alertDialogState::hide,
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
-        Column(
-            Modifier
-                .fillMaxWidth(0.95f)
-                .background(dialogContainerColor, dialogShape)
-                .padding(16.dp)
-        ) {
-            var dialogColorPickerBinding by remember { mutableStateOf<DialogColorPickerBinding?>(null) }
-            val currentColorHsv by remember { derivedStateOf { Hsv(FloatArray(3)).apply { Color.colorToHSV(color, this.value) } } }
-            AndroidViewBinding(
-                DialogColorPickerBinding::inflate,
-                onRelease = {
-                    dialogColorPickerBinding = null
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight(),
+        DialogSurface {
+            Column(
+                Modifier
+                    .fillMaxWidth(0.95f)
+                    .padding(16.dp)
             ) {
-                root.updateLayoutParams<FrameLayout.LayoutParams> {
-                    height = FrameLayout.LayoutParams.WRAP_CONTENT
-                }
-                dialogColorPickerBinding = this
-
-                init(
-                    color = color,
-                    backgroundColor = context.config.backgroundColor,
-                    recentColors = context.config.colorPickerRecentColors,
-                    hsv = currentColorHsv,
-                    currentColorCallback = {
-                        if (removeDimmedBackground) {
-                            if (!wasDimmedBackgroundRemoved) {
-                                (view.parent as? DialogWindowProvider)?.window?.setDimAmount(0f)
-                                wasDimmedBackgroundRemoved = true
-                            }
-                        }
-
-                        onActiveColorChange(it)
+                var dialogColorPickerBinding by remember { mutableStateOf<DialogColorPickerBinding?>(null) }
+                val currentColorHsv by remember { derivedStateOf { Hsv(FloatArray(3)).apply { Color.colorToHSV(color, this.value) } } }
+                AndroidViewBinding(
+                    DialogColorPickerBinding::inflate,
+                    onRelease = {
+                        dialogColorPickerBinding = null
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight(),
+                ) {
+                    root.updateLayoutParams<FrameLayout.LayoutParams> {
+                        height = FrameLayout.LayoutParams.WRAP_CONTENT
                     }
-                )
+                    dialogColorPickerBinding = this
 
-                val textColor = context.getProperTextColor()
-                colorPickerArrow.applyColorFilter(textColor)
-                colorPickerHexArrow.applyColorFilter(textColor)
-                colorPickerHueCursor.applyColorFilter(textColor)
-                context.updateTextColors(root)
-            }
+                    init(
+                        color = color,
+                        backgroundColor = context.config.backgroundColor,
+                        recentColors = context.config.colorPickerRecentColors,
+                        hsv = currentColorHsv,
+                        currentColorCallback = {
+                            if (removeDimmedBackground) {
+                                if (!wasDimmedBackgroundRemoved) {
+                                    (view.parent as? DialogWindowProvider)?.window?.setDimAmount(0f)
+                                    wasDimmedBackgroundRemoved = true
+                                }
+                            }
 
-            Row(
-                Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End
-            ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    onButtonPressed(false, 0)
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
+                            onActiveColorChange(it)
+                        }
+                    )
+
+                    val textColor = context.getProperTextColor()
+                    colorPickerArrow.applyColorFilter(textColor)
+                    colorPickerHexArrow.applyColorFilter(textColor)
+                    colorPickerHueCursor.applyColorFilter(textColor)
+                    context.updateTextColors(root)
                 }
-                if (addDefaultColorButton) {
+
+                Row(
+                    Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End
+                ) {
                     TextButton(onClick = {
                         alertDialogState.hide()
-                        onButtonPressed(true, 0)
+                        onButtonPressed(false, 0)
                     }) {
-                        Text(text = stringResource(id = R.string.default_color))
+                        Text(text = stringResource(id = R.string.cancel))
                     }
-                }
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    val hexValue = dialogColorPickerBinding?.colorPickerNewHex?.value
-                    val newColor = if (hexValue?.length == 6) {
-                        Color.parseColor("#$hexValue")
-                    } else {
-                        currentColorHsv.getColor()
+                    if (addDefaultColorButton) {
+                        TextButton(onClick = {
+                            alertDialogState.hide()
+                            onButtonPressed(true, 0)
+                        }) {
+                            Text(text = stringResource(id = R.string.default_color))
+                        }
                     }
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        val hexValue = dialogColorPickerBinding?.colorPickerNewHex?.value
+                        val newColor = if (hexValue?.length == 6) {
+                            Color.parseColor("#$hexValue")
+                        } else {
+                            currentColorHsv.getColor()
+                        }
 
-                    context.addRecentColor(newColor)
-                    onButtonPressed(true, newColor)
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                        context.addRecentColor(newColor)
+                        onButtonPressed(true, newColor)
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }

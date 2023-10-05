@@ -87,45 +87,42 @@ fun RateStarsAlertDialog(
     ) {
         var currentRating by remember { mutableIntStateOf(0) }
         val coroutineScope = rememberCoroutineScope()
-        Column(
-            modifier = Modifier
-                .dialogBackgroundAndShape
-        ) {
-            Text(
-                text = stringResource(id = R.string.rate_our_app),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 12.dp),
-                textAlign = TextAlign.Center,
-                color = dialogTextColor,
-                fontSize = 16.sp
-            )
-            StarRating(
-                modifier = Modifier
-                    .align(CenterHorizontally)
-                    .padding(16.dp),
-                currentRating = currentRating,
-                onRatingChanged = { stars ->
-                    currentRating = stars
-                    coroutineScope.launch {
-                        onRating(stars)
-                        delay(500L)
-                        alertDialogState.hide()
+        DialogSurface {
+            Column {
+                Text(
+                    text = stringResource(id = R.string.rate_our_app),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp, bottom = 12.dp),
+                    textAlign = TextAlign.Center,
+                    color = dialogTextColor,
+                    fontSize = 16.sp
+                )
+                StarRating(
+                    modifier = Modifier
+                        .align(CenterHorizontally)
+                        .padding(16.dp),
+                    currentRating = currentRating,
+                    onRatingChanged = { stars ->
+                        currentRating = stars
+                        coroutineScope.launch {
+                            onRating(stars)
+                            delay(500L)
+                            alertDialogState.hide()
+                        }
                     }
+                )
+                TextButton(
+                    onClick = alertDialogState::hide,
+                    modifier = Modifier
+                        .align(End)
+                        .padding(end = 16.dp, bottom = 8.dp)
+                ) {
+                    Text(text = stringResource(id = R.string.later))
                 }
-            )
-            TextButton(
-                onClick = alertDialogState::hide,
-                modifier = Modifier
-                    .align(End)
-                    .padding(end = 16.dp, bottom = 8.dp)
-            ) {
-                Text(text = stringResource(id = R.string.later))
             }
         }
-
     }
-
 }
 
 @Composable

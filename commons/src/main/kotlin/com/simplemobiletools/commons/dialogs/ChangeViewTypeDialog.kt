@@ -84,41 +84,42 @@ fun ChangeViewTypeAlertDialog(
     }
     val (selected, setSelected) = remember { mutableStateOf(items.firstOrNull { it.type == selectedViewType }?.title) }
     AlertDialog(onDismissRequest = alertDialogState::hide) {
-        Column(
-            modifier = modifier
-                .dialogBackgroundAndShape
-                .padding(bottom = 18.dp)
-                .verticalScroll(rememberScrollState())
-        ) {
-            RadioGroupDialogComponent(
-                items = groupTitles,
-                selected = selected,
-                setSelected = { selectedTitle ->
-                    setSelected(selectedTitle)
-                },
-                modifier = Modifier.padding(
-                    vertical = 16.dp,
-                ),
-                verticalPadding = 16.dp,
-            )
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.End,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(end = 16.dp)
+        DialogSurface {
+            Column(
+                modifier = modifier
+                    .padding(bottom = 18.dp)
+                    .verticalScroll(rememberScrollState())
             ) {
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                }) {
-                    Text(text = stringResource(id = R.string.cancel))
-                }
+                RadioGroupDialogComponent(
+                    items = groupTitles,
+                    selected = selected,
+                    setSelected = { selectedTitle ->
+                        setSelected(selectedTitle)
+                    },
+                    modifier = Modifier.padding(
+                        vertical = 16.dp,
+                    ),
+                    verticalPadding = 16.dp,
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(end = 16.dp)
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
 
-                TextButton(onClick = {
-                    alertDialogState.hide()
-                    onTypeChosen(getSelectedValue(items, selected))
-                }) {
-                    Text(text = stringResource(id = R.string.ok))
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        onTypeChosen(getSelectedValue(items, selected))
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
                 }
             }
         }

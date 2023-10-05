@@ -72,7 +72,8 @@ fun WhatsNewAlertDialog(
         properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false),
         containerColor = dialogContainerColor,
         shape = dialogShape,
-        modifier = modifier,
+        tonalElevation = dialogElevation,
+        modifier = modifier.dialogBorder,
         title = {
             Text(
                 text = stringResource(id = R.string.whats_new),
