@@ -3,10 +3,17 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
+import androidx.compose.ui.Modifier
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogWritePermissionBinding
 import com.simplemobiletools.commons.databinding.DialogWritePermissionOtgBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
@@ -14,11 +21,20 @@ import com.simplemobiletools.commons.extensions.humanizePath
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 
 class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: () -> Unit) {
+
+    @Immutable
     sealed class Mode {
-        object Otg : Mode()
-        object SdCard : Mode()
+        @Immutable
+        data object Otg : Mode()
+
+        @Immutable
+        data object SdCard : Mode()
+
+        @Immutable
         data class OpenDocumentTreeSDK30(val path: String) : Mode()
-        object CreateDocumentSDK30 : Mode()
+
+        @Immutable
+        data object CreateDocumentSDK30 : Mode()
     }
 
     private var dialog: AlertDialog? = null
@@ -85,5 +101,21 @@ class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: ()
     private fun dialogConfirmed() {
         dialog?.dismiss()
         callback()
+    }
+}
+
+@Composable
+fun WritePermissionAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier
+) {
+    //todo in progress
+}
+
+@Composable
+@MyDevices
+private fun WritePermissionAlertDialogPreview() {
+    AppThemeSurface {
+        WritePermissionAlertDialog(rememberAlertDialogState())
     }
 }
