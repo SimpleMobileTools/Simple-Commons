@@ -99,3 +99,12 @@ fun Context.fakeVersionCheck(
         }
     }
 }
+
+fun ComponentActivity.appOnSdCardCheckCompose(
+    showConfirmationDialog: () -> Unit
+) {
+    if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
+        baseConfig.wasAppOnSDShown = true
+        showConfirmationDialog()
+    }
+}
