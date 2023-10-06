@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.compose.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -17,7 +16,7 @@ import com.simplemobiletools.commons.compose.theme.SimpleTheme
 fun SettingsTitleTextComponent(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = MaterialTheme.colorScheme.primary,
+    color: Color = SimpleTheme.colorScheme.primary,
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Ellipsis
 ) {

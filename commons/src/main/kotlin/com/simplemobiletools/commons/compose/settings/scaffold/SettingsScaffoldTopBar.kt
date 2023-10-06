@@ -129,8 +129,8 @@ fun topAppBarColors(
     contrastColor: Color
 ) = TopAppBarDefaults.topAppBarColors(
     scrolledContainerColor = Color(statusBarColor),
-    containerColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface,
-    navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else MaterialTheme.colorScheme.surface
+    containerColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.surface,
+    navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.surface
 )
 
 @Composable
@@ -161,7 +161,7 @@ fun SettingsNavigationIcon(
             .clip(RoundedCornerShape(50))
             .clickable(
                 navigationIconInteractionSource, rememberRipple(
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = SimpleTheme.colorScheme.onSurface,
                     bounded = true
                 )
             ) { goBack() }

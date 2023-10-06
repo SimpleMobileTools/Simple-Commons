@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.compose.theme
 import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.luminance
@@ -26,11 +25,11 @@ internal const val LUMINANCE_THRESHOLD = 0.5f
 
 @Composable
 @ReadOnlyComposable
-fun isSurfaceNotLitWell(threshold: Float = LUMINANCE_THRESHOLD) = MaterialTheme.colorScheme.surface.luminance() < threshold
+fun isSurfaceNotLitWell(threshold: Float = LUMINANCE_THRESHOLD) = SimpleTheme.colorScheme.surface.luminance() < threshold
 
 @Composable
 @ReadOnlyComposable
-fun isSurfaceLitWell(threshold: Float = LUMINANCE_THRESHOLD) = MaterialTheme.colorScheme.surface.luminance() > threshold
+fun isSurfaceLitWell(threshold: Float = LUMINANCE_THRESHOLD) = SimpleTheme.colorScheme.surface.luminance() > threshold
 
 internal fun Context.isDarkMode(): Boolean {
     val darkModeFlag = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK

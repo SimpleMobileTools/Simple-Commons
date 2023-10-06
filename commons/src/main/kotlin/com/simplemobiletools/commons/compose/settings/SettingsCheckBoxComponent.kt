@@ -5,7 +5,10 @@ import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ripple.LocalRippleTheme
-import androidx.compose.material3.*
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxColors
+import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
@@ -15,7 +18,10 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.NoRippleTheme
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
-import com.simplemobiletools.commons.compose.theme.*
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
+import com.simplemobiletools.commons.compose.theme.preferenceLabelColor
+import com.simplemobiletools.commons.compose.theme.preferenceValueColor
 
 @Composable
 fun SettingsCheckBoxComponent(
@@ -26,8 +32,8 @@ fun SettingsCheckBoxComponent(
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
     checkboxColors: CheckboxColors = CheckboxDefaults.colors(
-        checkedColor = MaterialTheme.colorScheme.primary,
-        checkmarkColor = MaterialTheme.colorScheme.surface,
+        checkedColor = SimpleTheme.colorScheme.primary,
+        checkmarkColor = SimpleTheme.colorScheme.surface,
     )
 ) {
     val interactionSource = rememberMutableInteractionSource()
