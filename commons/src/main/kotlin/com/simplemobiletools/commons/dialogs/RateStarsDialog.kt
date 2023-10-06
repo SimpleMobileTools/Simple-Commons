@@ -9,7 +9,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
-import androidx.compose.material3.*
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.End
@@ -132,7 +135,7 @@ private fun StarRating(
     maxRating: Int = 5,
     currentRating: Int,
     onRatingChanged: (Int) -> Unit,
-    starsColor: Color = MaterialTheme.colorScheme.primary,
+    starsColor: Color = SimpleTheme.colorScheme.primary,
 ) {
     val animatedRating by animateIntAsState(
         targetValue = currentRating,

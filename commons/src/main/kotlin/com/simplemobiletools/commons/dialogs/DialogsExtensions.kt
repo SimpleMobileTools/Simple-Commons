@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.dialogs
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -19,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.theme.LocalTheme
 import com.simplemobiletools.commons.compose.theme.Shapes
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.compose.theme.light_grey_stroke
 import com.simplemobiletools.commons.compose.theme.model.Theme
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -29,7 +29,7 @@ val dialogContainerColor
     @ReadOnlyComposable
     @Composable get() = when (LocalTheme.current) {
         is Theme.BlackAndWhite -> Color.Black
-        is Theme.SystemDefaultMaterialYou -> if (isSPlus()) colorResource(R.color.you_dialog_background_color) else MaterialTheme.colorScheme.surface
+        is Theme.SystemDefaultMaterialYou -> if (isSPlus()) colorResource(R.color.you_dialog_background_color) else SimpleTheme.colorScheme.surface
         else -> {
             val context = LocalContext.current
             Color(context.baseConfig.backgroundColor)
@@ -49,7 +49,7 @@ val dialogShape = Shapes.extraLarge
 
 val dialogElevation = 0.dp
 
-val dialogTextColor @Composable @ReadOnlyComposable get() = MaterialTheme.colorScheme.onSurface
+val dialogTextColor @Composable @ReadOnlyComposable get() = SimpleTheme.colorScheme.onSurface
 
 val Modifier.dialogBorder: Modifier
     @ReadOnlyComposable

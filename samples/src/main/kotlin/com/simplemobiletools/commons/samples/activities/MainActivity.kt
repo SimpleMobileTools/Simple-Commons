@@ -4,12 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
-import com.simplemobiletools.commons.compose.extensions.DEVELOPER_PLAY_STORE_URL
-import com.simplemobiletools.commons.compose.extensions.FAKE_VERSION_APP_LABEL
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
-import com.simplemobiletools.commons.dialogs.ConfirmationDialog
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.appLaunched
-import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
@@ -51,9 +48,9 @@ class MainActivity : BaseSimpleActivity() {
             startActivity(Intent(this, TestDialogActivity::class.java))
         }
         binding.testButton.setOnClickListener {
-            ConfirmationDialog(this, FAKE_VERSION_APP_LABEL, positive = com.simplemobiletools.commons.R.string.ok, negative = 0) {
-               launchViewIntent(DEVELOPER_PLAY_STORE_URL)
-           }
+            WritePermissionDialog(this, mode = WritePermissionDialog.Mode.OpenDocumentTreeSDK30("")){
+
+            }
         }
     }
 

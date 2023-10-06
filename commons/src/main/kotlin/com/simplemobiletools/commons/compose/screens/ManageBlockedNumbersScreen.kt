@@ -365,12 +365,12 @@ private fun blockedNumberListItemColors(
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
         if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-            Color(MaterialTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
+            Color(SimpleTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
         } else {
-            MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
+            SimpleTheme.colorScheme.primary.copy(alpha = 0.3f)
         }
     } else {
-        MaterialTheme.colorScheme.surface
+        SimpleTheme.colorScheme.surface
     },
     trailingIconColor = iconsColor
 )
@@ -488,7 +488,7 @@ private fun ActionModeToolbar(
 @ReadOnlyComposable
 private fun actionModeBgColor(): Color =
     if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-        MaterialTheme.colorScheme.primaryContainer
+        SimpleTheme.colorScheme.primaryContainer
     } else {
         actionModeColor
     }
@@ -580,7 +580,7 @@ private fun LazyListScope.emptyBlockedNumbers(
     item {
         Text(
             text = stringResource(id = R.string.not_blocking_anyone),
-            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
+            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = SimpleTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.small)
@@ -602,7 +602,7 @@ private fun LazyListScope.emptyBlockedNumbers(
                     style = TextStyle(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
                     modifier = Modifier.padding(SimpleTheme.dimens.margin.medium)
@@ -640,7 +640,7 @@ private fun LazyListScope.noPermissionToBlock(
                     style = TextStyle(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
                     modifier = Modifier.padding(SimpleTheme.dimens.margin.extraLarge)
