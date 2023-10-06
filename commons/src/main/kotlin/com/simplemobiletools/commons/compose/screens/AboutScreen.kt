@@ -17,7 +17,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
-private val startingTitlePadding = Modifier.padding(start = 58.dp)
+private val startingTitlePadding = Modifier.padding(start = 60.dp)
 
 @Composable
 internal fun AboutScreen(
