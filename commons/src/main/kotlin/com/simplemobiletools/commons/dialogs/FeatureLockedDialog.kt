@@ -69,7 +69,7 @@ class FeatureLockedDialog(val activity: Activity, val callback: () -> Unit) {
 fun FeatureLockedAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    callback: () -> Unit
+    cancelCallback: () -> Unit
 ) {
     val localContext = LocalContext.current.getActivity()
     val donateIntent = {
@@ -80,12 +80,12 @@ fun FeatureLockedAlertDialog(
         modifier = modifier
             .dialogBorder,
         properties = DialogProperties(dismissOnClickOutside = false, dismissOnBackPress = false),
-        onDismissRequest = {},
+        onDismissRequest = cancelCallback,
         shape = dialogShape,
         tonalElevation = dialogElevation,
         dismissButton = {
             TextButton(onClick = {
-                callback()
+                cancelCallback()
                 alertDialogState.hide()
             }) {
                 Text(text = stringResource(id = R.string.later))
@@ -94,7 +94,6 @@ fun FeatureLockedAlertDialog(
         confirmButton = {
             TextButton(onClick = {
                 donateIntent()
-                alertDialogState.hide()
             }) {
                 Text(text = stringResource(id = R.string.purchase))
             }
@@ -114,7 +113,6 @@ fun FeatureLockedAlertDialog(
                             interactionSource = rememberMutableInteractionSource(),
                             onClick = {
                                 donateIntent()
-                                alertDialogState.hide()
                             }
                         ),
                     colorFilter = ColorFilter.tint(dialogTextColor)
