@@ -31,7 +31,7 @@ val iconsColor
 @Composable
 @ReadOnlyComposable
 fun preferenceValueColor(isEnabled: Boolean) =
-    if (isEnabled) textSubTitleColor else disabledTextColor
+    if (isEnabled) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f) else disabledTextColor
 
 @Composable
 @ReadOnlyComposable
