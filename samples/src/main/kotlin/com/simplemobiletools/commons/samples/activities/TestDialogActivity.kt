@@ -195,7 +195,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getFeatureLockedAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            FeatureLockedAlertDialog(alertDialogState = this, callback = {})
+            FeatureLockedAlertDialog(alertDialogState = this, cancelCallback = {})
         }
     }
 
