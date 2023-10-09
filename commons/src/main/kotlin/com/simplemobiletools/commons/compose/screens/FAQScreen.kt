@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.extensions.removeUnderlines
@@ -35,7 +35,7 @@ internal fun FAQScreen(
     goBack: () -> Unit,
     faqItems: ImmutableList<FAQItem>,
 ) {
-    SettingsLazyScaffold(
+    SimpleLazyListScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
         contentPadding = PaddingValues(bottom = SimpleTheme.dimens.margin.medium)

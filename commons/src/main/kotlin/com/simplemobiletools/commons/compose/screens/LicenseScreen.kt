@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.helpers.*
@@ -27,7 +27,7 @@ internal fun LicenseScreen(
     thirdPartyLicenses: ImmutableList<License>,
     onLicenseClick: (urlId: Int) -> Unit,
 ) {
-    SettingsLazyScaffold(
+    SimpleLazyListScaffold(
         title = stringResource(id = R.string.third_party_licences),
         goBack = goBack
     ) {

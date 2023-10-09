@@ -44,12 +44,12 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.*
+import com.simplemobiletools.commons.compose.lists.*
 import com.simplemobiletools.commons.compose.menus.ActionItem
 import com.simplemobiletools.commons.compose.menus.ActionMenu
 import com.simplemobiletools.commons.compose.menus.OverflowMode
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
-import com.simplemobiletools.commons.compose.settings.scaffold.*
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.*
 import com.simplemobiletools.commons.compose.theme.model.Theme
@@ -96,7 +96,7 @@ internal fun ManageBlockedNumbersScreen(
         clearSelection()
     }
 
-    SettingsLazyScaffold(
+    SimpleLazyListScaffold(
         darkStatusBarIcons = !isInActionMode,
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
@@ -470,7 +470,7 @@ private fun ActionModeToolbar(
 
         },
         navigationIcon = {
-            SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
+            SimpleNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
         },
         actions = {
             BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
@@ -543,7 +543,7 @@ private fun NonActionModeToolbar(
     onImportBlockedNumbers: () -> Unit,
     onExportBlockedNumbers: () -> Unit
 ) {
-    SettingsScaffoldTopBar(
+    SimpleScaffoldTopBar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),

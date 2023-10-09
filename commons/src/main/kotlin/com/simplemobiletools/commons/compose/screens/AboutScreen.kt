@@ -9,11 +9,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.lists.SimpleColumnScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsGroup
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 
@@ -27,7 +27,7 @@ internal fun AboutScreen(
     socialSection: @Composable () -> Unit,
     otherSection: @Composable () -> Unit,
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) {
+    SimpleColumnScaffold(title = stringResource(id = R.string.about), goBack = goBack) {
         aboutSection()
         helpUsSection()
         socialSection()

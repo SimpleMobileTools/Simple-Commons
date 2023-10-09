@@ -1,6 +1,7 @@
-package com.simplemobiletools.commons.compose.settings.scaffold
+package com.simplemobiletools.commons.compose.lists
 
 import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -19,7 +20,7 @@ import com.simplemobiletools.commons.compose.extensions.rememberMutableInteracti
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
-fun SettingsScaffold(
+fun SimpleColumnScaffold(
     title: String,
     goBack: () -> Unit,
     modifier: Modifier = Modifier,
@@ -28,7 +29,7 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     scrollState: ScrollState = rememberScrollState(),
-    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
+    content: @Composable (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
@@ -43,7 +44,7 @@ fun SettingsScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -72,7 +73,7 @@ fun SettingsScaffold(
 
 
 @Composable
-fun SettingsScaffold(
+fun SimpleColumnScaffold(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     goBack: () -> Unit,
@@ -97,7 +98,7 @@ fun SettingsScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -125,7 +126,7 @@ fun SettingsScaffold(
 }
 
 @Composable
-fun SettingsScaffold(
+fun SimpleColumnScaffold(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     actions: @Composable() (RowScope.() -> Unit),
@@ -135,7 +136,7 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     scrollState: ScrollState = rememberScrollState(),
-    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
+    content: @Composable (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val context = LocalContext.current
 
@@ -151,7 +152,7 @@ fun SettingsScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -179,13 +180,56 @@ fun SettingsScaffold(
     }
 }
 
+@Composable
+fun SimpleColumnScaffold(
+    modifier: Modifier = Modifier,
+    customTopBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
+    goBack: () -> Unit,
+    reverseLayout: Boolean = false,
+    verticalArrangement: Arrangement.Vertical =
+        if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    scrollState: ScrollState = rememberScrollState(),
+    content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
+) {
+    val context = LocalContext.current
+
+    val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
+    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
+    val (colorTransitionFraction, scrolledColor) = transitionFractionAndScrolledColor(scrollBehavior, contrastColor)
+    SystemUISettingsScaffoldStatusBarColor(scrolledColor)
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    AdjustNavigationBarColors()
+
+    Scaffold(
+        modifier = modifier
+            .fillMaxSize()
+            .nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            customTopBar(scrolledColor, navigationIconInteractionSource, scrollBehavior, statusBarColor, colorTransitionFraction, contrastColor)
+        }
+    ) { paddingValues ->
+        ScreenBoxSettingsScaffold(paddingValues) {
+            Column(
+                modifier = Modifier
+                    .matchParentSize()
+                    .verticalScroll(scrollState),
+                verticalArrangement = verticalArrangement,
+                horizontalAlignment = horizontalAlignment,
+            ) {
+                content(paddingValues)
+                Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
+            }
+        }
+    }
+}
 
 
 @MyDevices
 @Composable
-private fun SettingsScaffoldPreview() {
+private fun SimpleColumnScaffoldPreview() {
     AppThemeSurface {
-        SettingsScaffold(title = "About", goBack = {}) {
+        SimpleColumnScaffold(title = "About", goBack = {}) {
             ListItem(headlineContent = { Text(text = "Some text") },
                 leadingContent = {
                     Icon(imageVector = Icons.Filled.AccessTime, contentDescription = null)

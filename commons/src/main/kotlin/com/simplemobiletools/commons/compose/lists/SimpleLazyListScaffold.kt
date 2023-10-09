@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.compose.settings.scaffold
+package com.simplemobiletools.commons.compose.lists
 
 import androidx.compose.foundation.gestures.FlingBehavior
 import androidx.compose.foundation.gestures.ScrollableDefaults
@@ -25,7 +25,7 @@ import com.simplemobiletools.commons.compose.extensions.rememberMutableInteracti
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 
 @Composable
-fun SettingsLazyScaffold(
+fun SimpleLazyListScaffold(
     title: String,
     goBack: () -> Unit,
     modifier: Modifier = Modifier,
@@ -53,7 +53,7 @@ fun SettingsLazyScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -85,7 +85,7 @@ fun SettingsLazyScaffold(
 
 
 @Composable
-fun SettingsLazyScaffold(
+fun SimpleLazyListScaffold(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     goBack: () -> Unit,
@@ -113,7 +113,7 @@ fun SettingsLazyScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -144,7 +144,7 @@ fun SettingsLazyScaffold(
 }
 
 @Composable
-fun SettingsLazyScaffold(
+fun SimpleLazyListScaffold(
     modifier: Modifier = Modifier,
     title: @Composable (scrolledColor: Color) -> Unit,
     actions: @Composable() (RowScope.() -> Unit),
@@ -173,7 +173,7 @@ fun SettingsLazyScaffold(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SettingsScaffoldTopBar(
+            SimpleScaffoldTopBar(
                 title = title,
                 scrolledColor = scrolledColor,
                 navigationIconInteractionSource = navigationIconInteractionSource,
@@ -205,7 +205,7 @@ fun SettingsLazyScaffold(
 }
 
 @Composable
-fun SettingsLazyScaffold(
+fun SimpleLazyListScaffold(
     modifier: Modifier = Modifier,
     topBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
     contentPadding: PaddingValues = PaddingValues(0.dp),
@@ -254,7 +254,7 @@ fun SettingsLazyScaffold(
 }
 
 @Composable
-fun SettingsLazyScaffold(
+fun SimpleLazyListScaffold(
     modifier: Modifier = Modifier,
     darkStatusBarIcons: Boolean = true,
     customTopBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
@@ -286,9 +286,9 @@ fun SettingsLazyScaffold(
 
 @MyDevices
 @Composable
-private fun SettingsLazyScaffoldPreview() {
+private fun SimpleLazyListScaffoldPreview() {
     AppThemeSurface {
-        SettingsLazyScaffold(title = "About", goBack = {}) {
+        SimpleLazyListScaffold(title = "About", goBack = {}) {
             item {
                 ListItem(headlineContent = { Text(text = "Some text") },
                     leadingContent = {
