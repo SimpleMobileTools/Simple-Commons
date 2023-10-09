@@ -931,16 +931,7 @@ fun String.isBlockedNumberPattern() = contains("*")
 
 fun String?.fromHtml(): Spanned =
     when {
-        this == null -> {
-            // return an empty spannable if the html is null
-            SpannableString("")
-        }
-
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> {
-            Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
-        }
-
-        else -> {
-            Html.fromHtml(this)
-        }
+        this == null -> SpannableString("")
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
+        else -> Html.fromHtml(this)
     }
