@@ -17,7 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
+import com.simplemobiletools.commons.compose.lists.SimpleScaffold
 import com.simplemobiletools.commons.compose.lists.simpleTopAppBarColors
 import com.simplemobiletools.commons.compose.lists.topAppBarInsets
 import com.simplemobiletools.commons.compose.lists.topAppBarPaddings
@@ -38,7 +38,7 @@ fun MainScreen(
     openAbout: () -> Unit,
     moreAppsFromUs: () -> Unit,
 ) {
-    SimpleLazyListScaffold(
+    SimpleScaffold(
         customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
             TopAppBar(
                 title = {},
