@@ -61,14 +61,14 @@ class MainActivity : ComponentActivity() {
                             actions = {
                                 val actionMenus = remember {
                                     val about = ActionItem(
-                                        R.string.about,
+                                        com.simplemobiletools.commons.R.string.about,
                                         icon = Icons.Outlined.Info,
                                         doAction = ::launchAbout,
                                         overflowMode = OverflowMode.NEVER_OVERFLOW
                                     )
                                     val moreApps =
                                         ActionItem(
-                                            R.string.more_apps_from_us,
+                                            com.simplemobiletools.commons.R.string.more_apps_from_us,
                                             doAction = ::launchMoreAppsFromUsIntent,
                                             overflowMode = OverflowMode.ALWAYS_OVERFLOW
                                         )
@@ -98,7 +98,7 @@ class MainActivity : ComponentActivity() {
                         Button(
                             onClick = ::startCustomizationActivity
                         ) {
-                            Text(stringResource(id = R.string.color_customization))
+                            Text(stringResource(id = com.simplemobiletools.commons.R.string.color_customization))
                         }
                         Button(
                             onClick = ::launchAbout
