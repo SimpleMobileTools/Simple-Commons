@@ -254,7 +254,7 @@ fun SimpleLazyListScaffold(
 }
 
 @Composable
-fun SimpleLazyListScaffold(
+fun SimpleScaffold(
     modifier: Modifier = Modifier,
     darkStatusBarIcons: Boolean = true,
     customTopBar: @Composable (scrolledColor: Color, navigationInteractionSource: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color) -> Unit,
