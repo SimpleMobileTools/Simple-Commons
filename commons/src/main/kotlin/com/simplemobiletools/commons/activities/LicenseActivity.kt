@@ -3,6 +3,8 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
@@ -19,7 +21,7 @@ class LicenseActivity : ComponentActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
-            val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
+            val thirdPartyLicenses by remember { derivedStateOf { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() } }
             AppThemeSurface {
                 LicenseScreen(
                     goBack = ::finish,
