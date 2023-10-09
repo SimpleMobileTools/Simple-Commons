@@ -6,7 +6,7 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.theme.model.Dimensions
 
 internal val CommonDimensions = Dimensions(
-    margin = Dimensions.Margins(
+    padding = Dimensions.Paddings(
         extraSmall = 2.dp,
         small = 4.dp,
         medium = 8.dp,

@@ -18,15 +18,11 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.screens.LinkifyText
-import com.simplemobiletools.commons.compose.screens.stringFromHTML
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogTextviewBinding
-import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
-import com.simplemobiletools.commons.extensions.getStringsPackageName
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 
 class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
     private var dialog: AlertDialog? = null
@@ -96,8 +92,8 @@ fun AppSideLoadedAlertDialog(
         shape = dialogShape,
         text = {
             val source = stringResource(id = R.string.sideloaded_app, url)
-            LinkifyText(fontSize = 16.sp, removeUnderlines = false) {
-                stringFromHTML(source)
+            LinkifyTextComponent(fontSize = 16.sp, removeUnderlines = false) {
+                source.fromHtml()
             }
         },
         title = {

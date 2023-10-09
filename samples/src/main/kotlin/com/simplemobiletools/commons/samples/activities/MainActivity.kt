@@ -48,7 +48,7 @@ class MainActivity : BaseSimpleActivity() {
             startActivity(Intent(this, TestDialogActivity::class.java))
         }
         binding.testButton.setOnClickListener {
-            WritePermissionDialog(this, mode = WritePermissionDialog.Mode.OpenDocumentTreeSDK30("")){
+            WritePermissionDialog(this, writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30(".")){
 
             }
         }

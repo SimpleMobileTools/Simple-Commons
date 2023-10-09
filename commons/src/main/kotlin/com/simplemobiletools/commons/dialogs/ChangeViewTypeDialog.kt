@@ -98,16 +98,16 @@ fun ChangeViewTypeAlertDialog(
                         setSelected(selectedTitle)
                     },
                     modifier = Modifier.padding(
-                        vertical = SimpleTheme.dimens.margin.extraLarge,
+                        vertical = SimpleTheme.dimens.padding.extraLarge,
                     ),
-                    verticalPadding = SimpleTheme.dimens.margin.extraLarge,
+                    verticalPadding = SimpleTheme.dimens.padding.extraLarge,
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.End,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = SimpleTheme.dimens.margin.extraLarge)
+                        .padding(end = SimpleTheme.dimens.padding.extraLarge)
                 ) {
                     TextButton(onClick = {
                         alertDialogState.hide()

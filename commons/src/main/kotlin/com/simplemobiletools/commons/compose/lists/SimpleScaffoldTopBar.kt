@@ -39,7 +39,7 @@ fun SimpleScaffoldTopBar(
             Text(
                 text = title,
                 modifier = Modifier
-                    .padding(start = SimpleTheme.dimens.margin.medium)
+                    .padding(start = SimpleTheme.dimens.padding.medium)
                     .fillMaxWidth(),
                 color = scrolledColor,
                 maxLines = 1,
@@ -157,7 +157,7 @@ fun SimpleNavigationIcon(
 ) {
     Box(
         modifier
-            .padding(start = SimpleTheme.dimens.margin.medium)
+            .padding(start = SimpleTheme.dimens.padding.medium)
             .clip(RoundedCornerShape(50))
             .clickable(
                 navigationIconInteractionSource, rememberRipple(
@@ -175,13 +175,13 @@ fun SimpleBackIcon(iconColor: Color?) {
     if (iconColor == null) {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-            modifier = Modifier.padding(SimpleTheme.dimens.margin.small)
+            modifier = Modifier.padding(SimpleTheme.dimens.padding.small)
         )
     } else {
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
             tint = iconColor,
-            modifier = Modifier.padding(SimpleTheme.dimens.margin.small)
+            modifier = Modifier.padding(SimpleTheme.dimens.padding.small)
         )
     }
 }

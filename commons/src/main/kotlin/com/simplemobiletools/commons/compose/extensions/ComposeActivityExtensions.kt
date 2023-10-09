@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.extensions.launchViewIntent
 
 @Composable
 fun FakeVersionCheck() {
-    val context = LocalContext.current.getActivity()
+    val context = LocalContext.current
     val confirmationDialogAlertDialogState = rememberAlertDialogState().apply {
         DialogMember {
             ConfirmationAlertDialog(

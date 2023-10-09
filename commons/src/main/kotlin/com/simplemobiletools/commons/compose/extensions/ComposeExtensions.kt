@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -22,10 +24,12 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LifecycleStartEffect
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.compose.theme.isLitWell
 import com.simplemobiletools.commons.extensions.darkenColor
+import com.simplemobiletools.commons.extensions.launchViewIntent
 
 fun Context.getActivity(): Activity {
     return when (this) {
@@ -156,5 +160,14 @@ internal fun TransparentSystemBars(darkIcons: Boolean = !isSystemInDarkTheme()) 
             darkIcons = darkIcons
         )
         onDispose { }
+    }
+}
+
+@Composable
+fun composeDonateIntent(): () -> Unit {
+    val localContext = LocalContext.current
+    val localView = LocalView.current
+    return {
+        if (localView.isInEditMode) Unit else localContext.getActivity().launchViewIntent(R.string.thank_you_url)
     }
 }
