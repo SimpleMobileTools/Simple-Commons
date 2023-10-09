@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.compose.menus
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -30,6 +31,7 @@ import com.simplemobiletools.commons.compose.extensions.rememberMutableInteracti
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
+import com.simplemobiletools.commons.dialogs.dialogBorder
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -140,6 +142,9 @@ fun ActionMenu(
             }
         }
         DropdownMenu(
+            modifier = Modifier
+                .background(SimpleTheme.colorScheme.surface)
+                .dialogBorder,
             expanded = isMenuVisible,
             onDismissRequest = { onMenuToggle(false) },
         ) {
