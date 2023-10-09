@@ -66,6 +66,7 @@ private const val RESET_IMMEDIATELY = 1L
 private const val RESET_IDLE = -1L
 private const val BETWEEN_CLICKS_TIME = 200 //time between a click which is slightly lower than the reset time
 private const val ON_LONG_CLICK_LABEL = "select"
+
 @Composable
 internal fun ManageBlockedNumbersScreen(
     goBack: () -> Unit,
@@ -96,7 +97,7 @@ internal fun ManageBlockedNumbersScreen(
         clearSelection()
     }
 
-    SimpleLazyListScaffold(
+    SimpleScaffold(
         darkStatusBarIcons = !isInActionMode,
         customTopBar = { scrolledColor: Color,
                          navigationInteractionSource: MutableInteractionSource,
