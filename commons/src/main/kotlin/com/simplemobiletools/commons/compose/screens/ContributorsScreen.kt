@@ -16,6 +16,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsGroupTitle
@@ -24,6 +25,7 @@ import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
+import com.simplemobiletools.commons.extensions.fromHtml
 import com.simplemobiletools.commons.models.LanguageContributor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -64,7 +66,7 @@ internal fun ContributorsScreen(
             )
         }
         item {
-            Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.margin.medium))
+            Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.padding.medium))
         }
         item {
             SettingsHorizontalDivider()
@@ -85,15 +87,15 @@ internal fun ContributorsScreen(
                     icon = R.drawable.ic_heart_vector,
                     text = {
                         val source = stringResource(id = R.string.contributors_label)
-                        LinkifyText {
-                            stringFromHTML(source)
+                        LinkifyTextComponent {
+                            source.fromHtml()
                         }
                     },
                     tint = SimpleTheme.colorScheme.onSurface
                 )
             }
             item {
-                Spacer(modifier = Modifier.padding(bottom = SimpleTheme.dimens.margin.medium))
+                Spacer(modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.medium))
             }
         }
        
@@ -117,7 +119,7 @@ private fun ContributorItem(
         leadingContent = {
             val imageSize = Modifier
                 .size(SimpleTheme.dimens.icon.medium)
-                .padding(SimpleTheme.dimens.margin.medium)
+                .padding(SimpleTheme.dimens.padding.medium)
             Image(
                 modifier = imageSize,
                 painter = painterResource(id = languageContributor.iconId),

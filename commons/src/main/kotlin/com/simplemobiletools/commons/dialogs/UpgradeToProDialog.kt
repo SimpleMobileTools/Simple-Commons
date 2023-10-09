@@ -99,7 +99,7 @@ fun UpgradeToProAlertDialog(
                 }
                 TextButton(
                     onClick = alertDialogState::hide,
-                    modifier = Modifier.padding(horizontal = SimpleTheme.dimens.margin.medium)
+                    modifier = Modifier.padding(horizontal = SimpleTheme.dimens.padding.medium)
                 ) {
                     Text(text = stringResource(id = R.string.later))
                 }

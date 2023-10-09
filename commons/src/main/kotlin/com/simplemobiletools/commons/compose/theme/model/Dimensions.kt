@@ -5,11 +5,11 @@ import androidx.compose.ui.unit.Dp
 
 @Immutable
 data class Dimensions(
-    val margin: Margins,
+    val padding: Paddings,
     val icon: IconSizes
 ) {
     @Immutable
-    data class Margins(
+    data class Paddings(
         val extraSmall: Dp,
         val small: Dp,
         val medium: Dp,

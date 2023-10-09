@@ -16,11 +16,10 @@ import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.composeDonateIntent
 import com.simplemobiletools.commons.compose.extensions.config
-import com.simplemobiletools.commons.compose.extensions.getActivity
-import com.simplemobiletools.commons.compose.screens.LinkifyText
-import com.simplemobiletools.commons.compose.screens.stringFromHTML
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogPurchaseThankYouBinding
 import com.simplemobiletools.commons.extensions.*
@@ -52,10 +51,8 @@ fun PurchaseThankYouAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
 ) {
-    val localContext = LocalContext.current.getActivity()
-    val donateIntent = {
-        localContext.launchViewIntent(R.string.thank_you_url)
-    }
+    val localContext = LocalContext.current
+    val donateIntent = composeDonateIntent()
     val appId = remember {
         localContext.config.appId
     }
@@ -87,12 +84,12 @@ fun PurchaseThankYouAlertDialog(
             if (appId.removeSuffix(".debug").endsWith(".pro")) {
                 text += "<br><br>${stringResource(R.string.shared_theme_note)}"
             }
-            LinkifyText(
+            LinkifyTextComponent(
                 fontSize = 16.sp,
                 removeUnderlines = false,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                stringFromHTML(text)
+                text.fromHtml()
             }
         }
     )

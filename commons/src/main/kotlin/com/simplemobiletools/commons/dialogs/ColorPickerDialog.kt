@@ -165,7 +165,7 @@ fun ColorPickerAlertDialog(
             Column(
                 Modifier
                     .fillMaxWidth(0.95f)
-                    .padding(SimpleTheme.dimens.margin.extraLarge)
+                    .padding(SimpleTheme.dimens.padding.extraLarge)
             ) {
                 var dialogColorPickerBinding by remember { mutableStateOf<DialogColorPickerBinding?>(null) }
                 val currentColorHsv by remember { derivedStateOf { Hsv(FloatArray(3)).apply { Color.colorToHSV(color, this.value) } } }

@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidViewBinding
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
+import androidx.core.content.ContextCompat
 import androidx.core.view.updateLayoutParams
 import com.google.android.material.appbar.MaterialToolbar
 import com.simplemobiletools.commons.R
@@ -166,8 +167,7 @@ class LineColorPickerDialog(
 fun LineColorPickerAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    @ColorInt
-    color: Int,
+    @ColorInt color: Int,
     isPrimaryColorPicker: Boolean,
     primaryColors: Int = R.array.md_primary_colors,
     appIconIDs: ArrayList<Int>? = null,
@@ -179,11 +179,10 @@ fun LineColorPickerAlertDialog(
     var wasDimmedBackgroundRemoved by remember { mutableStateOf(false) }
 
     val defaultColor = remember {
-        context.resources.getColor(R.color.color_primary)
+        ContextCompat.getColor(context, R.color.color_primary)
     }
     AlertDialog(
-        modifier = modifier
-            .dialogBorder,
+        modifier = modifier,
         onDismissRequest = alertDialogState::hide,
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
@@ -191,7 +190,7 @@ fun LineColorPickerAlertDialog(
             Column(
                 Modifier
                     .fillMaxWidth(0.95f)
-                    .padding(SimpleTheme.dimens.margin.extraLarge)
+                    .padding(SimpleTheme.dimens.padding.extraLarge)
             ) {
                 val dialogTextColor = dialogTextColor
                 var dialogLineColorPickerBinding by remember { mutableStateOf<DialogLineColorPickerBinding?>(null) }

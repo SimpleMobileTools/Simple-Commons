@@ -46,7 +46,7 @@ fun RadioButtonDialogComponent(
         )
         Text(
             text = item,
-            modifier = Modifier.padding(start = SimpleTheme.dimens.margin.medium),
+            modifier = Modifier.padding(start = SimpleTheme.dimens.padding.medium),
             color = dialogTextColor
         )
     }

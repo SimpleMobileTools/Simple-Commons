@@ -86,7 +86,7 @@ internal fun ManageBlockedNumbersScreen(
     onCopy: (BlockedNumber) -> Unit,
 ) {
     val dimens = SimpleTheme.dimens
-    val startingPadding = remember { Modifier.padding(horizontal = dimens.margin.small) }
+    val startingPadding = remember { Modifier.padding(horizontal = dimens.padding.small) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
@@ -194,7 +194,7 @@ internal fun ManageBlockedNumbersScreen(
                     ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
-            verticalArrangement = Arrangement.spacedBy(SimpleTheme.dimens.margin.extraSmall),
+            verticalArrangement = Arrangement.spacedBy(SimpleTheme.dimens.padding.extraSmall),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -324,7 +324,7 @@ private fun BlockedNumber(
         movableContentOf {
             Text(
                 text = blockedNumber.contactName.toString(),
-                modifier = modifier.padding(horizontal = SimpleTheme.dimens.margin.medium, vertical = SimpleTheme.dimens.margin.extraSmall)
+                modifier = modifier.padding(horizontal = SimpleTheme.dimens.padding.medium, vertical = SimpleTheme.dimens.padding.extraSmall)
             )
         }
     }
@@ -381,7 +381,7 @@ private fun blockedNumberListItemColors(
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber, hasContactName: Boolean) {
     Text(
         text = blockedNumber.number,
-        modifier = modifier.padding(horizontal = SimpleTheme.dimens.margin.medium),
+        modifier = modifier.padding(horizontal = SimpleTheme.dimens.padding.medium),
         color = if (hasContactName) LocalContentColor.current.copy(alpha = 0.7f) else LocalContentColor.current
     )
 }
@@ -548,7 +548,7 @@ private fun NonActionModeToolbar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
-                modifier = Modifier.padding(start = SimpleTheme.dimens.margin.extraLarge),
+                modifier = Modifier.padding(start = SimpleTheme.dimens.padding.extraLarge),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -584,8 +584,8 @@ private fun LazyListScope.emptyBlockedNumbers(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = SimpleTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.small)
-                .padding(horizontal = SimpleTheme.dimens.margin.extraLarge)
+                .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.small)
+                .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
         )
     }
     item {
@@ -606,7 +606,7 @@ private fun LazyListScope.emptyBlockedNumbers(
                         color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(SimpleTheme.dimens.margin.medium)
+                    modifier = Modifier.padding(SimpleTheme.dimens.padding.medium)
                 )
             }
         }
@@ -622,8 +622,8 @@ private fun LazyListScope.noPermissionToBlock(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = SimpleTheme.dimens.margin.extraLarge)
-                .padding(horizontal = SimpleTheme.dimens.margin.extraLarge)
+                .padding(top = SimpleTheme.dimens.padding.extraLarge)
+                .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
         )
     }
     item {
@@ -644,7 +644,7 @@ private fun LazyListScope.noPermissionToBlock(
                         color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(SimpleTheme.dimens.margin.extraLarge)
+                    modifier = Modifier.padding(SimpleTheme.dimens.padding.extraLarge)
                 )
             }
         }

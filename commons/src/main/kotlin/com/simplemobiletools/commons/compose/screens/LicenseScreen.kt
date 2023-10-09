@@ -35,7 +35,7 @@ internal fun LicenseScreen(
             Column {
                 LicenseItem(license, onLicenseClick)
                 if (index != thirdPartyLicenses.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = SimpleTheme.dimens.margin.small))
+                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.small))
                 }
             }
         }
@@ -58,7 +58,7 @@ private fun LicenseItem(
     }, supportingContent = {
         Text(
             text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = SimpleTheme.dimens.margin.extraSmall),
+            modifier = Modifier.padding(top = SimpleTheme.dimens.padding.extraSmall),
         )
     }, colors = ListItemDefaults.colors(headlineColor = SimpleTheme.colorScheme.primary, supportingColor = SimpleTheme.colorScheme.onSurface))
 }

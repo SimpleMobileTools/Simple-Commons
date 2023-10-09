@@ -51,7 +51,7 @@ fun SettingsListItem(
         leadingContent = {
             val imageSize = Modifier
                 .size(SimpleTheme.dimens.icon.medium)
-                .padding(SimpleTheme.dimens.margin.medium)
+                .padding(SimpleTheme.dimens.padding.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,
@@ -107,7 +107,7 @@ fun SettingsListItem(
         leadingContent = {
             val imageSize = Modifier
                 .size(SimpleTheme.dimens.icon.medium)
-                .padding(SimpleTheme.dimens.margin.medium)
+                .padding(SimpleTheme.dimens.padding.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,

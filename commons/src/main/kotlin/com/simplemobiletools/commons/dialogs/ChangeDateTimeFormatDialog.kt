@@ -147,7 +147,7 @@ fun ChangeDateTimeFormatAlertDialog(
                         items = kinds, selected = selected,
                         setSelected = setSelected,
                         modifier = Modifier.padding(
-                            vertical = SimpleTheme.dimens.margin.extraLarge,
+                            vertical = SimpleTheme.dimens.padding.extraLarge,
                         )
                     )
                     SettingsHorizontalDivider()
@@ -157,7 +157,7 @@ fun ChangeDateTimeFormatAlertDialog(
                             label = stringResource(id = R.string.use_24_hour_time_format),
                             initialValue = is24HoursSelected,
                             onChange = { is24HoursSelected = it },
-                            modifier = Modifier.padding(horizontal = SimpleTheme.dimens.margin.medium)
+                            modifier = Modifier.padding(horizontal = SimpleTheme.dimens.padding.medium)
                         )
                     }
                 }
@@ -167,7 +167,7 @@ fun ChangeDateTimeFormatAlertDialog(
                     horizontalArrangement = Arrangement.End,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.extraLarge, end = SimpleTheme.dimens.margin.extraLarge)
+                        .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.extraLarge, end = SimpleTheme.dimens.padding.extraLarge)
                         .align(Alignment.BottomStart)
                 ) {
                     TextButton(onClick = {
