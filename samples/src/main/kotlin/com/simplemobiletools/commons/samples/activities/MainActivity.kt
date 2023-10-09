@@ -24,10 +24,7 @@ import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
-import com.simplemobiletools.commons.compose.extensions.DEVELOPER_PLAY_STORE_URL
-import com.simplemobiletools.commons.compose.extensions.FAKE_VERSION_APP_LABEL
-import com.simplemobiletools.commons.compose.extensions.appLaunchedCompose
-import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
+import com.simplemobiletools.commons.compose.extensions.*
 import com.simplemobiletools.commons.compose.menus.ActionItem
 import com.simplemobiletools.commons.compose.menus.ActionMenu
 import com.simplemobiletools.commons.compose.menus.OverflowMode
@@ -52,6 +49,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        enableEdgeToEdgeSimple()
         setContent {
             AppThemeSurface {
                 SettingsLazyScaffold(
