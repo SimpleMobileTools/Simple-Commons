@@ -38,8 +38,8 @@ fun SettingsGroupTitle(
             .padding(horizontal = SimpleTheme.dimens.margin.extraLarge),
         contentAlignment = Alignment.CenterStart
     ) {
-        val primary = MaterialTheme.colorScheme.primary
-        val titleStyle = MaterialTheme.typography.headlineMedium.copy(color = primary)
+        val primary = SimpleTheme.colorScheme.primary
+        val titleStyle = SimpleTheme.typography.headlineMedium.copy(color = primary)
         ProvideTextStyle(value = titleStyle) { title() }
     }
 }

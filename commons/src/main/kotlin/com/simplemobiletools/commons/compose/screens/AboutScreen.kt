@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.compose.screens
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -16,8 +15,9 @@ import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 
-private val startingTitlePadding = Modifier.padding(start = 58.dp)
+private val startingTitlePadding = Modifier.padding(start = 60.dp)
 
 @Composable
 internal fun AboutScreen(
@@ -166,7 +166,7 @@ internal fun SocialSection(
             click = onGithubClick,
             text = stringResource(id = R.string.github),
             icon = R.drawable.ic_github_vector,
-            tint = MaterialTheme.colorScheme.onSurface
+            tint = SimpleTheme.colorScheme.onSurface
         )
         SocialText(
             click = onRedditClick,
@@ -203,7 +203,7 @@ internal fun SocialText(
 @Composable
 internal fun TwoLinerTextItem(text: String, icon: Int, click: () -> Unit) {
     SettingsListItem(
-        tint = MaterialTheme.colorScheme.onSurface,
+        tint = SimpleTheme.colorScheme.onSurface,
         click = click,
         text = text,
         icon = icon,

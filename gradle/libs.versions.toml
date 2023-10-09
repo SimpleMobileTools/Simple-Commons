@@ -17,7 +17,7 @@ androidx-coreKtx = "1.12.0"
 androidx-appcompat = "1.6.1"
 androidx-swiperefreshlayout = "1.1.0"
 #Material
-material = "1.9.0"
+material = "1.10.0"
 #patternLockView
 patternLockView = "a90b0d4bf0"
 #reprint
@@ -27,12 +27,13 @@ recyclerviewFastscroller = "5a95285b1f"
 #rtlViewpager
 rtlViewpager = "940f12724f"
 #Compose
-composeActivity = "1.8.0-rc01"
-compose = "1.6.0-alpha06"
+composeActivity = "1.8.0"
+compose = "1.6.0-alpha07"
 composeCompiler = "1.5.3"
-composeMaterial3 = "1.2.0-alpha08"
+composeMaterial3 = "1.2.0-alpha09"
 #Glide
 glide = "4.16.0"
+glideCompose = "1.0.0-beta01"
 #Room
 room = "2.6.0-rc01"
 #ezVcard
@@ -89,6 +90,7 @@ compose-uiTooling-preview = { module = "androidx.compose.ui:ui-tooling-preview",
 compose-view-binding = { module = "androidx.compose.ui:ui-viewbinding", version.ref = "compose" }
 #Glide
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compose = { module = "com.github.bumptech.glide:compose", version.ref = "glideCompose" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 #Material
 material = { module = "com.google.android.material:material", version.ref = "material" }

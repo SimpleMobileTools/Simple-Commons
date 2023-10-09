@@ -9,7 +9,6 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.foundation.layout.calculateStartPadding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
@@ -24,6 +23,7 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LifecycleStartEffect
 import com.simplemobiletools.commons.compose.system_ui_controller.rememberSystemUiController
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.compose.theme.isLitWell
 import com.simplemobiletools.commons.extensions.darkenColor
 
@@ -44,8 +44,8 @@ fun rememberMutableInteractionSource() = remember { MutableInteractionSource() }
 fun AdjustNavigationBarColors() {
     val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
-    val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
-    val navigationBarColor = Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
+    val isSurfaceLitWell = SimpleTheme.colorScheme.surface.isLitWell()
+    val navigationBarColor = Color(SimpleTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
     DisposableEffect(systemUiController, isSystemInDarkTheme, navigationBarColor) {
         systemUiController.setNavigationBarColor(color = navigationBarColor, darkIcons = !isSystemInDarkTheme)
         systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell

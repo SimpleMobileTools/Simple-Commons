@@ -5,9 +5,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.ReadOnlyComposable
 import com.simplemobiletools.commons.compose.theme.model.Dimensions
 
+@Immutable
 object SimpleTheme {
     val dimens: Dimensions
         @Composable

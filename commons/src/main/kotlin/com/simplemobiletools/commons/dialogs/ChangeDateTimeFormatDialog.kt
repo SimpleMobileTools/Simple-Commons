@@ -204,8 +204,8 @@ private fun DialogCheckBoxChangeDateTimeFormatComponent(
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
     checkboxColors: CheckboxColors = CheckboxDefaults.colors(
-        checkedColor = MaterialTheme.colorScheme.primary,
-        checkmarkColor = MaterialTheme.colorScheme.surface,
+        checkedColor = SimpleTheme.colorScheme.primary,
+        checkmarkColor = SimpleTheme.colorScheme.surface,
     )
 ) {
     val interactionSource = rememberMutableInteractionSource()

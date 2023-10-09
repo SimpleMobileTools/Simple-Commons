@@ -17,12 +17,12 @@
     <string name="edit">Modifier</string>
     <string name="no_app_found">Aucune application valide n\'a été trouvée</string>
     <string name="no_browser_found">Aucun navigateur n\'a été trouvé</string>
-    <string name="no_email_client_found">Aucun client de messagerie électronique n\'a été trouvé</string>
+    <string name="no_email_client_found">Aucun client de messagerie n\'a été trouvé</string>
     <string name="set_as">Définir en tant que</string>
-    <string name="copy_to_clipboard">Copier dans le presse-papier</string>
-    <string name="copy_number_to_clipboard">Copier le numéro dans le presse-papier</string>
-    <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
-    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papier :
+    <string name="copy_to_clipboard">Copier dans le presse-papiers</string>
+    <string name="copy_number_to_clipboard">Copier le numéro dans le presse-papiers</string>
+    <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papiers</string>
+    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers :
 \n%s</string>
     <string name="dial_number">Composer le numéro</string>
     <string name="unknown">Inconnu</string>
@@ -30,7 +30,7 @@
     <string name="never">Jamais</string>
     <string name="details">Détails</string>
     <string name="notes">Notes</string>
-    <string name="deleting_folder">Suppression du dossier « %s »</string>
+    <string name="deleting_folder">Suppression du dossier \"%s\"</string>
     <string name="none">Aucun</string>
     <string name="label">Libellé</string>
     <string name="transparent">Transparent</string>
@@ -93,19 +93,19 @@
     <string name="pager">Téléavertisseur</string>
     <string name="no_phone_number_found">Aucun numéro de téléphone n\'a été trouvé</string>
     <!-- View types -->
-    <string name="change_view_type">Modifier le type de vue</string>
+    <string name="change_view_type">Modifier le mode d\'affichage</string>
     <string name="grid">Grille</string>
     <string name="grid_pro">Grille (Pro)</string>
     <string name="uneven_grid">Grille irrégulière</string>
     <string name="list">Liste</string>
-    <string name="increase_column_count">Augmenter le nombre de colonnes</string>
-    <string name="reduce_column_count">Réduire le nombre de colonnes</string>
+    <string name="increase_column_count">Ajouter une colonne</string>
+    <string name="reduce_column_count">Supprimer une colonne</string>
     <string name="column_count">Nombre de colonnes</string>
     <string name="row_count">Nombre de lignes</string>
-    <string name="portrait_column_count">Nombre de colonnes « Portrait »</string>
-    <string name="landscape_column_count">Nombre de colonnes « Paysage »</string>
+    <string name="portrait_column_count">Nombre de colonnes \"Portrait\"</string>
+    <string name="landscape_column_count">Nombre de colonnes \"Paysage\"</string>
     <string name="change_cover_image">Modifier l\'image de couverture</string>
-    <string name="select_photo">Sélectionner une photo</string>
+    <string name="select_photo">Sélectionner une image</string>
     <plurals name="column_counts">
         <item quantity="one">%d colonne</item>
         <item quantity="many">%d colonnes</item>
@@ -175,7 +175,7 @@
     <!-- Permissions -->
     <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est nécessaire</string>
     <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est nécessaire</string>
-    <string name="no_camera_permissions">L\'autorisation d\'accès à l\'objectif photo-vidéo est nécessaire</string>
+    <string name="no_camera_permissions">L\'autorisation d\'accès à la caméra est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audio est nécessaire</string>
     <string name="no_permission">Aucune autorisation</string>
     <string name="allow_notifications_reminders">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher de rappels.</string>
@@ -203,9 +203,9 @@
     <string name="renaming_folder">Renommage du dossier</string>
     <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas être vide</string>
     <string name="filename_invalid_characters">Le nom de fichier contient des caractères non autorisés</string>
-    <string name="filename_invalid_characters_placeholder">Le nom de fichier « %s » contient des caractères non autorisés</string>
+    <string name="filename_invalid_characters_placeholder">Le nom de fichier \"%s\" contient des caractères non autorisés</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas être vide</string>
-    <string name="source_file_doesnt_exist">Le fichier source « %s » n\'existe pas</string>
+    <string name="source_file_doesnt_exist">Le fichier source \"%s\" n\'existe pas</string>
     <string name="prepend_filenames">Ajouter un préfixe aux noms de fichiers</string>
     <string name="append_filenames">Ajouter un suffixe aux noms de fichiers</string>
     <string name="simple_renaming">Renommer simplement</string>
@@ -231,7 +231,7 @@
     <string name="source">Source</string>
     <string name="destination">Destination</string>
     <string name="select_destination">Sélectionner la destination</string>
-    <string name="click_select_destination">Cliquez ici pour sélectionner la destination</string>
+    <string name="click_select_destination">Appuyez ici pour sélectionner la destination</string>
     <string name="invalid_destination">Impossible d\'écrire dans la destination sélectionnée</string>
     <string name="please_select_destination">Veuillez sélectionner une destination</string>
     <string name="source_and_destination_same">La source et la destination ne peuvent pas être identiques</string>
@@ -247,8 +247,8 @@
     <string name="copying_success_partial">Certains fichiers n\'ont pas pu être copiés</string>
     <string name="no_files_selected">Aucun fichier sélectionné</string>
     <string name="saving">Enregistrement en cours…</string>
-    <string name="could_not_create_folder">Impossible de créer le dossier « %s »</string>
-    <string name="could_not_create_file">Impossible de créer le fichier « %s »</string>
+    <string name="could_not_create_folder">Impossible de créer le dossier \"%s\"</string>
+    <string name="could_not_create_file">Impossible de créer le fichier \"%s\"</string>
     <string name="no_new_items">Aucun nouvel élément n\'a été trouvé</string>
     <string name="no_space">L\'espace de stockage de la destination est insuffisant.
 \nEspace nécessaire : %1$s, espace disponible : %2$s</string>
@@ -263,14 +263,14 @@
     <string name="empty_name">Veuillez saisir un nom</string>
     <string name="unknown_error_occurred">Une erreur inconnue s\'est produite</string>
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Le fichier « %s » existe déjà</string>
-    <string name="file_already_exists_overwrite">Le fichier « %s » existe déjà. Voulez-vous l\'écraser \?</string>
-    <string name="folder_already_exists">Le dossier « %s » existe déjà</string>
+    <string name="file_already_exists">Le fichier \"%s\" existe déjà</string>
+    <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. Voulez-vous l\'écraser \?</string>
+    <string name="folder_already_exists">Le dossier \"%s\" existe déjà</string>
     <string name="merge">Fusionner</string>
     <string name="keep_both">Conserver les deux</string>
     <string name="overwrite">Écraser</string>
     <string name="skip">Ignorer</string>
-    <string name="append">Ajouter le suffixe « _1 »</string>
+    <string name="append">Ajouter le suffixe \"_1\"</string>
     <string name="apply_to_all">Appliquer à tous</string>
     <string name="system_folder_restriction">Le système n\'autorise pas l\'opération dans ce dossier. Veuillez sélectionner un autre dossier</string>
     <string name="system_folder_copy_restriction">Le système ne permet pas la copie dans ce dossier. Veuillez sélectionner un autre dossier</string>
@@ -284,9 +284,9 @@
     <string name="confirm_folder_access_title">Veuillez confirmer l\'accès au dossier</string>
     <string name="confirm_storage_access_text">Veuillez sélectionner le dossier racine de la carte SD sur le prochain écran, pour accorder les droits en écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous n\'apercevez pas la carte SD, essayez ceci</string>
-    <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur « Utiliser ce dossier » en bas de l\'écran.</string>
-    <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à « <b>%s</b> » sur l\'écran suivant en appuyant sur « <b>Utiliser ce dossier</b> » en bas de l\'écran.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur « <b>Enregistrer</b> » en bas de l\'écran suivant pour créer le nouveau dossier.</string>
+    <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur \"Utiliser ce dossier\" en bas de l\'écran.</string>
+    <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à \"<b>%s</b>\" sur l\'écran suivant en appuyant sur \"<b>Utiliser ce dossier</b>\" en bas de l\'écran.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur \"<b>Enregistrer</b>\" en bas de l\'écran suivant pour créer le nouveau dossier.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
     <string name="loading">Chargement…</string>
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers. Elle pourrait ne pas fonctionner correctement sans cela.</string>
@@ -322,7 +322,7 @@
     <string name="wrong_root_selected">Mauvais dossier sélectionné. Veuillez sélectionner le dossier racine de votre carte SD</string>
     <string name="sd_card_usb_same">Les emplacements de la carte SD et du périphérique USB ne peuvent pas être identiques</string>
     <string name="app_on_sd_card">L\'application semble être installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'application. Vous ne les verrez même pas dans la liste des widgets disponibles. Il s\'agit d\'une limitation système. Si vous souhaitez utiliser les widgets, vous devez déplacer l\'application vers l\'espace de stockage interne.</string>
-    <string name="wrong_folder_selected">Mauvais dossier sélectionné. Veuillez sélectionner l\'emplacement « %s »</string>
+    <string name="wrong_folder_selected">Mauvais dossier sélectionné. Veuillez sélectionner l\'emplacement \"%s\"</string>
     <!-- File properties -->
     <string name="properties">Propriétés</string>
     <string name="path">Emplacement</string>
@@ -352,9 +352,9 @@
     <string name="primary_color">Couleur principale</string>
     <string name="accent_color_white">Accentuation de la couleur du thème blanc</string>
     <string name="accent_color_black_and_white">Accentuation de la couleur du thème noir et blanc</string>
-    <string name="foreground_color">Couleur de premier plan</string>
+    <string name="foreground_color">Couleur de l\'arrière-plan</string>
     <string name="app_icon_color">Couleur de l’icône de l’application</string>
-    <string name="bottom_navigation_bar_color">Couleur de la barre de navigation inférieure</string>
+    <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
     <string name="use_default">Utiliser la valeur par défaut</string>
     <string name="default_color">Par défaut</string>
@@ -367,11 +367,11 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos modifications \?</string>
     <string name="cannot_be_undone">Cette action ne peut pas être annulée.</string>
     <string name="save_before_closing">Certaines modifications ne sont pas enregistrées. Voulez-vous les enregistrer avant de quitter \?</string>
-    <string name="apply_to_all_apps">Appliquer les couleurs à l\'ensemble de la suite d\'applications « simple »</string>
+    <string name="apply_to_all_apps">Appliquer les couleurs à l\'ensemble de la suite d\'applications \"simple\"</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes des applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou d\'un quelconque widget, si disponible. Une fois lancée, paramétrez simplement l\'icône orange par défaut avec la valeur RGB suivante : #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
-    <string name="share_colors_success">Actualisation des couleurs réussie. Un nouveau thème nommé « Partagé » a été ajouté. Veuillez utiliser dorénavant ce thème pour actualiser les couleurs de toutes les applications.</string>
-    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version « Pro » de l\'application, pour des raisons techniques, vous aurez toujours besoin de l\'application « Merci simple », puisqu\'elle gère la synchronisation des couleurs.</string>
-    <string name="purchase_thank_you">Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt; pour déverrouiller cette fonctionnalité et soutenir son développement. Merci !</string>
+    <string name="share_colors_success">Actualisation des couleurs réussie. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser dorénavant ce thème pour actualiser les couleurs de toutes les applications.</string>
+    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version \"Pro\" de l\'application, pour des raisons techniques, vous aurez toujours besoin de l\'application \"Merci simple\", puisqu\'elle gère la synchronisation des couleurs.</string>
+    <string name="purchase_thank_you">Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt; pour déverrouiller cette fonctionnalité et soutenir son développement. Merci !</string>
     <!-- Themes -->
     <string name="light_theme">Clair</string>
     <string name="dark_theme">Sombre</string>
@@ -383,7 +383,7 @@
     <string name="black_white">Noir et blanc</string>
     <string name="custom">Personnalisé</string>
     <string name="shared">Partagé</string>
-    <string name="system_default">Thème par défaut du système</string>
+    <string name="system_default">Défaut du système</string>
     <!-- What's new -->
     <string name="whats_new">Quoi de neuf</string>
     <string name="whats_new_disclaimer">* seules les mises à jour majeures sont présentement listées. Les améliorations mineures ne sont pas détaillées</string>
@@ -491,7 +491,7 @@
     <string name="fingerprint">Empreinte digitale</string>
     <string name="add_fingerprint">Ajouter une empreinte digitale</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
-    <string name="open_biometric_dialog">Ouvrir la fenêtre de vérification de l\'identité biométrique</string>
+    <string name="open_biometric_dialog">Ouvrir la fenêtre de vérification biométrique</string>
     <string name="authenticate">S\'identifier</string>
     <string name="authentication_failed">L\'identification a échoué</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants</string>
@@ -690,7 +690,7 @@
     <string name="during_day_at">Au cours de la journée à %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Paramètres</string>
-    <string name="purchase_simple_thank_you">Acheter l\'application « Merci simple »</string>
+    <string name="purchase_simple_thank_you">Acheter l\'application \"Merci simple\"</string>
     <string name="general_settings">Général</string>
     <string name="color_customization">Personnalisation des couleurs</string>
     <string name="improved_color_customization">Personnalisation améliorée des couleurs</string>
@@ -708,12 +708,12 @@
     <string name="medium">Moyenne</string>
     <string name="large">Grande</string>
     <string name="extra_large">Très grande</string>
-    <string name="password_protect_hidden_items">Protéger les fichiers cachés par une identification</string>
-    <string name="password_protect_whole_app">Protéger toute l\'application par une identification</string>
+    <string name="password_protect_hidden_items">Protéger les éléments cachés par une identification</string>
+    <string name="password_protect_whole_app">Protéger l\'application par une identification</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement des fichiers par une identification</string>
     <string name="keep_last_modified">Conserver l\'ancienne date de modification lors des opérations sur les fichiers</string>
     <string name="show_info_bubble">Afficher une infobulle lors de l\'utilisation de la barre de défilement</string>
-    <string name="prevent_phone_from_sleeping">Empêcher la mise en veille du téléphone lorsque l\'application est au premier plan</string>
+    <string name="prevent_phone_from_sleeping">Empêcher la mise en veille lorsque l\'application est au premier plan</string>
     <string name="skip_delete_confirmation">Toujours ignorer la fenêtre de confirmation de suppression</string>
     <string name="enable_pull_to_refresh">Activer l\'actualisation par défilement depuis le haut de l\'écran</string>
     <string name="use_24_hour_time_format">Utiliser le format horaire 24 heures</string>
@@ -753,10 +753,10 @@
     <string name="exclude">Exclure</string>
     <string name="exclude_folder">Exclure le dossier</string>
     <string name="excluded_folders">Dossiers exclus</string>
-    <string name="excluded">(exclu·s)</string>
+    <string name="excluded">(exclu)</string>
     <string name="manage_excluded_folders">Gérer les dossiers exclus</string>
-    <string name="remove_all">Tout enlever</string>
-    <string name="remove_all_description">Voulez-vous vraiment enlever tous les dossiers de la liste d\'exclusions \? Ceci ne supprimera pas les dossiers, ni leur contenu.</string>
+    <string name="remove_all">Tout supprimer</string>
+    <string name="remove_all_description">Voulez-vous vraiment supprimer tous les dossiers de la liste d\'exclusions \? Ceci ne supprimera pas les dossiers, ni leur contenu.</string>
     <string name="temporarily_show_excluded">Afficher les dossiers exclus</string>
     <string name="stop_showing_excluded">Cacher les dossiers exclus</string>
     <!-- Default tab to open -->
@@ -881,46 +881,46 @@
     <string name="it_is_free">Elle est gratuite jusqu\'au : %s. Si vous la téléchargez avant cette date, vous pourrez l\'utiliser gratuitement à vie.</string>
     <string name="more_info">Plus d\'informations</string>
     <string name="upgrade">Passer à la version Pro</string>
-    <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement en les exportant dans un fichier « .ics », puis en les important. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
+    <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement en les exportant dans un fichier \".ics\", puis en les important. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
     <string name="upgraded_from_free_gallery">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <string name="upgraded_to_pro_gallery">Bonjour,
 \n
-\nIl semblerait que vous ayez déjà la version « Pro » de cette application gratuite. Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller cette version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin.
+\nIl semblerait que vous ayez déjà la version \"Pro\" de cette application gratuite. Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller cette version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin.
 \n
 \nMerci !</string>
     <string name="upgraded_from_free">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé toutes vos données, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé toutes vos données, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <string name="upgraded_to_pro">Bonjour,
 \n
-\nIl semblerait que vous ayez déjà la version « Pro » de cette application gratuite. Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé toutes vos données, vous pourrez alors désinstaller cette version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin.
+\nIl semblerait que vous ayez déjà la version \"Pro\" de cette application gratuite. Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé toutes vos données, vous pourrez alors désinstaller cette version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin.
 \n
 \nMerci !</string>
     <string name="upgraded_from_free_calendar">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Si vous souhaitez y importer vos évènements stockés localement, vous devez le faire manuellement, depuis la version gratuite de l\'application, en les exportant vers un fichier « .ics », puis en les important dans cette nouvelle version « Pro », à l\'aide du menu supérieur.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Si vous souhaitez y importer vos évènements stockés localement, vous devez le faire manuellement, depuis la version gratuite de l\'application, en les exportant vers un fichier \".ics\", puis en les important dans cette nouvelle version \"Pro\", à l\'aide du menu supérieur.
 \n
-\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version « Pro », vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version \"Pro\", vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <string name="upgraded_from_free_contacts">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Si vous avez des contacts stockés sous « %s », vous devez les exporter manuellement vers un fichier « .vcf », depuis la version gratuite de l\'application, puis les importer dans cette nouvelle version « Pro », à l\'aide du menu supérieur.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Si vous avez des contacts stockés sous \"%s\", vous devez les exporter manuellement vers un fichier \".vcf\", depuis la version gratuite de l\'application, puis les importer dans cette nouvelle version \"Pro\", à l\'aide du menu supérieur.
 \n
-\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version « Pro », vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version \"Pro\", vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <string name="upgraded_from_free_notes">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Si vous souhaitez y importer vos notes, vous devez le faire manuellement, en les exportant vers un fichier depuis la version gratuite de l\'application, puis en les important dans cette nouvelle version « Pro », à l\'aide du menu supérieur.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Si vous souhaitez y importer vos notes, vous devez le faire manuellement, en les exportant vers un fichier depuis la version gratuite de l\'application, puis en les important dans cette nouvelle version \"Pro\", à l\'aide du menu supérieur.
 \n
-\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version « Pro », vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nUne fois que vous aurez obtenu une entière satisfaction de la configuration de votre nouvelle version \"Pro\", vous pourrez alors désinstaller l\'ancienne version gratuite, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <!-- About -->
@@ -928,7 +928,7 @@
     <string name="website">Site web</string>
     <string name="website_label">Pour le code source ouvert, visitez</string>
     <string name="email_label">Envoyez vos commentaires ou suggestions à</string>
-    <string name="upgrade_to_pro">Passer à la version « Pro »</string>
+    <string name="upgrade_to_pro">Passer à la version \"Pro\"</string>
     <string name="more_apps">Plus d\'applications</string>
     <string name="more_apps_from_us">Plus d\'applications</string>
     <string name="invite_friends">Inviter des amis</string>
@@ -951,23 +951,23 @@
     <string name="additional_info">Informations supplémentaires</string>
     <string name="app_version">Version de l\'application : %s</string>
     <string name="device_os">Système d\'exploitation de l\'appareil : %s</string>
-    <string name="donate_please">Bonjour,&lt;br&gt;&lt;br&gt; Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.&lt;br&gt;&lt;br&gt; Merci !</string>
-    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas vos données personnelles. Vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.&lt;br&gt;&lt;br&gt;Merci !</string>
-    <string name="donate_short">Soutenez-nous s\'il vous plaît en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.</string>
+    <string name="donate_please">Bonjour,&lt;br&gt;&lt;br&gt; Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt;. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.&lt;br&gt;&lt;br&gt; Merci !</string>
+    <string name="donate_new">Bonjour,&lt;br&gt;&lt;br&gt;Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité et nous ne collectons pas vos données personnelles. Vous pouvez soutenir son développement en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.&lt;br&gt;&lt;br&gt;Merci !</string>
+    <string name="donate_short">Soutenez-nous s\'il vous plaît en achetant l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt;. Vous obtiendrez toutes les fonctionnalités de l\'application, y compris le déblocage de la personnalisation des couleurs.</string>
     <string name="purchase">Acheter</string>
-    <string name="get_simple_phone">Commander un « Smartphone simple »</string>
-    <string name="update_thank_you">Veuillez mettre à jour l\'application « Merci simple »</string>
+    <string name="get_simple_phone">Commander un \"Smartphone simple\"</string>
+    <string name="update_thank_you">Veuillez mettre à jour l\'application \"Merci simple\"</string>
     <string name="before_asking_question_read_faq">Avant de poser une question, veuillez tout d\'abord vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
     <string name="before_rate_read_faq">Avant de nous évaluer, veuillez tout d\'abord vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez un problème, il est possible que la solution s\'y trouve.</string>
     <string name="make_sure_latest">Assurez-vous également d\'utiliser la version la plus récente de l\'application.</string>
-    <string name="make_sure_upgrade">Notez également que cette version de l\'application n\'est plus développée. Procurez-vous la version « Pro » pour bénéficier de nombreuses améliorations.</string>
+    <string name="make_sure_upgrade">Notez également que cette version de l\'application n\'est plus développée. Procurez-vous la version \"Pro\" pour bénéficier de nombreuses améliorations.</string>
     <string name="read_it">Consultez-la</string>
     <string name="read_faq">Consulter la FAQ</string>
     <string name="rate_us_prompt">Bonjour,
 \n
 \nIl semble que vous utilisez cette application depuis un certain temps déjà et nous vous en remercions.
 \n
-\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur « Google Play ». Cela nous aiderait beaucoup.
+\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur \"Google Play\". Cela nous aiderait beaucoup.
 \n
 \nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.
 \n
@@ -975,8 +975,8 @@
     <string name="rate_our_app">Merci d\'évaluer notre application :)</string>
     <string name="thank_you">Merci</string>
     <string name="widget_locked_pro">Le widget est verrouillé.
-\nVeuillez passer à la version « Pro » pour le déverrouiller.</string>
-    <string name="features_locked">Cette fonctionnalité est verrouillée. Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;« Merci simple »&lt;/a&gt; pour déverrouiller toutes les fonctionnalités.&lt;br&gt;&lt;br&gt;Il s\'agit d\'un paiement unique et nous vous rembourserons en cas d\'insatisfaction.</string>
+\nVeuillez passer à la version \"Pro\" pour le déverrouiller.</string>
+    <string name="features_locked">Cette fonctionnalité est verrouillée. Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt; pour déverrouiller toutes les fonctionnalités.&lt;br&gt;&lt;br&gt;Il s\'agit d\'un paiement unique et nous vous rembourserons en cas d\'insatisfaction.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Bonjour,&lt;br&gt;&lt;br&gt; Nous vous informons que de nouvelles applications ont été publiées récemment :&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Vous pouvez les télécharger en appuyant sur leurs titres ou icônes.&lt;br&gt;&lt;br&gt; Merci</string>
     <string name="simple_app_launcher">Lanceur d\'applications simple</string>
@@ -1030,21 +1030,21 @@
     <string name="faq_5_title_commons">Puis-je restaurer d’une manière ou d’une autre des fichiers supprimés \?</string>
     <string name="faq_5_text_commons">S\'ils ont vraiment été supprimés, vous ne le pouvez pas. Cependant, une corbeille étant activée par défaut, les fichiers seront simplement déplacés dans la corbeille au lieu d\'être supprimés.</string>
     <string name="faq_6_title_commons">L\'icône du lanceur d\'applications a disparu. Que puis-je faire \?</string>
-    <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via « Google Play » ou par le biais d\'un widget, le cas échéant. Une fois l\'application lancée, il vous suffira de redéfinir l\'icône orange par défaut avec la valeur de couleur RGB suivante : #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
+    <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via \"Google Play\" ou par le biais d\'un widget, le cas échéant. Une fois l\'application lancée, il vous suffira de redéfinir l\'icône orange par défaut avec la valeur de couleur RGB suivante : #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
     <string name="faq_7_title_commons">L\'argent a bien été débité de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire \?</string>
-    <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google. Leur système informatique peut parfois se heurter à quelques problèmes. Effacez simplement le cache de votre application « Google Play ». Ensuite, redémarrez votre appareil. Enfin, téléchargez de nouveau l\'application.</string>
-    <string name="faq_8_title_commons">Pourquoi devrais-je passer à la version « Pro » \?</string>
-    <string name="faq_8_text_commons">La version de votre application n’étant plus mise à jour, les bogues que vous avez peut-être repérés ne seront jamais corrigés. Il n\'y aura pas non plus de nouvelles fonctions ajoutées. Vous pouvez acheter la version « Pro » sur « Google Play » à petit prix. Il s\'agit d\'un paiement unique. Ce qui signifie qu\'une fois que vous l\'avez achetée, vous n\'aurez plus jamais à la payer. Pas même après avoir acheté un nouvel appareil. Si jamais vous n\'aimiez pas la version « Pro », vous pourrez simplement la désinstaller après quelques heures et votre paiement vous sera automatiquement remboursé. À tout moment, si vous souhaitez un remboursement, contactez-nous simplement à l\'adresse électronique suivante : hello@simplemobiletools.com et vous l\'obtiendrez.</string>
+    <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google. Leur système informatique peut parfois se heurter à quelques problèmes. Effacez simplement le cache de votre application \"Google Play\". Ensuite, redémarrez votre appareil. Enfin, téléchargez de nouveau l\'application.</string>
+    <string name="faq_8_title_commons">Pourquoi devrais-je passer à la version \"Pro\" \?</string>
+    <string name="faq_8_text_commons">La version de votre application n’étant plus mise à jour, les bogues que vous avez peut-être repérés ne seront jamais corrigés. Il n\'y aura pas non plus de nouvelles fonctions ajoutées. Vous pouvez acheter la version \"Pro\" sur \"Google Play\" à petit prix. Il s\'agit d\'un paiement unique. Ce qui signifie qu\'une fois que vous l\'avez achetée, vous n\'aurez plus jamais à la payer. Pas même après avoir acheté un nouvel appareil. Si jamais vous n\'aimiez pas la version \"Pro\", vous pourrez simplement la désinstaller après quelques heures et votre paiement vous sera automatiquement remboursé. À tout moment, si vous souhaitez un remboursement, contactez-nous simplement à l\'adresse électronique suivante : hello@simplemobiletools.com et vous l\'obtiendrez.</string>
     <string name="faq_9_title_commons">Comment puis-je sélectionner plusieurs éléments à la fois \?</string>
     <string name="faq_9_text_commons">Il existe plusieurs façons de procéder. La première consiste à démarrer le mode de sélection en appuyant longuement sur un élément, puis à cliquer brièvement sur les autres pour les sélectionner. La deuxième méthode est similaire à la sélection d\'éléments sur un ordinateur avec une souris. Démarrez simplement le mode de sélection en appuyant longuement sur un élément, puis, avec votre doigt toujours vers le bas, faites-le glisser sur d\'autres éléments pour les sélectionner. La troisième façon de sélectionner plusieurs éléments consiste à appuyer longuement sur un élément, puis à appuyer longuement sur un autre. Le reste sera alors sélectionné. Si vous souhaitez sélectionner tous les éléments, appuyez longuement sur un élément, puis cliquez sur le compteur d\'éléments sélectionnés dans le coin supérieur gauche. Cela sélectionnera ou désélectionnera l\'ensemble.</string>
     <string name="faq_10_title_commons">J\'ai acheté l\'application, mais je ne peux pas la télécharger sur un autre appareil.</string>
-    <string name="faq_10_text_commons">Essayez de vider le cache de votre application « Google Play », puis redémarrez votre appareil. C\'est un bogue de « Google Play » qui survient par moment et qui n\'est pas vraiment lié à l\'application en elle-même.</string>
+    <string name="faq_10_text_commons">Essayez de vider le cache de votre application \"Google Play\", puis redémarrez votre appareil. C\'est un bogue de \"Google Play\" qui survient par moment et qui n\'est pas vraiment lié à l\'application en elle-même.</string>
     <!-- Contributors -->
     <string name="contributors">Contributeurs</string>
     <string name="translation">Traduction</string>
     <string name="development">Développement</string>
     <string name="other_help">Autre aide</string>
-    <string name="contributors_label">Cette liste recense toutes les personnes qui ont apporté une aide notable à l\'une des applications de la suite « Outils mobiles simples », et pas seulement à celle-ci. Les traductions sont gérées par des bénévoles. Faites-nous savoir si vous souhaitez également apporter votre aide. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;. Par ailleurs, vous pouvez nous contacter à cette adresse électronique : &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si jamais vous aviez des questions. Merci à tous les contributeurs et autres soutiens !</string>
+    <string name="contributors_label">Cette liste recense toutes les personnes qui ont apporté une aide notable à l\'une des applications de la suite \"Outils mobiles simples\", et pas seulement à celle-ci. Les traductions sont gérées par des bénévoles. Faites-nous savoir si vous souhaitez également apporter votre aide. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;. Par ailleurs, vous pouvez nous contacter à cette adresse électronique : &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si jamais vous aviez des questions. Merci à tous les contributeurs et autres soutiens !</string>
     <string name="translation_arabic">Arabe</string>
     <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>
@@ -1091,9 +1091,9 @@
     <string name="translation_chinese_cn">Chinois (Simplifié)</string>
     <string name="translation_chinese_tw">Chinois (Traditionnel)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Obtenez la version « Pro » dès maintenant !</string>
+    <string name="why_upgrade">Obtenez la version \"Pro\" dès maintenant !</string>
     <string name="why_upgrade_basic_version">Basique</string>
-    <string name="why_upgrade_pro_version">« Pro »</string>
+    <string name="why_upgrade_pro_version">\"Pro\"</string>
     <string name="why_upgrade_no_ads">Sans publicités</string>
     <string name="why_upgrade_no_internet_access">Sans accès à Internet</string>
     <string name="why_upgrade_footer">Garantie de remboursement intégral</string>
@@ -1103,7 +1103,7 @@
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>
     <string name="why_upgrade_advanced_photo_video_editor">Éditeur avancé de photos et de vidéos</string>
-    <string name="why_upgrade_heic_support">Prise en charge des fichiers « HEIC/HEIF »</string>
+    <string name="why_upgrade_heic_support">Prise en charge des fichiers \"HEIC/HEIF\"</string>
     <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers par lot</string>
     <string name="why_upgrade_folder_locking">Verrouillage des dossiers individuels</string>
     <string name="why_upgrade_printing_support">Prise en charge de l\'impression</string>
@@ -1144,14 +1144,14 @@
     <string name="joda_title">Joda-Time (remplacement de la date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
     <string name="otto_title">Otto (bus d\'évènements)</string>
-    <string name="photoview_title">PhotoView (affichage par zoom des images « GIF »)</string>
+    <string name="photoview_title">PhotoView (affichage par zoom des images \"GIF\")</string>
     <string name="pattern_title">PatternLockView (protection des applications par schéma digital)</string>
     <string name="reprint_title">Reprint (protection des applications par empreinte digitale)</string>
-    <string name="gif_drawable_title">Gif Drawable (chargement des images « GIF »)</string>
+    <string name="gif_drawable_title">Gif Drawable (chargement des images \"GIF\")</string>
     <string name="autofittextview_title">AutoFitTextView (redimensionnement du texte)</string>
     <string name="robolectric_title">Robolectric (tests sur la structure du système)</string>
     <string name="espresso_title">Espresso (assistant de tests)</string>
-    <string name="gson_title">Gson (analyse des fichiers « JSON »)</string>
+    <string name="gson_title">Gson (analyse des fichiers \"JSON\")</string>
     <string name="leak_canary_title">Leak Canary (détecteur de fuites de mémoire)</string>
     <string name="number_picker_title">Number Picker (sélecteur de numéro personnalisable)</string>
     <string name="exoplayer_title">ExoPlayer (lecteur vidéo)</string>
@@ -1162,27 +1162,27 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettres sur la barre de défilement)</string>
     <string name="event_bus_title">Event Bus (communication au sein de l\'application)</string>
     <string name="audio_record_view_title">Audio Record View (visualisation audio)</string>
-    <string name="sms_mms_title">SMS MMS (gestion des « SMS » et des « MMS »)</string>
-    <string name="apng_title">APNG Android (prise en charge des fichiers « WebP » animés)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (visionneuse de fichiers « PDF »)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (visionneuse de fichiers « PDF »)</string>
-    <string name="m3u_parser_title">M3U Parser (gestion des listes de lecture au format « m3u »)</string>
-    <string name="android_lame_title">AndroidLame (encodeur de fichiers « mp3 »)</string>
-    <string name="zip4j_title">Zip4j (compression et décompression de fichiers « ZIP »)</string>
+    <string name="sms_mms_title">SMS MMS (gestion des \"SMS\" et des \"MMS\")</string>
+    <string name="apng_title">APNG Android (prise en charge des fichiers \"WebP\" animés)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (visionneuse de fichiers \"PDF\")</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visionneuse de fichiers \"PDF\")</string>
+    <string name="m3u_parser_title">M3U Parser (gestion des listes de lecture au format \"m3u\")</string>
+    <string name="android_lame_title">AndroidLame (encodeur de fichiers \"mp3\")</string>
+    <string name="zip4j_title">Zip4j (compression et décompression de fichiers \"ZIP\")</string>
     <!-- Trial -->
     <string name="trial_expired">Période d\'essai expirée</string>
     <string name="start_free_trial">Commencer l\'essai gratuit</string>
     <string name="trial_expires_soon">Votre période d\'essai expire bientôt.</string>
     <string name="unlock_for_one_final_day">Déverrouiller l\'application pour un dernier jour</string>
     <string name="welcome_to_app_name">Bienvenue sur %s !</string>
-    <string name="trial_start_description">Merci d\'utiliser notre application. Vous pouvez utiliser cette version déverrouillée durant <font color="#FFFFFF">%d jours</font>. Une fois la période d\'essai terminée, pensez à passer à la version « Pro ». Elle comporte un grand nombre de nouvelles fonctionnalités et une conception moderne. Elle n\'inclut aucune publicité et apporte de nombreuses autres améliorations.
+    <string name="trial_start_description">Merci d\'utiliser notre application. Vous pouvez utiliser cette version déverrouillée durant <font color="#FFFFFF">%d jours</font>. Une fois la période d\'essai terminée, pensez à passer à la version \"Pro\". Elle comporte un grand nombre de nouvelles fonctionnalités et une conception moderne. Elle n\'inclut aucune publicité et apporte de nombreuses autres améliorations.
 \n
-\nL\'achat de cette version « Pro », en paiement unique, vous sera valable à vie. Si jamais elle ne vous apportait pas une entière satisfaction, vous pourrez alors la désinstaller et vous faire entièrement rembourser.
+\nL\'achat de cette version \"Pro\", en paiement unique, vous sera valable à vie. Si jamais elle ne vous apportait pas une entière satisfaction, vous pourrez alors la désinstaller et vous faire entièrement rembourser.
 \n
 \nJ\'espère qu\'elle vous plaira :)</string>
-    <string name="trial_end_description">Envisagez de passer à la version « Pro » pour profiter pleinement de toutes les fonctionnalités de cette application.
+    <string name="trial_end_description">Envisagez de passer à la version \"Pro\" pour profiter pleinement de toutes les fonctionnalités de cette application.
 \n
-\nL\'achat de cette version « Pro », en paiement unique, vous sera valable à vie. Si jamais elle ne vous apportait pas une entière satisfaction, vous pourrez alors la désinstaller et vous faire entièrement rembourser.
+\nL\'achat de cette version \"Pro\", en paiement unique, vous sera valable à vie. Si jamais elle ne vous apportait pas une entière satisfaction, vous pourrez alors la désinstaller et vous faire entièrement rembourser.
 \n
 \nÀ bientôt :)</string>
     <plurals name="trial_expires_days">
@@ -1191,7 +1191,7 @@
         <item quantity="other">Votre période d\'essai expire dans %d jours.</item>
     </plurals>
     <!-- Google Play listing -->
-    <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue à jour. Veuillez vous procurer la version « Pro » à l\'adresse web suivante : https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue à jour. Veuillez vous procurer la version \"Pro\" à l\'adresse web suivante : https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">N\'oubliez pas que si vous désinstallez une application payante dans les deux heures qui suivent son achat, le remboursement sera automatique. À tout moment, si vous souhaitez un remboursement, contactez-nous à l\'adresse électronique suivante : hello@simplemobiletools.com et vous l\'obtiendrez dans les plus brefs délais. Cela facilite l\'essai de nos applications :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Une suite d\'applications Android simples, à code source ouvert, comprenant des widgets personnalisables, sans publicités ni permissions inutiles.</string>
