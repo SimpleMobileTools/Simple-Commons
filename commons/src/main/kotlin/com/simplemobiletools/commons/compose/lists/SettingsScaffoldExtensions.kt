@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.compose.settings.scaffold
+package com.simplemobiletools.commons.compose.lists
 
 import android.content.Context
 import androidx.compose.foundation.background

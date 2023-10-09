@@ -17,11 +17,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsGroupTitle
 import com.simplemobiletools.commons.compose.settings.SettingsHorizontalDivider
 import com.simplemobiletools.commons.compose.settings.SettingsListItem
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.models.LanguageContributor
@@ -36,7 +36,7 @@ internal fun ContributorsScreen(
     showContributorsLabel: Boolean,
     contributors: ImmutableList<LanguageContributor>
 ) {
-    SettingsLazyScaffold(
+    SimpleLazyListScaffold(
         title = { scrolledColor ->
             Text(
                 text = stringResource(id = R.string.contributors),
