@@ -4,34 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarScrollBehavior
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.simplemobiletools.commons.activities.AboutActivity
 import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.*
-import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
-import com.simplemobiletools.commons.compose.lists.simpleTopAppBarColors
-import com.simplemobiletools.commons.compose.lists.topAppBarInsets
-import com.simplemobiletools.commons.compose.lists.topAppBarPaddings
-import com.simplemobiletools.commons.compose.menus.ActionItem
-import com.simplemobiletools.commons.compose.menus.ActionMenu
-import com.simplemobiletools.commons.compose.menus.OverflowMode
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.DonateAlertDialog
@@ -43,7 +23,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
-import kotlinx.collections.immutable.toImmutableList
+import com.simplemobiletools.commons.samples.screens.MainScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,88 +32,30 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             AppThemeSurface {
-                SimpleLazyListScaffold(
-                    customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
-                        TopAppBar(
-                            title = {},
-                            actions = {
-                                val actionMenus = remember {
-                                    val about = ActionItem(
-                                        com.simplemobiletools.commons.R.string.about,
-                                        icon = Icons.Outlined.Info,
-                                        doAction = ::launchAbout,
-                                        overflowMode = OverflowMode.NEVER_OVERFLOW
-                                    )
-                                    val moreApps =
-                                        ActionItem(
-                                            com.simplemobiletools.commons.R.string.more_apps_from_us,
-                                            doAction = ::launchMoreAppsFromUsIntent,
-                                            overflowMode = OverflowMode.ALWAYS_OVERFLOW
-                                        )
-                                    listOf(about, moreApps).toImmutableList()
-                                }
-                                var isMenuVisible by remember { mutableStateOf(false) }
-                                ActionMenu(
-                                    items = actionMenus,
-                                    numIcons = 2,
-                                    isMenuVisible = isMenuVisible,
-                                    onMenuToggle = { isMenuVisible = it },
-                                    iconsColor = scrolledColor
-                                )
-                            },
-                            scrollBehavior = scrollBehavior,
-                            colors = simpleTopAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
-                            modifier = Modifier.topAppBarPaddings(),
-                            windowInsets = topAppBarInsets()
-                        )
-                    }
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize(),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-                    ) {
-                        Button(
-                            onClick = ::startCustomizationActivity
-                        ) {
-                            Text(stringResource(id = com.simplemobiletools.commons.R.string.color_customization))
-                        }
-                        Button(
-                            onClick = ::launchAbout
-                        ) {
-                            Text("About")
-                        }
-                        Button(
-                            onClick = {
-                                startActivity(Intent(this@MainActivity, ManageBlockedNumbersActivity::class.java))
-                            }
-                        ) {
-                            Text("Manage blocked numbers")
-                        }
-                        Button(
-                            onClick = {
-                                startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
-                            }
-                        ) {
-                            Text("Compose dialogs")
-                        }
-                        Button(
-                            onClick = {
-                                ConfirmationDialog(
-                                    this@MainActivity,
-                                    FAKE_VERSION_APP_LABEL,
-                                    positive = com.simplemobiletools.commons.R.string.ok,
-                                    negative = 0
-                                ) {
-                                    launchViewIntent(DEVELOPER_PLAY_STORE_URL)
-                                }
-                            }
-                        ) {
-                            Text("Test button")
-                        }
-                    }
-                }
+                val showMoreApps = onEventValue { !resources.getBoolean(com.simplemobiletools.commons.R.bool.hide_google_relations) }
 
+                MainScreen(
+                    openColorCustomization = ::startCustomizationActivity,
+                    manageBlockedNumbers = {
+                        startActivity(Intent(this@MainActivity, ManageBlockedNumbersActivity::class.java))
+                    },
+                    showComposeDialogs = {
+                        startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
+                    },
+                    openTestButton = {
+                        ConfirmationDialog(
+                            this@MainActivity,
+                            FAKE_VERSION_APP_LABEL,
+                            positive = com.simplemobiletools.commons.R.string.ok,
+                            negative = 0
+                        ) {
+                            launchViewIntent(DEVELOPER_PLAY_STORE_URL)
+                        }
+                    },
+                    showMoreApps = showMoreApps,
+                    openAbout = ::launchAbout,
+                    moreAppsFromUs = ::launchMoreAppsFromUsIntent
+                )
                 AppLaunched()
             }
         }
