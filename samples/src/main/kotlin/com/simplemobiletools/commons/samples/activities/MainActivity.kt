@@ -25,13 +25,13 @@ import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.*
+import com.simplemobiletools.commons.compose.lists.SimpleLazyListScaffold
+import com.simplemobiletools.commons.compose.lists.simpleTopAppBarColors
+import com.simplemobiletools.commons.compose.lists.topAppBarInsets
+import com.simplemobiletools.commons.compose.lists.topAppBarPaddings
 import com.simplemobiletools.commons.compose.menus.ActionItem
 import com.simplemobiletools.commons.compose.menus.ActionMenu
 import com.simplemobiletools.commons.compose.menus.OverflowMode
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsLazyScaffold
-import com.simplemobiletools.commons.compose.settings.scaffold.topAppBarColors
-import com.simplemobiletools.commons.compose.settings.scaffold.topAppBarInsets
-import com.simplemobiletools.commons.compose.settings.scaffold.topAppBarPaddings
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.DonateAlertDialog
@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             AppThemeSurface {
-                SettingsLazyScaffold(
+                SimpleLazyListScaffold(
                     customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
                         TopAppBar(
                             title = {},
@@ -82,7 +82,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             },
                             scrollBehavior = scrollBehavior,
-                            colors = topAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
+                            colors = simpleTopAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
                             modifier = Modifier.topAppBarPaddings(),
                             windowInsets = topAppBarInsets()
                         )
