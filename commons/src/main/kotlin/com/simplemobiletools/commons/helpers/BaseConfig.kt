@@ -218,9 +218,13 @@ open class BaseConfig(val context: Context) {
             prefs.edit().putBoolean(USE_ENGLISH, useEnglish).commit()
         }
 
+    val useEnglishFlow = ::useEnglish.asFlowNonNull()
+
     var wasUseEnglishToggled: Boolean
         get() = prefs.getBoolean(WAS_USE_ENGLISH_TOGGLED, false)
         set(wasUseEnglishToggled) = prefs.edit().putBoolean(WAS_USE_ENGLISH_TOGGLED, wasUseEnglishToggled).apply()
+
+    val wasUseEnglishToggledFlow = ::wasUseEnglishToggled.asFlowNonNull()
 
     var wasSharedThemeEverActivated: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, false)
