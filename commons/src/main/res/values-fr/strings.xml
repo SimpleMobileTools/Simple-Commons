@@ -95,7 +95,7 @@
     <!-- View types -->
     <string name="change_view_type">Modifier le mode d\'affichage</string>
     <string name="grid">Grille</string>
-    <string name="grid_pro">Grille (version « Pro »)</string>
+    <string name="grid_pro">Grille (version \"Pro\")</string>
     <string name="uneven_grid">Grille irrégulière</string>
     <string name="list">Liste</string>
     <string name="increase_column_count">Ajouter une colonne</string>
@@ -169,7 +169,7 @@
     <string name="search_recordings">Rechercher des enregistrements</string>
     <!-- Filters -->
     <string name="filter">Filtrer</string>
-    <string name="filter_pro">Filtrer (version « Pro »)</string>
+    <string name="filter_pro">Filtrer (version \"Pro\")</string>
     <string name="no_items_found">Aucun élément n\'a été trouvé.</string>
     <string name="change_filter">Modifier le filtre</string>
     <!-- Permissions -->
@@ -370,7 +370,7 @@
     <string name="apply_to_all_apps">Appliquer les couleurs à l\'ensemble de la suite d\'applications \"simple\"</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes des applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou d\'un quelconque widget, si disponible. Une fois lancée, paramétrez simplement l\'icône orange par défaut avec la valeur RGB suivante : #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
     <string name="share_colors_success">Actualisation des couleurs réussie. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser dorénavant ce thème pour actualiser les couleurs de toutes les applications.</string>
-    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version « Pro » de l\'application, pour des raisons techniques, vous aurez toujours besoin de l\'application « Merci simple », puisqu\'elle gère la synchronisation des couleurs.</string>
+    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version \"Pro\" de l\'application, pour des raisons techniques, vous aurez toujours besoin de l\'application \"Merci simple\", puisqu\'elle gère la synchronisation des couleurs.</string>
     <string name="purchase_thank_you">Veuillez acheter l\'application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;\"Merci simple\"&lt;/a&gt; pour déverrouiller cette fonctionnalité et soutenir son développement. Merci !</string>
     <!-- Themes -->
     <string name="light_theme">Clair</string>
@@ -408,10 +408,10 @@
     <string name="undo">Annuler</string>
     <string name="redo">Rétablir</string>
     <string name="print">Imprimer</string>
-    <string name="print_pro">Imprimer (version « Pro »)</string>
+    <string name="print_pro">Imprimer (version \"Pro\")</string>
     <string name="shortcut">Raccourci</string>
     <string name="create_shortcut">Créer un raccourci</string>
-    <string name="create_shortcut_pro">Créer un raccourci (version « Pro »)</string>
+    <string name="create_shortcut_pro">Créer un raccourci (version \"Pro\")</string>
     <string name="add_number_to_contact">Ajouter un numéro au contact</string>
     <string name="view_contact_details">Afficher les détails du contact</string>
     <string name="call_from_sim_1">Appeler depuis la carte SIM 1</string>
@@ -500,7 +500,7 @@
     <string name="protection_setup_successfully">Configuration du mot de passe réussie. Veuillez réinstaller l\'application en cas d\'oubli.</string>
     <string name="fingerprint_setup_successfully">Configuration de la protection réussie. Veuillez réinstaller l\'application en cas de problèmes de réinitialisation.</string>
     <string name="lock_folder">Verrouiller le dossier</string>
-    <string name="lock_folder_pro">Verrouiller le dossier (version « Pro »)</string>
+    <string name="lock_folder_pro">Verrouiller le dossier (version \"Pro\")</string>
     <string name="unlock_folder">Déverrouiller le dossier</string>
     <string name="lock_folder_notice">Le verrouillage ne fonctionne que dans cette application. Cette protection ne remplace pas un véritable chiffrage système.</string>
     <string name="enter_password">Saisir le mot de passe</string>
@@ -876,15 +876,15 @@
     <string name="saturday_short">Sam.</string>
     <string name="sunday_short">Dim.</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">La version de votre application ne sera plus mise à jour. Veuillez passer à la version « Pro » pour recevoir de nouveaux correctifs et bénéficier d\'autres améliorations.</string>
-    <string name="upgrade_to_pro_long_click">La version de votre application ne sera plus mise à jour. Veuillez passer à la version « Pro » pour recevoir de nouveaux correctifs et bénéficier d\'autres améliorations en cliquant ici.</string>
+    <string name="upgrade_to_pro_long">La version de votre application ne sera plus mise à jour. Veuillez passer à la version \"Pro\" pour recevoir de nouveaux correctifs et bénéficier d\'autres améliorations.</string>
+    <string name="upgrade_to_pro_long_click">La version de votre application ne sera plus mise à jour. Veuillez passer à la version \"Pro\" pour recevoir de nouveaux correctifs et bénéficier d\'autres améliorations en cliquant ici.</string>
     <string name="it_is_free">Elle est gratuite jusqu\'au : %s. Si vous la téléchargez avant cette date, vous pourrez l\'utiliser gratuitement à vie.</string>
     <string name="more_info">Plus d\'informations</string>
-    <string name="upgrade">Passer à la version « Pro »</string>
+    <string name="upgrade">Mettre à jour</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement en les exportant dans un fichier \".ics\", puis en les important. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
     <string name="upgraded_from_free_gallery">Bonjour,
 \n
-\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version « Pro ». Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
+\nIl semblerait que vous ayez mis à jour la version gratuite de cette application vers la version \"Pro\". Lorsque vous en aurez obtenu une entière satisfaction, et que vous y aurez éventuellement importé tous vos paramètres et favoris, vous pourrez alors désinstaller l\'ancienne version gratuite. Cela vous évitera de la lancer par inadvertance, étant donné que vous n\'en aurez plus besoin. Cela empêchera également cette fenêtre de s\'afficher à l\'avenir.
 \n
 \nMerci !</string>
     <string name="upgraded_to_pro_gallery">Bonjour,
@@ -930,7 +930,7 @@
     <string name="email_label">Envoyez vos commentaires ou suggestions à</string>
     <string name="upgrade_to_pro">Passer à la version \"Pro\"</string>
     <string name="more_apps">Plus d\'applications</string>
-    <string name="more_apps_from_us">Plus d\'applications</string>
+    <string name="more_apps_from_us">Plus d\'applications simples</string>
     <string name="invite_friends">Inviter des amis</string>
     <string name="share_text">Salut, viens voir %1$s sur %2$s</string>
     <string name="invite_via">Inviter via</string>
