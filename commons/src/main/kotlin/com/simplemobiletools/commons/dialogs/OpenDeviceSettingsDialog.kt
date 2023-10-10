@@ -52,6 +52,7 @@ fun OpenDeviceSettingsAlertDialog(
             Text(
                 fontSize = 16.sp,
                 text = message,
+                color = dialogTextColor
             )
         },
         dismissButton = {
