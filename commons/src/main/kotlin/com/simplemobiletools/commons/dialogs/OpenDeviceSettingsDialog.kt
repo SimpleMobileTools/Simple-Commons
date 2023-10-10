@@ -11,6 +11,9 @@ import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogOpenDeviceSettingsBinding
 import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.openDeviceSettings
@@ -71,4 +74,15 @@ fun OpenDeviceSettingsAlertDialog(
             }
         },
     )
+}
+
+@Composable
+@MyDevices
+fun OpenDeviceSettingsAlertDialogPreview() {
+    AppThemeSurface {
+        OpenDeviceSettingsAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
+            message = "Test dialog"
+        )
+    }
 }
