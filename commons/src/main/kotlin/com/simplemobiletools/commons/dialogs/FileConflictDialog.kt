@@ -1,7 +1,13 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogFileConflictBinding
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.beVisibleIf
@@ -59,5 +65,23 @@ class FileConflictDialog(
         }
 
         callback(resolution, applyToAll)
+    }
+}
+
+@Composable
+fun FileConflictAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
+) {
+    //todo in progress
+}
+
+@MyDevices
+@Composable
+private fun FileConflictAlertDialogPreview() {
+    AppThemeSurface {
+        FileConflictAlertDialog(
+            alertDialogState = rememberAlertDialogState()
+        )
     }
 }
