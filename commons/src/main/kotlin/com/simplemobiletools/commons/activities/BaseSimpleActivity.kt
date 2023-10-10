@@ -602,29 +602,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
     }
 
-    private fun isProperSDRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
-    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
-
-    private fun isProperOTGRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
-    private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
-
-    private fun isRootUri(uri: Uri) = uri.lastPathSegment?.endsWith(":") ?: false
-
-    private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
-    private fun isAndroidDir(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains(":Android")
-    private fun isInternalStorageAndroidDir(uri: Uri) = isInternalStorage(uri) && isAndroidDir(uri)
-    private fun isOTGAndroidDir(uri: Uri) = isProperOTGFolder(uri) && isAndroidDir(uri)
-    private fun isSDAndroidDir(uri: Uri) = isProperSDFolder(uri) && isAndroidDir(uri)
-    private fun isExternalStorageDocument(uri: Uri) = EXTERNAL_STORAGE_PROVIDER_AUTHORITY == uri.authority
-
-    private fun isProperAndroidRoot(path: String, uri: Uri): Boolean {
-        return when {
-            isPathOnOTG(path) -> isOTGAndroidDir(uri)
-            isPathOnSD(path) -> isSDAndroidDir(uri)
-            else -> isInternalStorageAndroidDir(uri)
-        }
-    }
-
     fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String, faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {

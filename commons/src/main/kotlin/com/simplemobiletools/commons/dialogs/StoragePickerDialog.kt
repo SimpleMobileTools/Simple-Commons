@@ -1,8 +1,15 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -13,10 +20,12 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogRadioGroupBinding
 import com.simplemobiletools.commons.databinding.RadioButtonBinding
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE_OTG
 import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.collections.immutable.toImmutableList
 
@@ -204,6 +213,23 @@ fun StoragePickerAlertDialog(
         }
     }
 
+    val openDocumentTreeLauncher = getDocumentTreeLauncher(
+        onResult = {
+            if (context.handleOtgTreeResult("", it)) {
+                alertDialogState.hide()
+                callback(context.otgPath)
+            } else {
+                alertDialogState.show()
+            }
+        }
+    )
+
+    val writePermissionDialog = getWritePermissionDialogState(
+        callback = {
+            openDocumentTreeLauncher.launch(null)
+        },
+        cancelCallback = alertDialogState::show
+    )
 
     RadioGroupAlertDialog(
         alertDialogState = alertDialogState,
@@ -211,8 +237,42 @@ fun StoragePickerAlertDialog(
         items = items,
         titleId = R.string.select_storage,
         selectedItemId = selectedId,
-        callback = { callback(it as String) }
+        callback = {
+            if (it == ID_OTG) {
+                if (context.config.OTGTreeUri.isNotEmpty()) {
+                    callback(context.otgPath)
+                } else {
+                    alertDialogState.show()
+                    writePermissionDialog.show()
+                }
+            } else {
+                callback(it as String)
+            }
+        }
     )
+}
+
+@Composable
+private fun getDocumentTreeLauncher(
+    onResult: (Uri?) -> Unit
+) = rememberLauncherForActivityResult(
+    contract = ActivityResultContracts.OpenDocumentTree(),
+    onResult = onResult
+)
+
+@Composable
+private fun getWritePermissionDialogState(
+    callback: () -> Unit,
+    cancelCallback: () -> Unit
+) = rememberAlertDialogState().apply {
+    DialogMember {
+        WritePermissionAlertDialog(
+            alertDialogState = this,
+            writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.Otg,
+            callback = callback,
+            onCancelCallback = cancelCallback
+        )
+    }
 }
 
 @Composable

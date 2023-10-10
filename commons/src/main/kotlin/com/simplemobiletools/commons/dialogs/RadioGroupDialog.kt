@@ -116,8 +116,8 @@ fun RadioGroupAlertDialog(
     val shouldShowOkButton = selectedItemId != -1 && showOKButton
     AlertDialog(
         onDismissRequest = {
-            cancelCallback?.invoke()
             alertDialogState.hide()
+            cancelCallback?.invoke()
         },
     ) {
         DialogSurface {
@@ -142,9 +142,9 @@ fun RadioGroupAlertDialog(
                         items = groupTitles,
                         selected = selected,
                         setSelected = { selectedTitle ->
+                            alertDialogState.hide()
                             setSelected(selectedTitle)
                             callback(getSelectedValue(items, selectedTitle))
-                            alertDialogState.hide()
                         },
                         modifier = Modifier.padding(
                             vertical = SimpleTheme.dimens.padding.extraLarge,
@@ -154,8 +154,8 @@ fun RadioGroupAlertDialog(
                 if (shouldShowOkButton) {
                     TextButton(
                         onClick = {
-                            callback(getSelectedValue(items, selected))
                             alertDialogState.hide()
+                            callback(getSelectedValue(items, selected))
                         },
                         modifier = Modifier
                             .align(Alignment.BottomEnd)

@@ -21,6 +21,7 @@ import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.*
@@ -1103,5 +1104,55 @@ private fun Context.createCasualFileOutputStream(targetFile: File): OutputStream
     } catch (e: Exception) {
         showErrorToast(e)
         null
+    }
+}
+
+fun Context.handleOtgTreeResult(partition: String, uri: Uri?): Boolean {
+    val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
+    if (uri != null) {
+        val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+            .matches() && uri.toString().contains(partition))
+        if (isProperOTGRootFolder(uri) && isProperPartition) {
+            if (uri.toString() == baseConfig.sdTreeUri) {
+                toast(R.string.sd_card_usb_same)
+                return false
+            }
+            baseConfig.OTGTreeUri = uri.toString()
+            baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
+            updateOTGPathFromPartition()
+
+            val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            applicationContext.contentResolver.takePersistableUriPermission(uri, takeFlags)
+
+            return true
+        } else {
+            toast(R.string.wrong_root_selected_usb)
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+fun Context.isProperSDRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+fun Context.isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
+
+fun Context.isProperOTGRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+fun Context.isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
+
+fun Context.isRootUri(uri: Uri) = uri.lastPathSegment?.endsWith(":") ?: false
+
+fun Context.isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
+fun Context.isAndroidDir(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains(":Android")
+fun Context.isInternalStorageAndroidDir(uri: Uri) = isInternalStorage(uri) && isAndroidDir(uri)
+fun Context.isOTGAndroidDir(uri: Uri) = isProperOTGFolder(uri) && isAndroidDir(uri)
+fun Context.isSDAndroidDir(uri: Uri) = isProperSDFolder(uri) && isAndroidDir(uri)
+fun Context.isExternalStorageDocument(uri: Uri) = EXTERNAL_STORAGE_PROVIDER_AUTHORITY == uri.authority
+
+fun Context.isProperAndroidRoot(path: String, uri: Uri): Boolean {
+    return when {
+        isPathOnOTG(path) -> isOTGAndroidDir(uri)
+        isPathOnSD(path) -> isSDAndroidDir(uri)
+        else -> isInternalStorageAndroidDir(uri)
     }
 }
