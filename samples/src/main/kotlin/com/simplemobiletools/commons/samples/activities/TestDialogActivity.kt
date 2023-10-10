@@ -59,6 +59,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
                     ShowButton(getRadioGroupDialogAlertDialogState(), text = "Radio group")
+                    ShowButton(getStoragePickerAlertDialogState(), text = "Storage picker")
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
@@ -139,6 +140,20 @@ class TestDialogActivity : ComponentActivity() {
                     Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
                 },
                 titleId = R.string.title
+            )
+        }
+    }
+
+    @Composable
+    private fun getStoragePickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            StoragePickerAlertDialog(
+                alertDialogState = this,
+                currPath = "/",
+                showRoot = true,
+                callback = {
+                    Log.d("getStoragePickerAlertDialogState", "Picked: $it")
+                }
             )
         }
     }

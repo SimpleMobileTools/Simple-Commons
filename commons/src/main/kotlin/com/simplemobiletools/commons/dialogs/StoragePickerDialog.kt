@@ -4,11 +4,26 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogRadioGroupBinding
 import com.simplemobiletools.commons.databinding.RadioButtonBinding
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.models.RadioItem
+import kotlinx.collections.immutable.toImmutableList
+
+private val ID_INTERNAL = 1
+private val ID_SD = 2
+private val ID_OTG = 3
+private val ID_ROOT = 4
 
 /**
  * A dialog for choosing between internal, root, SD card (optional) storage
@@ -23,11 +38,6 @@ class StoragePickerDialog(
     val activity: BaseSimpleActivity, val currPath: String, val showRoot: Boolean, pickSingleOption: Boolean,
     val callback: (pickedPath: String) -> Unit
 ) {
-    private val ID_INTERNAL = 1
-    private val ID_SD = 2
-    private val ID_OTG = 3
-    private val ID_ROOT = 4
-
     private lateinit var radioGroup: RadioGroup
     private var dialog: AlertDialog? = null
     private var defaultSelectedId = 0
@@ -142,5 +152,77 @@ class StoragePickerDialog(
     private fun rootPicked() {
         dialog?.dismiss()
         callback("/")
+    }
+}
+
+@Composable
+fun StoragePickerAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
+    currPath: String,
+    showRoot: Boolean = false,
+    pickSingleOption: Boolean = true,
+    callback: (pickedPath: String) -> Unit
+) {
+    val context = LocalContext.current
+    val internalString = stringResource(id = R.string.internal)
+    val sdCardString = stringResource(id = R.string.sd_card)
+    val usbString = stringResource(id = R.string.usb)
+    val rootString = stringResource(id = R.string.root)
+    val items by remember {
+        derivedStateOf {
+            val list = mutableListOf<RadioItem>()
+            list.add(RadioItem(ID_INTERNAL, internalString, context.internalStoragePath))
+            if (context.hasExternalSDCard()) {
+                list.add(RadioItem(ID_SD, sdCardString, context.sdCardPath))
+            }
+            if (context.hasOTGConnected()) {
+                list.add(RadioItem(ID_OTG, usbString, context.otgPath))
+            }
+            if (showRoot) {
+                list.add(RadioItem(ID_ROOT, rootString, "/"))
+            }
+            list.toImmutableList()
+        }
+    }
+
+    SideEffect {
+        if (pickSingleOption && items.size == 1 && alertDialogState.isShown) {
+            alertDialogState.hide()
+            callback(items.first().value as String)
+        }
+    }
+
+    val basePath by remember {
+        derivedStateOf {
+            currPath.getBasePath(context)
+        }
+    }
+    val selectedId by remember {
+        derivedStateOf {
+            items.withIndex().first { it.value.value == basePath }.value.id
+        }
+    }
+
+
+    RadioGroupAlertDialog(
+        alertDialogState = alertDialogState,
+        modifier = modifier,
+        items = items,
+        titleId = R.string.select_storage,
+        selectedItemId = selectedId,
+        callback = { callback(it as String) }
+    )
+}
+
+@Composable
+@MyDevices
+private fun StoragePickerAlertDialogPreview() {
+    AppThemeSurface {
+        StoragePickerAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
+            currPath = "",
+            callback = {}
+        )
     }
 }
