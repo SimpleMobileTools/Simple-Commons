@@ -78,7 +78,7 @@ fun OpenDeviceSettingsAlertDialog(
 
 @Composable
 @MyDevices
-fun OpenDeviceSettingsAlertDialogPreview() {
+private fun OpenDeviceSettingsAlertDialogPreview() {
     AppThemeSurface {
         OpenDeviceSettingsAlertDialog(
             alertDialogState = rememberAlertDialogState(),
