@@ -39,7 +39,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.compose.extensions.DEVELOPER_PLAY_STORE_URL
 import com.simplemobiletools.commons.databinding.DialogTitleBinding
 import com.simplemobiletools.commons.dialogs.*
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog.Mode
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog.WritePermissionDialogMode
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
@@ -113,7 +113,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.SdCard) {
+                WritePermissionDialog(this, WritePermissionDialogMode.SdCard) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         try {
@@ -148,7 +148,7 @@ fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 val level = getFirstParentLevel(path)
-                WritePermissionDialog(this, Mode.OpenDocumentTreeSDK30(path.getFirstParentPath(this, level))) {
+                WritePermissionDialog(this, WritePermissionDialogMode.OpenDocumentTreeSDK30(path.getFirstParentPath(this, level))) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
@@ -183,7 +183,7 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
     return if (!hasProperStoredDocumentUriSdk30(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.CreateDocumentSDK30) {
+                WritePermissionDialog(this, WritePermissionDialogMode.CreateDocumentSDK30) {
                     Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                         type = DocumentsContract.Document.MIME_TYPE_DIR
                         putExtra(EXTRA_SHOW_ADVANCED, true)
@@ -264,7 +264,7 @@ fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
 fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
-            WritePermissionDialog(this, Mode.Otg) {
+            WritePermissionDialog(this, WritePermissionDialogMode.Otg) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)

@@ -35,7 +35,7 @@ fun SettingsGroupTitle(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = SimpleTheme.dimens.margin.extraLarge),
+            .padding(horizontal = SimpleTheme.dimens.padding.extraLarge),
         contentAlignment = Alignment.CenterStart
     ) {
         val primary = SimpleTheme.colorScheme.primary

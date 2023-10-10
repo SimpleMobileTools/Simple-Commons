@@ -51,6 +51,7 @@ android {
             "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
             "-opt-in=androidx.compose.material.ExperimentalMaterialApi",
             "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
+            "-opt-in=com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi",
             "-Xcontext-receivers"
         )
     }
@@ -98,6 +99,7 @@ dependencies {
     api(libs.material)
     api(libs.gson)
 
+    implementation(libs.glide.compose)
     api(libs.glide)
     ksp(libs.glide.compiler)
 

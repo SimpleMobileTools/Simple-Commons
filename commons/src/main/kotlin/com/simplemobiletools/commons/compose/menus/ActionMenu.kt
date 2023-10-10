@@ -98,7 +98,7 @@ fun ActionMenu(
                             Text(
                                 text = name,
                                 fontSize = 14.sp,
-                                modifier = Modifier.padding(SimpleTheme.dimens.margin.medium),
+                                modifier = Modifier.padding(SimpleTheme.dimens.padding.medium),
                             )
                         }
                     },
@@ -127,7 +127,7 @@ fun ActionMenu(
                     Text(
                         text = stringResource(id = R.string.more_options),
                         fontSize = 14.sp,
-                        modifier = Modifier.padding(SimpleTheme.dimens.margin.medium),
+                        modifier = Modifier.padding(SimpleTheme.dimens.padding.medium),
                     )
                 }
             },

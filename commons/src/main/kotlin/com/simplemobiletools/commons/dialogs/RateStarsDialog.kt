@@ -97,7 +97,7 @@ fun RateStarsAlertDialog(
                     text = stringResource(id = R.string.rate_our_app),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.large),
+                        .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.large),
                     textAlign = TextAlign.Center,
                     color = dialogTextColor,
                     fontSize = 16.sp
@@ -105,7 +105,7 @@ fun RateStarsAlertDialog(
                 StarRating(
                     modifier = Modifier
                         .align(CenterHorizontally)
-                        .padding(SimpleTheme.dimens.margin.extraLarge),
+                        .padding(SimpleTheme.dimens.padding.extraLarge),
                     currentRating = currentRating,
                     onRatingChanged = { stars ->
                         currentRating = stars
@@ -120,7 +120,7 @@ fun RateStarsAlertDialog(
                     onClick = alertDialogState::hide,
                     modifier = Modifier
                         .align(End)
-                        .padding(end = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.medium)
+                        .padding(end = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.medium)
                 ) {
                     Text(text = stringResource(id = R.string.later))
                 }

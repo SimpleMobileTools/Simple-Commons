@@ -20,11 +20,11 @@ fun SettingsTitleTextComponent(
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
-    Box(modifier = Modifier.padding(top = SimpleTheme.dimens.margin.extraLarge)) {
+    Box(modifier = Modifier.padding(top = SimpleTheme.dimens.padding.extraLarge)) {
         Text(
             text = text.uppercase(),
             modifier = modifier
-                .padding(horizontal = SimpleTheme.dimens.margin.small),
+                .padding(horizontal = SimpleTheme.dimens.padding.small),
             color = color,
             fontSize = 14.sp,
             maxLines = maxLines,

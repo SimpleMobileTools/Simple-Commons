@@ -62,9 +62,22 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
+                    ShowButton(getWritePermissionAlertDialogState(), text = "Write permission dialog")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
+        }
+    }
+
+    @Composable
+    private fun getWritePermissionAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            WritePermissionAlertDialog(
+                alertDialogState = this,
+                writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30("."),
+                callback = {},
+                onCancelCallback = {}
+            )
         }
     }
 

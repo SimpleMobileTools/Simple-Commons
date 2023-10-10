@@ -57,7 +57,7 @@ fun SettingsCheckBoxComponent(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = SimpleTheme.dimens.margin.extraLarge),
+                    .padding(end = SimpleTheme.dimens.padding.extraLarge),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
                 fontSize = 14.sp
@@ -67,7 +67,7 @@ fun SettingsCheckBoxComponent(
                     text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = SimpleTheme.dimens.margin.extraLarge),
+                        .padding(end = SimpleTheme.dimens.padding.extraLarge),
                     color = preferenceValueColor(isEnabled = isPreferenceEnabled),
                 )
             }

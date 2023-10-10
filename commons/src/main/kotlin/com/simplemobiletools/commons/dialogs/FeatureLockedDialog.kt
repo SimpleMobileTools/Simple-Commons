@@ -18,18 +18,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.extensions.getActivity
+import com.simplemobiletools.commons.compose.extensions.composeDonateIntent
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
-import com.simplemobiletools.commons.compose.screens.LinkifyText
-import com.simplemobiletools.commons.compose.screens.stringFromHTML
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogFeatureLockedBinding
@@ -71,10 +69,7 @@ fun FeatureLockedAlertDialog(
     modifier: Modifier = Modifier,
     cancelCallback: () -> Unit
 ) {
-    val localContext = LocalContext.current.getActivity()
-    val donateIntent = {
-        localContext.launchViewIntent(R.string.thank_you_url)
-    }
+    val donateIntent = composeDonateIntent()
     androidx.compose.material3.AlertDialog(
         containerColor = dialogContainerColor,
         modifier = modifier
@@ -121,13 +116,13 @@ fun FeatureLockedAlertDialog(
         },
         text = {
             val source = stringResource(id = R.string.features_locked)
-            LinkifyText(
+            LinkifyTextComponent(
                 fontSize = 16.sp,
                 removeUnderlines = false,
                 modifier = Modifier.fillMaxWidth(),
                 textAlignment = TextView.TEXT_ALIGNMENT_CENTER
             ) {
-                stringFromHTML(source)
+                source.fromHtml()
             }
         }
     )

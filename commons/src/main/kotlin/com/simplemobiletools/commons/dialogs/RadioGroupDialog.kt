@@ -132,7 +132,7 @@ fun RadioGroupAlertDialog(
                             text = stringResource(id = titleId),
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(top = 24.dp, bottom = SimpleTheme.dimens.margin.medium)
+                                .padding(top = 24.dp, bottom = SimpleTheme.dimens.padding.medium)
                                 .padding(horizontal = 24.dp),
                             color = dialogTextColor,
                             fontSize = 21.sp
@@ -147,7 +147,7 @@ fun RadioGroupAlertDialog(
                             alertDialogState.hide()
                         },
                         modifier = Modifier.padding(
-                            vertical = SimpleTheme.dimens.margin.extraLarge,
+                            vertical = SimpleTheme.dimens.padding.extraLarge,
                         )
                     )
                 }
@@ -159,7 +159,7 @@ fun RadioGroupAlertDialog(
                         },
                         modifier = Modifier
                             .align(Alignment.BottomEnd)
-                            .padding(top = SimpleTheme.dimens.margin.extraLarge, bottom = SimpleTheme.dimens.margin.extraLarge, end = SimpleTheme.dimens.margin.extraLarge)
+                            .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.extraLarge, end = SimpleTheme.dimens.padding.extraLarge)
                     ) {
                         Text(text = stringResource(id = R.string.ok))
                     }

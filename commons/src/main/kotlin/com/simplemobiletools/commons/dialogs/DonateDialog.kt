@@ -24,11 +24,10 @@ import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.getActivity
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
-import com.simplemobiletools.commons.compose.screens.LinkifyText
-import com.simplemobiletools.commons.compose.screens.stringFromHTML
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogDonateBinding
@@ -110,13 +109,13 @@ fun DonateAlertDialog(
         },
         text = {
             val source = stringResource(id = R.string.donate_short)
-            LinkifyText(
+            LinkifyTextComponent(
                 fontSize = 16.sp,
                 removeUnderlines = false,
                 textAlignment = TextView.TEXT_ALIGNMENT_CENTER,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                stringFromHTML(source)
+                source.fromHtml()
             }
         }
     )
