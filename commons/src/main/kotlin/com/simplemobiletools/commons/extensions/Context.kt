@@ -485,7 +485,7 @@ fun Context.isOrWasThankYouInstalled(): Boolean {
             true
         }
 
-        else -> false
+        else -> true
     }
 }
 
