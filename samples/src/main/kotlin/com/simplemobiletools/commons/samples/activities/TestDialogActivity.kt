@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +12,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -18,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetDialogState
+import com.simplemobiletools.commons.compose.bottom_sheet.rememberBottomSheetDialogState
 import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -28,6 +32,7 @@ import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.toHex
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
+import com.simplemobiletools.commons.models.SimpleListItem
 import kotlinx.collections.immutable.toImmutableList
 
 class TestDialogActivity : ComponentActivity() {
@@ -63,8 +68,60 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
                     ShowButton(getWritePermissionAlertDialogState(), text = "Write permission dialog")
+                    ShowButton(getCreateNewFolderAlertDialogState(), text = "Create new folder")
+                    ShowButton(getEnterPasswordAlertDialogState(), text = "Enter password")
+                    ShowButton(getFolderLockingNoticeAlertDialogState(), text = "Folder locking notice")
+                    ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun getChooserBottomSheetDialogState() = rememberBottomSheetDialogState().apply {
+        DialogMember {
+            val list = remember {
+                mutableStateListOf(
+                    SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
+                    SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
+                    SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
+                )
+            }
+            ChooserBottomSheetDialog(bottomSheetDialogState = this, items = list, onItemClicked = {
+                val indexToUpdate = list.indexOf(it)
+                list.forEachIndexed { index, simpleListItem ->
+                    if (indexToUpdate == index) {
+                        list[index] = it.copy(selected = true)
+                    } else {
+                        list[index] = simpleListItem.copy(selected = false)
+                    }
+                }
+            })
+        }
+    }
+
+    @Composable
+    private fun getFolderLockingNoticeAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FolderLockingNoticeAlertDialog(alertDialogState = this) {
+
+            }
+        }
+    }
+
+    @Composable
+    private fun getEnterPasswordAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            EnterPasswordAlertDialog(alertDialogState = this, callback = {}, cancelCallback = {})
+        }
+    }
+
+    @Composable
+    private fun getCreateNewFolderAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CreateNewFolderAlertDialog(this, path = Environment.getExternalStorageDirectory().toString()) {
+                //todo create helper for private fun createFolder(path: String, alertDialog: AlertDialog) to extract bundled logic
             }
         }
     }
@@ -265,8 +322,8 @@ class TestDialogActivity : ComponentActivity() {
         }
 
     @Composable
-    private fun ShowButton(appSideLoadedDialogState: AlertDialogState, text: String) {
-        Button(onClick = appSideLoadedDialogState::show) {
+    private fun ShowButton(alertDialogState: AlertDialogState, text: String) {
+        Button(onClick = alertDialogState::show) {
             Text(
                 text = text,
                 modifier = Modifier
@@ -275,4 +332,18 @@ class TestDialogActivity : ComponentActivity() {
             )
         }
     }
+
+    @Composable
+    private fun ShowButton(appSideLoadedDialogState: BottomSheetDialogState, text: String) {
+        Button(onClick = appSideLoadedDialogState::open) {
+            Text(
+                text = text,
+                modifier = Modifier
+                    .fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+
+
 }

@@ -33,6 +33,8 @@ import androidx.core.view.children
 import androidx.core.view.updateLayoutParams
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
+import com.simplemobiletools.commons.compose.alert_dialog.dialogBorder
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.config

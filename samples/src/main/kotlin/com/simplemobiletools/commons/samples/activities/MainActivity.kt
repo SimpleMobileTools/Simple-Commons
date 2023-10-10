@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
@@ -48,9 +47,7 @@ class MainActivity : BaseSimpleActivity() {
             startActivity(Intent(this, TestDialogActivity::class.java))
         }
         binding.testButton.setOnClickListener {
-            WritePermissionDialog(this, writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30(".")){
-
-            }
+            launchBottomSheetDemo()
         }
     }
 
