@@ -5,7 +5,13 @@ import android.content.DialogInterface
 import android.view.KeyEvent
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogCustomIntervalPickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.DAY_SECONDS
@@ -14,7 +20,7 @@ import com.simplemobiletools.commons.helpers.MINUTE_SECONDS
 
 class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (minutes: Int) -> Unit) {
     private var dialog: AlertDialog? = null
-    private var view = DialogCustomIntervalPickerBinding.inflate(activity.layoutInflater,  null, false)
+    private var view = DialogCustomIntervalPickerBinding.inflate(activity.layoutInflater, null, false)
 
     init {
         activity.getAlertDialogBuilder()
@@ -35,14 +41,17 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
                     dialogRadioView.check(R.id.dialog_radio_days)
                     dialogCustomIntervalValue.setText((selectedSeconds / DAY_SECONDS).toString())
                 }
+
                 selectedSeconds % HOUR_SECONDS == 0 -> {
                     dialogRadioView.check(R.id.dialog_radio_hours)
                     dialogCustomIntervalValue.setText((selectedSeconds / HOUR_SECONDS).toString())
                 }
+
                 selectedSeconds % MINUTE_SECONDS == 0 -> {
                     dialogRadioView.check(R.id.dialog_radio_minutes)
                     dialogCustomIntervalValue.setText((selectedSeconds / MINUTE_SECONDS).toString())
                 }
+
                 else -> {
                     dialogRadioView.check(R.id.dialog_radio_seconds)
                     dialogCustomIntervalValue.setText(selectedSeconds.toString())
@@ -78,3 +87,20 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
         else -> 1
     }
 }
+
+@Composable
+fun CustomIntervalPickerAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier
+) {
+    //todo in progress
+}
+
+@Composable
+@MyDevices
+private fun CustomIntervalPickerAlertDialogPreview() {
+    AppThemeSurface {
+        CustomIntervalPickerAlertDialog(alertDialogState = rememberAlertDialogState())
+    }
+}
+
