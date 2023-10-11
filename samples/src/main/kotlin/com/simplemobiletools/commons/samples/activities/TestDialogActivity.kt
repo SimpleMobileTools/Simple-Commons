@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
@@ -39,7 +38,6 @@ class TestDialogActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppThemeSurface {
-                MaterialTheme
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -48,7 +46,7 @@ class TestDialogActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Spacer(modifier = Modifier.padding(top = 16.dp))
-                    ShowButton(getAppSideLoadedDialogState(), text = "App side loaded dialog")
+                    ShowButton(getAppSideLoadedDialogState(), text = "App side loaded")
                     ShowButton(getAddBlockedNumberDialogState(), text = "Add blocked number")
                     ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
                     ShowButton(getConfirmationAdvancedAlertDialogState(), text = "Confirmation advanced")
@@ -65,14 +63,24 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
-                    ShowButton(getWritePermissionAlertDialogState(), text = "Write permission dialog")
+                    ShowButton(getWritePermissionAlertDialogState(), text = "Write permission")
                     ShowButton(getCreateNewFolderAlertDialogState(), text = "Create new folder")
                     ShowButton(getEnterPasswordAlertDialogState(), text = "Enter password")
                     ShowButton(getFolderLockingNoticeAlertDialogState(), text = "Folder locking notice")
                     ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
-                    ShowButton(getFileConflictAlertDialogState(), text = "File conflict dialog")
+                    ShowButton(getFileConflictAlertDialogState(), text = "File conflict")
+                    ShowButton(getCustomIntervalPickerAlertDialogState(), text = "Custom interval picker")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun getCustomIntervalPickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CustomIntervalPickerAlertDialog(alertDialogState = this, selectedSeconds = 3, showSeconds = true) {
+                Log.d("CustomIntervalPickerAlertDialog", it.toString())
             }
         }
     }

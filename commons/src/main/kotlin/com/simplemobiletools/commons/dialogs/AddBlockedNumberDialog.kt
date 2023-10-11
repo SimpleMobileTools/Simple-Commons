@@ -11,7 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.TextFieldValue
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -27,7 +29,14 @@ fun AddOrEditBlockedNumberAlertDialog(
     addBlockedNumber: (String) -> Unit
 ) {
     val focusRequester = remember { FocusRequester() }
-    var textFieldValue by remember { mutableStateOf(blockedNumber?.number.orEmpty()) }
+    var textFieldValue by remember {
+        mutableStateOf(
+            TextFieldValue(
+                text = blockedNumber?.number.orEmpty(),
+                selection = TextRange(blockedNumber?.number?.length ?: 0)
+            )
+        )
+    }
 
     AlertDialog(
         containerColor = dialogContainerColor,
@@ -36,11 +45,10 @@ fun AddOrEditBlockedNumberAlertDialog(
         onDismissRequest = alertDialogState::hide,
         confirmButton = {
             TextButton(onClick = {
-                var newBlockedNumber = textFieldValue
+                var newBlockedNumber = textFieldValue.text
                 if (blockedNumber != null && newBlockedNumber != blockedNumber.number) {
                     deleteBlockedNumber(blockedNumber.number)
                 }
-
                 if (newBlockedNumber.isNotEmpty()) {
                     // in case the user also added a '.' in the pattern, remove it
                     if (newBlockedNumber.contains(".*")) {

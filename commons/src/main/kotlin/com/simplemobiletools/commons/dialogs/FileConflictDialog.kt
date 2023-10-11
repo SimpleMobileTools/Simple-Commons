@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.content.Context
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -102,7 +101,7 @@ fun FileConflictAlertDialog(
     val context = LocalContext.current
     var isShowApplyForAllChecked by remember { mutableStateOf(context.baseConfig.lastConflictApplyToAll) }
     val selections = remember {
-        buildEntries(context, fileDirItem.isDirectory)
+        buildFileConflictEntries(context, fileDirItem.isDirectory)
     }
     val kinds = remember {
         selections.values.toImmutableList()
@@ -190,17 +189,16 @@ fun FileConflictAlertDialog(
     }
 }
 
-private fun buildEntries(context: Context, directory: Boolean) =
+private fun buildFileConflictEntries(context: Context, directory: Boolean) =
     buildMap {
-        this[CONFLICT_SKIP] = getKind(R.string.skip, context)
+        this[CONFLICT_SKIP] = context.getString(R.string.skip)
         if (directory) {
-            this[CONFLICT_SKIP] = getKind(R.string.merge, context)
+            this[CONFLICT_SKIP] = context.getString(R.string.merge)
         }
-        this[CONFLICT_OVERWRITE] = getKind(R.string.overwrite, context)
-        this[CONFLICT_KEEP_BOTH] = getKind(R.string.keep_both, context)
+        this[CONFLICT_OVERWRITE] = context.getString(R.string.overwrite)
+        this[CONFLICT_KEEP_BOTH] = context.getString(R.string.keep_both)
     }
 
-private fun getKind(@StringRes resId: Int, context: Context): String = context.getString(resId)
 
 @MyDevices
 @Composable
