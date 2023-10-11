@@ -32,6 +32,7 @@ import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.dialogs.dialogBorder
+import com.simplemobiletools.commons.dialogs.dialogContainerColor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -143,7 +144,7 @@ fun ActionMenu(
         }
         DropdownMenu(
             modifier = Modifier
-                .background(SimpleTheme.colorScheme.surface)
+                .background(dialogContainerColor)
                 .dialogBorder,
             expanded = isMenuVisible,
             onDismissRequest = { onMenuToggle(false) },
