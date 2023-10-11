@@ -5,11 +5,13 @@ import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.dialogs.BottomSheetChooserDialog
+import com.simplemobiletools.commons.dialogs.FileConflictDialog
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.viewBinding
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.models.FAQItem
+import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.models.SimpleListItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
@@ -47,7 +49,9 @@ class MainActivity : BaseSimpleActivity() {
             startActivity(Intent(this, TestDialogActivity::class.java))
         }
         binding.testButton.setOnClickListener {
-            launchBottomSheetDemo()
+            FileConflictDialog(this, FileDirItem(filesDir.absolutePath, name = "Test"), false) { resolution, applyForAll ->
+
+            }
         }
     }
 

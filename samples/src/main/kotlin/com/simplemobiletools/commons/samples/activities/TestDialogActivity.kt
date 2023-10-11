@@ -30,6 +30,7 @@ import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.toHex
+import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.models.SimpleListItem
@@ -72,7 +73,25 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getEnterPasswordAlertDialogState(), text = "Enter password")
                     ShowButton(getFolderLockingNoticeAlertDialogState(), text = "Folder locking notice")
                     ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
+                    ShowButton(getFileConflictAlertDialogState(), text = "File conflict dialog")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
+                }
+            }
+        }
+    }
+
+    @Composable
+    private fun getFileConflictAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FileConflictAlertDialog(
+                alertDialogState = this, fileDirItem = FileDirItem(
+                    path = filesDir.path,
+                    name = "Test", children = 2
+                ), showApplyToAll = false
+            ) { resolution, applyForAll ->
+                baseConfig.apply {
+                    lastConflictApplyToAll = applyForAll
+                    lastConflictResolution = resolution
                 }
             }
         }

@@ -154,7 +154,7 @@ fun ChangeDateTimeFormatAlertDialog(
                     SettingsHorizontalDivider()
 
                     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                        DialogCheckBoxChangeDateTimeFormatComponent(
+                        DialogCheckBoxWithRadioAlignmentComponent(
                             label = stringResource(id = R.string.use_24_hour_time_format),
                             initialValue = is24HoursSelected,
                             onChange = { is24HoursSelected = it },
@@ -198,7 +198,7 @@ private fun formatDateSample(format: String): String {
 }
 
 @Composable
-private fun DialogCheckBoxChangeDateTimeFormatComponent(
+internal fun DialogCheckBoxWithRadioAlignmentComponent(
     modifier: Modifier = Modifier,
     label: String,
     initialValue: Boolean = false,
