@@ -30,10 +30,7 @@ import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.toHex
-import com.simplemobiletools.commons.models.FileDirItem
-import com.simplemobiletools.commons.models.RadioItem
-import com.simplemobiletools.commons.models.Release
-import com.simplemobiletools.commons.models.SimpleListItem
+import com.simplemobiletools.commons.models.*
 import kotlinx.collections.immutable.toImmutableList
 
 class TestDialogActivity : ComponentActivity() {
@@ -87,7 +84,7 @@ class TestDialogActivity : ComponentActivity() {
                 alertDialogState = this, fileDirItem = FileDirItem(
                     path = filesDir.path,
                     name = "Test", children = 2
-                ), showApplyToAll = false
+                ).asReadOnly(), showApplyToAll = false
             ) { resolution, applyForAll ->
                 baseConfig.apply {
                     lastConflictApplyToAll = applyForAll
