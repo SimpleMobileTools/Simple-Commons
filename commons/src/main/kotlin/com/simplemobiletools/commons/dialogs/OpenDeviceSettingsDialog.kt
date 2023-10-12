@@ -58,9 +58,7 @@ fun OpenDeviceSettingsAlertDialog(
             )
         },
         dismissButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-            }) {
+            TextButton(onClick = alertDialogState::hide) {
                 Text(text = stringResource(id = R.string.close))
             }
         },
