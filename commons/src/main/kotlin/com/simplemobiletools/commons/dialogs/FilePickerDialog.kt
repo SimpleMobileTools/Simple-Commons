@@ -1,10 +1,22 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.content.Context
 import android.os.Environment
 import android.os.Parcelable
 import android.view.KeyEvent
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,11 +24,19 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerFavoritesAdapter
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.components.FolderBreadcrumbs
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.getActivity
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogFilepickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
+import kotlinx.collections.immutable.toImmutableList
 import java.io.File
 
 /**
@@ -50,18 +70,7 @@ class FilePickerDialog(
     private var mDialogView = DialogFilepickerBinding.inflate(activity.layoutInflater, null, false)
 
     init {
-        if (!activity.getDoesFilePathExist(currPath)) {
-            currPath = activity.internalStoragePath
-        }
-
-        if (!activity.getIsPathDirectory(currPath)) {
-            currPath = currPath.getParentPath()
-        }
-
-        // do not allow copying files in the recycle bin manually
-        if (currPath.startsWith(activity.filesDir.absolutePath)) {
-            currPath = activity.internalStoragePath
-        }
+        currPath = activity.updateCurrentPath(currPath)
 
         mDialogView.filepickerBreadcrumbs.apply {
             listener = this@FilePickerDialog
@@ -352,5 +361,135 @@ class FilePickerDialog(
                 tryUpdateItems()
             }
         }
+    }
+}
+
+@Composable
+fun FilePickerAlertDialog(
+    alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
+    currPath: String = Environment.getExternalStorageDirectory().toString(),
+    pickFile: Boolean = true,
+    showHidden: Boolean = false,
+    showFAB: Boolean = false,
+    canAddShowHiddenButton: Boolean = false,
+    forceShowRoot: Boolean = false,
+    showFavoritesButton: Boolean = false,
+    enforceStorageRestrictions: Boolean = true,
+    callback: (pickedPath: String) -> Unit
+) {
+    val context = LocalContext.current
+    var currPath = remember { context.updateCurrentPath(currPath) }
+
+    AlertDialog(
+        onDismissRequest = alertDialogState::hide
+    ) {
+        DialogSurface {
+            Box(
+                modifier = modifier
+                    .fillMaxWidth(0.95f)
+                    .padding(SimpleTheme.dimens.padding.extraLarge)
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    FolderBreadcrumbs(
+                        items = currPath.toBreadcrumbs(context).toImmutableList(),
+                        onBreadcrumbClicked = { index, item ->
+                            if (index == 0) {
+                                StoragePickerDialog(context.getActivity() as BaseSimpleActivity, currPath, forceShowRoot, true) {
+                                    currPath = it
+                                }
+                            } else {
+                                if (currPath != item.path.trimEnd('/')) {
+                                    currPath = item.path
+                                }
+                            }
+                        }
+                    )
+
+                    Row(
+                        Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.End
+                    ) {
+                        TextButton(onClick = {
+                            alertDialogState.hide()
+                        }) {
+                            Text(text = stringResource(id = R.string.cancel))
+                        }
+
+                        if (!pickFile) {
+                            TextButton(onClick = {
+                                alertDialogState.hide()
+                            }) {
+                                Text(text = stringResource(id = R.string.ok))
+                            }
+                        }
+                    }
+                }
+
+                if (showFAB) {
+                    FloatingActionButton(onClick = {
+                        CreateNewFolderDialog(context.getActivity() as BaseSimpleActivity, currPath) {
+//                            callback(it)
+//                            mDialog?.dismiss()
+                        }
+                    }) {
+                        Icon(painter = painterResource(id = R.drawable.ic_plus_vector), contentDescription = null)
+                    }
+                }
+            }
+        }
+    }
+}
+
+private fun Context.updateCurrentPath(currPath: String): String {
+    var newCurrPath = currPath
+    if (!getDoesFilePathExist(newCurrPath)) {
+        newCurrPath = internalStoragePath
+    }
+
+    if (!getIsPathDirectory(newCurrPath)) {
+        newCurrPath = newCurrPath.getParentPath()
+    }
+
+    // do not allow copying files in the recycle bin manually
+    if (newCurrPath.startsWith(filesDir.absolutePath)) {
+        newCurrPath = internalStoragePath
+    }
+    return newCurrPath
+}
+
+private fun String.toBreadcrumbs(context: Context): List<FileDirItem> {
+    val basePath = getBasePath(context)
+    var currPath = basePath
+    val tempPath = context.humanizePath(this)
+
+    val dirs = tempPath.split("/").dropLastWhile(String::isEmpty)
+    val items = mutableListOf<FileDirItem>()
+    for (i in dirs.indices) {
+        val dir = dirs[i]
+        if (i > 0) {
+            currPath += dir + "/"
+        }
+
+        if (dir.isEmpty()) {
+            continue
+        }
+
+        currPath = "${currPath.trimEnd('/')}/"
+        items += FileDirItem(currPath, dir, true, 0, 0, 0)
+    }
+    return items
+}
+
+@Composable
+@MyDevices
+private fun FilePickerAlertDialogPreview() {
+    AppThemeSurface {
+        FilePickerAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
+            callback = {}
+        )
     }
 }

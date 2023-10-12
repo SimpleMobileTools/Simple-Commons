@@ -22,10 +22,7 @@ import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.toHex
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.collections.immutable.toImmutableList
@@ -60,11 +57,13 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
                     ShowButton(getRadioGroupDialogAlertDialogState(), text = "Radio group")
-                    ShowButton(getStoragePickerAlertDialogState(), text = "Storage picker")
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
                     ShowButton(getWritePermissionAlertDialogState(), text = "Write permission dialog")
+                    ShowButton(getFilePickerAlertDialogState(), text = "File picker")
+                    ShowButton(getStoragePickerAlertDialogState(), text = "Storage picker")
+                    ShowButton(getCreateNewFolderAlertDialogState(), text = "Create new folder")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
@@ -141,20 +140,6 @@ class TestDialogActivity : ComponentActivity() {
                     Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
                 },
                 titleId = R.string.title
-            )
-        }
-    }
-
-    @Composable
-    private fun getStoragePickerAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            StoragePickerAlertDialog(
-                alertDialogState = this,
-                currPath = "/",
-                showRoot = true,
-                callback = {
-                    Log.d("getStoragePickerAlertDialogState", "Picked: $it")
-                }
             )
         }
     }
@@ -289,6 +274,43 @@ class TestDialogActivity : ComponentActivity() {
                 )
             }
         }
+
+    @Composable
+    private fun getFilePickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FilePickerAlertDialog(
+                alertDialogState = this,
+                callback = {},
+            )
+        }
+    }
+
+    @Composable
+    private fun getStoragePickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            StoragePickerAlertDialog(
+                alertDialogState = this,
+                currPath = "/",
+                showRoot = true,
+                callback = {
+                    Log.d("getStoragePickerAlertDialogState", "Picked: $it")
+                }
+            )
+        }
+    }
+
+    @Composable
+    private fun getCreateNewFolderAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CreateNewFolderAlertDialog(
+                alertDialogState = this,
+                path = cacheDir.path,
+                callback = {
+                    Log.d("getCreateNewFolderAlertDialogState", "Created: $it")
+                }
+            )
+        }
+    }
 
     @Composable
     private fun ShowButton(appSideLoadedDialogState: AlertDialogState, text: String) {

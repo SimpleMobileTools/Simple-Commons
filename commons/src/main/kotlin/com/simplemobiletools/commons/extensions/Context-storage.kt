@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.app.Activity
 import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
@@ -869,6 +870,7 @@ fun Context.getDoesFilePathExist(path: String, otgPathToUse: String? = null): Bo
     return when {
         isRestrictedSAFOnlyRoot(path) -> getFastAndroidSAFDocument(path)?.exists() ?: false
         otgPath.isNotEmpty() && path.startsWith(otgPath) -> getOTGFastDocumentFile(path)?.exists() ?: false
+        isAccessibleWithSAFSdk30(path) -> getFastDocumentSdk30(path)?.exists() ?: false
         else -> File(path).exists()
     }
 }
@@ -1129,6 +1131,77 @@ fun Context.handleOtgTreeResult(partition: String, uri: Uri?): Boolean {
             toast(R.string.wrong_root_selected_usb)
             return false
         }
+    } else {
+        return false
+    }
+}
+
+fun Context.handleOpenDocumentTreeSdk30Result(originalPath: String, uri: Uri?): Boolean {
+    if (uri == null) {
+        return false
+    }
+
+    val checkedUri = createFirstParentTreeUri(originalPath)
+
+    if (uri != checkedUri) {
+        val level = getFirstParentLevel(originalPath)
+        val firstParentPath = originalPath.getFirstParentPath(this, level)
+        toast(getString(R.string.wrong_folder_selected, humanizePath(firstParentPath)))
+        return false
+    }
+
+    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+    applicationContext.contentResolver.takePersistableUriPermission(uri, takeFlags)
+    return true
+}
+
+private fun Context.saveTreeUri(uri: Uri) {
+    baseConfig.sdTreeUri = uri.toString()
+
+    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+    applicationContext.contentResolver.takePersistableUriPermission(uri, takeFlags)
+}
+
+fun Context.handleOpenDocumentTreeSd(originalPath: String, uri: Uri?): Boolean {
+    if (uri != null) {
+        val partition = try {
+            originalPath.substring(9, 18)
+        } catch (e: Exception) {
+            ""
+        }
+        val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
+
+        val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+            .matches() && uri.toString().contains(partition))
+        if (isProperSDRootFolder(uri) && isProperPartition) {
+            if (uri.toString() == baseConfig.OTGTreeUri) {
+                toast(R.string.sd_card_usb_same)
+                return false
+            }
+
+            saveTreeUri(uri)
+            return true
+        } else {
+            toast(R.string.wrong_root_selected)
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+fun Context.handleCreateDocumentTreeSdk30(originalPath: String, uri: Uri?): Boolean {
+    if (uri != null) {
+        val checkedUri = buildDocumentUriSdk30(originalPath)
+
+        if (uri != checkedUri) {
+            toast(getString(R.string.wrong_folder_selected, originalPath))
+            return false
+        }
+
+        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+        applicationContext.contentResolver.takePersistableUriPermission(uri, takeFlags)
+        return true
     } else {
         return false
     }
