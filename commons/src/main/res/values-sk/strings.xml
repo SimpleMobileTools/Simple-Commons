@@ -477,8 +477,9 @@
     <string name="enter_pin">Zadajte PIN</string>
     <string name="please_enter_pin">Prosím zadajte PIN</string>
     <string name="wrong_pin">Nesprávny PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN musí byť dlhý aspoň 4 číslice</string>
+    <string name="too_many_incorrect_attempts">Príliš veľa nesprávnych pokusov o odomknutie.
+\nSkúste znova o %d sekúnd.</string>
     <string name="repeat_pin">Zopakujte PIN</string>
     <string name="pattern">Vzor</string>
     <string name="insert_pattern">Zadajte vzor</string>
