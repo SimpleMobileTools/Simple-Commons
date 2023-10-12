@@ -25,14 +25,14 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.dialogBorder
+import com.simplemobiletools.commons.compose.alert_dialog.dialogContainerColor
 import com.simplemobiletools.commons.compose.components.SimpleDropDownMenuItem
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.rememberMutableInteractionSource
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.Shapes
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
-import com.simplemobiletools.commons.dialogs.dialogBorder
-import com.simplemobiletools.commons.dialogs.dialogContainerColor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
