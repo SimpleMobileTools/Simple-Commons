@@ -55,6 +55,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getFeatureLockedAlertDialogState(), text = "Feature Locked")
                     ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
                     ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
+                    ShowButton(getOpenDeviceSettingsAlertDialogState(), text = "Open device settings")
                     ShowButton(getColorPickerAlertDialogState(), text = "Color picker")
                     ShowButton(getCallConfirmationAlertDialogState(), text = "Call confirmation")
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
@@ -254,6 +255,16 @@ class TestDialogActivity : ComponentActivity() {
                 }, onActiveColorChange = { color ->
                     Log.d("getLineColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
                 })
+        }
+    }
+
+    @Composable
+    private fun getOpenDeviceSettingsAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            OpenDeviceSettingsAlertDialog(
+                alertDialogState = this,
+                message = "Test message"
+            )
         }
     }
 
