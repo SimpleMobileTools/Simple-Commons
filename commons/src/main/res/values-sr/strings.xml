@@ -106,12 +106,14 @@
     <string name="change_cover_image">Промени насловну слику</string>
     <string name="select_photo">Изабери фотографију</string>
     <plurals name="column_counts">
-        <item quantity="one">%d column</item>
-        <item quantity="other">%d columns</item>
+        <item quantity="one">%d колона</item>
+        <item quantity="few">%d колоне</item>
+        <item quantity="other">%d колона</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d ред</item>
+        <item quantity="few">%d реда</item>
+        <item quantity="other">%d редова</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управљајте блокираним бројевима</string>
@@ -126,13 +128,13 @@
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Да ли сте сигурни да желите да блокирате \"%s\"\?</string>
     <string name="block_not_stored_calls">Блокирајте позиве из несачуваних контаката</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Блокирај позиве са скривених бројева</string>
     <string name="block_not_stored_messages">Блокирајте поруке од несачуваних контаката</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Блокирај поруке са скривених бројева</string>
     <string name="add_blocked_number_helper_text">Унесите број или образац (нпр. *12345*, +1*8888) да бисте блокирали све позиве и поруке са бројева који одговарају шаблону.</string>
     <string name="must_make_default_caller_id_app">Не могу блокирати непознате бројеве без дозволе ИД позиваоца.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_success">Контакт је блокиран</string>
     <string name="block_contact_fail">Contact could not be blocked</string>
     <string name="unblock_contact">Unblock contact</string>
     <string name="unblock_contact_success">Contact unblocked</string>
@@ -362,7 +364,7 @@
     <string name="discard">Одбаци</string>
     <string name="undo_changes">Поништи измене</string>
     <string name="undo_changes_confirmation">Да ли желите да поништите измене?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Ова радња се не може опозвати.</string>
     <string name="save_before_closing">Имате несачуване измене. Сачувај пре изласка?</string>
     <string name="apply_to_all_apps">Примени боје на све Simple Apps</string>
     <string name="app_icon_color_warning">УПОЗОРЕЊЕ: Неки покретачи се не зналазе са изменама икона апликација. Ако икона нестане, покрените апликацију преко Гугл плеја или неког виџета, ако су доступни.
@@ -874,13 +876,39 @@
     <string name="more_info">Више информација</string>
     <string name="upgrade">Унапређивање</string>
     <string name="upgrade_calendar">Морате да преселите локално складиштене догађаје ручно преко извожења у .ics датотеку, а затим да увезете. Можете наћи дугмад за увоз и извоз у главном екрану.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Када будете задовољни са овим и можда преместите своја подешавања и омиљено, можете да деинсталирате стари бесплатни да бисте избегли да га случајно покренете јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Када будете задовољни са овим и можда преместите своје податке, можете деинсталирати стари бесплатни да бисте избегли његово случајно покретање јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако желите да мигрирате своје локално ускладиштене догађаје, морате то да урадите ручно тако што ћете их извести у .ics фајл у бесплатној верзији апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free_contacts">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако сте имали било какве контакте сачуване под „%s“, морате да их мигрирате ручно тако што ћете извести у .vcf фајл из бесплатне верзије апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free_notes">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако желите да мигрирате своје белешке, морате то да урадите ручно тако што ћете их извести у фајл у бесплатној верзији апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
     <!-- About -->
     <string name="about">О апликацији</string>
     <string name="website">Website</string>
