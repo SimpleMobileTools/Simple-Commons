@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Prekliči</string>
-    <string name="close">Close</string>
+    <string name="close">Zapri</string>
     <string name="back">Nazaj</string>
     <string name="nothing">Nič</string>
     <string name="later">Pozneje</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Povečaj število stolpcev</string>
     <string name="reduce_column_count">Zmanjšaj število stolpcev</string>
     <string name="column_count">Število stolpcev</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Število vrstic</string>
     <string name="portrait_column_count">Število pokončnih stolpcev</string>
     <string name="landscape_column_count">Ležeče število stolpcev</string>
     <string name="change_cover_image">Spremeni naslovno fotografijo</string>
@@ -319,7 +319,7 @@
     <string name="select_storage">Izberi shrambo</string>
     <string name="storage">Shramba</string>
     <string name="internal">Notranja shramba</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Notranja shramba</string>
     <string name="sd_card">SD kartica</string>
     <string name="root">Korenska mapa</string>
     <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">باشه</string>
+    <string name="ok">تایید</string>
     <string name="cancel">لغو</string>
-    <string name="close">Close</string>
-    <string name="back">Back</string>
-    <string name="nothing">Nothing</string>
+    <string name="close">بستن</string>
+    <string name="back">بازگشت</string>
+    <string name="nothing">هیچ‌چیز</string>
     <string name="later">بعدا</string>
     <string name="save_as">ذخیره به عنوان</string>
     <string name="file_saved">پرونده با موفقیت ذخیره شد</string>
@@ -347,14 +347,14 @@
     <string name="default_color">پیش‌گزیده</string>
     <string name="change_color">تغییر رنگ</string>
     <string name="theme">شِما</string>
-    <string name="changing_color_description">تغییر یک رنگ آن را به شِما سفارشی تعویض خواهد میکند</string>
+    <string name="changing_color_description">تغییر یک رنگ آن را به شِما سفارشی تعویض می‌کند</string>
     <string name="save">ذخیره</string>
     <string name="discard">دورانداختن</string>
     <string name="undo_changes">برگرداندن تغییرات</string>
     <string name="undo_changes_confirmation">آیا از برگرداندن تغییرات خود مطمئنید؟</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">این کار قابل برگشت نیست.</string>
     <string name="save_before_closing">شما تغییرات ذخیره نشده دارید. قبل از خروج ذخیره شوند؟</string>
-    <string name="apply_to_all_apps">اعمال رنگ‌ها به همه برنامه‌های آسان</string>
+    <string name="apply_to_all_apps">اعمال رنگ‌ها به همه برنامه‌های ساده</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
@@ -367,15 +367,15 @@
     <!-- Themes -->
     <string name="light_theme">روشن</string>
     <string name="dark_theme">تاریک</string>
-    <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_theme">خودکار</string>
+    <string name="auto_light_dark_theme">روشن / تاریک خودکار</string>
     <string name="solarized">آفتابی</string>
     <string name="dark_red">قرمز تاریک</string>
     <string name="white">سفید</string>
-    <string name="black_white">سیاه &amp; سفید</string>
+    <string name="black_white">سیاه و سفید</string>
     <string name="custom">سفارشی</string>
     <string name="shared">اشتراک گذاری شد</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">پیش‌فرض سامانه</string>
     <!-- What's new -->
     <string name="whats_new">چه چیز جدید است</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
@@ -385,7 +385,7 @@
     <string name="rename">تغییر نام</string>
     <string name="share">اشتراک گذاری</string>
     <string name="share_via">اشتراک گذاری به وسیلهٔ</string>
-    <string name="resize">Resize</string>
+    <string name="resize">تغيير اندازه</string>
     <string name="select_all">گزینش همه</string>
     <string name="select_text">گزینش متن</string>
     <string name="hide">مخفی</string>
@@ -401,7 +401,7 @@
     <string name="redo">انجام دوباره</string>
     <string name="print">چاپ</string>
     <string name="print_pro">چاپ (Pro)</string>
-    <string name="shortcut">Shortcut</string>
+    <string name="shortcut">میانبر</string>
     <string name="create_shortcut">ساخت میانبر</string>
     <string name="create_shortcut_pro">ساخت میانبر (Pro)</string>
     <string name="add_number_to_contact">افزودن شماره به مخاطبین</string>
@@ -413,9 +413,9 @@
     <string name="move_to_bottom">جابه‌جایی به پایین</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="send_sms">ارسال پیامک</string>
+    <string name="send_email">ارسال ایمیل</string>
+    <string name="call">تماس</string>
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Wallpapers</string>
@@ -428,14 +428,14 @@
     <string name="name">نام</string>
     <string name="size">اندازه</string>
     <string name="last_modified">اخرین اصلاح</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">تاریخ ایجاد</string>
     <string name="date_taken">تاریخ گرفتن</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">تاریخ افزودن</string>
     <string name="title">عنوان</string>
     <string name="filename">نام پرونده</string>
     <string name="extension">پسوند</string>
     <string name="random">تصادفی</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="sort_randomly">ترتیب تصادفی</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
@@ -842,31 +842,31 @@
     <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">درباره</string>
-    <string name="website">Website</string>
+    <string name="website">وب‌سایت</string>
     <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps">More apps</string>
-    <string name="more_apps_from_us">More apps from us</string>
-    <string name="invite_friends">Invite friends</string>
+    <string name="email_label">پیشنهادات و بازخوردهایتان را بفرستید به</string>
+    <string name="upgrade_to_pro">ارتقا به Pro</string>
+    <string name="more_apps">سایر برنامه‌ها</string>
+    <string name="more_apps_from_us">برنامه‌های دیگر ما</string>
+    <string name="invite_friends">دعوت دوستان</string>
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
+    <string name="invite_via">دعوت با</string>
     <string name="rate_us">امتیاز به ما</string>
     <string name="rate">امتیاز</string>
     <string name="donate">اهدا</string>
     <string name="follow_us">پیگیری ما</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
-    <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="support">حمایت</string>
+    <string name="help_us">کمک به ما</string>
+    <string name="social">شبکه‌های اجتماعی</string>
+    <string name="other">سایر</string>
+    <string name="privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="version_placeholder">نسخهٔ %s</string>
+    <string name="hello">سلام :)</string>
+    <string name="about_footer">ساخته‌شده با ❤️ در اسلواکی</string>
     <string name="additional_info">اطلاعات اضافی</string>
-    <string name="app_version">نسخه برنامه: %s</string>
-    <string name="device_os">سیستم عامل دستگاه: %s</string>
+    <string name="app_version">نسخهٔ برنامه: %s</string>
+    <string name="device_os">سیستم‌عامل دستگاه: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
