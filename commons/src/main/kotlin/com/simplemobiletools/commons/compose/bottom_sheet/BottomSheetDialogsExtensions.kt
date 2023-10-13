@@ -8,6 +8,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.compose.alert_dialog.dialogContainerColor
 import com.simplemobiletools.commons.compose.alert_dialog.dialogElevation
@@ -35,7 +36,7 @@ fun BottomSheetSpacerEdgeToEdge() {
 }
 
 @Composable
-fun BottomSheetDialogSurface(
+fun BottomSheetColumnDialogSurface(
     modifier: Modifier = Modifier,
     content: @Composable ColumnScope.() -> Unit
 ) {
@@ -52,3 +53,41 @@ fun BottomSheetDialogSurface(
         }
     }
 }
+
+@Composable
+fun BottomSheetBoxDialogSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable BoxScope.() -> Unit
+) {
+    Surface(
+        modifier = modifier
+            .fillMaxSize()
+            .bottomSheetDialogBorder,
+        shape = bottomSheetDialogShape,
+        color = dialogContainerColor,
+        tonalElevation = dialogElevation,
+    ) {
+        Box(modifier = Modifier.background(dialogContainerColor)) {
+            content()
+        }
+    }
+}
+
+@Composable
+fun BottomSheetDialogSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable (backgroundColor: Color) -> Unit
+) {
+    Surface(
+        modifier = modifier
+            .fillMaxSize()
+            .bottomSheetDialogBorder,
+        shape = bottomSheetDialogShape,
+        color = dialogContainerColor,
+        tonalElevation = dialogElevation,
+    ) {
+        content(dialogContainerColor)
+    }
+}
+
+

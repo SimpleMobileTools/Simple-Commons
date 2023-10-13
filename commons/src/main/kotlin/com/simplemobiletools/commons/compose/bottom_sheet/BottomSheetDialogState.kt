@@ -2,12 +2,12 @@ package com.simplemobiletools.commons.compose.bottom_sheet
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.material3.BottomSheetDefaults
+import androidx.compose.material3.SheetState
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.mapSaver
 import androidx.compose.runtime.saveable.rememberSaveable
-import kotlinx.coroutines.launch
 
 @Composable
 fun rememberBottomSheetDialogState(
@@ -52,7 +52,6 @@ fun rememberBottomSheetDialogStateSaveable(
     )
 }
 
-
 @Stable
 class BottomSheetDialogState(
     openBottomSheet: Boolean = false,
@@ -61,12 +60,12 @@ class BottomSheetDialogState(
     private val confirmValueChange: (SheetValue) -> Boolean = { true },
 ) {
     @Composable
-    fun rememberWindowInsets(
+    private fun rememberWindowInsets(
         defaultInsets: WindowInsets = BottomSheetDefaults.windowInsets
     ) = remember { if (edgeToEdgeEnabled) WindowInsets(0) else defaultInsets }
 
     @Composable
-    fun rememberSheetState() = rememberModalBottomSheetState(
+    private fun rememberSheetState() = rememberModalBottomSheetState(
         skipPartiallyExpanded = skipPartiallyExpanded,
         confirmValueChange = confirmValueChange
     )
@@ -74,54 +73,34 @@ class BottomSheetDialogState(
     var isOpen by mutableStateOf(openBottomSheet)
         private set
 
-    private var closeDialog by mutableStateOf(false)
-
-    /**
-     * Closes the dialog completely, calling [open] will create the dialog
-     * from scratch.
-     */
     fun close() {
-        if (closeDialog) {
-            closeDialog = false
-        }
-        closeDialog = true
+        isOpen = false
     }
 
     fun open() {
-        if (isOpen) {
-            isOpen = false
-        }
         isOpen = true
-    }
-
-    /**
-     * Minimises the dialog, calling [open] again will
-     * maximize it, keep in mind you need to call it with the
-     * appropriate params to avoid jumping if for example: it was fully expanded then
-     * you've minimised it and now you've called [open] again.
-     */
-    fun minimise() {
-        isOpen = false
     }
 
     @Composable
     fun DialogMember(
-        content: @Composable () -> Unit
+        content: @Composable (
+            state: SheetState,
+            insets: WindowInsets
+        ) -> Unit
     ) {
         val bottomSheetState = rememberSheetState()
+        val windowInsets = rememberWindowInsets()
 
-        LaunchedEffect(closeDialog) {
-            if (closeDialog) {
-                launch { bottomSheetState.hide() }.invokeOnCompletion {
-                    if (!bottomSheetState.isVisible) {
-                        minimise()
-                    }
-                }
+        LaunchedEffect(isOpen) {
+            if (isOpen) {
+                bottomSheetState.show()
+            } else {
+                bottomSheetState.hide()
             }
         }
 
-        if (isOpen) {
-            content()
+        if (bottomSheetState.isVisible) {
+            content(bottomSheetState, windowInsets)
         }
     }
 }

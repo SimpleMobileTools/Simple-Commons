@@ -11,7 +11,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -25,10 +24,7 @@ import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.toHex
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.*
 import kotlinx.collections.immutable.toImmutableList
 
@@ -105,24 +101,22 @@ class TestDialogActivity : ComponentActivity() {
 
     @Composable
     private fun getChooserBottomSheetDialogState() = rememberBottomSheetDialogState().apply {
-        DialogMember {
+        DialogMember { state, insets ->
             val list = remember {
-                mutableStateListOf(
+                listOf(
                     SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
                     SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
                     SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
-                )
+                ).toImmutableList()
             }
-            ChooserBottomSheetDialog(bottomSheetDialogState = this, items = list, onItemClicked = {
-                val indexToUpdate = list.indexOf(it)
-                list.forEachIndexed { index, simpleListItem ->
-                    if (indexToUpdate == index) {
-                        list[index] = it.copy(selected = true)
-                    } else {
-                        list[index] = simpleListItem.copy(selected = false)
-                    }
-                }
-            })
+            ChooserBottomSheetDialog(
+                bottomSheetDialogState = this,
+                items = list,
+                windowInsets = insets,
+                bottomSheetState = state,
+                onItemClicked = {
+                    toast("Selected ${getString(it.textRes)}")
+                })
         }
     }
 

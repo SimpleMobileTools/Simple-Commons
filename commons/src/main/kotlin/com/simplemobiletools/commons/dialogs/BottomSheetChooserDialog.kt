@@ -4,15 +4,11 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.ListItem
-import androidx.compose.material3.ListItemDefaults
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
@@ -25,8 +21,8 @@ import com.simplemobiletools.commons.adapters.setupSimpleListItem
 import com.simplemobiletools.commons.compose.alert_dialog.dialogContainerColor
 import com.simplemobiletools.commons.compose.alert_dialog.dialogElevation
 import com.simplemobiletools.commons.compose.alert_dialog.dialogTextColor
+import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetColumnDialogSurface
 import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetDialogState
-import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetDialogSurface
 import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetSpacerEdgeToEdge
 import com.simplemobiletools.commons.compose.bottom_sheet.bottomSheetDialogShape
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -35,6 +31,8 @@ import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.ItemSimpleListBinding
 import com.simplemobiletools.commons.fragments.BaseBottomSheetDialogFragment
 import com.simplemobiletools.commons.models.SimpleListItem
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 open class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
 
@@ -84,33 +82,35 @@ open class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
 @Composable
 fun ChooserBottomSheetDialog(
     bottomSheetDialogState: BottomSheetDialogState,
+    windowInsets: WindowInsets,
+    bottomSheetState : SheetState,
     modifier: Modifier = Modifier,
-    items: SnapshotStateList<SimpleListItem>,
+    items: ImmutableList<SimpleListItem>,
     onItemClicked: (SimpleListItem) -> Unit
 ) {
-    val bottomSheetState = bottomSheetDialogState.rememberSheetState()
-    val windowInsets = bottomSheetDialogState.rememberWindowInsets()
-
     ModalBottomSheet(
         modifier = modifier,
         onDismissRequest = bottomSheetDialogState::close,
         sheetState = bottomSheetState,
         windowInsets = windowInsets,
-        dragHandle = {},
+        dragHandle = {}, //leave empty as we provide our own ColumnScope
         shape = bottomSheetDialogShape,
         containerColor = dialogContainerColor,
         tonalElevation = dialogElevation,
     ) {
-        ChooserScreenContent(items = items, onItemClicked = onItemClicked)
+        ChooserScreenContent(items = items, onItemClicked = {
+            onItemClicked(it)
+            bottomSheetDialogState.close()
+        })
     }
 }
 
 @Composable
 private fun ChooserScreenContent(
-    items: SnapshotStateList<SimpleListItem>,
+    items: ImmutableList<SimpleListItem>,
     onItemClicked: (SimpleListItem) -> Unit
 ) {
-    BottomSheetDialogSurface {
+    BottomSheetColumnDialogSurface {
         Text(
             text = stringResource(id = R.string.please_select_destination),
             color = dialogTextColor,
@@ -160,11 +160,11 @@ private fun ChooserScreenContent(
 private fun ChooserBottomSheetDialogPreview() {
     AppThemeSurface {
         val list = remember {
-            mutableStateListOf(
+            listOf(
                 SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
                 SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
                 SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
-            )
+            ).toImmutableList()
         }
         ChooserScreenContent(items = list, onItemClicked = {})
         /* https://issuetracker.google.com/issues/304300690
