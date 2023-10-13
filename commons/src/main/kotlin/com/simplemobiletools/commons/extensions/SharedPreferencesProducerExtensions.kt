@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.callbackFlow
 
 context (SharedPreferences)
 fun <T> sharedPreferencesCallback(
+    sendOnCollect: Boolean = false,
     value: () -> T?,
 ): Flow<T?> = callbackFlow {
     val sharedPreferencesListener =
@@ -14,6 +15,9 @@ fun <T> sharedPreferencesCallback(
             trySend(value())
         }
 
+    if (sendOnCollect) {
+        trySend(value())
+    }
     registerOnSharedPreferenceChangeListener(sharedPreferencesListener)
     awaitClose { unregisterOnSharedPreferenceChangeListener(sharedPreferencesListener) }
 }
