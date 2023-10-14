@@ -968,8 +968,8 @@
     <string name="file_manager_short">Fitxategi-kudeatzailea</string>
     <string name="flashlight_short">Linterna</string>
     <string name="gallery_short">Galeria</string>
-    <string name="keyboard_short">Keyboard</string>
-    <string name="launcher_short">Launcher</string>
+    <string name="keyboard_short">Teklatua</string>
+    <string name="launcher_short">Abiarazlea</string>
     <string name="music_player_short">Musika erreproduzigailua</string>
     <string name="notes_short">Oharrak</string>
     <string name="sms_messenger_short">SMS mezularia</string>
@@ -983,10 +983,9 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">Maiz egindako galderak</string>
     <string name="before_asking_question">Galdera bat egin aurretik, irakurri</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
+    <string name="faq_1_title_commons">Zer dela eta ez dut aplikazioen trepeta hau trepeten zerrendan ikusten\?</string>
+    <string name="faq_1_text_commons">Litekeena da aplikazioa SD txartelera eraman duzulako. Kasu horretan, emandako aplikazioen trepetak ezkutatzen dituen Android sistemaren muga bat dago. Irtenbide bakarra zure gailuaren ezarpenen bidez aplikazioa Barne Biltegira eramatea da.</string>
+    <string name="faq_2_title_commons">Lagundu nahi zaitut, baina ezin dut dirurik eman. Ba al dago beste ezer egin dezaket\?</string>
     <string name="faq_2_text_commons">
         <![CDATA[
             Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
