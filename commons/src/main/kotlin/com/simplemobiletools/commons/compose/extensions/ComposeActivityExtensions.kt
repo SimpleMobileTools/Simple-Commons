@@ -15,9 +15,9 @@ fun FakeVersionCheck() {
         DialogMember {
             ConfirmationAlertDialog(
                 alertDialogState = this,
+                message = FAKE_VERSION_APP_LABEL,
                 positive = R.string.ok,
-                negative = null,
-                message = FAKE_VERSION_APP_LABEL
+                negative = null
             ) {
                 context.getActivity().launchViewIntent(DEVELOPER_PLAY_STORE_URL)
             }
@@ -35,9 +35,9 @@ fun CheckAppOnSdCard() {
         DialogMember {
             ConfirmationAlertDialog(
                 alertDialogState = this,
+                messageId = R.string.app_on_sd_card,
                 positive = R.string.ok,
-                negative = null,
-                messageId = R.string.app_on_sd_card
+                negative = null
             ) {}
         }
     }

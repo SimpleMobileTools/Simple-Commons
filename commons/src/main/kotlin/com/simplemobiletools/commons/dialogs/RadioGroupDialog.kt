@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
+import com.simplemobiletools.commons.compose.alert_dialog.dialogTextColor
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponent
 import com.simplemobiletools.commons.compose.extensions.BooleanPreviewParameterProvider
@@ -101,8 +103,8 @@ class RadioGroupDialog(
 @Composable
 fun RadioGroupAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     items: ImmutableList<RadioItem>,
+    modifier: Modifier = Modifier,
     selectedItemId: Int = -1,
     titleId: Int = 0,
     showOKButton: Boolean = false,
@@ -186,11 +188,10 @@ private fun RadioGroupDialogAlertDialogPreview(@PreviewParameter(BooleanPreviewP
                 RadioItem(2, "Test 2"),
                 RadioItem(3, "Test 3"),
             ).toImmutableList(),
-            callback = {},
-            cancelCallback = {},
-            showOKButton = showOKButton,
+            selectedItemId = 1,
             titleId = R.string.title,
-            selectedItemId = 1
-        )
+            showOKButton = showOKButton,
+            cancelCallback = {}
+        ) {}
     }
 }

@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.dialogs
+package com.simplemobiletools.commons.compose.alert_dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

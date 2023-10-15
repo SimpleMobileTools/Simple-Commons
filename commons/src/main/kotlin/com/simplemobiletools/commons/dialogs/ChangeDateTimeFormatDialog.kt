@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.components.RadioGroupDialogComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -104,8 +105,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
 @Composable
 fun ChangeDateTimeFormatAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     is24HourChecked: Boolean,
+    modifier: Modifier = Modifier,
     callback: (selectedFormat: String, is24HourChecked: Boolean) -> Unit
 ) {
     val context = LocalContext.current
@@ -153,7 +154,7 @@ fun ChangeDateTimeFormatAlertDialog(
                     SettingsHorizontalDivider()
 
                     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                        DialogCheckBoxChangeDateTimeFormatComponent(
+                        DialogCheckBoxWithRadioAlignmentComponent(
                             label = stringResource(id = R.string.use_24_hour_time_format),
                             initialValue = is24HoursSelected,
                             onChange = { is24HoursSelected = it },
@@ -197,7 +198,7 @@ private fun formatDateSample(format: String): String {
 }
 
 @Composable
-private fun DialogCheckBoxChangeDateTimeFormatComponent(
+internal fun DialogCheckBoxWithRadioAlignmentComponent(
     modifier: Modifier = Modifier,
     label: String,
     initialValue: Boolean = false,
@@ -253,6 +254,6 @@ private fun DialogCheckBoxChangeDateTimeFormatComponent(
 @MyDevices
 private fun ChangeDateTimeFormatAlertDialogPreview() {
     AppThemeSurface {
-        ChangeDateTimeFormatAlertDialog(alertDialogState = rememberAlertDialogState(), callback = { _, _ -> }, is24HourChecked = true)
+        ChangeDateTimeFormatAlertDialog(alertDialogState = rememberAlertDialogState(), is24HourChecked = true) { _, _ -> }
     }
 }

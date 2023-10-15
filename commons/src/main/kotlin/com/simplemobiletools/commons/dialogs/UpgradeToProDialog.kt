@@ -17,8 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.extensions.andThen
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface

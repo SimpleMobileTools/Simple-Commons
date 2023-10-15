@@ -16,8 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
@@ -61,8 +60,8 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
 
 @Composable
 fun AppSideLoadedAlertDialog(
+    alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    alertDialogState: AlertDialogState = rememberAlertDialogState(),
     onDownloadClick: (url: String) -> Unit,
     onCancelClick: () -> Unit
 ) {
@@ -113,6 +112,6 @@ fun AppSideLoadedAlertDialog(
 @MyDevices
 private fun AppSideLoadedAlertDialogPreview() {
     AppThemeSurface {
-        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}, onCancelClick = {})
+        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}) {}
     }
 }

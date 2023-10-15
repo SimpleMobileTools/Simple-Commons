@@ -136,18 +136,17 @@ class AboutActivity : ComponentActivity() {
             DialogMember {
                 ConfirmationAdvancedAlertDialog(
                     alertDialogState = this,
-                    callback = { success ->
-                        if (success) {
-                            launchFAQActivity()
-                        } else {
-                            launchEmailIntent()
-                        }
-                    },
                     message = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}",
                     messageId = null,
                     positive = R.string.read_faq,
                     negative = R.string.skip
-                )
+                ) { success ->
+                    if (success) {
+                        launchFAQActivity()
+                    } else {
+                        launchEmailIntent()
+                    }
+                }
             }
         }
 
@@ -157,18 +156,17 @@ class AboutActivity : ComponentActivity() {
             DialogMember {
                 ConfirmationAdvancedAlertDialog(
                     alertDialogState = this,
-                    callback = { success ->
-                        if (success) {
-                            launchFAQActivity()
-                        } else {
-                            launchRateUsPrompt(showRateStarsDialog)
-                        }
-                    },
                     message = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}",
                     messageId = null,
                     positive = R.string.read_faq,
                     negative = R.string.skip
-                )
+                ) { success ->
+                    if (success) {
+                        launchFAQActivity()
+                    } else {
+                        launchRateUsPrompt(showRateStarsDialog)
+                    }
+                }
             }
         }
 
