@@ -2,12 +2,15 @@ package com.simplemobiletools.commons.compose.bottom_sheet
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.material3.BottomSheetDefaults
-import androidx.compose.material3.SheetState
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.mapSaver
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Modifier
+import com.simplemobiletools.commons.compose.alert_dialog.dialogContainerColor
+import com.simplemobiletools.commons.compose.alert_dialog.dialogElevation
 
 @Composable
 fun rememberBottomSheetDialogState(
@@ -82,25 +85,34 @@ class BottomSheetDialogState(
     }
 
     @Composable
-    fun DialogMember(
-        content: @Composable (
-            state: SheetState,
-            insets: WindowInsets
-        ) -> Unit
+    fun BottomSheetContent(
+        modifier: Modifier = Modifier,
+        content: @Composable () -> Unit
     ) {
         val bottomSheetState = rememberSheetState()
         val windowInsets = rememberWindowInsets()
 
         LaunchedEffect(isOpen) {
-            if (isOpen) {
+            if (isOpen && !bottomSheetState.isVisible) {
                 bottomSheetState.show()
             } else {
                 bottomSheetState.hide()
             }
         }
 
-        if (bottomSheetState.isVisible) {
-            content(bottomSheetState, windowInsets)
+        if (isOpen) {
+            ModalBottomSheet(
+                modifier = modifier,
+                onDismissRequest = ::close,
+                sheetState = bottomSheetState,
+                windowInsets = windowInsets,
+                dragHandle = {}, //leave empty as we provide our own dialog surfaces
+                shape = bottomSheetDialogShape,
+                containerColor = dialogContainerColor,
+                tonalElevation = dialogElevation,
+            ) {
+                content()
+            }
         }
     }
 }

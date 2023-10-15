@@ -138,8 +138,8 @@ class WritePermissionDialog(activity: Activity, val writePermissionDialogMode: W
 @Composable
 fun WritePermissionAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     writePermissionDialogMode: WritePermissionDialog.WritePermissionDialogMode,
+    modifier: Modifier = Modifier,
     callback: () -> Unit,
     onCancelCallback: () -> Unit
 ) {
@@ -316,8 +316,7 @@ private fun WritePermissionAlertDialogPreview(@PreviewParameter(WritePermissionD
         WritePermissionAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30("."),
-            callback = {},
-            onCancelCallback = {}
-        )
+            callback = {}
+        ) {}
     }
 }

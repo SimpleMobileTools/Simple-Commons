@@ -101,7 +101,7 @@ class TestDialogActivity : ComponentActivity() {
 
     @Composable
     private fun getChooserBottomSheetDialogState() = rememberBottomSheetDialogState().apply {
-        DialogMember { state, insets ->
+        BottomSheetContent {
             val list = remember {
                 listOf(
                     SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
@@ -110,13 +110,11 @@ class TestDialogActivity : ComponentActivity() {
                 ).toImmutableList()
             }
             ChooserBottomSheetDialog(
-                bottomSheetDialogState = this,
-                items = list,
-                windowInsets = insets,
-                bottomSheetState = state,
-                onItemClicked = {
-                    toast("Selected ${getString(it.textRes)}")
-                })
+                bottomSheetDialogState = this@apply,
+                items = list
+            ) {
+                toast("Selected ${getString(it.textRes)}")
+            }
         }
     }
 
@@ -151,9 +149,8 @@ class TestDialogActivity : ComponentActivity() {
             WritePermissionAlertDialog(
                 alertDialogState = this,
                 writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30("."),
-                callback = {},
-                onCancelCallback = {}
-            )
+                callback = {}
+            ) {}
         }
     }
 
@@ -206,16 +203,15 @@ class TestDialogActivity : ComponentActivity() {
                     RadioItem(6, "Test 6"),
                     RadioItem(6, "Test 7"),
                 ).toImmutableList(),
-                showOKButton = true,
                 selectedItemId = 2,
+                titleId = R.string.title,
+                showOKButton = true,
                 cancelCallback = {
                     Log.d("getRadioGroupDialogAlertDialogState", "cancelCallback")
-                },
-                callback = {
-                    Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
-                },
-                titleId = R.string.title
-            )
+                }
+            ) {
+                Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
+            }
         }
     }
 
@@ -244,11 +240,11 @@ class TestDialogActivity : ComponentActivity() {
                 alertDialogState = this,
                 color = baseConfig.customPrimaryColor,
                 isPrimaryColorPicker = true,
-                onButtonPressed = { wasPositivePressed, color ->
-                    Log.d("getLineColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
-                }, onActiveColorChange = { color ->
+                onActiveColorChange = { color ->
                     Log.d("getLineColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
-                })
+                }) { wasPositivePressed, color ->
+                Log.d("getLineColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
+            }
         }
     }
 
@@ -269,11 +265,11 @@ class TestDialogActivity : ComponentActivity() {
                 alertDialogState = this,
                 color = config.customTextColor,
                 removeDimmedBackground = true,
-                onButtonPressed = { wasPositivePressed, color ->
-                    Log.d("getColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
-                }, onActiveColorChange = { color ->
+                onActiveColorChange = { color ->
                     Log.d("getColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
-                })
+                }) { wasPositivePressed, color ->
+                Log.d("getColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
+            }
         }
     }
 
@@ -287,7 +283,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getCallConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            CallConfirmationAlertDialog(alertDialogState = this, callee = "Simple Mobile Tools", callback = {})
+            CallConfirmationAlertDialog(alertDialogState = this, callee = "Simple Mobile Tools") {}
         }
     }
 
@@ -310,7 +306,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            ConfirmationAlertDialog(alertDialogState = this, callback = {}, dialogTitle = "Some fancy title")
+            ConfirmationAlertDialog(alertDialogState = this, dialogTitle = "Some fancy title") {}
         }
     }
 
@@ -318,7 +314,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getAppSideLoadedDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                AppSideLoadedAlertDialog(onDownloadClick = {}, onCancelClick = {}, alertDialogState = this)
+                AppSideLoadedAlertDialog(alertDialogState = this, onDownloadClick = {}) {}
             }
         }
 
@@ -326,7 +322,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getAddBlockedNumberDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                AddOrEditBlockedNumberAlertDialog(blockedNumber = null, deleteBlockedNumber = {}, addBlockedNumber = {}, alertDialogState = this)
+                AddOrEditBlockedNumberAlertDialog(alertDialogState = this, blockedNumber = null, deleteBlockedNumber = {}) {}
             }
         }
 
@@ -334,7 +330,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getConfirmationAdvancedAlertDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                ConfirmationAdvancedAlertDialog(alertDialogState = this, callback = {})
+                ConfirmationAdvancedAlertDialog(alertDialogState = this) {}
             }
         }
 
@@ -344,9 +340,8 @@ class TestDialogActivity : ComponentActivity() {
             DialogMember {
                 PermissionRequiredAlertDialog(
                     alertDialogState = this,
-                    text = "Test permission",
-                    positiveActionCallback = {}
-                )
+                    text = "Test permission"
+                ) {}
             }
         }
 

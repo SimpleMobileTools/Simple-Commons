@@ -44,10 +44,10 @@ class PermissionRequiredDialog(
 @Composable
 fun PermissionRequiredAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     text: String,
-    positiveActionCallback: () -> Unit,
-    negativeActionCallback: (() -> Unit)? = null
+    modifier: Modifier = Modifier,
+    negativeActionCallback: (() -> Unit)? = null,
+    positiveActionCallback: () -> Unit
 ) {
     AlertDialog(
         containerColor = dialogContainerColor,
@@ -95,8 +95,7 @@ private fun PermissionRequiredAlertDialogPreview() {
         PermissionRequiredAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             text = "Test",
-            positiveActionCallback = {},
             negativeActionCallback = {}
-        )
+        ) {}
     }
 }

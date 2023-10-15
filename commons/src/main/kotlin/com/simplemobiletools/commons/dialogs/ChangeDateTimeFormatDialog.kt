@@ -105,8 +105,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
 @Composable
 fun ChangeDateTimeFormatAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     is24HourChecked: Boolean,
+    modifier: Modifier = Modifier,
     callback: (selectedFormat: String, is24HourChecked: Boolean) -> Unit
 ) {
     val context = LocalContext.current
@@ -254,6 +254,6 @@ internal fun DialogCheckBoxWithRadioAlignmentComponent(
 @MyDevices
 private fun ChangeDateTimeFormatAlertDialogPreview() {
     AppThemeSurface {
-        ChangeDateTimeFormatAlertDialog(alertDialogState = rememberAlertDialogState(), callback = { _, _ -> }, is24HourChecked = true)
+        ChangeDateTimeFormatAlertDialog(alertDialogState = rememberAlertDialogState(), is24HourChecked = true) { _, _ -> }
     }
 }

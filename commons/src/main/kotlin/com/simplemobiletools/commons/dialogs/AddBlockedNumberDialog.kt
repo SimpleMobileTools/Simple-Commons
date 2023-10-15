@@ -22,9 +22,9 @@ import com.simplemobiletools.commons.models.BlockedNumber
 
 @Composable
 fun AddOrEditBlockedNumberAlertDialog(
-    modifier: Modifier = Modifier,
-    blockedNumber: BlockedNumber?,
     alertDialogState: AlertDialogState,
+    blockedNumber: BlockedNumber?,
+    modifier: Modifier = Modifier,
     deleteBlockedNumber: (String) -> Unit,
     addBlockedNumber: (String) -> Unit
 ) {
@@ -100,10 +100,9 @@ fun AddOrEditBlockedNumberAlertDialog(
 private fun AddOrEditBlockedNumberAlertDialogPreview() {
     AppThemeSurface {
         AddOrEditBlockedNumberAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
             blockedNumber = null,
-            deleteBlockedNumber = {},
-            addBlockedNumber = {},
-            alertDialogState = rememberAlertDialogState()
-        )
+            deleteBlockedNumber = {}
+        ) {}
     }
 }

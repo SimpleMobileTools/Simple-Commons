@@ -145,9 +145,8 @@ class ColorPickerDialog(
 @Composable
 fun ColorPickerAlertDialog(
     alertDialogState: AlertDialogState,
+    @ColorInt color: Int,
     modifier: Modifier = Modifier,
-    @ColorInt
-    color: Int,
     removeDimmedBackground: Boolean = false,
     addDefaultColorButton: Boolean = false,
     onActiveColorChange: (color: Int) -> Unit,
@@ -418,7 +417,7 @@ private fun ColorPickerAlertDialogPreview() {
         ColorPickerAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             color = colorResource(id = R.color.color_primary).toArgb(),
-            onActiveColorChange = {},
-            onButtonPressed = { _, _ -> })
+            onActiveColorChange = {}
+        ) { _, _ -> }
     }
 }

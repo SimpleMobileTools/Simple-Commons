@@ -60,8 +60,8 @@ class ConfirmationAdvancedDialog(
 
 @Composable
 fun ConfirmationAdvancedAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
     message: String = "",
     messageId: Int? = R.string.proceed_with_deletion,
     positive: Int? = R.string.yes,
@@ -116,7 +116,8 @@ fun ConfirmationAdvancedAlertDialog(
 @MyDevices
 private fun ConfirmationAdvancedAlertDialogPreview() {
     AppThemeSurface {
-        ConfirmationAdvancedAlertDialog(alertDialogState = rememberAlertDialogState(),
-            callback = {})
+        ConfirmationAdvancedAlertDialog(
+            alertDialogState = rememberAlertDialogState()
+        ) {}
     }
 }

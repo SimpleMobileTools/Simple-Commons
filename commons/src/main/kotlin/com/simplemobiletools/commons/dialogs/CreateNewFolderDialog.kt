@@ -108,8 +108,8 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
 @Composable
 fun CreateNewFolderAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     path: String,
+    modifier: Modifier = Modifier,
     callback: (path: String) -> Unit
 ) {
     val focusRequester = remember { FocusRequester() }
@@ -209,8 +209,7 @@ private fun CreateNewFolderAlertDialogPreview() {
     AppThemeSurface {
         CreateNewFolderAlertDialog(
             alertDialogState = rememberAlertDialogState(),
-            path = "Internal/",
-            callback = {}
-        )
+            path = "Internal/"
+        ) {}
     }
 }

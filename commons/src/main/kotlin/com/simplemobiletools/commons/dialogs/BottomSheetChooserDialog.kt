@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.*
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -19,12 +20,11 @@ import androidx.fragment.app.FragmentManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.setupSimpleListItem
 import com.simplemobiletools.commons.compose.alert_dialog.dialogContainerColor
-import com.simplemobiletools.commons.compose.alert_dialog.dialogElevation
 import com.simplemobiletools.commons.compose.alert_dialog.dialogTextColor
 import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetColumnDialogSurface
 import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetDialogState
 import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetSpacerEdgeToEdge
-import com.simplemobiletools.commons.compose.bottom_sheet.bottomSheetDialogShape
+import com.simplemobiletools.commons.compose.bottom_sheet.rememberBottomSheetDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
@@ -82,35 +82,11 @@ open class BottomSheetChooserDialog : BaseBottomSheetDialogFragment() {
 @Composable
 fun ChooserBottomSheetDialog(
     bottomSheetDialogState: BottomSheetDialogState,
-    windowInsets: WindowInsets,
-    bottomSheetState : SheetState,
+    items: ImmutableList<SimpleListItem>,
     modifier: Modifier = Modifier,
-    items: ImmutableList<SimpleListItem>,
     onItemClicked: (SimpleListItem) -> Unit
 ) {
-    ModalBottomSheet(
-        modifier = modifier,
-        onDismissRequest = bottomSheetDialogState::close,
-        sheetState = bottomSheetState,
-        windowInsets = windowInsets,
-        dragHandle = {}, //leave empty as we provide our own ColumnScope
-        shape = bottomSheetDialogShape,
-        containerColor = dialogContainerColor,
-        tonalElevation = dialogElevation,
-    ) {
-        ChooserScreenContent(items = items, onItemClicked = {
-            onItemClicked(it)
-            bottomSheetDialogState.close()
-        })
-    }
-}
-
-@Composable
-private fun ChooserScreenContent(
-    items: ImmutableList<SimpleListItem>,
-    onItemClicked: (SimpleListItem) -> Unit
-) {
-    BottomSheetColumnDialogSurface {
+    BottomSheetColumnDialogSurface(modifier) {
         Text(
             text = stringResource(id = R.string.please_select_destination),
             color = dialogTextColor,
@@ -126,6 +102,7 @@ private fun ChooserScreenContent(
                 modifier = Modifier
                     .clickable {
                         onItemClicked(item)
+                        bottomSheetDialogState.close()
                     },
                 headlineContent = {
                     Text(stringResource(id = item.textRes), color = color)
@@ -166,13 +143,6 @@ private fun ChooserBottomSheetDialogPreview() {
                 SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
             ).toImmutableList()
         }
-        ChooserScreenContent(items = list, onItemClicked = {})
-        /* https://issuetracker.google.com/issues/304300690
-        ChooserBottomSheetDialog(
-             bottomSheetDialogState = rememberBottomSheetDialogState(),
-             items = list,
-             onItemClicked = {},
-             modifier = Modifier.fillMaxSize()
-         )*/
+        ChooserBottomSheetDialog(bottomSheetDialogState = rememberBottomSheetDialogState(), items = list, onItemClicked = {})
     }
 }

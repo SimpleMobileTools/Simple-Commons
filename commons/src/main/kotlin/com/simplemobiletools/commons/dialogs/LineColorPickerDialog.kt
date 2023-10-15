@@ -168,9 +168,9 @@ class LineColorPickerDialog(
 @Composable
 fun LineColorPickerAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     @ColorInt color: Int,
     isPrimaryColorPicker: Boolean,
+    modifier: Modifier = Modifier,
     primaryColors: Int = R.array.md_primary_colors,
     appIconIDs: ArrayList<Int>? = null,
     onActiveColorChange: (color: Int) -> Unit,
@@ -330,7 +330,7 @@ private fun LineColorPickerAlertDialogPreview() {
         LineColorPickerAlertDialog(alertDialogState = rememberAlertDialogState(),
             color = R.color.color_primary,
             isPrimaryColorPicker = true,
-            onActiveColorChange = {},
-            onButtonPressed = { _, _ -> })
+            onActiveColorChange = {}
+        ) { _, _ -> }
     }
 }

@@ -60,8 +60,8 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
 
 @Composable
 fun AppSideLoadedAlertDialog(
+    alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    alertDialogState: AlertDialogState = rememberAlertDialogState(),
     onDownloadClick: (url: String) -> Unit,
     onCancelClick: () -> Unit
 ) {
@@ -112,6 +112,6 @@ fun AppSideLoadedAlertDialog(
 @MyDevices
 private fun AppSideLoadedAlertDialogPreview() {
     AppThemeSurface {
-        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}, onCancelClick = {})
+        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}) {}
     }
 }

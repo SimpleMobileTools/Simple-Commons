@@ -38,8 +38,8 @@ class OpenDeviceSettingsDialog(val activity: BaseSimpleActivity, message: String
 @Composable
 fun OpenDeviceSettingsAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
-    message: String
+    message: String,
+    modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
 

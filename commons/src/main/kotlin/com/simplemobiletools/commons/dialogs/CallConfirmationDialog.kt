@@ -60,9 +60,9 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
 
 @Composable
 fun CallConfirmationAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
     callee: String,
+    modifier: Modifier = Modifier,
     callback: () -> Unit
 ) {
     androidx.compose.material3.AlertDialog(
@@ -139,6 +139,7 @@ private fun CallConfirmationAlertDialogPreview() {
     AppThemeSurface {
         CallConfirmationAlertDialog(
             alertDialogState = rememberAlertDialogState(),
-            callee = "Simple Mobile Tools", callback = {})
+            callee = "Simple Mobile Tools"
+        ) {}
     }
 }

@@ -69,8 +69,8 @@ data class ViewType(val title: String, val type: Int)
 @Composable
 fun ChangeViewTypeAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     selectedViewType: Int,
+    modifier: Modifier = Modifier,
     onTypeChosen: (type: Int) -> Unit
 ) {
     val context = LocalContext.current
@@ -137,6 +137,6 @@ private fun getSelectedValue(
 @Composable
 private fun ChangeViewTypeAlertDialogPreview() {
     AppThemeSurface {
-        ChangeViewTypeAlertDialog(alertDialogState = rememberAlertDialogState(), onTypeChosen = {}, selectedViewType = VIEW_TYPE_GRID)
+        ChangeViewTypeAlertDialog(alertDialogState = rememberAlertDialogState(), selectedViewType = VIEW_TYPE_GRID) {}
     }
 }

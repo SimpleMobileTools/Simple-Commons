@@ -93,9 +93,9 @@ class FileConflictDialog(
 @Composable
 fun FileConflictAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     fileDirItem: FileDirItemReadOnly,
     showApplyToAll: Boolean,
+    modifier: Modifier = Modifier,
     callback: (resolution: Int, applyForAll: Boolean) -> Unit
 ) {
     val context = LocalContext.current
@@ -207,8 +207,7 @@ private fun FileConflictAlertDialogPreview() {
         FileConflictAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             fileDirItem = FileDirItem("", name = "test", children = 1).asReadOnly(),
-            showApplyToAll = true,
-            callback = { _, _ -> }
-        )
+            showApplyToAll = true
+        ) { _, _ -> }
     }
 }
