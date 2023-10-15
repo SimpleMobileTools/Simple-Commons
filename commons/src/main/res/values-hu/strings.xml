@@ -131,12 +131,12 @@
     <string name="block_hidden_messages">Rejtett számok üzeneteinek blokkolása</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
     <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
-    <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact">Névjegy blokkolása</string>
+    <string name="block_contact_success">Névjegy blokkolva</string>
+    <string name="block_contact_fail">A névjegy blokkolása nem sikerült</string>
+    <string name="unblock_contact">Névjegy blokkolásának feloldása</string>
+    <string name="unblock_contact_success">Névjegy blokkolása feloldva</string>
+    <string name="unblock_contact_fail">A névjegy blokkolásának feloldása nem sikerült</string>
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>
@@ -176,15 +176,15 @@
     <string name="no_audio_permissions">Hang engedély szükséges</string>
     <string name="no_permission">Nem szükséges engedély</string>
     <string name="allow_notifications_reminders">Engedélyeznie kell, hogy az alkalmazás értesítéseket jelenítsen meg, különben nem tud emlékeztetőket megjeleníteni.</string>
-    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">Engedélyeznie kell, hogy az alkalmazás teljes képernyős értesítéseket jelenítsen meg, különben lemaradhat egyes emlékeztetőkről.</string>
     <string name="allow_notifications_files">Engedélyeznie kell, hogy az alkalmazás értesítéseket jelenítsen meg, különben nem tudja megjeleníteni a folyamatjelző sávot.</string>
     <string name="allow_notifications_music_player">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja lejátszani a zenéket.</string>
     <string name="allow_notifications_voice_recorder">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tud hangfelvételt készíteni.</string>
     <string name="allow_notifications_incoming_calls">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja megjeleníteni a bejövő hívásokat.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Engedélyeznie kell, hogy az alkalmazás teljes képernyős értesítéseket jelenítsen meg, különben lemaradhat egyes bejövő hívásokról.</string>
     <string name="allow_notifications_incoming_messages">Engedélyeznie kell, hogy az alkalmazás megjelenítse az értesítéseket, különben nem tudja megjeleníteni a bejövő üzeneteket.</string>
     <string name="allow_alarm_scheduled_messages">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a belső riasztásokhoz, különben nem tud ütemezett üzeneteket küldeni.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a belső riasztásokhoz, különben nem tudja kikapcsolni az alkalmazást az alvási időzítő után.</string>
     <string name="allow_location_permission">Engedélyeznie kell, hogy az alkalmazás hozzáférjen a tartózkodási helyéhez, különben nem fogja tudni azt.</string>
     <string name="grant_permission">Engedély megadása</string>
     <string name="permission_required">Engedély szükséges</string>
@@ -227,7 +227,7 @@
     <string name="move_to">Áthelyezés ide</string>
     <string name="source">Forrás</string>
     <string name="destination">Cél</string>
-    <string name="select_destination">Válasszon célt</string>
+    <string name="select_destination">Cél kiválasztása</string>
     <string name="click_select_destination">Kattintson ide a cél kiválasztásához</string>
     <string name="invalid_destination">Nem lehet a kiválasztott célra írni</string>
     <string name="please_select_destination">Válasszon célt</string>
@@ -308,7 +308,7 @@
     <string name="select_storage">Válasszon tárolót</string>
     <string name="storage">Tároló</string>
     <string name="internal">Belső</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Belső tárhely</string>
     <string name="sd_card">SD-kártya</string>
     <string name="root">Gyökér</string>
     <string name="wrong_root_selected">Hibás mappát választott ki, válassza ki az SD-kártya gyökérmappáját</string>
@@ -394,7 +394,7 @@
     <string name="unhide_folder">Mappa elrejtésének megszüntetése</string>
     <string name="temporarily_show_hidden">Rejtettek ideiglenes megjelenítése</string>
     <string name="stop_showing_hidden">Rejtett média ideiglenes megjelenítésének leállítása</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Hozzáférés engedélyezése további médiához</string>
     <string name="maximum_share_reached">Ilyen sok tartalmat nem oszthat meg egyszerre</string>
     <string name="empty_and_disable_recycle_bin">Lomtár ürítése és letiltása</string>
     <string name="undo">Visszavonás</string>
@@ -419,10 +419,10 @@
     <string name="contact_details">Névjegy részletei</string>
     <string name="add_contact">Névjegy hozzáadása</string>
     <string name="wallpapers">Háttérképek</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Sorok számának megjelenítése</string>
+    <string name="hide_line_numbers">Sorok számának elrejtése</string>
     <string name="sleep_timer">Alvásidőzítő</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Blokkolás feloldása</string>
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
     <string name="name">Név</string>
@@ -446,7 +446,7 @@
     <string name="full_name">Teljes név</string>
     <string name="use_custom_sorting">Egyéni rendezés használata</string>
     <string name="change_order">Sorrend módosítása</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">További lehetőségek</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Biztos, hogy folytatja a törlést\?</string>
     <string name="deletion_confirmation">Biztos, hogy törli ezt: %s\?</string>
@@ -470,8 +470,9 @@
     <string name="enter_pin">Írja be a PIN-kódot</string>
     <string name="please_enter_pin">Írjon be egy PIN-kódot</string>
     <string name="wrong_pin">Hibás PIN-kód</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">A PIN-kódnak legalább 4 számjegyűnek kell lennie</string>
+    <string name="too_many_incorrect_attempts">Túl sok helytelen feloldási próbálkozás.
+\nPróbálja újra %d másodperc múlva.</string>
     <string name="repeat_pin">PIN-kód újra</string>
     <string name="pattern">Minta</string>
     <string name="insert_pattern">Minta megadása</string>
