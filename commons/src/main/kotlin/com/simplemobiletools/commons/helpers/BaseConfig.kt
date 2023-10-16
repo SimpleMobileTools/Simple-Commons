@@ -610,7 +610,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
         set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
 
-    protected fun <T> KProperty0<T>.asFlow(): Flow<T?> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }
+    protected fun <T> KProperty0<T>.asFlow(emitOnCollect: Boolean = false): Flow<T?> = prefs.run { sharedPreferencesCallback(sendOnCollect = emitOnCollect) { this@asFlow.get() } }
 
-    protected fun <T> KProperty0<T>.asFlowNonNull(): Flow<T> = asFlow().filterNotNull()
+    protected fun <T> KProperty0<T>.asFlowNonNull(emitOnCollect: Boolean = false): Flow<T> = asFlow(emitOnCollect).filterNotNull()
 }
