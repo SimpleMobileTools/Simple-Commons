@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.models
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
+import androidx.compose.runtime.Immutable
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -35,16 +36,18 @@ open class FileDirItem(
             when {
                 sorting and SORT_BY_NAME != 0 -> {
                     result = if (sorting and SORT_USE_NUMERIC_VALUE != 0) {
-                        AlphanumericComparator().compare(name.normalizeString().toLowerCase(), other.name.normalizeString().toLowerCase())
+                        AlphanumericComparator().compare(name.normalizeString().lowercase(), other.name.normalizeString().lowercase())
                     } else {
-                        name.normalizeString().toLowerCase().compareTo(other.name.normalizeString().toLowerCase())
+                        name.normalizeString().lowercase().compareTo(other.name.normalizeString().lowercase())
                     }
                 }
+
                 sorting and SORT_BY_SIZE != 0 -> result = when {
                     size == other.size -> 0
                     size > other.size -> 1
                     else -> -1
                 }
+
                 sorting and SORT_BY_DATE_MODIFIED != 0 -> {
                     result = when {
                         modified == other.modified -> 0
@@ -52,8 +55,9 @@ open class FileDirItem(
                         else -> -1
                     }
                 }
+
                 else -> {
-                    result = getExtension().toLowerCase().compareTo(other.getExtension().toLowerCase())
+                    result = getExtension().lowercase().compareTo(other.getExtension().lowercase())
                 }
             }
 
@@ -69,7 +73,7 @@ open class FileDirItem(
     fun getBubbleText(context: Context, dateFormat: String? = null, timeFormat: String? = null) = when {
         sorting and SORT_BY_SIZE != 0 -> size.formatSize()
         sorting and SORT_BY_DATE_MODIFIED != 0 -> modified.formatDate(context, dateFormat, timeFormat)
-        sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
+        sorting and SORT_BY_EXTENSION != 0 -> getExtension().lowercase()
         else -> name
     }
 
@@ -84,6 +88,7 @@ open class FileDirItem(
                     context.getSizeFromContentUri(Uri.parse(path))
                 }
             }
+
             else -> File(path).getProperSize(countHidden)
         }
     }
@@ -101,6 +106,7 @@ open class FileDirItem(
             context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFDirectChildrenCount(path, countHiddenItems)
             context.isPathOnOTG(path) -> context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size
                 ?: 0
+
             else -> File(path).getDirectChildrenCount(context, countHiddenItems)
         }
     }
@@ -156,3 +162,34 @@ open class FileDirItem(
         return Uri.withAppendedPath(uri, mediaStoreId.toString())
     }
 }
+
+fun FileDirItem.asReadOnly() = FileDirItemReadOnly(
+    path = path,
+    name = name,
+    isDirectory = isDirectory,
+    children = children,
+    size = size,
+    modified = modified,
+    mediaStoreId = mediaStoreId
+)
+
+fun FileDirItemReadOnly.asFileDirItem() = FileDirItem(
+    path = path,
+    name = name,
+    isDirectory = isDirectory,
+    children = children,
+    size = size,
+    modified = modified,
+    mediaStoreId = mediaStoreId
+)
+
+@Immutable
+class FileDirItemReadOnly(
+    path: String,
+    name: String = "",
+    isDirectory: Boolean = false,
+    children: Int = 0,
+    size: Long = 0L,
+    modified: Long = 0L,
+    mediaStoreId: Long = 0L
+) : FileDirItem(path, name, isDirectory, children, size, modified, mediaStoreId)

@@ -1,24 +1,24 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.content.Context
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextField
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
@@ -40,20 +40,63 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     alertDialog.showKeyboard(view.folderName)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
                         val name = view.folderName.value
-                        if (activity.validateName(path, name)) {
-                            activity.createFolder(
-                                "$path/$name",
-                                onSuccess = {
-                                    sendSuccess(alertDialog, it)
-                                },
-                                handleSAFDialogSdk30 = activity::handleSAFDialogSdk30,
-                                handleSAFDialog = activity::handleSAFDialog,
-                                handleSAFCreateDocumentDialogSdk30 = activity::handleSAFCreateDocumentDialogSdk30,
-                            )
+                        when {
+                            name.isEmpty() -> activity.toast(R.string.empty_name)
+                            name.isAValidFilename() -> {
+                                val file = File(path, name)
+                                if (file.exists()) {
+                                    activity.toast(R.string.name_taken)
+                                    return@OnClickListener
+                                }
+
+                                createFolder("$path/$name", alertDialog)
+                            }
+
+                            else -> activity.toast(R.string.invalid_name)
                         }
                     })
                 }
             }
+    }
+
+    private fun createFolder(path: String, alertDialog: AlertDialog) {
+        try {
+            when {
+                activity.isRestrictedSAFOnlyRoot(path) && activity.createAndroidSAFDirectory(path) -> sendSuccess(alertDialog, path)
+                activity.isAccessibleWithSAFSdk30(path) -> activity.handleSAFDialogSdk30(path) {
+                    if (it && activity.createSAFDirectorySdk30(path)) {
+                        sendSuccess(alertDialog, path)
+                    }
+                }
+
+                activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
+                    if (it) {
+                        try {
+                            val documentFile = activity.getDocumentFile(path.getParentPath())
+                            val newDir = documentFile?.createDirectory(path.getFilenameFromPath()) ?: activity.getDocumentFile(path)
+                            if (newDir != null) {
+                                sendSuccess(alertDialog, path)
+                            } else {
+                                activity.toast(R.string.unknown_error_occurred)
+                            }
+                        } catch (e: SecurityException) {
+                            activity.showErrorToast(e)
+                        }
+                    }
+                }
+
+                File(path).mkdirs() -> sendSuccess(alertDialog, path)
+                isRPlus() && activity.isAStorageRootFolder(path.getParentPath()) -> activity.handleSAFCreateDocumentDialogSdk30(path) {
+                    if (it) {
+                        sendSuccess(alertDialog, path)
+                    }
+                }
+
+                else -> activity.toast(activity.getString(R.string.could_not_create_folder, path.getFilenameFromPath()))
+            }
+        } catch (e: Exception) {
+            activity.showErrorToast(e)
+        }
     }
 
     private fun sendSuccess(alertDialog: AlertDialog, path: String) {
@@ -65,167 +108,108 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
 @Composable
 fun CreateNewFolderAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     path: String,
+    modifier: Modifier = Modifier,
     callback: (path: String) -> Unit
 ) {
+    val focusRequester = remember { FocusRequester() }
     val context = LocalContext.current
+    val view = LocalView.current
+    var title by remember { mutableStateOf("") }
 
     AlertDialog(
-        onDismissRequest = alertDialogState::hide
-    ) {
-        DialogSurface {
-            Column(
-                modifier = modifier
-                    .fillMaxWidth(0.95f)
-                    .padding(SimpleTheme.dimens.padding.extraLarge)
+        modifier = modifier.dialogBorder,
+        shape = dialogShape,
+        containerColor = dialogContainerColor,
+        tonalElevation = dialogElevation,
+        onDismissRequest = alertDialogState::hide,
+        confirmButton = {
+            TextButton(
+                onClick = {
+                    alertDialogState.hide()
+                    //add callback
+                    val name = title
+                    when {
+                        name.isEmpty() -> context.toast(R.string.empty_name)
+                        name.isAValidFilename() -> {
+                            val file = File(path, name)
+                            if (file.exists()) {
+                                context.toast(R.string.name_taken)
+                                return@TextButton
+                            }
+
+                            callback("$path/$name")
+                        }
+
+                        else -> context.toast(R.string.invalid_name)
+                    }
+                }
             ) {
-                Text(
-                    text = stringResource(id = R.string.create_new_folder),
+                Text(text = stringResource(id = R.string.ok))
+            }
+        },
+        dismissButton = {
+            TextButton(
+                onClick = alertDialogState::hide
+            ) {
+                Text(text = stringResource(id = R.string.cancel))
+            }
+        },
+        title = {
+            Text(
+                text = stringResource(id = R.string.create_new_folder),
+                color = dialogTextColor,
+                fontSize = 21.sp,
+                fontWeight = FontWeight.Bold,
+            )
+        },
+        text = {
+            Column(
+                Modifier.fillMaxWidth(),
+            ) {
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    value = if (!view.isInEditMode) "${context.humanizePath(path).trimEnd('/')}/" else path,
+                    onValueChange = {},
+                    label = {
+                        Text(text = stringResource(id = R.string.folder))
+                    },
+                    enabled = false,
+                    colors = OutlinedTextFieldDefaults.colors(
+                        disabledTextColor = dialogTextColor,
+                        disabledBorderColor = SimpleTheme.colorScheme.primary,
+                        disabledLabelColor = SimpleTheme.colorScheme.primary,
+                    )
+                )
+
+                Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.padding.medium))
+
+                OutlinedTextField(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 24.dp, bottom = SimpleTheme.dimens.padding.medium)
-                        .padding(horizontal = 24.dp),
-                    color = dialogTextColor,
-                    fontSize = 21.sp
-                )
-
-                TextField(
-                    modifier = Modifier
-                        .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
-                        .padding(top = SimpleTheme.dimens.padding.extraLarge),
-                    value = path,
-                    enabled = false,
-                    onValueChange = {}
-                )
-
-                var folderNameValue by remember { mutableStateOf("") }
-                TextField(
-                    modifier = Modifier
-                        .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
-                        .padding(top = SimpleTheme.dimens.padding.extraLarge),
-                    value = folderNameValue,
+                        .focusRequester(focusRequester),
+                    value = title,
                     onValueChange = {
-                        folderNameValue = it
-                    }
+                        title = it
+                    },
+                    label = {
+                        Text(text = stringResource(id = R.string.title))
+                    },
                 )
-                Row(
-                    Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    TextButton(onClick = {
-                        alertDialogState.hide()
-                    }) {
-                        Text(text = stringResource(id = R.string.cancel))
-                    }
-
-                    val safDialogSdk30 = rememberSafSdk30DialogState()
-                    val safDialog = rememberSafDialogState()
-                    val safCreateDocumentSdk30Dialog = rememberSafCreateDocumentSdk30DialogState()
-
-                    TextButton(onClick = {
-                        if (context.validateName(path, folderNameValue)) {
-                            context.createFolder(
-                                "$path/$folderNameValue",
-                                onSuccess = {
-                                    alertDialogState.hide()
-                                    callback(it.trimEnd('/'))
-                                },
-                                handleSAFDialogSdk30 = { path, callback ->
-                                    alertDialogState.hide()
-                                    safDialogSdk30.handle(path, callback)
-                                },
-                                handleSAFDialog = { path, callback ->
-                                    alertDialogState.hide()
-                                    safDialog.handle(path, callback)
-                                },
-                                handleSAFCreateDocumentDialogSdk30 = { path, callback ->
-                                    alertDialogState.hide()
-                                    safCreateDocumentSdk30Dialog.handle(path, callback)
-                                }
-                            )
-                        }
-                    }) {
-                        Text(text = stringResource(id = R.string.ok))
-                    }
-                }
             }
         }
-    }
+    )
+    ShowKeyboardWhenDialogIsOpenedAndRequestFocus(focusRequester = focusRequester)
 }
 
-private fun Context.validateName(
-    path: String,
-    name: String
-): Boolean {
-    when {
-        name.isEmpty() -> toast(R.string.empty_name)
-        name.isAValidFilename() -> {
-            val file = File(path, name)
-            if (file.exists()) {
-                toast(R.string.name_taken)
-                return false
-            }
-
-            return true
-        }
-        else -> toast(R.string.invalid_name)
-    }
-
-    return false
-}
-
-private fun Context.createFolder(
-    path: String,
-    onSuccess: (String) -> Unit,
-    handleSAFDialogSdk30: (String, (Boolean) -> Unit) -> Unit,
-    handleSAFDialog: (String, (Boolean) -> Unit) -> Unit,
-    handleSAFCreateDocumentDialogSdk30: (String, (Boolean) -> Unit) -> Unit,
-) {
-    try {
-        when {
-            isRestrictedSAFOnlyRoot(path) && createAndroidSAFDirectory(path) -> onSuccess(path)
-            isAccessibleWithSAFSdk30(path) -> handleSAFDialogSdk30(path) {
-                if (it && createSAFDirectorySdk30(path)) {
-                    onSuccess(path)
-                }
-            }
-            needsStupidWritePermissions(path) -> handleSAFDialog(path) {
-                if (it) {
-                    try {
-                        val documentFile = getDocumentFile(path.getParentPath())
-                        val newDir = documentFile?.createDirectory(path.getFilenameFromPath()) ?: getDocumentFile(path)
-                        if (newDir != null) {
-                            onSuccess(path)
-                        } else {
-                            toast(R.string.unknown_error_occurred)
-                        }
-                    } catch (e: SecurityException) {
-                        showErrorToast(e)
-                    }
-                }
-            }
-            File(path).mkdirs() -> onSuccess(path)
-            isRPlus() && isAStorageRootFolder(path.getParentPath()) -> handleSAFCreateDocumentDialogSdk30(path) {
-                if (it) {
-                    onSuccess(path)
-                }
-            }
-            else -> toast(getString(R.string.could_not_create_folder, path.getFilenameFromPath()))
-        }
-    } catch (e: Exception) {
-        showErrorToast(e)
-    }
-}
-
-@Composable
 @MyDevices
+@Composable
 private fun CreateNewFolderAlertDialogPreview() {
     AppThemeSurface {
         CreateNewFolderAlertDialog(
             alertDialogState = rememberAlertDialogState(),
-            path = "/",
-            callback = {}
-        )
+            path = "Internal/"
+        ) {}
     }
 }

@@ -10,8 +10,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogOpenDeviceSettingsBinding
@@ -39,8 +38,8 @@ class OpenDeviceSettingsDialog(val activity: BaseSimpleActivity, message: String
 @Composable
 fun OpenDeviceSettingsAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
-    message: String
+    message: String,
+    modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
 
@@ -59,9 +58,7 @@ fun OpenDeviceSettingsAlertDialog(
             )
         },
         dismissButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-            }) {
+            TextButton(onClick = alertDialogState::hide) {
                 Text(text = stringResource(id = R.string.close))
             }
         },

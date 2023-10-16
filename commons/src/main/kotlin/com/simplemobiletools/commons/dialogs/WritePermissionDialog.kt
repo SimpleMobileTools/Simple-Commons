@@ -32,6 +32,8 @@ import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
+import com.simplemobiletools.commons.compose.alert_dialog.dialogTextColor
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.components.LinkifyTextComponent
 import com.simplemobiletools.commons.compose.extensions.MyDevices
@@ -136,8 +138,8 @@ class WritePermissionDialog(activity: Activity, val writePermissionDialogMode: W
 @Composable
 fun WritePermissionAlertDialog(
     alertDialogState: AlertDialogState,
-    modifier: Modifier = Modifier,
     writePermissionDialogMode: WritePermissionDialog.WritePermissionDialogMode,
+    modifier: Modifier = Modifier,
     callback: () -> Unit,
     onCancelCallback: () -> Unit
 ) {
@@ -314,8 +316,7 @@ private fun WritePermissionAlertDialogPreview(@PreviewParameter(WritePermissionD
         WritePermissionAlertDialog(
             alertDialogState = rememberAlertDialogState(),
             writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30("."),
-            callback = {},
-            onCancelCallback = {}
-        )
+            callback = {}
+        ) {}
     }
 }

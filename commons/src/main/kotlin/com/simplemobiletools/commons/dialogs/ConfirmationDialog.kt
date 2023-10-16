@@ -12,8 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogMessageBinding
@@ -67,8 +66,8 @@ class ConfirmationDialog(
 
 @Composable
 fun ConfirmationAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
     message: String = "",
     messageId: Int? = R.string.proceed_with_deletion,
     positive: Int? = R.string.yes,
@@ -134,7 +133,8 @@ fun ConfirmationAlertDialog(
 @MyDevices
 private fun ConfirmationAlertDialogPreview() {
     AppThemeSurface {
-        ConfirmationAlertDialog(alertDialogState = rememberAlertDialogState(),
-            callback = {})
+        ConfirmationAlertDialog(
+            alertDialogState = rememberAlertDialogState()
+        ) {}
     }
 }

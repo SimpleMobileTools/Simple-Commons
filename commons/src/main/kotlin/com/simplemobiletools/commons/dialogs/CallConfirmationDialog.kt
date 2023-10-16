@@ -27,8 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
-import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.*
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.databinding.DialogCallConfirmationBinding
@@ -61,9 +60,9 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
 
 @Composable
 fun CallConfirmationAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
     callee: String,
+    modifier: Modifier = Modifier,
     callback: () -> Unit
 ) {
     androidx.compose.material3.AlertDialog(
@@ -140,6 +139,7 @@ private fun CallConfirmationAlertDialogPreview() {
     AppThemeSurface {
         CallConfirmationAlertDialog(
             alertDialogState = rememberAlertDialogState(),
-            callee = "Simple Mobile Tools", callback = {})
+            callee = "Simple Mobile Tools"
+        ) {}
     }
 }

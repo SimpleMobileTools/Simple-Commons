@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,7 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -18,13 +18,14 @@ import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
+import com.simplemobiletools.commons.compose.bottom_sheet.BottomSheetDialogState
+import com.simplemobiletools.commons.compose.bottom_sheet.rememberBottomSheetDialogState
 import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.extensions.rateStarsRedirectAndThankYou
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.models.RadioItem
-import com.simplemobiletools.commons.models.Release
+import com.simplemobiletools.commons.models.*
 import kotlinx.collections.immutable.toImmutableList
 
 class TestDialogActivity : ComponentActivity() {
@@ -33,7 +34,6 @@ class TestDialogActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppThemeSurface {
-                MaterialTheme
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -42,7 +42,7 @@ class TestDialogActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Spacer(modifier = Modifier.padding(top = 16.dp))
-                    ShowButton(getAppSideLoadedDialogState(), text = "App side loaded dialog")
+                    ShowButton(getAppSideLoadedDialogState(), text = "App side loaded")
                     ShowButton(getAddBlockedNumberDialogState(), text = "Add blocked number")
                     ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
                     ShowButton(getConfirmationAdvancedAlertDialogState(), text = "Confirmation advanced")
@@ -60,12 +60,85 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
-                    ShowButton(getWritePermissionAlertDialogState(), text = "Write permission dialog")
-                    ShowButton(getFilePickerAlertDialogState(), text = "File picker")
-                    ShowButton(getStoragePickerAlertDialogState(), text = "Storage picker")
+                    ShowButton(getWritePermissionAlertDialogState(), text = "Write permission")
                     ShowButton(getCreateNewFolderAlertDialogState(), text = "Create new folder")
+                    ShowButton(getEnterPasswordAlertDialogState(), text = "Enter password")
+                    ShowButton(getFolderLockingNoticeAlertDialogState(), text = "Folder locking notice")
+                    ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
+                    ShowButton(getFileConflictAlertDialogState(), text = "File conflict")
+                    ShowButton(getCustomIntervalPickerAlertDialogState(), text = "Custom interval picker")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun getCustomIntervalPickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CustomIntervalPickerAlertDialog(alertDialogState = this, selectedSeconds = 3, showSeconds = true) {
+                Log.d("CustomIntervalPickerAlertDialog", it.toString())
+            }
+        }
+    }
+
+    @Composable
+    private fun getFileConflictAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FileConflictAlertDialog(
+                alertDialogState = this, fileDirItem = FileDirItem(
+                    path = filesDir.path,
+                    name = "Test", children = 2
+                ).asReadOnly(), showApplyToAll = false
+            ) { resolution, applyForAll ->
+                baseConfig.apply {
+                    lastConflictApplyToAll = applyForAll
+                    lastConflictResolution = resolution
+                }
+            }
+        }
+    }
+
+    @Composable
+    private fun getChooserBottomSheetDialogState() = rememberBottomSheetDialogState().apply {
+        BottomSheetContent {
+            val list = remember {
+                listOf(
+                    SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
+                    SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
+                    SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
+                ).toImmutableList()
+            }
+            ChooserBottomSheetDialog(
+                bottomSheetDialogState = this@apply,
+                items = list
+            ) {
+                toast("Selected ${getString(it.textRes)}")
+            }
+        }
+    }
+
+    @Composable
+    private fun getFolderLockingNoticeAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FolderLockingNoticeAlertDialog(alertDialogState = this) {
+
+            }
+        }
+    }
+
+    @Composable
+    private fun getEnterPasswordAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            EnterPasswordAlertDialog(alertDialogState = this, callback = {}, cancelCallback = {})
+        }
+    }
+
+    @Composable
+    private fun getCreateNewFolderAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            CreateNewFolderAlertDialog(this, path = Environment.getExternalStorageDirectory().toString()) {
+                //todo create helper for private fun createFolder(path: String, alertDialog: AlertDialog) to extract bundled logic
             }
         }
     }
@@ -76,9 +149,8 @@ class TestDialogActivity : ComponentActivity() {
             WritePermissionAlertDialog(
                 alertDialogState = this,
                 writePermissionDialogMode = WritePermissionDialog.WritePermissionDialogMode.OpenDocumentTreeSDK30("."),
-                callback = {},
-                onCancelCallback = {}
-            )
+                callback = {}
+            ) {}
         }
     }
 
@@ -131,16 +203,15 @@ class TestDialogActivity : ComponentActivity() {
                     RadioItem(6, "Test 6"),
                     RadioItem(6, "Test 7"),
                 ).toImmutableList(),
-                showOKButton = true,
                 selectedItemId = 2,
+                titleId = R.string.title,
+                showOKButton = true,
                 cancelCallback = {
                     Log.d("getRadioGroupDialogAlertDialogState", "cancelCallback")
-                },
-                callback = {
-                    Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
-                },
-                titleId = R.string.title
-            )
+                }
+            ) {
+                Log.d("getRadioGroupDialogAlertDialogState", "Selected $it")
+            }
         }
     }
 
@@ -169,11 +240,11 @@ class TestDialogActivity : ComponentActivity() {
                 alertDialogState = this,
                 color = baseConfig.customPrimaryColor,
                 isPrimaryColorPicker = true,
-                onButtonPressed = { wasPositivePressed, color ->
-                    Log.d("getLineColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
-                }, onActiveColorChange = { color ->
+                onActiveColorChange = { color ->
                     Log.d("getLineColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
-                })
+                }) { wasPositivePressed, color ->
+                Log.d("getLineColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
+            }
         }
     }
 
@@ -194,11 +265,11 @@ class TestDialogActivity : ComponentActivity() {
                 alertDialogState = this,
                 color = config.customTextColor,
                 removeDimmedBackground = true,
-                onButtonPressed = { wasPositivePressed, color ->
-                    Log.d("getColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
-                }, onActiveColorChange = { color ->
+                onActiveColorChange = { color ->
                     Log.d("getColorPickerAlertDialogState", "onActiveColorChange=${color.toHex()}")
-                })
+                }) { wasPositivePressed, color ->
+                Log.d("getColorPickerAlertDialogState", "wasPositivePressed=$wasPositivePressed color=${color.toHex()}")
+            }
         }
     }
 
@@ -212,7 +283,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getCallConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            CallConfirmationAlertDialog(alertDialogState = this, callee = "Simple Mobile Tools", callback = {})
+            CallConfirmationAlertDialog(alertDialogState = this, callee = "Simple Mobile Tools") {}
         }
     }
 
@@ -235,7 +306,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            ConfirmationAlertDialog(alertDialogState = this, callback = {}, dialogTitle = "Some fancy title")
+            ConfirmationAlertDialog(alertDialogState = this, dialogTitle = "Some fancy title") {}
         }
     }
 
@@ -243,7 +314,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getAppSideLoadedDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                AppSideLoadedAlertDialog(onDownloadClick = {}, onCancelClick = {}, alertDialogState = this)
+                AppSideLoadedAlertDialog(alertDialogState = this, onDownloadClick = {}) {}
             }
         }
 
@@ -251,7 +322,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getAddBlockedNumberDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                AddOrEditBlockedNumberAlertDialog(blockedNumber = null, deleteBlockedNumber = {}, addBlockedNumber = {}, alertDialogState = this)
+                AddOrEditBlockedNumberAlertDialog(alertDialogState = this, blockedNumber = null, deleteBlockedNumber = {}) {}
             }
         }
 
@@ -259,7 +330,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getConfirmationAdvancedAlertDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                ConfirmationAdvancedAlertDialog(alertDialogState = this, callback = {})
+                ConfirmationAdvancedAlertDialog(alertDialogState = this) {}
             }
         }
 
@@ -269,52 +340,26 @@ class TestDialogActivity : ComponentActivity() {
             DialogMember {
                 PermissionRequiredAlertDialog(
                     alertDialogState = this,
-                    text = "Test permission",
-                    positiveActionCallback = {}
-                )
+                    text = "Test permission"
+                ) {}
             }
         }
 
     @Composable
-    private fun getFilePickerAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            FilePickerAlertDialog(
-                alertDialogState = this,
-                callback = {},
+    private fun ShowButton(alertDialogState: AlertDialogState, text: String) {
+        Button(onClick = alertDialogState::show) {
+            Text(
+                text = text,
+                modifier = Modifier
+                    .fillMaxWidth(),
+                textAlign = TextAlign.Center
             )
         }
     }
 
     @Composable
-    private fun getStoragePickerAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            StoragePickerAlertDialog(
-                alertDialogState = this,
-                currPath = "/",
-                showRoot = true,
-                callback = {
-                    Log.d("getStoragePickerAlertDialogState", "Picked: $it")
-                }
-            )
-        }
-    }
-
-    @Composable
-    private fun getCreateNewFolderAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            CreateNewFolderAlertDialog(
-                alertDialogState = this,
-                path = cacheDir.path,
-                callback = {
-                    Log.d("getCreateNewFolderAlertDialogState", "Created: $it")
-                }
-            )
-        }
-    }
-
-    @Composable
-    private fun ShowButton(appSideLoadedDialogState: AlertDialogState, text: String) {
-        Button(onClick = appSideLoadedDialogState::show) {
+    private fun ShowButton(appSideLoadedDialogState: BottomSheetDialogState, text: String) {
+        Button(onClick = appSideLoadedDialogState::open) {
             Text(
                 text = text,
                 modifier = Modifier
