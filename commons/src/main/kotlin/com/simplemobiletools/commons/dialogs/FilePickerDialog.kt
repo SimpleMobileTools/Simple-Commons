@@ -364,7 +364,6 @@ fun FilePickerAlertDialog(
     forceShowRoot: Boolean = false,
     showFavoritesButton: Boolean = false,
     favorites: ImmutableList<String> = listOf<String>().toImmutableList(),
-    enforceStorageRestrictions: Boolean = true,
     callback: (pickedPath: String) -> Unit
 ) {
     val context = LocalContext.current
@@ -468,6 +467,7 @@ fun FilePickerAlertDialog(
                                                     callback(it.item.path)
                                                     alertDialogState.hide()
                                                 } else {
+                                                    // TODO: Handle locked folder opening
                                                     currPath = it.item.path
                                                 }
                                             }
