@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Environment
 import android.os.Parcelable
 import android.view.KeyEvent
@@ -20,9 +21,16 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.integration.compose.GlideImage
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerFavoritesAdapter
@@ -39,11 +47,13 @@ import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogFilepickerBinding
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
+import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import java.io.File
+import java.util.Locale
 
 /**
  * The only filepicker constructor with a couple optional parameters
@@ -366,10 +376,10 @@ fun FilePickerAlertDialog(
     val currentItems by remember {
         derivedStateOf {
             if (favoritesVisible) {
-                favorites.map { FileDirItem(path = it) }
+                favorites.map { FilePickerItemInfo(item = FileDirItem(path = it, name = it), favorite = true) }
             } else {
-                loadedItems
-            }.sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
+                loadedItems.map(::FilePickerItemInfo)
+            }.sortedWith(compareBy({ !it.item.isDirectory }, { it.item.name.lowercase() }))
                 .toImmutableList()
         }
     }
@@ -423,7 +433,7 @@ fun FilePickerAlertDialog(
                         .padding(all = SimpleTheme.dimens.padding.extraLarge)
                 ) {
                     Box(
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier.fillMaxSize()
                     ) {
                         Column(
                             modifier = Modifier.fillMaxWidth()
@@ -450,15 +460,15 @@ fun FilePickerAlertDialog(
                                 LazyColumn(
                                     modifier = Modifier.fillMaxSize()
                                 ) {
-                                    items(currentItems, key = FileDirItem::getSignature) {
+                                    items(currentItems, key = { it.item.getSignature() }) {
                                         FilePickerItem(
-                                            item = it,
+                                            info = it,
                                             onClick = {
-                                                if (pickFile && !it.isDirectory) {
-                                                    callback(it.path)
+                                                if (pickFile && !it.item.isDirectory) {
+                                                    callback(it.item.path)
                                                     alertDialogState.hide()
                                                 } else {
-                                                    currPath = it.path
+                                                    currPath = it.item.path
                                                 }
                                             }
                                         )
@@ -538,58 +548,13 @@ fun FilePickerAlertDialog(
     }
 }
 
+private data class FilePickerItemInfo(val item: FileDirItem, val favorite: Boolean = false)
+
 @Composable
-fun FilePickerItem(
-    item: FileDirItem,
+private fun FilePickerItem(
+    info: FilePickerItemInfo,
     onClick: () -> Unit
 ) {
-//    if (fileDirItem.isDirectory) {
-//        listItemIcon.setImageDrawable(folderDrawable)
-//        listItemDetails.text = getChildrenCnt(fileDirItem)
-//    } else {
-//        listItemDetails.text = fileDirItem.size.formatSize()
-//        val path = fileDirItem.path
-//        val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").lowercase(Locale.getDefault())) { fileDrawable }
-//        val options = RequestOptions()
-//            .signature(fileDirItem.getKey())
-//            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-//            .centerCrop()
-//            .error(placeholder)
-//
-//        var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
-//            val packageInfo = root.context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
-//            if (packageInfo != null) {
-//                val appInfo = packageInfo.applicationInfo
-//                appInfo.sourceDir = path
-//                appInfo.publicSourceDir = path
-//                appInfo.loadIcon(root.context.packageManager)
-//            } else {
-//                path
-//            }
-//        } else {
-//            path
-//        }
-//
-//        if (!activity.isDestroyed && !activity.isFinishing) {
-//            if (activity.isRestrictedSAFOnlyRoot(path)) {
-//                itemToLoad = activity.getAndroidSAFUri(path)
-//            } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
-//                itemToLoad = itemToLoad.getOTGPublicPath(activity)
-//            }
-//
-//            if (itemToLoad.toString().isGif()) {
-//                Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(listItemIcon)
-//            } else {
-//                Glide.with(activity)
-//                    .load(itemToLoad)
-//                    .transition(DrawableTransitionOptions.withCrossFade())
-//                    .apply(options)
-//                    .transform(CenterCrop(), RoundedCorners(cornerRadius))
-//                    .into(listItemIcon)
-//            }
-//        }
-//    }
-//}
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -597,28 +562,82 @@ fun FilePickerItem(
             .padding(top = SimpleTheme.dimens.padding.extraLarge)
             .clickable(onClick = onClick)
     ) {
-        Icon(
-            modifier = Modifier
-                .size(54.dp)
-                .padding(all = SimpleTheme.dimens.padding.medium),
-            painter = painterResource(id = R.drawable.ic_folder_vector),
-            contentDescription = null
-        )
+        if (!info.favorite) {
+            if (info.item.isDirectory) {
+                Icon(
+                    modifier = Modifier
+                        .size(54.dp)
+                        .padding(all = SimpleTheme.dimens.padding.medium),
+                    painter = painterResource(id = R.drawable.ic_folder_vector),
+                    contentDescription = null
+                )
+            } else {
+                val context = LocalContext.current
+                val fileDrawables = remember { getFilePlaceholderDrawables(context) }
+                val fileDrawable = remember { context.resources.getDrawable(R.drawable.ic_file_generic) }
+                GlideImage(
+                    modifier = Modifier
+                        .size(54.dp)
+                        .padding(all = SimpleTheme.dimens.padding.medium),
+                    model = null,
+                    contentDescription = null,
+                ) { requestBuilder ->
+                    val path = info.item.path
+                    val placeholder = fileDrawables.getOrElse(info.item.name.substringAfterLast(".").lowercase(Locale.getDefault())) { fileDrawable }
+                    val options = RequestOptions()
+                        .signature(info.item.getKey())
+                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+                        .centerCrop()
+                        .error(placeholder)
+
+                    var itemToLoad = if (info.item.name.endsWith(".apk", true)) {
+                        val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
+                        if (packageInfo != null) {
+                            val appInfo = packageInfo.applicationInfo
+                            appInfo.sourceDir = path
+                            appInfo.publicSourceDir = path
+                            appInfo.loadIcon(context.packageManager)
+                        } else {
+                            path
+                        }
+                    } else {
+                        path
+                    }
+                    if (context.isRestrictedSAFOnlyRoot(path)) {
+                        itemToLoad = context.getAndroidSAFUri(path)
+                    } else if (context.hasOTGConnected() && itemToLoad is String && context.isPathOnOTG(itemToLoad)) {
+                        itemToLoad = itemToLoad.getOTGPublicPath(context)
+                    }
+
+                    if (itemToLoad.toString().isGif()) {
+                        requestBuilder.load(itemToLoad).apply(options)
+                    } else {
+                        requestBuilder
+                            .load(itemToLoad)
+                            .transition(DrawableTransitionOptions.withCrossFade())
+                            .apply(options)
+                            .transform(CenterCrop(), RoundedCorners(4))
+                    }
+                }
+            }
+        }
 
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(
-                text = item.name,
+                text = info.item.name,
                 fontSize = 16.sp
             )
-            Text(
-                text = if (item.isDirectory)
-                    pluralStringResource(id = R.plurals.items, count = item.children, item.children)
-                else
-                    item.size.formatSize(),
-                fontSize = 14.sp
-            )
+            if (!info.favorite) {
+                Text(
+                    text = if (info.item.isDirectory)
+                        pluralStringResource(id = R.plurals.items, count = info.item.children, info.item.children)
+                    else
+                        info.item.size.formatSize(),
+                    fontSize = 14.sp
+                )
+            }
         }
     }
 }
