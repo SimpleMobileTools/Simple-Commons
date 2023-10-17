@@ -67,6 +67,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
                     ShowButton(getFileConflictAlertDialogState(), text = "File conflict")
                     ShowButton(getCustomIntervalPickerAlertDialogState(), text = "Custom interval picker")
+                    ShowButton(getFilePickerAlertDialogState(), text = "File picker")
                     Spacer(modifier = Modifier.padding(bottom = 16.dp))
                 }
             }
@@ -344,6 +345,17 @@ class TestDialogActivity : ComponentActivity() {
                 ) {}
             }
         }
+
+    @Composable
+    private fun getFilePickerAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            FilePickerAlertDialog(
+                alertDialogState = this,
+                showFAB = true,
+                callback = {},
+            )
+        }
+    }
 
     @Composable
     private fun ShowButton(alertDialogState: AlertDialogState, text: String) {

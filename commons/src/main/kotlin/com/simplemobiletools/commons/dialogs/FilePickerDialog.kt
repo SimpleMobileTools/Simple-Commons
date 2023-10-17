@@ -6,15 +6,20 @@ import android.os.Parcelable
 import android.view.KeyEvent
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,7 +32,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.components.FolderBreadcrumbs
 import com.simplemobiletools.commons.compose.extensions.MyDevices
-import com.simplemobiletools.commons.compose.extensions.getActivity
+import com.simplemobiletools.commons.compose.theme.AppTheme
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
 import com.simplemobiletools.commons.databinding.DialogFilepickerBinding
@@ -285,37 +290,9 @@ class FilePickerDialog(
             activity.isPathOnOTG(path) -> activity.getOTGItems(path, showHidden, false, callback)
             else -> {
                 val lastModifieds = activity.getFolderLastModifieds(path)
-                getRegularItems(path, lastModifieds, callback)
+                callback(activity.getRegularItems(path, lastModifieds, showHidden))
             }
         }
-    }
-
-    private fun getRegularItems(path: String, lastModifieds: HashMap<String, Long>, callback: (List<FileDirItem>) -> Unit) {
-        val items = ArrayList<FileDirItem>()
-        val files = File(path).listFiles()?.filterNotNull()
-        if (files == null) {
-            callback(items)
-            return
-        }
-
-        for (file in files) {
-            if (!showHidden && file.name.startsWith('.')) {
-                continue
-            }
-
-            val curPath = file.absolutePath
-            val curName = curPath.getFilenameFromPath()
-            val size = file.length()
-            var lastModified = lastModifieds.remove(curPath)
-            val isDirectory = if (lastModified != null) false else file.isDirectory
-            if (lastModified == null) {
-                lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
-            }
-
-            val children = if (isDirectory) file.getDirectChildrenCount(activity, showHidden) else 0
-            items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
-        }
-        callback(items)
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }
@@ -367,7 +344,7 @@ class FilePickerDialog(
 fun FilePickerAlertDialog(
     alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    currPath: String = Environment.getExternalStorageDirectory().toString(),
+    startPath: String = Environment.getExternalStorageDirectory().toString(),
     pickFile: Boolean = true,
     showHidden: Boolean = false,
     showFAB: Boolean = false,
@@ -378,34 +355,122 @@ fun FilePickerAlertDialog(
     callback: (pickedPath: String) -> Unit
 ) {
     val context = LocalContext.current
-    var currPath = remember { context.updateCurrentPath(currPath) }
+    var currPath by remember { mutableStateOf(context.updateCurrentPath(startPath)) }
+    var loading by remember { mutableStateOf(true) }
+    var currentItems by remember { mutableStateOf(listOf<FileDirItem>()) }
+    LaunchedEffect(key1 = currPath) {
+        fun updateFolderItems(items: List<FileDirItem>) {
+            currentItems = items
+                .sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
+                .toImmutableList()
+            loading = false
+        }
+
+        loading = true
+        when {
+            context.isRestrictedSAFOnlyRoot(currPath) -> {
+                context.getAndroidSAFFileItems(currPath, showHidden) {
+                    updateFolderItems(it)
+                }
+            }
+
+            context.isPathOnOTG(currPath) -> {
+                context.getOTGItems(currPath, showHidden, false) {
+                    updateFolderItems(it)
+                }
+            }
+
+            else -> {
+                val lastModifieds = context.getFolderLastModifieds(currPath)
+                updateFolderItems(context.getRegularItems(currPath, lastModifieds, showHidden))
+            }
+        }
+    }
+
+    val storagePickerDialogState = getStoragePickerDialogState(
+        currPath = currPath,
+        forceShowRoot = forceShowRoot,
+        callback = {
+            currPath = it
+        }
+    )
 
     AlertDialog(
         onDismissRequest = alertDialogState::hide
     ) {
-        DialogSurface {
-            Box(
-                modifier = modifier
-                    .fillMaxWidth(0.95f)
-                    .padding(SimpleTheme.dimens.padding.extraLarge)
-            ) {
+        AppTheme {
+            DialogSurface {
                 Column(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = modifier
+                        .fillMaxWidth(0.95f)
+                        .padding(all = SimpleTheme.dimens.padding.extraLarge)
                 ) {
-                    FolderBreadcrumbs(
-                        items = currPath.toBreadcrumbs(context).toImmutableList(),
-                        onBreadcrumbClicked = { index, item ->
-                            if (index == 0) {
-                                StoragePickerDialog(context.getActivity() as BaseSimpleActivity, currPath, forceShowRoot, true) {
-                                    currPath = it
+                    Box(
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            FolderBreadcrumbs(
+                                items = currPath.toBreadcrumbs(context).toImmutableList(),
+                                onBreadcrumbClicked = { index, item ->
+                                    if (index == 0) {
+                                        storagePickerDialogState.show()
+                                    } else {
+                                        if (currPath != item.path.trimEnd('/')) {
+                                            currPath = item.path
+                                        }
+                                    }
                                 }
+                            )
+
+                            if (loading) {
+                                Text(
+                                    modifier = Modifier.align(Alignment.CenterHorizontally),
+                                    text = stringResource(id = R.string.loading)
+                                )
                             } else {
-                                if (currPath != item.path.trimEnd('/')) {
-                                    currPath = item.path
+                                LazyColumn(
+                                    modifier = Modifier.fillMaxSize()
+                                ) {
+                                    items(currentItems, key = FileDirItem::getSignature) {
+                                        FilePickerItem(
+                                            item = it,
+                                            onClick = {
+                                                if (pickFile && !it.isDirectory) {
+                                                    callback(it.path)
+                                                    alertDialogState.hide()
+                                                } else {
+                                                    currPath = it.path
+                                                }
+                                            }
+                                        )
+                                    }
                                 }
                             }
                         }
-                    )
+
+                        if (showFAB) {
+                            val createNewFolderDialog = rememberCreateNewFolderAlertDialogState(
+                                path = currPath,
+                                callback = {
+                                    callback(it)
+                                    alertDialogState.hide()
+                                }
+                            )
+                            FloatingActionButton(
+                                modifier = Modifier
+                                    .padding(all = SimpleTheme.dimens.padding.extraLarge)
+                                    .align(Alignment.BottomEnd),
+                                containerColor = SimpleTheme.colorScheme.primary,
+                                onClick = {
+                                    createNewFolderDialog.show()
+                                }
+                            ) {
+                                Icon(painter = painterResource(id = R.drawable.ic_plus_vector), contentDescription = null)
+                            }
+                        }
+                    }
 
                     Row(
                         Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
@@ -426,19 +491,104 @@ fun FilePickerAlertDialog(
                         }
                     }
                 }
-
-                if (showFAB) {
-                    FloatingActionButton(onClick = {
-                        CreateNewFolderDialog(context.getActivity() as BaseSimpleActivity, currPath) {
-//                            callback(it)
-//                            mDialog?.dismiss()
-                        }
-                    }) {
-                        Icon(painter = painterResource(id = R.drawable.ic_plus_vector), contentDescription = null)
-                    }
-                }
             }
         }
+    }
+}
+
+@Composable
+fun FilePickerItem(
+    item: FileDirItem,
+    onClick: () -> Unit
+) {
+//    if (fileDirItem.isDirectory) {
+//        listItemIcon.setImageDrawable(folderDrawable)
+//        listItemDetails.text = getChildrenCnt(fileDirItem)
+//    } else {
+//        listItemDetails.text = fileDirItem.size.formatSize()
+//        val path = fileDirItem.path
+//        val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").lowercase(Locale.getDefault())) { fileDrawable }
+//        val options = RequestOptions()
+//            .signature(fileDirItem.getKey())
+//            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+//            .centerCrop()
+//            .error(placeholder)
+//
+//        var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
+//            val packageInfo = root.context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
+//            if (packageInfo != null) {
+//                val appInfo = packageInfo.applicationInfo
+//                appInfo.sourceDir = path
+//                appInfo.publicSourceDir = path
+//                appInfo.loadIcon(root.context.packageManager)
+//            } else {
+//                path
+//            }
+//        } else {
+//            path
+//        }
+//
+//        if (!activity.isDestroyed && !activity.isFinishing) {
+//            if (activity.isRestrictedSAFOnlyRoot(path)) {
+//                itemToLoad = activity.getAndroidSAFUri(path)
+//            } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
+//                itemToLoad = itemToLoad.getOTGPublicPath(activity)
+//            }
+//
+//            if (itemToLoad.toString().isGif()) {
+//                Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(listItemIcon)
+//            } else {
+//                Glide.with(activity)
+//                    .load(itemToLoad)
+//                    .transition(DrawableTransitionOptions.withCrossFade())
+//                    .apply(options)
+//                    .transform(CenterCrop(), RoundedCorners(cornerRadius))
+//                    .into(listItemIcon)
+//            }
+//        }
+//    }
+//}
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = SimpleTheme.dimens.padding.extraSmall)
+            .padding(top = SimpleTheme.dimens.padding.extraLarge)
+            .clickable(onClick = onClick)
+    ) {
+        Icon(
+            modifier = Modifier
+                .size(54.dp)
+                .padding(all = SimpleTheme.dimens.padding.medium),
+            painter = painterResource(id = R.drawable.ic_folder_vector),
+            contentDescription = null
+        )
+
+        Column(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                text = item.name,
+                fontSize = 16.sp
+            )
+            Text(
+                text = if (item.isDirectory)
+                    pluralStringResource(id = R.plurals.items, count = item.children, item.children)
+                else
+                    item.size.formatSize(),
+                fontSize = 14.sp
+            )
+        }
+    }
+}
+
+@Composable
+private fun rememberCreateNewFolderAlertDialogState(path: String, callback: (String) -> Unit) = rememberAlertDialogState().apply {
+    DialogMember {
+        CreateNewFolderAlertDialog(
+            alertDialogState = this,
+            path = path,
+            callback = callback,
+        )
     }
 }
 
@@ -480,6 +630,50 @@ private fun String.toBreadcrumbs(context: Context): List<FileDirItem> {
         items += FileDirItem(currPath, dir, true, 0, 0, 0)
     }
     return items
+}
+
+private fun Context.getRegularItems(path: String, lastModifieds: HashMap<String, Long>, showHidden: Boolean): List<FileDirItem> {
+    val items = ArrayList<FileDirItem>()
+    val files = File(path).listFiles()?.filterNotNull()
+    if (files == null) {
+        return items
+    }
+
+    for (file in files) {
+        if (!showHidden && file.name.startsWith('.')) {
+            continue
+        }
+
+        val curPath = file.absolutePath
+        val curName = curPath.getFilenameFromPath()
+        val size = file.length()
+        var lastModified = lastModifieds.remove(curPath)
+        val isDirectory = if (lastModified != null) false else file.isDirectory
+        if (lastModified == null) {
+            lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
+        }
+
+        val children = if (isDirectory) file.getDirectChildrenCount(this, showHidden) else 0
+        items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
+    }
+    return items
+}
+
+@Composable
+private fun getStoragePickerDialogState(
+    currPath: String,
+    forceShowRoot: Boolean,
+    callback: (pickedPath: String) -> Unit
+) = rememberAlertDialogState().apply {
+    DialogMember {
+        StoragePickerAlertDialog(
+            alertDialogState = this,
+            showRoot = forceShowRoot,
+            pickSingleOption = true,
+            currPath = currPath,
+            callback = callback
+        )
+    }
 }
 
 @Composable
