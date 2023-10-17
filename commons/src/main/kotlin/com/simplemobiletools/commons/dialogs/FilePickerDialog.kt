@@ -32,6 +32,7 @@ import com.simplemobiletools.commons.compose.alert_dialog.DialogSurface
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.components.FolderBreadcrumbs
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.config
 import com.simplemobiletools.commons.compose.theme.AppTheme
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.SimpleTheme
@@ -40,6 +41,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
+import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import java.io.File
 
@@ -351,18 +353,33 @@ fun FilePickerAlertDialog(
     canAddShowHiddenButton: Boolean = false,
     forceShowRoot: Boolean = false,
     showFavoritesButton: Boolean = false,
+    favorites: ImmutableList<String> = listOf<String>().toImmutableList(),
     enforceStorageRestrictions: Boolean = true,
     callback: (pickedPath: String) -> Unit
 ) {
     val context = LocalContext.current
+    var showHiddenState by remember { mutableStateOf(showHidden) }
+    var favoritesVisible by remember { mutableStateOf(false) }
     var currPath by remember { mutableStateOf(context.updateCurrentPath(startPath)) }
     var loading by remember { mutableStateOf(true) }
-    var currentItems by remember { mutableStateOf(listOf<FileDirItem>()) }
-    LaunchedEffect(key1 = currPath) {
-        fun updateFolderItems(items: List<FileDirItem>) {
-            currentItems = items
-                .sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
+    var loadedItems by remember { mutableStateOf(listOf<FileDirItem>()) }
+    val currentItems by remember {
+        derivedStateOf {
+            if (favoritesVisible) {
+                favorites.map { FileDirItem(path = it) }
+            } else {
+                loadedItems
+            }.sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
                 .toImmutableList()
+        }
+    }
+
+    LaunchedEffect(
+        key1 = currPath,
+        key2 = showHiddenState
+    ) {
+        fun updateFolderItems(items: List<FileDirItem>) {
+            loadedItems = items
             loading = false
         }
 
@@ -402,7 +419,7 @@ fun FilePickerAlertDialog(
             DialogSurface {
                 Column(
                     modifier = modifier
-                        .fillMaxWidth(0.95f)
+                        .fillMaxSize(0.95f)
                         .padding(all = SimpleTheme.dimens.padding.extraLarge)
                 ) {
                     Box(
@@ -450,24 +467,49 @@ fun FilePickerAlertDialog(
                             }
                         }
 
-                        if (showFAB) {
-                            val createNewFolderDialog = rememberCreateNewFolderAlertDialogState(
-                                path = currPath,
-                                callback = {
-                                    callback(it)
-                                    alertDialogState.hide()
+                        Column(
+                            modifier = Modifier
+                                .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
+                                .align(Alignment.BottomEnd),
+                        ) {
+                            if (showFavoritesButton && context.config.favorites.isNotEmpty()) {
+                                FloatingActionButton(
+                                    modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.extraLarge),
+                                    containerColor = SimpleTheme.colorScheme.primary,
+                                    onClick = {
+                                        favoritesVisible = !favoritesVisible
+                                    }
+                                ) {
+                                    Icon(painter = painterResource(id = R.drawable.ic_star_vector), contentDescription = null)
                                 }
-                            )
-                            FloatingActionButton(
-                                modifier = Modifier
-                                    .padding(all = SimpleTheme.dimens.padding.extraLarge)
-                                    .align(Alignment.BottomEnd),
-                                containerColor = SimpleTheme.colorScheme.primary,
-                                onClick = {
-                                    createNewFolderDialog.show()
+                            }
+                            if (!showHiddenState && canAddShowHiddenButton) {
+                                FloatingActionButton(
+                                    modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.extraLarge),
+                                    containerColor = SimpleTheme.colorScheme.primary,
+                                    onClick = {
+                                        showHiddenState = true
+                                    }
+                                ) {
+                                    Icon(painter = painterResource(id = R.drawable.ic_unhide_vector), contentDescription = null)
                                 }
-                            ) {
-                                Icon(painter = painterResource(id = R.drawable.ic_plus_vector), contentDescription = null)
+                            }
+                            if (showFAB) {
+                                val createNewFolderDialog = rememberCreateNewFolderAlertDialogState(
+                                    path = currPath,
+                                    callback = {
+                                        callback(it)
+                                        alertDialogState.hide()
+                                    }
+                                )
+                                FloatingActionButton(
+                                    containerColor = SimpleTheme.colorScheme.primary,
+                                    onClick = {
+                                        createNewFolderDialog.show()
+                                    }
+                                ) {
+                                    Icon(painter = painterResource(id = R.drawable.ic_plus_vector), contentDescription = null)
+                                }
                             }
                         }
                     }

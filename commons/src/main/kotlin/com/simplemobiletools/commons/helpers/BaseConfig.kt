@@ -486,6 +486,8 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getStringSet(FAVORITES, HashSet())!!
         set(favorites) = prefs.edit().remove(FAVORITES).putStringSet(FAVORITES, favorites).apply()
 
+    val favoritesFlow = ::favorites.asFlowNonNull()
+
     var showCallConfirmation: Boolean
         get() = prefs.getBoolean(SHOW_CALL_CONFIRMATION, false)
         set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()

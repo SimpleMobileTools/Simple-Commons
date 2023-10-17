@@ -11,10 +11,12 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
@@ -348,10 +350,14 @@ class TestDialogActivity : ComponentActivity() {
 
     @Composable
     private fun getFilePickerAlertDialogState() = rememberAlertDialogState().apply {
+        val favorites by config.favoritesFlow.collectAsStateWithLifecycle(config.favorites)
         DialogMember {
             FilePickerAlertDialog(
                 alertDialogState = this,
                 showFAB = true,
+                canAddShowHiddenButton = true,
+                showFavoritesButton = true,
+                favorites = favorites.toImmutableList(),
                 callback = {},
             )
         }
