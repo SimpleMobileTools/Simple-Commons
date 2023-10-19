@@ -221,7 +221,7 @@
     <string name="filename_without_txt">Nom de fichier (sans .txt)</string>
     <string name="filename_without_json">Nom de fichier (sans .json)</string>
     <string name="filename_without_zip">Nom de fichier (sans .zip)</string>
-    <string name="cannot_hide_files">À partir d\'Android 11, il n\'est plus possible de cacher les fichiers et dossiers de cette manière</string>
+    <string name="cannot_hide_files">À partir d\'Android 11, il n\'est plus possible de masquer les fichiers et dossiers de cette manière</string>
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
     <string name="move">Déplacer</string>
@@ -396,12 +396,12 @@
     <string name="resize">Redimensionner</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="select_text">Sélectionner le texte</string>
-    <string name="hide">Cacher</string>
+    <string name="hide">Masquer</string>
     <string name="unhide">Afficher</string>
-    <string name="hide_folder">Cacher le dossier</string>
-    <string name="unhide_folder">Afficher le dossier</string>
-    <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
-    <string name="stop_showing_hidden">Cacher les fichiers cachés</string>
+    <string name="hide_folder">Masquer le dossier</string>
+    <string name="unhide_folder">Réafficher le dossier</string>
+    <string name="temporarily_show_hidden">Afficher temporairement les éléments masqués</string>
+    <string name="stop_showing_hidden">Ne plus afficher les fichiers masqués</string>
     <string name="allow_access_more_media">Autoriser l\'accès à plus de médias</string>
     <string name="maximum_share_reached">Vous ne pouvez pas partager autant de contenu à la fois</string>
     <string name="empty_and_disable_recycle_bin">Vider et désactiver la corbeille</string>
@@ -428,7 +428,7 @@
     <string name="add_contact">Ajouter un contact</string>
     <string name="wallpapers">Fonds d\'écran</string>
     <string name="show_line_numbers">Afficher les numéros de ligne</string>
-    <string name="hide_line_numbers">Cacher les numéros de ligne</string>
+    <string name="hide_line_numbers">Masquer les numéros de ligne</string>
     <string name="sleep_timer">Minuteur de veille</string>
     <string name="unblock">Débloquer</string>
     <!-- Sorting -->
@@ -514,7 +514,7 @@
     <string name="today">Aujourd\'hui</string>
     <string name="tomorrow">Demain</string>
     <string name="every_day">Tous les jours</string>
-    <string name="hide_year">Cacher l\'année</string>
+    <string name="hide_year">Masquer l\'année</string>
     <string name="seconds_raw">secondes</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">heures</string>
@@ -702,13 +702,13 @@
     <string name="notification_sound">Son de notification</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
     <string name="language">Langue</string>
-    <string name="show_hidden_items">Afficher les fichiers cachés</string>
+    <string name="show_hidden_items">Afficher les éléments masqués</string>
     <string name="font_size">Taille des caractères</string>
     <string name="small">Petite</string>
     <string name="medium">Moyenne</string>
     <string name="large">Grande</string>
     <string name="extra_large">Très grande</string>
-    <string name="password_protect_hidden_items">Protéger les éléments cachés par une identification</string>
+    <string name="password_protect_hidden_items">Protéger les éléments masqués par mot de passe</string>
     <string name="password_protect_whole_app">Protéger l\'application par une identification</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement des fichiers par une identification</string>
     <string name="keep_last_modified">Conserver l\'ancienne date de modification lors des opérations sur les fichiers</string>
@@ -758,7 +758,7 @@
     <string name="remove_all">Tout supprimer</string>
     <string name="remove_all_description">Voulez-vous vraiment supprimer tous les dossiers de la liste d\'exclusions \? Ceci ne supprimera pas les dossiers, ni leur contenu.</string>
     <string name="temporarily_show_excluded">Afficher les dossiers exclus</string>
-    <string name="stop_showing_excluded">Cacher les dossiers exclus</string>
+    <string name="stop_showing_excluded">Masquer les dossiers exclus</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gérer les onglets affichés</string>
     <string name="default_tab_to_open">Onglet à ouvrir au démarrage de l\'application</string>
@@ -779,7 +779,7 @@
     <string name="recycle_bin_empty">La corbeille est vide</string>
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé. Veuillez utiliser la fonction de restauration</string>
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
-    <string name="hide_the_recycle_bin">Cacher la corbeille</string>
+    <string name="hide_the_recycle_bin">Masquer la corbeille</string>
     <string name="open_the_recycle_bin">Ouvrir la corbeille</string>
     <string name="skip_the_recycle_bin">Ne pas utiliser la corbeille, supprimer directement les fichiers</string>
     <plurals name="moving_items_into_bin">
