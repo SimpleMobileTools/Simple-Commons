@@ -46,8 +46,8 @@
     <string name="number">Číslo</string>
     <string name="no_contacts_found">Nenalezeny žádné kontakty</string>
     <string name="request_the_required_permissions">Vyžádat potřebná oprávnění</string>
-    <string name="no_access_to_contacts">Aplikace nemohla získat přístup k vašim kontaktům</string>
-    <string name="no_phone_call_permission">Aplikace nemá oprávnění pro zahájení telefonních hovorů. Prosím, poskytněte jej v nastavení zařízení</string>
+    <string name="no_access_to_contacts">Aplikace nemohla získat přístup k vašim kontaktům</string>
+    <string name="no_phone_call_permission">Aplikace nemá oprávnění pro zahájení telefonních hovorů. Prosím, poskytněte jej v nastavení zařízení</string>
     <string name="insert_text_here">Sem vložte text</string>
     <string name="call_person">Zavolat %s</string>
     <string name="confirm_calling_person">Potvrďte volání %s</string>
@@ -135,11 +135,11 @@
     <string name="add_blocked_number_helper_text">Zadáním čísla nebo vzoru (např. *12345*, +1*8888) zablokujete všechny hovory a zprávy z čísel odpovídajících vzoru.</string>
     <string name="must_make_default_caller_id_app">Nelze blokovat neznámá čísla bez povolení ID volajícího.</string>
     <string name="block_contact">Block contact</string>
-    <string name="block_contact_success">Contact blocked</string>
-    <string name="block_contact_fail">Contact could not be blocked</string>
-    <string name="unblock_contact">Unblock contact</string>
-    <string name="unblock_contact_success">Contact unblocked</string>
-    <string name="unblock_contact_fail">Contact could not be unblocked</string>
+    <string name="block_contact_success">Kontakt zablokován</string>
+    <string name="block_contact_fail">Kontakt nemohl být zablokovaný</string>
+    <string name="unblock_contact">Odblokovat kontakt</string>
+    <string name="unblock_contact_success">Kontakt odblokován</string>
+    <string name="unblock_contact_fail">Kontakt nemohl být odblokován</string>
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
     <string name="add_favorites">Přidat oblíbené</string>
@@ -187,7 +187,7 @@
     <string name="allow_full_screen_notifications_incoming_calls">Musíte aplikaci povolit zobrazování oznámení na celou obrazovku, jinak můžete zmeškat některé příchozí hovory.</string>
     <string name="allow_notifications_incoming_messages">Musíte aplikaci povolit zobrazování upozornění, jinak nemůže zobrazovat příchozí zprávy.</string>
     <string name="allow_alarm_scheduled_messages">Musíte aplikaci povolit přístup k interním upozorněním, jinak nemůže odesílat naplánované zprávy.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_alarm_sleep_timer">Musíte aplikaci povolit přístup k vnitřním budíkům, jinak nemůže vypnout aplikaci po časovači vypnutí.</string>
     <string name="allow_location_permission">Musíte aplikaci povolit přístup k vaší poloze, jinak ji nemůže zjistit.</string>
     <string name="grant_permission">Povolit oprávnění</string>
     <string name="permission_required">Vyžadováno oprávnění</string>
@@ -316,7 +316,7 @@
     <string name="select_storage">Zvolit úložiště</string>
     <string name="storage">Úložiště</string>
     <string name="internal">Interní</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Vnitřní paměť</string>
     <string name="sd_card">SD karta</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Zvolena nesprávná složka. Prosím, vyberte kořenový adresář SD karty</string>
@@ -427,10 +427,10 @@
     <string name="contact_details">Detaily kontaktu</string>
     <string name="add_contact">Přidat kontakt</string>
     <string name="wallpapers">Tapety</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Zobrazit čísla řádků</string>
+    <string name="hide_line_numbers">Schovat čísla řádků</string>
     <string name="sleep_timer">Časovač vypnutí</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Odblokovat</string>
     <!-- Sorting -->
     <string name="sort_by">Seřadit podle</string>
     <string name="name">Název</string>
@@ -454,7 +454,7 @@
     <string name="full_name">Celé jméno</string>
     <string name="use_custom_sorting">Použít vlastní třídění</string>
     <string name="change_order">Změnit pořadí</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Více možností</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Opravdu chcete pokračovat v mazání\?</string>
     <string name="deletion_confirmation">Opravdu chcete smazat  %s?</string>
@@ -479,8 +479,9 @@
     <string name="enter_pin">Zadejte PIN</string>
     <string name="please_enter_pin">Prosím, zadejte PIN</string>
     <string name="wrong_pin">Nesprávný PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">PIN musí být alespoň 4 čísla dlouhý</string>
+    <string name="too_many_incorrect_attempts">Příliš mnoho nesprávných pokusů o odemknutí.
+\nZkuste to znovu za %d sekund.</string>
     <string name="repeat_pin">Opakujte PIN</string>
     <string name="pattern">Vzor</string>
     <string name="insert_pattern">Zadejte vzor</string>
