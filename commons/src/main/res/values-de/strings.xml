@@ -360,7 +360,7 @@
     <string name="undo_changes_confirmation">Sollen wirklich alle Änderungen verworfen werden\?</string>
     <string name="cannot_be_undone">Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor dem Beenden?</string>
-    <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
+    <string name="apply_to_all_apps">Farben bei allen Einfachen Apps anwenden</string>
     <string name="app_icon_color_warning">WARNUNG: Einige Launcher behandeln die Anpassung von App-Icons nicht richtig. Sollte das Icon verschwinden, versuche die App mit Google Play oder einem Widget (wenn verfügbar) zu starten.
         Wenn die App gestartet ist, setze das Icon zurück auf das standardmäßige Orange #F57C00. Im schlimmsten Fall kann es passieren, dass du die App erneut installieren musst.</string>
     <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \"Shared\" wurde hinzugefügt, bitte verwende dieses, um für alle Apps die Farben zu ändern.</string>
@@ -424,7 +424,7 @@
     <string name="call">Anrufen</string>
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
-    <string name="wallpapers">Bildschirmhintergründe</string>
+    <string name="wallpapers">Hintergrundbilder</string>
     <string name="show_line_numbers">Zeilennummern anzeigen</string>
     <string name="hide_line_numbers">Zeilennummern ausblenden</string>
     <string name="sleep_timer">Sleeptimer</string>
@@ -892,7 +892,7 @@
     <!-- About -->
     <string name="about">Über</string>
     <string name="website">Website</string>
-    <string name="website_label">Weitere schlichte Apps und Quellcode siehe</string>
+    <string name="website_label">Weitere Einfache Apps und Quellcode siehe</string>
     <string name="email_label">Vorschläge und Feedback bitte senden an</string>
     <string name="upgrade_to_pro">Upgrade auf Pro</string>
     <string name="more_apps">Weitere Apps</string>
@@ -916,8 +916,8 @@
     <string name="additional_info">Zusätzliche Infos</string>
     <string name="app_version">App-Version: %s</string>
     <string name="device_os">Betriebssystem: %s</string>
-    <string name="donate_please">Hallo!,&lt;br&gt;&lt;br&gt; Ich hoffe, diese Anwendung gefällt dir. Sie beinhaltet keine Werbung, daher unterstütze bitte die Entwicklung durch den Kauf der &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; App. Dadurch wird auch dieser Dialog künftig nicht mehr angezeigt.&lt;br&gt;&lt;br&gt; Vielen Dank!</string>
-    <string name="donate_new">Hallo,&lt;br&gt;&lt;br&gt;wir hoffen, dass dir die App gefällt. Sie enthält keine Werbung und wir sammeln auch nicht deine Daten. Bitte unterstütze die Entwicklung der App, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Du bekommst dann auch alle Funktionen der App, einschließlich der Farbanpassung, freigeschaltet.&lt;br&gt;&lt;br&gt;Dankeschön!</string>
+    <string name="donate_please">Hallo!,&lt;br&gt;&lt;br&gt;Ich hoffe, diese Anwendung gefällt dir. Sie enthält keine Werbung, daher unterstütze bitte die Entwicklung durch den Kauf der &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt;-App. Dadurch wird auch dieser Dialog künftig nicht mehr angezeigt.&lt;br&gt;&lt;br&gt;Vielen Dank!</string>
+    <string name="donate_new">Hallo,&lt;br&gt;&lt;br&gt;Ich hoffe, diese Anwendung gefällt dir. Sie enthält keine Werbung und wir sammeln auch nicht deine Daten. Bitte unterstütze die Entwicklung, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Du bekommst dann auch alle Funktionen der App, einschließlich der Farbanpassung, freigeschaltet.&lt;br&gt;&lt;br&gt;Vielen Dank!</string>
     <string name="donate_short">Unterstütze uns, indem du &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt; kaufst. Damit werden auch alle Funktionen der App, einschließlich der Farbanpassung, freigeschaltet.</string>
     <string name="purchase">Kaufen</string>
     <string name="get_simple_phone">Simple Phone bestellen</string>
@@ -941,25 +941,25 @@
     <string name="thank_you">Danke</string>
     <string name="widget_locked_pro">Das Widget ist gesperrt.
 \nBitte zur Pro-Version wechseln, um es freizuschalten.</string>
-    <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Schlichtes Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn du nicht zufrieden bist, können wir das Geld zurückerstatten.</string>
+    <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Einfaches Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn du nicht zufrieden bist, können wir das Geld zurückerstatten.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hey,&lt;br&gt;&lt;br&gt; nur eine kleine Info zu einigen neu veröffentlichten Apps:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Du kannst sie durch Drücken auf den Namen herunterladen.&lt;br&gt;&lt;br&gt; Danke</string>
     <string name="simple_app_launcher">Einfacher App-Launcher</string>
-    <string name="simple_calculator">Schlichter Rechner</string>
-    <string name="simple_calendar">Schlichter Kalender</string>
+    <string name="simple_calculator">Einfacher Rechner</string>
+    <string name="simple_calendar">Einfacher Kalender</string>
     <string name="simple_camera">Einfache Kamera</string>
     <string name="simple_clock">Einfache Uhr</string>
-    <string name="simple_contacts">Schlichte Kontakte</string>
-    <string name="simple_dialer">Schlichtes Telefon</string>
-    <string name="simple_draw">Schlichtes Zeichnen</string>
-    <string name="simple_file_manager">Schlichter Dateimanager</string>
-    <string name="simple_flashlight">Schlichte Taschenlampe</string>
-    <string name="simple_gallery">Schlichte Galerie</string>
-    <string name="simple_keyboard">Schlichte Tastatur</string>
+    <string name="simple_contacts">Einfache Kontakte</string>
+    <string name="simple_dialer">Einfaches Telefon</string>
+    <string name="simple_draw">Einfaches Zeichnen</string>
+    <string name="simple_file_manager">Einfacher Dateimanager</string>
+    <string name="simple_flashlight">Einfache Taschenlampe</string>
+    <string name="simple_gallery">Einfache Galerie</string>
+    <string name="simple_keyboard">Einfache Tastatur</string>
     <string name="simple_launcher">Einfacher Launcher</string>
-    <string name="simple_music_player">Schlichter Musikplayer</string>
-    <string name="simple_notes">Schlichte Notizen</string>
-    <string name="simple_sms_messenger">Schlichter SMS-Messenger</string>
+    <string name="simple_music_player">Einfacher Musikplayer</string>
+    <string name="simple_notes">Einfache Notizen</string>
+    <string name="simple_sms_messenger">Einfacher SMS-Messenger</string>
     <string name="simple_thank_you">Einfaches Dankeschön</string>
     <string name="simple_voice_recorder">Einfaches Diktiergerät</string>
     <string name="app_launcher_short">App-Startprogramm</string>
