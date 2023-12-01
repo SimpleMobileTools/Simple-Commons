@@ -184,8 +184,8 @@
     <string name="allow_notifications_voice_recorder">Tem que permitir a possibilidade de mostrar notificações caso contrário não será possível gravar áudio.</string>
     <string name="allow_notifications_incoming_calls">Tem que permitir a possibilidade de mostrar notificações caso contrário não será possível receber chamadas.</string>
     <string name="allow_full_screen_notifications_incoming_calls">Tem que permitir a possibilidade de mostrar notificações em ecrã completo caso contrário poderá não ver as chamadas recebidas.</string>
-    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_notifications_incoming_messages">Tem de permitir que a aplicação apresente notificações, caso contrário não poderá mostrar as mensagens recebidas.</string>
+    <string name="allow_alarm_scheduled_messages">Tem de permitir que a aplicação aceda aos alarmes internos, caso contrário não poderá enviar mensagens programadas.</string>
     <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
     <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Conceder permissão</string>
