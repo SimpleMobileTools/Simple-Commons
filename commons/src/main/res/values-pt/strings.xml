@@ -186,8 +186,8 @@
     <string name="allow_full_screen_notifications_incoming_calls">Tem que permitir a possibilidade de mostrar notificações em ecrã completo caso contrário poderá não ver as chamadas recebidas.</string>
     <string name="allow_notifications_incoming_messages">Tem de permitir que a aplicação apresente notificações, caso contrário não poderá mostrar as mensagens recebidas.</string>
     <string name="allow_alarm_scheduled_messages">Tem de permitir que a aplicação aceda aos alarmes internos, caso contrário não poderá enviar mensagens programadas.</string>
-    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
-    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
+    <string name="allow_alarm_sleep_timer">Você deve permitir que o aplicativo acesse os alarmes internos, caso contrário, ele não poderá desligar o aplicativo após o temporizador de suspensão.</string>
+    <string name="allow_location_permission">Você deve permitir que o aplicativo acesse sua localização, caso contrário, ele não a conhecerá.</string>
     <string name="grant_permission">Conceder permissão</string>
     <string name="permission_required">Permissão necessária</string>
     <!-- Renaming -->
@@ -308,7 +308,7 @@
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="storage">Armazenamento</string>
     <string name="internal">Interno</string>
-    <string name="internal_storage">Internal Storage</string>
+    <string name="internal_storage">Armazenamento Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a pasta raíz do cartão SD</string>
@@ -399,7 +399,7 @@
     <string name="unhide_folder">Mostrar pasta</string>
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
-    <string name="allow_access_more_media">Allow access to more media</string>
+    <string name="allow_access_more_media">Permitir o acesso a mais mídias</string>
     <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneo</string>
     <string name="empty_and_disable_recycle_bin">Limpar e desativar reciclagem</string>
     <string name="undo">Desfazer</string>
@@ -424,10 +424,10 @@
     <string name="contact_details">Detalhes do contacto</string>
     <string name="add_contact">Adicionar contacto</string>
     <string name="wallpapers">Papel de parede</string>
-    <string name="show_line_numbers">Show line numbers</string>
-    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="show_line_numbers">Mostrar números de linha</string>
+    <string name="hide_line_numbers">Ocultar números de linha</string>
     <string name="sleep_timer">Temporizador</string>
-    <string name="unblock">Unblock</string>
+    <string name="unblock">Desbloquear</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -435,7 +435,7 @@
     <string name="last_modified">Data de modificação</string>
     <string name="date_created">Data de criação</string>
     <string name="date_taken">Data de obtenção</string>
-    <string name="date_added">Date added</string>
+    <string name="date_added">Data de adição</string>
     <string name="title">Título</string>
     <string name="filename">Nome do ficheiro</string>
     <string name="extension">Extensão</string>
@@ -451,7 +451,7 @@
     <string name="full_name">Nome completo</string>
     <string name="use_custom_sorting">Ordenação personalizada</string>
     <string name="change_order">Alterar ordem</string>
-    <string name="more_options">More options</string>
+    <string name="more_options">Mais opções</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que pretende continuar\?</string>
     <string name="deletion_confirmation">Tem a certeza de que pretende apagar %s\?</string>
@@ -476,8 +476,9 @@
     <string name="enter_pin">Digite o PIN</string>
     <string name="please_enter_pin">Por favor digite o PIN</string>
     <string name="wrong_pin">PIN inválido</string>
-    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
-    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
+    <string name="pin_must_be_4_digits_long">O PIN deve ter pelo menos 4 dígitos</string>
+    <string name="too_many_incorrect_attempts">Muitas tentativas incorretas de desbloqueio.
+\nTente novamente em %d segundos.</string>
     <string name="repeat_pin">Repita o PIN</string>
     <string name="pattern">Padrão</string>
     <string name="insert_pattern">Introduza o padrão</string>
@@ -502,9 +503,9 @@
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
     <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="empty_password_new">Digite uma senha</string>
+    <string name="empty_password">Digite a senha</string>
+    <string name="invalid_password">Senha incorreta</string>
     <!-- Times -->
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
@@ -712,7 +713,7 @@
     <string name="use_24_hour_time_format">Utilizar formato 24 horas</string>
     <string name="change_date_and_time_format">Alterar formato da data/hora</string>
     <string name="sunday_first">Iniciar semana ao domingo</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Iniciar a semana em</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo intervalo para snooze</string>
     <string name="snooze_time">Intervalo para snooze</string>
@@ -880,7 +881,11 @@
 \nParece que fez a atualização a partir da versão gratuita. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
 \n
 \nObrigado!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Olá,
+\n
+\nparece que você também já tem a versão Pro do aplicativo. Quando estiver satisfeito com ela e talvez tenha migrado suas configurações e favoritos, você poderá desinstalar essa versão para evitar abri-la acidentalmente, pois não precisará mais dela.
+\n
+\nObrigado!</string>
     <string name="upgraded_from_free">Olá,
 \n
 \nParece que fez a atualização a partir da versão gratuita. Se a aplicação for do seu agrado, caso já tenha migrado os dados, pode desinstalar a versão antiga para evitar que a utilize sem querer.
@@ -948,7 +953,7 @@
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
     <string name="before_rate_read_faq">Antes de dar uma avaliação, analise as definições da aplicação e leia as FAQ. Pode ser que a solução para o seu problema esteja aí mesmo.</string>
     <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Observe também que essa versão do aplicativo não está mais sendo desenvolvida; adquira a versão Pro para obter muitos aprimoramentos.</string>
     <string name="read_it">Ler</string>
     <string name="read_faq">Ler as FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
@@ -1083,7 +1088,7 @@
     <string name="why_upgrade_footer">Garantia de reembolso a 100%</string>
     <string name="why_upgrade_footer_one_time_payment">Pagamento único</string>
     <string name="why_upgrade_improved_design">Design melhorado</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Muitos outros aprimoramentos</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avançado de fotos e de vídeos</string>
@@ -1152,16 +1157,20 @@
     <string name="pdf_viewer_title">Android PdfViewer (leitor de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (gestão de ficheiros m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (compactação e descompactação de ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Versão de testes caducada</string>
     <string name="start_free_trial">Iniciar versão de teste</string>
     <string name="trial_expires_soon">A versão de teste está quase a caducar.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Desbloqueie o aplicativo por um último dia</string>
     <string name="welcome_to_app_name">Bem-vindo a %s!</string>
     <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
+    <string name="trial_end_description">Atualize para a versão Pro para aproveitar o aplicativo ao máximo.
+\n
+\nVocê só precisa pagar por ele uma vez na vida e, se não ficar satisfeito, poderá desinstalá-lo e obter um reembolso.
+\n
+\nVejo você lá :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Your trial expires in %d day.</item>
         <item quantity="other">Your trial expires in %d days.</item>
